@@ -104,6 +104,7 @@ class CreateProfileForm(forms.ModelForm):
 
 class RegisterForm(forms.ModelForm):
     username = UsernameField()
+    full_name = forms.CharField(max_length=255)
     password = forms.CharField(
         max_length=128,
         widget=forms.PasswordInput(render_value=False))

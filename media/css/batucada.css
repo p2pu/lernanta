@@ -1748,7 +1748,7 @@ header {}
 	font: normal 42px/44px MuseoSans-500, sans-serif;
 	color: #fff;
 	text-shadow: none;
-        padding-top: 30px;
+	padding-top: 30px;
 }
 #splash #content header h1{
   color: #a9b2c1;
@@ -1757,7 +1757,7 @@ header {}
   line-height: 65px;
   text-transform: uppercase;
   padding-left: 10px;
-  width: 720px;
+  width: 690px;
   height: 200px;
   overflow: visible;
 }
@@ -1787,8 +1787,8 @@ header {}
 	right: 81px; bottom: -105px;
 	}
 #splash #main{
-        width: 980px;
-        padding: 36px 10px 0 10px;
+	width: 980px;
+	padding: 36px 10px 0 10px;
 	margin: 0;
 	float: none;
 	border-top: 1px solid #fff;
@@ -1797,8 +1797,7 @@ header {}
 	display: none;
 	}
 #splash #main aside {
-	display: block;
-	margin-left: 680px;
+	float:right;
 	}	
 #splash #main aside > section > h1{
 	position: relative;
@@ -1808,7 +1807,7 @@ header {}
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: normal;
-        width: 300px;
+	width: 300px;
 	border-bottom: 1px solid #dbdbdb;
 	}
 #splash #featured_project ul {

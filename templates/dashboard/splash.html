@@ -20,13 +20,8 @@
   </div>
 </header> <!-- /#intro -->
 <section id="main">
-  <div class="container">
-    <ul id="posts">
-      {% for activity in activities %}
-        {% include "activity/_activity_resource.html" %}
-      {% endfor %}
-    </ul>
-    <aside>
+  <div class="container clearfix">
+	<aside>
     	{% if featured_project %}
       <section id="featured_project" class="card-list">
         <h1>{{ _('Featured') }}</h1>
@@ -37,6 +32,12 @@
         </ul>
       </section>
     	{% endif %}
+	</aside>
+    <ul id="posts">
+      {% for activity in activities %}
+        {% include "activity/_activity_resource.html" %}
+      {% endfor %}
+    </ul>
   </div>  
 </section>
 {% endblock %}

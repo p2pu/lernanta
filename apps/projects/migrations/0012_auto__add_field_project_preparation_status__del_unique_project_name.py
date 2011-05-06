@@ -11,15 +11,9 @@ class Migration(SchemaMigration):
         # Removing unique constraint on 'Project', fields ['name']
         db.delete_unique('projects_project', ['name'])
 
-        # Adding field 'Project.preparation_status'
-        db.add_column('projects_project', 'preparation_status', self.gf('django.db.models.fields.PositiveSmallIntegerField')(default=1), keep_default=False)
-
 
     def backwards(self, orm):
         
-        # Deleting field 'Project.preparation_status'
-        db.delete_column('projects_project', 'preparation_status')
-
         # Adding unique constraint on 'Project', fields ['name']
         db.create_unique('projects_project', ['name'])
 

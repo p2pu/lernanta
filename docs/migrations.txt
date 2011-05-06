@@ -1,0 +1,102 @@
+MIGRATIONS IN LERNANTA
+Written by Vladimir Támara vtamara@pasosdeJesus.org.  
+Released to the public domain.
+
+
+Since the model of the database changes continuosly during development,
+lernanta uses migrations (managed by the application south, see
+http://south.aeracode.org/docs/index.html ).
+
+
+1. INITIALIZING AND UPDATING THE DATABASE
+
+To initialize the database, to update it after model changes introduced 
+by the developers  (you can note them when you see changes in the
+files apps/*/models.py) or just to be sure you have your models up to date, 
+run from the sources directory:
+
+	./manage.py syncdb --noinput --migrate
+
+It will update the model and show the applications managed without
+migrations first, and after them the applications managed with migrations  
+(please see http://south.aeracode.org/ticket/276 )
+
+From an empty database, this will work correctly with PostgreSQL, 
+MySQL and SQLite.
+
+
+NOTE 1: Please don't use 
+	./manage.py syncdb --all
+Since this will ignore migrations. However if you have tu run it,
+you can mark all the migrations as applied by running:
+	./manage.py migrate --all --fake
+But all the applications will appear to be managed without migrations
+(as could be seen with ./manage.py syncdb  )
+
+NOTE 2: Migrations work best with PostgreSQL since this database allows
+altering schemas within transactions while MySQL doesn't. See:
+http://south.aeracode.org/docs/databaseapi.html#database-specific-issues
+
+
+2. CHANGING THE MODEL OF AN EXISTING APPLICATION
+
+If you change the model of an existing application, for example users
+(i.e by changing apps/users/models.py), run:
+	./manage.py schemamigration users --auto
+This will create a new migration in apps/users/migrations
+
+You will be able to refine the code generated for example to add dependencies
+(in case this migration has to be run after another one, see for
+example apps/activity/migrations/0001_initial.py that indicates
+that activity has to be created after creating links and statuses ).
+
+
+3. CREATING MODEL FOR A NEW APPLICATION
+
+If you develop a new application for Lernanta, let's say repasa, after
+developing the python mode run:
+	./manage.py schemamigration repasa --initial
+
+This will create the first migration that can create the required tables
+that you defined in apps/repasa/models.py
+
+
+4. TESTING MIGRATIONS
+
+To test that your migrations will run smoothly you can prepare a test 
+database in settings_local.py, for example by adding:
+
+    's': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'lernanta.db',
+    },
+
+You are declaring a Database in SQLite,  and you can update it with:
+
+	./manage.py syncdb --database s --migrate
+
+If you want to be sure, everything will work with a new database, drop
+and create again the database.  For example with sqlite:
+    rm lernanta.db
+
+Apply all the migrations
+
+	./manage.py syncdb --database s --noinput --migrate
+
+Reverse all the migrations applied:
+
+	./manage.py migrate --database s --all zero
+
+And apply all of them again:
+
+	./manage.py migrate --database s --all
+
+If you want to run other interactive test with this one, rename it in 
+settings_local.py from 's' to 'default' and start the server as usual:
+	./manage.py runserver
+
+The graph of migrations of directory docs can be updated (given
+you have installed Graphviz) with:
+	./manage.py graphmigrations | dot -Tpng -odocs/migrations.png
+
+

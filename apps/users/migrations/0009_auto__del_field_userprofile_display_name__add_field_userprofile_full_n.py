@@ -8,14 +8,20 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         
-        # Adding field 'Project.preparation_status'
-        db.add_column('projects_project', 'preparation_status', self.gf('django.db.models.fields.PositiveSmallIntegerField')(default=1), keep_default=False)
+        # Deleting field 'UserProfile.display_name'
+        db.delete_column('users_userprofile', 'display_name')
+
+        # Adding field 'UserProfile.full_name'
+        db.add_column('users_userprofile', 'full_name', self.gf('django.db.models.fields.CharField')(default='', max_length=255, null=True, blank=True), keep_default=False)
 
 
     def backwards(self, orm):
         
-        # Deleting field 'Project.preparation_status'
-        db.delete_column('projects_project', 'preparation_status')
+        # Adding field 'UserProfile.display_name'
+        db.add_column('users_userprofile', 'display_name', self.gf('django.db.models.fields.CharField')(default='', max_length=255, null=True, blank=True), keep_default=False)
+
+        # Deleting field 'UserProfile.full_name'
+        db.delete_column('users_userprofile', 'full_name')
 
 
     models = {
@@ -55,29 +61,6 @@ class Migration(SchemaMigration):
             'model': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },
-        'projects.project': {
-            'Meta': {'object_name': 'Project'},
-            'created_by': ('django.db.models.fields.related.ForeignKey', [], {'related_name': "'projects'", 'to': "orm['users.UserProfile']"}),
-            'created_on': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.date(2011, 1, 30)', 'auto_now_add': 'True', 'blank': 'True'}),
-            'detailed_description': ('django.db.models.fields.TextField', [], {}),
-            'detailed_description_html': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
-            'featured': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'image': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True'}),
-            'long_description': ('django.db.models.fields.TextField', [], {}),
-            'name': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '100'}),
-            'preparation_status': ('django.db.models.fields.PositiveSmallIntegerField', [], {'default': '1'}),
-            'short_description': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
-            'slug': ('django.db.models.fields.SlugField', [], {'unique': 'True', 'max_length': '50', 'db_index': 'True'})
-        },
-        'projects.projectmedia': {
-            'Meta': {'object_name': 'ProjectMedia'},
-            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'mime_type': ('django.db.models.fields.CharField', [], {'max_length': '80', 'null': 'True'}),
-            'project': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['projects.Project']"}),
-            'project_file': ('django.db.models.fields.files.FileField', [], {'max_length': '100'}),
-            'thumbnail': ('django.db.models.fields.files.ImageField', [], {'max_length': '100', 'null': 'True', 'blank': 'True'})
-        },
         'taggit.tag': {
             'Meta': {'object_name': 'Tag'},
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
@@ -100,10 +83,11 @@ class Migration(SchemaMigration):
             'Meta': {'object_name': 'UserProfile'},
             'bio': ('django.db.models.fields.TextField', [], {'default': "''", 'blank': 'True'}),
             'confirmation_code': ('django.db.models.fields.CharField', [], {'default': "''", 'max_length': '255', 'blank': 'True'}),
-            'created_on': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.date(2011, 1, 30)', 'auto_now_add': 'True', 'blank': 'True'}),
-            'display_name': ('django.db.models.fields.CharField', [], {'default': "''", 'max_length': '255', 'null': 'True', 'blank': 'True'}),
+            'created_on': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime.now', 'auto_now_add': 'True', 'blank': 'True'}),
+            'discard_welcome': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'unique': 'True', 'null': 'True'}),
             'featured': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
+            'full_name': ('django.db.models.fields.CharField', [], {'default': "''", 'max_length': '255', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'image': ('django.db.models.fields.files.ImageField', [], {'default': "''", 'max_length': '100', 'null': 'True', 'blank': 'True'}),
             'location': ('django.db.models.fields.CharField', [], {'default': "''", 'max_length': '255', 'blank': 'True'}),
@@ -114,4 +98,4 @@ class Migration(SchemaMigration):
         }
     }
 
-    complete_apps = ['projects']
+    complete_apps = ['users']

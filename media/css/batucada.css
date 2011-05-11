@@ -2344,8 +2344,8 @@ div.warning h2 {
     list-style: none;
 }
 .messages li {
-    margin: -16px auto 9px;
-    width: 942px;
+    margin: 0px 0px 25px -23px;
+    width: 982px;
     padding: 9px;
     font-size: 14px;
     text-align: center;

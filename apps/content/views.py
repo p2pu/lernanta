@@ -20,6 +20,9 @@ from content.forms import PageForm, NotListedPageForm, CommentForm, OwnersPageFo
 from content.models import Page, PageVersion, PageComment
 from links.models import Link
 
+import logging
+log = logging.getLogger(__name__)
+
 
 def show_page(request, slug, page_slug):
     page = get_object_or_404(Page, project__slug=slug, slug=page_slug)
@@ -62,14 +65,14 @@ def show_comment(request, slug, page_slug, comment_id):
 def edit_page(request, slug, page_slug):
     page = get_object_or_404(Page, project__slug=slug, slug=page_slug)
     if not page.editable or page.deleted:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     if page.project.is_organizing(request.user):
         form_cls = OwnersPageForm if page.listed else OwnersNotListedPageForm
     elif page.collaborative:
         form_cls = PageForm if page.listed else NotListedPageForm
     else:
         # Restrict permissions for non-collaborative pages.
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     if request.method == 'POST':
         old_version = PageVersion(title=page.title, content=page.content,
             author=page.author, date=page.last_update, page=page)
@@ -132,9 +135,9 @@ def create_page(request, slug):
 def delete_page(request, slug, page_slug):
     page = get_object_or_404(Page, project__slug=slug, slug=page_slug)
     if page.deleted or not page.editable or not page.listed:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     if not page.project.is_organizing(request.user) and not page.collaborative:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     if request.method == 'POST':
         old_version = PageVersion(title=page.title, content=page.content,
             author=page.author, date=page.last_update, page=page)
@@ -159,7 +162,7 @@ def delete_page(request, slug, page_slug):
 def comment_page(request, slug, page_slug, comment_id=None):
     page = get_object_or_404(Page, project__slug=slug, slug=page_slug)
     if not page.editable:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     user = request.user.get_profile()
     reply_to = abs_reply_to = None
     if comment_id:
@@ -199,7 +202,7 @@ def comment_page(request, slug, page_slug, comment_id=None):
 def edit_comment(request, slug, page_slug, comment_id):
     comment = get_object_or_404(PageComment, id=comment_id, page__slug=page_slug, page__project__slug=slug)
     if not comment.can_edit(request.user):
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     if request.method == 'POST':
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
@@ -223,7 +226,7 @@ def edit_comment(request, slug, page_slug, comment_id):
 def delete_restore_comment(request, slug, page_slug, comment_id):
     comment = get_object_or_404(PageComment, id=comment_id, page__slug=page_slug, page__project__slug=slug)
     if not comment.can_edit(request.user):
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this comment"))
     if request.method == 'POST':
         comment.deleted = not comment.deleted
         comment.save()
@@ -247,7 +250,7 @@ def delete_restore_comment(request, slug, page_slug, comment_id):
 def history_page(request, slug, page_slug):
     page = get_object_or_404(Page, project__slug=slug, slug=page_slug)
     if not page.editable:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     versions = PageVersion.objects.filter(page=page).order_by('-date')
     return render_to_response('content/history_page.html', {
         'page': page,
@@ -261,7 +264,7 @@ def version_page(request, slug, page_slug, version_id):
         page__slug=page_slug, id=version_id, deleted=False)
     page = version.page
     if not page.editable:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     return render_to_response('content/version_page.html', {
         'page': page,
         'version': version,
@@ -277,14 +280,14 @@ def restore_version(request, slug, page_slug, version_id):
         page__slug=page_slug, id=version_id)
     page = version.page
     if not page.editable or version.deleted:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     if page.project.is_organizing(request.user):
         form_cls = OwnersPageForm if page.listed else OwnersNotListedPageForm
     elif page.collaborative:
         form_cls = PageForm if page.listed else NotListedPageForm
     else:
         # Restrict permissions for non-collaborative pages.
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this page"))
     if request.method == 'POST':
         old_version = PageVersion(title=page.title, content=page.content,
             author=page.author, date=page.last_update, page=page, deleted=page.deleted)
@@ -371,16 +374,16 @@ def comment_sign_up(request, slug, comment_id=None):
         if not is_organizing:
             if is_participating:
                 if not project.is_participating(abs_reply_to.author):
-                    return HttpResponseForbidden()
+                    return HttpResponseForbidden(_("You can't see this page"))
             elif abs_reply_to.author != user:
-                return HttpResponseForbidden()
+                return HttpResponseForbidden(_("You can't see this page"))
     elif project.signup_closed or is_organizing or is_participating:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't see this page"))
     else:
         answers = page.comments.filter(reply_to__isnull=True, deleted=False,
             author=user)
         if answers.exists():
-            return HttpResponseForbidden()
+            return HttpResponseForbidden(_("There exists already an answer"))
 
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -430,7 +433,7 @@ def comment_sign_up(request, slug, comment_id=None):
 def edit_comment_sign_up(request, slug, comment_id):
     comment = get_object_or_404(PageComment, page__project__slug=slug, page__slug='sign-up', id=comment_id)
     if not comment.can_edit(request.user):
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit this comment"))
     abs_reply_to = comment
     while abs_reply_to.reply_to:
         abs_reply_to = abs_reply_to.reply_to
@@ -480,7 +483,7 @@ def accept_sign_up(request, slug, comment_id, as_organizer=False):
     organizing = project.is_organizing(answer.author.user)
     participating = project.is_participating(answer.author.user)
     if answer.reply_to or organizing or participating or request.method != 'POST':
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't see this page"))
     participation = Participation(project=project, user=answer.author, organizing=as_organizer)
     participation.save()
     new_rel = Relationship(source=answer.author, target_project=project)

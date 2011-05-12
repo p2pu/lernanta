@@ -73,7 +73,7 @@ def email(request):
         'email': email,
         'form': form,
     }, context_instance=RequestContext(request))
-    
+
 @login_required
 def password(request):
     profile = request.user.get_profile()
@@ -96,8 +96,8 @@ def password(request):
 
     return render_to_response('preferences/settings_password.html', {
         'form': form,
-    }, context_instance=RequestContext(request))    
-    
+    }, context_instance=RequestContext(request))
+
 @login_required
 def delete(request):
     return HttpResponseRedirect(reverse('preferences_settings'))

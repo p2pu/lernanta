@@ -15,7 +15,7 @@ def organizer_required(func):
         project = kwargs['slug']
         project = get_object_or_404(Project, slug=project)
         if not project.is_organizing(request.user):
-            return HttpResponseForbidden()
+            return HttpResponseForbidden(_("You are not organizign this study group"))
         return func(*args, **kwargs)
     return decorator
 
@@ -30,7 +30,7 @@ def participation_required(func):
         project = kwargs['slug']
         project = get_object_or_404(Project, slug=project)
         if not project.is_participating(request.user):
-            return HttpResponseForbidden()
+            return HttpResponseForbidden(_("You are not participating in this study group"))
         return func(*args, **kwargs)
     return decorator
 

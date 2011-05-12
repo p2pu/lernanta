@@ -8,6 +8,11 @@
     {{ profile_form.location }}
     {{ profile_form.location.errors }}
   </div>
+  <div class="field{% if profile_form.location.errors %} error{% endif %}">
+    <label for="language">{{ _('Preferred Language') }}</label>
+    {{ profile_form.preflang}}
+    {{ profile_form.preflang.errors }}
+  </div>
   <div class="field{% if profile_form.bio.errors %} error{% endif %}">
     <label for="id_bio">{{ _('Bio') }}</label>
     {{ profile_form.bio }}

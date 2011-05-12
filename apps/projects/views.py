@@ -226,7 +226,7 @@ def edit_links_edit(request, slug, link):
     profile = get_object_or_404(UserProfile, user=request.user)
     project = get_object_or_404(Project, slug=slug)
     if link.project != project:
-        return http.HttpResponseForbidden()
+        return http.HttpResponseForbidden(_("You can't edit this link"))
     if form.is_valid():
         if link.subscription:
             tasks.UnsubscribeFromFeed.apply_async(args=(link,))
@@ -256,7 +256,7 @@ def edit_links_delete(request, slug, link):
         project = get_object_or_404(Project, slug=slug)
         link = get_object_or_404(Link, pk=link)
         if link.project != project:
-            return http.HttpResponseForbidden()
+            return http.HttpResponseForbidden(_("You can't edit this link"))
         link.delete()
         messages.success(request, _('The link was deleted'))
     return http.HttpResponseRedirect(
@@ -311,7 +311,7 @@ def edit_participants_make_organizer(request, slug, username):
     participation = get_object_or_404(Participation,
             project__slug=slug, user__username=username, left_on__isnull=True)
     if participation.organizing or request.method != 'POST':
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't make organizer"))
     participation.organizing = True
     participation.save()
     messages.success(request, _('The participant is now an organizer.'))

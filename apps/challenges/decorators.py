@@ -13,7 +13,7 @@ def challenge_owner_required(func):
         user = request.user.get_profile()
 
         if user != challenge.created_by:
-            return HttpResponseForbidden()
+            return HttpResponseForbidden(_("You can't decorate challenge"))
         return func(*args, **kwargs)
     return decorator
 
@@ -28,6 +28,6 @@ def submission_owner_required(func):
         user = request.user.get_profile()
 
         if user != submission.created_by:
-            return HttpResponseForbidden()
+            return HttpResponseForbidden(_("You can't decorate submission"))
         return func(*args, **kwargs)
     return decorator

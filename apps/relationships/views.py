@@ -52,7 +52,7 @@ def unfollow(request, object_type, slug):
         project = get_object_or_404(Project, slug=slug)
         # project.participants() includes project.organizers()
         if project.participants().filter(user=profile).exists():
-            return HttpResponseForbidden()
+            return HttpResponseForbidden(_("You can't unfollow"))
         Relationship.objects.filter(
             source=profile, target_project=project).delete()
     elif object_type == PROJECT:

@@ -29,6 +29,11 @@
           {{ form.email.errors }}
           <small class="hint">{{ _('Required to send you notifications about your P2PU account.') }}</small>
         </div>
+        <div class="preflang">
+          <label for="preflang">{{ _('Preferred Language') }}</label>
+          {{ form.preflang }}
+          {{ form.preflang.errors }}
+        </div>
         <div class="consents">
           <div class="field inline_label{% if form.newsletter.errors %} error{% endif %}">
             <label for="id_newsletter">

@@ -6,7 +6,8 @@ import unicodedata
 
 from django.core.validators import ValidationError, validate_slug
 from django.utils.encoding import smart_unicode
-from django.utils.translation import ugettext as _, get_language
+from django.utils.translation import ugettext as _
+from django.utils.translation import activate, get_language, ugettext
 from django.utils.safestring import mark_safe
 from django.forms.util import flatatt
 from django.utils.html import conditional_escape

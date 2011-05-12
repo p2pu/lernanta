@@ -5,6 +5,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils.translation import ugettext as _
+from django.utils.translation import activate, get_language
 from django.views.decorators.csrf import csrf_exempt
 
 from l10n.urlresolvers import reverse
@@ -67,6 +68,10 @@ def dashboard(request):
         return render_to_response('dashboard/setup_profile.html', {
             'form': form,
         }, context_instance=RequestContext(request))
+    if profile.preflang and any(profile.preflang in l for l in settings.SUPPORTED_LANGUAGES):
+        if (get_language() <> profile.preflang):
+            activate(profile.preflang);
+            return HttpResponseRedirect("/" + profile.preflang + "/")
     projects = profile.following(model=Project)
     projects_organizing = []
     projects_participating = []

@@ -37,7 +37,7 @@ log = logging.getLogger(__name__)
 def create_challenge(request, project_id):
     project = get_object_or_404(Project, id=project_id)
     if project.slug != 'mojo':
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't create challenge"))
 
     user = request.user.get_profile()
 
@@ -75,7 +75,7 @@ def edit_challenge(request, slug):
     user = request.user.get_profile()
 
     if user != challenge.created_by:
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("You can't edit challenge"))
 
     if request.method == 'POST':
         form = ChallengeForm(request.POST, instance=challenge)
@@ -211,7 +211,7 @@ def show_challenge_full(request, slug):
 def create_submission(request, slug):
     challenge = get_object_or_404(Challenge, slug=slug)
     if not challenge.is_active():
-        return HttpResponseForbidden()
+        return HttpResponseForbidden(_("Challenge is not active"))
 
     user = request.user.get_profile()
 
@@ -386,7 +386,7 @@ def challenge_judges_delete(request, slug, judge):
         challenge = get_object_or_404(Challenge, slug=slug)
         judge = get_object_or_404(Judge, pk=judge)
         if judge.challenge != challenge:
-            return HttpResponseForbidden()
+            return HttpResponseForbidden(_("You are not judge of this challenge"))
         judge.delete()
         messages.success(request, _('Judge removed.'))
     return HttpResponseRedirect(reverse('challenges_judges', kwargs={

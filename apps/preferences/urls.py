@@ -8,8 +8,8 @@ urlpatterns = patterns('',
   url(r'^email/', 'preferences.views.email',
       name='preferences_email'),
   url(r'^password/', 'preferences.views.password',
-      name='preferences_password'),               
+      name='preferences_password'),
   url(r'^delete/', 'preferences.views.delete',
       name='preferences_delete'),
- 
+
 )

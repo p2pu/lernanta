@@ -32,7 +32,7 @@ class Link(models.Model):
                 max_index = Link.objects.filter(user=self.user, project__isnull=True).aggregate(Max('index'))['index__max']
             self.index = max_index + 1 if max_index else 1
         super(Link, self).save()
-         
+
 def link_create_handler(sender, **kwargs):
     """Check for a feed and subscribe to it if it exists."""
     link = kwargs.get('instance', None)

@@ -480,7 +480,7 @@ def profile_edit_links_delete(request, link):
         profile = get_object_or_404(UserProfile, user=request.user)
         link = get_object_or_404(Link, pk=link)
         if link.user != profile:
-            return http.HttpResponseForbidden()
+            return http.HttpResponseForbidden(_("You can't edit this link"))
         link.delete()
         messages.success(request, _('The link was deleted.'))
     return http.HttpResponseRedirect(reverse('users_profile_edit_links'))

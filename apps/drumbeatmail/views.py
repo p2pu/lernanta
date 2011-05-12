@@ -171,7 +171,7 @@ def outbox(request, page_number=1):
 def reply(request, message):
     message = get_object_or_404(Message, id=message)
     if message.recipient != request.user:
-        return http.HttpResponseForbidden()
+        return http.HttpResponseForbidden(_("Can't send email"))
     if request.method == 'POST':
         form = forms.ComposeForm(data=request.POST,
                                  sender=request.user.get_profile())

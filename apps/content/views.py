@@ -491,8 +491,9 @@ def accept_sign_up(request, slug, comment_id, as_organizer=False):
     accept_content = detail_description_content = render_to_string(
             "content/accept_sign_up_comment.html",
             {'as_organizer': as_organizer})
-    accept_comment = PageComment(content=accept_content, author=user,
-        page=page, reply_to=answer, abs_reply_to=answer)
+    accept_comment = PageComment(content=accept_content, 
+        author = request.user.get_profile(), page = page, reply_to = answer, 
+        abs_reply_to = answer)
     accept_comment.save()
     if as_organizer:
         messages.success(request, _('Organizer added!'))

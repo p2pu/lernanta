@@ -15,7 +15,7 @@ bleach==0.5.0
 lxml
 django-maintenancemode
 
--e git://github.com/jbalogh/django-cache-machine.git#egg=django-cache-machine
+-e git://github.com/jbalogh/django-cache-machine.git@7e1152e27a19ef1a3b3f60c0e66d2c84d6bfeaa3#egg=python_xrd-dev
 -e git://github.com/jsocol/commonware.git#egg=commonware
 -e git://github.com/paulosman/python-xrd#egg=xrd
 -e git://github.com/paulosman/django-wellknown.git#egg=wellknown

@@ -25,16 +25,16 @@ DATABASES = {
         'OPTIONS': {'init_command': 'SET storage_engine=InnoDB'},
     },
 
-    # Comment the following lines to disable drupal user support.
-    'drupal_users': {
-        'NAME': 'drupal_user_data',
-        'TEST_NAME': 'drupal_user_data',
-        'ENGINE': 'django.db.backends.mysql',
-        'USER': 'drupal_db_user',
-        'PASSWORD': '',
-        'HOST': '', # An empty string means localhost.
-        'PORT': '', # An empty string means the default port.
-    }
+    # Uncomment the following lines to enable drupal user support.
+#    'drupal_users': {
+#        'NAME': 'drupal_user_data',
+#        'TEST_NAME': 'drupal_user_data',
+#        'ENGINE': 'django.db.backends.mysql',
+#        'USER': 'drupal_db_user',
+#        'PASSWORD': '',
+#        'HOST': '', # An empty string means localhost.
+#        'PORT': '', # An empty string means the default port.
+#    }
 
 }
 

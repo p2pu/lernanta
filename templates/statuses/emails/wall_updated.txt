@@ -14,7 +14,7 @@
 {{ _('The P2PU Team') }}
 
 {% if status.important %}
-{{ _('This message was marked as important by the study group organizer. Important messages will always bypass participants\'s notification prefences.') }}
+{{ _('This message was marked as important by the study group organizer. Important messages will always bypass participants\'s notification preferences.') }}
 {% else %}
 {{ _('Manage your subscriptions:') }} http://{{domain}}/account/settings/
 {% endif %}

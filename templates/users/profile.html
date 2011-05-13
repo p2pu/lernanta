@@ -2,7 +2,7 @@
 {% load l10n_tags %}
 {% load i18n %}
 {% load truncate_chars %}
-{% block title %}{{ profile.name }}{% endblock %}
+{% block title %}{{ profile.username }}{% endblock %}
 
 {% block links %}
 <link rel="alternate" type="application/atom+xml" href="{% locale_url activity_user_feed username=profile.username %}">

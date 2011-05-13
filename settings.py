@@ -5,6 +5,8 @@ import os
 import logging
 import djcelery
 
+import l10n.locales 
+
 djcelery.setup_loader()
 
 # Make filepaths relative to settings.
@@ -40,10 +42,8 @@ TIME_ZONE = 'America/Toronto'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en'
 
-SUPPORTED_LANGUAGES = (
-		(u'en', u'English'),
-		(u'es', u'Español'),
-		)
+SUPPORTED_LANGUAGES = tuple([(i.lower(), l10n.locales.LOCALES[i].native) 
+    for i in l10n.locales.LOCALES])
 
 SITE_ID = 1
 

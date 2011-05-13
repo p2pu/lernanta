@@ -386,7 +386,7 @@ def challenge_judges_delete(request, slug, judge):
         challenge = get_object_or_404(Challenge, slug=slug)
         judge = get_object_or_404(Judge, pk=judge)
         if judge.challenge != challenge:
-            return HttpResponseForbidden(_("You are not judge of this challenge"))
+            return HttpResponseForbidden(_("You are not a judge of this challenge"))
         judge.delete()
         messages.success(request, _('Judge removed.'))
     return HttpResponseRedirect(reverse('challenges_judges', kwargs={

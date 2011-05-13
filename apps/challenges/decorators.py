@@ -13,7 +13,7 @@ def challenge_owner_required(func):
         user = request.user.get_profile()
 
         if user != challenge.created_by:
-            return HttpResponseForbidden(_("You can't decorate challenge"))
+            return HttpResponseForbidden(_("You didn't create the challenge"))
         return func(*args, **kwargs)
     return decorator
 

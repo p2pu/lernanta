@@ -8,6 +8,7 @@ from django.contrib.auth import forms as auth_forms
 from django.contrib.auth import REDIRECT_FIELD_NAME
 from django.db.models import Q
 from django.utils.translation import ugettext as _
+from django.utils.translation import activate, get_language
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.template.loader import render_to_string
@@ -20,6 +21,7 @@ from django_openid_auth import views as openid_views
 from commonware.decorators import xframe_sameorigin
 
 from l10n.urlresolvers import reverse
+from urlparse import urlparse, urlunparse
 from users import forms
 from users.models import UserProfile, create_profile
 from users.fields import UsernameField
@@ -91,6 +93,18 @@ def _get_redirect_url(request):
             url = '/%s' % (url,)
         return url
 
+def force_language_in_url(url, oldlang, newlang):
+    """Rewrite url to use newlang instead of oldlang"""
+    # Use when activate(newlang) is not enough
+    # see https://docs.djangoproject.com/en/dev/topics/i18n/deployment/
+    p = urlparse(url)
+    if (p.path.startswith('/' + oldlang + '/')):
+        npath = p.path.replace('/' + oldlang + '/', '/' + newlang + '/', 1)
+    else:
+        npath = '/' + newlang + '/' + p.path
+    return urlunparse([p.scheme, p.netloc, npath, 
+        p.params, p.query, p.fragment])
+
 
 @anonymous_only
 def login(request):
@@ -122,8 +136,13 @@ def login(request):
             request.session.set_expiry(settings.SESSION_COOKIE_AGE)
             log.debug(u'User signed in with remember_me option')
 
+        olang = get_language()
+        activate(user.preflang)
         redirect_url = _get_redirect_url(request)
         if redirect_url:
+            redirect_url = force_language_in_url(
+                redirect_url, olang, user.preflang
+            )
             return http.HttpResponseRedirect(redirect_url)
 
     elif request.method == 'POST':
@@ -366,11 +385,13 @@ def profile_edit(request):
         form = forms.ProfileEditForm(request.POST, request.FILES,
                                      instance=profile)
         if form.is_valid():
+            olang = get_language()
+            activate(profile.preflang)
             messages.success(request, _('Profile updated'))
             form.save()
-            return http.HttpResponseRedirect(
-                reverse('users_profile_edit'),
-            )
+            next = reverse('users_profile_edit')
+            next = force_language_in_url(next, olang, profile.preflang)
+            return http.HttpResponseRedirect(next)
         else:
             messages.error(request, _('There were problems updating your '
                                       'profile. Please correct the problems '

@@ -311,7 +311,7 @@ def edit_participants_make_organizer(request, slug, username):
     participation = get_object_or_404(Participation,
             project__slug=slug, user__username=username, left_on__isnull=True)
     if participation.organizing or request.method != 'POST':
-        return HttpResponseForbidden(_("You can't make organizer"))
+        return HttpResponseForbidden(_("You can't make that person an organizer"))
     participation.organizing = True
     participation.save()
     messages.success(request, _('The participant is now an organizer.'))

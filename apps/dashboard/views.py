@@ -68,10 +68,6 @@ def dashboard(request):
         return render_to_response('dashboard/setup_profile.html', {
             'form': form,
         }, context_instance=RequestContext(request))
-    if profile.preflang and any(profile.preflang in l for l in settings.SUPPORTED_LANGUAGES):
-        if (get_language() <> profile.preflang):
-            activate(profile.preflang);
-            return HttpResponseRedirect("/" + profile.preflang + "/")
     projects = profile.following(model=Project)
     projects_organizing = []
     projects_participating = []

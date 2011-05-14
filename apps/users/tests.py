@@ -89,7 +89,7 @@ class TestLogins(TestCase):
             'password': self.test_password,
         })
         self.assertEqual(
-            "http://testserver/%s/profile/edit/" % (self.locale,),
+            "http://testserver/%s/profile/edit/" % (settings.LANGUAGE_CODE),
             response["location"],
         )
 

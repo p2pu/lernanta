@@ -1,4 +1,5 @@
 {% load l10n_tags %}
+{% load i18n %}
 {% if message %}
 <strong>{{ message }}</strong>
 {% endif %}
@@ -8,6 +9,6 @@
   <li id="myopenid"><a href="#myopenid" title="{{ _('Sign In with your myOpenID account') }}">myOpenID</a></li>
 </ul>
 <p class="or"><span>{{ _('or') }}</span></p>
-{{ form.openid_identifier }}
+<input type="text" placeholder="{{ _('enter any OpenID URL') }}" name="{{ form.openid_identifier.html_name }}" id="{{ form.openid_identifier.html_name }}" /> 
 {{ form.openid_identifier.errors }}
 <button type="submit" value="submit" id="other_submit">{{ _('Go') }}</button>

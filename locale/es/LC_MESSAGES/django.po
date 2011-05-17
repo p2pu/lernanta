@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LERNANTA 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-13 20:03-0400\n"
+"POT-Creation-Date: 2011-05-16 13:05-0400\n"
 "PO-Revision-Date: 2011-04-11 8:23-0500\n"
 "Last-Translator: Vladimir Támara Patiño <vtamara@pasosdeJesus.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -108,7 +108,7 @@ msgid "You can't decorate submission"
 msgstr "Usted no puede decorar el envío"
 
 #: apps/challenges/forms.py:30 apps/projects/forms.py:48
-#: apps/schools/forms.py:32 apps/users/forms.py:170
+#: apps/schools/forms.py:32 apps/users/forms.py:168
 #, python-format
 msgid "Image exceeds max image size: %(max)dk"
 msgstr "La imagen excede el tamaño máximo: %(max)dk"
@@ -457,7 +457,7 @@ msgstr ""
 msgid "That password is too common. Please choose another."
 msgstr "Esa contraseña es muy común. Por favor elija otra."
 
-#: apps/preferences/forms.py:68 apps/users/forms.py:146
+#: apps/preferences/forms.py:68 apps/users/forms.py:144
 msgid "Passwords do not match."
 msgstr "Las contraseñas no coinciden."
 
@@ -512,8 +512,8 @@ msgid ""
 "You received this message through the Contact Organizer form at %(project)s: "
 "http://%(domain)s%(url)s"
 msgstr ""
-"Usted recibió este mensaje porque es un organizador en %(project)s: http://%(domain)s"
-"%(url)s"
+"Usted recibió este mensaje porque es un organizador en %(project)s: http://"
+"%(domain)s%(url)s"
 
 #: apps/projects/models.py:105
 msgid "study group"
@@ -708,13 +708,15 @@ msgstr "Usted ya entró a su cuenta."
 msgid "Please choose another username."
 msgstr "Por favor elija otro nombre de usuario."
 
-#: apps/users/forms.py:67
-msgid "enter any OpenID URL"
-msgstr "escriba una URL de OpenID"
-
-#: apps/users/forms.py:71 templates/users/signin.html:14
+#: apps/users/forms.py:69 templates/users/signin.html:14
 msgid "You can login directly with your credentials from the old P2PU website."
 msgstr "Puede entrar directamente con sus credenciales de p2pu.org."
+
+#: apps/users/forms.py:189
+msgid ""
+"That e-mail address doesn't have an associated user account. Are you sure "
+"you've registered?"
+msgstr ""
 
 #: apps/users/models.py:156
 msgid "Complete Registration"
@@ -2790,25 +2792,29 @@ msgstr ""
 msgid " posted a message to the study group wall."
 msgstr " publicó un mensaje para este grupo de estudio."
 
-#: templates/users/_openid_providers.html:6
+#: templates/users/_openid_providers.html:7
 msgid "Sign In with your Google account"
 msgstr "Entrar con su cuenta de Google"
 
-#: templates/users/_openid_providers.html:7
+#: templates/users/_openid_providers.html:8
 msgid "Sign In with your Yahoo! account"
 msgstr "Entrar con su cuenta de Yahoo!"
 
-#: templates/users/_openid_providers.html:8
+#: templates/users/_openid_providers.html:9
 msgid "Sign In with your myOpenID account"
 msgstr "Entrar con su cuenta myOpenID"
 
-#: templates/users/_openid_providers.html:10
+#: templates/users/_openid_providers.html:11
 #: templates/users/profile_form_base.html:8
 #: templates/users/register_openid.html:9 templates/users/signin.html:10
 msgid "or"
 msgstr "o"
 
-#: templates/users/_openid_providers.html:13
+#: templates/users/_openid_providers.html:12
+msgid "enter any OpenID URL"
+msgstr "escriba una URL de OpenID"
+
+#: templates/users/_openid_providers.html:14
 msgid "Go"
 msgstr "Ir"
 

@@ -39,7 +39,7 @@
 {% block body %}
 {% sidebar %}
 <div id="main" class="content_page">
-<h1>{{ version.title }} {{ version.date }}</h1>
+<h1>{{ version.title }} [{{ version.date }}]</h1>
 <hr />
 {{ version.content|youtube|slideshare|safe }}
 </div>

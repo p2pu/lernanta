@@ -396,6 +396,12 @@ header {}
         display: block;
         padding: 10px 12px;
       }
+	  #user-nav a.sub-level, #main-nav a.sub-level{
+	    color: #444;
+        font-size: 14px;
+        display: block;
+        padding: 10px 12px;
+	  }
       
       #user-nav a.top-level, #main-nav a.top-level {
         display: block;
@@ -479,7 +485,6 @@ header {}
         background: #36cdc4;
       }
         .menu.open a {
-          border-bottom: 1px solid #20699d;
           border-top: 1px solid #76bae9;
           display: block;
           background: #28c0b7;
@@ -507,7 +512,6 @@ header {}
             color: #fff;
           }
           #user-actions, #school-menu-items, #help-menu-items {
-            border-top: 1px solid #76bae9;
             min-width: 146px;
             color: #fff;
           }

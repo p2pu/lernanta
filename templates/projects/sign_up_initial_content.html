@@ -1,9 +1,12 @@
+{% load i18n %}
+{% load l10n_tags %}
+
 <p>{{ _('Anyone can follow a') }} {{ project.kind|lower }} {{ _('on P2PU. Participating is the next level of engagement. The sign-up is a space where interested individuals can express their interest and background in the topic and commit to working with the rest of the participants. Please provide details about:') }}</p>
 
 <ul>
 	<li>{{ _('What made you interested in this topic?') }}</li>
 	<li>{{ _('What do you hope to achieve by participating?') }}</li>
-    <li>{{ _('Are you interested in helping with the ') }} {{ project.kind|lower }} {{ _('organization?') }}</li>
+    <li>{% blocktrans with kind=project.kind|lower %}Are you interested in helping with the {{ kind }} organization?{% endblocktrans %}</li>
 </ul>
 <br>
 <p>{{ _('All the participants will be able to see your answers after you get accepted.') }}</p>

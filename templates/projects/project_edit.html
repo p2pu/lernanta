@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% load i18n %}
 {% load l10n_tags %}
 
 {% block title %}{% if project %}{{ _('Edit') }}{% else %}{{ _('Create') }}{% endif %}{% endblock %}

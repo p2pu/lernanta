@@ -11,7 +11,7 @@ sample_data.py
 sql/
 celery-schedule
 <<<<<<< HEAD
-lernanta.log
+lernanta.log*
 .project
 .pydevproject
 SRC

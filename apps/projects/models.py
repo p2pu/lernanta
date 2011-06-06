@@ -82,7 +82,7 @@ class Project(ModelBase):
     generalized_object_type = 'http://activitystrea.ms/schema/1.0/group'
 
     name = models.CharField(max_length=100)
-    kind = models.CharField(max_length=30, default='study group')
+    kind = models.CharField(max_length=30, default=_('Study Group'))
     short_description = models.CharField(max_length=150)
     long_description = models.TextField(validators=[MaxLengthValidator(700)])
     

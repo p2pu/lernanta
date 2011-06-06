@@ -20,7 +20,7 @@ Interested in getting involved in Lernanta code development? Check out the devel
 [2] http://wiki.p2pu.org
 
 
-Setting up a local development environment
+Setting up a local development environment in Ubuntu
 ------------
 
 You will need to set up `git and your SSH keys`_ 
@@ -56,13 +56,7 @@ Be sure to configure your shell so that pip knows where to find your virtual env
 
 .. _virtualenvwrapper: http://www.doughellmann.com/docs/virtualenvwrapper/
 
-<<<<<<< HEAD
 Once installed, create your virtual environment for ``lernanta`` and install the dependencies. There's a chance that packages listed in ``requirements/compiled.txt`` won't install cleanly if your system is missing some key development libraries. For example, lxml requires ``libxml2-dev`` and ``libxslt-dev``. These should be available from your system's package manager. ::
-=======
-virtualenvwrapper is sometimes installed to /usr/local/bin/ so if you set things up and are informed of missing file errors change the location accordingly.
-
-Now create a virtual environment for ``batucada`` and install its dependencies: ::
->>>>>>> batucada/master
 
    cd lernanta
    mkvirtualenv --no-site-packages lernanta 
@@ -70,16 +64,7 @@ Now create a virtual environment for ``batucada`` and install its dependencies: 
    pip install -r requirements/compiled.txt
    pip install -r requirements/prod.txt
    pip install -r requirements/dev.txt
-<<<<<<< HEAD
-=======
 
-There's a chance that packages listed in ``requirements/compiled.txt`` won't install cleanly if your system is missing some key development libraries. For example, lxml requires ``libxsml2-dev`` and ``libxslt-dev``. These should be available from your system's package manager.
-
-Problems have also been experienced with using Xcode4. If you're pip installs fail try giving things a kick by running the following and try it again: ::
-
-    ARCHFLAGS="-arch i386 -arch x86_64"
->>>>>>> batucada/master
-   
 To be extra sure you're working from a clean slate, you might find it helps to delete ``.pyc`` files: ::
 
     sh/rmpyc
@@ -88,20 +73,12 @@ If the mysql database doesn't exist yet, create it. You will use the database na
 
    mysqladmin -u <user> -p create <database name>
 
-<<<<<<< HEAD
 Create a ``settings_local.py`` based on the template provided in the checkout. Edit the database parameters as needed ::
-=======
-If you have yet to get a local version of mysql running you will want to do so now. 
-
-In order to run the migrations and syncd command you need to have an empty database set up. Default name is 'batucada', if you didn't change anything in local_settings.py then you can simply run, from an mysql command line: ::
-
-    CREATE DATABASE 'batucada';
-
-Now sync the database and run migrations. ::
->>>>>>> batucada/master
 
    cp settings_local.dist.py settings_local.py
- 
+
+If you have yet to get a local version of mysql running you will want to do so now. 
+
 Next, sync the database and run migrations. ::
 
    python manage.py syncdb --noinput --migrate

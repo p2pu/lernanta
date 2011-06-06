@@ -1,8 +1,11 @@
-<p><strong>{{ _('Please fill out the ') }} {{ project.kind|lower }} {{_('\'s full description.') }}</strong> {{ _('In this page you could:') }}</p>
+{% load i18n %}
+{% load l10n_tags %}
+
+<p><strong>{% blocktrans with kind=project.kind|lower %}Please fill out the  {{ kind }}'s full description.{% endblocktrans %}</strong> {{ _('In this page you could:') }}</p>
 
 <ul>
-	<li>{{ _('Describe the purpose of the ') }} {{ project.kind|lower }}{{ _(' and the learning goals for the tasks within.') }}</li>
-	<li>{{ _('Describe your role in this ') }} {{ project.kind|lower }}{{ _('. What made you interested in this topic? What do you hope to achieve by organizing this ') }} {{ project.kind|lower }}{{ _('? Are you an expert, enthusiastic or a novice?') }}</li>
-	<li>{{ _('Include any prerequisite knowledge or skills needed to participate in the ') }} {{ project.kind|lower }}{{ _(', the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).') }}</li>
-	<li>{{ _('Provided any other information that could be useful for people interested in joining the ') }} {{ project.kind|lower }}{{ _('. In what ways can participants expect to contribute to the creation of tasks and assessing each others\' contributions? What will the final task comprise?') }}</li>
+    <li>{% blocktrans with kind=project.kind|lower %}Describe the purpose of the {{ kind }} and the learning goals for the tasks within.{% endblocktrans %}</li>
+	<li>{% blocktrans with kind=project.kind|lower %}Describe your role in this  {{ kind }}. What made you interested in this topic? What do you hope to achieve by organizing this  {{ kind }}? Are you an expert, enthusiastic or a novice?{% endblocktrans %}</li>
+	<li>{% blocktrans with kind=project.kind|lower %}Include any prerequisite knowledge or skills needed to participate in the  {{ kind }}, the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).{% endblocktrans %}</li>
+	<li>{% blocktrans with kind=project.kind|lower %}Provided any other information that could be useful for people interested in joining the  {{ kind }}. In what ways can participants expect to contribute to the creation of tasks and assessing each others\' contributions? What will the final task comprise?{% endblocktrans %}</li>
 <ul>

@@ -373,8 +373,8 @@ def edit(request, slug):
     else:
         school = project.school
         if school and school.declined.filter(id=project.id).exists():
-            msg = _('The %s membership to %s was declined by the school organizers.') % project.kind.lower()
-            messages.error(request, msg % school.name)
+            msg = _('The %(kind)s membership to %(school)s was declined by the school organizers.') % dict(kind = project.kind.lower(), school = school.name)
+            messages.error(request, msg)
         form = project_forms.ProjectForm(instance=project)
 
     return render_to_response('projects/project_edit_summary.html', {

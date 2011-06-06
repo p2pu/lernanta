@@ -8,7 +8,7 @@
 <h2>{{ _('Status &amp; Dates') }}</h2>
    <form action="{% locale_url projects_edit_status slug=project.slug %}" method="post">
   {% csrf_token %} 
-<p class="hint">{{ _('Configure your ') }} {{ project.kind|lower }} {{ _('\'s status, such that it appears in the appropriate lists.') }}</p>
+  <p class="hint">{% blocktrans with kind=project.kind|lower %}Configure your {{ kind }}'s status, such that it appears in the appropriate lists.{% endblocktrans %}</p>
    <p>
     <label for="id_under_development">
     {{ form.under_development }}
@@ -37,7 +37,7 @@
     </label>
     {{ form.archived.errors }}
   </p>
-  <p class="hint">{{ _('Optionally, provide the period of time in which you expect the ') }} {{ project.kind|lower }} {{ _(' to be active. These dates are optional and will be displayed on the home page.') }}</p>
+  <p class="hint">{% blocktrans with kind=project.kind|lower %}Optionally, provide the period of time in which you expect the {{ kind }} to be active. These dates are optional and will be displayed on the home page.{% endblocktrans %}</p>
   <p>
       <span class="field start_date {% if form.start_date.errors %} error{% endif %} "> 
         <label for="id_start_date">

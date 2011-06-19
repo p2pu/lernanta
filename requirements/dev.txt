@@ -1,5 +1,6 @@
 -r prod.txt
 
+docutils==0.7
 ipython==0.10.2
 nose==1.0.0
 jinja2==2.5.5  # only required for test-utils

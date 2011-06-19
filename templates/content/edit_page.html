@@ -37,4 +37,9 @@
     {{ _('Cancel') }}
   </a>
   <button type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>
+  <button type="button" id="previewButton" onclick="javascript:showPreview()" value="{{ _('Preview') }}">{{ _('Preview') }}</button>
+  <p> 
+  <div id="preview">
+  </div>
+  </p>
 {% endblock %}

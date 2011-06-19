@@ -68,4 +68,9 @@
   {% else %}
     <button type="submit" value="{{ _('Post') }}">{{ _('Post') }}</button>
   {% endif %}
+  <button type="button" id="previewButton" onclick="javascript:showPreview()" value="{{ _('Preview') }}">{{ _('Preview') }}</button>
+  <p> 
+  <div id="preview">
+  </div>
+  </p>
 {% endblock %}

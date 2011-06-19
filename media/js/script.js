@@ -1,3 +1,24 @@
+
+var showPreview = function() {
+    var p = '<hr/>'
+    var t = document.getElementById('id_title');
+    if (typeof t != 'undefined' && t != null) {
+        p = '<h1';
+        var c = document.getElementById('id_collaborative');
+        if ( c.checked === true) {
+            p += ' class="collaborative"';
+        }
+        p += '>' + t.value + '</h1><hr/>';
+    }
+    if (typeof CKEDITOR.instances.id_content != 'undefined') {
+        d = CKEDITOR.instances.id_content.getData();
+        p += d;
+        p += '<hr/>';
+    }
+
+    document.getElementById('preview').innerHTML = p;
+}
+
 var createPostTextArea = function() {
     var counter = $('#create-post').find('div.post-char-count');
     $('#create-post').find('textarea').bind('keyup', function() {

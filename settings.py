@@ -222,7 +222,7 @@ CKEDITOR_UPLOAD_PATH = path("uploads")
 CKEDITOR_CONFIGS = {
     'rich': {
         'toolbar': [
-            ['Source'],
+            ['Source', ],  # Using 'Preview' here doesn't use the CSS
             ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
             ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
             ['NumberedList', 'BulletedList', 'HorizontalRule', 'Outdent', 'Indent', 'SyntaxHighlighting', 'Blockquote'],

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LERNANTA 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-06 23:15-0400\n"
+"POT-Creation-Date: 2011-06-08 07:47-0500\n"
 "PO-Revision-Date: 2011-04-11 8:23-0500\n"
 "Last-Translator: Vladimir Támara Patiño <vtamara@pasosdeJesus.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -544,9 +544,8 @@ msgid "Sign-Up Task"
 msgstr "Tarea de Inscripción"
 
 #: apps/projects/forms.py:88 apps/schools/forms.py:48
-#, fuzzy
 msgid "That user account was deleted."
-msgstr "Esta cuenta de usuario fue borrada."
+msgstr "Esa cuenta de usuario fue borrada."
 
 #: apps/projects/forms.py:90 apps/schools/forms.py:50
 #, python-format
@@ -2855,6 +2854,10 @@ msgstr "Abierta"
 #: templates/projects/sidebar.html:98
 msgid "Organizers"
 msgstr "Organizadores"
+
+#: templates/projects/sidebar.html:111
+msgid "Pending Applicants"
+msgstr "Aspirantes Pendientes:"
 
 #: templates/projects/sidebar.html:125
 msgid "View Full Description"

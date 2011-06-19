@@ -137,7 +137,7 @@ class Submission(ModelBase):
     created_on = models.DateTimeField(
         auto_now_add=True, default=datetime.now())
 
-    is_published = models.BooleanField(default=1)
+    is_published = models.BooleanField(default=True)
 
     def get_challenge(self):
         challenges = self.challenge.all()

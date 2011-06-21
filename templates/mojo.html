@@ -74,9 +74,9 @@
               <li id="user" class="menu">
                 <a href="#" id="user-link" class="top-level">
                   {% if user.get_profile %}
-                    <img id="user-picture" src="{{ MEDIA_URL }}{{ user.get_profile.image_or_default }}" height="19" width="19">
+                    <img id="user-picture" src="{{ MEDIA_URL }}{{ user.get_profile.image_or_default }}" height="19" width="19" alt="{{ activity.actor.display_name }}">
                   {% else %}
-                    <img id="user-picture" src="{{ MEDIA_URL }}images/member-missing.png" height="19" width="19">
+                    <img id="user-picture" src="{{ MEDIA_URL }}images/member-missing.png" height="19" width="19" alt="{{ activity.actor.display_name }}">
                   {% endif %}
                   <span id="user-name">{{ user.get_profile.username }}</span>
                 </a>

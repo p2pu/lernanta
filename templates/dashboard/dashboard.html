@@ -20,7 +20,7 @@
 
 <div id="sidebar">
 <div class="vcard panel">
-    <img class="member-picture" src="{{ user.get_profile.image_or_default }}" height="40" width="40" 'alt="{% blocktrans with user=user.username%}{{ user }}'s profile picture{% endblocktrans %}">
+    <img class="member-picture" src="{{ user.get_profile.image_or_default }}" height="40" width="40" alt="{% blocktrans with user=user.username%}{{ user }}'s profile picture{% endblocktrans %}">
   <div class="member-details">
     <h2 class="member-name">
       <span class="fn">{{ user.get_profile.display_name }}</span>

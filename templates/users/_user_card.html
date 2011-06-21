@@ -2,7 +2,7 @@
 <article class="user vcard card">
   <figure>    
     <a href="{{  person.get_absolute_url }}">
-      <img class="member-picture" src="{{ person.image_or_default }}" height="54" width="54">
+      <img class="member-picture" src="{{ person.image_or_default }}" height="54" width="54" alt="{{ person.display_name }}">
     </a>
   </figure>
   <h1 class="fn"><a href="{{  person.get_absolute_url }}">{{ person.display_name }}</a></h1>

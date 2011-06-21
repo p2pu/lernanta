@@ -12,7 +12,7 @@
     {% endif %}
   {% endif %}
   <a href="{{ activity.actor.get_absolute_url }}">
-    <img class="member-picture" width="54" height="54" src="{{ activity.actor.image_or_default }}">
+    <img class="member-picture" width="54" height="54" src="{{ activity.actor.image_or_default }}" alt="{{activity.actor.display_name}}">
   </a>
 
   <div class="post-contents">

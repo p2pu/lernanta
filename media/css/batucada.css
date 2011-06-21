@@ -2848,38 +2848,38 @@ footer {
  * brian@nyhacker.org 
  */
  
-footer[role="main"] ul {
+footer[class="main"] ul {
   margin-left: 104px;
   padding-bottom: 50px;
   float: left;
 }
-footer[role="main"] ul:first-child {
+footer[class="main"] ul:first-child {
   margin-left: 13px;
 }
-footer[role="main"] ul > li:first-child {
+footer[class="main"] ul > li:first-child {
   font-weight: normal;
   font-size: 17px;
   background: #fff !important;
   line-height: 40px;
   padding: 0 8px;
 }
-footer[role="main"] ul li {
+footer[class="main"] ul li {
   margin: 0 0 8px;
 }
-footer[role="main"] ul li a {
+footer[class="main"] ul li a {
   font-size: 15px;
   padding: 0 8px;
 }
-footer[role="main"] ul[role="about-us"] > li a {
+footer[class="main"] ul[class="about-us"] > li a {
   background: #cef200;
 }
-footer[role="main"] ul[role="contact-us"] > li a {
+footer[class="main"] ul[class="contact-us"] > li a {
   background: #4cebe2;
 }
-footer[role="main"] ul[role="license-info"] > li a {
+footer[class="main"] ul[class="license-info"] > li a {
   background: #ffde00;
 }
-footer[role="main"] ul[role="cc"] li[role="icons"] a {
+footer[class="main"] ul[class="cc"] li[class="icons"] a {
   display: block;
   background: url('/media/images/cc-icons.png') no-repeat;
   height: 65px;

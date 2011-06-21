@@ -29,7 +29,7 @@
 {% block body %}
 <div id="sidebar">
 <div class="vcard panel">
-  <img class="member-picture" src="{{ profile.image_or_default }}" height="54" width="54">
+  <img class="member-picture" src="{{ profile.image_or_default }}" height="54" width="54" alt="{{ person.display_name }}">
   <div class="member-details">
     <h1 class="member-name">
       <span class="fn">{{ profile.display_name }}</span>

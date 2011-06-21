@@ -1,9 +1,9 @@
 {% load l10n_tags %}
  <br><br><br><br>
- <footer role="main">
-      <div role="container">
+ <footer class="main">
+      <div>
         <nav>
-          <ul role="about-us">
+          <ul class="about-us">
             <li>{{ _('About Us') }}</li>
             <li><a href="{% locale_url static_page_show 'about' %}">{{ _('About P2PU') }}</a></li>
             <li><a href="{% locale_url static_page_show 'supporters' %}">{{ _('Supporters') }}</a></li>
@@ -11,10 +11,10 @@
             <li><a href="http://groups.google.com/group/p2pu-announce" target="_blank">{{ _('Announcements') }}</a></li>
             <li><a href="{% locale_url static_page_show 'get-involved' %}">{{ _('Get Involved') }}</a></li>
             <li><a href="http://wiki.p2pu.org" target="_blank">{{ _('Wiki') }}</a></li>
-            <li><a href="http://archive.p2pu.org">{{ _('Old P2PU Site') }}</li></a>
+            <li><a href="http://archive.p2pu.org">{{ _('Old P2PU Site') }}</a></li>
           </ul>
 
-          <ul role="contact-us">
+          <ul class="contact-us">
             <li>{{ _('Contact Us') }}</li>
             <li><a href="{% locale_url static_page_show 'contact-us' %}">{{ _('Email') }}</a></li>
             <li><a href="http://www.facebook.com/P2PUniversity" target="_blank">{{ _('Facebook') }}</a></li>
@@ -23,16 +23,16 @@
             <li><a href="http://p2pu.lighthouseapp.com/projects/71002-lernanta/" target="_blank">{{ _('Found a Bug?') }}</a></li>
           </ul>
 
-          <ul role="license-info">
+          <ul class="license-info">
             <li>{{ _('License Info') }}</li>
             <li><a href="{% locale_url static_page_show 'license' %}">{{ _('License') }}</a></li>
             <li><a href="{% locale_url static_page_show 'privacy' %}">{{ _('Privacy Guidelines') }}</a></li>
             <li><a href="{% locale_url static_page_show 'terms-of-use' %}">{{ _('Terms of Use') }}</a></li>
           </ul>
 
-          <ul role="cc">
-            <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license" target="_blank">{{ _('Creative Commons BY SA') }}</a></li>
-            <li role="icons"><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license" target="_blank">{{ _('CC BY SA') }}</a></li>
+          <ul class="cc">
+            <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">{{ _('Creative Commons BY SA') }}</a></li>
+            <li class="icons"><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license" target="_blank">{{ _('CC BY SA') }}</a></li>
           </ul>
         </nav>
                

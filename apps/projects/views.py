@@ -606,3 +606,14 @@ def task_list(request, slug):
     }
     return render_to_response('projects/project_task_list.html', context,
         context_instance=RequestContext(request))
+
+
+def user_list(request, slug):
+    """Display full list of users for the project."""
+    project = get_object_or_404(Project, slug=slug)
+    return render_to_response('projects/project_user_list.html', {
+        'project': project,
+        'organizers': project.organizers(),
+        'participants': project.non_organizer_participants(),
+        'followers': project.non_participant_followers(),
+    }, context_instance=RequestContext(request))

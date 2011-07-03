@@ -1,0 +1,58 @@
+{% extends "projects/base.html" %}
+
+{% load l10n_tags %}
+{% load project_tags %}
+
+
+{% block title %}{{ _('People') }}{% endblock %}
+
+{% block bodyid %}project_user_list{% endblock %}
+{% block project_breadcrumbs %}
+  <span class="arrow">&rsaquo;</span>
+  <a href="{% locale_url projects_user_list project%}">{{ _('People') }}</a>
+{% endblock %}
+
+{% block body %}
+{% sidebar %}
+
+<div id="main" class="card-list">
+<br><br>
+{% if organizers %}
+<section id="organizers">
+  <h1><span>{{ _('Organizers') }}</span></h1>
+  <ul class="user-list">
+    {% for participation in organizers %}
+      {% with person=participation.user %}
+        <li>{% include "users/_user_card.html" %}</li>
+      {% endwith %}
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% if participants %}
+  <section id="participants">
+  <h1><span>{{ _('Participants') }}</span></h1>
+  <ul class="user-list">
+    {% for participation in participants %}
+      {% with person=participation.user %}
+        <li>{% include "users/_user_card.html" %}</li>
+      {% endwith %}
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if followers %}
+<section id="followers">
+  <h1><span>{{ _('Followers') }}</span></h1>
+  <ul class="user-list">
+    {% for relationship in followers %}
+      {% with person=relationship.user %}
+        <li>{% include "users/_user_card.html" %}</li>
+      {% endwith %}
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+</div>
+{% endblock %}

@@ -11,6 +11,7 @@ register = template.Library()
 
 
 def sidebar(context):
+    max_participants = 64
     user = context['user']
     project = context['project']
     is_participating = is_following = is_organizing = False
@@ -26,6 +27,19 @@ def sidebar(context):
                 deleted=False, author=profile)
             if answers.exists():
                 pending_signup = answers[0]
+
+    remaining = max_participants
+    organizers = project.organizers()[:max_participants]
+    participants = []
+    followers = []
+    remaining -= len(organizers)
+    if remaining > 0:
+        participants = project.non_organizer_participants()[:remaining]
+        remaining -= len(participants)
+    if remaining > 0:
+        followers = project.non_participant_followers()[:remaining]
+        remaining -= len(followers)
+
     participants_count = project.non_organizer_participants().count()
     followers_count = project.non_participant_followers().count()
     organizers_count = project.organizers().count()
@@ -52,6 +66,9 @@ def sidebar(context):
         'school': school,
         'imported_from': imported_from,
         'pending_signup': pending_signup,
+        'sidebar_organizers': organizers,
+        'sidebar_participants': participants,
+        'sidebar_followers': followers,
     })
     return context
 

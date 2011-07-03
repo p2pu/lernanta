@@ -17,3 +17,12 @@ footer[class="main"] ul {
     margin-left: 39px;
     padding-bottom: 50px;
 }
+
+footer[role="main"] ul[role="supporters"] {
+    font-size: 15px;
+    margin-left: 240px;
+    margin-top: -65px;
+    text-align: center;
+    width: 360px;
+}
+

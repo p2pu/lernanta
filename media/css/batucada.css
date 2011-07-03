@@ -591,7 +591,7 @@ header {}
 
     #project_landing #breadcrumbs, #page #breadcrumbs, #edit_page #breadcrumbs, #comment #breadcrumbs, #delete_page #breadcrumbs, 
     #delete_restore_comment #breadcrumbs, #project_edit #breadcrumbs, #create_page #breadcrumbs, #sign_up_task #breadcrumbs,
-    #sign_up_comment #breadcrumbs {
+    #sign_up_comment #breadcrumbs, #project_user_list #breadcrumbs {
         height: 6em;    
     }
     
@@ -1078,6 +1078,19 @@ header {}
 	.card-list .card dt{
 		color: #919191;
 	}
+    
+
+#project_user_list .card-list .user-list li{
+    width: 190px;
+    margin-right: 8px;
+}
+#project_user_list .card-list .user.card h1 {
+    width: 100px;
+}
+
+#project_user_list .card-list .card dl.updates {
+    width: 30%;    
+}    
 
   
 #main {

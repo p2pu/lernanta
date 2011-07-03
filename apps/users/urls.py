@@ -40,7 +40,9 @@ urlpatterns = patterns('',
 
 
   # Public pages
-  url(r'^people/', 'users.views.user_list',
+  url(r'^people/tag/(?P<tag_slug>[\w\-\. ]+)/$',
+      'users.views.user_tagged_list', name="users_user_tagged_list"),
+  url(r'^people/$', 'users.views.user_list',
       name='users_user_list'),
 
   # Registration urls

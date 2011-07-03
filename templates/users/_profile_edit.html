@@ -18,3 +18,18 @@
     {{ profile_form.bio }}
     {{ profile_form.bio.errors }}
   </div>
+  <div class="field{% if profile_form.skill.errors %} error{% endif %}">
+    <label for="id_skill">{{ _('Skilled in') }}</label>
+    {{ profile_form.skill }}
+    {{ profile_form.skill.errors }}
+  </div>
+  <div class="field{% if profile_form.interest.errors %} error{% endif %}">
+    <label for="id_interest">{{ _('Interested in') }}</label>
+    {{ profile_form.interest }}
+    {{ profile_form.interest.errors }}
+  </div>
+  <div class="field{% if profile_form.desired_topic.errors %} error{% endif %}">
+    <label for="id_desired_topic">{{ _('Want to learn more about') }}</label>
+    {{ profile_form.desired_topic }}
+    {{ profile_form.desired_topic.errors }}
+  </div>

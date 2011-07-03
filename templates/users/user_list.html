@@ -16,6 +16,18 @@
 {% block body %}
 <div id="main">
 <h1>{{ _('Browse <b>People</b>') }}</h1>
+
+{% if tagged %}
+<section id="featured_users">
+  <h1><span>{{ tag.get_category_display }} {{ _('in') }} {{ tag.name }}</span></h1>
+  <ul class="user-list">
+    {% for person in tagged %}
+      <li>{% include "users/_user_card.html" %}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
 {% if featured %}
 <section id="featured_users">
   <h1><span>{{ _('Featured') }}</span></h1>

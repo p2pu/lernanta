@@ -1,5 +1,5 @@
 from django.contrib import admin
-from users.models import UserProfile
+from users.models import UserProfile, TaggedProfile
 
 
 class UserProfileAdmin(admin.ModelAdmin):
@@ -9,4 +9,8 @@ class UserProfileAdmin(admin.ModelAdmin):
     list_filter = list_display[5:]
     search_fields = list_display[:5]
 
+class TaggedProfileAdmin(admin.ModelAdmin):
+    list_display = ('id', 'tag')
+
 admin.site.register(UserProfile, UserProfileAdmin)
+admin.site.register(TaggedProfile, TaggedProfileAdmin)

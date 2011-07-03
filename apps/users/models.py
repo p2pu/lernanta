@@ -19,6 +19,7 @@ from django.utils.translation import ugettext
 from django.utils.safestring import mark_safe
 
 from taggit.models import GenericTaggedItemBase, Tag
+from south.modelsinspector import add_ignored_fields
 
 from drumbeat import storage
 from drumbeat.utils import get_partition_id, safe_filename
@@ -26,10 +27,14 @@ from drumbeat.models import ModelBase
 from relationships.models import Relationship
 from projects.models import Project, Participation
 from users import tasks
+from users.managers import CategoryTaggableManager
 
 import caching.base
 
 log = logging.getLogger(__name__)
+
+# To fix a South problem (Cannot freeze field 'users.userprofile.tags')
+add_ignored_fields(["^users\.managers"])
 
 GRAVATAR_TEMPLATE = ("http://www.gravatar.com/avatar/%(gravatar_hash)s"
                      "?s=%(size)s&amp;d=%(default)s&amp;r=%(rating)s")
@@ -59,8 +64,9 @@ class ProfileTag(Tag):
     CATEGORY_CHOICES = (
         ('skill', 'Skill'),
         ('interest', 'Interest'),
+        ('desired_topic', 'Desired Topics'),
     )
-    category = models.CharField(max_length=10, choices=CATEGORY_CHOICES)
+    category = models.CharField(max_length=50, choices=CATEGORY_CHOICES)
 
 
 class TaggedProfile(GenericTaggedItemBase):
@@ -109,8 +115,8 @@ class UserProfile(ModelBase):
     deleted = models.BooleanField(default=False)
 
     user = models.ForeignKey(User, null=True, editable=False, blank=True)
-    # TODO: enable when addition/edition of tags is implemented.
-    # tags = TaggableManager(through=TaggedProfile)
+    
+    tags = CategoryTaggableManager(through=TaggedProfile, blank=True)
 
     objects = UserProfileManager()
 

@@ -58,7 +58,7 @@
 	  {{ profile.bio|nofollow|safe }}
 	</div>
 	
-	{% if profile.location %}
+  {% if profile.location %}
   <dl class="member-location">
   <dt>{{ _('Location:') }}</dt> 
   <dd class="adr">{{ profile.location }}</dd>
@@ -67,18 +67,30 @@
   
   {% if skills %}
   <ul class="tags skills">
+  <h3>{{ _('Skills') }}</h3>
     {% for skill in skills %}
-    <li><a href="#" title="{{ _('See more about ') }}{{ skill.name }}">{{ skill.name }}</a></li>
+      <li><a href="{% locale_url users_user_tagged_list skill.slug %}" title="{{ _('View more with skills in ') }}{{ skill.name }}">{{ skill.name }}</a></li>
     {% endfor %}
   </ul>
   {% endif %}
   {% if interests %}
+  <h3>{{ _('Interests') }}</h3>
   <ul class="tags interests">
     {% for interest in interests %}
-    <li><a href="#" title="{{ _('See more about ') }}{{ interest.name }}">{{ interest.name }}</a></li>
+      <li><a href="{% locale_url users_user_tagged_list interest.slug %}" title="{{ _('View more interested in ') }}{{ interest.name }}">{{ interest.name }}</a></li>
     {% endfor %}
   </ul>
   {% endif %}
+
+  {% if desired_topics %}
+  <h3>{{ _('Want to learn more about') }}</h3>
+  <ul class="tags interests">
+	{% for topic in desired_topics %}
+	  <li><a href="{% locale_url users_user_tagged_list topic.slug %}" title="{{ _('View more interested in learning more about ') }}{{ topic.name }}">{{ topic.name }}</a></li>
+	{% endfor %}
+  </ul>
+  {% endif %}
+
   {% if user.is_authenticated and user != profile.user %}
   <p class="supplemental_actions">
     <a class="report abuse action" href="{% locale_url drumbeat_abuse model="userprofile" app_label="users" pk=profile.id  %}">{{_('Report Abuse')}}</a>

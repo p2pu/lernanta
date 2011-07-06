@@ -51,7 +51,7 @@
         </form>
         <form action="{% locale_url projects_edit_participants_delete slug=project.slug username=participation.user.username %}" method="post">
           {% csrf_token %}
-          <button class="delete" type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
+          <button class="delete" type="submit" value="{{ _('Remove') }}">{{ _('Remove') }}</button>
         </form>
         {% endif %}
       </td>

@@ -20,7 +20,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display:block;
 }
 nav ul { list-style:none; }
-blockquote, q { quotes:none; }
+blockquote, q { quotes:none;
+margin-left:20%;
+margin-right:20%;
+ }
 blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none; }
 a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
@@ -45,7 +48,7 @@ a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #2084ca; text-decoration: none; text-shadow: 1px 1px #fff; }
 a:hover { color: #036; text-decoration: underline; }
 
-ul, ol { margin-left: 1.8em; }
+ul, ol { margin-left: 20%; }
 ol { list-style-type: decimal; }
 
 nav ul, nav li { margin: 0; } 

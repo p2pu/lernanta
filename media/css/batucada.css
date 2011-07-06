@@ -539,10 +539,10 @@ header {}
         #inbox-count {
           padding: 0 3px;
           margin-left: 5px;
-          border: 1px solid #f60403;
-          background: -webkit-gradient(linear,left bottom,left top,color-stop(0.45, rgb(208,4,4)),color-stop(0.55, rgb(254,31,35)));
-          background: -moz-linear-gradient(center bottom, rgb(208,4,4) 45%, rgb(254,31,35) 55%);
-          -pie-background: linear-gradient(center bottom, rgb(208,4,4) 45%, rgb(254,31,35) 55%);
+          border: 1px solid #309443;
+          background: -webkit-gradient(linear,left bottom,left top,color-stop(0.45, rgb(48,148,67)),color-stop(0.55, rgb(75,231,104)));
+          background: -moz-linear-gradient(center bottom, rgb(48,148,67) 45%, rgb(75,231,104) 55%);
+          -pie-background: linear-gradient(center bottom, rgb(48,148,67) 45%, rgb(75,231,104) 55%);
           border-radius: 6px;
           -moz-border-radius: 6px;
           -o-border-radius: 6px;
@@ -579,20 +579,21 @@ header {}
   #breadcrumbs {
     height: 44px;
     width: 990px;
-    margin: auto auto;
+     margin-left: auto;
+  margin-right: auto;
     background-color: #fff;
     font-size: 11px;
     /*line-height: 31px;*/
     line-height: 22px;
 	padding-left:10px;
 	border-radius: 10px;
-    border: solid 1px #EEE;
-  }
+    border: solid 1px #EEE;     
+      }
 
     #project_landing #breadcrumbs, #page #breadcrumbs, #edit_page #breadcrumbs, #comment #breadcrumbs, #delete_page #breadcrumbs, 
     #delete_restore_comment #breadcrumbs, #project_edit #breadcrumbs, #create_page #breadcrumbs, #sign_up_task #breadcrumbs,
     #sign_up_comment #breadcrumbs {
-        height: 6em;    
+        height: 90%;   
     }
     
     #breadcrumbs .container {
@@ -608,9 +609,27 @@ header {}
 
     #breadcrumbs #project-actions {
         float: right;
-        position: relative;
-        top: -47px;
-        margin-right: 10px;
+        margin-right:14px;
+        position:relative;
+        top:-47px;
+    }
+    
+    #project-name{
+    display:block;
+    width:auto;
+    }
+    
+    #breadcrumbs .container nav{
+    width:auto;
+    }
+    
+    #left-title{
+    float:left;
+    }
+    #right-title{
+    float:right;
+    position:relative;
+        top:47px;
     }
     
     #user_profile #breadcrumbs #project-actions, #project_gallery #breadcrumbs #project-actions, #project_directory #breadcrumbs #project-actions, 
@@ -620,12 +639,11 @@ header {}
     
     #breadcrumbs #project-actions .button {
       float: left;
-      margin-right: 15px;
+      margin-right: 10px;
     }
     
     #project_landing #breadcrumbs #project-actions {
-      top: -44px;
-      margin-right: 35px;
+ 
     }
     
     #sidebar #project-actions {

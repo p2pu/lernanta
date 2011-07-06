@@ -140,7 +140,7 @@
    <a href="{{ follower.source.get_absolute_url }}" title="{{ follower.source.display_name }} (follower)">
    <img class="member-picture" src="{{ follower.source.image_or_default }}" height="26" width="26" alt="{{ follower.source.display_name }} (follower)"></a>
   {% endfor %}
-  <br><br>
+  <br>
   {% if user.is_authenticated and not organizing and not participating %}
     {% if pending_signup %}
         {% if project.signup_closed %}
@@ -152,11 +152,6 @@
         <br><br>
     {% endif %}
   {% endif %}
-  {% if organizing %}
-    <a class="button" href="{% locale_url projects_edit_participants slug=project.slug %}">{{ _('Edit Participants') }}</a>
-  {% else %}{% if user.is_authenticated %}
-    <a class="button" href="{% locale_url projects_contact_organizers slug=project.slug %}">{{ _('Contact Organizer')}}</a>
-  {% endif %}{% endif %}
 </section>
 
 <section id="course-content" class="panel">
@@ -184,10 +179,6 @@
     {{ _('No tasks have been added.') }}
         <br>
   {% endif %}
-  {% if participating %}
-    <br>
-    <a class="button" href="{% locale_url page_create slug=project.slug %}">{{ _('New Task') }}</a>
-  {% endif %}
 </section>
 
 
@@ -213,10 +204,7 @@
     {{ _('No external links have been added.') }}
     <br>
   {% endif %}
-  {% if organizing %}
-    <br>
-    <a class="button" href="{% locale_url projects_edit_links slug=project.slug %}">{{ _('Edit Links') }}</a>
-  {% endif %}
+  
 </section>
 
 </div> <!-- /#sidebar -->

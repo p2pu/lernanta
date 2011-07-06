@@ -64,7 +64,9 @@
 		    {% schools_menu %}
 	        <li><a href="http://blog.p2pu.org" class="top-level" target="_blank">{{ _('Blog') }}</a></li>
 	        <li id="help" class="menu">
-	          <a href="#" id="help-link" class="top-level"><span>{{ _('Help') }}</span></a>
+	          <a href="#" id="help-link" class="top-level"><span>{{ _('Help') }}</span>
+	          <span class="dropdown">&nbsp;</span>
+	          </a>
 	          <ul id="help-menu-items">
 	            <li><a href="{% locale_url static_page_show 'about' %}" class="sub-level">{{ _('About P2PU') }}</a></li>
 	            <li><a href="http://qa.p2pu.org" target="_blank" class="sub-level">{{ _('Ask a Question') }}</a></li>

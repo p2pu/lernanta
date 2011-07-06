@@ -1,7 +1,9 @@
 {% load l10n_tags %}
 {% if schools %}
 <li id="schools" class="menu">
-  <a href="#" id="schools-link" class="top-level"><span>{{ _('Schools') }}</span></a>
+  <a href="#" id="schools-link" class="top-level"><span>{{ _('Schools') }}</span>
+  <span class="dropdown">&nbsp;</span>
+  </a>
   <ul id="school-menu-items">
     {% for school in schools %}
     <li><a href="{{ school.get_absolute_url }}" class="sub-level">{{ school.name }}</a></li>

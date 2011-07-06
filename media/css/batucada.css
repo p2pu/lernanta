@@ -428,7 +428,7 @@ header {}
         padding: 4px 10px 8px 10px;
       }
 
-      #user-nav .menu a:hover, #main-nav .menu a:hover {
+      #user-nav a:hover, #main-nav a:hover {
         background: #36cdc4;
         color: #fff;
       }

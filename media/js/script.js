@@ -329,11 +329,11 @@ $(document).ready(function() {
         ns[bodyId].onload();
     }
     // attach handlers for elements that appear on most pages
-     $('#main-nav').find('li.menu').bind('click', function(event) {
+     $('#main-nav').find('li.menu').bind('mouseover mouseout', function(event) {
         $(this).toggleClass('open');
     });
 
-    $('#user-nav').find('li.menu').bind('click', function(event) {
+    $('#user-nav').find('li.menu').bind('mouseover mouseout', function(event) {
         $(this).toggleClass('open');
     });
 

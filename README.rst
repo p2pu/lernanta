@@ -30,7 +30,7 @@ You will need to `configure git and upload your SSH keys to github`_
 
 You need a few libraries and can grab them with this command::
 
-   sudo apt-get install git libxml2-dev libxslt-dev mysql-client mysql-server libmysqlclient-dev python-dev
+   sudo apt-get install git libxml2-dev libxslt-dev mysql-client mysql-server libmysqlclient-dev python-dev python-setuptools
 
 To obtain the lernanta's source code that you will be modifying, first `fork the repository on the github website`_ and then clone it by running::
 

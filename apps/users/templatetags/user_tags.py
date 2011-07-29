@@ -33,7 +33,7 @@ def user_sidebar(context, max_people_count=64):
         past_drupal_courses = projects_drupal.get_past_courses(
             profile.username)
         past_involvement_count = len(past_projects) + len(past_drupal_courses)
-        pilot_badges = badges.get_awarded_badges(profile.username)
+        pilot_badges = badges.get_awarded_badges(profile.username).values()
 
     context.update({
         'current_projects': current_projects,

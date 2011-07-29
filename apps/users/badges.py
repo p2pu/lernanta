@@ -43,14 +43,17 @@ def get_awarded_badges(username):
                     data = {
                         'name': custom_badge.name,
                         'type': badge.type,
+                        'id': badge.id,
                         'url': url,
                         'image_url': image_url,
                         'count': 1,
+                        'description': 'some description necessary',
+                        'template': re.sub(r'\?.*', '', url),
                     }
                     badges[tag.name] = data
     except User.DoesNotExist:
         pass
-    return badges.values()
+    return badges
 
 
 class ForumAward(models.Model):

@@ -146,6 +146,7 @@ INSTALLED_APPS = (
     'pages',
     'projects',
     'drumbeat',
+    'mozbadges',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

@@ -108,3 +108,12 @@ INVALID_USERNAMES = ('webcraft', 'about', 'user', 'sosi', 'get-involved',
     'math-future', 'license', 'contact-us', 'values', 'privacy',
     'terms-of-use', 'news', 'create-draft-course', 'create-draft-course-panel',
     'supporters', 'about-p2pu',)
+
+# Used for open badges integration.
+MOZBADGES = {
+    # location of badge hub. Currently this is the only public one
+    'hub': 'http://alpha.badgehub.org',
+    
+    # method for getting badges for a user. Called with user object.
+    'badge_getter': 'users.badges.get_awarded_badges',
+}

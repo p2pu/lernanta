@@ -19,8 +19,8 @@ DATABASES = {
     'default': {
         'NAME': 'lernanta',
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'lernanta',
-        'PASSWORD': '',
+        'USER': 'metoo',
+        'PASSWORD': 'password',
         'HOST': '',  # An empty string means localhost.
         'PORT': '',  # An empty string means the default port.
         'OPTIONS': {'init_command': 'SET storage_engine=InnoDB'},

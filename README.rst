@@ -20,7 +20,7 @@ Interested in getting involved in Lernanta code development? Check out the devel
 [2] http://wiki.p2pu.org
 
 
-Setting up a local development environment in Ubuntu
+Setting up a local development environment in Ubuntu (Please note that your system most be updated before following these instructions.)
 ------------
 
 You will need to `configure git and upload your SSH keys to github`_ 
@@ -30,7 +30,14 @@ You will need to `configure git and upload your SSH keys to github`_
 
 You need a few libraries and can grab them with this command::
 
-   sudo apt-get install git libxml2-dev libxslt-dev mysql-client mysql-server libmysqlclient-dev python-dev python-setuptools
+   sudo apt-get install git-core
+   sudo apt-get install libxml2-dev
+   sudo apt-get install libxslt-dev
+   sudo apt-get install mysql-client
+   sudo apt-get install mysql-server
+   sudo apt-get install libmysqlclient-dev
+   sudo apt-get install python-dev
+   sudo apt-get install python-setuptools
 
 To obtain the lernanta's source code that you will be modifying, first `fork the repository on the github website`_ and then clone it by running::
 
@@ -71,7 +78,7 @@ If the mysql database doesn't exist yet, create it. You need to `create the user
 
    mysqladmin -u <user> -p create <database name>
 
-.. _create the user: http://dev.mysql.com/doc/refman/5.1/en/adding-users.html
+.. _create the user: http://www.debuntu.org/how-to-create-a-mysql-database-and-set-privileges-to-a-user
 
 Create a ``settings_local.py`` based on the template provided in the checkout. Edit the database parameters as needed ::
 

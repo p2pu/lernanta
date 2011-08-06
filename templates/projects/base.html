@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load l10n_tags %}
 
+{% block description %}{{ project.name }}: {{ project.short_description|safe }}{% endblock %}
 {% block title %}{{ project.name }} | {% block project_title %}{% endblock %}{% endblock %}
 
 {% block links %}

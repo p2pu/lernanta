@@ -1,1 +1,1 @@
-rm `find . -name '*.pyc'`
+rm -f `find . -name '*.pyc'`

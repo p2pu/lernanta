@@ -259,14 +259,28 @@ class ProfileLinksForm(forms.ModelForm):
 
 
 class PasswordResetForm(auth_forms.PasswordResetForm):
+    email = forms.CharField(
+        widget=forms.TextInput(attrs={'tabindex': '1'}))
+
     def clean_email(self):
         email = self.cleaned_data["email"]
-        self.users_cache = User.objects.filter(
+        is_email = "@" in email
+        if is_email:
+            self.users_cache = User.objects.filter(
                                 email__iexact=email,
                                 is_active=True
                             )
-        if len(self.users_cache) == 0 and not drupal.migrate(email):
-            msg = _("That e-mail address isn't associated to a user account. ")
+        else:
+            self.users_cache = User.objects.filter(
+                    username__iexact=email,
+                    is_active=True
+                )
+
+        if len(self.users_cache) == 0 and not (is_email and drupal.migrate(email)):
+            if is_email:
+                msg = _("That e-mail address isn't associated to a user account. ")
+            else:
+                msg = _("Username not found. ")
             msg += _("Are you sure you've registered?")
             raise forms.ValidationError(msg)
         profile = None

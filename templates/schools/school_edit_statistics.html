@@ -1,0 +1,20 @@
+{% extends "schools/school_edit.html" %}
+{% load l10n_tags %}
+{% block bodyclasses %}school edit statistics{% endblock %}
+
+{% block form %}
+<fieldset id="school_edit_statistics" class="school edit statistics tabpane">
+  <h2>{{ _('Statistics') }}</h2>
+  <p class="hint">{{ _('Statistics for this school') }}</p>
+  <h3>{{ _('Groups') }}</h3>
+  <ul>
+  {% for key, value in project_counts %}
+      <li>{{ key }}: {{ value }}</li>  
+  {% endfor %}
+  </ul>
+  <h3>{{ _('Activity') }}</h3>
+  <ul>
+  <li>{{ _('Page comments:') }} {{ comment_count }}</li>
+  </ul>
+</fieldset>
+{% endblock %}

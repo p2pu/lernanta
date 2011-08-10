@@ -66,4 +66,7 @@ urlpatterns = patterns('',
     url(r'^(?P<slug>[\w-]+)/edit/membership/matching_non_member/$',
       'schools.views.matching_non_member',
       name='matching_non_member'),
+    url(r'^(?P<slug>[\w-]+)/edit/statistics/$',
+      'schools.views.edit_statistics',
+      name='schools_edit_statistics'),
 )

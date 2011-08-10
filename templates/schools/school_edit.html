@@ -22,6 +22,7 @@
         <li class="organizers {% if organizers_tab %}active{% endif %}"><a href="{% locale_url schools_edit_organizers slug=school.slug %}">{{ _('School Organizers') }}</a></li>
         <li class="featured {% if featured_tab %}active{% endif %}"><a href="{% locale_url schools_edit_featured slug=school.slug %}">{{ _('Featured') }}</a></li>
         <li class="membership {% if membership_tab %}active{% endif %}"><a href="{% locale_url schools_edit_membership slug=school.slug %}">{{ _('Membership') }}</a></li>
+        <li class="statistics {% if statistics_tab %}active{% endif %}"><a href="{% locale_url schools_edit_statistics slug=school.slug %}">{{ _('Statistics') }}</a></li>
       </ul>
     </nav>
 

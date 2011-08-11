@@ -1,0 +1,76 @@
+{% extends "users/profile_edit.html" %}
+
+{% load l10n_tags %}
+
+{% block bodyclasses %}edit account badges{% endblock %}
+{% block title %}{{ _('Manage Badges') }}{% endblock %}
+{% block form %}
+<fieldset id="edit_account_notifications" class="edit account badges tabpane">
+  <h2>About Badges</h2>
+  <p>
+    The School of Webcraft assessments and badges are part of a pilot effort
+    to give you a way to recognize the learning that occurs at SoW,
+    demonstrate your skills, build reputation in the community and eventually,
+    get jobs. The current badges displayed were earned during the initial
+    phase of the pilot in the January-April cycle of SoW courses. Each badge
+    links back to the work that was submitted and the endorsements/feedback
+    from the assessment and this information will continue to be linked to
+    from your badge wherever you decide to share it, adding more validity and
+    evidence to your skills and achievements.
+  </p>
+
+  <p>
+    While these are alpha badges, they are endorsed by Mozilla and will
+    continue to be credentials that you can use to share with various
+    stakeholders like potential employers or peer communities. In order to
+    allow you to share your badges with other sites and communities, P2PU is
+    has plugged into the Mozilla Open Badge Infrastructure (OBI), which allows
+    you to manage a single badge collection, including badges from SoW as well
+    as other badge issuers and learning providers across the web, and then
+    manage those badges and share them out accordingly. To take advantage of
+    this, you need to push your badges to the OBI.
+  </p>
+  
+  <h2>What Will Happen When I Click Send</h2>
+  <p>
+    The OBI will ask you for an email address - this will be your unique
+    identifier to combine and manage your badges. Mozilla is using BrowserID,
+    which will allow you to maintain a single identity through your email
+    address without having to worry about passwords, etc. For more on Verified
+    Email, see: <a href="https://browserid.org/">https://browserid.org/</a> Once
+    you have provided an email address, the OBI will ask you to accept P2PU
+    (SoW) as an issuer of badges (essentially saying its okay for P2PU to push
+    badges you have earned on their site into your central collection).  Once
+    you accept, your badges will be pushed into the OBI and will exist at
+    alpha.badge.org for you to access the badges, manage them and share them
+    out.
+  </p>
+  
+  <h2>Alpha version</h2>
+  <p>
+    The OBI is currently in the alpha version with means limited functionality
+    and only 1 issuer - P2PU. The Backpack (management interface)
+    functionality is limited but will expand considerably with beta. Mozilla
+    is launching the beta version which will be full functionality and a
+    handful of additional issuers in early September. Then the public 1.0
+    launch will happen in early January 2012 and at that point, all issuers
+    can join and there will be even more of a badge ecosystem. If you send
+    your badges now, they will be rolled over with each release and you will
+    seamlessly capitalize on the new features as they are completed.
+  </p>
+  
+  {% if not has_badges %}
+    <h3>You don't have any badges.</h3>
+  {% else %}{% if not has_email %}
+    <h3>You must <a href="{% locale_url preferences_email %}">{{ _('set your email address.') }}</a> before sending badges.</h3>
+  {% else %}
+    <form id='send-badges'>
+      {% csrf_token %}
+      <input type="hidden" name="email" value="{{ profile.email }}">
+      <input type="submit" value="Send Badges">
+      <span class='message'> </span>
+    </form>
+  {% endif %}{% endif %}
+
+</fieldset>
+{% endblock %}

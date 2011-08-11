@@ -343,3 +343,47 @@ $('#recaptcha_help').click(function(e) {
     e.preventDefault();
     Recaptcha.showhelp();
 });
+
+
+$('#send-badges').bind('submit', function(e) {
+  var $this = $(this),
+      csrfname = 'csrfmiddlewaretoken',
+      csrfvalue = $this.find('input[name="'+csrfname+'"]').val(),
+      button = $this.find('input[type="submit"]'),
+      msgfield = $this.find('span.message'),
+      email = $this.find('input[name="email"]').val(),
+      postdata = {};
+  e.preventDefault();
+
+  if ($this.data('submitted')) { return false; }
+  $this.data('submitted', true);
+  
+  button.hide();
+  msgfield.html('Sending...');
+  
+  postdata[csrfname] = csrfvalue
+  $.ajax({
+    type: 'POST',
+    url: '/badges/send', //don't hardcode this in the future.
+    data: postdata,
+    success: function(response){
+      var msg = msgfield.html();
+      if (response['status'] == 'accepted') {
+        msg += ' Success! <br/>You can now go to <a href="http://alpha.badgehub.org">' +
+          'http://alpha.badgehub.org</a> and view your badges.<br/>' +
+          'Be sure to log in using the email <strong>' + email + '</strong>';
+      } else {
+        msg += "Error :(<br/> Something has gone wrong. " +
+          "Hopefully it's temporary – please try again in a few minutes.";
+      }
+      msgfield.html(msg);
+    },
+    error: function(response){
+      var msg = msgfield.html();
+      msg += " Error :(<br/> Something has gone wrong. <br/>" +
+        "Hopefully it's temporary – please try again in a few minutes.";
+      msgfield.html(msg);
+    }
+  })
+  return false;
+})

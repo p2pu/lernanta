@@ -23,13 +23,14 @@
     </h1>
     <nav id="profile-edit-nav" class="tabs">
 	    <ul>
-		<li class="info {% if general_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit %}">{{ _('Basic Information') }}</a></li>
-		<li class="links {% if link_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit_links %}">{{ _('Links') }}</a></li>
-		<li class="notifications {% if settings_tab %}active{% endif %}"><a href="{% locale_url preferences_settings %}">{{ _('Notifications') }}</a></li>
-	    <li class="email {% if email_tab %}active{% endif %}"><a href="{% locale_url preferences_email %}">{{ _('Update Email') }}</a></li>
-	    <li class="password {% if password_tab %}active{% endif %}"><a href="{% locale_url preferences_password %}">{{ _('Update Password') }}</a></li>
+        <li class="info {% if general_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit %}">{{ _('Basic Information') }}</a></li>
+        <li class="links {% if link_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit_links %}">{{ _('Links') }}</a></li>
+        <li class="notifications {% if settings_tab %}active{% endif %}"><a href="{% locale_url preferences_settings %}">{{ _('Notifications') }}</a></li>
+        <li class="email {% if email_tab %}active{% endif %}"><a href="{% locale_url preferences_email %}">{{ _('Update Email') }}</a></li>
+        <li class="password {% if password_tab %}active{% endif %}"><a href="{% locale_url preferences_password %}">{{ _('Update Password') }}</a></li>
         <li class="links {% if openids_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit_openids %}">{{ _('OpenIDs') }}</a></li>
-	    <li class="delete {% if delete_tab %}active{% endif %}"><a href="{% locale_url preferences_delete %}">{{ _('Delete Account') }}</a></li>
+        <li class="badges {% if badges_tab %}active{% endif %}"><a href="{% locale_url users_badges_manage %}">{{ _('Manage Badges') }}</a></li>
+        <li class="delete {% if delete_tab %}active{% endif %}"><a href="{% locale_url preferences_delete %}">{{ _('Delete Account') }}</a></li>
 	    </ul>
     </nav>
 

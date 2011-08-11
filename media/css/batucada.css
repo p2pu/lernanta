@@ -1422,7 +1422,8 @@ header {}
 			border-radius:5px;
 			-moz-border-radius:5px;
 			padding-bottom: 40px;
-		}
+      min-height: 280px;
+    }
         .school .modal article {
             min-height: 360px;
         }

@@ -35,6 +35,8 @@ from users.fields import UsernameField
 from users.decorators import anonymous_only, login_required
 from users import drupal
 
+from badges import get_awarded_badges
+
 log = logging.getLogger(__name__)
 
 
@@ -639,7 +641,16 @@ def link_index_down(request, counter):
     next_link.save()
     return http.HttpResponseRedirect(profile.get_absolute_url() + '#links')
 
-
+@login_required
+def badges_manage(request):
+    profile = get_object_or_404(UserProfile, user=request.user)
+    return render_to_response('users/profile_badges_manage.html', {
+        'profile': profile,
+        'badges_tab': True,
+        'has_email': (len(request.user.email) > 0),
+        'has_badges': (len(get_awarded_badges(request.user)) > 0),
+    }, context_instance=RequestContext(request))
+    
 def check_username(request):
     """Validate a username and check for uniqueness."""
     username = request.GET.get('username', None)

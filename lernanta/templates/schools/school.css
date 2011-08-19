@@ -3,6 +3,95 @@ span.school_header, #beta-tag {
   color: {{ school.headers_color }};
 }
 
+/************************* ARLTON'S EDITS BEGIN ************************************/
+
+h2 {
+  font-family: "Helvetica", Arial, Verdana, san-serif;
+  font-weight: 100;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "Helvetica", Arial, Verdana, san-serif;
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+a.webcraft-browse {
+  margin: 0 20px 50px 50px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.webcraft-button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #66884D;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) 1px 1px 5px 0;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) 1px 1px 5px 0;
+  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) 1px 1px 5px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) 1px 1px 5px 0;
+  -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25) 1px 1px 5px 0;
+  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25) 1px 1px 5px 0;
+  -o-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25) 1px 1px 5px 0;
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25) 1px 1px 5px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative;
+  cursor: pointer;
+  padding: 12px 20px 12px;
+  margin-left: 20px;
+}
+
+.webcraft-button:visited {
+  background: #66884D;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  position: relative;
+  cursor: pointer;
+  padding: 12px 20px 12px;
+}
+
+.webcraft-button:hover {
+  background-color: #80A165;
+  color: white;
+}
+
+.webcraft-button:active {
+  top: 1px;
+}
+
+.webcraft-button, .medium.webcraft-button {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.webcraft-button:visited, .medium.webcraft-button:visited {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/************************* ARLTON'S EDITS END ************************************/
+
+
 #participate_button a {
   background-color: {{ school.headers_color }};
 }
@@ -25,6 +114,7 @@ body {
 
 #school_home #sidebar {
     width: {{ school.sidebar_width }};
+    border: 0;
 }
 
 #main-nav, #breadcrumbs, #language-nav, #main, #sidebar,

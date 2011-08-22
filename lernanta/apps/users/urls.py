@@ -46,6 +46,8 @@ urlpatterns = patterns('',
       'users.views.user_tagged_list', name="users_user_tagged_list"),
   url(r'^people/$', 'users.views.user_list',
       name='users_user_list'),
+  url(r'^people/(?P<username>[\w\-\. ]+)/$', 'users.views.profile_view',
+      name='users_profile_view'),
 
   # Registration urls
   url(r'^register/$', 'users.views.register',
@@ -68,8 +70,6 @@ urlpatterns = patterns('',
       name='users_followers'),
 
   # Profile urls
-  url(r'^(?P<username>[\w\-\. ]+)/$', 'users.views.profile_view',
-      name='users_profile_view'),
   url(r'^profile/edit/$', 'users.views.profile_edit',
       name='users_profile_edit'),
   url(r'^profile/edit/badges/$', 'badges.views.badges_manage',

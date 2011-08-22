@@ -1,5 +1,6 @@
 -r prod.txt
 
+coverage==3.5
 docutils==0.7
 ipython==0.10.2
 nose==1.0.0

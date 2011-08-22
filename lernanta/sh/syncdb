@@ -1,7 +1,0 @@
-python manage.py syncdb --noinput
-
-for app in  users search chat l10n dashboard relationships activity statuses preferences drumbeatmail links richtext replies signups content schools news pages projects drumbeat tags
-do
-python manage.py migrate $app;
-done
-

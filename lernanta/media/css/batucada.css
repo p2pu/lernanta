@@ -349,23 +349,22 @@ header {}
       overflow-x: visible;
       overflow-y: visible;
       text-align: right;
-      position: absolute;
       z-index: 3;
       font-size: 12px;
-      margin-left: 635px;
       padding-top: 5px;
       padding-right: 7px;
       padding-bottom: 5px;
-      padding-left: 26px;
       border-radius: 10px;
       border: solid 1px #EEE;
-      margin-top: 5px;
+      width: 160px;
+      height: 20px;
+      margin-bottom: 20px;
     }
 
     #language-nav a {
-      margin-top: 0pt;
-      margin-right: 0pt;
-      margin-bottom: 0pt;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
       margin-left: 5px;
       color: #444;
     }
@@ -446,7 +445,7 @@ header {}
       }
 
 	  #user-nav a.sub-level, #main-nav a.sub-level{
-	    color: #444;
+	    color: #2184ca;
             font-size: 16px;
             display: block;
             padding: 10px 12px;
@@ -459,21 +458,21 @@ header {}
       }
 
       #user-nav a:hover {
-        color: #333;
+        color: #2184ca;
       }
 
       #main-nav a:hover {
-        color: #222;
+        color: #2184ca;
       }
 
       #user-nav a.login {
         font-weight: bold;
-        color: #000;
+        color: #2184ca;
       }
 
       #user-nav a.login:hover {
         font-weight: bold;
-        color: #F08C00;
+        color: #000;
       }
 
       .no-rgba #user-nav .menu a:hover, .no-rgba #main-nav .menu a:hover {
@@ -537,7 +536,7 @@ header {}
         padding: 0;
       }
       .no-cssgradients .menu ul {
-        background: #eee;
+        background: #fff;
         border: 1px solid #666;
         border-top: 0 none;
         border-left: 0 none;
@@ -550,17 +549,18 @@ header {}
 
         .menu.open a {
           display: block;
-          background: #eee;
+          background: #fff;
         }
 
         .menu.open a:hover {
           display: block;
-          background: #ccc;
-          text-shadow: 1px 1px 1px #fff; 
+          background: #f9f9f9;
+          text-shadow: 1px 1px 1px #fff;
+          color: #2184ca;
         }
        
         .menu.open span {
-          color: #222;
+          color: #2184ca;
         }
         .menu.open ul {
           z-index: 2;
@@ -581,6 +581,12 @@ header {}
             border: 0 none;
             color: #222;
           }
+
+          #user.open ul a:hover, #schools.open ul a:hover {
+            border: 0 none;
+            color: #2184ca;
+          }
+
           #user-actions {
             min-width: 146px;
             color: #222;
@@ -595,7 +601,7 @@ header {}
           }
 
           #school-menu-items li:hover {
-            color: #000;
+            color: #2184ca;
             height: 30px;
           }
       
@@ -2873,17 +2879,16 @@ footer {
  
 footer[class="main"] ul {
   margin-left: 104px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   float: left;
 }
 footer[class="main"] ul:first-child {
   margin-left: 0px;
 }
 footer[class="main"] ul > li:first-child {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 17px;
-  background-color: #fff;
-  line-height: 40px;
+  line-height: 20px;
   padding: 0 8px;
 }
 footer[class="main"] ul li {
@@ -2894,13 +2899,13 @@ footer[class="main"] ul li a {
   padding: 0 8px;
 }
 footer[class="main"] ul[class="about-us"] > li a {
-  background-color: #cef200;
+
 }
 footer[class="main"] ul[class="contact-us"] > li a {
-  background-color: #4cebe2;
+
 }
 footer[class="main"] ul[class="license-info"] > li a {
-  background-color: #ffde00;
+
 }
 
 footer[class="main"] ul[class="cc"] {
@@ -2919,7 +2924,7 @@ footer[class="main"] ul[class="cc"] li[class="icons"] a {
 
 footer[class="main"] ul[class="supporters"] {
    margin-left: 20px;
-   margin-top: -65px;
+   margin-top: -25px;
    text-align: center;
    width: 360px;
    font-size: 15px;

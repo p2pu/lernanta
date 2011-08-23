@@ -23,7 +23,7 @@
           </ul>
 
           <ul class="license-info">
-            <li>{{ _('License Info') }}</li>
+            <li>{{ _('License Info') }}</li> 
             <li><a href="{% locale_url static_page_show 'license' %}">{{ _('License') }}</a></li>
             <li><a href="{% locale_url static_page_show 'privacy' %}">{{ _('Privacy Guidelines') }}</a></li>
             <li><a href="{% locale_url static_page_show 'terms-of-use' %}">{{ _('Terms of Use') }}</a></li>
@@ -38,9 +38,13 @@
             <li class="hewlett"><a href="http://www.hewlett.org/" target="_blank">{{ _('The Hewlett Foundation') }}</a></li>
             <li class="shuttleworth"><a href="http://www.shuttleworthfoundation.org/" target="_blank">{{ _('The Shuttleworth Foundation') }}</a></li>
           </ul>
-        </nav>
-               
+        </nav>          
       </div>
+        <nav id="language-nav">
+            <a href="/en/">English</a>
+            <a href="/es/">Spanish</a>
+            <a href="https://github.com/p2pu/lernanta/wiki/Translating-Lernanta">{{ _('(more)') }}</a>       
+        </nav> 
       <br style="clear: both;">
     </footer>
   </div> <!--! end of #container -->

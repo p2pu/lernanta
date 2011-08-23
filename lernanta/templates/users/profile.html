@@ -21,6 +21,8 @@
 {% endblock %}
 {% block breadcrumbs_actions %}
     {% if user == profile.user %}
+      <a class="button" href="{% locale_url chat %}">{{ _('Chat') }}</a>
+      <a class="button" href="{% locale_url drumbeatmail_inbox %}">{{ _('Inbox') }}</a>
       <a class="button" href="{% locale_url users_profile_edit %}">{{ _('Edit Profile') }}</a>
     {% endif %}
 {% endblock %}

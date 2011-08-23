@@ -10,8 +10,7 @@ html {
 body {
   font-family: "Helvetica", Arial, Verdana, san-serif;
   color: #5a6579;
-  background: #f6f6f6;
-  /* background: url('../images/bg.stripy.png'); */
+  background: url('../images/bg.stripy.png');
   min-height: 101%;
 }
 
@@ -463,7 +462,7 @@ header {}
       }
 
       #main-nav a:hover {
-        color: #222;
+        color: #000;
       }
 
       #user-nav a.login {
@@ -478,17 +477,18 @@ header {}
 
       .no-rgba #user-nav .menu a:hover, .no-rgba #main-nav .menu a:hover {
         background: url("/media/images/user-nav.bg.png");
-	color: #fff;
+		color: #fff;
       }
 
         #user-picture {
           position: relative;
-          float:left;
+		  float:left;
           top: 0px;
-          margin-right: 15px;
-          width: 19px;
-          height: 19px;
-          border: 1px solid #ccc;
+          box-shadow: #000 -1px -1px 1px;
+          -moz-box-shadow: #000 -1px -1px 1px;
+          -webkit-box-shadow: #000 -1px -1px 1px;
+          behavior: url("/media/css/PIE.htc");
+          margin-right: 5px;
         }
 
         #user-name {
@@ -535,9 +535,12 @@ header {}
         display: none;
         margin: 0;
         padding: 0;
+        background: -webkit-gradient(linear,0 top,0 bottom,from(#48a4e3),to(#1f84ca));
+        background: -moz-linear-gradient(top,#48a4e3,#1f84ca);
+        -pie-background: linear-gradient(top,#48a4e3,#1f84ca);
       }
       .no-cssgradients .menu ul {
-        background: #eee;
+        background: #36cdc4;
         border: 1px solid #666;
         border-top: 0 none;
         border-left: 0 none;
@@ -545,22 +548,15 @@ header {}
       }
 
       .menu.open {
-        background: #eee;
+        background: #36cdc4;
       }
-
         .menu.open a {
+          border-top: 1px solid #76bae9;
           display: block;
-          background: #eee;
+          background: #28c0b7;
         }
-
-        .menu.open a:hover {
-          display: block;
-          background: #ccc;
-          text-shadow: 1px 1px 1px #fff; 
-        }
-       
         .menu.open span {
-          color: #222;
+          color: #fff;
         }
         .menu.open ul {
           z-index: 2;
@@ -579,22 +575,23 @@ header {}
 
           #user.open ul a, #schools.open ul a {
             border: 0 none;
-            color: #222;
+            color: #fff;
           }
           #user-actions {
             min-width: 146px;
-            color: #222;
+            color: #fff;
           }
 
-         #school-menu-items li {
-            color: #222;
-            background: #000;
-            margin-right: 0;
-            padding-right: 0;
+          #school-menu-items li {
+            min-width: 146px;
+            color: #fff;
+            background: #28c0b7;
+            border: none;
             height: 30px;
           }
 
           #school-menu-items li:hover {
+            min-width: 146px;
             color: #000;
             height: 30px;
           }

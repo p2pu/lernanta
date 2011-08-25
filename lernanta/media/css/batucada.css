@@ -372,7 +372,7 @@ header {}
     #main-nav {
       font-size: 20px;
       position: absolute;
-      margin-top: 14px;
+      margin-top: 18px;
       height: 24px;
       width: 840px;
       padding: 0 3px 3px 179px;
@@ -397,8 +397,8 @@ header {}
     } 
 
    #cse-search-form {
-      margin-top: -20px;
-      margin-right: 250px;
+      margin-top: -10px;
+      margin-right: 300px;
       width: 161px;
       float: right;
     }
@@ -432,7 +432,7 @@ header {}
         color: #777;
         font-size: 14px;
         display: block;
-        padding: 10px 12px;
+        padding: 12px 12px;
       }
 
       #main-nav a {
@@ -446,7 +446,7 @@ header {}
 	    color: #fff;
             font-size: 14px;
             display: block;
-            padding: 10px 12px;
+            padding: 5px 12px 10px 12px;
 	  }
       
       #main-nav a.top-level {
@@ -465,7 +465,7 @@ header {}
 
       #user-nav a.top-level {
         height: 51px;
-        padding: 30px 10px 2px 10px;
+        padding: 33px 10px 2px 10px;
         margin: 0;
       }
 
@@ -531,6 +531,24 @@ header {}
         height: 37px;
       }
       
+			#user {
+				min-width: 120px;
+				z-index: 1000;
+				display: block;
+			}
+
+			#user:hover {
+				background: #000;
+				height: 190px;
+				z-index: 1000;
+        -webkit-border-bottom-right-radius: 7px;
+        -webkit-border-bottom-left-radius: 7px;
+        -moz-border-radius-bottomright: 7px;
+        -moz-border-radius-bottomleft: 7px;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+		  }
+
       .dropdown {
         background: url("/media/images/arrow-down.png") no-repeat scroll transparent;
         display: inline-block;
@@ -587,11 +605,10 @@ header {}
 
           #user.open ul li {
             color: #fff;
-            border-bottom: 1px dotted #ccc;
             margin-left: 10px;
             margin-right: 10px;
+            font-size: 14px;
           }
-
 
           #user.open ul li:last-child {
             border: 0 none;
@@ -613,24 +630,6 @@ header {}
           #user-actions {
             color: #222;
           }
-
-#user {
-min-width: 150px;
-z-index: 1000;
-display: block;
-}
-
-#user:hover {
-background: #000;
-height: 200px;
-z-index: 1000;
-          -webkit-border-bottom-right-radius: 7px;
-          -webkit-border-bottom-left-radius: 7px;
-          -moz-border-radius-bottomright: 7px;
-          -moz-border-radius-bottomleft: 7px;
-          border-bottom-right-radius: 7px;
-          border-bottom-left-radius: 7px;
-}
 
        #school-menu-items li {
             color: #fff;
@@ -1943,47 +1942,6 @@ z-index: 1000;
 #call-to-action .sub{
   font-size: 35px;
 }
-#intro-links {
-  float: right;
-  text-align: left;
-  width: 275px;
-  padding-right: 20px;
-  padding-top: 20px;
-  z-index: -1000;
-}
-#intro-links a {
-  display: block;
-  font-size: 40px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 17px 33px 20px;
-  line-height: 47px;
-  width: 215px;
-  z-index: -1000;
-}
-#intro-links a.big-find-course {
-  color: #fff;
-  background: url("../images/bg.find-your-course.png") no-repeat;
-  height: 138px;
-  margin-bottom: 5px;
-  z-index: -1000;
-}
-#intro-links a.big-find-course:hover {
-  z-index: -1000;
-}
-#intro-links a.big-run-course {
-  margin-left: 7px;
-  padding-left: 70px;
-  background: url("../images/bg.run-a-course.png") no-repeat;
-  color: #5a6579;
-  height: 138px;
-  z-index: -1000;
-}
-#intro-links a.big-run-course:hover {
-  background-position: 0 -175px;
-  z-index: -1000;
-}
-
 #splash #content header h1,
 #splash #content header h2{
 	width: 530px;	

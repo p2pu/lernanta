@@ -390,11 +390,9 @@ header {}
 
     #user-nav {
       height: 48px;
-      position: relative;
       z-index: 2;
       float: right;
       margin-top: -70px;
-      margin-left: 825px;
       min-width: 256px;
     } 
     

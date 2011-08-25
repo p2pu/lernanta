@@ -395,7 +395,7 @@ header {}
       float: right;
       margin-top: -70px;
       margin-left: 825px;
-      width: 256px;
+      min-width: 256px;
     } 
     
     #cse-search-form {
@@ -446,7 +446,7 @@ header {}
 
 	  #user-nav a.sub-level, #main-nav a.sub-level{
 	    color: #fff;
-            font-size: 16px;
+            font-size: 14px;
             display: block;
             padding: 10px 12px;
 	  }
@@ -620,7 +620,6 @@ header {}
           }
 
           #user-actions {
-            min-width: 146px;
             color: #222;
           }
 
@@ -639,16 +638,7 @@ header {}
           #school-menu-items li:hover {
             color: #000;
             height: 30px;
-          }
-
-          #user-actions .nav-corner {
-          background: url("/media/images/nav-corner.png") no-repeat 0 0;
-          width: 8px;
-          height: 8px;
-          float: right;
-          margin-top: -8px;
-          margin-right: 36px;
-          }    
+          } 
   
       #inbox {}
         #inbox-count {

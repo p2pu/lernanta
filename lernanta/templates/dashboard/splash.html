@@ -15,8 +15,6 @@
 <header id="intro">
   <div class="container">
     <nav id="intro-links">
-      <a href="{% locale_url projects_gallery %}" class="big-find-course">{{ _('Browse Groups & Courses') }}</a>
-      <a href="{% locale_url projects_create %}" class="big-run-course">{{ _('Start Your Own') }}</a>
     </nav>
     <div id="call-to-action">
       <h1>{{ _('<em class="highlight3">Learn</em> anything<br>with your <em class="highlight2">peers</em>.<br><span class="sub">It\'s <em class="highlight2">online</em> and totally <em class="highlight3">free</em></span>.') }}</h1>
@@ -26,11 +24,6 @@
 </header> <!-- /#intro -->
 <section id="main">
   <div class="container">
-    <ul id="posts">
-	{% for activity in activities %}
-        {% include "activity/_activity_resource.html" %}
-      {% endfor %}
-    </ul>
     <aside>
     	{% if featured_project %}
       <section id="featured_project" class="card-list">
@@ -43,15 +36,6 @@
       </section>
         {% endif %}
 
-      <section id="blog_feed">
-        <h1><a href="http://blogs.p2pu.org/" title="{{ _('P2PU Blog') }}" target="_blank">{{ _('P2PU Blog') }}</a> <a class="feed-link" href="{{ feed_url }}" title="{{ _('Subscribe to the Peer 2 Peer University blog') }}"  target="_blank"> {{ _('feed') }}</a></h1>
-          {% for entry in feed_entries %}
-            <article>
-              <h1><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></h1>
-                <p>{{ entry.body|truncatechars:400 }}</p>
-            </article>
-          {% endfor %}
-      </section>
     </aside>
   </div>  
 </section>

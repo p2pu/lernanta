@@ -2885,21 +2885,29 @@ a#beta-tag:hover {
 }
 
 #footer-about {
-	width: 280px;
+	width: 267px;
 	float: left;
-	margin-right: 40px;
+	margin-right: 50px;
 }
 
 #footer-supporters {
 	float: left;
-	width: 400px;
-	height: 200px;
-	margin-right: 40px;
+	width: 353px;
+	margin-right: 50px;
+}
+
+.supporter {
+padding-bottom: 15px;
+}
+
+a.more-supporters {
+float: right;
 }
 
 #footer-connect {
 	float: left;
-	width: 240px;
+	width: 280px;
+  margin-bottom: 20px;
 }
 
 footer[id="footer-wrapper"] ul[class="connect-with-us"] {

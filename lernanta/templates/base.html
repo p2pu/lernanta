@@ -41,7 +41,6 @@
 		  <ul>
 		    <li><a href="{% locale_url projects_gallery %}" class="top-level">{{ _('Learn') }}</a></li>
                     <li><a href="{% locale_url projects_create %}" class="top-level">{{ _('Mentor') }}</a></li>
-                    {% schools_menu %}
 		  </ul>
 		</nav>
 
@@ -62,7 +61,7 @@
 		{% if user.is_authenticated %}
 		  <ul>
 		    <li id="user" class="menu">
-		      <a href="#" id="user-link" class="top-level">
+		      <a href="{{ user.get_profile.get_absolute_url }}" id="user-link" class="top-level">
 			{# todo - come up with something better than image_or_default as profile isn't guaranteed to exist. #}
 			{% if user.get_profile %}
 			<img id="user-picture" src="{{ user.get_profile.image_or_default }}" height="19" width="19" alt="{{ user.get_profile }}">
@@ -73,9 +72,9 @@
 	          <span class="dropdown">&nbsp;</span>
 		      </a>
 		      <ul id="user-actions">
-				<li><a href="{% locale_url dashboard %}" class="sub-level">{{ _('Dashboard') }}</a></li>
-                                <li><a href="{{ user.get_profile.get_absolute_url }}" class="sub-level">{{ _('Profile') }}</a></li>
-                                <li><a href="{% locale_url users_profile_edit %}" class="sub-level">{{ _('Settings') }}</a></li>
+                                <span class="nav-corner">&nbsp;</span>
+                                <li><a href="{{ user.get_profile.get_absolute_url }}" class="sub-level">{{ _('My Profile') }}</a></li>
+                                <li><a href="{% locale_url users_profile_edit %}" class="sub-level">{{ _('My Settings') }}</a></li>
 				<li><a href="{% locale_url users_logout %}" class="sub-level">{{ _('Logout') }}</a></li>
 		      </ul>
 		    </li> <!-- /#user -->
@@ -116,8 +115,9 @@
     </ul>
     {% endif %}
     {% block body %}{% endblock %}
-    {% block footer %}{% include "_footer.html" %}{% endblock %}
   </div>
+
+{% block footer %}{% include "_footer.html" %}{% endblock %}
 
   <script src="{{ MEDIA_URL }}js/libs/jquery-1.4.2.min.js"></script>
   <script src="{{ MEDIA_URL }}js/libs/jquery-ui-1.8.7.custom.min.js"></script>  

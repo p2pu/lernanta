@@ -32,15 +32,7 @@
 {% user_sidebar %}
 
 <div id="main">
-  {% activity_filters request profile.get_absolute_url %}
-  <ul id="posts">
-    {% for activity in pagination_current_page.object_list %}
-    {% include "activity/_activity_resource.html" %}
-    {% endfor %}
-  </ul>
-  {% with prefix='' page_url=profile.get_absolute_url %}
-    {% pagination_links %}
-  {% endwith %}
+
 
 </div> <!-- /#main -->
 

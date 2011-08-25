@@ -358,7 +358,7 @@ header {}
       border: solid 1px #EEE;
       width: 160px;
       height: 20px;
-      float: right;
+      margin-bottom: 20px;
     }
 
     #language-nav a {
@@ -372,31 +372,31 @@ header {}
     #main-nav {
       font-size: 20px;
       position: absolute;
-      margin-top: 14px;
-      height: 24px;
+      margin-top: 20px;
+      height: 48px;
       width: 840px;
-      padding: 0 3px 3px 179px;
+      padding: 7px 3px 3px 179px;
     }
 
     #main-nav li {
       border-right: 1px solid #eee;
-      padding: 0 8px 0 0;
+      padding: 0 8px 6px 0;
     }
 
     #main-nav li:last-child {
-      border: none;
+      border-right: none;
       padding: 0 0 6px 0;
     }
 
     #user-nav {
-      height: 48px;
+      height: 37px;
       position: relative;
       z-index: 2;
       float: right;
-      margin-top: -70px;
+      margin-top: -40px;
       margin-left: 825px;
       width: 256px;
-    } 
+    }
     
     #cse-search-form {
       margin-top: 27px;
@@ -445,34 +445,20 @@ header {}
       }
 
 	  #user-nav a.sub-level, #main-nav a.sub-level{
-	    color: #fff;
+	    color: #2184ca;
             font-size: 16px;
             display: block;
             padding: 10px 12px;
 	  }
       
-      #main-nav a.top-level {
+      #user-nav a.top-level, #main-nav a.top-level {
         display: block;
-        height: 24px;
-        padding: 10px;
-        margin-top: 0;
-      }
-
-      #main-nav a.schools-top-level {
-        display: block;
-        height: 48px;
-        padding: 24px 10px 10px 16px;
-        margin-top: 0;
-      }
-
-      #user-nav a.top-level {
-        height: 48px;
-        padding: 30px 10px 2px 10px;
-        margin: 0;
+        height: 14px;
+        padding: 0 10px 8px 10px;
       }
 
       #user-nav a:hover {
-        color: #000;
+        color: #2184ca;
       }
 
       #main-nav a:hover {
@@ -502,7 +488,6 @@ header {}
           width: 19px;
           height: 19px;
           border: 1px solid #ccc;
-          background: #fff;
         }
 
         #user-name {
@@ -522,7 +507,7 @@ header {}
 
         #main-nav > ul > li {
           float: left;
-          padding-left: 7px;
+          margin-left: 7px;
           margin-top: 0;
         }
       
@@ -542,17 +527,7 @@ header {}
         margin-top: 8px;
         vertical-align: top;   
       }
-
-      .dropdown:hover {
-        background: url("/media/images/arrow-down-over.png") no-repeat scroll transparent;
-        display: inline-block;
-        height: 7px;
-        width: 7px;
-        margin-left: 1px;
-        margin-top: 8px;
-        vertical-align: top;   
-      }     
- 
+      
       .menu ul {
         position: absolute;
         z-index: 0;
@@ -561,57 +536,50 @@ header {}
         padding: 0;
       }
       .no-cssgradients .menu ul {
-        background: #666;
-     
+        background: #fff;
+        border: 1px solid #666;
+        border-top: 0 none;
+        border-left: 0 none;
+        border-right: 0 none;
       }
 
       .menu.open {
-        background: #000;
+        background: #eee;
       }
 
         .menu.open a {
           display: block;
+          background: #fff;
         }
 
         .menu.open a:hover {
           display: block;
-          color: #fff;
+          background: #f9f9f9;
+          text-shadow: 1px 1px 1px #fff;
+          color: #2184ca;
         }
        
         .menu.open span {
-          color: #fff;
+          color: #2184ca;
         }
         .menu.open ul {
           z-index: 2;
           display: block;
-          background: #000;
+          box-shadow: #777 2px 4px 6px;
+          -webkit-box-shadow: #777 2px 4px 6px;
+          -moz-box-shadow: #777 2px 4px 6px;
           -webkit-border-bottom-right-radius: 7px;
           -webkit-border-bottom-left-radius: 7px;
           -moz-border-radius-bottomright: 7px;
           -moz-border-radius-bottomleft: 7px;
           border-bottom-right-radius: 7px;
           border-bottom-left-radius: 7px;
-          padding-bottom: 5px;
+          behavior: url("/media/css/PIE.htc");
         }
 
-          #user.open ul li {
-            color: #fff;
-            border-bottom: 1px dotted #ccc;
-            margin-left: 10px;
-            margin-right: 10px;
-          }
-
-
-          #user.open ul li:last-child {
+          #user.open ul a, #schools.open ul a {
             border: 0 none;
-            color: #fff;
-            margin-bottom: 0;
-            padding-bottom: 0;
-          }
-
-          #schools.open ul a {
-            border: 0 none;
-            color: #fff;
+            color: #222;
           }
 
           #user.open ul a:hover, #schools.open ul a:hover {
@@ -625,31 +593,18 @@ header {}
           }
 
          #school-menu-items li {
-            color: #fff;
-            margin-right: 10px;
-            margin-left: 10px;
+            color: #222;
+            background: #000;
+            margin-right: 0;
             padding-right: 0;
-            padding-top: 0;
-            padding-bottom: 10px;
             height: 30px;
-            border-right: 0;
-            border-bottom: 1px dotted #ccc;
           }
 
           #school-menu-items li:hover {
-            color: #000;
+            color: #2184ca;
             height: 30px;
           }
-
-          #user-actions .nav-corner {
-          background: url("/media/images/nav-corner.png") no-repeat 0 0;
-          width: 8px;
-          height: 8px;
-          float: right;
-          margin-top: -8px;
-          margin-right: 36px;
-          }    
-  
+      
       #inbox {}
         #inbox-count {
           padding: 0 3px;
@@ -2912,134 +2867,16 @@ a#beta-tag:hover {
     color: #36cdc4;
 }
 
-
-#footer-wrapper {
-	width: 100%;
-	margin-top: 40px;
-	padding-top: 40px;
-	padding-bottom: 20px;
-	background: #e9e9e9;
-	border-top: 1px solid #fff;
-}
-
-#footer-about {
-	width: 280px;
-	float: left;
-	margin-right: 40px;
-}
-
-#footer-supporters {
-	float: left;
-	width: 400px;
-	height: 200px;
-	margin-right: 40px;
-}
-
-#footer-connect {
-	float: left;
-	width: 240px;
-}
-
-footer[id="footer-wrapper"] ul[class="connect-with-us"] {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-footer[id="footer-wrapper"] ul[class="connect-with-us"] li {
-	border-bottom: 1px dotted #fff;
-	padding: 10px 0 10px 30px;
-  font-size: 15px;
-}
-
-footer[id="footer-wrapper"] ul[class="connect-with-us"] li:last-child {
-	border-bottom: none;
-}
-
-footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p1 {
-	background: url('/media/images/p1.png') no-repeat 0 10px;
-}
-
-footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p2 {
-	background: url('/media/images/p2.png') no-repeat 0 10px;
-}
-
-footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p3 {
-	background: url('/media/images/p3.png') no-repeat 0 10px;
-}
-
-footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p4 {
-	background: url('/media/images/p4.png') no-repeat 0 10px;
-}
-
-footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p5 {
-	background: url('/media/images/p5.png') no-repeat 0 10px;
-}
-
-
-#footer-wrapper h6 {
-  font-weight: bold;
-  font-size: 17px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  text-shadow: none;
-}
-
-#footer-bottom {
-	clear: both;
-	border-top: 1px solid #fff;
-	padding-top: 20px;
-}
-
-#footer-bottom .icons a {
-  display: block;
-  background: url('/media/images/cc-icons.png') no-repeat;
-  height: 65px;
-  width: 167px;
-  text-indent: -999em;
-  float: left;
-  margin-right: 20px;
-}
-
-footer[id="footer-wrapper"] ul[class="footer-nav"] li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: inline;
-	padding-left: 5px;
-	padding-right: 10px;
-	border-right: 1px solid #fff;
-}
-
-footer[id="footer-wrapper"] ul[class="footer-nav"] li:last-child {
-	border: none;
-}
-
-footer[id="footer-wrapper"] ul[class="license-info"] {
-	margin-top: 10px;
-}
-
-footer[id="footer-wrapper"] ul[class="license-info"] li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: inline;
-	padding-left: 5px;
-	padding-right: 10px;
-	border-right: 1px solid #fff;
-}
-
-footer[id="footer-wrapper"] ul[class="license-info"] li:last-child {
-	border: none;
-}
-
-/*
-
 footer {
     clear: both;
     padding-top: 11px;
 }
 
+/*
+ * Footer CSS: Brian Brennan 
+ * brian@nyhacker.org 
+ */
+ 
 footer[class="main"] ul {
   margin-left: 104px;
   padding-bottom: 20px;
@@ -3116,6 +2953,4 @@ footer[class="main"] ul[class="supporters"] li[class="shuttleworth"] a {
   margin-top: -61px;
   margin-right: -15px;
 }
-
-*/
 

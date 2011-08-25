@@ -1,50 +1,54 @@
 {% load l10n_tags %}
- <br><br><br><br>
- <footer class="main">
+<footer id="footer-wrapper">
       <div class="container">
-        <nav>
-          <ul class="about-us">
-            <li>{{ _('About Us') }}</li>
-            <li><a href="{% locale_url static_page_show 'about' %}">{{ _('About P2PU') }}</a></li>
-            <li><a href="http://blogs.p2pu.org/" target="_blank">{{ _('Blog') }}</a></li>
-            <li><a href="http://groups.google.com/group/p2pu-announce" target="_blank">{{ _('Announcements') }}</a></li>
-            <li><a href="{% locale_url static_page_show 'get-involved' %}">{{ _('Get Involved') }}</a></li>
-            <li><a href="http://wiki.p2pu.org" target="_blank">{{ _('Wiki') }}</a></li>
-            <li><a href="http://archive.p2pu.org">{{ _('Old P2PU Site') }}</a></li>
-          </ul>
 
-          <ul class="contact-us">
-            <li>{{ _('Contact Us') }}</li>
-            <li><a href="{% locale_url static_page_show 'contact-us' %}">{{ _('Email') }}</a></li>
-            <li><a href="http://www.facebook.com/P2PUniversity" target="_blank">{{ _('Facebook') }}</a></li>
-            <li><a href="http://twitter.com/p2pu" target="_blank">{{ _('Twitter') }}</a></li>
-            <li><a href="http://qa.p2pu.org/" target="_blank">{{ _('FAQ') }}</a></li>
-            <li><a href="http://p2pu.lighthouseapp.com/projects/71002-lernanta/" target="_blank">{{ _('Found a Bug?') }}</a></li>
-          </ul>
+<div id="footer-about">
+<h6 class="footer-header">What is P2PU?</h6>
+<p>The Peer 2 Peer University is a grassroots open education project that organizes learning outside of institutional walls and gives learners recognition for their achievements. Leveraging the internet and educational materials openly available online, P2PU enables high-quality low-cost education opportunities. P2PU - learning for everyone, by everyone about almost anything.</p>
+</div>
 
-          <ul class="license-info">
-            <li>{{ _('License Info') }}</li> 
-            <li><a href="{% locale_url static_page_show 'license' %}">{{ _('License') }}</a></li>
-            <li><a href="{% locale_url static_page_show 'privacy' %}">{{ _('Privacy Guidelines') }}</a></li>
-            <li><a href="{% locale_url static_page_show 'terms-of-use' %}">{{ _('Terms of Use') }}</a></li>
-          </ul>
+<div id="footer-supporters">
+<h6 class="footer-header">Some of our supporters</h6>
+</div>
 
-          <ul class="cc">
-            <li><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">{{ _('Creative Commons BY SA') }}</a></li>
-            <li class="icons"><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license" target="_blank">{{ _('CC BY SA') }}</a></li>
+<div id="footer-connect">
+<h6 class="footer-header">Connect with us</h6>
+
+          <ul class="connect-with-us">
+            <li class="p1"><a href="{% locale_url static_page_show 'get-involved' %}">{{ _('Get Involved') }}</a></li>
+            <li class="p2"><a href="http://blogs.p2pu.org/" target="_blank">{{ _('Blog') }}</a></li>
+            <li class="p3"><a href="http://www.facebook.com/P2PUniversity" target="_blank">{{ _('Find us on Facebook') }}</a></li>
+            <li class="p4"><a href="http://twitter.com/p2pu" target="_blank">{{ _('Follow us on Twitter') }}</a></li>
+            <li class="p5"><a href="{% locale_url static_page_show 'contact-us' %}">{{ _('Send us an email') }}</a></li>
           </ul>
-          <ul class="supporters">
-            <li><a href="{% locale_url static_page_show 'supporters' %}">{{ _('Supporters') }}</a></li>
-            <li class="hewlett"><a href="http://www.hewlett.org/" target="_blank">{{ _('The Hewlett Foundation') }}</a></li>
-            <li class="shuttleworth"><a href="http://www.shuttleworthfoundation.org/" target="_blank">{{ _('The Shuttleworth Foundation') }}</a></li>
-          </ul>
-        </nav>          
-      </div>
+</div>
+
+<div id="footer-bottom">
+
         <nav id="language-nav">
             <a href="/en/">English</a>
             <a href="/es/">Spanish</a>
             <a href="https://github.com/p2pu/lernanta/wiki/Translating-Lernanta">{{ _('(more)') }}</a>       
         </nav> 
+
+<div class="icons"><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license" target="_blank">{{ _('CC BY SA') }}</a></div>
+
+          <ul class="footer-nav">
+            <li><a href="http://help.p2pu.org"><span>{{ _('Help') }}</span></a></li>
+            <li><a href="{% locale_url static_page_show 'about' %}">{{ _('About P2PU') }}</a></li>
+            <li><a href="http://qa.p2pu.org/" target="_blank">{{ _('FAQ') }}</a></li>
+            <li><a href="http://groups.google.com/group/p2pu-announce" target="_blank">{{ _('Announcements') }}</a></li>
+            <li><a href="http://wiki.p2pu.org" target="_blank">{{ _('Wiki') }}</a></li>
+            <li><a href="http://p2pu.lighthouseapp.com/projects/71002-lernanta/" target="_blank">{{ _('Found a Bug?') }}</a></li>
+          </ul>
+
+          <ul class="license-info">
+            <li><a href="{% locale_url static_page_show 'license' %}">{{ _('License') }}</a></li>
+            <li><a href="{% locale_url static_page_show 'privacy' %}">{{ _('Privacy Guidelines') }}</a></li>
+            <li><a href="{% locale_url static_page_show 'terms-of-use' %}">{{ _('Terms of Use') }}</a></li>
+          </ul>
+</div>
+      </div>
       <br style="clear: both;">
-    </footer>
   </div> <!--! end of #container -->
+</footer>

@@ -26,7 +26,6 @@
     {% for page in content_pages %}
     <li class="{% cycle 'odd' 'even' %}">
         <span class="taskNumber">{{forloop.counter}}</span> <a class="taskLink" href="{{ page.get_absolute_url }}">{{ page.title }}</a>
-        <span class="action-buttons"><a href="{{ page.get_absolute_url }}">{{ _('View') }}</a></span>
     </li>
         {% endfor %}
       </ul>

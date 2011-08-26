@@ -20,11 +20,6 @@
   <a href="{{ profile.get_absolute_url }}">{{ profile.username }}</a>
 {% endblock %}
 {% block breadcrumbs_actions %}
-    {% if user == profile.user %}
-      <a class="button" href="{% locale_url chat %}">{{ _('Chat') }}</a>
-      <a class="button" href="{% locale_url drumbeatmail_inbox %}">{{ _('Inbox') }}</a>
-      <a class="button" href="{% locale_url users_profile_edit %}">{{ _('Edit Profile') }}</a>
-    {% endif %}
 {% endblock %}
 
 {% block body %}
@@ -33,6 +28,9 @@
 
 <div id="main">
 
+<pre>
+We need to have the courses that the user has signed up for displayed here. And we need the courses that the user has created displayed below the courses they've joined. We also need a button to encourage the user to create a class and one to encourse the user to explore available courses.
+</pre>
 
 </div> <!-- /#main -->
 

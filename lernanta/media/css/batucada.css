@@ -4,6 +4,11 @@
 	http://0.0.0.0:8000/media/css/batucada.css?v=1
 */
 
+pre {
+background: #ff0000;
+color: #fff;
+}
+
 html {
   height: 100%;
 }
@@ -374,7 +379,6 @@ header {}
       position: absolute;
       margin-top: 18px;
       height: 24px;
-      width: 840px;
       padding: 0 3px 3px 179px;
     }
 
@@ -443,7 +447,7 @@ header {}
       }
 
 	  #user-nav a.sub-level, #main-nav a.sub-level{
-	    color: #fff;
+	          color: #fff;
             font-size: 14px;
             display: block;
             padding: 5px 12px 10px 12px;
@@ -489,7 +493,7 @@ header {}
 
       .no-rgba #user-nav .menu a:hover, .no-rgba #main-nav .menu a:hover {
         background: url("/media/images/user-nav.bg.png");
-	color: #fff;
+	      color: #fff;
       }
 
         #user-picture {
@@ -540,7 +544,7 @@ header {}
 			#user:hover {
 				background: #000;
 				height: 190px;
-				z-index: 1000;
+				z-index: 9999;
         -webkit-border-bottom-right-radius: 7px;
         -webkit-border-bottom-left-radius: 7px;
         -moz-border-radius-bottomright: 7px;
@@ -571,7 +575,7 @@ header {}
  
       .menu ul {
         position: absolute;
-        z-index: 1000;
+        z-index: 9999;
         display: none;
         margin: 0;
         padding: 0;
@@ -583,6 +587,7 @@ header {}
 
       .menu.open {
         background: #000;
+        position: relative;
       }
 
         .menu.open a {
@@ -1210,6 +1215,7 @@ header {}
   padding: 15px;
   border-radius: 10px;
   border: solid 1px #EEE;
+  z-index: -9999;
 }
 
 #project_gallery #main, #school_home #main , #user_list #main, #one-column-page #main {

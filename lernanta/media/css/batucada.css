@@ -1968,10 +1968,6 @@ header {}
   line-height: 30px;
   padding-left: 65px;
 }
-#splash #content header img{
-	position: absolute;
-	right: 81px; bottom: -105px;
-	}
 #splash #main {
         width: 980px;
         padding: 36px 10px 0 10px;
@@ -2102,6 +2098,20 @@ font-size: 12px;
 font-weight: normal;
 }
 
+.writeups {
+width: 580px;
+float: left;
+}
+
+#splash #content .writeups p {
+color: #000;
+font-size: 14px;
+margin: 0;
+}
+
+.writeups img {
+margin: 0 0 0 65px;
+}
 
 /* SIGNIN / SIGNUP */
 .signin{}

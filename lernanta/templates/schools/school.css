@@ -26,7 +26,7 @@ a.webcraft-browse {
 }
 
 button.webcraft-button {
- margin: 0 0 -20px 20px;
+ margin: 0 0 -8px 20px;
  background-color: #7fbf4d;
  background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));
  /* Saf4+, Chrome */
@@ -48,12 +48,12 @@ button.webcraft-button {
  -o-box-shadow: inset 0 1px 0 0 #96ca6d;
  box-shadow: inset 0 1px 0 0 #96ca6d;
  color: #fff;
- font: bold 14px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+ font: normal 12px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
  line-height: 1;
  padding: 7px 0 8px 0;
  text-align: center;
  text-shadow: 0 -1px 0 #4c9021;
- width: 240px; 
+ width: 260px; 
 }
  
 button.webcraft-button:hover {

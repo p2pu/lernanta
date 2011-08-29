@@ -26,7 +26,7 @@ a.webcraft-browse {
 }
 
 button.webcraft-button {
- margin: 0 0 -8px 20px;
+ margin: 0 0 -5px 20px;
  background-color: #7fbf4d;
  background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));
  /* Saf4+, Chrome */

@@ -20,73 +20,67 @@ h3 {
 }
 
 a.webcraft-browse {
-  margin: 0 20px 50px 50px;
+  margin: 0 20px 50px 80px;
   font-size: 18px;
   text-decoration: underline;
 }
 
-.webcraft-button {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #66884D;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) 1px 1px 5px 0;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) 1px 1px 5px 0;
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) 1px 1px 5px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) 1px 1px 5px 0;
-  -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25) 1px 1px 5px 0;
-  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25) 1px 1px 5px 0;
-  -o-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25) 1px 1px 5px 0;
-  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25) 1px 1px 5px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  position: relative;
-  cursor: pointer;
-  padding: 12px 20px 12px;
-  margin-left: 20px;
+button.webcraft-button {
+ margin: 0 0 -20px 20px;
+ background-color: #7fbf4d;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));
+ /* Saf4+, Chrome */
+ background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+ background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+ background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
+ background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);
+ background-image: linear-gradient(top, #7fbf4d, #63a62f);
+ border: 1px solid #63a62f;
+ border-bottom: 1px solid #5b992b;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -ms-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+ -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;
+ -moz-box-shadow: inset 0 1px 0 0 #96ca6d;
+ -ms-box-shadow: inset 0 1px 0 0 #96ca6d;
+ -o-box-shadow: inset 0 1px 0 0 #96ca6d;
+ box-shadow: inset 0 1px 0 0 #96ca6d;
+ color: #fff;
+ font: bold 14px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+ line-height: 1;
+ padding: 7px 0 8px 0;
+ text-align: center;
+ text-shadow: 0 -1px 0 #4c9021;
+ width: 240px; 
+}
+ 
+button.webcraft-button:hover {
+   background-color: #76b347;
+   background-image: -webkit-gradient(linear, left top, left bottom, from(#76b347), to(#5e9e2e));
+   /* Saf4+, Chrome */
+   background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
+   background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
+   background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
+   background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
+   background-image: linear-gradient(top, #76b347, #5e9e2e);
+   -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+   -moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+   -ms-box-shadow: inset 0 1px 0 0 #8dbf67;
+   -o-box-shadow: inset 0 1px 0 0 #8dbf67;
+   box-shadow: inset 0 1px 0 0 #8dbf67;
+   cursor: pointer; 
 }
 
-.webcraft-button:visited {
-  background: #66884D;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  position: relative;
-  cursor: pointer;
-  padding: 12px 20px 12px;
-}
-
-.webcraft-button:hover {
-  background-color: #80A165;
-  color: white;
-}
-
-.webcraft-button:active {
-  top: 1px;
-}
-
-.webcraft-button, .medium.webcraft-button {
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-}
-
-.webcraft-button:visited, .medium.webcraft-button:visited {
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+button.webcraft-button:active {
+   border: 1px solid #5b992b;
+   border-bottom: 1px solid #538c27;
+   -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+   -moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+   -ms-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+   -o-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+   box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee; 
 }
 
 /************************* ARLTON'S EDITS END ************************************/

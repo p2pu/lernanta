@@ -2937,13 +2937,32 @@ a#beta-tag:hover {
 }
 
 
+#footer-schools-wrapper {
+	margin-top: 40px;
+	background: #fff;
+	height: 120px;
+  border-top: 1px solid #ccc;
+}
+
+#footer-schools-wrapper p {
+	color: #666;
+	float: left;
+  font-weight: normal;
+  font-size: 30px;
+  margin: 40px 0 0 20px;
+}
+
+#footer-schools-wrapper img {
+	float: right;
+  margin: 20px 0 20px 40px;
+}
+
 #footer-wrapper {
 	width: 100%;
-	margin-top: 40px;
 	padding-top: 40px;
 	padding-bottom: 20px;
 	background: #e9e9e9;
-	border-top: 1px solid #fff;
+	border-top: 1px solid #ccc;
 }
 
 #footer-about {
@@ -3064,90 +3083,3 @@ footer[id="footer-wrapper"] ul[class="license-info"] li {
 footer[id="footer-wrapper"] ul[class="license-info"] li:last-child {
 	border: none;
 }
-
-/*
-
-footer {
-    clear: both;
-    padding-top: 11px;
-}
-
-footer[class="main"] ul {
-  margin-left: 104px;
-  padding-bottom: 20px;
-  float: left;
-}
-footer[class="main"] ul:first-child {
-  margin-left: 0px;
-}
-footer[class="main"] ul > li:first-child {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 20px;
-  padding: 0 8px;
-}
-footer[class="main"] ul li {
-  margin: 0 0 8px;
-}
-footer[class="main"] ul li a {
-  font-size: 15px;
-  padding: 0 8px;
-}
-footer[class="main"] ul[class="about-us"] > li a {
-
-}
-footer[class="main"] ul[class="contact-us"] > li a {
-
-}
-footer[class="main"] ul[class="license-info"] > li a {
-
-}
-
-footer[class="main"] ul[class="cc"] {
-   line-height: 30px;
-   font-size: 15px;
-}
-footer[class="main"] ul[class="cc"] li[class="icons"] a {
-  display: block;
-  background: url('/media/images/cc-icons.png') no-repeat;
-  height: 65px;
-  width: 147px;
-  margin: 0px auto;
-  overflow: hidden;
-  text-indent: -999em;
-}
-
-footer[class="main"] ul[class="supporters"] {
-   margin-left: 20px;
-   margin-top: -25px;
-   text-align: center;
-   width: 360px;
-   font-size: 15px;
-}
-
-footer[class="main"] ul[class="supporters"] li[class="hewlett"] a {
-  display: block;
-  background: url('/media/images/hewlett-logo-white.png') no-repeat;
-  height: 53px;
-  width: 139px;
-  overflow: hidden;
-  text-indent: -999em;
-  margin-top: 0px;
-  margin-left: 0px;
-}
-
-footer[class="main"] ul[class="supporters"] li[class="shuttleworth"] a {
-  display: block;
-  background: url('/media/images/shuttleworth-funded-small.png') no-repeat;
-  height: 53px;
-  width: 210px;
-  overflow: hidden;
-  text-indent: -999em;
-  position: relative;
-  float: right;
-  margin-top: -61px;
-  margin-right: -15px;
-}
-
-*/
-

@@ -10,6 +10,7 @@ h2 {
   font-weight: 100;
   font-size: 30px;
   margin-bottom: 10px;
+  color: #000;
 }
 
 h3 {
@@ -25,8 +26,12 @@ a.webcraft-browse {
   text-decoration: underline;
 }
 
+a.webcraft-browse {
+  cursor: pointer;
+}
+
 button.webcraft-button {
- margin: 0 0 -5px 20px;
+ margin: 0 0 -4px 20px;
  background-color: #7fbf4d;
  background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));
  /* Saf4+, Chrome */

@@ -1190,6 +1190,12 @@ header {}
     width: 30%;    
 }    
 
+#breakdown {
+  padding: 15px;
+  z-index: -9999;
+  margin-top: 40px;
+  opacity: 0.9;
+}
   
 #main {
   margin-left: 40px;

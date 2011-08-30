@@ -21,7 +21,7 @@
 
 <button class="cta-button">Join the Community<br><span class="cta-button-second">It's free!</span></button>
 <div class="writeups">
-<p>As been featured in &#8230;</p>
+<p>As featured in &#8230;</p>
 <a href="http://groups.diigo.com/group/p2pu_discuss" target="_blank"><img src="{{ MEDIA_URL }}images/writeups.png"></a>
 </div>
 
@@ -29,19 +29,25 @@
 </header> <!-- /#intro -->
 <section id="main">
   <div class="container">
-    <aside>
     	{% if featured_project %}
-      <section id="featured_project" class="card-list">
-        <h1>{{ _('Featured') }}</h1>
-	      <ul class="project-list">
+      <section id="featured_projects" class="card-list">
+        <h1 class="featured-header">{{ _('Featured Courses') }}</h1>
+	 <ul class="project-list">
           {% with featured_project as project %}
+            <li>{% include "projects/_project_card.html" %}</li>
+	    <li>{% include "projects/_project_card.html" %}</li>
+            <li>{% include "projects/_project_card.html" %}</li>
+            <li>{% include "projects/_project_card.html" %}</li>
+            <li>{% include "projects/_project_card.html" %}</li>
+	    <li>{% include "projects/_project_card.html" %}</li>
+            <li>{% include "projects/_project_card.html" %}</li>
             <li>{% include "projects/_project_card.html" %}</li>
           {% endwith %}
         </ul>
       </section>
         {% endif %}
 
-    </aside>
+
   </div>  
 </section>
 {% endblock %}

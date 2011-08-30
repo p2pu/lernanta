@@ -1952,6 +1952,7 @@ header {}
   width: 860px;
   line-height: 30px;
   padding-left: 65px;
+  color: #575757;
 }
 #splash #main {
         width: 980px;
@@ -1966,7 +1967,7 @@ header {}
 	}
 	
 #splash #featured_projects h1.featured-header {
-	color: #474747;
+	color: #222;
 	font-size: 24px;
 	font-weight: normal;
         margin: 0 30px 20px 8px;
@@ -2015,7 +2016,7 @@ header {}
 
 button.cta-button {
  float: right;
- margin: 2px 85px 0 0;
+ margin: 4px 85px 0 0;
  background-color: #7fbf4d;
  background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));
  /* Saf4+, Chrome */
@@ -2925,7 +2926,7 @@ a#beta-tag:hover {
 }
 
 #footer-schools-wrapper p {
-	color: #474747;
+	color: #222;
 	float: left;
   font-weight: normal;
   font-size: 24px;
@@ -2949,6 +2950,10 @@ a#beta-tag:hover {
 	width: 267px;
 	float: left;
 	margin-right: 50px;
+}
+
+#footer-about p {
+	color: #575757;
 }
 
 #footer-supporters {
@@ -3014,7 +3019,7 @@ footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p5 {
   margin-bottom: 10px;
   text-transform: uppercase;
   text-shadow: none;
-  color: #474747;
+  color: #222;
 }
 
 #footer-bottom {

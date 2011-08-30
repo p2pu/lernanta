@@ -492,7 +492,6 @@ header {}
       }
 
       .no-rgba #user-nav .menu a:hover, .no-rgba #main-nav .menu a:hover {
-        background: url("/media/images/user-nav.bg.png");
 	      color: #fff;
       }
 

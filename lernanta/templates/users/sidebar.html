@@ -7,6 +7,11 @@
     <img class="member-picture" src="{{ profile.image_or_default }}" height="54" width="54" alt="{{ profile }}">
     <div class="member-details">
       <h1 class="member-name"><span class="fn">{{ profile }}</span></h1>
+      {% if user == profile.user %}
+      	<a class="button" href="{% locale_url chat %}">{{ _('Chat') }}</a>
+      	<a class="button" href="{% locale_url drumbeatmail_inbox %}">{{ _('Inbox') }}</a>
+      	<a class="button" href="{% locale_url users_profile_edit %}">{{ _('Edit Profile') }}</a>
+      {% endif %}
       {% if user.is_authenticated and not profile.deleted %}
         <div class="member-actions">
           {% if user != profile.user %}

@@ -15,6 +15,7 @@
 {% block breadcrumbs %}
   <span class="arrow">&rsaquo;</span>
   <a href="{{ dashboard_url }}">{{ _('Dashboard') }}</a>
+
 {% endblock %}
 
 {% block body %}
@@ -29,35 +30,7 @@
       <p>{{ _('To get started, you should ') }}<a href="{% locale_url users_profile_edit %}">{{ _('update your profile</a>. This is a great way to tell people a bit more about yourself. Then find ') }}<a href="{% locale_url users_user_list %}">{{_('people</a> and ') }}<a href="{% locale_url projects_gallery %}">{{ _('groups</a> that interest you and start following them! You can also ') }}<a href="{% locale_url projects_create %}">{{ _('create new groups</a> and update how often P2PU ') }}<a href="{% locale_url preferences_settings %}">{{_('contacts you</a>.') }}</p>
     </article>
   {% endif %}
-  <div id="create-post">
-    <div class="post-container">
-      <form id="post-status-update" method="post" action="{% locale_url statuses_create %}">
-	{% csrf_token %}
-	<input id="fake-message-input" type="text" value="{{ _('Post a message to your followers') }}">
-	<textarea name="status"></textarea>
 
-	<div class="status-and-actions">
-	  <div class="post-char-count">750</div>
-
-          <a class="button update cancel" href="{% locale_url dashboard %}">
-	    {{ _('Cancel') }}
-	  </a>
-          <button class="button update submit" id="post-update">{{ _('Post Update') }}</button>
-	</div> <!-- /.status-and-actions -->
-
-      </form>
-    </div> <!-- /.post-container -->
-  </div> <!-- /#create-post -->
-
-  <ul id="posts">
-    {% activity_filters request dashboard_url %}
-    {% for activity in pagination_current_page.object_list %}
-      {% include "activity/_activity_resource.html" %}
-    {% endfor %}
-  </ul>
-  {% with prefix='' page_url=dashboard_url %}
-    {% pagination_links %}
-  {% endwith %}
 
 </div> <!-- /#main -->
 

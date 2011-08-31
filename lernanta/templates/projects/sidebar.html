@@ -26,7 +26,7 @@
         {% endif %}
       {% endif%}
       <p id="participate_button" {% if not user.is_authenticated %}class="login_participate_button"{% endif %}>
-        <a href="{% locale_url sign_up_answer slug=project.slug %}">{{ _('Participate')}}</a>
+        <a href="{% locale_url sign_up_answer slug=project.slug %}">{{ _('Enroll')}}</a>
       </p>
     {% endif %}
     <br>
@@ -48,19 +48,6 @@
           </li>
         {% endfor %}
       </ul>
-    {% endif %}
-    <a id="project-description-link"
-       href="{{ project.detailed_description.get_absolute_url }}">
-      {{ _('View Full Description') }}
-    </a>
-    {% if organizing %}
-      <a class="button" href="{% locale_url projects_edit slug=project.slug %}">{{ _('Edit') }} {{ project.kind|title }}</a>
-    {% else %}
-      {% if user.is_authenticated %}
-        <p class="supplemental_actions">
-          <a class="report abuse action" href="{% locale_url drumbeat_abuse  model="project" app_label="projects" pk=project.id %}">{{_('Report Abuse')}}</a>
-        </p>
-      {% endif %}
     {% endif %}
     <ul id="project-stats">
       {% if project.accepted_school %}
@@ -163,38 +150,6 @@
   {% endif %}{% endif %}
 </section>
 
-<section id="course-content" class="panel">
-
-  <a name="tasks"></a>
-  <h2 class="school_header">{{ _('Tasks') }}</h2>
-  <br>
-  {% if content_pages %}
-    <nav id="content-pages">
-      <ul>
-        {% for page in content_pages %}
-	<li>	
-	    <a class="taskLink" href="{{ page.get_absolute_url }}">{{ page.title }}</a>
-	    
-            {% if can_change_order %}
-	            {% if not forloop.first %}<a class="robttn up" href="{% locale_url page_index_up slug=project.slug counter=forloop.counter0 %}">(UP)</a>{% endif %}
-	            {% if not forloop.last %}<a class="robttn dwn" href="{% locale_url page_index_down slug=project.slug counter=forloop.counter0 %}">(DOWN)</a>{% endif %}
-            {% endif %}
-
-	</li>
-        {% endfor %}
-      </ul>
-    </nav>
-  {% else %}
-    {{ _('No tasks have been added.') }}
-        <br>
-  {% endif %}
-  {% if can_add_task %}
-    <br>
-    <a class="button" href="{% locale_url page_create slug=project.slug %}">{{ _('New Task') }}</a>
-  {% endif %}
-</section>
-
-
 <section id="external-links" class="panel">
 <h2 class="school_header">{{ _('External Links') }}</h2>
   <br>
@@ -222,6 +177,16 @@
     <a class="button" href="{% locale_url projects_edit_links slug=project.slug %}">{{ _('Edit Links') }}</a>
   {% endif %} 
 </section>
+
+    {% if organizing %}
+      <a class="button" href="{% locale_url projects_edit slug=project.slug %}">{{ _('Edit') }} {{ project.kind|title }}</a>
+    {% else %}
+      {% if user.is_authenticated %}
+        <p class="supplemental_actions">
+          <a class="report abuse action" href="{% locale_url drumbeat_abuse  model="project" app_label="projects" pk=project.id %}">{{_('Report Abuse')}}</a>
+        </p>
+      {% endif %}
+    {% endif %}
 
 </div> <!-- /#sidebar -->
 

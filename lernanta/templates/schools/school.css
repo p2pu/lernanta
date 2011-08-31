@@ -3,6 +3,89 @@ span.school_header, #beta-tag {
   color: {{ school.headers_color }};
 }
 
+h2 {
+  font-family: "Helvetica", Arial, Verdana, san-serif;
+  font-weight: 100;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+h3 {
+  font-family: "Helvetica", Arial, Verdana, san-serif;
+  font-weight: 100;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+a.webcraft-browse {
+  margin: 0 20px 50px 80px;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+a.webcraft-browse {
+  cursor: pointer;
+}
+
+button.webcraft-button {
+ margin: 0 0 -4px 20px;
+ background-color: #7fbf4d;
+ background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));
+ /* Saf4+, Chrome */
+ background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+ background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+ background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
+ background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);
+ background-image: linear-gradient(top, #7fbf4d, #63a62f);
+ border: 1px solid #63a62f;
+ border-bottom: 1px solid #5b992b;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -ms-border-radius: 3px;
+ -o-border-radius: 3px;
+ border-radius: 3px;
+ -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;
+ -moz-box-shadow: inset 0 1px 0 0 #96ca6d;
+ -ms-box-shadow: inset 0 1px 0 0 #96ca6d;
+ -o-box-shadow: inset 0 1px 0 0 #96ca6d;
+ box-shadow: inset 0 1px 0 0 #96ca6d;
+ color: #fff;
+ font: normal 12px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+ line-height: 1;
+ padding: 7px 0 8px 0;
+ text-align: center;
+ text-shadow: 0 -1px 0 #4c9021;
+ width: 260px; 
+}
+ 
+button.webcraft-button:hover {
+   background-color: #76b347;
+   background-image: -webkit-gradient(linear, left top, left bottom, from(#76b347), to(#5e9e2e));
+   /* Saf4+, Chrome */
+   background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
+   background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
+   background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
+   background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
+   background-image: linear-gradient(top, #76b347, #5e9e2e);
+   -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+   -moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+   -ms-box-shadow: inset 0 1px 0 0 #8dbf67;
+   -o-box-shadow: inset 0 1px 0 0 #8dbf67;
+   box-shadow: inset 0 1px 0 0 #8dbf67;
+   cursor: pointer; 
+}
+
+button.webcraft-button:active {
+   border: 1px solid #5b992b;
+   border-bottom: 1px solid #538c27;
+   -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+   -moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+   -ms-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+   -o-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+   box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee; 
+}
+
 #participate_button a {
   background-color: {{ school.headers_color }};
 }
@@ -25,40 +108,5 @@ body {
 
 #school_home #sidebar {
     width: {{ school.sidebar_width }};
+    border: 0;
 }
-
-#main-nav, #breadcrumbs, #language-nav, #main, #sidebar,
-footer[role="main"] ul > li:first-child, .card-list .card,
-.modal article, #splash #content header, .modal.nav article,
-.signin .modal article >h1, .signin.openid .or span, #project_landing h2 span {
-    background-color: {{ school.background_color }};
-}
-
-.menu.open, .menu.open a,
-#follow_button button, #unfollow_button button {
-    background-color:  {{ school.menu_color }};
-}
-
-#user-nav a:hover, #main-nav a:hover,
-#follow_button button:hover, #unfollow_button button:hover {
-    background-color: {{ school.menu_color_light }};
-}
-
-a#beta-tag:hover {
-    color:  {{ school.menu_color }};
-}
-
-.menu.open a {
-    border-top: 1px solid {{ school.menu_color }};
-}
-
-footer[role="main"] ul[role="about-us"] > li a {
-  background-color: {{ school.about_us_footnote_color }};
-}
-footer[role="main"] ul[role="contact-us"] > li a {
-  background-color: {{ school.contact_us_footnote_color }};
-}
-footer[role="main"] ul[role="license-info"] > li a {
-  background-color: {{ school.license_info_footnote_color }};
-}
-

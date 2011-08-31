@@ -22,61 +22,14 @@
   <div id="task_header">
   <h2 class="school_header"><span>{{ _('Tasks') }}</span></h2>
   <ul>
-    {% for page in content_pages_for_header %}
+    {% for page in content_pages %}
     <li class="{% cycle 'odd' 'even' %}">
         <span class="taskNumber">{{forloop.counter}}</span> <a class="taskLink" href="{{ page.get_absolute_url }}">{{ page.title }}</a>
-        <span class="action-buttons"><a href="{{ page.get_absolute_url }}">{{ _('View') }}</a></span>
     </li>
         {% endfor %}
       </ul>
-      <p id="more_task_link"><span id="task-count">{{ _('Displaying') }} {% if content_pages_count < 3 %}{{ content_pages_count}} {% else %}3{% endif %} {{ _('of') }} {{ content_pages_count }} {{ _('total tasks') }}</span><a href="{% locale_url projects_task_list slug=project.slug %}">{{ _('See All Tasks') }} &raquo;</a></p>
   </div>
   {% endif %}
-
-  <div id="activity_header">
-  <h2 class="school_header"><span>{{ _('Activity Wall') }}</span></h2>
-  </div>
-  {% if participating %}  
-  <div id="create-post">
-    <div class="post-container">
-      <form action="{% locale_url statuses_create_project project_id=project.id %}" method="post" id="post-project-status-update">
-	{% csrf_token %}
-	<input id="fake-message-input" type="text" value="{{ _('Post a message') }}">
-	<textarea name="status"></textarea>
-
-        {% if organizing %}
-            <div id="important-message" class="field{% if form.important.errors %} error{% endif %}">
-                {{ form.important }} {{ _('Important message (participants can not turn off notifications for important messages).') }}
-                {{ form.important.errors }}
-            </div>
-        {% endif %}
-	
-	<div class="status-and-actions">
-	  <div class="post-char-count">750</div>
-	  
-	  <ul class="post-tags">
-	    <li><span>{{ project.name|slice:":50" }}</span></li>
-	  </ul>
-
-          <a class="button update cancel" href="{{ project.get_absolute_url }}">
-	    {{ _('Cancel') }}
-	  </a>
-          <button class="button update submit" id="post-project-update">{{ _('Post Update') }}</button>
-	</div> <!-- /.status-and-actions -->
-	</form>
-      </div> <!-- /.post-container -->
-    </div> <!-- /.#create-post -->
-    {% endif %}
-
-    {% activity_filters request project.get_absolute_url %}
-    <ul id="posts">
-      {% for activity in pagination_current_page.object_list %}
-	  {% include "activity/_activity_resource.html" %}
-      {% endfor %}
-    </ul>
-    {% with prefix='' page_url=project.get_absolute_url %}
-      {% pagination_links %}
-    {% endwith %}
 
 </div> <!-- /#main -->
 

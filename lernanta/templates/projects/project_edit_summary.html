@@ -10,19 +10,16 @@
   {% csrf_token %}
   <div class="field{% if form.name.errors %} error{% endif %}">
     <label for="id_name">{{ _('Name') }}</label>
-    <span class="hint block">{{ _('A good name is short and descriptive. People should know what your study group, course, ... is about without reading the description.') }}</span>
     {{ form.name }}
     {{ form.name.errors }}
   </div>
   <div class="field{% if form.short_description.errors %} error{% endif %}">
     <label for="id_short_description">{{ _('One sentence description') }}</label>
-    <span class="hint block">{{ _('This description will be used on search results and listing pages.') }}</span>
     {{ form.short_description }}
     {{ form.short_description.errors }}
   </div>
   <div class="field long-description{% if form.long_description.errors %} error{% endif %}">
     <label for="id_long_description">{{ _('One paragraph description') }}</label>
-    <span class="hint block">{{ _('This description is shown on home page of the study group, course, ... It can go into a bit more detail, but it should be brief and to the point.') }}</span>
     {{ form.long_description }}
     {{ form.long_description.errors }}
   </div>
@@ -34,7 +31,6 @@
   </div>
   <div class="field{% if form.category.errors %} error{% endif %}">
     <label for="id_category">{{ _('Kind') }}</label>
-    <span class="hint block">{{ _('Select if you are creating a study group, a course, or other kind of learning project.') }}</span>
     {{ form.category }}
     <div class="field term{% if form.other.errors %} error{% endif %}">
       <label for="id_other">{{ _('Term') }}</label>

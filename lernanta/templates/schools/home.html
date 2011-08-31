@@ -20,13 +20,18 @@
     <br>
     <figure class="school_img">
       <a href="{{ school.get_absolute_url }}">
-        {% if school.logo %}
+	<img src="/media/images/sow_shield.png" alt="project image"/>        
+<!--
+	{% if school.logo %}
   	      <img src="{{ MEDIA_URL }}{{ school.logo }}" alt="project image"/>
         {% else %}
           <img src="/media/images/school-missing.png" alt="project image"/>
         {% endif %}
+-->
+
       </a>
     </figure>
+<!--
     <section id="people" class="panel">
       <br>
       <h2 class="school_header">{{ _('School Organizers') }}</h2>
@@ -35,10 +40,21 @@
         <a href="{{ organizer.get_absolute_url }}" title="{{ organizer }} (school organizer)"><img class="member-picture" src="{{ organizer.image_or_default }}" height="26" width="26" alt="{{ organizer }} (school organizer)"></a>
       {% endfor %}
     </section>
+-->
   </div>
-  <h1 class="school_header"><b>{{ school.name }}</b></h1>
   {{ school.description|embed|safe }}
-  <br><br><br><br><br>
+  </ b>
+
+<!-- THIS CODE NEEDS TO ONLY BE ON THE WEBCRAFT SCHOOL PAGE BEGIN -->
+
+<p>
+<a class="webcraft-browse">Browse all courses</a>
+or
+<button class="webcraft-button">Get notified of Webmaking 101 launch</button>
+</p>
+
+<!-- THIS CODE NEEDS TO ONLY BE ON THE WEBCRAFT SCHOOL PAGE END -->
+
   {% project_list school %}
 </div>
 

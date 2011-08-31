@@ -47,7 +47,7 @@ html { overflow-y: scroll; }
 
 a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #2084ca; text-decoration: none; text-shadow: 1px 1px #fff; }
-a:hover { color: #036; text-decoration: underline; }
+a:hover { color: #000; text-decoration: underline; }
 
 ul, ol { margin-left: 39px; }
 ol { list-style-type: decimal; }

@@ -74,12 +74,6 @@ To be extra sure you're working from a clean slate, you might find it helps to d
 
     ./sh/rmpyc
 
-If the mysql database doesn't exist yet, create it. You need to `create the user`_ you'll use. You will use the database name, user, and password in the next file (settings_local.py) ::
-
-   mysqladmin -u <user> -p create <database name>
-
-.. _create the user: http://www.debuntu.org/how-to-create-a-mysql-database-and-set-privileges-to-a-user
-
 Create a ``settings_local.py`` based on the template provided in the checkout. Edit the database parameters as needed ::
 
    cp settings_local.dist.py settings_local.py
@@ -93,5 +87,9 @@ Next, sync the database and run migrations. ::
 Finally, start the development server to take it for a spin. You can register a new account and look in the terminal window where the server is running to find the activation link (If you get 404 error for that url, remove the "=": http://www.flickr.com/photos/digifoo/5593967846/). ::
 
    python manage.py runserver 
+
+In order for the server to be accessible from another host. ::
+
+   python manage.py runserver 0.0.0.0:8000
 
 Once you have your development environment running, you can make changes or get the latest from github. See the wiki for more information: https://github.com/p2pu/lernanta/wiki

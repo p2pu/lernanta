@@ -19,7 +19,7 @@
 {% endblock %}
 {% block breadcrumbs_actions %}
   {% if user.is_authenticated %}
-    {% if not school %}<a id="create-project" class="button" href="{% locale_url projects_create %}">{{ _('Create') }}</a>{% endif %}
+    <a id="create-project" class="button" href="{% locale_url projects_create %}">{{ _('Create') }}</a>
   {% endif %}
 {% endblock %}
 

@@ -16,10 +16,10 @@
   <a href="{% locale_url projects_gallery %}{% if school %}?school={{ school.slug }}{% endif %}">{{ _('Learn') }}</a>
 {% endblock %}
 {% block breadcrumbs_actions %}
-  <a class="button" href="{% locale_url projects_directory %}{% if school %}?school={{ school.slug }}{% endif %}">{{ _('View All') }}</a>
   {% if user.is_authenticated %}
-    {% if not school %}<a id="create-project" class="button" href="{% locale_url projects_create %}">{{ _('Create') }}</a>{% endif %}
+    <a id="create-project" class="button" href="{% locale_url projects_create %}">{{ _('Create') }}</a>
   {% endif %}
+  <a class="button" href="{% locale_url projects_directory %}{% if school %}?school={{ school.slug }}{% endif %}">{{ _('View All') }}</a>
 {% endblock %}
 
 {% block body %}

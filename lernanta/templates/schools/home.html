@@ -11,6 +11,9 @@
     {% if is_organizer %}
       <a id="edit-school" class="button" href="{% locale_url schools_edit slug=school.slug %}">{{ _('Edit School') }}</a>
     {% endif %}
+    {% if user.is_authenticated %}
+       <a id="create-project" class="button" href="{% locale_url projects_create %}">{{ _('Create') }}</a>
+    {% endif %}
     <a class="button" href="{% locale_url projects_gallery %}?school={{ school.slug }}">{{ _('Browse') }}</a>
 {% endblock %}
 

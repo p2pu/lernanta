@@ -47,7 +47,7 @@
 	<li class="status {% if status_tab %}active{% endif %}"><a href="{% locale_url projects_edit_status slug=project.slug %}">{{ _('Status')}}{% if not is_challenge %}{{ _(' &amp; Dates') }}{% endif %}</a></li>
     {% if not is_challenge %}<li class="status {% if signup_tab %}active{% endif %}"><a href="{% locale_url edit_signup slug=project.slug %}">{{ _('Signup') }}</a></li>{% endif %}
 	<li class="participants {% if participants_tab %}active{% endif %}"><a href="{% locale_url projects_edit_participants slug=project.slug %}">{{ _('Participants') }}</a></li>
-    {% if is_challenge %}<li class="next_steps {% if next_steps_tab %}active{% endif %}"><a href="{% locale_url projects_edit_next_steps slug=project.slug %}">{{ _('Next Steps') }}</a></li>{% endif %}
+    {% if is_challenge %}<li class="next_steps {% if next_steps_tab %}active{% endif %}"><a href="{% locale_url projects_edit_next_steps slug=project.slug %}">{{ _('Associated Courses') }}</a></li>{% endif %}
     {% if not is_challenge %}<li class="links {% if links_tab %}active{% endif %}"><a href="{% locale_url projects_edit_links slug=project.slug %}">{{ _('Links') }}</a></li>{% endif %}
 	{% if can_view_metric_overview %}<li class="metrics {% if metrics_tab %}active{% endif %}"><a href="{% locale_url projects_admin_metrics slug=project.slug %}">{{ _('Metrics') }}</a></li>{% endif %}
     {% else %}

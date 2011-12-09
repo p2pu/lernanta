@@ -3,45 +3,54 @@
 {% load l10n_tags %}
 {% load embed %}
 
-{% block title %}
-  {% if submission %}
-    {{ _('Review of') }} {{ assessment.assessed }} {{ _('\'s Work for ') }} {{ badge }}
-  {% else %}
-    {{ _('Justification of') }} {{ badge }} {{ _('Award to') }} {{ assessment.assessed }}
-  {% endif %}
-{% endblock %}
+{% block title %}{{ _('Submission for') }} {{ badge.name }}{% endblock %}
 
-{% block bodyclasses %}assessment-show summary{% endblock %}
+{% block bodyclasses %}submission-show summary{% endblock %}
 
 {% block body %} 
-    <div id="main">
-      <h1 id="page-title">
+  <div id="main">
+    <div id="badge-image">
+      <p>
+        <a href="{% locale_url badges_show slug=badge.slug %}" title="{{ badge }}">
+          <img src="{{ badge.get_image_url }}" width="150" height="150" alt="{{ badge.name }}"/>
+          <br>
+          {{ badge.name }}
+        </a>
+        <br>
+      </p>
+    </div>
+    <div id="submission">
+       <div id="submission-details">
+
+           <img class="member-picture" width="54" height="54" src="{{ submission.author.image_or_default }}">
+
+           <div id="submission-detail">
+               <h2>{{ submission.author }}</h2>
+               {{ submission.content|embed|safe }}
+            </div>
+            <br><br>
+		   
+	</div>
+    {% if can_assess %}
+       <br class="clear"><br>
+       <p><a href="{% locale_url assess_submission slug=badge.slug submission_id=submission.id %}" class="assess-button" style="clear:both;">{{ _('Review This Submission') }}</a></p>
+    {% endif %}
+</div>
+
+
+	
+    <br class="clear"/>
+
+	 <h1>
         {% if submission %}
           {{ _('Review of') }} {{ assessment.assessed }} {{ _('\'s Work for ') }} {{ badge }}
         {% else %}
           {{ _('Justification of') }} {{ badge }} {{ _('Award to') }} {{ assessment.assessed }}
         {% endif %}
       </h1>
-
-	   <ul id="posts" class="{% if not submission %}no-submission{% endif %}">
+	   <ul id="posts">
 	    {% include "badges/_assessment_body.html" with assessment=assessment %}
 	   </ul>
-
-    <section id="badge-details">
-      {% include "badges/_badge_card.html" with badge=badge rubrics=rubrics %}
-    </section>
-    <br class="clear"/>
-
     </div>
-    
-    {% block js %}
-    <script>
-    $(".right-aligned-rating").hover(
-	  function () {
-		$("div.rating-key").hide();
-		$(this).find("div.rating-key").show();
-	  }
-	);
-    </script>
-    {% endblock %}
+
 {% endblock %}

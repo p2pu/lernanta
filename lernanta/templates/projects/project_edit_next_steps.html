@@ -4,8 +4,8 @@
 
 {% block form %}
 <fieldset id="project_edit_participants" class="project edit participants tabpane">
-<h2>{{ _('Next Steps') }}</h2>
-<p class="hint">{{ _('View, add and remove challenges, study groups, courses, ... that the user should join upon completion of the challenge tasks.') }}</p>
+<h2>{{ _('Associated Courses') }}</h2>
+<p class="hint">{{ _('View, add and remove associated study groups and courses that a learner might want to visit after completing the challenge.') }}</p>
 <form action="{% locale_url projects_edit_next_steps slug=project.slug %}" method="post">
   {% csrf_token %}
     <div class="field next_project{% if form.next_project.errors %} error{% endif %}">

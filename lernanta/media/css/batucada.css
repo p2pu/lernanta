@@ -1548,7 +1548,7 @@ header {}
 }
 
 #project_gallery #main, #project_directory #main, #school_home #main , #user_list #main, #one-column-page #main,
-#badges-page #main {
+#badges-page #main, #projectset_home #main {
   width: 970px;
   margin-right: 40px;
   margin-left: 0;
@@ -4954,4 +4954,376 @@ table#metrics-scoreboard td.todays-count {
 
 .carousel-callback {
     display: none;
+}
+
+#challenge-sets ul.challenge-set-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#challenge-sets ul.challenge-set-list li{
+    display: inline-block;
+    zoom:1;
+    width: 418px;
+    vertical-align: top;
+    margin: 0 28px 28px 20px;
+    padding: 3px;
+    border: 1px solid #eeeeee;
+    border-radius:6px;
+    -moz-border-radius:6px;
+    -o-border-radius:6px;
+    -webkit-border-radius:6px;
+    background: #eee;
+}
+
+#challenge-sets .card {
+    width: 400px;
+}
+
+#challenge-sets .card .info {
+    height: auto;
+}
+
+#challenge-sets .card .description {
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+#challenge-sets .card .ribbon-wrapper h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 1px #2d5f74;
+    font-size: 20px;
+    display: block;
+}
+
+#challenge-sets .card .ribbon-wrapper a:hover {
+    text-decoration: none;
+}
+
+#challenge-sets .card .ribbon-wrapper {
+    position: relative;
+    margin: -30px 0 20px -8px;
+}
+
+#challenge-sets .card .ribbon-front {
+    background-color: #8fbbca;
+    background: -moz-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4b8fba), color-stop(100%,#3e6493));
+    background: -webkit-linear-gradient(top, #4b8fba 0%,#3e6493 100%);
+    background: -o-linear-gradient(top, #4b8fba 0%,#3e6493 100%);
+    background: -ms-linear-gradient(top, #4b8fba 0%,#3e6493 100%);
+    background: linear-gradient(top, #4b8fba 0%,#3e6493 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b8fba', endColorstr='#3e6493',GradientType=0 );
+    height: 40px;
+    width: 456px;
+    position: relative;
+    left:-20px;
+    z-index: 2;
+    padding-top: 20px;
+}
+
+#challenge-sets .card .ribbon-front,
+#challenge-sets .card .ribbon-back-left,
+#challenge-sets .card .ribbon-back-right
+{
+    -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+}
+
+#challenge-sets .card .ribbon-edge-topleft,
+#challenge-sets .card .ribbon-edge-topright,
+#challenge-sets .card .ribbon-edge-bottomleft,
+#challenge-sets .card .ribbon-edge-bottomright {
+    position: absolute;
+    z-index: 1;
+    border-style: solid;
+    height: 0px;
+    width: 0px;
+}
+
+#challenge-sets .card .ribbon-edge-bottomleft,
+#challenge-sets .card .ribbon-edge-bottomright {
+    top: 40px;
+}
+
+#challenge-sets .card .ribbon-edge-topleft,
+#challenge-sets .card .ribbon-edge-bottomleft {
+    left: -20px;
+    border-color: transparent #2d5f74 transparent transparent;
+}
+
+#challenge-sets .card .ribbon-edge-topleft {
+    top: -10px;
+    border-width: 10px 20px 0 0;
+}
+
+#challenge-sets .card .ribbon-edge-bottomleft {
+    border-width: 0 20px 0px 0;
+}
+
+#challenge-sets .card .ribbon-edge-topright,
+#challenge-sets .card .ribbon-edge-bottomright {
+    left: 416px;
+    border-color: transparent transparent transparent #2d5f74;
+}
+
+#challenge-sets .card .ribbon-edge-topright {
+    top: -10px;
+    border-width: 10px 0 0 20px;
+}
+
+#challenge-sets .card .ribbon-edge-bottomright {
+    border-width: 0 0 0px 20px;
+}
+
+#challenge-sets .card .ribbon-back-left {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 0px;
+    height: 40px;
+    z-index: 0;
+}
+
+#challenge-sets .card .ribbon-back-right {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    width: 0px;
+    height: 40px;
+    z-index: 0;
+}
+
+#challenge-sets .card .meta {
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ededdb 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ededdb));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ededdb 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ededdb 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ededdb 100%);
+    background: linear-gradient(top, #ffffff 0%,#ededdb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededdb',GradientType=0 );
+    padding: 30px 8px 20px 8px;
+    margin: -15px -8px -8px;
+    border-top: 1px solid #cfcfcf;
+}
+
+#challenge-sets .card dl {
+    display: inline-block;
+    text-align: center;
+    width: 24%;
+}
+
+#challenge-sets .card dd, #challenge-sets .card dt {
+    font-size: 12px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+    line-height: 17px;
+    text-shadow: 1px 1px #fff;
+    -moz-text-shadow: 1px 1px #fff;
+    -webkit-text-shadow: 1px 1px #fff;
+}
+
+#challenge-sets .card dd{
+    font-weight:bold;
+}
+#challenge-sets .card dt{
+    color: #919191;
+}
+
+.challenge-set-button a {
+    width: 200px;
+    margin: 3px auto 0 auto;
+    background-color: #7fbf4d;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: linear-gradient(top, #7fbf4d, #63a62f);
+    border: 1px solid #63a62f;
+    border-bottom: 1px solid #5b992b;
+    padding: 4px 0 5px 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    display: block;
+    color: #fff;
+    font: bold 13px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    text-shadow: 0 -1px 0 #4c9021;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.challenge-set-button a:hover {
+    background-color: #76b347;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#76b347), to(#5e9e2e));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: linear-gradient(top, #76b347, #5e9e2e);
+    -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+    -moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+    -ms-box-shadow: inset 0 1px 0 0 #8dbf67;
+    -o-box-shadow: inset 0 1px 0 0 #8dbf67;
+    box-shadow: inset 0 1px 0 0 #8dbf67;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#challenge-sets .challenge-set-preview {
+    display: none;
+}
+
+.challenge-set-modal-data {
+    padding: 20px;
+    width: 715px;
+}
+
+.challenge-set-modal-data h2 {
+    font-size: 24px;
+    font-weight: medium;
+    padding-bottom: 10px;
+    color: #222;
+}
+
+.challenge-set-modal-data p {
+    font-size: 15px;
+}
+
+.challenge-set-modal-data ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.challenge-set-modal-data ul li {
+    display: inline-block;
+    padding: 17px;
+}
+
+.challenge-set-modal-data a {
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#challenge-set {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    background: #f9f9f9;
+    padding: 20px;
+    float: left;
+    width: 926px;
+    margin: 20px 0;
+}
+
+#challenge-set .left {
+    width:495px;
+    float:left;
+    margin-right: 30px;
+}
+
+#challenge-set .left h1 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 28px;
+}
+
+#challenge-set .left .details {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    background: #fff;
+    padding: 10px;
+    float: left;
+    width: 600px;
+}
+
+#challenge-set .left .details ul {
+    list-style: none;
+    float: left;
+    margin: 6px 0 0 10px;
+    font-size: 14px;
+}
+
+#challenge-set .left .details ul li {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    padding: 0;
+}
+
+#challenge-set .left .details ul li:last-child {
+    margin: 0;
+}
+
+#challenge-set .left .details a {
+    float: right;
+    width: 200px;
+    margin: 0;
+    background-color: #7fbf4d;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: linear-gradient(top, #7fbf4d, #63a62f);
+    border: 1px solid #63a62f;
+    border-bottom: 1px solid #5b992b;
+    padding: 5px 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    display: block;
+    color: #fff;
+    font: bold 13px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    text-shadow: 0 -1px 0 #4c9021;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+ 
+#challenge-set .left .details a:hover {
+    background-color: #76b347;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#76b347), to(#5e9e2e));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: linear-gradient(top, #76b347, #5e9e2e);
+    -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+    -moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+    -ms-box-shadow: inset 0 1px 0 0 #8dbf67;
+    -o-box-shadow: inset 0 1px 0 0 #8dbf67;
+    box-shadow: inset 0 1px 0 0 #8dbf67;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#challenge-set .right {
+    width: 266px;
+    float: left;
 }

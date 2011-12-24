@@ -383,6 +383,15 @@ $(document).ready(function() {
     if ($('#task_list_wall_toogle').length) {
         $( "#task_list_wall_toogle" ).buttonset();
     }
+    
+    if ($(".challenge-set-modal-action").length) {
+        $(".challenge-set-modal-action").fancybox({
+          'titlePosition'       : 'inside',
+          'transitionIn'        : 'none',
+          'transitionOut'       : 'none'
+        });
+    }
+    
 });
 
 // Recaptcha

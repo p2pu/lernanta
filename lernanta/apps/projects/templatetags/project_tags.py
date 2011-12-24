@@ -15,6 +15,7 @@ from l10n.urlresolvers import reverse
 from projects.models import Project, PerUserTaskCompletion
 from projects import drupal
 from badges.models import Badge
+from schools.models import ProjectSet
 
 
 register = template.Library()
@@ -90,10 +91,14 @@ def project_list(school=None, only_featured=False, limit=8):
     listed = Project.objects.filter(not_listed=False, archived=False)
     if school:
         featured = school.featured.filter(not_listed=False, archived=False)
+        project_sets = school.project_sets.all()
+        if only_featured:
+            project_sets = project_sets.filter(featured=True)
     else:
         featured = listed.filter(featured=True)
+        project_sets = ProjectSet.objects.none()
     listed = listed.filter(under_development=False)
-    context = {'featured': featured, 'school': school}
+    context = {'featured': featured, 'school': school, 'project_sets':project_sets}
     if not only_featured:
         active = Project.objects.get_active(limit=limit, school=school)
         popular = Project.objects.get_popular(limit=limit, school=school)

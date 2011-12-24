@@ -1,5 +1,16 @@
 {% load l10n_tags %}
 
+{% if project_sets %}
+<section id="challenge-sets">
+  <h1><span>{{ _('Challenge Sets') }}</span></h1>
+  <ul class="challenge-set-list">
+    {% for projectset in project_sets %}
+        <li>{% include "schools/_projectset_card.html" %}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
 {% if featured %}
 <section id="featured_projects">
   <h1><span>{{_('Featured')}}</span></h1>

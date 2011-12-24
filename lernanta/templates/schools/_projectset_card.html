@@ -1,0 +1,70 @@
+{% load l10n_tags %}
+<article class="project card">
+  <figure>
+    <a href="{{ projectset.get_absolute_url }}">
+      <img src="{{ projectset.get_image_url  }}" width="399" height="125" alt="{{ projectset.name }}"/>
+    </a>
+  </figure>
+  <div class="ribbon-wrapper">
+    <div class="ribbon-front">
+      <a href="{{ projectset.get_absolute_url }}"><h1>{{ projectset.name }}</h1></a>
+    </div>
+    <div class="ribbon-edge-topleft"></div>
+    <div class="ribbon-edge-topright"></div>
+    <div class="ribbon-edge-bottomleft"></div>
+    <div class="ribbon-edge-bottomright"></div>
+    <div class="ribbon-back-left"></div>
+    <div class="ribbon-back-right"></div>
+  </div>
+  <div class="info">
+    <div class="description">{{ projectset.short_description }}</div>
+  </div>
+  <div class="challenge-set-button">
+    <a class="challenge-set-modal-action" href="#challenge-set-data-{{ projectset.slug }}">
+      {{ _('View Challenges') }}
+    </a>
+  </div>
+  <div class="meta">
+    <dl class="meta-challenges">
+      <dd>{{ projectset.projects.count }}</dd>
+      <dt>{{ _('Challenges') }}</dt>
+    </dl>
+    <dl class="meta-participants">
+      <dd>{{ projectset.total_participants }}</dd>
+      <dt>{{ _('Participants') }}</dt>
+    </dl>
+    <dl class="meta-adopters">
+      <dd>{{ projectset.total_adopters }}</dd>
+      <dt>{{ _('Adopters') }}</dt>
+    </dl>
+    <dl class="meta-badges">
+      <dd>{{ projectset.total_badges }}</dd>
+      <dt>{{ _('Badges') }}</dt>
+    </dl>
+  </div>
+  <div class="challenge-set-preview">
+    <div class="challenge-set-modal-data" id="challenge-set-data-{{ projectset.slug }}">
+      <h2>{{ projectset.name }}</h2>
+      <p>
+        {{ projectset.short_description }}
+        {% if projectset.first_project %}
+          <a href="{{ projectset.first_project.get_absolute_url }}">
+            {{ _('Get started with the first Challenge now') }} &#187;
+          </a>
+        {% endif %}
+      </p>
+      <ul>
+        {% for project in projectset.projects.all|slice:":6" %}
+          <li>
+            {% if project.image %}
+              <img src="/media/{{ project.image }}" width="200" height="123" alt="{{ project.name }}"/>
+            {% else %}
+              <img src="/media/images/project-missing.png" width="200" height="123" alt="{{ project.name }}"/>
+            {% endif %}
+        </li>
+       {% endfor %} 
+      </ul>
+      <div class="challenge-set-button"><a href="{{ projectset.get_absolute_url }}">{{ _('View All Challenges') }}</a></div>
+    </div>
+  </div>
+</article>

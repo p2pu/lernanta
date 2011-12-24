@@ -2,17 +2,21 @@ import logging
 
 from django.db import models
 from django.template.defaultfilters import slugify
+from django.db.models import Q
+from django.conf import settings
 
 from drumbeat.models import ModelBase
 from drumbeat.utils import get_partition_id, safe_filename
 from drumbeat import storage
 from richtext.models import RichTextField
+from users.models import UserProfile
+from badges.models import Badge
 
 
 log = logging.getLogger(__name__)
 
 
-def determine_image_upload_path(instance, filename):
+def schools_determine_image_upload_path(instance, filename):
     return "images/schools/%(partition)d/%(filename)s" % {
         'partition': get_partition_id(instance.pk),
         'filename': safe_filename(filename),
@@ -31,13 +35,13 @@ class School(ModelBase):
     featured = models.ManyToManyField('projects.Project',
         related_name='school_featured', null=True, blank=True)
 
-    logo = models.ImageField(upload_to=determine_image_upload_path, null=True,
+    logo = models.ImageField(upload_to=schools_determine_image_upload_path, null=True,
                               storage=storage.ImageStorage(), blank=True)
-    groups_icon = models.ImageField(upload_to=determine_image_upload_path,
+    groups_icon = models.ImageField(upload_to=schools_determine_image_upload_path,
         null=True, storage=storage.ImageStorage(), blank=True)
-    background = models.ImageField(upload_to=determine_image_upload_path,
+    background = models.ImageField(upload_to=schools_determine_image_upload_path,
         null=True, storage=storage.ImageStorage(), blank=True)
-    site_logo = models.ImageField(upload_to=determine_image_upload_path,
+    site_logo = models.ImageField(upload_to=schools_determine_image_upload_path,
         null=True, storage=storage.ImageStorage(), blank=True)
 
     headers_color = models.CharField(max_length=7, default='#5a6579')
@@ -85,3 +89,62 @@ class School(ModelBase):
                 self.slug = "%s-%s" % (slug, count + 1)
                 count += 1
         super(School, self).save()
+
+
+def projectsets_determine_image_upload_path(instance, filename):
+    return "images/projectsets/%(partition)d/%(filename)s" % {
+        'partition': get_partition_id(instance.pk),
+        'filename': safe_filename(filename),
+    }
+
+
+class ProjectSet(ModelBase):
+    "Model for the project sets"
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True, blank=True)
+    description = RichTextField(config_name='rich')
+    short_description = models.CharField(max_length=150)
+    school = models.ForeignKey(School, blank=True, null=True,
+        related_name="project_sets")
+    projects = models.ManyToManyField('projects.Project', blank=True, null=True,
+        related_name="projectsets")
+    first_project = models.ForeignKey('projects.Project', blank=True, null=True,
+        related_name="starting_project_sets")
+    featured = models.BooleanField(default=False)
+    image = models.ImageField(upload_to=projectsets_determine_image_upload_path,
+        null=True, storage=storage.ImageStorage(), blank=True)
+
+    def __unicode__(self):
+        return self.name
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('school_projectset', (), {
+            'slug': self.school.slug,
+            'set_slug': self.slug,
+        })
+
+    def get_image_url(self):
+        # TODO: using project's default image until a default badge
+        # image is added.
+        missing = settings.MEDIA_URL + 'images/missing-challenge-set.png'
+        image_path = self.image.url if self.image else missing
+        return image_path
+
+    def _distinct_participants(self):
+        return UserProfile.objects.filter(participations__project__projectsets=self, 
+                                    deleted=False, 
+                                    participations__left_on__isnull=True).distinct()
+    def total_participants(self):
+        return self._distinct_participants().filter(
+            participations__adopter = False,
+            participations__organizing = False).count()
+        
+    def total_adopters(self):
+        return self._distinct_participants().filter(
+            Q(participations__adopter=True)
+            | Q(participations__organizing=True)).count()
+
+    def total_badges(self):
+        return Badge.objects.filter(
+            groups__projectsets=self).distinct().count()

@@ -22,7 +22,7 @@ from relationships.models import Relationship
 from signups.models import SignupAnswer
 
 from schools.decorators import school_organizer_required
-from schools.models import School
+from schools.models import School, ProjectSet
 from schools import forms as school_forms
 
 
@@ -39,8 +39,14 @@ def home(request, slug):
         'is_organizer': is_organizer,
     }
     return render_to_response('schools/home.html', context,
-                          context_instance=RequestContext(request))
+        context_instance=RequestContext(request))
 
+def projectset(request, slug, set_slug):
+    projectset = get_object_or_404(ProjectSet, slug=set_slug,
+        school__slug=slug)
+    return render_to_response('schools/projectset_home.html',
+        {'projectset': projectset, 'school': projectset.school},
+        context_instance=RequestContext(request))
 
 def school_css(request, slug):
     school = get_object_or_404(School, slug=slug)

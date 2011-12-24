@@ -1,0 +1,47 @@
+{% extends "schools/base.html" %}
+{% load l10n_tags %}
+{% load embed %}
+{% load project_tags %}
+
+{% block title %}{{ projectset.name }}{% endblock %}
+{% block bodyid %}projectset_home{% endblock %}
+{% block bodyclasses %}card-list{% endblock %}
+
+{% block body %}
+<div id="main">
+  <div id="challenge-set">
+    <div class="left">
+      <h1>{{ projectset.name }}</h1>
+      <p>{{ projectset.short_description }}</p>
+      {{ projectset.description|embed|safe }}
+      <div class="details">
+        <ul>
+          <li>{{ projectset.projects.count }} {{ _('Challenges') }}</li>
+          <li>{{ projectset.total_participants }} {{ _('Participants') }}</li>
+          <li>{{ projectset.total_adopters }} {{ _('Adopters') }}</li>
+          <li>{{ projectset.total_badges }} {{ _('Badges') }}</li>
+        </ul>
+        {% if projectset.first_project %}
+          <a class="start-challenge" href="{{ projectset.first_project.get_absolute_url }}">{{ _('Start first Challenge') }} &#187;</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="right">
+      <img src="{{ projectset.get_image_url  }}" width="399" height="125" alt="{{ projectset.name }}"/>
+    </div>
+  </div>
+  <br clear="all">
+  <br clear="all">
+  <section id="challenge-set-project-list">
+    <h1><span>{{_('Challenges')}}</span></h1>
+    <ul class="project-list">
+      {% for project in projectset.projects.all %}
+        <li>{% include "projects/_project_card.html" %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+
+{% endblock %}
+
+

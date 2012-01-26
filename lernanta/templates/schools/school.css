@@ -34,7 +34,7 @@ footer[role="main"] ul > li:first-child, .card-list .card,
     background-color: {{ school.background_color }};
 }
 
-.menu.open, .menu.open a, .menu.open ul, .menu.open li, #user:hover,
+.menu.open, .menu.open a, .menu.open ul, .menu.open li, #user:hover, #projects:hover,
 #follow_button button, #unfollow_button button {
     background-color:  {{ school.menu_color }};
 }

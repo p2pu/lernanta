@@ -58,3 +58,26 @@ def user_sidebar(context, max_people_count=64):
     return context
 
 register.inclusion_tag('users/sidebar.html', takes_context=True)(user_sidebar)
+
+
+def group_list(context, limit=None):
+    profile = context['profile']
+    profile_view = context['profile_view']
+    current_projects = profile.get_current_projects(only_public=profile_view)
+
+    organizing = current_projects['organizing']
+    participating = current_projects['participating']
+    following = current_projects['following']
+
+    if limit:
+        organizing = organizing[:limit]
+        participating = participating[:limit]
+        following = following[:limit]
+
+    context.update({
+        'organizing': organizing,
+        'participating': participating,
+        'following': following, })
+    return context
+
+register.inclusion_tag('users/_groups.html', takes_context=True)(group_list)

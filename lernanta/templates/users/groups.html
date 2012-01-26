@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load l10n_tags %}
+{% load user_tags %}
+{% block title %}{{ _('Learn') }}{% endblock %}
+{% block bodyid %}project_gallery{% endblock %}
+{% block bodyclasses %}card-list{% endblock %}
+
+{% block links %}<link rel="stylesheet" href="{% locale_url multiple_schools_css %}?v=1">{% endblock %}
+
+{% block breadcrumbs %}
+  <span class="arrow">&rsaquo;</span>
+  <a href="{% locale_url user_groups_view user.username %}">{{ _('My Groups') }}</a>
+{% endblock %}
+
+{% block breadcrumbs_actions %}
+  {% if user.is_authenticated %}
+    <a id="create-project" class="button" href="{% locale_url projects_create %}">{{ _('Create') }}</a>
+  {% endif %}
+{% endblock %}
+
+{% block body %}
+<div id="main">
+<h1>{{ _('Browse') }}</h1>
+<br><br>
+	{% group_list %}
+</div>
+{% endblock %}

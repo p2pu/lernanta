@@ -397,6 +397,25 @@ def confirm_resend(request, username):
     return http.HttpResponseRedirect(reverse('users_login'))
 
 
+def groups_view(request, username):
+    profile = get_object_or_404(UserProfile, username=username)
+    if profile.deleted:
+        messages.error(request, _('This user account was deleted.'))
+        return http.HttpResponseRedirect(reverse('user_groups_view'))
+
+    directory_url = reverse('user_groups_view', kwargs=dict(username=username))
+    show_welcome = not profile.discard_welcome
+    context = {
+        'profile': profile,
+        'profile_view': False,
+        'show_welcome': show_welcome,
+        'directory_url': directory_url,
+    }
+
+    return render_to_response('users/groups.html', context,
+        context_instance=RequestContext(request))
+
+
 def profile_view(request, username):
     profile = get_object_or_404(UserProfile, username=username)
     if profile.deleted:
@@ -716,3 +735,4 @@ def following(request):
                  term in u.full_name.lower()]
     return http.HttpResponse(simplejson.dumps(usernames),
                              mimetype='application/json')
+

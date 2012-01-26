@@ -70,6 +70,8 @@ urlpatterns = patterns('',
   # Profile urls
   url(r'^(?P<username>[\w\-\. ]+)/$', 'users.views.profile_view',
       name='users_profile_view'),
+  url(r'^(?P<username>[\w\-\. ]+)/groups/$', 'users.views.groups_view',
+      name='user_groups_view'),
   url(r'^profile/edit/$', 'users.views.profile_edit',
       name='users_profile_edit'),
   url(r'^profile/edit/badges/$', 'badges.views.badges_manage',

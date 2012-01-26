@@ -855,7 +855,18 @@ header {}
         border-bottom-left-radius: 7px;
 		  }
 
-      
+      #projects:hover {
+		background: #000;
+		height: 90px;
+		z-index: 5000;
+        -webkit-border-bottom-right-radius: 7px;
+        -webkit-border-bottom-left-radius: 7px;
+        -moz-border-radius-bottomright: 7px;
+        -moz-border-radius-bottomleft: 7px;
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+	  }
+		  
       .dropdown {
         background: url("/media/images/arrow-down.png") no-repeat scroll transparent;
         display: inline-block;
@@ -915,20 +926,24 @@ header {}
             margin-right: 10px;
             font-size: 14px;
           }
-
-          #user.open ul li:last-child {
+		  #projects.open ul li {
+		    color: #fff;
+            margin-left: -7px;
+            font-size: 14px;
+		  }
+          #user.open ul li:last-child, #projects.open ul li:last-child {
             border: 0 none;
             color: #fff;
             margin-bottom: 0;
             padding-bottom: 0;
           }
 
-          #user.open ul a:hover {
+          #user.open ul a:hover, #projects.open ul a:hover {
             border: 0 none;
             color: #2184ca;
           }
 
-          #user-actions {
+          #user-actions, #project-actions{
             color: #222;
           }
       

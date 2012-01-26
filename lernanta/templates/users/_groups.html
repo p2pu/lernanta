@@ -1,0 +1,34 @@
+{% load l10n_tags %}
+
+{% if organizing %}
+<section id="organizing_groups">
+  <h1><span>{{ _('Organizing') }}</span></h1>
+  <ul class="project-list">
+    {% for project in organizing %}
+      <li>{% include "projects/_project_card.html" %}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if participating %}
+<section id="participating_groups">
+  <h1><span>{{ _('Participating') }}</span></h1>
+  <ul class="project-list">
+    {% for project in participating %}
+      <li>{% include "projects/_project_card.html" %}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if following %}
+<section id="following_groups">
+  <h1><span>{{ _('Following') }}</span></h1>
+  <ul class="project-list">
+    {% for project in following %}
+      <li>{% include "projects/_project_card.html" %}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

@@ -44,8 +44,23 @@
 
 		<nav id="main-nav">
 		  <ul>
-		    <li><a href="{% locale_url projects_gallery %}" class="top-level">{{ _('Learn') }}</a></li>
-		    <li><a href="{% locale_url static_page_show 'get-involved' %}" class="top-level">{{ _('Contribute') }}</a></li>
+		  	{% if user.is_authenticated %}
+		    <li id="projects" class="menu">
+		   	  <a href="{% locale_url projects_gallery %}" class="top-level">{{ _('Learn') }}
+		   	    <span class="dropdown">&nbsp;</span>
+		   	  </a>
+		   	  <ul id="project-actions">
+				<li><a href="{% locale_url user_groups_view user.username %}" class="sub-level">{{ _('My Groups') }}</a></li>
+		      </ul>
+		    </li>
+		    {% else %}
+		    <li>
+		   	  <a href="{% locale_url projects_gallery %}" class="top-level">{{ _('Learn') }}</a>
+		    </li>
+		    {% endif %}
+		    <li>
+		      <a href="{% locale_url static_page_show 'get-involved' %}" class="top-level">{{ _('Contribute') }}</a>
+		    </li>
 		  </ul>
 		</nav>
 

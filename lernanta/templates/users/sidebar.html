@@ -54,7 +54,7 @@
       <ul>
         {% for link in links %}
           <li>
-            <a class="externalLink" href="{{ link.url }}" title="{{ link.name }}">{{ link.name }}</a>
+            <a class="externalLink" href="{{ link.url }}" title="{{ link.name }}" target="_blank">{{ link.name }}</a>
             {% if user == profile.user %}
               {% if not forloop.first %}
                 <a class="robttn up" href="{% locale_url link_index_up counter=forloop.counter0 %}">{{ _('(UP)') }}</a>

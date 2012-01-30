@@ -42,7 +42,7 @@
   {% for link in links %}
     <tr>
       <td class="name">{{ link.name }}</td>
-      <td class="url"><a href="{{ link.url }}" title="{{ link.url }}">{{ link.url }}</a></td>
+      <td class="url"><a href="{{ link.url }}" title="{{ link.url }}" target="_blank">{{ link.url }}</a></td>
       <!--<td class="subscription">
 	      {% if link.subscribe %}
 	        {% if link.subscription.verified %}<span class="yes" title="{{_('Subscribed.') }}">{{ _('yes') }}</span>

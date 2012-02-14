@@ -19,7 +19,7 @@
               {% with task_activity=task.recent_activity %}
                 <span class="taskActivity">
                   {% if task_activity.0 %}
-                    <a href="#">{{task_activity.0}} {{ _('new') }}
+                    <a href="{{ task.get_absolute_url }}">{{task_activity.0}} {{ _('new') }}
                       <br>
                       <span class="subtaskActivity">
                       {% blocktrans count counter=task_activity.0 %}comment{% plural %}comments{% endblocktrans %} {{ task_activity.1 }}</span>

@@ -23,9 +23,6 @@
     {% if page.listed %}<a class="button" href="{% locale_url page_delete slug=project.slug page_slug=page.slug %}">{{ _('Delete') }}</a>{% endif %}
   {% endif %}
   <a class="button" href="{% locale_url page_history slug=project.slug page_slug=page.slug %}">{{ _('View History') }}</a>
-  {% if not is_challenge and can_comment %}
-    <a class="button" href="{{ new_comment_url }}">{{ _('Post Comment') }}</a>
-  {% endif %}
 {% endblock %}
 
 {% block body %}
@@ -63,28 +60,21 @@
   {% endif %}
 </div><!--main-->
 
-{% if pagination_current_page.object_list or is_challenge %}
-
-{% if is_challenge %}
   <div id="task-discussion" class="content_page">
     {% if can_comment %}
       <a class="button post-task-comment" href="{{ new_comment_url }}">{{ _('Post Comment') }}</a>
     {% endif %}
-    <h1 class="tasks-title">{{_('Task Discussion')}}</h1>
-{% else %}
-  <h1>{{_('Comments')}}</h1>
-{% endif %}
-<br>
-<ul id="posts">
-  <div id="task-link-submit-jquery-comment-placeholder"></div>
-  {% with comments=pagination_current_page.object_list %}
-    {% comment_threads %}
-  {% endwith %}
-</ul>
-{% with prefix='' page_url=page.get_absolute_url %}
-  {% pagination_links %}
-{% endwith %}
-</div>
-{% endif %}
+    <h1>{% if is_challenge %} {{_('Task Discussion')}} {% else %} {{_('Comments')}} {% endif %}</h1>
+    <br>
+    <ul id="posts">
+      <div id="task-link-submit-jquery-comment-placeholder"></div>
+      {% with comments=pagination_current_page.object_list %}
+        {% comment_threads %}
+      {% endwith %}
+    </ul>
+    {% with prefix='' page_url=page.get_absolute_url %}
+      {% pagination_links %}
+    {% endwith %}
+  </div>
 {% endblock %}
 

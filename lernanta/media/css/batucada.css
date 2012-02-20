@@ -1555,7 +1555,7 @@ header {}
   width: 652px;
   float: left;
   background-color: white;
-  padding: 15px;
+  padding: 16px;
   border-radius: 10px;
   border: solid 1px #EEE;
 }
@@ -3300,7 +3300,7 @@ h1.tasks-title {
     border-bottom: none;
 }
 
-.project-kind-challenge #task-discussion {
+#task-discussion {
     margin-top: 20px;
     float: right;
 }
@@ -3309,7 +3309,7 @@ h1.tasks-title {
     color: #222;
 }
 
-.project-kind-challenge #task-discussion .post-task-comment {
+#task-discussion .post-task-comment {
     float: right;
 }
 

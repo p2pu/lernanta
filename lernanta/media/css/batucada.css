@@ -3154,11 +3154,11 @@ ul.ui-autocomplete #ui-active-menuitem {
     #task_list_section .up {
 	   right: 240px;
     }
-
+/*
     .project-kind-challenge #task_list_section .up {
 	   right: 180px;
     }
-	
+*/
 	#content-pages .dwn,
 	#project-links .dwn,
 	#member_links .dwn,
@@ -3171,11 +3171,11 @@ ul.ui-autocomplete #ui-active-menuitem {
     #task_list_section .dwn {
 	   right: 260px;
 	}
-
+/*
     .project-kind-challenge #task_list_section .dwn {
 	   right: 200px;
 	}
-	
+*/
 	#content-pages .up:hover, 
 	#project-links .up:hover,
 	#member_links .up:hover,
@@ -3190,14 +3190,14 @@ ul.ui-autocomplete #ui-active-menuitem {
         background-position: 20px 20px;
     }
 
-.project-kind-challenge h1.tasks-title {
+h1.tasks-title {
     width: 450px;
     font-size: 18px;
     height: 24px;
     padding-top: 5px;
 }
 
-.project-kind-challenge #task-nav {
+#task-nav {
     list-style:none;
     margin:0;
     float:right;
@@ -3205,7 +3205,7 @@ ul.ui-autocomplete #ui-active-menuitem {
     height: 34px;
 }
 
-.project-kind-challenge #task-nav p.task-nav-header {
+#task-nav p.task-nav-header {
     font-weight: bold;
     width: 110px;
     float: right;
@@ -3221,61 +3221,61 @@ ul.ui-autocomplete #ui-active-menuitem {
     background: #e9e9e9 url('/media/images/arrow-down.png') no-repeat 118px center;
 }
 
-.project-kind-challenge #task-nav li {
+#task-nav li {
     float:right;
     padding: 0;
     margin: 0;	
 }
 
-.project-kind-challenge #task-nav li.tasks {
+#task-nav li.tasks {
     border-bottom: none;
     margin: 0;
     padding: 0;
     height: 34px;
 }
 
-.project-kind-challenge #task-nav li.task-sub-nav {
+#task-nav li.task-sub-nav {
     background: #e9e9e9;
 }
 
-.project-kind-challenge #task-nav a {
+#task-nav a {
     display:block;
     padding: 6px 0 6px 10px;
     color:#666;
     text-decoration:none;
 }
 
-.project-kind-challenge #task-nav a:hover{
+#task-nav a:hover{
     color: #2084CA;
     text-decoration:none;
 }
 
-.project-kind-challenge #task-nav ul{
+#task-nav ul{
     list-style:none;
     left:-9999px;
 }
 
-.project-kind-challenge #task-nav ul li{
+#task-nav ul li{
     padding-top:1px;
     float:none;
 }
 
-.project-kind-challenge #task-nav ul a{
+#task-nav ul a{
     white-space:nowrap;
 }
-.project-kind-challenge #task-nav li:hover ul{ 
+#task-nav li:hover ul{ 
     left:0;
 }
 
-.project-kind-challenge #task-nav li:hover a{
+#task-nav li:hover a{
     text-decoration:none;
 }
 
-.project-kind-challenge #task-nav li:hover ul a{
+#task-nav li:hover ul a{
     text-decoration:none;
 }
 
-.project-kind-challenge #task-nav ul.task-nav-list {
+#task-nav ul.task-nav-list {
     margin-top: -22px;
     padding: 10px 0 10px 10px;
     -webkit-border-radius: 3px;
@@ -3290,13 +3290,13 @@ ul.ui-autocomplete #ui-active-menuitem {
     background: #e9e9e9;
 }
 
-.project-kind-challenge #task-nav ul.task-nav-list li {
+/*.project-kind-challenge*/ #task-nav ul.task-nav-list li {
     position: relative;
     margin: 0;
     padding: 0;
 }
 
-.project-kind-challenge #task-nav ul li:last-child {
+/*.project-kind-challenge*/ #task-nav ul li:last-child {
     border-bottom: none;
 }
 

@@ -31,7 +31,7 @@
 {% block body %}
 {% sidebar %}
 <div id="main" class="content_page">
-  {% if is_challenge %}
+  
 	<ul id="task-nav">
 	  <li class="tasks">
 	    <p class="task-nav-header">{{ _('Task Navigation') }}</p>
@@ -42,7 +42,6 @@
 	      </ul>
 	    </li>
 	</ul>
-  {% endif %}
 
   {% if user.is_authenticated %}
     <p class="supplemental_actions"><a class="report abuse action" href="{% locale_url drumbeat_abuse model="page" app_label="content" pk=page.id %}">{{_('Report Abuse')}}</a></p>

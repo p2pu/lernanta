@@ -20,13 +20,14 @@
     {{ form.short_description }}
     {{ form.short_description.errors }}
   </div>
+  
   <div class="field long-description{% if form.long_description.errors %} error{% endif %}">
     <label for="id_long_description">{{ _('One paragraph description') }}</label>
-    <span class="hint block">{{ _('What's this about? What will I learn? Tell me more, but keep it to the point.') }}</span>
+    <span class="hint block">{{ _("What's this about? What will I learn? Tell me more, but keep it to the point.") }}</span>
     {{ form.long_description }}
     {{ form.long_description.errors }}
   </div>
-
+  
   {% if not is_challenge %}
 
   <div class="field{% if form.tags.errors %} error{% endif %}">

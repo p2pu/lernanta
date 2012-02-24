@@ -6,6 +6,10 @@ from django.db import models
 
 class Migration(SchemaMigration):
 
+    depends_on = (
+        ("projects", "0015_auto__del_projectmedia__del_field_participation_sign_up__add_field_par"),
+    )
+
     def forwards(self, orm):
         
         # Deleting model 'PageComment'

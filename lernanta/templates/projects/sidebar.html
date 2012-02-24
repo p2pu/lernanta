@@ -207,6 +207,10 @@
   <br><br>
   {% if organizing %}
     <a class="button" href="{% locale_url projects_edit_participants slug=project.slug %}">{{ _('Edit Participants') }}</a>
+     <br>
+     <br>
+     <a class="button" href="{% locale_url projects_contact_organizers slug=project.slug %}">{{ _('Contact Organizer(s)')}}</a>
+ 
   {% else %}{% if user.is_authenticated %}
     <a class="button" href="{% locale_url projects_contact_organizers slug=project.slug %}">{{ _('Contact Organizer')}}</a>
   {% endif %}{% endif %}

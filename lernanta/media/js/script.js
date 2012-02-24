@@ -5,32 +5,41 @@ var createPostTextArea = function() {
         var count = max - $(this).val().length;
         counter.html(count);
 
-        if (count < 0 || count >= max) {
+        if (count < 0) {
             counter.addClass('danger');
             counter.removeClass('warning');
-            $('#post-project-update').attr("disabled", "disabled");
-            $('#post-update').attr("disabled", "disabled");
+            disableFields();
         } else if (count < 50) {
             counter.removeClass('danger');
             counter.addClass('warning');
-            $('#post-project-update').removeAttr("disabled");
-            $('#post-update').removeAttr("disabled");
+            removeDisabledAttr();
+        } else if (count === max) {
+            counter.removeClass('danger');
+            counter.removeClass('warning');
+            disableFields();
         } else {
             counter.removeClass('danger');
             counter.removeClass('warning');
-            $('#post-project-update').removeAttr("disabled");
-            $('#post-update').removeAttr("disabled");
+            removeDisabledAttr();
         }
     });
 
     $('#create-post').find('#fake-message-input').bind('focus', function() {
-        $('#post-project-update').attr("disabled", "disabled");
-        $('#post-update').attr("disabled", "disabled");
-        counter.addClass('danger');
+        disableFields();
         counter.removeClass('warning');
         $('#create-post').addClass('expanded');
         $('#create-post').find('textarea').trigger('focus');
     });
+
+    function disableFields(){
+        $('#post-project-update').attr("disabled", "disabled");
+        $('#post-update').attr("disabled", "disabled");
+    }
+
+    function removeDisabledAttr(){
+        $('#post-project-update').removeAttr("disabled");
+        $('#post-update').removeAttr("disabled");
+    }
 };
 
 var usernameHint = function() {

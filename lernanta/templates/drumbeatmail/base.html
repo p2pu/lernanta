@@ -23,6 +23,7 @@
 	  {{ form.body }}
 	  {{ form.body.errors }}
 	</div>
+	{% block recaptcha%} 
         {% if settings.RECAPTCHA_PRIVATE_KEY %}
           <div class="field{% if form.recaptcha.errors %} error{% endif %}">
              <!-- Note: though recaptcha is localized the "Play sound again" and "Download sound as MP3" are in English -->
@@ -34,6 +35,7 @@
             {{ _('Welcome Robots, ReCaptcha has been disabled for your convenience. Spam at will.') }}
           </p>
         {% endif %}
+    {%endblock%}
 	<p class="buttons">
 	  <a class="button" href="{% locale_url drumbeatmail_inbox %}">{{ _('Cancel') }}</a>
 	  <button type="submit" value="{{ _('Send') }}">{{ _('Send') }}</button>
@@ -55,4 +57,3 @@
     <script type="text/javascript" src="{{ settings.RECAPTCHA_URL }}"></script>
  {% endif %}
 {% endblock %}
-

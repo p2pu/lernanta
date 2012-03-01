@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-24 17:45-0500\n"
-"PO-Revision-Date: 2012-01-02 11:34+0800\n"
+"PO-Revision-Date: 2012-02-27 11:34+0800\n"
 "Last-Translator: 谢昱 <emiliaxie@qq.com>\n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
 "Language: \n"
@@ -18,12 +18,12 @@ msgstr ""
 #: apps/activity/feeds.py:70
 #, python-format
 msgid "Activity feed from %s"
-msgstr "%s 的活动订阅"
+msgstr "%s的活动汇总"
 
 #: apps/activity/feeds.py:114
 #, python-format
 msgid "Activity feed from %s's dashboard"
-msgstr "%s 的主页活动订阅"
+msgstr "%s的主页活动汇总"
 
 #: apps/activity/models.py:98
 msgid "activities"
@@ -32,16 +32,16 @@ msgstr "活动"
 #: apps/activity/models.py:105
 #, python-format
 msgid "%(actor)s %(verb)s %(target)s"
-msgstr "%(actor)s %(verb)s %(target)s"
+msgstr "%(actor)s%(verb)s%(target)s"
 
 #: apps/activity/models.py:123
 #, python-format
 msgid "wall activity from %s"
-msgstr "%s 的活动环境"
+msgstr "%s的涂鸦墙的活动"
 
 #: apps/activity/schema.py:22
 msgid "started following"
-msgstr "如下开始"
+msgstr "开始关注"
 
 #: apps/activity/schema.py:23
 msgid "joined"
@@ -65,7 +65,7 @@ msgstr "接受"
 
 #: apps/activity/views.py:43
 msgid "This activity was deleted."
-msgstr "活动已删除"
+msgstr "此活动已删除。"
 
 #: apps/activity/views.py:66
 msgid "You can't edit this activity"
@@ -73,11 +73,11 @@ msgstr "你无法编辑此活动"
 
 #: apps/activity/views.py:71
 msgid "Activity deleted!"
-msgstr "活动已删除"
+msgstr "活动已删除!"
 
 #: apps/activity/views.py:73
 msgid "Activity restored!"
-msgstr "活动恢复"
+msgstr "活动恢复了!"
 
 #: apps/badges/forms.py:56
 msgid "You cannot give a badge to yourself."
@@ -95,16 +95,16 @@ msgstr "该用户名无人使用：%s"
 #: apps/badges/forms.py:67
 #, python-format
 msgid "User %s needs to be your peer."
-msgstr "用户 %s 请求你成为他的同伴"
+msgstr "用户%s需要是你的同伴。"
 
 #: apps/badges/forms.py:70
 #, python-format
 msgid "User %s has not received all the prerequisite badges."
-msgstr "用户 %s 没有受到所有基本勋章。"
+msgstr "用户%s没有受到所有基本勋章。"
 
 #: apps/badges/models.py:46
 msgid "Regulates how the badge is awarded to users."
-msgstr ""
+msgstr "管理勋章怎么被颁布给用户。"
 
 #: apps/badges/models.py:54 templates/badges/_submissions_list_item.html:11
 msgid "Badge"
@@ -115,74 +115,70 @@ msgid "Minimum number of votes."
 msgstr "最低数量的选票。"
 
 #: apps/badges/models.py:228
-#, fuzzy
 msgid "Minimum average rating."
-msgstr "最小加权平均评级。"
+msgstr "最小平均评级。"
 
 #: apps/badges/models.py:231
-#, fuzzy
 msgid "If the badge can only be awarded to the user once."
-msgstr "仅可授予一次。"
+msgstr "如果勋章仅可授予一个用户一次。"
 
 #: apps/badges/models.py:237
-#, fuzzy
 msgid "Submission Required"
-msgstr "意见"
+msgstr "需要提交"
 
 #: apps/badges/models.py:238
 #, fuzzy
 msgid "Submission Optional"
-msgstr "意见"
+msgstr "提交随意"
 
 #: apps/badges/models.py:239
-#, fuzzy
 msgid "No submissions"
-msgstr "意见"
+msgstr "不要提交"
 
 #: apps/badges/models.py:262
 #, python-format
 msgid "%(author)s's application for %(badge)s"
-msgstr "%(author)s 的使用 %(badge)s"
+msgstr "%(author)s对%(badge)s的申请书"
 
 #: apps/badges/models.py:289
 msgid "Allows to give more or less weight to the assessor's vote."
-msgstr ""
+msgstr "允许对评价者的评级加权。"
 
 #: apps/badges/models.py:300
 msgid ""
 "If submission is blank, this is a peer awarded assessment or superuser "
 "granted"
-msgstr "如果提交的是空白，这是一个被授予评估或被超级用户授予评估的伙伴。"
+msgstr "如果提交的是空白，这是一个被同辈评估或被超级用户授予的。"
 
 #: apps/badges/models.py:303
 msgid "If all rubric ratings were provided."
-msgstr ""
+msgstr "如果所有的分级专栏评级被提交。"
 
 #: apps/badges/models.py:306
 #, python-format
 msgid "%(assessor)s for %(assessed)s for %(badge)s"
-msgstr "%(assessor)s 为 %(assessed)s 授予 %(badge)s"
+msgstr "%(assessor)s为%(assessed)s授予%(badge)s"
 
 #: apps/badges/models.py:369
 msgid "Never"
-msgstr "从不参与"
+msgstr "从不"
 
 #: apps/badges/models.py:370
 msgid "Sometimes"
-msgstr "偶尔参与"
+msgstr "偶尔"
 
 #: apps/badges/models.py:371
 msgid "Most of the time"
-msgstr "大部分参与"
+msgstr "大部分时间"
 
 #: apps/badges/models.py:372
 msgid "Always"
-msgstr "经常参与"
+msgstr "总是"
 
 #: apps/badges/models.py:380
 #, python-format
 msgid "%(score)s for %(rubric)s"
-msgstr "%(score)s 的 %(rubric)s"
+msgstr "%(score)s的%(rubric)s"
 
 #: apps/badges/models.py:399
 #, python-format
@@ -191,7 +187,7 @@ msgstr "%(user)s - %(badge)s"
 
 #: apps/badges/views.py:61
 msgid "Something has gone wrong. Hopefully it's temporary. "
-msgstr "偶尔出错，希望它是暂时的。"
+msgstr "出问题了，希望它是暂时的。"
 
 #: apps/badges/views.py:62
 msgid "Please try again in a few minutes."
@@ -200,16 +196,15 @@ msgstr "请在几分钟后再试。"
 #: apps/badges/views.py:120 apps/projects/views.py:106
 #, python-format
 msgid "The %s has been created."
-msgstr "%s 已经存在。"
+msgstr "%s已经被创造。"
 
 #: apps/badges/views.py:125
 msgid "Problem creating the badge."
-msgstr "创建勋章"
+msgstr "创建勋章出问题了。"
 
 #: apps/badges/views.py:139
-#, fuzzy
 msgid "You can not apply for this badge."
-msgstr "你无法回复此评论。"
+msgstr "你不能申请这个勋章。"
 
 #: apps/badges/views.py:153
 msgid "Submission created and out for review!"
@@ -222,7 +217,7 @@ msgstr "已提交，审查中！"
 #: apps/reviews/views.py:83 apps/signups/views.py:149
 #: apps/signups/views.py:189
 msgid "Please correct errors below."
-msgstr "请修改一下错误。"
+msgstr "请修改一下下面的错误。"
 
 #: apps/badges/views.py:252
 msgid "You cannot assess your own work."
@@ -237,40 +232,37 @@ msgid "Assessment saved. Thank you for your feedback!"
 msgstr "评估已保存。谢谢你的反馈！"
 
 #: apps/badges/views.py:328
-#, fuzzy
 msgid "You can not give this badge to a peer."
-msgstr "你不可以为自己颁布勋章。"
+msgstr "你不可以把这个勋章颁布给同辈。"
 
 #: apps/badges/views.py:342
 msgid "Thank you for giving a badge to your peer!"
 msgstr "感谢你为你的同伴颁布勋章。"
 
 #: apps/content/forms.py:45
-#, fuzzy
 msgid "Post a link to your work."
-msgstr "给与你的追随者信息"
+msgstr "请贴一个你的工作的链接。"
 
 #: apps/content/models.py:66
 msgid "added"
-msgstr "增加"
+msgstr "增加了"
 
 #: apps/content/models.py:171
 msgid "today"
-msgstr ""
+msgstr "今天"
 
 #: apps/content/models.py:186
-#, fuzzy
 msgid "this week"
-msgstr "本周活跃"
+msgstr "本周"
 
 #: apps/content/models.py:190
 msgid "this month"
-msgstr ""
+msgstr "本月"
 
 #: apps/content/views.py:34 apps/projects/decorators.py:86
 #, python-format
 msgid "This page is not accesible on a %s."
-msgstr "此页不可进入 %s"
+msgstr "此页不可在%s进入。"
 
 #: apps/content/views.py:38
 msgid "This task was deleted."
@@ -283,7 +275,7 @@ msgstr "你无法编辑此页。"
 #: apps/content/views.py:108 apps/projects/views.py:312
 #, python-format
 msgid "%s updated!"
-msgstr "%s 更新"
+msgstr "%s被更新了！"
 
 #: apps/content/views.py:136
 msgid "You can not create a new task!"
@@ -300,7 +292,7 @@ msgstr "你无法删除此页。"
 #: apps/content/views.py:186
 #, python-format
 msgid "%s deleted!"
-msgstr "%s 已删除"
+msgstr "%s已被删除了！"
 
 #: apps/content/views.py:228
 msgid "You can't restore this page"
@@ -309,7 +301,7 @@ msgstr "你无法恢复此页"
 #: apps/content/views.py:249
 #, python-format
 msgid "%s restored!"
-msgstr "%s 已恢复！"
+msgstr "%s已恢复！"
 
 #: apps/content/views.py:282 apps/content/views.py:312
 msgid "You can not change tasks order."
@@ -333,12 +325,12 @@ msgstr "没有使用该用户名或邮箱的用户。"
 
 #: apps/drumbeatmail/views.py:174
 msgid "Can't send email"
-msgstr "不能发邮件。"
+msgstr "不能发邮件"
 
 #: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
 #: apps/projects/views.py:853
 msgid "Message successfully sent."
-msgstr "信息已发出。"
+msgstr "信息发出成功。"
 
 #: apps/drumbeatmail/views.py:183 apps/drumbeatmail/views.py:213
 msgid "There was an error sending your message. Please try again."
@@ -346,19 +338,19 @@ msgstr "信息发送有误，请重试。"
 
 #: apps/links/views.py:27 apps/links/views.py:53
 msgid "You can not change links order."
-msgstr "你不能个更改链接顺序。"
+msgstr "你不能更改链接顺序。"
 
 #: apps/preferences/forms.py:22
 msgid "That email address is register under a different username."
-msgstr "邮箱已被注册。"
+msgstr "该邮箱已被另外一个用户名注册。"
 
 #: apps/preferences/forms.py:32 apps/users/forms.py:37
 msgid "Password must be at least 8 characters long "
-msgstr "密码至少8位数"
+msgstr "密码至少8位数 "
 
 #: apps/preferences/forms.py:33 apps/users/forms.py:38
 msgid "and contain both numbers and letters."
-msgstr "必须包含数字和字母。"
+msgstr "而必须包含数字和字母。"
 
 #: apps/preferences/forms.py:38 apps/users/forms.py:43
 msgid "That password is too common. Please choose another."
@@ -388,21 +380,21 @@ msgstr "表格有误，请改正并重新提交。"
 #: apps/preferences/views.py:122
 #, python-format
 msgid "You are the only organizer of %s active "
-msgstr "你仅仅是积极的组织者 %s"
+msgstr "你是%s的为一个积极的组织者 "
 
 #: apps/preferences/views.py:123
 msgid "study groups, courses, ..."
-msgstr "学习小组，课程，..."
+msgstr "学习小组，课程，⋯"
 
 #: apps/projects/decorators.py:21
 #, python-format
 msgid "You are not organizing this %s."
-msgstr "你不能组织这个 %s"
+msgstr "你不组织这个%s"
 
 #: apps/projects/decorators.py:37
 #, python-format
 msgid "You are not participating in this %s."
-msgstr "你不能参加这个 %s"
+msgstr "你不参加这个%s"
 
 #: apps/projects/decorators.py:54
 msgid "You are not authorized to view the detailed statistics."
@@ -413,9 +405,8 @@ msgid "You aren't authorized to view the statistics' overview."
 msgstr "你未被授权查看数据概况。"
 
 #: apps/projects/decorators.py:104
-#, fuzzy, python-format
 msgid "This %s was deleted."
-msgstr "任务已删除。"
+msgstr "此%s已被删除。"
 
 #: apps/projects/forms.py:69 apps/schools/forms.py:36 apps/schools/forms.py:50
 #: apps/schools/forms.py:64 apps/schools/forms.py:78 apps/users/forms.py:250
@@ -426,27 +417,27 @@ msgstr "图片超过最大范围：%(max)dk"
 #: apps/projects/forms.py:107
 #, python-format
 msgid "User %s is already an organizer."
-msgstr "用户 %s 是组织者。"
+msgstr "用户%s已经是组织者。"
 
 #: apps/projects/forms.py:112
 #, python-format
 msgid "User %s is already a participant."
-msgstr "用户 %s 是参与者。"
+msgstr "用户%s已经是参与者。"
 
 #: apps/projects/forms.py:126
 #, python-format
 msgid "A %s can not be its own next step."
-msgstr "一个 %s 不能够不能自己进入下一步。"
+msgstr "一个%s不能够成为自己的下一步。"
 
 #: apps/projects/forms.py:128
 #, python-format
 msgid "There is no challenge, study group, ... with short name: %s."
-msgstr "无挑战，无学习小组，...简称：%s"
+msgstr "没有短名%s的挑战、学习小组。"
 
 #: apps/projects/forms.py:134
 #, python-format
 msgid "The %(slug)s %(kind)s is already a next step."
-msgstr "该 %(slug)s %(kind)s 已是下一步"
+msgstr "该%(slug)s的%(kind)s已是是一个下一步。"
 
 #: apps/projects/forms.py:146 templates/drumbeatmail/base.html:17
 #: templates/messages/inbox.html:12
@@ -460,23 +451,23 @@ msgstr "主体"
 
 #: apps/projects/forms.py:158
 msgid "That study group, course, ... does not exist."
-msgstr "学习小组，课程，...不存在。"
+msgstr "没有该学习小组、课程。"
 
 #: apps/projects/forms.py:177 apps/schools/forms.py:115
 #: apps/schools/forms.py:140
 #, python-format
 msgid "There is no study group, course, ... with short name: %s."
-msgstr "没有此学习小组，课程，...简称：%s。"
+msgstr "没有短名%s的学习小组、课程。"
 
 #: apps/projects/forms.py:193
 msgid "There is no course with this short name on the archive."
-msgstr "没有以此命名的课程。"
+msgstr "存档里没有该短名的课程。"
 
 #: apps/projects/models.py:97
 msgid ""
 "Study Group -- group of people working collaboratively to acquire and share "
 "knowledge."
-msgstr "学习小组--以小组为单位一起分享与获取知识。"
+msgstr "学习小组--以小组为单位一起分享与获取知识的团队。"
 
 #: apps/projects/models.py:99
 msgid ""
@@ -508,12 +499,12 @@ msgstr "具体描述"
 
 #: apps/projects/views.py:111
 msgid "Problem creating the study group, course, ..."
-msgstr "在开设学习小组，课程，...遇到的问题"
+msgstr "在开设学习小组，课程，⋯遇到的问题"
 
 #: apps/projects/views.py:202
 #, python-format
 msgid "The %s has been cloned."
-msgstr "%s 已被复制。"
+msgstr "%s已被复制。"
 
 #: apps/projects/views.py:208
 msgid "There was a problem cloning the study group, course, ..."
@@ -522,11 +513,11 @@ msgstr "复制学校小组，课程中遇到问题。"
 #: apps/projects/views.py:276
 #, python-format
 msgid "The %s has been imported."
-msgstr "%s 已输入。"
+msgstr "%s已输入。"
 
 #: apps/projects/views.py:281
 msgid "Problem importing the study group, course, ..."
-msgstr "在输入学习小组，课程，..遇到问题。"
+msgstr "在输入学习小组，课程⋯，遇到问题。"
 
 #: apps/projects/views.py:357 apps/schools/views.py:135
 #: apps/schools/views.py:177 apps/schools/views.py:219
@@ -551,11 +542,11 @@ msgstr "添加链接有误。"
 #: apps/projects/views.py:418 apps/projects/views.py:452
 #: apps/users/views.py:646
 msgid "You can't edit this link"
-msgstr "无法编辑此链接。"
+msgstr "你无法编辑此链接。"
 
 #: apps/projects/views.py:429
 msgid "Link updated."
-msgstr "更新链接。"
+msgstr "更新链接成功。"
 
 #: apps/projects/views.py:454
 msgid "The link was deleted"
@@ -563,7 +554,7 @@ msgstr "链接已删除。"
 
 #: apps/projects/views.py:477
 msgid "Participant added."
-msgstr "增加参与者。"
+msgstr "增加参与者成功。"
 
 #: apps/projects/views.py:483
 msgid "There was an error adding the participant."
@@ -580,7 +571,7 @@ msgstr "此人已是组织者。"
 #: apps/projects/views.py:539
 #, python-format
 msgid "The participant %s has been removed."
-msgstr "次参与者 %s 已被踢除。"
+msgstr "参与者%s已被踢除。"
 
 #: apps/projects/views.py:558
 msgid "Next step added."
@@ -593,25 +584,25 @@ msgstr "添加下一步有误。"
 #: apps/projects/views.py:610
 #, python-format
 msgid "The %(name)s %(kind)s is not a next step anymore."
-msgstr "该 %(name)s %(kind)s 不再是下一步。"
+msgstr "该%(name)s%(kind)s不再是下一步。"
 
 #: apps/projects/views.py:632
 #, python-format
 msgid "There was a problem saving the %s's status."
-msgstr "在保存 %s 的数据中遇到问题。"
+msgstr "在保存%s的数据中遇到问题。"
 
 #: apps/relationships/models.py:59
 msgid "Cannot create self referencing relationship."
-msgstr "无法创建引用。"
+msgstr "无法创建自我参照的关系。"
 
 #: apps/relationships/views.py:55
 msgid "You can't unfollow"
-msgstr "你无法追踪信息"
+msgstr "你无法不关注"
 
 #: apps/replies/models.py:51
 #, python-format
 msgid "comment at %s"
-msgstr "在 %s 进行评论"
+msgstr "在%s进行评论"
 
 #: apps/replies/views.py:18 templates/replies/_comment_threads.html:12
 msgid "This comment was deleted."
@@ -628,7 +619,7 @@ msgstr "评论已发布。"
 #: apps/replies/views.py:92
 #, python-format
 msgid "You can not post a comment at %s."
-msgstr "无法在此发布发布评论。%s"
+msgstr "无法在%s发布评论。"
 
 #: apps/replies/views.py:141
 msgid "You can not edit this comment."
@@ -648,60 +639,58 @@ msgstr "无法删除此评论。"
 
 #: apps/replies/views.py:184
 msgid "Comment deleted!"
-msgstr "评论已删除。"
+msgstr "评论已删除!"
 
 #: apps/replies/views.py:186
 msgid "Comment restored!"
-msgstr "评论已恢复。"
+msgstr "评论已恢复!"
 
 #: apps/reviews/decorators.py:14
-#, fuzzy
 msgid "You need to be a reviewer."
-msgstr "用户 %s 请求你成为他的同伴"
+msgstr "你需要是评价者。"
 
 #: apps/reviews/views.py:80
-#, fuzzy
 msgid "Review posted!"
-msgstr "关于 的审阅"
+msgstr "评论已发表!"
 
 #: apps/richtext/views.py:131
 #, python-format
 msgid "Extension %(ext)s is not allowed. "
-msgstr "不允许延期 %(ext)s。"
+msgstr "不允许名字为%(ext)s的扩展。"
 
 #: apps/richtext/views.py:132
 #, python-format
 msgid "Only %(allowed)s are allowed."
-msgstr "只允许 %(allowed)s 。"
+msgstr "只允许%(allowed)s。"
 
 #: apps/schools/decorators.py:20
 msgid "You are not school organizer"
-msgstr "你不是学校组织者。"
+msgstr "你不是学校组织者"
 
 #: apps/schools/forms.py:102
 #, python-format
 msgid "User %s is organizing the school."
-msgstr "用户 %s 正在组织这所学校。"
+msgstr "用户%s正在组织这所学校。"
 
 #: apps/schools/forms.py:121
 #, python-format
 msgid "The %(slug)s %(kind)s is not part of this school."
-msgstr "该 %(slug)s %(kind)s 不是学校的一部分。"
+msgstr "该%(slug)s%(kind)s不是学校的一部分。"
 
 #: apps/schools/forms.py:125
 #, python-format
 msgid "The %(slug)s %(kind)s is already featured."
-msgstr "该 %(slug)s %(kind)s 已标识。"
+msgstr "该%(slug)s%(kind)s已设立为特色项目。"
 
 #: apps/schools/forms.py:146
 #, python-format
 msgid "The %(slug)s %(kind)s is already part of this school."
-msgstr "该 %(slug)s %(kind)s 已是学校一部分。"
+msgstr "该%(slug)s%(kind)s已是学校的一部分。"
 
 #: apps/schools/forms.py:150
 #, python-format
 msgid "The %(slug)s %(kind)s is part of: %(school)s."
-msgstr "该 %(slug)s %(kind)s 是 %(school)s 一部分。"
+msgstr "该%(slug)s%(kind)s是%(school)s的一部分。"
 
 #: apps/schools/views.py:75
 msgid "School updated!"
@@ -722,32 +711,32 @@ msgstr "添加学校组织者有误。"
 #: apps/schools/views.py:328
 #, python-format
 msgid "The %s is now featured for this school."
-msgstr "%s 设立为学校功能。"
+msgstr "%s设立为学校特色项目。"
 
 #: apps/schools/views.py:333
 #, python-format
 msgid "There was an error marking %s as featured."
-msgstr "在增加 %s 功能时出错"
+msgstr "在设立%s为特色项目时出错。"
 
 #: apps/schools/views.py:368
 #, python-format
 msgid "The %s stopped being featured for this school."
-msgstr "%s 不再为学校功能"
+msgstr "%s不再为学校设立为特色项目。"
 
 #: apps/schools/views.py:386
 #, python-format
 msgid "The %s was added to this school."
-msgstr "%s 增加进学校里。"
+msgstr "%s增加进这所学校里。"
 
 #: apps/schools/views.py:391
 #, python-format
 msgid "There was an adding %s to this school."
-msgstr "在学校中增加 %s"
+msgstr "在学校中增加%s。"
 
 #: apps/schools/views.py:426
 #, python-format
 msgid "The %s is no longer part of this school."
-msgstr "该 %s 不是学校的一部分。"
+msgstr "该%s不再是学校的一部分。"
 
 #: apps/schools/views.py:496
 msgid "School mentorship details updated!"
@@ -768,7 +757,7 @@ msgstr "不限制注册"
 #: apps/signups/models.py:98
 #, python-format
 msgid "the signup answer of %(author)s at %(project)s"
-msgstr "在 %(author)s 中 %(project)s 的注册答案"
+msgstr "在%(author)s中%(project)s的注册答案"
 
 #: apps/signups/views.py:38
 msgid "Signup updated!"
@@ -781,12 +770,12 @@ msgstr "答案已被删除。"
 #: apps/signups/views.py:111
 #, python-format
 msgid "You already joined this %s."
-msgstr "你已经参与 %s。"
+msgstr "你已经参与这个%s。"
 
 #: apps/signups/views.py:114
 #, python-format
 msgid "Sign-up is currently closed.You can clone the %s if is full."
-msgstr "注册已关闭。你可以复制 %s 如果已满。"
+msgstr "注册已关闭。如果这个%s已经满，你可以复制它。"
 
 #: apps/signups/views.py:123
 msgid "You already posted an answer to the signup questions."
@@ -798,11 +787,11 @@ msgstr "你现在是参与者了！"
 
 #: apps/signups/views.py:146
 msgid "Answer submitted!"
-msgstr "答案已提交。"
+msgstr "答案已提交！"
 
 #: apps/signups/views.py:174
 msgid "You can't edit this answer"
-msgstr "你无法编辑此答案。"
+msgstr "你无法编辑此答案"
 
 #: apps/signups/views.py:186
 msgid "Answer updated!"
@@ -838,15 +827,15 @@ msgstr "组织者无法通过这个页面离开小组。"
 
 #: apps/signups/views.py:273 apps/signups/views.py:301
 msgid "This page can not be accessed with a get request."
-msgstr "页面无法嵌入邀请函。"
+msgstr "页面无法经过get请求得道。"
 
 #: apps/signups/views.py:306
 msgid "You need to be active in this challenge to become an adopter."
-msgstr "你需要通过接受挑战，从而成为使用者。"
+msgstr "你需要通过在挑战里积极，从而成为使用者。"
 
 #: apps/signups/views.py:309
 msgid "Organizers do not need to adopt the challenges."
-msgstr "组织者无法使用这些挑战。"
+msgstr "组织者不用使用挑战。"
 
 #: apps/signups/views.py:317
 msgid "You need to complete all tasks before becoming an adopter."
@@ -900,15 +889,15 @@ msgstr "你已登入账号。"
 
 #: apps/users/fields.py:20 apps/users/fields.py:24
 msgid "Please choose another username."
-msgstr "请选择另一个用户名"
+msgstr "请选择另一个用户名。"
 
 #: apps/users/forms.py:67
 msgid "This google openid is not supported. "
-msgstr "不支持谷歌开放账号。"
+msgstr "不支持这个谷歌开放账号。"
 
 #: apps/users/forms.py:68
 msgid "Please use your google profile openid."
-msgstr "请使用你的谷歌文件开放账号。"
+msgstr "请使用你的谷歌个人资料开放账号。"
 
 #: apps/users/forms.py:76
 msgid "Your account was migrated from the old P2PU website."
@@ -916,15 +905,15 @@ msgstr "你的账号已从旧网址中转移过来。"
 
 #: apps/users/forms.py:148
 msgid "User profile with this Username already exists."
-msgstr "文件用户名已存在"
+msgstr "该用户名的用户一存在。"
 
 #: apps/users/forms.py:154
 msgid "This field is required."
-msgstr "该领域是必需的。"
+msgstr "该文本字段是必需的。"
 
 #: apps/users/forms.py:157
 msgid "User profile with this Email already exists."
-msgstr "使用该邮箱地址命名文件的用户已存在。"
+msgstr "使用该邮箱地址的用户已存在。"
 
 #: apps/users/forms.py:285
 msgid "That e-mail address isn't associated to a user account. "
@@ -964,29 +953,27 @@ msgstr "（参与）"
 
 #: apps/users/models.py:188
 msgid "(following)"
-msgstr "（跟随）"
+msgstr "（关注）"
 
 #: apps/users/views.py:48
 #, python-format
 msgid ""
 "A link to activate your user account was sent by email to your address %s. "
 "You have to click it before you can log in."
-msgstr "账号激活链接已通过邮件发送至您的邮箱 %s 。激活后才能够正常登陆。"
+msgstr "账号激活链接已通过邮件发送至您的邮箱%s。激活后才能够正常登陆。"
 
 #: apps/users/views.py:54
-#, fuzzy, python-format
 msgid ""
 "If you did not receive the confirmation email, make sure your email service "
 "did not mark it as \"junk mail\" or \"spam\". If you need to, you can have "
 "us <a href=\"%s\">resend the confirmation message</a> to your email address "
 "mentioned above."
 msgstr ""
-"如果你没有收到确认信，请确保你的邮箱未将此邮件设为\"垃圾邮件\"。如果需要，你"
-"可以让我们 &lt;a href=\"%s\"&gt; 重新发送确认信 &lt;/a&gt; 到您邮箱。"
+"如果你没有收到确认信，请确保你的邮箱未将此邮件设为\"垃圾邮件\"。如果需要，你可以让我们&lt;a href=\"%s\"&gt;重新发送确认信&gt;到您邮箱。"
 
 #: apps/users/views.py:204
 msgid "Incorrect username, email or password."
-msgstr "用户名，邮箱或密码不正确。"
+msgstr "用户名、邮箱或密码不正确。"
 
 #: apps/users/views.py:293
 msgid "Congratulations! Your user account was successfully created."
@@ -996,7 +983,7 @@ msgstr "祝贺您！你的账号注册成功！"
 msgid ""
 "Thanks! We have sent an email to {0} with instructions for completing your "
 "registration."
-msgstr "谢谢！确认邮件已发出 {0} 。请根据邮件指示完成注册。"
+msgstr "谢谢！确认邮件已发出到{0} 。请根据邮件指示完成注册。"
 
 #: apps/users/views.py:372
 msgid "Hmm, that doesn't look like the correct confirmation code"
@@ -1018,7 +1005,7 @@ msgstr "用户名已删除。"
 
 #: apps/users/views.py:464
 msgid "Profile updated"
-msgstr "更新文件。"
+msgstr "文件更新了。"
 
 #: apps/users/views.py:470
 msgid ""
@@ -1029,22 +1016,22 @@ msgstr "更新文件中出现问题。请重新提交。"
 #: apps/users/views.py:505
 #, python-format
 msgid "The identity %s has already been claimed by you."
-msgstr "身份 %s 已认证。"
+msgstr "身份s%已被你声称。"
 
 #: apps/users/views.py:506
 #, python-format
 msgid "The identity %s has already been claimed by another user."
-msgstr "经验证，该身份 %s 已被注册。"
+msgstr "身份%s已被别人声称。"
 
 #: apps/users/views.py:519
 #, python-format
 msgid "The identity %s has been saved."
-msgstr "身份 %s 已保存。"
+msgstr "身份%s已保存。"
 
 #: apps/users/views.py:526
 #, python-format
 msgid "OpenID authentication failed: %s"
-msgstr "开放ID认证失败：%s"
+msgstr "开放身份认证失败：%s"
 
 #: apps/users/views.py:529
 msgid "Authentication cancelled."
@@ -1053,23 +1040,23 @@ msgstr "认证取消。"
 #: apps/users/views.py:532
 #, python-format
 msgid "Unknown OpenID response type: %r"
-msgstr "未知开放ID回答类型：%r"
+msgstr "未知开放身份回答类型：%r"
 
-#: apps/users/views.py:534
+#: apps/users/views.py:534 TODO
 msgid "This is an OpenID relying party endpoint."
-msgstr "该开放ID依赖于终端。"
+msgstr "该开放身份依赖于终端。"
 
 #: apps/users/views.py:543
 msgid "You can't edit this openid"
-msgstr "你无法编辑该开放ID。"
+msgstr "你无法编辑该开放身份。"
 
 #: apps/users/views.py:545
 msgid "The openid was deleted."
-msgstr "该开放ID已删除。"
+msgstr "该开放身份已删除。"
 
 #: apps/users/views.py:575
 msgid "Profile image updated"
-msgstr "文件图片已更新。"
+msgstr "设定档图片已更新。"
 
 #: apps/users/views.py:580
 msgid "There was an error uploading your image."
@@ -1077,7 +1064,7 @@ msgstr "上传图片中出错。"
 
 #: apps/users/views.py:592
 msgid "Profile link added."
-msgstr "文件链接已添加。"
+msgstr "设定档链接已添加。"
 
 #: apps/users/views.py:601
 msgid "There was an error saving your link."
@@ -1085,7 +1072,7 @@ msgstr "链接保存中存在错误。"
 
 #: apps/users/views.py:625
 msgid "Profile link updated"
-msgstr "文件链接已更新。"
+msgstr "设定档链接已更新。"
 
 #: apps/users/views.py:648
 msgid "The link was deleted."
@@ -1099,42 +1086,38 @@ msgstr "页面无法找到。"
 msgid ""
 "Oops. That links doesn't seem to work. Maybe the page you are looking for is "
 "on the old p2pu site? Try "
-msgstr "哎哟！链接暂时无法工作。也许你所找的页面在p2pu旧网站上？试试去吧！"
+msgstr "哎哟！链接暂时无法工作。也许你所找的页面在P2PU旧网站上？试试去吧！"
 
 #: templates/404.html:9
-#, fuzzy
 msgid ""
 "If you think this is an error, please let us know by <a href=\"http://p2pu."
 "lighthouseapp.com/projects/71002\" target=\"_blank\">filling a bug report</"
 "a>."
 msgstr ""
-"如果你发现了网站错误，请及时告知我们。&lt;a href=\"http://p2pu.lighthouseapp."
-"com/projects/71002\" 目标=\"_空格\"&gt;filling 错误报告&lt;/a&gt;."
+"如果你发现了网站错误，请及时&lt;a href=\"http://p2pu.lighthouseapp."
+"com/projects/71002\" target=\"_blank\"&gt;写错误报告&lt;/a&gt;告知我们。"
 
 #: templates/500.html:6
 msgid "Internal server error"
-msgstr "内部服务器错误。"
+msgstr "内部服务器错误"
 
 #: templates/500.html:8
-#, fuzzy
 msgid ""
 "Clearly what was supposed to happen, didn't. You can help us to solve this "
 "problem by <a href=\"http://p2pu.lighthouseapp.com/projects/71002\">filing a "
 "bug report</a>, and telling us what you were doing when the problem occurred."
 msgstr ""
-"即将应该发生什么呢？你可以通过&It; &lt;a href=\"http://p2pu.lighthouseapp."
-"com/projects/71002\"&gt;filing a bug report&lt;/a&gt帮助我们解决这个问题，同"
-"时也可以告诉我们当问题出现时你将如何解决。"
+"该发生的很明显没有发生。你可以通过&lt;a href=\"http://p2pu.lighthouseapp.com/projects/71002\"&gt;写错误报告&lt;/a&gt;,帮助我们解决这个问题，同时也可以告诉我们当问题出现时你在做什么。"
 
 #: templates/503.html:5
 msgid "Down for maintenance, come back soon"
-msgstr "维护中，稍后回来。"
+msgstr "维护中，稍后回来"
 
 #: templates/503.html:7
 msgid ""
 "We are probably in the process of upgrading the site. We apologize for any "
 "inconvenience, and hope that you will like the new features."
-msgstr "网站更新中。我们对您造成的不便深表歉意，希望你对我们新网站满意！"
+msgstr "网站更新中。我们对您造成的不便深表歉意，希望你对我们新网站满意。"
 
 #: templates/_footer.html:11
 msgid "What is P2PU?"
@@ -1155,19 +1138,19 @@ msgstr ""
 
 #: templates/_footer.html:14
 msgid "Join P2PU Today! It's free."
-msgstr ""
+msgstr "立刻加入P2PU！免费。"
 
 #: templates/_footer.html:18
 msgid "Some of our supporters"
-msgstr "赞助者。"
+msgstr "赞助者"
 
 #: templates/_footer.html:21
 msgid "View all of our supporters"
-msgstr "浏览我们的赞助者。"
+msgstr "浏览我们的赞助者"
 
 #: templates/_footer.html:24
 msgid "Connect with us"
-msgstr "联系我们。"
+msgstr "联系我们"
 
 #: templates/_footer.html:26
 msgid "Get Involved"
@@ -1175,19 +1158,19 @@ msgstr "参与"
 
 #: templates/_footer.html:27
 msgid "Read our Blog"
-msgstr "阅读我们的博客。"
+msgstr "阅读我们的博客（英文）"
 
 #: templates/_footer.html:28
 msgid "Find us on Facebook"
-msgstr "关注我们的Facebook。"
+msgstr "关注我们的Facebook"
 
 #: templates/_footer.html:29
 msgid "Follow us on Twitter"
-msgstr "关注我们的推客。"
+msgstr "关注我们的推特微薄"
 
 #: templates/_footer.html:30
 msgid "Send us an email"
-msgstr "请邮件我们。"
+msgstr "给我们发邮件"
 
 #: templates/_footer.html:40
 msgid "(more)"
@@ -1195,7 +1178,7 @@ msgstr "（更多）"
 
 #: templates/_footer.html:43
 msgid "CC BY SA"
-msgstr ""
+msgstr "知识共享创用CC BY SA"
 
 #: templates/_footer.html:46 templates/base.html:78 templates/base.html.py:84
 msgid "Help"
@@ -1215,7 +1198,7 @@ msgstr "注意事项"
 
 #: templates/_footer.html:50
 msgid "Wiki"
-msgstr "维基百科"
+msgstr "维基"
 
 #: templates/_footer.html:51
 msgid "Found a Bug?"
@@ -1223,11 +1206,11 @@ msgstr "找到漏洞？"
 
 #: templates/_footer.html:54
 msgid "Creative Commons Share-Alike"
-msgstr "分享相似评论"
+msgstr "只是共享创用分享相似"
 
 #: templates/_footer.html:55
 msgid "Privacy Guidelines"
-msgstr "个人指导"
+msgstr "私人指导"
 
 #: templates/_footer.html:56
 msgid "Terms of Use"
@@ -1252,7 +1235,7 @@ msgstr "学习"
 
 #: templates/base.html:48
 msgid "Contribute"
-msgstr ""
+msgstr "创造"
 
 #: templates/base.html:70 templates/dashboard/dashboard.html:17
 #: templates/drumbeatmail/inbox.html:9
@@ -1260,13 +1243,12 @@ msgid "Dashboard"
 msgstr "仪表盘"
 
 #: templates/base.html:71
-#, fuzzy
 msgid "My Profile"
-msgstr "查看详细资料"
+msgstr "我的个人资料"
 
 #: templates/base.html:72
 msgid "My Settings"
-msgstr ""
+msgstr "我的设置"
 
 #: templates/base.html:73 templates/chat/chat.html:4
 #: templates/chat/chat.html.py:10 templates/projects/sidebar.html:169
@@ -1363,7 +1345,13 @@ msgid_plural ""
 "              %(counter)s Comments\n"
 "            "
 msgstr[0] ""
+"\n"
+"              %(counter)s评论\n"
+"            "
 msgstr[1] ""
+"\n"
+"              %(counter)s评论\n"
+"            "
 
 #: templates/activity/base.html:4
 #: templates/schools/school_edit_statistics.html:23
@@ -1458,7 +1446,7 @@ msgstr "评论"
 #: templates/replies/_comment_threads.html:121
 #: templates/signups/sign_up.html:61
 msgid "Reply"
-msgstr "重来"
+msgstr "回答"
 
 #: templates/badges/_assessment_body.html:4
 msgid "Assessment from"
@@ -1473,12 +1461,12 @@ msgstr "开始"
 #: templates/badges/_assessment_body.html:14
 #: templates/badges/_assessment_body.html:30
 msgid "out of 4"
-msgstr "4"
+msgstr "之4"
 
 #: templates/badges/_assessment_body.html:40
 #: templates/replies/emails/post_comment.txt:8
 msgid "Comment:"
-msgstr "评论"
+msgstr "评论："
 
 #: templates/badges/_assessment_item.html:11
 msgid "Gave"
@@ -1492,7 +1480,7 @@ msgstr "给"
 
 #: templates/badges/_give_badge_action.html:3
 msgid "Give Badge"
-msgstr "给与徽章"
+msgstr "给与勋章"
 
 #: templates/badges/_give_badge_action.html:4
 #: templates/badges/badges_list.html:9 templates/badges/base.html:10
@@ -1501,17 +1489,17 @@ msgstr "给与徽章"
 #: templates/schools/projectset_home.html:22
 #: templates/users/_profile_info.html:8
 msgid "Badges"
-msgstr "徽章"
+msgstr "勋章"
 
 #: templates/badges/_review_submission_action.html:4
 #: templates/badges/submission_show.html:47
 #, fuzzy
 msgid "Review This Submission"
-msgstr "意见"
+msgstr "审查这个提交"
 
 #: templates/badges/_submission_item.html:11
 msgid "Submitted work on "
-msgstr "提交"
+msgstr ""
 
 #: templates/badges/_submission_item.html:16
 #, python-format
@@ -1528,7 +1516,7 @@ msgstr[1] ""
 
 #: templates/badges/_submissions_list.html:6
 msgid "WOW!"
-msgstr ""
+msgstr "哇！"
 
 #: templates/badges/_submissions_list.html:6
 msgid "Check out all these submissions!"
@@ -2264,7 +2252,7 @@ msgstr ""
 
 #: templates/dashboard/sidebar.html:64 templates/users/_user_card.html:16
 msgid "Following"
-msgstr "跟随"
+msgstr "在关注"
 
 #: templates/dashboard/sidebar.html:75
 msgid "Learning"

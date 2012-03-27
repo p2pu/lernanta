@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load l10n_tags %}
+ 
+{% block title %}{{ _('P2PU | Staff') }}{% endblock %}
+ 
+{% block bodyid %}one-column-page{% endblock %}
+{% block bodyclasses %}page pages-staff{% endblock %}
+
+{% block breadcrumbs %}
+  <span class="arrow">&rsaquo;</span>
+  <a href="{% locale_url static_staff_page %}">{{ 'Staff' }}</a>
+{% endblock %}
+
+{% block body %} 
+  <div id="main">
+  </div>
+{% endblock %}

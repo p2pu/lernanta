@@ -28,3 +28,8 @@ def show_page(request, slug):
 def jobs_page(request):
     return render_to_response('pages/jobs_page.html', {},
         context_instance=RequestContext(request))
+
+
+def staff_page(request):
+    return render_to_response('pages/staff_page.html', {},
+        context_instance=RequestContext(request))

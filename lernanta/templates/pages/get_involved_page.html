@@ -1,0 +1,77 @@
+
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n_tags %}
+{% load embed %}
+ 
+{% block title %}{{ _('Get Involved') }}{% endblock %}
+ 
+{% block bodyid %}one-column-page{% endblock %}
+{% block bodyclasses %}page pages-get-involved{% endblock %}
+
+{% block breadcrumbs %}
+  <span class="arrow">&rsaquo;</span>
+  <a href="{% locale_url static_get_involved_page %}">{{ _('Get Involved.') }}</a>
+{% endblock %}
+
+{% block body %}
+
+	<div id="main">
+		<h1>{{ _('Get Involved.') }}</h1>
+		<hr />
+		<div class="richtext_section">
+			<div id="contribute-wrapper">
+				<p>{% blocktrans %}Welcome to the P2PU Community. We are a respectful and dynamic group who are excited by the idea of finding new ways to learn online. There are several different ways you can get involved in the P2PU Community.{% endblocktrans %}</p>
+  
+			<div id="contribute-navbar">
+				<p class="contribute-ways">{{ _('Ways to get involved') }}:</p>
+				<ul>    
+					 <li class="contribute-nav active"><a href="#">{{ _('Create a course or study group') }}</a></li>
+					 <li class="contribute-nav inactive"><a href="#">{{ _('Stay up-to-date with P2PU') }}</a></li>
+					 <li class="contribute-nav inactive"><a href="#">{{ _('Join community discussions') }}</a></li>
+					 <li class="contribute-nav inactive"><a href="#">{{ _('Help us improve P2PU') }}</a></li>
+					 <li class="contribute-nav inactive"><a href="#">{{ _('Donate to P2PU') }}</a></li>
+					 <li class="contribute-nav inactive"><a href="#">{{ _('Join or start a Meetup') }}</a></li>
+				</ul>
+			</div>
+			<div id="contribute-slider">
+				<ul>  
+					<li class="contribute-item">
+						<h2 class="contribute-header">{{ _('Create a course or study group') }}</h2>
+						<p class="contribute-content">{% blocktrans %}P2PU is dedicated to helping people design great peer to peer courses. Don't see a group studying a topic you'd like to learn? Start your own group! Find all the help you need to get started on <a href="http://help.p2pu.org" target="_blank">help.p2pu.org</a>.{% endblocktrans %}</p>
+						<a href="{% locale_url projects_create %}" class="contribute-button">{{ _('Start today &#187;') }}</a>
+					</li>
+					<li class="contribute-item">
+						<h2 class="contribute-header">{{ _('Stay up-to-date with P2PU') }}</h2>
+						<p class="contribute-content">{% blocktrans %}You can sign up for our announcements list. This is a very low-traffic mailing list, which will keep you up-to-date with important P2PU news, like when new courses are starting.{% endblocktrans %}</p>
+						<a href="http://groups.google.com/group/p2pu-announce" class="contribute-button" target="_blank">{{ _('Start today &#187;') }}</a>
+					</li>
+					<li class="contribute-item">
+						<h2 class="contribute-header">{{ _('Join community discussions') }}</h2>
+						<p class="contribute-content">{% blocktrans %}The main P2PU discussions happen on the p2pu-community mailing list. It’s a good forum for meeting the P2PU community and ask any questions you may have.{% endblocktrans %}</p>
+						<a href="http://groups.google.com/group/p2pu-community" class="contribute-button" target="_blank">{{ _('Start today &#187;') }}</a>
+					</li>
+					<li class="contribute-item">
+						<h2 class="contribute-header">{{ _('Help us improve P2PU') }}</h2>
+						<p class="contribute-content">{% blocktrans %}Join the developer mailing list, sign up for the bug/task tracker, join the Introduction to Contributing to Lernanta study group, or view the developer documentation on github.{% endblocktrans %}</p>
+						<a href="https://github.com/p2pu/lernanta/wiki" class="contribute-button" target="_blank">{{ _('Start today &#187;') }}</a>
+					</li>
+					<li class="contribute-item">
+						<h2 class="contribute-header">{{ _('Donate to P2PU') }}</h2>
+						<p class="contribute-content">{% blocktrans %}You can donate to P2PU through our partner, The Mozilla Foundation. All donations go directly to P2PU and help us continue our mission to enable high-quality low-cost education opportunities!{% endblocktrans %}</p>
+						<a href="https://donate.mozilla.org/page/contribute/P2PU" class="contribute-button" target="_blank">{{ _('Start today &#187;') }}</a>
+					</li>  
+					<li class="contribute-item">
+						<h2 class="contribute-header">{{ _('Join or start a Meetup') }}</h2>
+						<p class="contribute-content">{% blocktrans %}There are P2PU Meetups happening all over the world, come and join us or organize one of your own.{% endblocktrans %}</p>
+						<a href="http://www.meetup.com/p2pu/" class="contribute-button" target="_blank">{{ _('Start today &#187;') }}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<br clear="both">
+		<br>
+		<br>
+	</div>
+
+{% endblock %}

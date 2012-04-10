@@ -1,6 +1,6 @@
 {% load l10n_tags %}
 {% if can_review_submission %}
-  <a class="button" href="{% locale_url submission_show slug=submission.badge.slug submission_id=submission.id %}" class="assess-button">
+  <a class="button" href="{% locale_url assess_submission slug=submission.badge.slug submission_id=submission.id %}" class="assess-button">
     {{ _('Review This Submission') }}
   </a>
 {% endif %}

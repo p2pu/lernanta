@@ -1,0 +1,5199 @@
+[
+    {
+        "pk": 1,
+        "model": "users.profiletag",
+        "fields": {
+            "category": "interest"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "users.profiletag",
+        "fields": {
+            "category": "skill"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "users.profiletag",
+        "fields": {
+            "category": "skill"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "users.profiletag",
+        "fields": {
+            "category": "skill"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "users.profiletag",
+        "fields": {
+            "category": "desired_topic"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "users.userprofile",
+        "fields": {
+            "username": "administrator",
+            "bio": "",
+            "newsletter": false,
+            "last_active": "2012-04-05 09:35:53",
+            "confirmation_code": "",
+            "image": "",
+            "deleted": false,
+            "created_on": "2011-10-13 02:01:04",
+            "discard_welcome": false,
+            "featured": false,
+            "location": "",
+            "full_name": "The boss",
+            "preflang": "en",
+            "password": "sha512$00cc1e5944$786fa9c03a357895c6444593172d01bbc8cb82fbcb9d278a5dcbd1c0f81549ae12a11ecf7a6fe9ce74edfaff5058e34d835d464b08ea873dbfc1fabd78df9ef5",
+            "email": "address1@example.com",
+            "user": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "users.userprofile",
+        "fields": {
+            "username": "user1",
+            "bio": "",
+            "newsletter": false,
+            "last_active": null,
+            "confirmation_code": "3toQXdFLsKmgT2Ek6bp9ZOh5CcMA8rYBSvDVlxwJzUjuafi7PNGnqW0ye4H1",
+            "image": "",
+            "deleted": false,
+            "created_on": "2012-04-05 09:09:17",
+            "discard_welcome": false,
+            "featured": false,
+            "location": "",
+            "full_name": "user1",
+            "preflang": "en",
+            "password": "sha512$e796e3edc3$a38a750e44aaaf69332d02c485528a58cde6faaec31190de038f90ac99b3673e56e7681c4baa19902571285382a781481d50e87642ecf0ee75d8b129c4014c4b",
+            "email": "user1@mail.com",
+            "user": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "users.userprofile",
+        "fields": {
+            "username": "user2",
+            "bio": "",
+            "newsletter": false,
+            "last_active": null,
+            "confirmation_code": "niusDOBcC97krXaAMN2wboFHYdzxmIpQ50f8V6heRyP4EvlWUgKSZLtq1jJ3",
+            "image": "",
+            "deleted": false,
+            "created_on": "2012-04-05 09:10:29",
+            "discard_welcome": false,
+            "featured": false,
+            "location": "",
+            "full_name": "user2",
+            "preflang": "en",
+            "password": "sha512$8e8272bc9b$b761991d8b1707f92c35d17946e607796e889640a1a24a308ddd1c9228793d5385376f1c4d63cc1e8ad01efcd93cbd2f80e17c2e9c52f5bffa94cc6e5c92fb77",
+            "email": "user2@mail.com",
+            "user": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "users.userprofile",
+        "fields": {
+            "username": "user3",
+            "bio": "",
+            "newsletter": false,
+            "last_active": "2012-04-05 09:31:25",
+            "confirmation_code": "iu1nH2jcdvgWpG9qbwJtLSrmN5R7z4lhyOAUsBI6ZMXfaEFkoCY0P8QDx3KV",
+            "image": "",
+            "deleted": false,
+            "created_on": "2012-04-05 09:13:41",
+            "discard_welcome": false,
+            "featured": false,
+            "location": "Earth and else where",
+            "full_name": "Arthur Dent",
+            "preflang": "en",
+            "password": "sha512$34a1e519ce$6b685f0ba1d7d4ca84a08289d649617ae977e62bed2275d429411384a9b9bb56295697a0363beb8c490242ac9b8179856892538de6cde6a5befc39544c45e960",
+            "email": "user3@mail.com",
+            "user": 4
+        }
+    },
+    {
+        "pk": 1,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "cricket",
+            "slug": "cricket"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "complaining",
+            "slug": "complaining"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "drinking-tea",
+            "slug": "drinking-tea"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "luck",
+            "slug": "luck"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "the-universe",
+            "slug": "the-universe"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "users.taggedprofile",
+        "fields": {
+            "tag": 1,
+            "content_type": 22,
+            "object_id": 4
+        }
+    },
+    {
+        "pk": 2,
+        "model": "users.taggedprofile",
+        "fields": {
+            "tag": 2,
+            "content_type": 22,
+            "object_id": 4
+        }
+    },
+    {
+        "pk": 3,
+        "model": "users.taggedprofile",
+        "fields": {
+            "tag": 3,
+            "content_type": 22,
+            "object_id": 4
+        }
+    },
+    {
+        "pk": 4,
+        "model": "users.taggedprofile",
+        "fields": {
+            "tag": 4,
+            "content_type": 22,
+            "object_id": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "users.taggedprofile",
+        "fields": {
+            "tag": 5,
+            "content_type": 22,
+            "object_id": 4
+        }
+    },
+    {
+        "pk": 1,
+        "model": "signups.signup",
+        "fields": {
+            "project": 1,
+            "between_participants": "",
+            "status": "closed",
+            "public": "",
+            "author": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "signups.signup",
+        "fields": {
+            "project": 2,
+            "between_participants": "",
+            "status": "closed",
+            "public": "",
+            "author": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "signups.signup",
+        "fields": {
+            "project": 3,
+            "between_participants": "",
+            "status": "closed",
+            "public": "",
+            "author": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "signups.signup",
+        "fields": {
+            "project": 4,
+            "between_participants": "",
+            "status": "closed",
+            "public": "",
+            "author": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "signups.signup",
+        "fields": {
+            "project": 5,
+            "between_participants": "",
+            "status": "closed",
+            "public": "",
+            "author": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "signups.signup",
+        "fields": {
+            "project": 6,
+            "between_participants": "",
+            "status": "closed",
+            "public": "",
+            "author": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "signups.signup",
+        "fields": {
+            "project": 7,
+            "between_participants": "",
+            "status": "closed",
+            "public": "",
+            "author": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "signups.signup",
+        "fields": {
+            "project": 8,
+            "between_participants": "",
+            "status": "non-moderated",
+            "public": "",
+            "author": 4
+        }
+    },
+    {
+        "pk": 1,
+        "model": "schools.school",
+        "fields": {
+            "organizers": [],
+            "groups_icon": "",
+            "description": "<h1 class=\"school_header\"><b>School of Social Innovation</b></h1>\n\n<p>Are you looking to make a difference in your community and the world? Are you interested in developing the skills and network necessary to do so?</p>\n\n<p>The P2PU School of Social Innovation is a global, open source community for organizing peer study groups on topics like conflict resolution, project management for social innovators, and social innovation in education.  SoSI is united by the common purpose of helping all people strengthen skills that are important for social innovators.</p>\n\n<p>SoSI achieves this through free, peer-designed-and-directed study groups, which use a combination of online and offline project-based learning.  The online platform allows study groups of a virtually unlimited size to access and remix high-quality open source curriculum, lectures and other resources for deepening theoretical understanding in international, collaborative teams, while participant-led offline citizen circles provide the opportunity for participants to work in their local context and to develop skills like empathy, resilience, and cooperation- skills which are often learned best through deeper practice, in person.</p>\n<h2>\n\tAbout Us</h2>\n<ul>\n\t<li>\n\t\t<a href=\"http://wiki.p2pu.org/w/page/33982467/SoSI\" title=\"Find out more about SoSI\">About SoSI</a></li>\n\t<li>\n\t\t<a href=\"http://www.citizencircles.com\" title=\"About Citizen Circles\">About Citizen Circles</a></li>\n\t<li>\n\t\t<a href=\"http://wiki.p2pu.org/w/page/33982522/Creating-a-citizen-circle\" title=\"What is a Citizen Circle?\">What is a Citizen Circle?</a></li>\n\t<li>\n\t\t<a href=\"http://groups.google.com/group/citizencircles\" title=\"Contact SoSI\">Contact Us</a></li>\n</ul>",
+            "short_name": "",
+            "sidebar_width": "200px",
+            "show_school_organizers": true,
+            "old_term_name": "SoSI",
+            "menu_color_light": "#f99649",
+            "featured": [],
+            "headers_color": "#34749D",
+            "mentee_form_url": null,
+            "extra_styles": "",
+            "headers_color_light": "#3d8abc",
+            "background": "",
+            "mentor_form_url": null,
+            "site_logo": "",
+            "logo": "",
+            "menu_color": "#F57D1F",
+            "background_color": "#dce7e9",
+            "slug": "school-of-social-innovation",
+            "name": "School of Social Innovation"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "schools.school",
+        "fields": {
+            "organizers": [],
+            "groups_icon": "",
+            "description": "<h1 class=\"school_header\"><b>School of the Mathematical Future</b></h1>\n\n<p>\n\tSchool of the Mathematical Future is organized by Natural Math family learning network, Math 2.0 interest group, and P2PU (Peer to Peer University). We are building an open learning environment for mathematics educators working in diverse communities and networks. Our classes are open and free.</p>\n<h2>\n\tContact Us</h2>\n<ul>\n\t<li>\n\t\t<a href=\"http://groups.google.com/group/p2pu-mathfuture\" title=\"Discussion Group\">Discussion group for School of Math Future</a></li>\n\t<li>\n\t\t<a href=\"http://groups.google.com/group/p2pu-mathfutureannounce\" title=\"Announcement List\">Announcement list for the School of Math Future</a></li>\n</ul>",
+            "short_name": "",
+            "sidebar_width": "235px",
+            "show_school_organizers": true,
+            "old_term_name": "Math Future",
+            "menu_color_light": "#fcda77",
+            "featured": [],
+            "headers_color": "#990000",
+            "mentee_form_url": null,
+            "extra_styles": "",
+            "headers_color_light": "#d60505",
+            "background": "",
+            "mentor_form_url": null,
+            "site_logo": "",
+            "logo": "",
+            "menu_color": "#fbcd47",
+            "background_color": "#f1f1f1",
+            "slug": "school-of-the-mathematical-future",
+            "name": "School of the Mathematical Future"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "schools.school",
+        "fields": {
+            "organizers": [],
+            "groups_icon": "",
+            "description": "<h2>\n    School of Webcraft is a free, online community for learning open web development.</h2>\n<p>\n    We believe that learning with others is the best way to help people learn the skills and theory that they need to create web sites and apps using modern open web technologies.</p>\n<h3>\n    <br>\n    Get started today by signing up for Webmaking 101. (coming soon)</h3>\n<p>\n    Webmaking 101 is a free course that will provide you the tools you need to become a knowledgeable web developer.</p>\n\n<p>\n<a class=\"webcraft-browse\" href=\"/groups/?school=school-of-webcraft\">Browse courses</a>\nor\n<a class=\"webcraft-button\" href=\"http://eepurl.com/fDU3c\" target=\"_blank\">Get notified of Webmaking 101 launch</a>\n</p>",
+            "short_name": "",
+            "sidebar_width": "300px",
+            "show_school_organizers": false,
+            "old_term_name": "Webcraft",
+            "menu_color_light": "#80b6f2",
+            "featured": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "headers_color": "#002b77",
+            "mentee_form_url": null,
+            "extra_styles": "#school_home #main {\r\n  font-family: \"Helvetica\", Arial, Verdana, san-serif;\r\n}\r\n\r\n#school_home h2 {\r\n  font-weight: 100;\r\n  font-size: 30px;\r\n  margin-bottom: 10px;\r\n  color: #000;\r\n}\r\n\r\n#school_home h3 {\r\n  font-weight: 100;\r\n  font-size: 20px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n#school_home #sidebar {\r\n    min-height: 300px;\r\n    border: 0;\r\n}\r\n\r\na.webcraft-browse {\r\n  margin: 0 20px 50px 80px;\r\n  font-size: 18px;\r\n  text-decoration: underline;\r\n}\r\n\r\na.webcraft-browse {\r\n  cursor: pointer;\r\n}\r\n\r\na.webcraft-button {\r\n margin: 0 0 -4px 20px;\r\n background-color: #7fbf4d;\r\n background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));\r\n /* Saf4+, Chrome */\r\n background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: linear-gradient(top, #7fbf4d, #63a62f);\r\n border: 1px solid #63a62f;\r\n border-bottom: 1px solid #5b992b;\r\n -webkit-border-radius: 3px;\r\n -moz-border-radius: 3px;\r\n -ms-border-radius: 3px;\r\n -o-border-radius: 3px;\r\n border-radius: 3px;\r\n -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n -moz-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n -ms-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n -o-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n box-shadow: inset 0 1px 0 0 #96ca6d;\r\n color: #fff;\r\n font: normal 12px \"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Geneva, Verdana, sans-serif;\r\n line-height: 1;\r\n padding: 7px 8px 8px 8px;\r\n text-align: center;\r\n text-shadow: 0 -1px 0 #4c9021;\r\n width: 260px; \r\n}\r\n \r\na.webcraft-button:hover {\r\n   background-color: #76b347;\r\n   background-image: -webkit-gradient(linear, left top, left bottom, from(#76b347), to(#5e9e2e));\r\n   /* Saf4+, Chrome */\r\n   background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: -o-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: linear-gradient(top, #76b347, #5e9e2e);\r\n   -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   -moz-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   -ms-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   -o-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   cursor: pointer; \r\n   text-decoration: none;\r\n}\r\n\r\na.webcraft-button:active {\r\n   border: 1px solid #5b992b;\r\n   border-bottom: 1px solid #538c27;\r\n   -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   -moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   -ms-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   -o-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee; \r\n}",
+            "headers_color_light": "#0342b2",
+            "background": "",
+            "mentor_form_url": null,
+            "site_logo": "",
+            "logo": "images/sow_logo.png",
+            "menu_color": "#60a3ef",
+            "background_color": "#ffffff",
+            "slug": "school-of-webcraft",
+            "name": "School of Webcraft"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "schools.school",
+        "fields": {
+            "organizers": [],
+            "groups_icon": "",
+            "description": "<h1 class=\"school_header\"><b>School of the Mathematical Future</b></h1>\n\n<p>\n\t<strong>Pilot:</strong> This pilot for a P2PU School of Ed brings the model of open, community-based peer learning to professional development for K-12 teachers.</p>\n<p>\n\t<strong>Hands-on:</strong>\u00a0School of Ed is about hands-on learning driven by each educator's particular needs and classroom situations. It's about connecting, collaborating, and creating, not just reading or studying.</p>\n<p>\n\t<strong>Seven Courses:</strong> The pilot includes <u>seven free, online, open-licensed courses</u> that will be run between September and November, 2011. The content focus of these courses is on using innovative methods to encourage deeper learning for students. This will be modeled through innovative professional development courses focused on peer learning and hands-on, learner-driven tasks.</p>\n<p>\n\t<span style=\"font-size: 16px;\"><span style=\"color: rgb(255, 0, 0);\"><strong>Registration is now open for these courses.</strong></span></span><br>\n\t<br>\n\tAnyone can \u201cfollow\u201d a course. Applying to be a participant is the next level of commitment. In order to maintain a high level of engagement, the number of participants will be limited.<br>\n\t<br>\n\tIf you are planning to apply to be a participant:</p>\n<ul>\n\t<li>\n\t\tMake sure your P2PU profile is complete.</li>\n\t<li>\n\t\tRead the course's full description and syllabus, and make sure you can commit to the work involved.</li>\n\t<li>\n\t\tRead and answer the sign-up questions.<br>\n\t\t\u00a0</li>\n</ul>\n<p>\n\tSign-up close dates are listed below. Applicants will be notified of their status one week after the close dates.</p>\n<p>\n\t<strong>Courses start in September, 2011. </strong>(See individual courses for dates.)</p>\n<p>\n\tCourse titles include:</p>\n<ul>\n\t<li>\n\t\t<strong>Differentiating Instruction </strong>- <a href=\"http://p2pu.org/en/groups/differentiating-instruction-for-deeper-learning/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/differentiating-instruction-for-deeper-learning/\">sign-up open until Sept. 19</a> (click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Student Engagement </strong>- <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-engaging-students-and-checking-for-understanding/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-engaging-students-and-checking-for-understanding/\">sign-up open until Sept. 12 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>OER in the K-12 Classroom </strong>- <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-oer-in-k-12/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-oer-in-k-12/\">sign-up open until Sept. 19 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Teaching in </strong><strong>Online and </strong><strong>Blended Classrooms </strong>- <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-teaching-in-blended-and-online-classrooms/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-teaching-in-blended-and-online-classrooms/\">sign-up open until Sept. 12</a> (click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Multimedia and Graphics to Facilitate Deeper Learning </strong>- <a href=\"http://p2pu.org/en/groups/multimedia-and-graphics-to-facilitate-deeper-learning/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/multimedia-and-graphics-to-facilitate-deeper-learning/\">sign-up open until Oct. 3 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Writing &amp; Common Core: Deeper Learning for All </strong>- <a href=\"http://p2pu.org/en/groups/writing-common-core-deeper-learning-for-all/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/writing-common-core-deeper-learning-for-all/\">sign-up open until Sept. 26 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Using Web 2.0 and Social Media to Encourage Deeper Learning </strong>- <a href=\"http://p2pu.org/en/groups/using-web-20-and-social-media-to-encourage-deeper-learning/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/using-web-20-and-social-media-to-encourage-deeper-learning/\">sign-up open until Sept 19 </a>(click PARTICIPATE to apply)<br>\n\t\t<br>\n\t\t[embed:http://vimeo.com/27619552]<br>\n\t\t\u00a0</li>\n</ul>\n<p>\n\tAll courses in this school are free, open-licensed (CC BY), and online, with most courses running six weeks.</p>",
+            "short_name": "",
+            "sidebar_width": "245px",
+            "show_school_organizers": true,
+            "old_term_name": null,
+            "menu_color_light": "#4bd2c9",
+            "featured": [],
+            "headers_color": "#5a6579",
+            "mentee_form_url": null,
+            "extra_styles": "",
+            "headers_color_light": "#f08c00",
+            "background": "",
+            "mentor_form_url": null,
+            "site_logo": "",
+            "logo": "",
+            "menu_color": "#36cdc4",
+            "background_color": "#ffffff",
+            "slug": "school-of-ed-pilot",
+            "name": "School of Ed (pilot)"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": null,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [
+                2
+            ],
+            "detailed_description": 1,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [
+                1,
+                8,
+                9
+            ],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 1",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:01:34",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 2,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [
+                3
+            ],
+            "detailed_description": 5,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [
+                2,
+                8,
+                9
+            ],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-2",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 2",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:03:50",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 3,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [
+                4
+            ],
+            "detailed_description": 9,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [
+                3,
+                8,
+                9
+            ],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-3",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 3",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:05:54",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 4,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [
+                5
+            ],
+            "detailed_description": 13,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [
+                4,
+                8,
+                9
+            ],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-4",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 4",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:23:46",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 5,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [
+                6
+            ],
+            "detailed_description": 17,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [
+                5,
+                8,
+                9
+            ],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-5",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 5",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:24:42",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 6,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [
+                7
+            ],
+            "detailed_description": 21,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [
+                6,
+                8,
+                9
+            ],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-6",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 6",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:26:11",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 7,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": true,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": 25,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [
+                7,
+                8,
+                9
+            ],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-7",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 7",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:26:34",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 8,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": null,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": 29,
+            "long_description": "<p>\n\tThis course will teach you how to fly. I do want to warn everyone that this course is not for the faint of heart or fragile of bone!</p>\n<p>\n\tPlease excercise caution whenever following this course and don't, I repeat DON'T, skip any of the steps!!</p>",
+            "category": "course",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [],
+            "other": "",
+            "not_listed": false,
+            "short_description": "Learn how to fly",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "flying-101",
+            "imported_from": null,
+            "school": null,
+            "name": "Flying 101",
+            "language": "en",
+            "duration_minutes": null,
+            "created_on": "2012-04-05 09:15:50",
+            "duration_hours": null
+        }
+    },
+    {
+        "pk": 1,
+        "model": "projects.participation",
+        "fields": {
+            "no_organizers_wall_updates": false,
+            "left_on": null,
+            "no_participants_content_updates": false,
+            "project": 1,
+            "joined_on": "2011-10-13 02:01:35",
+            "no_participants_wall_updates": false,
+            "user": 1,
+            "adopter": false,
+            "organizing": true,
+            "no_organizers_content_updates": false
+        }
+    },
+    {
+        "pk": 2,
+        "model": "projects.participation",
+        "fields": {
+            "no_organizers_wall_updates": false,
+            "left_on": null,
+            "no_participants_content_updates": false,
+            "project": 2,
+            "joined_on": "2011-10-13 02:03:50",
+            "no_participants_wall_updates": false,
+            "user": 1,
+            "adopter": false,
+            "organizing": true,
+            "no_organizers_content_updates": false
+        }
+    },
+    {
+        "pk": 3,
+        "model": "projects.participation",
+        "fields": {
+            "no_organizers_wall_updates": false,
+            "left_on": null,
+            "no_participants_content_updates": false,
+            "project": 3,
+            "joined_on": "2011-10-13 02:05:54",
+            "no_participants_wall_updates": false,
+            "user": 1,
+            "adopter": false,
+            "organizing": true,
+            "no_organizers_content_updates": false
+        }
+    },
+    {
+        "pk": 4,
+        "model": "projects.participation",
+        "fields": {
+            "no_organizers_wall_updates": false,
+            "left_on": null,
+            "no_participants_content_updates": false,
+            "project": 4,
+            "joined_on": "2011-10-13 02:23:47",
+            "no_participants_wall_updates": false,
+            "user": 1,
+            "adopter": false,
+            "organizing": true,
+            "no_organizers_content_updates": false
+        }
+    },
+    {
+        "pk": 5,
+        "model": "projects.participation",
+        "fields": {
+            "no_organizers_wall_updates": false,
+            "left_on": null,
+            "no_participants_content_updates": false,
+            "project": 5,
+            "joined_on": "2011-10-13 02:24:42",
+            "no_participants_wall_updates": false,
+            "user": 1,
+            "adopter": false,
+            "organizing": true,
+            "no_organizers_content_updates": false
+        }
+    },
+    {
+        "pk": 6,
+        "model": "projects.participation",
+        "fields": {
+            "no_organizers_wall_updates": false,
+            "left_on": null,
+            "no_participants_content_updates": false,
+            "project": 6,
+            "joined_on": "2011-10-13 02:26:11",
+            "no_participants_wall_updates": false,
+            "user": 1,
+            "adopter": false,
+            "organizing": true,
+            "no_organizers_content_updates": false
+        }
+    },
+    {
+        "pk": 7,
+        "model": "projects.participation",
+        "fields": {
+            "no_organizers_wall_updates": false,
+            "left_on": null,
+            "no_participants_content_updates": false,
+            "project": 7,
+            "joined_on": "2011-10-13 02:26:34",
+            "no_participants_wall_updates": false,
+            "user": 1,
+            "adopter": false,
+            "organizing": true,
+            "no_organizers_content_updates": false
+        }
+    },
+    {
+        "pk": 8,
+        "model": "projects.participation",
+        "fields": {
+            "no_organizers_wall_updates": false,
+            "left_on": null,
+            "no_participants_content_updates": false,
+            "project": 8,
+            "joined_on": "2012-04-05 09:15:51",
+            "no_participants_wall_updates": false,
+            "user": 4,
+            "adopter": false,
+            "organizing": true,
+            "no_organizers_content_updates": false
+        }
+    },
+    {
+        "pk": 9,
+        "model": "projects.participation",
+        "fields": {
+            "no_organizers_wall_updates": false,
+            "left_on": null,
+            "no_participants_content_updates": false,
+            "project": 8,
+            "joined_on": "2012-04-05 09:25:24",
+            "no_participants_wall_updates": false,
+            "user": 2,
+            "adopter": false,
+            "organizing": true,
+            "no_organizers_content_updates": false
+        }
+    },
+    {
+        "pk": 1,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 1,
+            "collaborative": false,
+            "author": 1,
+            "deleted": false,
+            "index": 0,
+            "title": "Full Description",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:01:35",
+            "content": "\n\n\n<p><strong>Please fill out the  's full description.</strong> In this page you could:</p>\n\n<ul>\n    <li>Describe the purpose of the  and the learning goals for the tasks within.</li>\n\t<li>Describe your role in this  . What made you interested in this topic? What do you hope to achieve by organizing this  ? Are you an expert, enthusiastic or a novice?</li>\n\t<li>Include any prerequisite knowledge or skills needed to participate in the  , the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).</li>\n\t<li>Provided any other information that could be useful for people interested in joining the  . In what ways can participants expect to contribute to the creation of tasks and assessing each others\\' contributions? What will the final task comprise?</li>\n</ul>\n",
+            "badges_to_apply": [],
+            "listed": false,
+            "slug": "full-description"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "content.page",
+        "fields": {
+            "sub_header": "task1",
+            "project": 1,
+            "collaborative": false,
+            "author": 1,
+            "deleted": false,
+            "index": 1,
+            "title": "task1",
+            "minor_update": false,
+            "last_update": "2011-10-13 02:02:13",
+            "content": "<p>\n\ttask1</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task1"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "content.page",
+        "fields": {
+            "sub_header": "task2",
+            "project": 1,
+            "collaborative": false,
+            "author": 1,
+            "deleted": false,
+            "index": 2,
+            "title": "task2",
+            "minor_update": false,
+            "last_update": "2011-10-13 02:02:49",
+            "content": "<p>\n\ttask2</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task2"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "content.page",
+        "fields": {
+            "sub_header": "task3",
+            "project": 1,
+            "collaborative": false,
+            "author": 1,
+            "deleted": false,
+            "index": 3,
+            "title": "task3",
+            "minor_update": false,
+            "last_update": "2011-10-13 02:03:27",
+            "content": "<p>\n\ttask3</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task3"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 2,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 0,
+            "title": "Full Description",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:03:51",
+            "content": "\n\n\n<p><strong>Please fill out the  's full description.</strong> In this page you could:</p>\n\n<ul>\n    <li>Describe the purpose of the  and the learning goals for the tasks within.</li>\n\t<li>Describe your role in this  . What made you interested in this topic? What do you hope to achieve by organizing this  ? Are you an expert, enthusiastic or a novice?</li>\n\t<li>Include any prerequisite knowledge or skills needed to participate in the  , the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).</li>\n\t<li>Provided any other information that could be useful for people interested in joining the  . In what ways can participants expect to contribute to the creation of tasks and assessing each others\\' contributions? What will the final task comprise?</li>\n</ul>\n",
+            "badges_to_apply": [],
+            "listed": false,
+            "slug": "full-description"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 2,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 1,
+            "title": "task1",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:03:52",
+            "content": "<p>\n\ttask1</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task1"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 2,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 2,
+            "title": "task2",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:03:52",
+            "content": "<p>\n\ttask2</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task2"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 2,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 3,
+            "title": "task3",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:03:52",
+            "content": "<p>\n\ttask3</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task3"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 3,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 0,
+            "title": "Full Description",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:05:55",
+            "content": "\n\n\n<p><strong>Please fill out the  's full description.</strong> In this page you could:</p>\n\n<ul>\n    <li>Describe the purpose of the  and the learning goals for the tasks within.</li>\n\t<li>Describe your role in this  . What made you interested in this topic? What do you hope to achieve by organizing this  ? Are you an expert, enthusiastic or a novice?</li>\n\t<li>Include any prerequisite knowledge or skills needed to participate in the  , the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).</li>\n\t<li>Provided any other information that could be useful for people interested in joining the  . In what ways can participants expect to contribute to the creation of tasks and assessing each others\\' contributions? What will the final task comprise?</li>\n</ul>\n",
+            "badges_to_apply": [],
+            "listed": false,
+            "slug": "full-description"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 3,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 1,
+            "title": "task1",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:05:55",
+            "content": "<p>\n\ttask1</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task1"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 3,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 2,
+            "title": "task2",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:05:56",
+            "content": "<p>\n\ttask2</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task2"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 3,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 3,
+            "title": "task3",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:05:56",
+            "content": "<p>\n\ttask3</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task3"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 4,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 0,
+            "title": "Full Description",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:23:47",
+            "content": "\n\n\n<p><strong>Please fill out the  's full description.</strong> In this page you could:</p>\n\n<ul>\n    <li>Describe the purpose of the  and the learning goals for the tasks within.</li>\n\t<li>Describe your role in this  . What made you interested in this topic? What do you hope to achieve by organizing this  ? Are you an expert, enthusiastic or a novice?</li>\n\t<li>Include any prerequisite knowledge or skills needed to participate in the  , the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).</li>\n\t<li>Provided any other information that could be useful for people interested in joining the  . In what ways can participants expect to contribute to the creation of tasks and assessing each others\\' contributions? What will the final task comprise?</li>\n</ul>\n",
+            "badges_to_apply": [],
+            "listed": false,
+            "slug": "full-description"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 4,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 1,
+            "title": "task1",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:23:48",
+            "content": "<p>\n\ttask1</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task1"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 4,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 2,
+            "title": "task2",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:23:48",
+            "content": "<p>\n\ttask2</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task2"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 4,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 3,
+            "title": "task3",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:23:49",
+            "content": "<p>\n\ttask3</p>",
+            "badges_to_apply": [
+                15
+            ],
+            "listed": true,
+            "slug": "task3"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 5,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 0,
+            "title": "Full Description",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:24:43",
+            "content": "\n\n\n<p><strong>Please fill out the  's full description.</strong> In this page you could:</p>\n\n<ul>\n    <li>Describe the purpose of the  and the learning goals for the tasks within.</li>\n\t<li>Describe your role in this  . What made you interested in this topic? What do you hope to achieve by organizing this  ? Are you an expert, enthusiastic or a novice?</li>\n\t<li>Include any prerequisite knowledge or skills needed to participate in the  , the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).</li>\n\t<li>Provided any other information that could be useful for people interested in joining the  . In what ways can participants expect to contribute to the creation of tasks and assessing each others\\' contributions? What will the final task comprise?</li>\n</ul>\n",
+            "badges_to_apply": [],
+            "listed": false,
+            "slug": "full-description"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 5,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 1,
+            "title": "task1",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:24:44",
+            "content": "<p>\n\ttask1</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task1"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 5,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 2,
+            "title": "task2",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:24:44",
+            "content": "<p>\n\ttask2</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task2"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 5,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 3,
+            "title": "task3",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:24:44",
+            "content": "<p>\n\ttask3</p>",
+            "badges_to_apply": [
+                16
+            ],
+            "listed": true,
+            "slug": "task3"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 6,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 0,
+            "title": "Full Description",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:26:12",
+            "content": "\n\n\n<p><strong>Please fill out the  's full description.</strong> In this page you could:</p>\n\n<ul>\n    <li>Describe the purpose of the  and the learning goals for the tasks within.</li>\n\t<li>Describe your role in this  . What made you interested in this topic? What do you hope to achieve by organizing this  ? Are you an expert, enthusiastic or a novice?</li>\n\t<li>Include any prerequisite knowledge or skills needed to participate in the  , the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).</li>\n\t<li>Provided any other information that could be useful for people interested in joining the  . In what ways can participants expect to contribute to the creation of tasks and assessing each others\\' contributions? What will the final task comprise?</li>\n</ul>\n",
+            "badges_to_apply": [],
+            "listed": false,
+            "slug": "full-description"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 6,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 1,
+            "title": "task1",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:26:13",
+            "content": "<p>\n\ttask1</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task1"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 6,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 2,
+            "title": "task2",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:26:13",
+            "content": "<p>\n\ttask2</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task2"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 6,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 3,
+            "title": "task3",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:26:13",
+            "content": "<p>\n\ttask3</p>",
+            "badges_to_apply": [
+                17
+            ],
+            "listed": true,
+            "slug": "task3"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 7,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 0,
+            "title": "Full Description",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:26:35",
+            "content": "\n\n\n<p><strong>Please fill out the  's full description.</strong> In this page you could:</p>\n\n<ul>\n    <li>Describe the purpose of the  and the learning goals for the tasks within.</li>\n\t<li>Describe your role in this  . What made you interested in this topic? What do you hope to achieve by organizing this  ? Are you an expert, enthusiastic or a novice?</li>\n\t<li>Include any prerequisite knowledge or skills needed to participate in the  , the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).</li>\n\t<li>Provided any other information that could be useful for people interested in joining the  . In what ways can participants expect to contribute to the creation of tasks and assessing each others\\' contributions? What will the final task comprise?</li>\n</ul>\n",
+            "badges_to_apply": [],
+            "listed": false,
+            "slug": "full-description"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 7,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 1,
+            "title": "task1",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:26:35",
+            "content": "<p>\n\ttask1</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task1"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 7,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 2,
+            "title": "task2",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:26:36",
+            "content": "<p>\n\ttask2</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "task2"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 7,
+            "collaborative": true,
+            "author": 1,
+            "deleted": false,
+            "index": 3,
+            "title": "task3",
+            "minor_update": true,
+            "last_update": "2011-10-13 02:26:36",
+            "content": "<p>\n\ttask3</p>",
+            "badges_to_apply": [
+                18
+            ],
+            "listed": true,
+            "slug": "task3"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "content.page",
+        "fields": {
+            "sub_header": null,
+            "project": 8,
+            "collaborative": false,
+            "author": 4,
+            "deleted": false,
+            "index": 0,
+            "title": "Full Description",
+            "minor_update": true,
+            "last_update": "2012-04-05 09:15:51",
+            "content": "\n\n\n<p><strong>Please fill out the  course's full description.</strong> In this page you could:</p>\n\n<ul>\n    <li>Describe the purpose of the course and the learning goals for the tasks within.</li>\n\t<li>Describe your role in this  course. What made you interested in this topic? What do you hope to achieve by organizing this  course? Are you an expert, enthusiastic or a novice?</li>\n\t<li>Include any prerequisite knowledge or skills needed to participate in the  course, the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever).</li>\n\t<li>Provided any other information that could be useful for people interested in joining the  course. In what ways can participants expect to contribute to the creation of tasks and assessing each others\\' contributions? What will the final task comprise?</li>\n</ul>\n",
+            "badges_to_apply": [],
+            "listed": false,
+            "slug": "full-description"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "content.page",
+        "fields": {
+            "sub_header": "",
+            "project": 8,
+            "collaborative": false,
+            "author": 4,
+            "deleted": false,
+            "index": 1,
+            "title": "Falling",
+            "minor_update": false,
+            "last_update": "2012-04-05 09:25:07",
+            "content": "<p>\n\tFalling is the first step in flying. Although it is a step that is best when not completed!</p>\n<p>\n\tFor this task you need to practice falling.</p>\n<p>\n\tPlease do:</p>\n<ul>\n\t<li>\n\t\tFall onto you bed</li>\n\t<li>\n\t\tFall into a swimming pool (if you or somebody that is nearby and likes you can swim)</li>\n\t<li>\n\t\tFall onto soft grass</li>\n\t<li>\n\t\tFall in love</li>\n\t<li>\n\t\tFall into a large inheritance</li>\n</ul>\n<p>\n\tPlease don't:</p>\n<ul>\n\t<li>\n\t\tFall off your chair</li>\n\t<li>\n\t\tFall out off a tree</li>\n\t<li>\n\t\tFall from a building</li>\n\t<li>\n\t\tFall from higher than 1 meter (even less than one meter can hurt!)</li>\n\t<li>\n\t\tFall onto hard surfaces</li>\n\t<li>\n\t\tFall onto sharp objects</li>\n\t<li>\n\t\tFall for a email scam</li>\n</ul>\n<p>\n\tThe whole point of this task is to get comfortable with falling. Later on we will get comfortable with not completing the action!</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "falling"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "content.page",
+        "fields": {
+            "sub_header": "",
+            "project": 8,
+            "collaborative": false,
+            "author": 4,
+            "deleted": false,
+            "index": 2,
+            "title": "Jumping",
+            "minor_update": false,
+            "last_update": "2012-04-05 09:27:57",
+            "content": "<p>\n\tFalling requires that you are currently higher than the surface you are falling onto. This is not always possible, so sometimes you need to jump to change this situation. Jumps are typically followed by falling, although normally a less dramatic kind of falling</p>",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "jumping"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "content.page",
+        "fields": {
+            "sub_header": "",
+            "project": 8,
+            "collaborative": true,
+            "author": 4,
+            "deleted": false,
+            "index": 3,
+            "title": "Landing",
+            "minor_update": false,
+            "last_update": "2012-04-05 09:28:14",
+            "content": "",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "landing"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "content.page",
+        "fields": {
+            "sub_header": "",
+            "project": 8,
+            "collaborative": false,
+            "author": 4,
+            "deleted": false,
+            "index": 4,
+            "title": "Not landing - floating",
+            "minor_update": false,
+            "last_update": "2012-04-05 09:28:49",
+            "content": "",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "not-landing-floating"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "content.page",
+        "fields": {
+            "sub_header": "",
+            "project": 8,
+            "collaborative": false,
+            "author": 4,
+            "deleted": false,
+            "index": 5,
+            "title": "Negative falling (not the same as jumping)",
+            "minor_update": false,
+            "last_update": "2012-04-05 09:29:11",
+            "content": "",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "negative-falling-not-the-same-as-jumping"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "content.page",
+        "fields": {
+            "sub_header": "",
+            "project": 8,
+            "collaborative": false,
+            "author": 4,
+            "deleted": false,
+            "index": 6,
+            "title": "Advanced: Levitation",
+            "minor_update": false,
+            "last_update": "2012-04-05 09:29:33",
+            "content": "",
+            "badges_to_apply": [],
+            "listed": true,
+            "slug": "advanced-levitation"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "",
+            "description": "Badge awarded upon marking all Webmaking101's Introduce Yourself challenge tasks as completed.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/introduce-yourself.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                1
+            ],
+            "logic": 4,
+            "slug": "introduce-yourself",
+            "all_groups": false,
+            "name": "Introduce Yourself"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "",
+            "description": "Badge awarded upon marking all Webmaking101's Writing HTML by Hand challenge tasks as completed.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/writing-html-by-hand.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                2
+            ],
+            "logic": 4,
+            "slug": "writing-html-by-hand",
+            "all_groups": false,
+            "name": "Writing HTML by Hand"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "",
+            "description": "Badge awarded upon marking all Webmaking101's Choose Your Weapon challenge tasks as completed.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/text-editor.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                3
+            ],
+            "logic": 4,
+            "slug": "text-editor",
+            "all_groups": false,
+            "name": "Text Editor"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "",
+            "description": "Badge awarded upon marking all Webmaking101's HTML Hunting in the World Around You challenge tasks as completed.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/html-is-all-around-you.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                4
+            ],
+            "logic": 4,
+            "slug": "html-is-all-around-you",
+            "all_groups": false,
+            "name": "HTML is All Around You"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "",
+            "description": "Badge awarded upon marking all Webmaking101's Your Domain challenge tasks as completed.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/domain-name.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                5
+            ],
+            "logic": 4,
+            "slug": "domain-name",
+            "all_groups": false,
+            "name": "Domain Name"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "",
+            "description": "Badge awarded upon marking all Webmaking101's Your Hosting challenge tasks as completed.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/your-webspace.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                6
+            ],
+            "logic": 4,
+            "slug": "your-webspace",
+            "all_groups": false,
+            "name": "Your Webspace"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "",
+            "description": "Badge awarded upon marking all Webmaking101's You're Live challenge tasks as completed.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/you-re-live.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                7
+            ],
+            "logic": 4,
+            "slug": "you-re-live",
+            "all_groups": false,
+            "name": "You're LIVE"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "",
+            "description": "This Badge is automatically awarded to you upon marking all Webmaking101 challenge tasks as completed.",
+            "creator": null,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "image": "images/sow_badges/webmaking101-basic.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "logic": 4,
+            "slug": "webmaking101-basic",
+            "all_groups": false,
+            "name": "Webmaking101 Basic"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You need to mark all tasks as completed in at least one Webmaking101's challenge.",
+            "description": "This Badge is automatically awarded to you for helping us test the Beta Webmaking101 challenges!",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/beta-hero.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "logic": 4,
+            "slug": "beta-hero",
+            "all_groups": false,
+            "name": "Beta Hero"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You need at least 1 peer to award you this badge.",
+            "description": "Badge awarded by peers as a way to say hello (wave) to each other.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/wave.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                1
+            ],
+            "logic": 2,
+            "slug": "wave",
+            "all_groups": false,
+            "name": "Wave"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You need at least 1 peer to say that you consistently write informative, engaging and well presented blog posts while explain clearly and concisely concepts to various audiences.",
+            "description": "The Super Blogger Badge recognizes the ability to consistently write informative, engaging and well presented blog posts while explain clearly and concisely concepts to various audiences.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/super-blogger.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ],
+            "logic": 3,
+            "slug": "super-blogger",
+            "all_groups": false,
+            "name": "Super Blogger"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You need at least 1 peer to say that you provide helpful and interesting feedback while maintaining a respectful tone.",
+            "description": "The Helpful Feedback Badge recognizes the ability to provide helpful and interesting feedback while maintaining a respectful tone.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/helpful-feedback.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [],
+            "logic": 2,
+            "slug": "helpful-feedback",
+            "all_groups": true,
+            "name": "Helpful Feedback"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You need at least 1 peer to say that you help push work forward within the community and motivate other team members to do so.",
+            "description": "The Team Player badge recognizes members who help push work forward within the community and motivate other team members to do so.",
+            "creator": null,
+            "prerequisites": [
+                12
+            ],
+            "image": "images/sow_badges/team-player.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [],
+            "logic": 2,
+            "slug": "team-player",
+            "all_groups": true,
+            "name": "Team Player"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You need at least 1 peer to say that you create multiple representations such as text, diagrams, media, sketches, physical forms to record and express ideas in creative ways.",
+            "description": "Learners create multiple representations such as text, diagrams, media, sketches, physical forms to record and express ideas in creative ways.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/creative-presentation.png",
+            "rubrics": [],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                4,
+                5
+            ],
+            "logic": 3,
+            "slug": "creative-presentation",
+            "all_groups": false,
+            "name": "Creative Presentation"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "More than 3 peers -- by an average rating of 3 -- have said that you can use the Mozilla Developer Network HTML reference [0] to identify and use basic HTML tags , translate HTML tags like <div>, <p> into real world structures.",
+            "description": "The HTML Basic Badge recognizes the ability to write an html page by making basic use of HTML tags.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/html-basic.png",
+            "rubrics": [
+                1,
+                2
+            ],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                4
+            ],
+            "logic": 1,
+            "slug": "html-basic",
+            "all_groups": false,
+            "name": "HTML Basic"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "More than 3 peers -- by an average rating of 3 -- have said that you can communicate what DNS is by using different types of media, have a domain name that can be used to further explore DNS.",
+            "description": "The DNS Badge recognizes the ability to describe what DNS is and how it works.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/dns-basic.png",
+            "rubrics": [
+                3,
+                4
+            ],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                5
+            ],
+            "logic": 1,
+            "slug": "dns-basic",
+            "all_groups": false,
+            "name": "DNS Basic"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "More than 3 peers -- by an average rating of 3 -- have said that you can configure a DNS to point at a personal hosting account, provide valuable information on web hosting services.",
+            "description": "The Hosting Badge recognizes the ability to implement web hosting services to set up your own domain.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/hosting.png",
+            "rubrics": [
+                5,
+                6
+            ],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                6
+            ],
+            "logic": 1,
+            "slug": "hosting",
+            "all_groups": false,
+            "name": "Hosting"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "More than 3 peers -- by an average rating of 3 -- have said that you can install an FTP or SFTP client, upload content that is visible live in a browser.",
+            "description": "The Publishing Badge recognizes the ability to take content from a local computer, publish it live on the web and be able to view it in a browser.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/publishing.png",
+            "rubrics": [
+                7,
+                8
+            ],
+            "created_on": "2011-10-02 22:28:29",
+            "groups": [
+                7
+            ],
+            "logic": 1,
+            "slug": "publishing",
+            "all_groups": false,
+            "name": "Publishing"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You have organized a course or a study group with at least one person completing it. This is a manually awarded badge. ",
+            "description": "The Organizer badge recognizes anyone at P2PU who has organized a course or a study group with at least one person completing it.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/organizer.png",
+            "rubrics": [],
+            "created_on": "2011-10-25 22:28:29",
+            "groups": [],
+            "logic": 5,
+            "slug": "organizer",
+            "all_groups": false,
+            "name": "Organizer"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You have authored a challenge. This is a manually awarded badge.",
+            "description": "The challenge creator recognizes anyone who has authored a challenge.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/challenge-creator.png",
+            "rubrics": [],
+            "created_on": "2011-10-25 22:28:29",
+            "groups": [],
+            "logic": 5,
+            "slug": "challenge-creator",
+            "all_groups": false,
+            "name": "Challenge Creator"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You have signed up to help others learn on a one-on-one basis. This is a manually awarded badge.",
+            "description": "The Mentor badge recognizes peers who have signed up to help others learn on a one-on-one basis.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/mentor.png",
+            "rubrics": [],
+            "created_on": "2011-10-25 22:28:29",
+            "groups": [],
+            "logic": 5,
+            "slug": "mentor",
+            "all_groups": false,
+            "name": "Mentor"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "badges.badge",
+        "fields": {
+            "requirements": "You have offered your help in a challenge after completing all its tasks. This is a manually awarded badge.",
+            "description": "The Adopter Badge recognizes community members who have adopted a challenge.",
+            "creator": null,
+            "prerequisites": [],
+            "image": "images/sow_badges/adopter.png",
+            "rubrics": [],
+            "created_on": "2011-10-25 22:28:29",
+            "groups": [],
+            "logic": 5,
+            "slug": "adopter",
+            "all_groups": false,
+            "name": "Adopter"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "use the Mozilla Developer Network HTML reference [0] to identify and use basic HTML tags "
+        }
+    },
+    {
+        "pk": 2,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "translate HTML tags like <div>, <p> into real world structures"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "communicate what DNS is by using  different types of media"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "have a domain name that can be used to further explore DNS"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "configure a DNS to point at a personal hosting account"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "provide valuable information on web hosting services"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "install an FTP or SFTP client"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "upload content that is visible live in a browser"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 3,
+            "unique": true,
+            "min_votes": 3,
+            "name": "skill badge",
+            "submission_style": "submission_required"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 0,
+            "unique": false,
+            "min_votes": 1,
+            "name": "community badge",
+            "submission_style": "no_submissions"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 0,
+            "unique": false,
+            "min_votes": 1,
+            "name": "submission-enabled community badge",
+            "submission_style": "submission_optional"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 0,
+            "unique": true,
+            "min_votes": 0,
+            "name": "stealth badge",
+            "submission_style": "no_submissions"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 0,
+            "unique": true,
+            "min_votes": 0,
+            "name": "staff awarded badge",
+            "submission_style": "no_submissions"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "tags.generaltag",
+        "fields": {
+            "name": "fun",
+            "slug": "fun"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tags.generaltag",
+        "fields": {
+            "name": "crazy",
+            "slug": "crazy"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tags.generaltag",
+        "fields": {
+            "name": "flying",
+            "slug": "flying"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "tags.generaltaggeditem",
+        "fields": {
+            "tag": 1,
+            "content_type": 23,
+            "object_id": 8
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tags.generaltaggeditem",
+        "fields": {
+            "tag": 2,
+            "content_type": 23,
+            "object_id": 8
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tags.generaltaggeditem",
+        "fields": {
+            "tag": 3,
+            "content_type": 23,
+            "object_id": 8
+        }
+    },
+    {
+        "pk": 85,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_signupanswer",
+            "name": "Can add signup answer",
+            "content_type": 29
+        }
+    },
+    {
+        "pk": 86,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_signupanswer",
+            "name": "Can change signup answer",
+            "content_type": 29
+        }
+    },
+    {
+        "pk": 87,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_signupanswer",
+            "name": "Can delete signup answer",
+            "content_type": 29
+        }
+    },
+    {
+        "pk": 88,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_generaltag",
+            "name": "Can add Tag",
+            "content_type": 30
+        }
+    },
+    {
+        "pk": 89,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_generaltag",
+            "name": "Can change Tag",
+            "content_type": 30
+        }
+    },
+    {
+        "pk": 90,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_generaltag",
+            "name": "Can delete Tag",
+            "content_type": 30
+        }
+    },
+    {
+        "pk": 25,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_logentry",
+            "name": "Can add log entry",
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 26,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_logentry",
+            "name": "Can change log entry",
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 27,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_logentry",
+            "name": "Can delete log entry",
+            "content_type": 9
+        }
+    },
+    {
+        "pk": 7,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_group",
+            "name": "Can add group",
+            "content_type": 3
+        }
+    },
+    {
+        "pk": 8,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_group",
+            "name": "Can change group",
+            "content_type": 3
+        }
+    },
+    {
+        "pk": 9,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_group",
+            "name": "Can delete group",
+            "content_type": 3
+        }
+    },
+    {
+        "pk": 13,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_message",
+            "name": "Can add message",
+            "content_type": 5
+        }
+    },
+    {
+        "pk": 14,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_message",
+            "name": "Can change message",
+            "content_type": 5
+        }
+    },
+    {
+        "pk": 15,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_message",
+            "name": "Can delete message",
+            "content_type": 5
+        }
+    },
+    {
+        "pk": 4,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_permission",
+            "name": "Can add permission",
+            "content_type": 2
+        }
+    },
+    {
+        "pk": 5,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_permission",
+            "name": "Can change permission",
+            "content_type": 2
+        }
+    },
+    {
+        "pk": 6,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_permission",
+            "name": "Can delete permission",
+            "content_type": 2
+        }
+    },
+    {
+        "pk": 10,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_user",
+            "name": "Can add user",
+            "content_type": 4
+        }
+    },
+    {
+        "pk": 11,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_user",
+            "name": "Can change user",
+            "content_type": 4
+        }
+    },
+    {
+        "pk": 12,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_user",
+            "name": "Can delete user",
+            "content_type": 4
+        }
+    },
+    {
+        "pk": 154,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_pageviewmetrics",
+            "name": "Can add page view metrics",
+            "content_type": 52
+        }
+    },
+    {
+        "pk": 155,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_pageviewmetrics",
+            "name": "Can change page view metrics",
+            "content_type": 52
+        }
+    },
+    {
+        "pk": 156,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_pageviewmetrics",
+            "name": "Can delete page view metrics",
+            "content_type": 52
+        }
+    },
+    {
+        "pk": 160,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_rubric",
+            "name": "Can add rubric",
+            "content_type": 54
+        }
+    },
+    {
+        "pk": 161,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_rubric",
+            "name": "Can change rubric",
+            "content_type": 54
+        }
+    },
+    {
+        "pk": 162,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_rubric",
+            "name": "Can delete rubric",
+            "content_type": 54
+        }
+    },
+    {
+        "pk": 142,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_feedentry",
+            "name": "Can add feed entry",
+            "content_type": 48
+        }
+    },
+    {
+        "pk": 143,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_feedentry",
+            "name": "Can change feed entry",
+            "content_type": 48
+        }
+    },
+    {
+        "pk": 144,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_feedentry",
+            "name": "Can delete feed entry",
+            "content_type": 48
+        }
+    },
+    {
+        "pk": 148,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_remoteobject",
+            "name": "Can add remote object",
+            "content_type": 50
+        }
+    },
+    {
+        "pk": 149,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_remoteobject",
+            "name": "Can change remote object",
+            "content_type": 50
+        }
+    },
+    {
+        "pk": 150,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_remoteobject",
+            "name": "Can delete remote object",
+            "content_type": 50
+        }
+    },
+    {
+        "pk": 157,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_badge",
+            "name": "Can add badge",
+            "content_type": 53
+        }
+    },
+    {
+        "pk": 158,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_badge",
+            "name": "Can change badge",
+            "content_type": 53
+        }
+    },
+    {
+        "pk": 159,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_badge",
+            "name": "Can delete badge",
+            "content_type": 53
+        }
+    },
+    {
+        "pk": 145,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_activity",
+            "name": "Can add activity",
+            "content_type": 49
+        }
+    },
+    {
+        "pk": 146,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_activity",
+            "name": "Can change activity",
+            "content_type": 49
+        }
+    },
+    {
+        "pk": 147,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_activity",
+            "name": "Can delete activity",
+            "content_type": 49
+        }
+    },
+    {
+        "pk": 151,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_pageview",
+            "name": "Can add page view",
+            "content_type": 51
+        }
+    },
+    {
+        "pk": 152,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_pageview",
+            "name": "Can change page view",
+            "content_type": 51
+        }
+    },
+    {
+        "pk": 153,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_pageview",
+            "name": "Can delete page view",
+            "content_type": 51
+        }
+    },
+    {
+        "pk": 121,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_accountpreferences",
+            "name": "Can add account preferences",
+            "content_type": 41
+        }
+    },
+    {
+        "pk": 122,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_accountpreferences",
+            "name": "Can change account preferences",
+            "content_type": 41
+        }
+    },
+    {
+        "pk": 123,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_accountpreferences",
+            "name": "Can delete account preferences",
+            "content_type": 41
+        }
+    },
+    {
+        "pk": 124,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_status",
+            "name": "Can add status",
+            "content_type": 42
+        }
+    },
+    {
+        "pk": 125,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_status",
+            "name": "Can change status",
+            "content_type": 42
+        }
+    },
+    {
+        "pk": 126,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_status",
+            "name": "Can delete status",
+            "content_type": 42
+        }
+    },
+    {
+        "pk": 16,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_contenttype",
+            "name": "Can add content type",
+            "content_type": 6
+        }
+    },
+    {
+        "pk": 17,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_contenttype",
+            "name": "Can change content type",
+            "content_type": 6
+        }
+    },
+    {
+        "pk": 18,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_contenttype",
+            "name": "Can delete content type",
+            "content_type": 6
+        }
+    },
+    {
+        "pk": 49,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_tasksetmeta",
+            "name": "Can add taskset meta",
+            "content_type": 17
+        }
+    },
+    {
+        "pk": 50,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_tasksetmeta",
+            "name": "Can change taskset meta",
+            "content_type": 17
+        }
+    },
+    {
+        "pk": 51,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_tasksetmeta",
+            "name": "Can delete taskset meta",
+            "content_type": 17
+        }
+    },
+    {
+        "pk": 46,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_taskmeta",
+            "name": "Can add task meta",
+            "content_type": 16
+        }
+    },
+    {
+        "pk": 47,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_taskmeta",
+            "name": "Can change task meta",
+            "content_type": 16
+        }
+    },
+    {
+        "pk": 48,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_taskmeta",
+            "name": "Can delete task meta",
+            "content_type": 16
+        }
+    },
+    {
+        "pk": 52,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_intervalschedule",
+            "name": "Can add interval",
+            "content_type": 18
+        }
+    },
+    {
+        "pk": 53,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_intervalschedule",
+            "name": "Can change interval",
+            "content_type": 18
+        }
+    },
+    {
+        "pk": 54,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_intervalschedule",
+            "name": "Can delete interval",
+            "content_type": 18
+        }
+    },
+    {
+        "pk": 103,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_school",
+            "name": "Can add school",
+            "content_type": 35
+        }
+    },
+    {
+        "pk": 104,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_school",
+            "name": "Can change school",
+            "content_type": 35
+        }
+    },
+    {
+        "pk": 105,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_school",
+            "name": "Can delete school",
+            "content_type": 35
+        }
+    },
+    {
+        "pk": 100,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_userprofile",
+            "name": "Can add user profile",
+            "content_type": 34
+        }
+    },
+    {
+        "pk": 101,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_userprofile",
+            "name": "Can change user profile",
+            "content_type": 34
+        }
+    },
+    {
+        "pk": 102,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_userprofile",
+            "name": "Can delete user profile",
+            "content_type": 34
+        }
+    },
+    {
+        "pk": 109,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_participation",
+            "name": "Can add participation",
+            "content_type": 37
+        }
+    },
+    {
+        "pk": 110,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_participation",
+            "name": "Can change participation",
+            "content_type": 37
+        }
+    },
+    {
+        "pk": 111,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_participation",
+            "name": "Can delete participation",
+            "content_type": 37
+        }
+    },
+    {
+        "pk": 106,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_project",
+            "name": "Can add group",
+            "content_type": 36
+        }
+    },
+    {
+        "pk": 107,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_project",
+            "name": "Can change group",
+            "content_type": 36
+        }
+    },
+    {
+        "pk": 108,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_project",
+            "name": "Can delete group",
+            "content_type": 36
+        }
+    },
+    {
+        "pk": 94,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_profiletag",
+            "name": "Can add profile tag",
+            "content_type": 32
+        }
+    },
+    {
+        "pk": 95,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_profiletag",
+            "name": "Can change profile tag",
+            "content_type": 32
+        }
+    },
+    {
+        "pk": 96,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_profiletag",
+            "name": "Can delete profile tag",
+            "content_type": 32
+        }
+    },
+    {
+        "pk": 97,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_taggedprofile",
+            "name": "Can add Tagged User Profile",
+            "content_type": 33
+        }
+    },
+    {
+        "pk": 98,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_taggedprofile",
+            "name": "Can change Tagged User Profile",
+            "content_type": 33
+        }
+    },
+    {
+        "pk": 99,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_taggedprofile",
+            "name": "Can delete Tagged User Profile",
+            "content_type": 33
+        }
+    },
+    {
+        "pk": 115,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_page",
+            "name": "Can add page",
+            "content_type": 39
+        }
+    },
+    {
+        "pk": 116,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_page",
+            "name": "Can change page",
+            "content_type": 39
+        }
+    },
+    {
+        "pk": 117,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_page",
+            "name": "Can delete page",
+            "content_type": 39
+        }
+    },
+    {
+        "pk": 112,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_perusertaskcompletion",
+            "name": "Can add per user task completion",
+            "content_type": 38
+        }
+    },
+    {
+        "pk": 113,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_perusertaskcompletion",
+            "name": "Can change per user task completion",
+            "content_type": 38
+        }
+    },
+    {
+        "pk": 114,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_perusertaskcompletion",
+            "name": "Can delete per user task completion",
+            "content_type": 38
+        }
+    },
+    {
+        "pk": 82,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_signup",
+            "name": "Can add signup",
+            "content_type": 28
+        }
+    },
+    {
+        "pk": 83,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_signup",
+            "name": "Can change signup",
+            "content_type": 28
+        }
+    },
+    {
+        "pk": 84,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_signup",
+            "name": "Can delete signup",
+            "content_type": 28
+        }
+    },
+    {
+        "pk": 22,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_message",
+            "name": "Can add Message",
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 23,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_message",
+            "name": "Can change Message",
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 24,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_message",
+            "name": "Can delete Message",
+            "content_type": 8
+        }
+    },
+    {
+        "pk": 163,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_logic",
+            "name": "Can add logic",
+            "content_type": 55
+        }
+    },
+    {
+        "pk": 164,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_logic",
+            "name": "Can change logic",
+            "content_type": 55
+        }
+    },
+    {
+        "pk": 165,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_logic",
+            "name": "Can delete logic",
+            "content_type": 55
+        }
+    },
+    {
+        "pk": 166,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_progress",
+            "name": "Can add progress",
+            "content_type": 56
+        }
+    },
+    {
+        "pk": 167,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_progress",
+            "name": "Can change progress",
+            "content_type": 56
+        }
+    },
+    {
+        "pk": 168,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_progress",
+            "name": "Can delete progress",
+            "content_type": 56
+        }
+    },
+    {
+        "pk": 91,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_generaltaggeditem",
+            "name": "Can add Tagged Item",
+            "content_type": 31
+        }
+    },
+    {
+        "pk": 92,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_generaltaggeditem",
+            "name": "Can change Tagged Item",
+            "content_type": 31
+        }
+    },
+    {
+        "pk": 93,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_generaltaggeditem",
+            "name": "Can delete Tagged Item",
+            "content_type": 31
+        }
+    },
+    {
+        "pk": 70,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_nonce",
+            "name": "Can add nonce",
+            "content_type": 24
+        }
+    },
+    {
+        "pk": 71,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_nonce",
+            "name": "Can change nonce",
+            "content_type": 24
+        }
+    },
+    {
+        "pk": 72,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_nonce",
+            "name": "Can delete nonce",
+            "content_type": 24
+        }
+    },
+    {
+        "pk": 73,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_association",
+            "name": "Can add association",
+            "content_type": 25
+        }
+    },
+    {
+        "pk": 74,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_association",
+            "name": "Can change association",
+            "content_type": 25
+        }
+    },
+    {
+        "pk": 75,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_association",
+            "name": "Can delete association",
+            "content_type": 25
+        }
+    },
+    {
+        "pk": 67,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_taskstate",
+            "name": "Can add task",
+            "content_type": 23
+        }
+    },
+    {
+        "pk": 68,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_taskstate",
+            "name": "Can change task",
+            "content_type": 23
+        }
+    },
+    {
+        "pk": 69,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_taskstate",
+            "name": "Can delete task",
+            "content_type": 23
+        }
+    },
+    {
+        "pk": 28,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_redirect",
+            "name": "Can add redirect",
+            "content_type": 10
+        }
+    },
+    {
+        "pk": 29,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_redirect",
+            "name": "Can change redirect",
+            "content_type": 10
+        }
+    },
+    {
+        "pk": 30,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_redirect",
+            "name": "Can delete redirect",
+            "content_type": 10
+        }
+    },
+    {
+        "pk": 76,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_useropenid",
+            "name": "Can add user open id",
+            "content_type": 26
+        }
+    },
+    {
+        "pk": 77,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_useropenid",
+            "name": "Can change user open id",
+            "content_type": 26
+        }
+    },
+    {
+        "pk": 78,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_useropenid",
+            "name": "Can delete user open id",
+            "content_type": 26
+        }
+    },
+    {
+        "pk": 127,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_relationship",
+            "name": "Can add relationship",
+            "content_type": 43
+        }
+    },
+    {
+        "pk": 128,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_relationship",
+            "name": "Can change relationship",
+            "content_type": 43
+        }
+    },
+    {
+        "pk": 129,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_relationship",
+            "name": "Can delete relationship",
+            "content_type": 43
+        }
+    },
+    {
+        "pk": 190,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_review",
+            "name": "Can add review",
+            "content_type": 64
+        }
+    },
+    {
+        "pk": 191,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_review",
+            "name": "Can change review",
+            "content_type": 64
+        }
+    },
+    {
+        "pk": 192,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_review",
+            "name": "Can delete review",
+            "content_type": 64
+        }
+    },
+    {
+        "pk": 187,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_reviewer",
+            "name": "Can add reviewer",
+            "content_type": 63
+        }
+    },
+    {
+        "pk": 188,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_reviewer",
+            "name": "Can change reviewer",
+            "content_type": 63
+        }
+    },
+    {
+        "pk": 189,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_reviewer",
+            "name": "Can delete reviewer",
+            "content_type": 63
+        }
+    },
+    {
+        "pk": 118,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_pageversion",
+            "name": "Can add page version",
+            "content_type": 40
+        }
+    },
+    {
+        "pk": 119,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_pageversion",
+            "name": "Can change page version",
+            "content_type": 40
+        }
+    },
+    {
+        "pk": 120,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_pageversion",
+            "name": "Can delete page version",
+            "content_type": 40
+        }
+    },
+    {
+        "pk": 139,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_page",
+            "name": "Can add page",
+            "content_type": 47
+        }
+    },
+    {
+        "pk": 140,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_page",
+            "name": "Can change page",
+            "content_type": 47
+        }
+    },
+    {
+        "pk": 141,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_page",
+            "name": "Can delete page",
+            "content_type": 47
+        }
+    },
+    {
+        "pk": 136,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_link",
+            "name": "Can add link",
+            "content_type": 46
+        }
+    },
+    {
+        "pk": 137,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_link",
+            "name": "Can change link",
+            "content_type": 46
+        }
+    },
+    {
+        "pk": 138,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_link",
+            "name": "Can delete link",
+            "content_type": 46
+        }
+    },
+    {
+        "pk": 19,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_session",
+            "name": "Can add session",
+            "content_type": 7
+        }
+    },
+    {
+        "pk": 20,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_session",
+            "name": "Can change session",
+            "content_type": 7
+        }
+    },
+    {
+        "pk": 21,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_session",
+            "name": "Can delete session",
+            "content_type": 7
+        }
+    },
+    {
+        "pk": 130,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_pagecomment",
+            "name": "Can add page comment",
+            "content_type": 44
+        }
+    },
+    {
+        "pk": 131,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_pagecomment",
+            "name": "Can change page comment",
+            "content_type": 44
+        }
+    },
+    {
+        "pk": 132,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_pagecomment",
+            "name": "Can delete page comment",
+            "content_type": 44
+        }
+    },
+    {
+        "pk": 133,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_embeddedurl",
+            "name": "Can add embedded url",
+            "content_type": 45
+        }
+    },
+    {
+        "pk": 134,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_embeddedurl",
+            "name": "Can change embedded url",
+            "content_type": 45
+        }
+    },
+    {
+        "pk": 135,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_embeddedurl",
+            "name": "Can delete embedded url",
+            "content_type": 45
+        }
+    },
+    {
+        "pk": 1,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_site",
+            "name": "Can add site",
+            "content_type": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_site",
+            "name": "Can change site",
+            "content_type": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_site",
+            "name": "Can delete site",
+            "content_type": 1
+        }
+    },
+    {
+        "pk": 31,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_migrationhistory",
+            "name": "Can add migration history",
+            "content_type": 11
+        }
+    },
+    {
+        "pk": 32,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_migrationhistory",
+            "name": "Can change migration history",
+            "content_type": 11
+        }
+    },
+    {
+        "pk": 33,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_migrationhistory",
+            "name": "Can delete migration history",
+            "content_type": 11
+        }
+    },
+    {
+        "pk": 79,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_vote",
+            "name": "Can add vote",
+            "content_type": 27
+        }
+    },
+    {
+        "pk": 80,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_vote",
+            "name": "Can change vote",
+            "content_type": 27
+        }
+    },
+    {
+        "pk": 81,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_vote",
+            "name": "Can delete vote",
+            "content_type": 27
+        }
+    },
+    {
+        "pk": 43,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_subscription",
+            "name": "Can add subscription",
+            "content_type": 15
+        }
+    },
+    {
+        "pk": 44,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_subscription",
+            "name": "Can change subscription",
+            "content_type": 15
+        }
+    },
+    {
+        "pk": 45,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_subscription",
+            "name": "Can delete subscription",
+            "content_type": 15
+        }
+    },
+    {
+        "pk": 37,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_tag",
+            "name": "Can add Tag",
+            "content_type": 13
+        }
+    },
+    {
+        "pk": 38,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_tag",
+            "name": "Can change Tag",
+            "content_type": 13
+        }
+    },
+    {
+        "pk": 39,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_tag",
+            "name": "Can delete Tag",
+            "content_type": 13
+        }
+    },
+    {
+        "pk": 40,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_taggeditem",
+            "name": "Can add Tagged Item",
+            "content_type": 14
+        }
+    },
+    {
+        "pk": 41,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_taggeditem",
+            "name": "Can change Tagged Item",
+            "content_type": 14
+        }
+    },
+    {
+        "pk": 42,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_taggeditem",
+            "name": "Can delete Tagged Item",
+            "content_type": 14
+        }
+    },
+    {
+        "pk": 169,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_submission",
+            "name": "Can add submission",
+            "content_type": 57
+        }
+    },
+    {
+        "pk": 170,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_submission",
+            "name": "Can change submission",
+            "content_type": 57
+        }
+    },
+    {
+        "pk": 171,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_submission",
+            "name": "Can delete submission",
+            "content_type": 57
+        }
+    },
+    {
+        "pk": 172,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_assessment",
+            "name": "Can add assessment",
+            "content_type": 58
+        }
+    },
+    {
+        "pk": 173,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_assessment",
+            "name": "Can change assessment",
+            "content_type": 58
+        }
+    },
+    {
+        "pk": 174,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_assessment",
+            "name": "Can delete assessment",
+            "content_type": 58
+        }
+    },
+    {
+        "pk": 178,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_award",
+            "name": "Can add award",
+            "content_type": 60
+        }
+    },
+    {
+        "pk": 179,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_award",
+            "name": "Can change award",
+            "content_type": 60
+        }
+    },
+    {
+        "pk": 180,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_award",
+            "name": "Can delete award",
+            "content_type": 60
+        }
+    },
+    {
+        "pk": 175,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_rating",
+            "name": "Can add rating",
+            "content_type": 59
+        }
+    },
+    {
+        "pk": 176,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_rating",
+            "name": "Can change rating",
+            "content_type": 59
+        }
+    },
+    {
+        "pk": 177,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_rating",
+            "name": "Can delete rating",
+            "content_type": 59
+        }
+    },
+    {
+        "pk": 181,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_pageview",
+            "name": "Can add page view",
+            "content_type": 61
+        }
+    },
+    {
+        "pk": 182,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_pageview",
+            "name": "Can change page view",
+            "content_type": 61
+        }
+    },
+    {
+        "pk": 183,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_pageview",
+            "name": "Can delete page view",
+            "content_type": 61
+        }
+    },
+    {
+        "pk": 184,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_pageviewmetrics",
+            "name": "Can add page view metrics",
+            "content_type": 62
+        }
+    },
+    {
+        "pk": 185,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_pageviewmetrics",
+            "name": "Can change page view metrics",
+            "content_type": 62
+        }
+    },
+    {
+        "pk": 186,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_pageviewmetrics",
+            "name": "Can delete page view metrics",
+            "content_type": 62
+        }
+    },
+    {
+        "pk": 58,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_periodictasks",
+            "name": "Can add periodic tasks",
+            "content_type": 20
+        }
+    },
+    {
+        "pk": 59,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_periodictasks",
+            "name": "Can change periodic tasks",
+            "content_type": 20
+        }
+    },
+    {
+        "pk": 60,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_periodictasks",
+            "name": "Can delete periodic tasks",
+            "content_type": 20
+        }
+    },
+    {
+        "pk": 61,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_periodictask",
+            "name": "Can add periodic task",
+            "content_type": 21
+        }
+    },
+    {
+        "pk": 62,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_periodictask",
+            "name": "Can change periodic task",
+            "content_type": 21
+        }
+    },
+    {
+        "pk": 63,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_periodictask",
+            "name": "Can delete periodic task",
+            "content_type": 21
+        }
+    },
+    {
+        "pk": 64,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_workerstate",
+            "name": "Can add worker",
+            "content_type": 22
+        }
+    },
+    {
+        "pk": 65,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_workerstate",
+            "name": "Can change worker",
+            "content_type": 22
+        }
+    },
+    {
+        "pk": 66,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_workerstate",
+            "name": "Can delete worker",
+            "content_type": 22
+        }
+    },
+    {
+        "pk": 55,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_crontabschedule",
+            "name": "Can add crontab",
+            "content_type": 19
+        }
+    },
+    {
+        "pk": 56,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_crontabschedule",
+            "name": "Can change crontab",
+            "content_type": 19
+        }
+    },
+    {
+        "pk": 57,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_crontabschedule",
+            "name": "Can delete crontab",
+            "content_type": 19
+        }
+    },
+    {
+        "pk": 34,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "add_resource",
+            "name": "Can add resource",
+            "content_type": 12
+        }
+    },
+    {
+        "pk": 35,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "change_resource",
+            "name": "Can change resource",
+            "content_type": 12
+        }
+    },
+    {
+        "pk": 36,
+        "model": "auth.permission",
+        "fields": {
+            "codename": "delete_resource",
+            "name": "Can delete resource",
+            "content_type": 12
+        }
+    },
+    {
+        "pk": 1,
+        "model": "auth.user",
+        "fields": {
+            "username": "administrator",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": true,
+            "is_staff": true,
+            "last_login": "2012-04-05 09:35:20",
+            "groups": [],
+            "user_permissions": [],
+            "password": "",
+            "email": "address1@example.com",
+            "date_joined": "2011-10-13 02:01:04"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "auth.user",
+        "fields": {
+            "username": "user1",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2012-04-05 09:09:17",
+            "groups": [],
+            "user_permissions": [],
+            "password": "",
+            "email": "user1@mail.com",
+            "date_joined": "2012-04-05 09:09:17"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "auth.user",
+        "fields": {
+            "username": "user2",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2012-04-05 09:10:30",
+            "groups": [],
+            "user_permissions": [],
+            "password": "",
+            "email": "user2@mail.com",
+            "date_joined": "2012-04-05 09:10:29"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "auth.user",
+        "fields": {
+            "username": "user3",
+            "first_name": "",
+            "last_name": "",
+            "is_active": true,
+            "is_superuser": false,
+            "is_staff": false,
+            "last_login": "2012-04-05 09:13:42",
+            "groups": [],
+            "user_permissions": [],
+            "password": "",
+            "email": "user3@mail.com",
+            "date_joined": "2012-04-05 09:13:41"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "relationships.relationship",
+        "fields": {
+            "deleted": false,
+            "source": 1,
+            "created_on": "2011-10-13 02:01:35",
+            "target_user": null,
+            "target_project": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "relationships.relationship",
+        "fields": {
+            "deleted": false,
+            "source": 1,
+            "created_on": "2011-10-13 02:03:51",
+            "target_user": null,
+            "target_project": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "relationships.relationship",
+        "fields": {
+            "deleted": false,
+            "source": 1,
+            "created_on": "2011-10-13 02:05:54",
+            "target_user": null,
+            "target_project": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "relationships.relationship",
+        "fields": {
+            "deleted": false,
+            "source": 1,
+            "created_on": "2011-10-13 02:23:47",
+            "target_user": null,
+            "target_project": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "relationships.relationship",
+        "fields": {
+            "deleted": false,
+            "source": 1,
+            "created_on": "2011-10-13 02:24:42",
+            "target_user": null,
+            "target_project": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "relationships.relationship",
+        "fields": {
+            "deleted": false,
+            "source": 1,
+            "created_on": "2011-10-13 02:26:12",
+            "target_user": null,
+            "target_project": 6
+        }
+    },
+    {
+        "pk": 7,
+        "model": "relationships.relationship",
+        "fields": {
+            "deleted": false,
+            "source": 1,
+            "created_on": "2011-10-13 02:26:34",
+            "target_user": null,
+            "target_project": 7
+        }
+    },
+    {
+        "pk": 8,
+        "model": "relationships.relationship",
+        "fields": {
+            "deleted": false,
+            "source": 4,
+            "created_on": "2012-04-05 09:15:51",
+            "target_user": null,
+            "target_project": 8
+        }
+    },
+    {
+        "pk": 9,
+        "model": "relationships.relationship",
+        "fields": {
+            "deleted": false,
+            "source": 2,
+            "created_on": "2012-04-05 09:25:24",
+            "target_user": null,
+            "target_project": 8
+        }
+    },
+    {
+        "pk": 1,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 1,
+            "actor": 1,
+            "created_on": "2011-10-13 02:01:35",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 1,
+            "target_content_type": 36
+        }
+    },
+    {
+        "pk": 2,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 1,
+            "actor": 1,
+            "created_on": "2011-10-13 02:01:35",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 1,
+            "target_content_type": 43
+        }
+    },
+    {
+        "pk": 3,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 1,
+            "actor": 1,
+            "created_on": "2011-10-13 02:01:35",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 1,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 4,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 2,
+            "actor": 1,
+            "created_on": "2011-10-13 02:02:14",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 1,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 5,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 3,
+            "actor": 1,
+            "created_on": "2011-10-13 02:02:49",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 1,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 6,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 4,
+            "actor": 1,
+            "created_on": "2011-10-13 02:03:27",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 1,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 7,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 2,
+            "actor": 1,
+            "created_on": "2011-10-13 02:03:50",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 2,
+            "target_content_type": 36
+        }
+    },
+    {
+        "pk": 8,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 2,
+            "actor": 1,
+            "created_on": "2011-10-13 02:03:51",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 2,
+            "target_content_type": 43
+        }
+    },
+    {
+        "pk": 9,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 5,
+            "actor": 1,
+            "created_on": "2011-10-13 02:03:51",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 2,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 10,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 6,
+            "actor": 1,
+            "created_on": "2011-10-13 02:03:52",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 2,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 11,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 7,
+            "actor": 1,
+            "created_on": "2011-10-13 02:03:52",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 2,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 12,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 8,
+            "actor": 1,
+            "created_on": "2011-10-13 02:03:53",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 2,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 13,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 3,
+            "actor": 1,
+            "created_on": "2011-10-13 02:05:54",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 3,
+            "target_content_type": 36
+        }
+    },
+    {
+        "pk": 14,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 3,
+            "actor": 1,
+            "created_on": "2011-10-13 02:05:54",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 3,
+            "target_content_type": 43
+        }
+    },
+    {
+        "pk": 15,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 9,
+            "actor": 1,
+            "created_on": "2011-10-13 02:05:55",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 3,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 16,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 10,
+            "actor": 1,
+            "created_on": "2011-10-13 02:05:55",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 3,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 17,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 11,
+            "actor": 1,
+            "created_on": "2011-10-13 02:05:56",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 3,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 18,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 12,
+            "actor": 1,
+            "created_on": "2011-10-13 02:05:56",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 3,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 19,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 4,
+            "actor": 1,
+            "created_on": "2011-10-13 02:23:46",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 4,
+            "target_content_type": 36
+        }
+    },
+    {
+        "pk": 20,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 4,
+            "actor": 1,
+            "created_on": "2011-10-13 02:23:47",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 4,
+            "target_content_type": 43
+        }
+    },
+    {
+        "pk": 21,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 13,
+            "actor": 1,
+            "created_on": "2011-10-13 02:23:47",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 4,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 22,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 14,
+            "actor": 1,
+            "created_on": "2011-10-13 02:23:48",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 4,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 23,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 15,
+            "actor": 1,
+            "created_on": "2011-10-13 02:23:48",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 4,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 24,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 16,
+            "actor": 1,
+            "created_on": "2011-10-13 02:23:49",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 4,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 25,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 5,
+            "actor": 1,
+            "created_on": "2011-10-13 02:24:42",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 5,
+            "target_content_type": 36
+        }
+    },
+    {
+        "pk": 26,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 5,
+            "actor": 1,
+            "created_on": "2011-10-13 02:24:43",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 5,
+            "target_content_type": 43
+        }
+    },
+    {
+        "pk": 27,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 17,
+            "actor": 1,
+            "created_on": "2011-10-13 02:24:43",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 5,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 28,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 18,
+            "actor": 1,
+            "created_on": "2011-10-13 02:24:44",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 5,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 29,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 19,
+            "actor": 1,
+            "created_on": "2011-10-13 02:24:44",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 5,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 30,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 20,
+            "actor": 1,
+            "created_on": "2011-10-13 02:24:44",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 5,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 31,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 6,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:11",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 6,
+            "target_content_type": 36
+        }
+    },
+    {
+        "pk": 32,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 6,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:12",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 6,
+            "target_content_type": 43
+        }
+    },
+    {
+        "pk": 33,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 21,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:12",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 6,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 34,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 22,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:13",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 6,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 35,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 23,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:13",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 6,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 36,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 24,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:13",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 6,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 37,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 7,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:34",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 7,
+            "target_content_type": 36
+        }
+    },
+    {
+        "pk": 38,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 7,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:34",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 7,
+            "target_content_type": 43
+        }
+    },
+    {
+        "pk": 39,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 25,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:35",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 7,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 40,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 26,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:35",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 7,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 41,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 27,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:36",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 7,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 42,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 28,
+            "actor": 1,
+            "created_on": "2011-10-13 02:26:36",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 7,
+            "target_content_type": 39
+        }
+    },
+    {
+        "pk": 43,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 1,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 1,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 44,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 2,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 1,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 45,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 3,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 1,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 46,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 4,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 1,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 47,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 5,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 2,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 48,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 6,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 2,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 49,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 7,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 2,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 50,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 8,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 2,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 51,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 9,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 3,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 52,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 10,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 3,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 53,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 11,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 3,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 54,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 12,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 3,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 55,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 13,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 4,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 56,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 14,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 4,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 57,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 15,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 4,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 58,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 16,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 4,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 59,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 17,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 5,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 60,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 18,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 5,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 61,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 19,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 5,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 62,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 20,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 5,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 63,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 21,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 6,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 64,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 22,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 6,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 65,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 23,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 6,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 66,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 24,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 6,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 67,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 25,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 7,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 68,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 26,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 7,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 69,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 27,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 7,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 70,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 28,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:29",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 7,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 71,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 1,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:30",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 1,
+            "target_content_type": 26
+        }
+    },
+    {
+        "pk": 72,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 2,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:30",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 2,
+            "target_content_type": 26
+        }
+    },
+    {
+        "pk": 73,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 3,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:30",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 3,
+            "target_content_type": 26
+        }
+    },
+    {
+        "pk": 74,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 4,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:30",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 4,
+            "target_content_type": 26
+        }
+    },
+    {
+        "pk": 75,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 5,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:30",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 5,
+            "target_content_type": 26
+        }
+    },
+    {
+        "pk": 76,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 6,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:30",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 6,
+            "target_content_type": 26
+        }
+    },
+    {
+        "pk": 77,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 7,
+            "actor": 1,
+            "created_on": "2012-04-05 09:05:30",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 7,
+            "target_content_type": 26
+        }
+    },
+    {
+        "pk": 78,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 8,
+            "actor": 4,
+            "created_on": "2012-04-05 09:15:51",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 8,
+            "target_content_type": 23
+        }
+    },
+    {
+        "pk": 79,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 8,
+            "actor": 4,
+            "created_on": "2012-04-05 09:15:51",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 8,
+            "target_content_type": 26
+        }
+    },
+    {
+        "pk": 80,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 29,
+            "actor": 4,
+            "created_on": "2012-04-05 09:15:52",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 8,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 81,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 30,
+            "actor": 4,
+            "created_on": "2012-04-05 09:25:08",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 8,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 82,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 9,
+            "actor": 2,
+            "created_on": "2012-04-05 09:25:24",
+            "verb": "http://activitystrea.ms/schema/1.0/follow",
+            "scope_object": 8,
+            "target_content_type": 26
+        }
+    },
+    {
+        "pk": 83,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 31,
+            "actor": 4,
+            "created_on": "2012-04-05 09:27:57",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 8,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 84,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 32,
+            "actor": 4,
+            "created_on": "2012-04-05 09:28:14",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 8,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 85,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 33,
+            "actor": 4,
+            "created_on": "2012-04-05 09:28:49",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 8,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 86,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 34,
+            "actor": 4,
+            "created_on": "2012-04-05 09:29:11",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 8,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 87,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 35,
+            "actor": 4,
+            "created_on": "2012-04-05 09:29:33",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 8,
+            "target_content_type": 41
+        }
+    },
+    {
+        "pk": 88,
+        "model": "activity.activity",
+        "fields": {
+            "deleted": false,
+            "target_id": 1,
+            "actor": 4,
+            "created_on": "2012-04-05 09:31:24",
+            "verb": "http://activitystrea.ms/schema/1.0/post",
+            "scope_object": 8,
+            "target_content_type": 27
+        }
+    }
+]

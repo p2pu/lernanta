@@ -172,6 +172,7 @@ def submissions_list(request, toggled_awards=False, toggled_mine=False):
 def awarded_submissions_list(request):
     return submissions_list(request, toggled_awards=True)
 
+
 def mine_submissions_list(request):
     return submissions_list(request, toggled_mine=True)
 
@@ -203,7 +204,7 @@ def awarded_matching_submissions(request, slug):
 def mine_matching_submissions(request, slug):
     return matching_submissions(request, slug, toggled_mine=True)
 
- 
+
 @login_required
 def assess_submission(request, slug, submission_id):
     submission = get_object_or_404(Submission, id=submission_id,
@@ -363,7 +364,7 @@ def show_user_awards(request, slug, username):
 
 
 def other_badges(request, slug):
-    badge = get_object_or_404(Badge, slug=slug);
+    badge = get_object_or_404(Badge, slug=slug)
     try:
         first = max(1, int(request.GET['first']))
     except:

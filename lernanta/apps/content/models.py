@@ -170,7 +170,7 @@ class Page(ModelBase):
             return today_comments_count, _('today')
         # get this week comments count
         week = today.isocalendar()[1]
-        first_day = datetime.date(year, 1, 1)    
+        first_day = datetime.date(year, 1, 1)
         delta_days = first_day.isoweekday() - 1
         delta_weeks = week
         if year == first_day.isocalendar()[0]:
@@ -186,7 +186,7 @@ class Page(ModelBase):
         # get this month comments count
         this_month_comments_count = comments.filter(created_on__month=month,
             created_on__year=year).count()
-        return this_month_comments_count, _('this month') 
+        return this_month_comments_count, _('this month')
 
 
 class PageVersion(ModelBase):

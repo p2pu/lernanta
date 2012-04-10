@@ -38,6 +38,7 @@ class OwnersNotListedPageForm(forms.ModelForm):
 
 class TaskLinkSubmitForm(forms.ModelForm):
     post_link = forms.BooleanField(required=False, initial=True)
+
     def __init__(self, show_badge_apply_option, *args, **kwargs):
         super(TaskLinkSubmitForm, self).__init__(*args, **kwargs)
         if show_badge_apply_option:
@@ -49,6 +50,7 @@ class TaskLinkSubmitForm(forms.ModelForm):
     class Meta:
         model = PerUserTaskCompletion
         fields = ('url',)
+
 
 class TaskBadgeApplyForm(forms.ModelForm):
     badge_slug = forms.SlugField(widget=forms.HiddenInput())

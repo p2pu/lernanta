@@ -15,6 +15,7 @@ def give_badge_action(project, peer):
 register.inclusion_tag('badges/_give_badge_action.html')(
     give_badge_action)
 
+
 def badge_submissions(request, pending_page_url, awarded_page_url,
         mine_page_url, toggled_awards, toggled_mine, badge=None):
     pending_submissions = Submission.objects.filter(pending=True)
@@ -50,6 +51,7 @@ def badge_submissions(request, pending_page_url, awarded_page_url,
 
 register.inclusion_tag('badges/_submissions_list.html')(
     badge_submissions)
+
 
 def review_submission_action(request, submission):
     badge = submission.badge

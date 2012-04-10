@@ -210,15 +210,26 @@ class Badge(ModelBase):
         return True
 
     def can_review_submission(self, submission, user):
-        if user.is_authenticated():
-            profile = user.get_profile()
-            if not submission.pending or profile == submission.author:
-                return False
-            assessments = submission.assessments.filter(
-                assessor=profile)
-            return not assessments.exists()
-        else:
+        # only authenticated users can review a submission
+        if not user.is_authenticated():
             return False
+        profile = user.get_profile()
+
+        # user cannot review his/her own submission
+        if profile == submission.author:
+            return False
+
+        # if this is a unique badge, only allow one review of submission
+        if self.logic.unique and not submission.pending:
+            return False
+
+        # user can only submit one review
+        assessments = submission.assessments.filter(
+            assessor=profile)
+        if assessments.exists():
+            return False
+
+        return True
 
     def get_adopters(self):
         from projects.models import Participation
@@ -372,7 +383,7 @@ class Assessment(ModelBase):
         for assessment in assessments:
             ratings_sum += assessment.final_rating
             weights_sum += assessment.weight
-        return ratings_sum / weights_sum if weights_sum > 0 else 0 
+        return ratings_sum / weights_sum if weights_sum > 0 else 0
 
 
 class Rating(ModelBase):

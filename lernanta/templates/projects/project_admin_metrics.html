@@ -16,38 +16,31 @@
   <p><i>{{ _('This table shows the overview of participant data. ') }} 
   {% if can_view_metric_detail %} {{ _('To see follower data or non-loggedin user data, use export for a <acronym title="Comma Separated Values">CSV</acronym> file.') }}<sup>6</sup> {% endif %}</i></p>
 
-  {% if data %}
-	<div id="demo">
-	  <table cellpadding="0" cellspacing="0" class="display" id="example">
-	    <thead>
-	      <tr>
-	        <th>{{ _('Participant') }}</th>
-	        <th>{{ _('Last Active Date') }} <sup>2</sup></th>
-	        <th>{{ _('Comments') }} <sup>3</sup></th>
-	        <th>{{ _('Task Edits') }} <sup>4</sup></th>
-	        <th>{{ _('Time on Course Pages') }} <sup>5</sup></th>
-	      </tr>
-	    </thead>
-	    <tbody>
-	
-			{% for user in data %}
-			  <tr><td>{{ user.username }}</td><td class="center">{{ user.last_active|default:"--" }}</td><td class="center">{{ user.comment_count }}</td><td class="center">{{ user.task_edits_count }}</td><td class="center">{{ user.course_activity_minutes }}</td></tr>
-			{% endfor %}
-	    </tbody>
-	    <tfoot>
-	      <tr>
-	        <th>{{ _('Participant') }}</th>
-	        <th>{{ _('Last Active Date') }} <sup>2</sup></th>
-	        <th>{{ _('Comments') }} <sup>3</sup></th>
-	        <th>{{ _('Task Edits') }} <sup>4</sup></th>
-	        <th>{{ _('Time on Course Pages') }} <sup>5</sup></th>
-	      </tr>
-	    </tfoot>
-	  </table>
-	</div>
-    {% else %}
-        <p>{{ _('No participants for which to show data.') }}</p>
-    {% endif %}
+    <div id="demo">
+      <table cellpadding="0" cellspacing="0" class="display" id="example">
+	<thead>
+	  <tr>
+	    <th>{{ _('Participant') }}</th>
+	    <th>{{ _('Last Active Date') }} <sup>2</sup></th>
+	    <th>{{ _('Comments') }} <sup>3</sup></th>
+	    <th>{{ _('Task Edits') }} <sup>4</sup></th>
+	    <th>{{ _('Time on Course Pages') }} <sup>5</sup></th>
+	  </tr>
+	</thead>
+	<tbody>
+	</tbody>
+	<tfoot>
+	  <tr>
+	    <th>{{ _('Participant') }}</th>
+	    <th>{{ _('Last Active Date') }} <sup>2</sup></th>
+	    <th>{{ _('Comments') }} <sup>3</sup></th>
+	    <th>{{ _('Task Edits') }} <sup>4</sup></th>
+	    <th>{{ _('Time on Course Pages') }} <sup>5</sup></th>
+	  </tr>
+	</tfoot>
+      </table>
+    </div>
+
 	  <p class="hint clear">
         <sup>1</sup> {{ _('The information about course page visits is not available on the same day.') }}<br>
 	    <sup>2</sup> {{ _('Last date the user visited a course page.') }}<br>
@@ -64,16 +57,26 @@
 </div>
 
 {% block js %}
-	<script src="{{ MEDIA_URL }}js/libs/datatables/dataTables.js"
-		type="text/javascript"></script>
-		    <script src="{{ MEDIA_URL }}js/libs/highcharts/highcharts.js" type="text/javascript"></script>
-	    <script src="{{ MEDIA_URL }}js/libs/highcharts/exporting.js" type="text/javascript"></script>
-	<script>
+    <script src="{{ MEDIA_URL }}js/libs/datatables/dataTables.js" type="text/javascript"></script>
+    <script src="{{ MEDIA_URL }}js/libs/highcharts/highcharts.js" type="text/javascript"></script>
+    <script src="{{ MEDIA_URL }}js/libs/highcharts/exporting.js" type="text/javascript"></script>
+    <script>
 	$(document).ready(function() {
-	    $('#example').dataTable();
-	} );
-	
-	</script>
+	    $('#example').dataTable({
+		"aaSorting": [[ 0, "asc" ]],
+		"aoColumns": [
+		    { "mDataProp": 0 },
+		    { "mDataProp": 1, "sDefaultContent": "--" },
+		    { "mDataProp": 3 },
+		    { "mDataProp": 4 },
+		    { "mDataProp": 2 }
+		],
+		"bProcessing": true,
+		"sAjaxSource": "{% locale_url projects_admin_metrics_data slug=project.slug %}",
+		"bDeferRender": true
+	    });
+	});
+    </script>
 
 
  {%endblock %}

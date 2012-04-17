@@ -1,5 +1,6 @@
 from django import forms
 from django.utils.translation import ugettext as _
+from django.template.defaultfilters import slugify
 
 from projects.models import PerUserTaskCompletion
 from badges.models import Submission
@@ -27,6 +28,12 @@ class OwnersPageForm(forms.ModelForm):
         model = Page
         fields = ('title', 'sub_header', 'content',
             'collaborative', 'minor_update')
+
+    def clean_title(self):
+        data = self.cleaned_data.get('title')
+        if len(slugify(data)) == 0:
+            raise forms.ValidationError("Invalid title")
+        return data
 
 
 class OwnersNotListedPageForm(forms.ModelForm):

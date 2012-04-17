@@ -753,23 +753,28 @@ def admin_metrics(request, slug):
     """
     project = get_object_or_404(Project, slug=slug)
     metric_permissions = project.get_metrics_permissions(request.user)
-    participants = project.participants(
-        include_deleted=True).order_by('user__username')
-    participant_profiles = (participant.user for participant in participants)
-    tracker_models.update_metrics_cache(project)
-    keys = ('username', 'last_active', 'course_activity_minutes',
-        'comment_count', 'task_edits_count')
-    metrics = tracker_models.metrics_summary(project, participant_profiles)
-    data = (dict(itertools.izip(keys, d)) for d in metrics)
 
     return render_to_response('projects/project_admin_metrics.html', {
             'project': project,
             'can_view_metric_overview': metric_permissions[0],
             'can_view_metric_detail': metric_permissions[1],
-            'data': data,
             'metrics_tab': True,
             'is_challenge': (project.category == project.CHALLENGE),
     }, context_instance=RequestContext(request))
+
+
+@login_required
+@can_view_metric_overview
+def admin_metrics_data_ajax(request, slug):
+    """ returns data for jquery data tables plugin """
+    project = get_object_or_404(Project, slug=slug)
+    participants = project.participants(
+        include_deleted=True).order_by('user__username')
+    participant_profiles = (participant.user for participant in participants)
+    tracker_models.update_metrics_cache(project)
+    metrics = tracker_models.metrics_summary(project, participant_profiles)
+    json = simplejson.dumps({'aaData': list(metrics)})
+    return http.HttpResponse(json, mimetype="application/json")
 
 
 @hide_deleted_projects

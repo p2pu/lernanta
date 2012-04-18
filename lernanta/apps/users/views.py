@@ -465,6 +465,7 @@ def profile_edit(request):
 
 @login_required
 def profile_edit_openids(request):
+    profile = request.user.get_profile()
     if request.method == 'POST':
         return openid_views.login_begin(
             request,
@@ -475,6 +476,7 @@ def profile_edit_openids(request):
         form = forms.OpenIDForm()
     openids = UserOpenID.objects.filter(user=request.user)
     return render_to_response('users/profile_edit_openids.html', {
+        'profile': profile,
         'form': form,
         'openids': openids,
         'openids_tab': True,

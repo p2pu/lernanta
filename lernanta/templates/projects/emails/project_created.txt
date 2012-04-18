@@ -1,21 +1,26 @@
+{% load i18n %}
 {% load l10n_tags %}
-{{ _('Hello!') }}
 
-{{ _('Welcome to P2PU! We are excited to help you develop and promote') }} {{ project.name }}{{ _('.') }}
+{% blocktrans with project_name=project.name %} We're excited to see you've created {{ project_name }}. {% endblocktrans %}
 
-{{ _('What are the next steps?') }}
+{% trans "P2PU is here to help you design and run an awesome course." %}
 
-{{ _('* Provide a meaningful description, title and image for your ') }}{{ project.kind|lower }}{{ _('. (If the image isn\'t yours, make sure it\'s licensed for reuse!)') }}
+{% trans "There are three places you can get help from the community." %}
 
-{{ _('* Update your profile with information about yourself and a picture so learners can know more about you.') }}
+{% trans "1. We have a help desk where you can bring all your questions to our staff:" %} help.p2pu.org
+{% trans "2. We have a group just for project-based course designers on the site:" %} http://{{domain}}/groups/make-a-challenge/
+{% trans "3. We have an awesome P2PU community mailing list where you can pitch your course for feedback and review:" %} groups.google.com/groups/p2pu-community
 
-{{ _('* Set a timeline for yourself. When can participants expect to sign-up and begin learning? Would having a co-organizer help you share the workload? Do you need help promoting?') }}
+{% trans "Now that you know where to find help, here\'s what next:" %}
 
-{{ _('Find answers to your questions and wisdom from the community at help.p2pu.org.') }}
+{% trans "Right now your course is Under Development. Use this time to design your tasks, and remember to make sure all content is freely available so all future participant can have fair access. We especially encourage the reuse of openly licensed materials." %}
 
-{{ _('We look forward to learning with and from you!') }}
+{% trans "When your course is ready, uncheck "under development" in the course settings. Your course will now appear in the main listing." %}
 
-{{ _('Alison, John & Bekka') }}
-{{ _('P2PU Support Team') }}
+{% trans "To get it featured in the showcase, send us a note at help.p2pu.org." %}
 
-{{ _('Manage your subscriptions:') }} http://{{domain}}/profile/edit/settings/
+{% trans "P2PU will also help you with promoting your course. For more information see: http://help.p2pu.org/kb/learning/how-can-i-promote-my-course" %}
+
+{% trans "Looking forward to learning from you!" %}
+
+P2PU

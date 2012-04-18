@@ -24,6 +24,12 @@
     {{ form.description }}
     {{ form.description.errors }}
   </div>
+  <div class="field more_info{% if form.more_info.errors %} error{% endif %}">
+    <label for="id_more_info">{{ _('More details') }}</label>
+    <span class="hint block">{{ _('Extra details are shown at the bottom of the school page.') }}</span>
+    {{ form.more_info }}
+    {{ form.more_info.errors }}
+  </div>
   <p class="buttons">
     <a class="button" href="{{ school.get_absolute_url }}">{{ _('Cancel') }}</a>
     <button type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>

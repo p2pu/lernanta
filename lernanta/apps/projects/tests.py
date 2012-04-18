@@ -54,7 +54,7 @@ class ProjectTests(TestCase):
             password=self.test_password)
         response = self.client.post('/%s/groups/create/' % (self.locale,),
             data)
-        self.assertRedirects(response, 
+        self.assertRedirects(response,
             '/%s/groups/%s/' % (self.locale, 'test-new-course'),
             target_status_code=200)
 

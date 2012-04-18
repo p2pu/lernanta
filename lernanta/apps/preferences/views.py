@@ -156,6 +156,10 @@ def delete(request):
             if s.get_decoded().get('_auth_user_id') == profile.user.id:
                 s.delete()
         return HttpResponseRedirect(reverse('users_logout'))
-    return render_to_response('users/settings_delete.html',
-        {'pending_projects': pending_projects, 'delete_tab': True},
+    context = {
+        'pending_projects': pending_projects,
+        'delete_tab': True,
+        'profile': profile
+    }
+    return render_to_response('users/settings_delete.html', context,
         context_instance=RequestContext(request))

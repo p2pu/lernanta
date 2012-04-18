@@ -30,6 +30,7 @@ class School(ModelBase):
     slug = models.SlugField(unique=True, blank=True)
     short_name = models.CharField(max_length=20)
     description = RichTextField(config_name='rich')
+    more_info = RichTextField(config_name='rich', null=True, blank=True)
     organizers = models.ManyToManyField('users.UserProfile',
         null=True, blank=True)
     featured = models.ManyToManyField('projects.Project',
@@ -132,9 +133,10 @@ class ProjectSet(ModelBase):
         return image_path
 
     def _distinct_participants(self):
-        return UserProfile.objects.filter(participations__project__projectsets=self, 
-                                    deleted=False, 
+        return UserProfile.objects.filter(participations__project__projectsets=self,
+                                    deleted=False,
                                     participations__left_on__isnull=True).distinct()
+
     def total_participants(self):
         return self._distinct_participants().filter(
             participations__adopter = False,

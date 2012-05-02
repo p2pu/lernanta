@@ -428,6 +428,38 @@ $(document).ready(function() {
         enableLearn();
     }
 
+    if ( $('#edit_pages #accordion') ) {
+        $('#edit_pages #accordion').accordion({
+            header: '> div > h3'
+        }).sortable({
+            axis: 'y',
+            handle: 'h3',
+            start: function( event, ui ) {
+                var $ckeditor_textarea = ui.item.find('textarea');
+                var ckeditor_text_area_id = $ckeditor_textarea.attr('id');
+                if ( CKEDITOR.instances[ckeditor_text_area_id] ) {
+                    $ckeditor_textarea.text(CKEDITOR.instances[ckeditor_text_area_id].getData());
+                }
+            },
+            stop: function( event, ui ) {
+                var $ckeditor_textarea = ui.item.find('textarea');
+                var ckeditor_text_area_id = $ckeditor_textarea.attr('id');
+                if ( CKEDITOR.instances[ckeditor_text_area_id] ) {
+                    CKEDITOR.instances[ckeditor_text_area_id].setData($ckeditor_textarea.text());
+                }
+                // IE doesn't register the blur when sorting
+                // so trigger focusout handlers to remove .ui-state-focus
+                ui.item.children( 'h3').triggerHandler( "focusout" );
+                
+            },
+            update: function( event, ui ) {
+                $(this).find('.accordion-section-order input').each(function(i) {
+                    $(this).val(i+1);
+                });
+            }
+          });
+    }
+
 });
 
 // Recaptcha
@@ -557,9 +589,6 @@ var submitTaskFooterAfterCompletionForm = function() {
         var upon_completion_redirect = data['upon_completion_redirect'];
         var stay_on_page = data['stay_on_page'];
         var toggle_task_completion_form_html = data['toggle_task_completion_form_html'];
-        if (CKEDITOR.instances['id_content']) {
-            CKEDITOR.instances['id_content'].destroy();
-        }
         $task_footer.html(toggle_task_completion_form_html);
         if( !stay_on_page && progressbar_value == "100" ) {
             window.location.href = upon_completion_redirect;

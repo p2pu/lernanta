@@ -48,7 +48,7 @@ class Page(ModelBase):
     # Used to facilitate both posting a comment to the task with
     # a link to the work they did on the task and apply for skills badges
     badges_to_apply = models.ManyToManyField('badges.Badge',
-        null=True, blank=False, related_name='tasks_accepting_submissions')
+        null=True, blank=True, related_name='tasks_accepting_submissions')
 
     def __unicode__(self):
         return self.title

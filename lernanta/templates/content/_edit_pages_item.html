@@ -1,0 +1,25 @@
+{% load l10n_tags %}
+
+<div class="accordion-section">
+  <h3><a href="#">{{ form.instance.title }}</a></h3>
+  <div>
+    {{ form.id }}
+    {% if formset.can_order %}
+      <div class='accordion-section-order'>{{ form.ORDER }}</div>
+    {% endif %}
+    <div class="field{% if form.title.errors %} error{% endif %}">
+      <label for="id_title">{{ _('Title') }}</label>
+      {{ form.title }}
+      {{ form.title.errors }}
+    </div>
+    <div class="field{% if form.sub_header.errors %} error{% endif %}">
+      <label for="id_sub_header">{{ _('Tagline') }}</label>
+      {{ form.sub_header }}
+      {{ form.sub_header.errors }}
+    </div>
+    <div class="field{% if form.content.errors %} error{% endif %}">
+      {{ form.content }}
+      {{ form.content.errors }}
+    </div>
+  </div>
+</div>

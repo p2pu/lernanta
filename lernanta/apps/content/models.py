@@ -91,7 +91,7 @@ class Page(ModelBase):
             try:
                 return self.project.pages.filter(
                     deleted=False, index__gt=self.index,
-                    listed=True)[0]
+                    listed=True).order_by('index')[0]
             except IndexError:
                 pass
         return None

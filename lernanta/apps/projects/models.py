@@ -245,6 +245,7 @@ class Project(ModelBase):
         """Sets (without saving) duration in hours and minutes given a decimal value.
 
         e.g., a decimal value of 10.3 equals 10 hours and 18 minutes."""
+        value = value or 0
         hours = int(value)
         minutes = int(60 * (value - hours))
         self.duration_hours = hours

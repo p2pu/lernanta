@@ -97,7 +97,8 @@ class ProjectStatusForm(forms.ModelForm):
     start_date = forms.DateField(localize=True, required=False)
     end_date = forms.DateField(localize=True, required=False)
 
-    duration = forms.DecimalField(min_value=0, max_value=9000, decimal_places=1)
+    duration = forms.DecimalField(min_value=0, max_value=9000,
+        decimal_places=1, required=False)
 
     class Meta:
         model = Project

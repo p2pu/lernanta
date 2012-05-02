@@ -120,7 +120,7 @@
             {% else %}{% if reply_to %}
               <a class="button" href="{{ reply_to.get_absolute_url }}">
             {% else %}
-              <a class="button" href="{{ page.get_absolute_url }}">
+              <a class="button" href="{{ page_object.get_absolute_url }}">
             {% endif %}{% endif %}
               {{ _('Cancel') }}
             </a>

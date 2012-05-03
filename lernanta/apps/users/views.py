@@ -335,12 +335,12 @@ def register_openid_complete(request):
 def user_list(request):
     """Display a list of users on the site. Featured, new and active."""
     featured = UserProfile.objects.filter(deleted=False, featured=True)
-    new = UserProfile.objects.filter(deleted=False).order_by(
+    recent = UserProfile.objects.filter(deleted=False).order_by(
         '-created_on')[:20]
     popular = UserProfile.objects.get_popular(limit=20)
     return render_to_response('users/user_list.html', {
         'featured': featured,
-        'new': new,
+        'recent': recent,
         'popular': popular,
     }, context_instance=RequestContext(request))
 

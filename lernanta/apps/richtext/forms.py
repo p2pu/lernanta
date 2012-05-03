@@ -35,7 +35,11 @@ class CKEditorWidget(BaseCKEditorWidget):
         self.config['filebrowserBrowseUrl'] = reverse('richtext_browse_file')
         return mark_safe(u'''<textarea%s>%s</textarea>
             <script type="text/javascript">
-                CKEDITOR.replace("%s", %s);
+                var ckeditor_instance_id = "%s";
+                if (CKEDITOR.instances[ckeditor_instance_id]) {
+                    CKEDITOR.instances[ckeditor_instance_id].destroy();
+                }
+                CKEDITOR.replace(ckeditor_instance_id, %s);
             </script>''' % (flatatt(final_attrs),
             conditional_escape(force_unicode(value)),
             final_attrs['id'], json_encode(self.config)))

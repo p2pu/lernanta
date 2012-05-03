@@ -348,8 +348,8 @@ input[type=submit]:active,
 }
 
 .project-kind-challenge #sidebar a.discuss-button,
-.project-kind-challenge #task-body a.external-task,
-.project-kind-challenge #task-body-preview a.external-task {
+#task-body a.external-task,
+#task-body-preview a.external-task {
   float: left;
   margin: 0 0 0 20px;
   background-color: #52a8e8;
@@ -401,8 +401,8 @@ input[type=submit]:active,
 }
 
 .project-kind-challenge #sidebar a.discuss-button:hover,
-.project-kind-challenge #task-body a.external-task:hover,
-.project-kind-challenge #task-body-preview a.external-task:hover {
+#task-body a.external-task:hover,
+#task-body-preview a.external-task:hover {
   background-color: #4C9EDA;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#4C9EDA), to(#3271C2));
   /* Saf4+, Chrome */
@@ -433,8 +433,8 @@ input[type=submit]:active,
 }
 
 .project-kind-challenge #sidebar a.discuss-button:active,
-.project-kind-challenge #task-body a.external-task:active,
-.project-kind-challenge #task-body-preview a.external-task:active {
+#task-body a.external-task:active,
+#task-body-preview a.external-task:active {
    border: 1px solid #006699;
  -webkit-box-shadow: inset 0 1px 0 0 #52a8e8;
  -moz-box-shadow: inset 0 1px 0 0 #52a8e8;
@@ -443,15 +443,15 @@ input[type=submit]:active,
  box-shadow: inset 0 1px 0 0 #52a8e8;
 }
 
-.project-kind-challenge #task-body a.external-task,
-.project-kind-challenge #task-body-preview a.external-task {
+#task-body a.external-task,
+#task-body-preview a.external-task {
     float: none;
     display: none;
     font: bold 14px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 
-.project-kind-challenge #task-body a.external-task span.external-task-text,
-.project-kind-challenge #task-body-preview a.external-task span.external-task-text {
+#task-body a.external-task span.external-task-text,
+#task-body-preview a.external-task span.external-task-text {
     background: transparent url("/media/images/external.task.icon.png") no-repeat center right;
     padding-right: 20px;
 }
@@ -1045,7 +1045,7 @@ header {}
 
     #project_landing #breadcrumbs, #page #breadcrumbs, #edit_page #breadcrumbs, #comment #breadcrumbs, #delete_page #breadcrumbs, 
     #delete_restore_comment #breadcrumbs, #project_edit #breadcrumbs, #create_page #breadcrumbs, #signup #breadcrumbs, 
-    #project_user_list #breadcrumbs {
+    #project_user_list #breadcrumbs, #edit_pages #breadcrumbs {
         height: 6em;    
     }
     
@@ -1998,6 +1998,9 @@ header {}
 			border-radius:8px;
 			-moz-border-radius:8px;		
 		}
+                #edit_pages .modal {
+                    width: 655px;
+                }
 		.modal.nav{
 			width: 990px;
 		}
@@ -2007,11 +2010,11 @@ header {}
 			border-radius:5px;
 			-moz-border-radius:5px;
 			padding-bottom: 40px;
-      min-height: 280px;
-    }
-        .school .modal article {
-            min-height: 360px;
-        }
+                        min-height: 280px;
+                }
+                .school .modal article {
+                        min-height: 360px;
+                }
 		.modal.nav article {
 			background: #fff url(/media/images/panel-bg.png) 0 0 repeat-y;
 		}
@@ -2042,6 +2045,9 @@ header {}
 			border-radius:5px 5px 0 0;
 			-moz-border-radius:5px 5px 0 0;
 		}
+                #edit_pages .modal > article > h1 {
+                    width: 581px;
+                }
 		.modal > article > h1 .pester{
 			font-size: 14px;
 			white-space: nowrap;
@@ -5906,4 +5912,8 @@ table.display thead, table.display tfoot {
     margin-top: -34px;
     float: right;
     padding: 10px;
+}
+
+#edit_pages .accordion-section-order {
+    display: none;
 }

@@ -6,6 +6,7 @@ from django.template import RequestContext
 from django.utils.translation import ugettext as _
 from django.template.loader import render_to_string
 from django.utils import simplejson
+from django.forms.models import modelformset_factory
 
 from l10n.urlresolvers import reverse
 from users.decorators import login_required
@@ -162,6 +163,38 @@ def create_page(request, slug):
         'page': page,
         'preview': ('show_preview' in request.POST),
         'is_challenge': (project.category == Project.CHALLENGE),
+    }, context_instance=RequestContext(request))
+
+
+@hide_deleted_projects
+@login_required
+@participation_required
+def edit_pages(request, slug):
+    project = get_object_or_404(Project, slug=slug)
+    pages = project.pages.filter(deleted=False,
+        listed=True).order_by('index')
+    if project.is_organizing(request.user):
+        form_cls = OwnersPageForm
+    else:
+        form_cls = PageForm
+        pages = pages.filter(collaborative=True)
+    PageFormSet = modelformset_factory(Page, extra=0,
+        fields=form_cls.Meta.fields, can_order=True)
+    if request.method == 'POST':
+        formset = PageFormSet(request.POST, queryset=pages)
+        if formset.is_valid():
+            current_order = list(pages.values_list('index', flat=True))
+            for form in formset.forms:
+                instance = form.save(commit=False)
+                instance.index = current_order[form.cleaned_data['ORDER'] - 1]
+                instance.save()
+            return http.HttpResponseRedirect(reverse('edit_pages',
+                kwargs=dict(slug=project.slug)))
+    else:
+        formset = PageFormSet(queryset=pages)
+    
+    return render_to_response('content/edit_pages.html', {
+        'project': project, 'formset': formset,
     }, context_instance=RequestContext(request))
 
 

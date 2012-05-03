@@ -702,9 +702,9 @@
             "school": null,
             "name": "Flying 101",
             "language": "en",
-            "duration_minutes": null,
+            "duration_minutes": 0,
             "created_on": "2012-04-05 09:15:50",
-            "duration_hours": null
+            "duration_hours": 0
         }
     },
     {

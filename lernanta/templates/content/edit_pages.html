@@ -1,0 +1,37 @@
+{% extends "projects/base.html" %}
+{% load l10n_tags %}
+{% load embed %}
+
+
+{% block bodyid %}edit_pages{% endblock %}
+
+
+{% block project_breadcrumbs %}
+  <span class="arrow">&rsaquo;</span>
+  <a href="{% locale_url projects_task_list slug=project.slug %}">{{ _('Task List') }}</a>
+  <span class="arrow">&rsaquo;</span>
+  <a href="{% locale_url edit_pages slug=project.slug %}">{{ _('Edit') }}</a>
+{% endblock %}
+
+
+{% block body %}
+<section class="modal">
+  <article>
+    <h1>{{ _('Edit Tasks') }}</h1>
+    <fieldset>
+      <form action="{% locale_url edit_pages slug=project.slug %}" method="post">
+        {% csrf_token %}
+        {{ formset.management_form }}
+        <div id="accordion">
+          {% for form in formset.forms %}
+            {% include "content/_edit_pages_item.html" %}
+          {% endfor %}
+        </div>
+        <br>
+        <button type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>
+      </form>
+    </fieldset>
+  </article>
+</section>
+{% endblock %}
+

@@ -50,7 +50,7 @@
 <section id="new_users">
   <h1><span>{{ _('New People') }}</span></h1>
   <ul class="user-list">
-    {% for person in new %}
+    {% for person in recent %}
       <li>{% include "users/_user_card.html" %}</li>
     {% endfor %}
   </ul>

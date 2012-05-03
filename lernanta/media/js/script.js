@@ -373,14 +373,14 @@ $(document).ready(function() {
         });
     }
 
-    if ( $('.project-kind-challenge #task-body a.external-task').length ) {
-        var $external_task = $('.project-kind-challenge #task-body a.external-task');
+    if ( $('#task-body a.external-task').length ) {
+        var $external_task = $('#task-body a.external-task');
         $external_task.find('span.external-task-text').text($external_task.attr('title'));
         $external_task.show();
     }
 
-    if ( $('.project-kind-challenge #task-body-preview a.external-task').length ) {
-        var $external_task = $('.project-kind-challenge #task-body-preview a.external-task');
+    if ( $('#task-body-preview a.external-task').length ) {
+        var $external_task = $('#task-body-preview a.external-task');
         $external_task.find('span.external-task-text').text($external_task.attr('title'));
         $external_task.show();
     }

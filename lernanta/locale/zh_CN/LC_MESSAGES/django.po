@@ -1371,7 +1371,7 @@ msgstr "主页"
 
 #: templates/base.html:167
 msgid "jquery.ui.datepicker-en.js"
-msgstr "jquery.ui.datepicker-zn-CN.js"
+msgstr "jquery.ui.datepicker-zh-CN.js"
 
 #: templates/base.html:169
 msgid "js/script-en.js"

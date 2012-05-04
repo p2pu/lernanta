@@ -4,10 +4,12 @@ from reviews.models import Review, Reviewer
 
 
 class ReviewerAdmin(admin.ModelAdmin):
-    pass
+    raw_id_fields = ('user',)
+
 
 class ReviewAdmin(admin.ModelAdmin):
-    pass
+    raw_id_fields = ('project', 'author')
+
 
 admin.site.register(Reviewer, ReviewerAdmin)
 admin.site.register(Review, ReviewAdmin)

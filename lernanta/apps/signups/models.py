@@ -34,6 +34,9 @@ class Signup(ModelBase):
     status = models.CharField(max_length=30, choices=STATUS_CHOICES,
         default=CLOSED, null=True, blank=False)
 
+    def __unicode__(self):
+        return _('%s signup') % self.project
+
     @models.permalink
     def get_absolute_url(self):
         return ('sign_up', (), {

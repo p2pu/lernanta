@@ -3,6 +3,7 @@ from relationships.models import Relationship
 
 
 class RelationshipAdmin(admin.ModelAdmin):
+    raw_id_fields = ('source', 'target_user', 'target_project')
     date_hierarchy = 'created_on'
     list_display = ('id', 'source', 'target_user', 'target_project',
         'created_on', 'deleted')

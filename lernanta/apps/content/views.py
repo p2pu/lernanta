@@ -170,6 +170,7 @@ def create_page(request, slug):
 @login_required
 @participation_required
 def edit_pages(request, slug):
+    raise http.Http404
     project = get_object_or_404(Project, slug=slug)
     pages = project.pages.filter(deleted=False,
         listed=True).order_by('index')

@@ -45,6 +45,8 @@ class Project(ModelBase):
 
     name = models.CharField(max_length=100)
 
+    short_name = models.CharField(max_length=20, null=True, blank=True)
+
     # Select kind of project (study group, course, or other)
     STUDY_GROUP = 'study group'
     COURSE = 'course'

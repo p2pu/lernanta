@@ -37,6 +37,7 @@ from activity.schema import verbs
 from signups.models import Signup
 from tracker import models as tracker_models
 from reviews.models import Review
+from utils import json_date_encoder
 
 from drumbeat import messages
 from users.decorators import login_required
@@ -628,6 +629,27 @@ def edit_participants_make_organizer(request, slug, username):
     return http.HttpResponseRedirect(reverse('projects_edit_participants',
         kwargs=dict(slug=participation.project.slug)))
 
+@hide_deleted_projects
+@login_required
+@organizer_required
+def edit_participants_organizer_delete(request, slug, username):
+    """ remove username as an organizer for the course """
+    participation = get_object_or_404(Participation,
+        project__slug=slug, user__username=username, left_on__isnull=True)
+    organizers = Participation.objects.filter(
+        project__slug=slug,
+        user__deleted=False,
+        organizing=True)
+    if len(organizers) == 1 and participation.id == organizers[0].id:
+        messages.error(request, _('You cannot delete the only organizer'))
+    elif request.method != 'POST':
+        http.Http404
+    else:
+        participation.organizing = False
+        participation.save()
+        messages.success(request, _('The organizer in now only a prticipant.'))
+    return http.HttpResponseRedirect(reverse('projects_edit_participants',
+        kwargs=dict(slug=participation.project.slug)))
 
 @hide_deleted_projects
 @login_required
@@ -780,7 +802,9 @@ def admin_metrics_data_ajax(request, slug):
     participant_profiles = (participant.user for participant in participants)
     tracker_models.update_metrics_cache(project)
     metrics = tracker_models.metrics_summary(project, participant_profiles)
-    json = simplejson.dumps({'aaData': list(metrics)})
+    json = simplejson.dumps(
+        {'aaData': list(metrics)},
+        default=json_date_encoder)
     return http.HttpResponse(json, mimetype="application/json")
 
 

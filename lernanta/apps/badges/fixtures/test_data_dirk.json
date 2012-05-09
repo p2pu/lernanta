@@ -1,6 +1,46 @@
 [
     {
         "pk": 1,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "cricket",
+            "slug": "cricket"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "complaining",
+            "slug": "complaining"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "drinking-tea",
+            "slug": "drinking-tea"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "luck",
+            "slug": "luck"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "taggit.tag",
+        "fields": {
+            "name": "the-universe",
+            "slug": "the-universe"
+        }
+    },
+    {
+        "pk": 1,
         "model": "users.profiletag",
         "fields": {
             "category": "interest"
@@ -124,46 +164,6 @@
     },
     {
         "pk": 1,
-        "model": "taggit.tag",
-        "fields": {
-            "name": "cricket",
-            "slug": "cricket"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "taggit.tag",
-        "fields": {
-            "name": "complaining",
-            "slug": "complaining"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "taggit.tag",
-        "fields": {
-            "name": "drinking-tea",
-            "slug": "drinking-tea"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "taggit.tag",
-        "fields": {
-            "name": "luck",
-            "slug": "luck"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "taggit.tag",
-        "fields": {
-            "name": "the-universe",
-            "slug": "the-universe"
-        }
-    },
-    {
-        "pk": 1,
         "model": "users.taggedprofile",
         "fields": {
             "tag": 1,
@@ -205,6 +205,370 @@
             "tag": 5,
             "content_type": 22,
             "object_id": 4
+        }
+    },
+    {
+        "pk": 1,
+        "model": "schools.school",
+        "fields": {
+            "organizers": [],
+            "groups_icon": "",
+            "description": "<h1 class=\"school_header\"><b>School of Social Innovation</b></h1>\n\n<p>Are you looking to make a difference in your community and the world? Are you interested in developing the skills and network necessary to do so?</p>\n\n<p>The P2PU School of Social Innovation is a global, open source community for organizing peer study groups on topics like conflict resolution, project management for social innovators, and social innovation in education.  SoSI is united by the common purpose of helping all people strengthen skills that are important for social innovators.</p>\n\n<p>SoSI achieves this through free, peer-designed-and-directed study groups, which use a combination of online and offline project-based learning.  The online platform allows study groups of a virtually unlimited size to access and remix high-quality open source curriculum, lectures and other resources for deepening theoretical understanding in international, collaborative teams, while participant-led offline citizen circles provide the opportunity for participants to work in their local context and to develop skills like empathy, resilience, and cooperation- skills which are often learned best through deeper practice, in person.</p>\n<h2>\n\tAbout Us</h2>\n<ul>\n\t<li>\n\t\t<a href=\"http://wiki.p2pu.org/w/page/33982467/SoSI\" title=\"Find out more about SoSI\">About SoSI</a></li>\n\t<li>\n\t\t<a href=\"http://www.citizencircles.com\" title=\"About Citizen Circles\">About Citizen Circles</a></li>\n\t<li>\n\t\t<a href=\"http://wiki.p2pu.org/w/page/33982522/Creating-a-citizen-circle\" title=\"What is a Citizen Circle?\">What is a Citizen Circle?</a></li>\n\t<li>\n\t\t<a href=\"http://groups.google.com/group/citizencircles\" title=\"Contact SoSI\">Contact Us</a></li>\n</ul>",
+            "short_name": "",
+            "sidebar_width": "200px",
+            "show_school_organizers": true,
+            "old_term_name": "SoSI",
+            "menu_color_light": "#f99649",
+            "featured": [],
+            "headers_color": "#34749D",
+            "mentee_form_url": null,
+            "extra_styles": "",
+            "headers_color_light": "#3d8abc",
+            "background": "",
+            "mentor_form_url": null,
+            "site_logo": "",
+            "logo": "",
+            "menu_color": "#F57D1F",
+            "background_color": "#dce7e9",
+            "slug": "school-of-social-innovation",
+            "name": "School of Social Innovation"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "schools.school",
+        "fields": {
+            "organizers": [],
+            "groups_icon": "",
+            "description": "<h1 class=\"school_header\"><b>School of the Mathematical Future</b></h1>\n\n<p>\n\tSchool of the Mathematical Future is organized by Natural Math family learning network, Math 2.0 interest group, and P2PU (Peer to Peer University). We are building an open learning environment for mathematics educators working in diverse communities and networks. Our classes are open and free.</p>\n<h2>\n\tContact Us</h2>\n<ul>\n\t<li>\n\t\t<a href=\"http://groups.google.com/group/p2pu-mathfuture\" title=\"Discussion Group\">Discussion group for School of Math Future</a></li>\n\t<li>\n\t\t<a href=\"http://groups.google.com/group/p2pu-mathfutureannounce\" title=\"Announcement List\">Announcement list for the School of Math Future</a></li>\n</ul>",
+            "short_name": "",
+            "sidebar_width": "235px",
+            "show_school_organizers": true,
+            "old_term_name": "Math Future",
+            "menu_color_light": "#fcda77",
+            "featured": [],
+            "headers_color": "#990000",
+            "mentee_form_url": null,
+            "extra_styles": "",
+            "headers_color_light": "#d60505",
+            "background": "",
+            "mentor_form_url": null,
+            "site_logo": "",
+            "logo": "",
+            "menu_color": "#fbcd47",
+            "background_color": "#f1f1f1",
+            "slug": "school-of-the-mathematical-future",
+            "name": "School of the Mathematical Future"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "schools.school",
+        "fields": {
+            "organizers": [],
+            "groups_icon": "",
+            "description": "<h2>\n    School of Webcraft is a free, online community for learning open web development.</h2>\n<p>\n    We believe that learning with others is the best way to help people learn the skills and theory that they need to create web sites and apps using modern open web technologies.</p>\n<h3>\n    <br>\n    Get started today by signing up for Webmaking 101. (coming soon)</h3>\n<p>\n    Webmaking 101 is a free course that will provide you the tools you need to become a knowledgeable web developer.</p>\n\n<p>\n<a class=\"webcraft-browse\" href=\"/groups/?school=school-of-webcraft\">Browse courses</a>\nor\n<a class=\"webcraft-button\" href=\"http://eepurl.com/fDU3c\" target=\"_blank\">Get notified of Webmaking 101 launch</a>\n</p>",
+            "short_name": "",
+            "sidebar_width": "300px",
+            "show_school_organizers": false,
+            "old_term_name": "Webcraft",
+            "menu_color_light": "#80b6f2",
+            "featured": [],
+            "headers_color": "#002b77",
+            "mentee_form_url": null,
+            "extra_styles": "#school_home #main {\r\n  font-family: \"Helvetica\", Arial, Verdana, san-serif;\r\n}\r\n\r\n#school_home h2 {\r\n  font-weight: 100;\r\n  font-size: 30px;\r\n  margin-bottom: 10px;\r\n  color: #000;\r\n}\r\n\r\n#school_home h3 {\r\n  font-weight: 100;\r\n  font-size: 20px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n#school_home #sidebar {\r\n    min-height: 300px;\r\n    border: 0;\r\n}\r\n\r\na.webcraft-browse {\r\n  margin: 0 20px 50px 80px;\r\n  font-size: 18px;\r\n  text-decoration: underline;\r\n}\r\n\r\na.webcraft-browse {\r\n  cursor: pointer;\r\n}\r\n\r\na.webcraft-button {\r\n margin: 0 0 -4px 20px;\r\n background-color: #7fbf4d;\r\n background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));\r\n /* Saf4+, Chrome */\r\n background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: linear-gradient(top, #7fbf4d, #63a62f);\r\n border: 1px solid #63a62f;\r\n border-bottom: 1px solid #5b992b;\r\n -webkit-border-radius: 3px;\r\n -moz-border-radius: 3px;\r\n -ms-border-radius: 3px;\r\n -o-border-radius: 3px;\r\n border-radius: 3px;\r\n -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n -moz-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n -ms-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n -o-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n box-shadow: inset 0 1px 0 0 #96ca6d;\r\n color: #fff;\r\n font: normal 12px \"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Geneva, Verdana, sans-serif;\r\n line-height: 1;\r\n padding: 7px 8px 8px 8px;\r\n text-align: center;\r\n text-shadow: 0 -1px 0 #4c9021;\r\n width: 260px; \r\n}\r\n \r\na.webcraft-button:hover {\r\n   background-color: #76b347;\r\n   background-image: -webkit-gradient(linear, left top, left bottom, from(#76b347), to(#5e9e2e));\r\n   /* Saf4+, Chrome */\r\n   background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: -o-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: linear-gradient(top, #76b347, #5e9e2e);\r\n   -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   -moz-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   -ms-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   -o-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   cursor: pointer; \r\n   text-decoration: none;\r\n}\r\n\r\na.webcraft-button:active {\r\n   border: 1px solid #5b992b;\r\n   border-bottom: 1px solid #538c27;\r\n   -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   -moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   -ms-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   -o-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee; \r\n}",
+            "headers_color_light": "#0342b2",
+            "background": "",
+            "mentor_form_url": null,
+            "site_logo": "",
+            "logo": "images/sow_logo.png",
+            "menu_color": "#60a3ef",
+            "background_color": "#ffffff",
+            "slug": "school-of-webcraft",
+            "name": "School of Webcraft"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "schools.school",
+        "fields": {
+            "organizers": [],
+            "groups_icon": "",
+            "description": "<h1 class=\"school_header\"><b>School of the Mathematical Future</b></h1>\n\n<p>\n\t<strong>Pilot:</strong> This pilot for a P2PU School of Ed brings the model of open, community-based peer learning to professional development for K-12 teachers.</p>\n<p>\n\t<strong>Hands-on:</strong>\u00a0School of Ed is about hands-on learning driven by each educator's particular needs and classroom situations. It's about connecting, collaborating, and creating, not just reading or studying.</p>\n<p>\n\t<strong>Seven Courses:</strong> The pilot includes <u>seven free, online, open-licensed courses</u> that will be run between September and November, 2011. The content focus of these courses is on using innovative methods to encourage deeper learning for students. This will be modeled through innovative professional development courses focused on peer learning and hands-on, learner-driven tasks.</p>\n<p>\n\t<span style=\"font-size: 16px;\"><span style=\"color: rgb(255, 0, 0);\"><strong>Registration is now open for these courses.</strong></span></span><br>\n\t<br>\n\tAnyone can \u201cfollow\u201d a course. Applying to be a participant is the next level of commitment. In order to maintain a high level of engagement, the number of participants will be limited.<br>\n\t<br>\n\tIf you are planning to apply to be a participant:</p>\n<ul>\n\t<li>\n\t\tMake sure your P2PU profile is complete.</li>\n\t<li>\n\t\tRead the course's full description and syllabus, and make sure you can commit to the work involved.</li>\n\t<li>\n\t\tRead and answer the sign-up questions.<br>\n\t\t\u00a0</li>\n</ul>\n<p>\n\tSign-up close dates are listed below. Applicants will be notified of their status one week after the close dates.</p>\n<p>\n\t<strong>Courses start in September, 2011. </strong>(See individual courses for dates.)</p>\n<p>\n\tCourse titles include:</p>\n<ul>\n\t<li>\n\t\t<strong>Differentiating Instruction </strong>- <a href=\"http://p2pu.org/en/groups/differentiating-instruction-for-deeper-learning/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/differentiating-instruction-for-deeper-learning/\">sign-up open until Sept. 19</a> (click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Student Engagement </strong>- <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-engaging-students-and-checking-for-understanding/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-engaging-students-and-checking-for-understanding/\">sign-up open until Sept. 12 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>OER in the K-12 Classroom </strong>- <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-oer-in-k-12/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-oer-in-k-12/\">sign-up open until Sept. 19 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Teaching in </strong><strong>Online and </strong><strong>Blended Classrooms </strong>- <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-teaching-in-blended-and-online-classrooms/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-teaching-in-blended-and-online-classrooms/\">sign-up open until Sept. 12</a> (click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Multimedia and Graphics to Facilitate Deeper Learning </strong>- <a href=\"http://p2pu.org/en/groups/multimedia-and-graphics-to-facilitate-deeper-learning/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/multimedia-and-graphics-to-facilitate-deeper-learning/\">sign-up open until Oct. 3 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Writing &amp; Common Core: Deeper Learning for All </strong>- <a href=\"http://p2pu.org/en/groups/writing-common-core-deeper-learning-for-all/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/writing-common-core-deeper-learning-for-all/\">sign-up open until Sept. 26 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Using Web 2.0 and Social Media to Encourage Deeper Learning </strong>- <a href=\"http://p2pu.org/en/groups/using-web-20-and-social-media-to-encourage-deeper-learning/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/using-web-20-and-social-media-to-encourage-deeper-learning/\">sign-up open until Sept 19 </a>(click PARTICIPATE to apply)<br>\n\t\t<br>\n\t\t[embed:http://vimeo.com/27619552]<br>\n\t\t\u00a0</li>\n</ul>\n<p>\n\tAll courses in this school are free, open-licensed (CC BY), and online, with most courses running six weeks.</p>",
+            "short_name": "",
+            "sidebar_width": "245px",
+            "show_school_organizers": true,
+            "old_term_name": null,
+            "menu_color_light": "#4bd2c9",
+            "featured": [],
+            "headers_color": "#5a6579",
+            "mentee_form_url": null,
+            "extra_styles": "",
+            "headers_color_light": "#f08c00",
+            "background": "",
+            "mentor_form_url": null,
+            "site_logo": "",
+            "logo": "",
+            "menu_color": "#36cdc4",
+            "background_color": "#ffffff",
+            "slug": "school-of-ed-pilot",
+            "name": "School of Ed (pilot)"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": null,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": null,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 1",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:01:34",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 2,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": null,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-2",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 2",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:03:50",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 3,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": null,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-3",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 3",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:05:54",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 4,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": null,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-4",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 4",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:23:46",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 5,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": null,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-5",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 5",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:24:42",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 6,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": null,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-6",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 6",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:26:11",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 7,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": 1,
+            "other_description": "",
+            "image": "",
+            "under_development": true,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": null,
+            "long_description": "<p>\n\ttest</p>",
+            "category": "challenge",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [],
+            "other": "",
+            "not_listed": false,
+            "short_description": "test",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "test-webmaking-101-7",
+            "imported_from": null,
+            "school": 3,
+            "name": "Test Webmaking 101 - Challenge 7",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2011-10-13 02:26:34",
+            "duration_hours": 0
+        }
+    },
+    {
+        "pk": 8,
+        "model": "projects.project",
+        "fields": {
+            "clone_of": null,
+            "other_description": "",
+            "image": "",
+            "under_development": false,
+            "featured": false,
+            "next_projects": [],
+            "detailed_description": null,
+            "long_description": "<p>\n\tThis course will teach you how to fly. I do want to warn everyone that this course is not for the faint of heart or fragile of bone!</p>\n<p>\n\tPlease excercise caution whenever following this course and don't, I repeat DON'T, skip any of the steps!!</p>",
+            "category": "course",
+            "archived": false,
+            "community_featured": false,
+            "completion_badges": [],
+            "other": "",
+            "not_listed": false,
+            "short_description": "Learn how to fly",
+            "start_date": null,
+            "end_date": null,
+            "deleted": false,
+            "slug": "flying-101",
+            "imported_from": null,
+            "school": null,
+            "name": "Flying 101",
+            "language": "en",
+            "duration_minutes": 0,
+            "created_on": "2012-04-05 09:15:50",
+            "duration_hours": 0
         }
     },
     {
@@ -293,418 +657,6 @@
             "status": "non-moderated",
             "public": "",
             "author": 4
-        }
-    },
-    {
-        "pk": 1,
-        "model": "schools.school",
-        "fields": {
-            "organizers": [],
-            "groups_icon": "",
-            "description": "<h1 class=\"school_header\"><b>School of Social Innovation</b></h1>\n\n<p>Are you looking to make a difference in your community and the world? Are you interested in developing the skills and network necessary to do so?</p>\n\n<p>The P2PU School of Social Innovation is a global, open source community for organizing peer study groups on topics like conflict resolution, project management for social innovators, and social innovation in education.  SoSI is united by the common purpose of helping all people strengthen skills that are important for social innovators.</p>\n\n<p>SoSI achieves this through free, peer-designed-and-directed study groups, which use a combination of online and offline project-based learning.  The online platform allows study groups of a virtually unlimited size to access and remix high-quality open source curriculum, lectures and other resources for deepening theoretical understanding in international, collaborative teams, while participant-led offline citizen circles provide the opportunity for participants to work in their local context and to develop skills like empathy, resilience, and cooperation- skills which are often learned best through deeper practice, in person.</p>\n<h2>\n\tAbout Us</h2>\n<ul>\n\t<li>\n\t\t<a href=\"http://wiki.p2pu.org/w/page/33982467/SoSI\" title=\"Find out more about SoSI\">About SoSI</a></li>\n\t<li>\n\t\t<a href=\"http://www.citizencircles.com\" title=\"About Citizen Circles\">About Citizen Circles</a></li>\n\t<li>\n\t\t<a href=\"http://wiki.p2pu.org/w/page/33982522/Creating-a-citizen-circle\" title=\"What is a Citizen Circle?\">What is a Citizen Circle?</a></li>\n\t<li>\n\t\t<a href=\"http://groups.google.com/group/citizencircles\" title=\"Contact SoSI\">Contact Us</a></li>\n</ul>",
-            "short_name": "",
-            "sidebar_width": "200px",
-            "show_school_organizers": true,
-            "old_term_name": "SoSI",
-            "menu_color_light": "#f99649",
-            "featured": [],
-            "headers_color": "#34749D",
-            "mentee_form_url": null,
-            "extra_styles": "",
-            "headers_color_light": "#3d8abc",
-            "background": "",
-            "mentor_form_url": null,
-            "site_logo": "",
-            "logo": "",
-            "menu_color": "#F57D1F",
-            "background_color": "#dce7e9",
-            "slug": "school-of-social-innovation",
-            "name": "School of Social Innovation"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "schools.school",
-        "fields": {
-            "organizers": [],
-            "groups_icon": "",
-            "description": "<h1 class=\"school_header\"><b>School of the Mathematical Future</b></h1>\n\n<p>\n\tSchool of the Mathematical Future is organized by Natural Math family learning network, Math 2.0 interest group, and P2PU (Peer to Peer University). We are building an open learning environment for mathematics educators working in diverse communities and networks. Our classes are open and free.</p>\n<h2>\n\tContact Us</h2>\n<ul>\n\t<li>\n\t\t<a href=\"http://groups.google.com/group/p2pu-mathfuture\" title=\"Discussion Group\">Discussion group for School of Math Future</a></li>\n\t<li>\n\t\t<a href=\"http://groups.google.com/group/p2pu-mathfutureannounce\" title=\"Announcement List\">Announcement list for the School of Math Future</a></li>\n</ul>",
-            "short_name": "",
-            "sidebar_width": "235px",
-            "show_school_organizers": true,
-            "old_term_name": "Math Future",
-            "menu_color_light": "#fcda77",
-            "featured": [],
-            "headers_color": "#990000",
-            "mentee_form_url": null,
-            "extra_styles": "",
-            "headers_color_light": "#d60505",
-            "background": "",
-            "mentor_form_url": null,
-            "site_logo": "",
-            "logo": "",
-            "menu_color": "#fbcd47",
-            "background_color": "#f1f1f1",
-            "slug": "school-of-the-mathematical-future",
-            "name": "School of the Mathematical Future"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "schools.school",
-        "fields": {
-            "organizers": [],
-            "groups_icon": "",
-            "description": "<h2>\n    School of Webcraft is a free, online community for learning open web development.</h2>\n<p>\n    We believe that learning with others is the best way to help people learn the skills and theory that they need to create web sites and apps using modern open web technologies.</p>\n<h3>\n    <br>\n    Get started today by signing up for Webmaking 101. (coming soon)</h3>\n<p>\n    Webmaking 101 is a free course that will provide you the tools you need to become a knowledgeable web developer.</p>\n\n<p>\n<a class=\"webcraft-browse\" href=\"/groups/?school=school-of-webcraft\">Browse courses</a>\nor\n<a class=\"webcraft-button\" href=\"http://eepurl.com/fDU3c\" target=\"_blank\">Get notified of Webmaking 101 launch</a>\n</p>",
-            "short_name": "",
-            "sidebar_width": "300px",
-            "show_school_organizers": false,
-            "old_term_name": "Webcraft",
-            "menu_color_light": "#80b6f2",
-            "featured": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7
-            ],
-            "headers_color": "#002b77",
-            "mentee_form_url": null,
-            "extra_styles": "#school_home #main {\r\n  font-family: \"Helvetica\", Arial, Verdana, san-serif;\r\n}\r\n\r\n#school_home h2 {\r\n  font-weight: 100;\r\n  font-size: 30px;\r\n  margin-bottom: 10px;\r\n  color: #000;\r\n}\r\n\r\n#school_home h3 {\r\n  font-weight: 100;\r\n  font-size: 20px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n#school_home #sidebar {\r\n    min-height: 300px;\r\n    border: 0;\r\n}\r\n\r\na.webcraft-browse {\r\n  margin: 0 20px 50px 80px;\r\n  font-size: 18px;\r\n  text-decoration: underline;\r\n}\r\n\r\na.webcraft-browse {\r\n  cursor: pointer;\r\n}\r\n\r\na.webcraft-button {\r\n margin: 0 0 -4px 20px;\r\n background-color: #7fbf4d;\r\n background-image: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));\r\n /* Saf4+, Chrome */\r\n background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);\r\n background-image: linear-gradient(top, #7fbf4d, #63a62f);\r\n border: 1px solid #63a62f;\r\n border-bottom: 1px solid #5b992b;\r\n -webkit-border-radius: 3px;\r\n -moz-border-radius: 3px;\r\n -ms-border-radius: 3px;\r\n -o-border-radius: 3px;\r\n border-radius: 3px;\r\n -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n -moz-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n -ms-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n -o-box-shadow: inset 0 1px 0 0 #96ca6d;\r\n box-shadow: inset 0 1px 0 0 #96ca6d;\r\n color: #fff;\r\n font: normal 12px \"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Geneva, Verdana, sans-serif;\r\n line-height: 1;\r\n padding: 7px 8px 8px 8px;\r\n text-align: center;\r\n text-shadow: 0 -1px 0 #4c9021;\r\n width: 260px; \r\n}\r\n \r\na.webcraft-button:hover {\r\n   background-color: #76b347;\r\n   background-image: -webkit-gradient(linear, left top, left bottom, from(#76b347), to(#5e9e2e));\r\n   /* Saf4+, Chrome */\r\n   background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: -o-linear-gradient(top, #76b347, #5e9e2e);\r\n   background-image: linear-gradient(top, #76b347, #5e9e2e);\r\n   -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   -moz-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   -ms-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   -o-box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   box-shadow: inset 0 1px 0 0 #8dbf67;\r\n   cursor: pointer; \r\n   text-decoration: none;\r\n}\r\n\r\na.webcraft-button:active {\r\n   border: 1px solid #5b992b;\r\n   border-bottom: 1px solid #538c27;\r\n   -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   -moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   -ms-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   -o-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;\r\n   box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee; \r\n}",
-            "headers_color_light": "#0342b2",
-            "background": "",
-            "mentor_form_url": null,
-            "site_logo": "",
-            "logo": "images/sow_logo.png",
-            "menu_color": "#60a3ef",
-            "background_color": "#ffffff",
-            "slug": "school-of-webcraft",
-            "name": "School of Webcraft"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "schools.school",
-        "fields": {
-            "organizers": [],
-            "groups_icon": "",
-            "description": "<h1 class=\"school_header\"><b>School of the Mathematical Future</b></h1>\n\n<p>\n\t<strong>Pilot:</strong> This pilot for a P2PU School of Ed brings the model of open, community-based peer learning to professional development for K-12 teachers.</p>\n<p>\n\t<strong>Hands-on:</strong>\u00a0School of Ed is about hands-on learning driven by each educator's particular needs and classroom situations. It's about connecting, collaborating, and creating, not just reading or studying.</p>\n<p>\n\t<strong>Seven Courses:</strong> The pilot includes <u>seven free, online, open-licensed courses</u> that will be run between September and November, 2011. The content focus of these courses is on using innovative methods to encourage deeper learning for students. This will be modeled through innovative professional development courses focused on peer learning and hands-on, learner-driven tasks.</p>\n<p>\n\t<span style=\"font-size: 16px;\"><span style=\"color: rgb(255, 0, 0);\"><strong>Registration is now open for these courses.</strong></span></span><br>\n\t<br>\n\tAnyone can \u201cfollow\u201d a course. Applying to be a participant is the next level of commitment. In order to maintain a high level of engagement, the number of participants will be limited.<br>\n\t<br>\n\tIf you are planning to apply to be a participant:</p>\n<ul>\n\t<li>\n\t\tMake sure your P2PU profile is complete.</li>\n\t<li>\n\t\tRead the course's full description and syllabus, and make sure you can commit to the work involved.</li>\n\t<li>\n\t\tRead and answer the sign-up questions.<br>\n\t\t\u00a0</li>\n</ul>\n<p>\n\tSign-up close dates are listed below. Applicants will be notified of their status one week after the close dates.</p>\n<p>\n\t<strong>Courses start in September, 2011. </strong>(See individual courses for dates.)</p>\n<p>\n\tCourse titles include:</p>\n<ul>\n\t<li>\n\t\t<strong>Differentiating Instruction </strong>- <a href=\"http://p2pu.org/en/groups/differentiating-instruction-for-deeper-learning/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/differentiating-instruction-for-deeper-learning/\">sign-up open until Sept. 19</a> (click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Student Engagement </strong>- <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-engaging-students-and-checking-for-understanding/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-engaging-students-and-checking-for-understanding/\">sign-up open until Sept. 12 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>OER in the K-12 Classroom </strong>- <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-oer-in-k-12/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-oer-in-k-12/\">sign-up open until Sept. 19 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Teaching in </strong><strong>Online and </strong><strong>Blended Classrooms </strong>- <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-teaching-in-blended-and-online-classrooms/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/pd-on-p2pu-teaching-in-blended-and-online-classrooms/\">sign-up open until Sept. 12</a> (click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Multimedia and Graphics to Facilitate Deeper Learning </strong>- <a href=\"http://p2pu.org/en/groups/multimedia-and-graphics-to-facilitate-deeper-learning/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/multimedia-and-graphics-to-facilitate-deeper-learning/\">sign-up open until Oct. 3 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Writing &amp; Common Core: Deeper Learning for All </strong>- <a href=\"http://p2pu.org/en/groups/writing-common-core-deeper-learning-for-all/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/writing-common-core-deeper-learning-for-all/\">sign-up open until Sept. 26 </a>(click PARTICIPATE to apply)</li>\n\t<li>\n\t\t<strong>Using Web 2.0 and Social Media to Encourage Deeper Learning </strong>- <a href=\"http://p2pu.org/en/groups/using-web-20-and-social-media-to-encourage-deeper-learning/content/full-description/\">description</a>, <a href=\"http://p2pu.org/en/groups/using-web-20-and-social-media-to-encourage-deeper-learning/\">sign-up open until Sept 19 </a>(click PARTICIPATE to apply)<br>\n\t\t<br>\n\t\t[embed:http://vimeo.com/27619552]<br>\n\t\t\u00a0</li>\n</ul>\n<p>\n\tAll courses in this school are free, open-licensed (CC BY), and online, with most courses running six weeks.</p>",
-            "short_name": "",
-            "sidebar_width": "245px",
-            "show_school_organizers": true,
-            "old_term_name": null,
-            "menu_color_light": "#4bd2c9",
-            "featured": [],
-            "headers_color": "#5a6579",
-            "mentee_form_url": null,
-            "extra_styles": "",
-            "headers_color_light": "#f08c00",
-            "background": "",
-            "mentor_form_url": null,
-            "site_logo": "",
-            "logo": "",
-            "menu_color": "#36cdc4",
-            "background_color": "#ffffff",
-            "slug": "school-of-ed-pilot",
-            "name": "School of Ed (pilot)"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "projects.project",
-        "fields": {
-            "clone_of": null,
-            "other_description": "",
-            "image": "",
-            "under_development": false,
-            "featured": false,
-            "next_projects": [
-                2
-            ],
-            "detailed_description": 1,
-            "long_description": "<p>\n\ttest</p>",
-            "category": "challenge",
-            "archived": false,
-            "community_featured": false,
-            "completion_badges": [
-                1,
-                8,
-                9
-            ],
-            "other": "",
-            "not_listed": false,
-            "short_description": "test",
-            "start_date": null,
-            "end_date": null,
-            "deleted": false,
-            "slug": "test-webmaking-101",
-            "imported_from": null,
-            "school": 3,
-            "name": "Test Webmaking 101 - Challenge 1",
-            "language": "en",
-            "duration_minutes": 0,
-            "created_on": "2011-10-13 02:01:34",
-            "duration_hours": 0
-        }
-    },
-    {
-        "pk": 2,
-        "model": "projects.project",
-        "fields": {
-            "clone_of": 1,
-            "other_description": "",
-            "image": "",
-            "under_development": false,
-            "featured": false,
-            "next_projects": [
-                3
-            ],
-            "detailed_description": 5,
-            "long_description": "<p>\n\ttest</p>",
-            "category": "challenge",
-            "archived": false,
-            "community_featured": false,
-            "completion_badges": [
-                2,
-                8,
-                9
-            ],
-            "other": "",
-            "not_listed": false,
-            "short_description": "test",
-            "start_date": null,
-            "end_date": null,
-            "deleted": false,
-            "slug": "test-webmaking-101-2",
-            "imported_from": null,
-            "school": 3,
-            "name": "Test Webmaking 101 - Challenge 2",
-            "language": "en",
-            "duration_minutes": 0,
-            "created_on": "2011-10-13 02:03:50",
-            "duration_hours": 0
-        }
-    },
-    {
-        "pk": 3,
-        "model": "projects.project",
-        "fields": {
-            "clone_of": 1,
-            "other_description": "",
-            "image": "",
-            "under_development": false,
-            "featured": false,
-            "next_projects": [
-                4
-            ],
-            "detailed_description": 9,
-            "long_description": "<p>\n\ttest</p>",
-            "category": "challenge",
-            "archived": false,
-            "community_featured": false,
-            "completion_badges": [
-                3,
-                8,
-                9
-            ],
-            "other": "",
-            "not_listed": false,
-            "short_description": "test",
-            "start_date": null,
-            "end_date": null,
-            "deleted": false,
-            "slug": "test-webmaking-101-3",
-            "imported_from": null,
-            "school": 3,
-            "name": "Test Webmaking 101 - Challenge 3",
-            "language": "en",
-            "duration_minutes": 0,
-            "created_on": "2011-10-13 02:05:54",
-            "duration_hours": 0
-        }
-    },
-    {
-        "pk": 4,
-        "model": "projects.project",
-        "fields": {
-            "clone_of": 1,
-            "other_description": "",
-            "image": "",
-            "under_development": false,
-            "featured": false,
-            "next_projects": [
-                5
-            ],
-            "detailed_description": 13,
-            "long_description": "<p>\n\ttest</p>",
-            "category": "challenge",
-            "archived": false,
-            "community_featured": false,
-            "completion_badges": [
-                4,
-                8,
-                9
-            ],
-            "other": "",
-            "not_listed": false,
-            "short_description": "test",
-            "start_date": null,
-            "end_date": null,
-            "deleted": false,
-            "slug": "test-webmaking-101-4",
-            "imported_from": null,
-            "school": 3,
-            "name": "Test Webmaking 101 - Challenge 4",
-            "language": "en",
-            "duration_minutes": 0,
-            "created_on": "2011-10-13 02:23:46",
-            "duration_hours": 0
-        }
-    },
-    {
-        "pk": 5,
-        "model": "projects.project",
-        "fields": {
-            "clone_of": 1,
-            "other_description": "",
-            "image": "",
-            "under_development": false,
-            "featured": false,
-            "next_projects": [
-                6
-            ],
-            "detailed_description": 17,
-            "long_description": "<p>\n\ttest</p>",
-            "category": "challenge",
-            "archived": false,
-            "community_featured": false,
-            "completion_badges": [
-                5,
-                8,
-                9
-            ],
-            "other": "",
-            "not_listed": false,
-            "short_description": "test",
-            "start_date": null,
-            "end_date": null,
-            "deleted": false,
-            "slug": "test-webmaking-101-5",
-            "imported_from": null,
-            "school": 3,
-            "name": "Test Webmaking 101 - Challenge 5",
-            "language": "en",
-            "duration_minutes": 0,
-            "created_on": "2011-10-13 02:24:42",
-            "duration_hours": 0
-        }
-    },
-    {
-        "pk": 6,
-        "model": "projects.project",
-        "fields": {
-            "clone_of": 1,
-            "other_description": "",
-            "image": "",
-            "under_development": false,
-            "featured": false,
-            "next_projects": [
-                7
-            ],
-            "detailed_description": 21,
-            "long_description": "<p>\n\ttest</p>",
-            "category": "challenge",
-            "archived": false,
-            "community_featured": false,
-            "completion_badges": [
-                6,
-                8,
-                9
-            ],
-            "other": "",
-            "not_listed": false,
-            "short_description": "test",
-            "start_date": null,
-            "end_date": null,
-            "deleted": false,
-            "slug": "test-webmaking-101-6",
-            "imported_from": null,
-            "school": 3,
-            "name": "Test Webmaking 101 - Challenge 6",
-            "language": "en",
-            "duration_minutes": 0,
-            "created_on": "2011-10-13 02:26:11",
-            "duration_hours": 0
-        }
-    },
-    {
-        "pk": 7,
-        "model": "projects.project",
-        "fields": {
-            "clone_of": 1,
-            "other_description": "",
-            "image": "",
-            "under_development": true,
-            "featured": false,
-            "next_projects": [],
-            "detailed_description": 25,
-            "long_description": "<p>\n\ttest</p>",
-            "category": "challenge",
-            "archived": false,
-            "community_featured": false,
-            "completion_badges": [
-                7,
-                8,
-                9
-            ],
-            "other": "",
-            "not_listed": false,
-            "short_description": "test",
-            "start_date": null,
-            "end_date": null,
-            "deleted": false,
-            "slug": "test-webmaking-101-7",
-            "imported_from": null,
-            "school": 3,
-            "name": "Test Webmaking 101 - Challenge 7",
-            "language": "en",
-            "duration_minutes": 0,
-            "created_on": "2011-10-13 02:26:34",
-            "duration_hours": 0
-        }
-    },
-    {
-        "pk": 8,
-        "model": "projects.project",
-        "fields": {
-            "clone_of": null,
-            "other_description": "",
-            "image": "",
-            "under_development": false,
-            "featured": false,
-            "next_projects": [],
-            "detailed_description": 29,
-            "long_description": "<p>\n\tThis course will teach you how to fly. I do want to warn everyone that this course is not for the faint of heart or fragile of bone!</p>\n<p>\n\tPlease excercise caution whenever following this course and don't, I repeat DON'T, skip any of the steps!!</p>",
-            "category": "course",
-            "archived": false,
-            "community_featured": false,
-            "completion_badges": [],
-            "other": "",
-            "not_listed": false,
-            "short_description": "Learn how to fly",
-            "start_date": null,
-            "end_date": null,
-            "deleted": false,
-            "slug": "flying-101",
-            "imported_from": null,
-            "school": null,
-            "name": "Flying 101",
-            "language": "en",
-            "duration_minutes": null,
-            "created_on": "2012-04-05 09:15:50",
-            "duration_hours": null
         }
     },
     {
@@ -1150,9 +1102,7 @@
             "minor_update": true,
             "last_update": "2011-10-13 02:23:49",
             "content": "<p>\n\ttask3</p>",
-            "badges_to_apply": [
-                15
-            ],
+            "badges_to_apply": [],
             "listed": true,
             "slug": "task3"
         }
@@ -1228,9 +1178,7 @@
             "minor_update": true,
             "last_update": "2011-10-13 02:24:44",
             "content": "<p>\n\ttask3</p>",
-            "badges_to_apply": [
-                16
-            ],
+            "badges_to_apply": [],
             "listed": true,
             "slug": "task3"
         }
@@ -1306,9 +1254,7 @@
             "minor_update": true,
             "last_update": "2011-10-13 02:26:13",
             "content": "<p>\n\ttask3</p>",
-            "badges_to_apply": [
-                17
-            ],
+            "badges_to_apply": [],
             "listed": true,
             "slug": "task3"
         }
@@ -1384,9 +1330,7 @@
             "minor_update": true,
             "last_update": "2011-10-13 02:26:36",
             "content": "<p>\n\ttask3</p>",
-            "badges_to_apply": [
-                18
-            ],
+            "badges_to_apply": [],
             "listed": true,
             "slug": "task3"
         }
@@ -1522,6 +1466,117 @@
             "badges_to_apply": [],
             "listed": true,
             "slug": "advanced-levitation"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "use the Mozilla Developer Network HTML reference [0] to identify and use basic HTML tags "
+        }
+    },
+    {
+        "pk": 2,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "translate HTML tags like <div>, <p> into real world structures"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "communicate what DNS is by using  different types of media"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "have a domain name that can be used to further explore DNS"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "configure a DNS to point at a personal hosting account"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "provide valuable information on web hosting services"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "install an FTP or SFTP client"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "badges.rubric",
+        "fields": {
+            "question": "upload content that is visible live in a browser"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 3,
+            "unique": true,
+            "min_votes": 3,
+            "name": "skill badge",
+            "submission_style": "submission_required"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 0,
+            "unique": false,
+            "min_votes": 1,
+            "name": "community badge",
+            "submission_style": "no_submissions"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 0,
+            "unique": false,
+            "min_votes": 1,
+            "name": "submission-enabled community badge",
+            "submission_style": "submission_optional"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 0,
+            "unique": true,
+            "min_votes": 0,
+            "name": "stealth badge",
+            "submission_style": "no_submissions"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "badges.logic",
+        "fields": {
+            "min_avg_rating": 0,
+            "unique": true,
+            "min_votes": 0,
+            "name": "staff awarded badge",
+            "submission_style": "no_submissions"
         }
     },
     {
@@ -1989,117 +2044,6 @@
             "slug": "adopter",
             "all_groups": false,
             "name": "Adopter"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "badges.rubric",
-        "fields": {
-            "question": "use the Mozilla Developer Network HTML reference [0] to identify and use basic HTML tags "
-        }
-    },
-    {
-        "pk": 2,
-        "model": "badges.rubric",
-        "fields": {
-            "question": "translate HTML tags like <div>, <p> into real world structures"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "badges.rubric",
-        "fields": {
-            "question": "communicate what DNS is by using  different types of media"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "badges.rubric",
-        "fields": {
-            "question": "have a domain name that can be used to further explore DNS"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "badges.rubric",
-        "fields": {
-            "question": "configure a DNS to point at a personal hosting account"
-        }
-    },
-    {
-        "pk": 6,
-        "model": "badges.rubric",
-        "fields": {
-            "question": "provide valuable information on web hosting services"
-        }
-    },
-    {
-        "pk": 7,
-        "model": "badges.rubric",
-        "fields": {
-            "question": "install an FTP or SFTP client"
-        }
-    },
-    {
-        "pk": 8,
-        "model": "badges.rubric",
-        "fields": {
-            "question": "upload content that is visible live in a browser"
-        }
-    },
-    {
-        "pk": 1,
-        "model": "badges.logic",
-        "fields": {
-            "min_avg_rating": 3,
-            "unique": true,
-            "min_votes": 3,
-            "name": "skill badge",
-            "submission_style": "submission_required"
-        }
-    },
-    {
-        "pk": 2,
-        "model": "badges.logic",
-        "fields": {
-            "min_avg_rating": 0,
-            "unique": false,
-            "min_votes": 1,
-            "name": "community badge",
-            "submission_style": "no_submissions"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "badges.logic",
-        "fields": {
-            "min_avg_rating": 0,
-            "unique": false,
-            "min_votes": 1,
-            "name": "submission-enabled community badge",
-            "submission_style": "submission_optional"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "badges.logic",
-        "fields": {
-            "min_avg_rating": 0,
-            "unique": true,
-            "min_votes": 0,
-            "name": "stealth badge",
-            "submission_style": "no_submissions"
-        }
-    },
-    {
-        "pk": 5,
-        "model": "badges.logic",
-        "fields": {
-            "min_avg_rating": 0,
-            "unique": true,
-            "min_votes": 0,
-            "name": "staff awarded badge",
-            "submission_style": "no_submissions"
         }
     },
     {

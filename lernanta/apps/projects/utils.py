@@ -3,6 +3,7 @@ import tempfile
 import urllib2
 import Image
 import logging
+import datetime
 
 from lxml import html
 
@@ -144,3 +145,9 @@ def strip_remote_images(content, pk):
         content = content.replace(old, new)
 
     return content
+
+def json_date_encoder(obj):
+    if isinstance(obj, datetime.date):
+        return obj.isoformat()
+    else:
+        return simplejson.dumps(obj)

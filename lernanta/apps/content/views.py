@@ -179,23 +179,94 @@ def edit_pages(request, slug):
         form_cls = PageForm
         pages = pages.filter(collaborative=True)
     PageFormSet = modelformset_factory(Page, extra=0,
-        fields=form_cls.Meta.fields, can_order=True)
+        fields=form_cls.Meta.fields, can_order=True, can_delete=True)
+    preview = ('show_preview' in request.POST)
+    edit_mode = ('edit_mode' in request.POST)
+    add_page = ('add_page' in request.POST)
+    save_action = not preview and not edit_mode and not add_page
+    final_save = ('final_save' in request.POST)
     if request.method == 'POST':
-        formset = PageFormSet(request.POST, queryset=pages)
+        post_data = request.POST
+        try:
+            total_forms_count = int(post_data['form-TOTAL_FORMS'])
+        except ValueError, KeyError:
+            total_forms_count = 0
+        if add_page:
+            total_forms_count += 1
+            post_data = post_data.copy()
+            post_data['form-TOTAL_FORMS'] = total_forms_count
+        formset = PageFormSet(post_data, queryset=pages)
+        forms = formset.forms
         if formset.is_valid():
-            current_order = list(pages.values_list('index', flat=True))
-            for form in formset.forms:
+            forms = formset.ordered_forms
+            if save_action:
+                profile = request.user.get_profile()
+                current_order = list(pages.values_list('index', flat=True))
+                new_forms_count = total_forms_count - len(current_order)
+                if new_forms_count > 0:
+                    try:
+                        first_available_index = project.pages.order_by('-index')[0].index + 1
+                    except IndexError:
+                        first_available_index = 1
+                    current_order.extend(xrange(first_available_index, first_available_index + new_forms_count + 1))
+            for form in forms:
                 instance = form.save(commit=False)
-                instance.index = current_order[form.cleaned_data['ORDER'] - 1]
-                instance.save()
-            return http.HttpResponseRedirect(reverse('edit_pages',
-                kwargs=dict(slug=project.slug)))
+                if save_action:
+                    instance.author = profile
+                    # FIXME: Starting with Django 1.4 it is possible to
+                    # specify initial values on model formsets so we could include
+                    # the minor_update and collaborative form fields in the future.
+                    if instance.id:
+                        old_page = Page.objects.get(id=instance.id)
+                        old_version = PageVersion(title=old_page.title, content=old_page.content,
+                            author=old_page.author, date=old_page.last_update, page=instance)
+                        old_version.save()
+                        instance.minor_update = True
+                        instance.last_update = datetime.datetime.now()
+                    else:
+                        instance.project = project
+                        if project.category != Project.STUDY_GROUP:
+                            instance.collaborative = False
+                    if form.cleaned_data['ORDER']:
+                        instance.index = current_order[form.cleaned_data['ORDER'] - 1]
+                    instance.save()
+            for form in formset.deleted_forms:
+                instance = form.instance
+                instance.deleted = True
+                if save_action and instance.id:
+                    old_page = Page.objects.get(id=instance.id)
+                    old_version = PageVersion(title=old_page.title, content=old_page.content,
+                        author=old_page.author, date=old_page.last_update, page=instance)
+                    old_version.save()
+                    old_page.deleted = True
+                    old_page.author = profile
+                    old_page.last_update = datetime.datetime.now()
+                    old_page.save()
+            if final_save:
+                return http.HttpResponseRedirect(project.get_absolute_url())
+            elif save_action:
+                return http.HttpResponseRedirect(reverse('edit_pages',
+                    kwargs=dict(slug=project.slug)))
+        else:
+            if add_page:
+                messages.info(request, _('Please fill out the new task.'))
+            else:
+                messages.error(request, _('Please correct errors below.'))
+            preview = False
     else:
         formset = PageFormSet(queryset=pages)
-    
-    return render_to_response('content/edit_pages.html', {
-        'project': project, 'formset': formset,
-    }, context_instance=RequestContext(request))
+        forms = formset.forms
+    context = {
+        'project': project,
+        'formset': formset,
+        'forms': forms,
+        'preview': preview,
+        'edit_mode': edit_mode,
+        'add_page': add_page,
+        'save_action': save_action,
+    }
+    return render_to_response('content/edit_pages.html', context,
+        context_instance=RequestContext(request))
 
 
 @hide_deleted_projects

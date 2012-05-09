@@ -5914,6 +5914,51 @@ table.display thead, table.display tfoot {
     padding: 10px;
 }
 
+#edit_pages .accordion-section.deleted-page {
+    display: none;
+}
+
+#edit_pages .accordion-content {
+    height: 510px;
+}
+
+#edit_pages .accordion-content .accordion-preview {
+    display: none;
+}
+
+#edit_pages .accordion-content.show-preview-enabled {
+   height: auto;
+}
+
+#edit_pages .accordion-content.show-preview-enabled .accordion-preview {
+    display: inline;
+}
+
+#edit_pages .modal form {
+    width: 635px;
+}
+
+#edit_pages .modal form input[type="checkbox"] {
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+#edit_pages .accordion-content.show-preview-enabled .accordion-form-fields {
+    display: none;
+}
+
 #edit_pages .accordion-section-order {
     display: none;
+}
+
+#edit_pages #addPageButton {
+    width: 180px;
+}
+
+#edit_pages #saveProgressButton {
+    width: 140px;
+}
+
+#edit_pages .errorlist {
+     left: 460px;
 }

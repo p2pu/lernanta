@@ -8,20 +8,6 @@ from badges.models import Submission
 from content.models import Page
 
 
-class PageForm(forms.ModelForm):
-
-    class Meta:
-        model = Page
-        fields = ('title', 'sub_header', 'content', 'minor_update',)
-
-
-class NotListedPageForm(forms.ModelForm):
-
-    class Meta:
-        model = Page
-        fields = ('content', 'sub_header', 'minor_update',)
-
-
 class OwnersPageForm(forms.ModelForm):
 
     class Meta:
@@ -36,11 +22,22 @@ class OwnersPageForm(forms.ModelForm):
         return data
 
 
-class OwnersNotListedPageForm(forms.ModelForm):
+class PageForm(OwnersPageForm):
 
-    class Meta:
-        model = Page
-        fields = ('content', 'sub_header', 'collaborative', 'minor_update')
+    class Meta(OwnersPageForm.Meta):
+        exclude = ('collaborative',)
+
+
+class NotListedPageForm(OwnersPageForm):
+
+    class Meta(OwnersPageForm.Meta):
+        exclude = ('title', 'collaborative',)
+
+
+class OwnersNotListedPageForm(OwnersPageForm):
+
+    class Meta(OwnersPageForm.Meta):
+        exclude = ('title',)
 
 
 class TaskLinkSubmitForm(forms.ModelForm):

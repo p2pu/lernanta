@@ -623,6 +623,9 @@ def edit_participants_make_organizer(request, slug, username):
     if participation.organizing or request.method != 'POST':
         return http.HttpResponseForbidden(
             _("You can't make that person an organizer"))
+    participation.left_on = datetime.datetime.now()
+    participation.save()
+    participation = Participation(user=participation.user, project=participation.project)
     participation.organizing = True
     participation.save()
     messages.success(request, _('The participant is now an organizer.'))
@@ -634,20 +637,22 @@ def edit_participants_make_organizer(request, slug, username):
 @organizer_required
 def edit_participants_organizer_delete(request, slug, username):
     """ remove username as an organizer for the course """
-    participation = get_object_or_404(Participation,
-        project__slug=slug, user__username=username, left_on__isnull=True)
-    organizers = Participation.objects.filter(
-        project__slug=slug,
-        user__deleted=False,
-        organizing=True)
-    if len(organizers) == 1 and participation.id == organizers[0].id:
+    project = get_object_or_404(Project, slug=slug)
+    profile = get_object_or_404(UserProfile, username=username)
+    participation = get_object_or_404(Participation, project=project,
+        user=profile.user, left_on__isnull=True)
+    organizers = project.organizers()
+    # check that this isn't the only organizer
+    if len(organizers) == 1:
         messages.error(request, _('You cannot delete the only organizer'))
     elif request.method != 'POST':
         http.Http404
     else:
-        participation.organizing = False
+        participation.left_on = datetime.datetime.now()
         participation.save()
-        messages.success(request, _('The organizer in now only a prticipant.'))
+        participation = Participation(user=profile, project=project)
+        participation.save()
+        messages.success(request, _('The organizer in now only a participant.'))
     return http.HttpResponseRedirect(reverse('projects_edit_participants',
         kwargs=dict(slug=participation.project.slug)))
 

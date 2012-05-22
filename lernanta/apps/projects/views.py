@@ -199,7 +199,7 @@ def create(request, category=None):
                 msg = _("Problem creating the study group, course, ...")
             messages.error(request, msg)
     else:
-        form = project_forms.ProjectForm(category)
+        form = project_forms.ProjectForm(category, initial={'test':True})
         image_form = project_forms.ProjectImageForm()
     context = {
         'form': form,

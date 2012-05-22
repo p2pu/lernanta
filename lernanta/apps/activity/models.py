@@ -41,8 +41,8 @@ class ActivityManager(ManagerBase):
         return Activity.objects.filter(deleted=False,
             scope_object__isnull=False,
             scope_object__not_listed=False,
-            scope_object__deleted=False).exclude(
-            scope_object__category=Project.CHALLENGE).exclude(
+            scope_object__deleted=False,
+            scope_object__test=False).exclude(
             models.Q(target_content_type=remote_object_ct)
             | models.Q(target_content_type=status_ct)
             | models.Q(verb=schema.verbs['follow'])).order_by(
@@ -88,6 +88,7 @@ class Activity(ModelBase):
     created_on = models.DateTimeField(auto_now_add=True)
     deleted = models.BooleanField(default=False)
 
+    # reverse relation for page comments pointing to Activities
     comments = generic.GenericRelation(PageComment,
         content_type_field='page_content_type',
         object_id_field='page_id')

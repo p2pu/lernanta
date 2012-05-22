@@ -52,7 +52,7 @@ class ProjectForm(forms.ModelForm):
 
     class Meta:
         model = Project
-        fields = ('name', 'category', 'other', 'other_description',
+        fields = ('test', 'name', 'category', 'other', 'other_description',
             'short_description', 'long_description', 'language')
         widgets = {
             'category': forms.RadioSelect,

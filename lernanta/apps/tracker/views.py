@@ -85,9 +85,12 @@ def scoreboard(request):
     ct = ContentType.objects.get_for_model(SignupAnswer)
     comments = PageComment.objects.exclude(page_content_type=ct)
     comments_stats = get_stats('comments', comments, 'created_on', time_details)
-    joins_stats = get_stats('joins', Participation.objects.all(),
+    joins = Participation.objects.filter(
+        project__test=False, left_on__isnull=True)
+    joins_stats = get_stats('joins', joins,
         'joined_on', time_details)
-    groups_stats = get_stats('groups', Project.objects.all(),
+    groups = Project.objects.filter(test=False)
+    groups_stats = get_stats('groups', groups,
         'created_on', time_details)
     context = {
         'stats': [users_stats, comments_stats, joins_stats, groups_stats],
@@ -140,9 +143,14 @@ def scoreboard_top_groups_by_joins(request):
     if not request.user.is_authenticated() or not request.user.is_staff:
         raise http.Http404
     stats_date = datetime.datetime.now()
-    aaData = list(Participation.objects.filter(joined_on__month=stats_date.month,
-        joined_on__year=stats_date.year).values('project__slug').annotate(
-        joins_count=Count('id')).values_list('project__slug', 'joins_count'))
+    aaData = list(Participation.objects.filter(
+        joined_on__month=stats_date.month,
+        joined_on__year=stats_date.year,
+        project__test=False,
+        left_on__isnull=True
+    ).values('project__slug').annotate(
+        joins_count=Count('id')
+    ).values_list('project__slug', 'joins_count'))
     data = {'aaData': aaData}
     json = simplejson.dumps(data)
     return http.HttpResponse(json, mimetype="application/json")
@@ -153,7 +161,7 @@ def scoreboard_groups(request):
         raise http.Http404
     stats_date = datetime.datetime.now()
     groups = Project.objects.filter(created_on__month=stats_date.month,
-        created_on__year=stats_date.year)
+        created_on__year=stats_date.year, test=False)
     groups_ids = groups.values('id')
     ct = ContentType.objects.get_for_model(SignupAnswer)
     p_ct = ContentType.objects.get_for_model(Project)

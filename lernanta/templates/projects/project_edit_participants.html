@@ -71,9 +71,12 @@
           {% csrf_token %}
           <button class="delete" type="submit" value="{{ _('Remove') }}">{{ _('Remove') }}</button>
         </form>
-
         {% endif %}
-
+        {% else %}
+        <form action="{% locale_url projects_edit_participants_organizer_delete slug=project.slug username=participation.user.username %}" method="post">
+          {% csrf_token %}
+          <button class="delete" type="submit" value="{{ _('Remove organizer') }}">{{ _('Remove organizer') }}</button>
+        </form>
         {% endif %}
       </td>
     </tr>

@@ -29,7 +29,7 @@ class Page(ModelBase):
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=110)
     sub_header = models.CharField(max_length=150, blank=True, null=True)
-    content = RichTextField(config_name='rich', blank='False')
+    content = RichTextField(config_name='rich')
     author = models.ForeignKey('users.UserProfile', related_name='pages')
     last_update = models.DateTimeField(auto_now_add=True,
         default=datetime.datetime.now)

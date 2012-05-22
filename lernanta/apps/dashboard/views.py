@@ -25,9 +25,10 @@ from links.models import Link
 def splash(request):
     """Splash page we show to users who are not authenticated."""
     project = None
-    projects = list(Project.objects.filter(featured=True))
+    projects = Project.objects.filter(
+        featured=True).values_list('id', flat=True)
     if projects:
-        project = random.choice(projects)
+        project = Project.objects.get(id=random.choice(projects))
     activities = Activity.objects.public()
     feed_entries = FeedEntry.objects.filter(
         page='splash').order_by('-created_on')[0:4]

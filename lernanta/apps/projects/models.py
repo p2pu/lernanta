@@ -95,6 +95,8 @@ class Project(ModelBase):
     created_on = models.DateTimeField(
         auto_now_add=True, default=datetime.datetime.now)
 
+    # Indicates a test course. Affects activities and notifications
+    test = models.BooleanField(default=False)
     under_development = models.BooleanField(default=True)
     not_listed = models.BooleanField(default=False)
     archived = models.BooleanField(default=False)
@@ -276,14 +278,15 @@ class Project(ModelBase):
         profiles = [recipient.user for recipient in self.organizers()]
         SendNotifications.apply_async((profiles, subject_template, body_template,
             context))
-        admin_subject = render_to_string(
-            "projects/emails/admin_project_created_subject.txt",
-            context).strip()
-        admin_body = render_to_string(
-            "projects/emails/admin_project_created.txt", context).strip()
-        for admin_email in settings.ADMIN_PROJECT_CREATE_EMAIL:
-            send_mail(admin_subject, admin_body, admin_email,
-                [admin_email], fail_silently=True)
+        if not self.test:
+            admin_subject = render_to_string(
+                "projects/emails/admin_project_created_subject.txt",
+                context).strip()
+            admin_body = render_to_string(
+                "projects/emails/admin_project_created.txt", context).strip()
+            for admin_email in settings.ADMIN_PROJECT_CREATE_EMAIL:
+                send_mail(admin_subject, admin_body, admin_email,
+                    [admin_email], fail_silently=True)
 
     def accepted_school(self):
         # Used previously when schools had to decline groups.

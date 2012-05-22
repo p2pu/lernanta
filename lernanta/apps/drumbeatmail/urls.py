@@ -1,9 +1,9 @@
 from django.conf.urls.defaults import patterns, url
-from django.views.generic.simple import redirect_to
+from django.views.generic import RedirectView
 
 
 urlpatterns = patterns('',
-    url(r'^$', redirect_to, {'url': 'inbox/'}),
+    url(r'^$', RedirectView.as_view(url='inbox/')),
     url(r'^inbox/$', 'drumbeatmail.views.inbox',
         name='drumbeatmail_inbox'),
     url(r'^inbox/(?P<page_number>[\d]+)/$', 'drumbeatmail.views.inbox',

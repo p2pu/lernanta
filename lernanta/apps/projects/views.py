@@ -37,6 +37,7 @@ from activity.schema import verbs
 from signups.models import Signup
 from tracker import models as tracker_models
 from reviews.models import Review
+from utils import json_date_encoder
 
 from drumbeat import messages
 from users.decorators import login_required
@@ -198,7 +199,7 @@ def create(request, category=None):
                 msg = _("Problem creating the study group, course, ...")
             messages.error(request, msg)
     else:
-        form = project_forms.ProjectForm(category)
+        form = project_forms.ProjectForm(category, initial={'test':True})
         image_form = project_forms.ProjectImageForm()
     context = {
         'form': form,
@@ -622,12 +623,38 @@ def edit_participants_make_organizer(request, slug, username):
     if participation.organizing or request.method != 'POST':
         return http.HttpResponseForbidden(
             _("You can't make that person an organizer"))
+    participation.left_on = datetime.datetime.now()
+    participation.save()
+    participation = Participation(user=participation.user, project=participation.project)
     participation.organizing = True
     participation.save()
     messages.success(request, _('The participant is now an organizer.'))
     return http.HttpResponseRedirect(reverse('projects_edit_participants',
         kwargs=dict(slug=participation.project.slug)))
 
+@hide_deleted_projects
+@login_required
+@organizer_required
+def edit_participants_organizer_delete(request, slug, username):
+    """ remove username as an organizer for the course """
+    project = get_object_or_404(Project, slug=slug)
+    profile = get_object_or_404(UserProfile, username=username)
+    participation = get_object_or_404(Participation, project=project,
+        user=profile.user, left_on__isnull=True)
+    organizers = project.organizers()
+    # check that this isn't the only organizer
+    if len(organizers) == 1:
+        messages.error(request, _('You cannot delete the only organizer'))
+    elif request.method != 'POST':
+        http.Http404
+    else:
+        participation.left_on = datetime.datetime.now()
+        participation.save()
+        participation = Participation(user=profile, project=project)
+        participation.save()
+        messages.success(request, _('The organizer in now only a participant.'))
+    return http.HttpResponseRedirect(reverse('projects_edit_participants',
+        kwargs=dict(slug=participation.project.slug)))
 
 @hide_deleted_projects
 @login_required
@@ -780,7 +807,9 @@ def admin_metrics_data_ajax(request, slug):
     participant_profiles = (participant.user for participant in participants)
     tracker_models.update_metrics_cache(project)
     metrics = tracker_models.metrics_summary(project, participant_profiles)
-    json = simplejson.dumps({'aaData': list(metrics)})
+    json = simplejson.dumps(
+        {'aaData': list(metrics)},
+        default=json_date_encoder)
     return http.HttpResponse(json, mimetype="application/json")
 
 

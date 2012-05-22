@@ -2,8 +2,7 @@
 Lernanta
 =========
 
-Lernanta is the new platform for P2PU. We are building on the codebase from
-Batucada, a rewrite of drumbeat.org by Mozilla. 
+Lernanta is the software that supports P2PU's site, which started as a fork of Mozilla drumbeat's Batucada project. 
 
 
 Get Involved

@@ -448,25 +448,6 @@ class Award(ModelBase):
 # Signals #
 ###########
 
-def post_rating_save(sender, **kwargs):
-    instance = kwargs.get('instance', None)
-    created = kwargs.get('created', False)
-    if created and isinstance(instance, Rating):
-        instance.assessment.update_final_rating()
-
-post_save.connect(post_rating_save, sender=Rating,
-    dispatch_uid='badges_post_rating_save')
-
-
-def post_assessment_save(sender, **kwargs):
-    instance = kwargs.get('instance', None)
-    created = kwargs.get('created', False)
-    if created and isinstance(instance, Assessment):
-        instance.update_final_rating()
-
-post_save.connect(post_assessment_save, sender=Assessment,
-    dispatch_uid='badges_post_assessment_save')
-
 
 def post_submission_save(sender, **kwargs):
     instance = kwargs.get('instance', None)

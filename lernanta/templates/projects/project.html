@@ -19,7 +19,7 @@
 
 {% block breadcrumbs_actions%}
   {% if is_challenge and organizing %}
-    <a class="button" href="{% locale_url edit_pages slug=project.slug %}">{{ _('Edit Tasks') }}</a>
+    <a class="button" href="{% locale_url page_create slug=project.slug %}">{{ _('New Task') }}</a>
     <a class="button" href="{% locale_url projects_edit slug=project.slug %}">{{ _('Admin') }} {{ project.kind|title }}</a>
   {% endif %}
   {% project_review_action project user %}

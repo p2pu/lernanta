@@ -7,9 +7,9 @@
       <div class="school-small-icon {{ footer_school.slug }}-small-icon">
         <a href="{{ footer_school.get_absolute_url }}" title="{{ footer_school.name }}">
           {% if footer_school.groups_icon %}
-  	        <img src="/media/{{ footer_school.groups_icon }}" width="41" height="50" alt="{{ footer_school.name }}"/>
+  	        <img src="{{MEDIA_URL}}{{ footer_school.groups_icon }}" width="41" height="50" alt="{{ footer_school.name }}"/>
           {% else %}
-            <img src="/media/images/school-small-missing.png" width="41" height="50" alt="{{ footer_school.name }}"/>
+            <img src="{{STATIC_URL}}images/school-small-missing.png" width="41" height="50" alt="{{ footer_school.name }}"/>
           {% endif %}
           <p>{{ footer_school.short_name|upper }}</p>
         </a>

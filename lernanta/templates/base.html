@@ -17,24 +17,24 @@
   <meta name="author" content="mozilla">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.ico">
-  <link rel="apple-touch-icon" href="{{ MEDIA_URL }}images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico">
+  <link rel="apple-touch-icon" href="{{ STATIC_URL }}images/apple-touch-icon.png">
 
   <!-- Arvo font from google font api -->
   <link href='https://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
   <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-  <link rel="stylesheet" href="{{ MEDIA_URL }}css/jcarousel/tango/skin.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/jcarousel/tango/skin.css">
   <link rel="stylesheet" href="https://www.google.com/cse/style/look/default.css" type="text/css" />
-  <link rel="stylesheet" href="{{ MEDIA_URL }}css/font-awesome.css">
-  <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css?v=1">
-  <link rel="stylesheet" href="{{ MEDIA_URL }}css/batucada.css?v=1">
-  <link rel="stylesheet" href="{{ MEDIA_URL }}{{ _('css/style-en.css') }}?v=1">
-  <link rel="stylesheet" href="{{ MEDIA_URL }}js/libs/prettify/prettify.css">
-  <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/jquery.fancybox-1.3.4.css" media="screen" />
-  <link rel="stylesheet" href="{{ MEDIA_URL }}js/libs/jquery.ui.spinner/ui.spinner.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?v=1">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/batucada.css?v=1">
+  <link rel="stylesheet" href="{{ STATIC_URL }}{{ _('css/style-en.css') }}?v=1">
+  <link rel="stylesheet" href="{{ STATIC_URL }}js/libs/prettify/prettify.css">
+  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.fancybox-1.3.4.css" media="screen" />
+  <link rel="stylesheet" href="{{ STATIC_URL }}js/libs/jquery.ui.spinner/ui.spinner.css">
   {% block css %}{% endblock %}
-  <script src="{{ MEDIA_URL }}js/libs/modernizr-1.6.min.js"></script>
-  <script src="{{ MEDIA_URL }}ckeditor/ckeditor/ckeditor.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/modernizr-1.6.min.js"></script>
+  <script src="{{ STATIC_URL }}ckeditor/ckeditor/ckeditor.js"></script>
   {% block links %}{% endblock %}
 </head>
 <body id="{% block bodyid %}body{% endblock %}" class="{% block bodyclasses %}.body{% endblock %}">
@@ -62,7 +62,7 @@
                   {% if user.get_profile %}
                     <img id="user-picture" src="{{ user.get_profile.image_or_default }}" height="19" width="19" alt="{{ user.get_profile }}">
                   {% else %}
-                    <img id="user-picture" src="{{ MEDIA_URL }}images/member-missing.png" height="19" width="19" alt="{{ user.get_profile }}">
+                    <img id="user-picture" src="{{ STATIC_URL }}images/member-missing.png" height="19" width="19" alt="{{ user.get_profile }}">
                   {% endif %}
                   <span>{{ user.username }}</span>
                   {% if messages_inbox_count > 0 %}
@@ -146,27 +146,27 @@
 
 {% block footer %}{% include "_footer.html" %}{% endblock %}
 
-  <script src="{{ MEDIA_URL }}js/libs/jquery-1.4.2.min.js"></script>
-  <script src="{{ MEDIA_URL }}js/libs/jquery-ui-1.8.7.custom.min.js"></script>  
-  <script src="{{ MEDIA_URL }}js/libs/jquery.tmpl.min.js"></script>
-  <script src="{{ MEDIA_URL }}js/libs/jquery.wmd.js"></script>
-  <script src="{{ MEDIA_URL }}js/libs/jquery.ajaxupload.js"></script>
-  <script src="{{ MEDIA_URL }}js/libs/history.js/scripts/bundled/html5/jquery.history.js"></script>
-  <script src="{{ MEDIA_URL }}js/libs/jquery.jcarousel.min.js"></script>
-  <script src="{{ MEDIA_URL }}js/libs/jquery.ui.spinner/ui.spinner.min.js"></script>
-  <script src="{{ MEDIA_URL }}js/libs/prettify/prettify.js"></script>
-  <script src="{{ MEDIA_URL }}js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-  <script src="{{ MEDIA_URL }}js/libs/ASCIIMathML.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/jquery-1.4.2.min.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/jquery-ui-1.8.7.custom.min.js"></script>  
+  <script src="{{ STATIC_URL }}js/libs/jquery.tmpl.min.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/jquery.wmd.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/jquery.ajaxupload.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/history.js/scripts/bundled/html5/jquery.history.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/jquery.jcarousel.min.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/jquery.ui.spinner/ui.spinner.min.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/prettify/prettify.js"></script>
+  <script src="{{ STATIC_URL }}js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/ASCIIMathML.js"></script>
 
 
   {% block js %}{% endblock %}
   
   <!-- scripts concatenated and minified via ant build script-->
-  <script src="{{ MEDIA_URL }}js/plugins.js"></script>
-  <script type="text/javascript" src="{{ MEDIA_URL }}js/libs/farbtastic/src/farbtastic.js"></script>
-  <script src="{{ MEDIA_URL }}js/libs/{{ _('jquery.ui.datepicker-en.js') }}"></script>
-  <script src="{{ MEDIA_URL }}js/script.js"></script>
-  <script src="{{ MEDIA_URL }}{{ _('js/script-en.js') }}"></script>
+  <script src="{{ STATIC_URL }}js/plugins.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}js/libs/farbtastic/src/farbtastic.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/{{ _('jquery.ui.datepicker-en.js') }}"></script>
+  <script src="{{ STATIC_URL }}js/script.js"></script>
+  <script src="{{ STATIC_URL }}{{ _('js/script-en.js') }}"></script>
   <!-- end concatenated and minified scripts-->
   
 

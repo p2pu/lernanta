@@ -3,9 +3,9 @@
   <figure>
     <a href="{{ project.get_absolute_url }}">
       {% if project.image %}
-      <img src="/media/{{ project.image }}" width="203" height="125" alt="{{ project.name }}"/>
+      <img src="{{ MEDIA_URL }}{{ project.image }}" width="203" height="125" alt="{{ project.name }}"/>
       {% else %}
-      <img src="/media/images/project-missing.png" width="203" height="125" alt="{{ project.name }}"/>
+      <img src="{{ STATIC_URL}}images/project-missing.png" width="203" height="125" alt="{{ project.name }}"/>
       {% endif %}
     </a>
   </figure>
@@ -13,7 +13,7 @@
     <h1><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></h1>
     <!-- 
      ! TODO: set a character maximum for project.description that works
-     ! with this layout. See also /media/css/batucada.css line ~485
+     ! with this layout. See also /static/css/batucada.css line ~485
      -->  
     <div class="description">{{ project.short_description }}</div>
   </div>

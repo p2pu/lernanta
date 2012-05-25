@@ -69,15 +69,20 @@ MEDIA_URL = '/media/'
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/admin-media/'
+#ADMIN_MEDIA_PREFIX = '/admin-media/'
 
 # Absolute path to the directory that holds static files.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = path('static')
+STATIC_ROOT = path('static_serv')
 
 # URL that handles the static files served from STATIC_ROOT.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
+
+# Directories containing static files
+STATICFILES_DIRS = (
+    path('static'),
+)
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'std3j$ropgs216z1aa#8+p3a2w2q06mns_%2vfx_#$$i!+6o+x'
@@ -241,7 +246,7 @@ CKEDITOR_FILE_UPLOAD_EXTENSIONS = CKEDITOR_IMAGE_UPLOAD_EXTENSIONS + ['.pdf',
     '.avi','.rm','.mp3','.mp4','.wav','.aiff','.midi','.m4p']
 
 # Where the default image for sending to Gravatar
-DEFAULT_PROFILE_IMAGE = 'http://p2pu.org/media/images/member-missing.png'
+DEFAULT_PROFILE_IMAGE = 'http://p2pu.org/static/images/member-missing.png'
 
 # When set to True, if the request URL does not match any
 # of the patterns in the URLconf and it doesn't end in a slash,

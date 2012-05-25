@@ -370,27 +370,27 @@ def restore_version(request, slug, page_slug, version_id):
         'is_challenge': (page.project.category == Project.CHALLENGE),
     }, context_instance=RequestContext(request))
 
-
-@hide_deleted_projects
-@login_required
-@participation_required
-def page_index_up(request, slug, counter):
+def _move_page(request, slug, page_slug, direction='up'):
     # Page goes up in the sidebar index (page.index decreases)."""
     project = get_object_or_404(Project, slug=slug)
-    try:
-        counter = int(counter)
-    except ValueError:
-        raise http.Http404
     organizing = project.is_organizing(request.user)
     if not organizing and project.category != Project.STUDY_GROUP:
         messages.error(request, _('You can not change tasks order.'))
         return http.HttpResponseRedirect(project.get_absolute_url())
     content_pages = Page.objects.filter(project__pk=project.pk,
-        listed=True).order_by('index')
-    if counter < 1 or content_pages.count() <= counter:
+        listed=True, deleted=False).order_by('index')
+
+    #find page we want to move
+    index = [i for i,x in enumerate(content_pages) if x.slug == page_slug]
+    if len(index) != 1 or direction=='up' and index[0] == 0 or direction=='down' and index[0] == len(content_pages)-1:
         raise http.Http404
-    prev_page = content_pages[counter - 1]
-    page = content_pages[counter]
+
+    if direction=='up':
+        prev_page = content_pages[index[0] - 1]
+        page = content_pages[index[0]]
+    else:
+        prev_page = content_pages[index[0] + 1]
+        page = content_pages[index[0]]
     prev_page.index, page.index = page.index, prev_page.index
     # TODO: Fix this so no update messages are added to the wall but
     # we don't loose the data for the minor_update field of PageVersion.
@@ -400,32 +400,17 @@ def page_index_up(request, slug, counter):
     prev_page.save()
     return http.HttpResponseRedirect(project.get_absolute_url() + '#tasks')
 
+@hide_deleted_projects
+@login_required
+@participation_required
+def page_index_up(request, slug, page_slug):
+    # Page goes up in the sidebar index (page.index decreases)."""
+    return _move_page(request, slug, page_slug, 'up')
+
 
 @hide_deleted_projects
 @login_required
 @participation_required
-def page_index_down(request, slug, counter):
+def page_index_down(request, slug, page_slug):
     # Page goes down in the sidebar index (page.index increases).
-    project = get_object_or_404(Project, slug=slug)
-    try:
-        counter = int(counter)
-    except ValueError:
-        raise http.Http404
-    organizing = project.is_organizing(request.user)
-    if not organizing and project.category != Project.STUDY_GROUP:
-        messages.error(request, _('You can not change tasks order.'))
-        return http.HttpResponseRedirect(project.get_absolute_url())
-    content_pages = Page.objects.filter(project__pk=project.pk, listed=True,
-        deleted=False).order_by('index')
-    if counter < 0 or content_pages.count() - 1 <= counter:
-        raise http.Http404
-    next_page = content_pages[counter + 1]
-    page = content_pages[counter]
-    next_page.index, page.index = page.index, next_page.index
-    # TODO: Fix this so no update messages are added to the wall but
-    # we don't loose the data for the minor_update field of PageVersion.
-    # For now relly on the Activity model to store this information.
-    next_page.minor_update = page.minor_update = True
-    page.save()
-    next_page.save()
-    return http.HttpResponseRedirect(project.get_absolute_url() + '#tasks')
+    return _move_page(request, slug, page_slug, 'down')

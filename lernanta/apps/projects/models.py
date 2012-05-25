@@ -263,7 +263,7 @@ class Project(ModelBase):
         return round(self.duration_hours + (self.duration_minutes / 60.0), 1)
 
     def get_image_url(self):
-        missing = settings.MEDIA_URL + 'images/project-missing.png'
+        missing = settings.STATIC_URL + 'images/project-missing.png'
         image_path = self.image.url if self.image else missing
         return image_path
 

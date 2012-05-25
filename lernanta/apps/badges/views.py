@@ -249,6 +249,7 @@ def assess_submission(request, slug, submission_id):
             for rating in ratings:
                 rating.assessment = assessment
                 rating.save()
+            assessment.update_final_rating()
             messages.success(request,
                 _('Assessment saved. Thank you for your feedback!'))
             return http.HttpResponseRedirect(submission.get_absolute_url())
@@ -305,6 +306,7 @@ def create_assessment(request, slug):
                 assessment.assessed = form.cleaned_data['peer']
                 assessment.badge = badge
                 assessment.save()
+                assessment.update_final_rating()
                 messages.success(request,
                     _('Thank you for giving a badge to your peer!'))
                 return http.HttpResponseRedirect(assessment.get_absolute_url())

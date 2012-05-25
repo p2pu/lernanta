@@ -28,7 +28,7 @@
   {% if school.groups_icon %}
   <img src="{{ MEDIA_URL }}{{ school.groups_icon }}" class="school picture"/>
   {% else %}
-  <img src="/media/images/school-small-missing.png" alt="school image" class="school picture"/>
+  <img src="{{ STATIC_URL }}images/school-small-missing.png" alt="school image" class="school picture"/>
 {% endif %}
 </p>
 </fieldset>

@@ -6,7 +6,7 @@
     {% if project.image %}
       <img src="{{ MEDIA_URL }}{{ project.image }}" class="project picture"/>
     {% else %}
-      <img src="/media/images/project-missing.png" alt="project image" class="project picture"/>
+      <img src="{{ STATIC_URL }}images/project-missing.png" alt="project image" class="project picture"/>
     {% endif %}
   </p>
   <div class="field{% if form.image.errors %} error{% endif %}">

@@ -10,7 +10,7 @@ class ProjectAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_on'
     list_display = ('id', 'name', 'clone_of', 'language', 'created_on')
     list_filter = ('school', 'featured', 'under_development', 'not_listed',
-        'archived', 'deleted')
+        'archived', 'deleted', 'test')
     search_fields = ('id', 'name', 'slug', 'school__name',
         'clone_of__slug', 'clone_of__name', 'language')
 

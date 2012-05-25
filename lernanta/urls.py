@@ -28,6 +28,7 @@ urlpatterns = patterns('',
     (r'',                include('users.urls')),
 )
 
+# for serving media when running a local dev server with DEBUG=True
 media_url = settings.MEDIA_URL.lstrip('/').rstrip('/')
 urlpatterns += patterns('',
     (r'^%s/(?P<path>.*)$' % media_url, 'django.views.static.serve',

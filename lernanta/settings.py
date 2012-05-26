@@ -185,6 +185,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'messages.context_processors.inbox',
     'users.context_processors.messages',
     'users.context_processors.redirect_urls',
+    'users.context_processors.help_sso_token',
 )
 
 TEST_RUNNER = 'test_utils.runner.RadicalTestSuiteRunner'

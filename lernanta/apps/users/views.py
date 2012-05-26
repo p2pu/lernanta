@@ -103,13 +103,8 @@ def _get_redirect_url(request):
             url = '/%s' % (url,)
     return url
 
-def _after_login_redirect(redirect_url, profile):
-    sso_url = None
-    for sso_redirect in settings.SSO_EXTERNAL_REDIRECTS:
-        if redirect_url.startswith(sso_redirect):
-            sso_url = sso_redirect
-    if not sso_url:
-        return http.HttpResponseRedirect(redirect_url)
+
+def get_sso_token(profile, sso_url):
     site_key = settings.SSO_EXTERNAL_REDIRECTS[sso_url]['site_key']
     api_key = settings.SSO_EXTERNAL_REDIRECTS[sso_url]['api_key']
     multipass = tender_multipass.MultiPass(site_key, api_key)
@@ -120,7 +115,17 @@ def _after_login_redirect(redirect_url, profile):
         "email": profile.email,
         "expires": expires.strftime("%Y-%m-%dT%H:%M"),
     }
-    token = multipass.encode(data)
+    return multipass.encode(data)
+
+
+def _after_login_redirect(redirect_url, profile):
+    sso_url = None
+    for sso_redirect in settings.SSO_EXTERNAL_REDIRECTS:
+        if redirect_url.startswith(sso_redirect):
+            sso_url = sso_redirect
+    if not sso_url:
+        return http.HttpResponseRedirect(redirect_url)
+    token = get_sso_token(profile, sso_url)
     return http.HttpResponseRedirect(redirect_url + '?sso=%s' % token)
 
 

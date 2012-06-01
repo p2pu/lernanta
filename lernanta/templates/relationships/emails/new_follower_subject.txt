@@ -1,1 +1,1 @@
-{{ user }} {{ _('is following ') }}{% if project %}{{ project }}{% else %}{{ _('you') }}{% endif %} {{ _('on P2PU!') }}
+{{ user }} {{ _('is following ') }}{% if project %}{{ project|safe }}{% else %}{{ _('you') }}{% endif %} {{ _('on P2PU!') }}

@@ -1,5 +1,5 @@
 {% load l10n_tags %}
-{{ user }} {{ _('is now following ') }}{% if project %}{{ project }}{% else %}{{ _('you') }}{% endif %} {{ _('on P2PU!') }}
+{{ user }} {{ _('is now following ') }}{% if project %}{{ project|safe }}{% else %}{{ _('you') }}{% endif %} {{ _('on P2PU!') }}
 
 {{ _('Bio:') }} {{ user.bio|striptags|safe }}
 

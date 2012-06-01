@@ -1,5 +1,5 @@
 {% load l10n_tags %}
-{{ project.name }}{{ _(' was updated.') }}
+{{ project.name|safe }}{{ _(' was updated.') }}
 
 {% if status.important %}
 {{ status.author }}{{ _(' posted an important message to the wall:') }}

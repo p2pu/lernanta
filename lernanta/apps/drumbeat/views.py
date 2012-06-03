@@ -16,9 +16,20 @@ from l10n.urlresolvers import reverse
 from users.models import UserProfile
 from users.tasks import SendNotifications
 from drumbeat.forms import AbuseForm
-
+import django.contrib.sites as sites
 
 log = logging.getLogger(__name__)
+
+
+def page_not_found(request):
+    """Render custom 404 page."""
+    # Assume sites framework is enabled.
+    domain = sites.models.Site.objects.get_current().domain
+    domain = "http://%s" % domain
+    d = dict(language=settings.LANGUAGE_CODE,
+             domain=domain)
+    return render_to_response("404.html", d,
+                              context_instance=RequestContext(request))
 
 
 def server_error(request):

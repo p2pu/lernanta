@@ -7,7 +7,16 @@
     <br>
     <p>{{ _('Oops. That links doesn\'t seem to work. Maybe the page you are looking for is on the old p2pu site? Try ') }} <a href="http://archive.p2pu.org/{{request_path|slice:"4:"}}" target="_blank">http://archive.p2pu.org/{{request_path|slice:"4:"}}</a></p>
     <p>{{ _('If you think this is an error, please let us know by <a href="http://p2pu.lighthouseapp.com/projects/71002" target="_blank">filling a bug report</a>.') }}</p>
-</section>
 
+<div id="webmaster404">
+  <script type="text/javascript">
+    var GOOG_FIXURL_LANG = '{{ language }}';
+    var GOOG_FIXURL_SITE = '{{ domain }}'
+  </script>
+  <script type="text/javascript"
+          src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
+  </script>
+</div>
+</section>
 {% endblock %}
 

@@ -38,3 +38,4 @@ urlpatterns += patterns('',
 )
 
 handler500 = 'drumbeat.views.server_error'
+handler404 = 'drumbeat.views.page_not_found'

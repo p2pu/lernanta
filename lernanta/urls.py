@@ -37,5 +37,13 @@ urlpatterns += patterns('',
      }),
 )
 
+static_url = settings.STATIC_URL.lstrip('/').rstrip('/')
+urlpatterns += patterns('',
+    (r'^%s/(?P<path>.*)$' % static_url, 'django.views.static.serve',
+     {
+         'document_root': settings.STATIC_ROOT,
+     }),
+)
+
 handler500 = 'drumbeat.views.server_error'
 handler404 = 'drumbeat.views.page_not_found'

@@ -207,21 +207,30 @@ class Project(ModelBase):
 
     def get_metrics_permissions(self, user):
         """Provides metrics related permissions for metrics overview
-        and csv download."""
+        and CSV download."""
         if user.is_authenticated():
             if user.is_superuser:
-                return True, True
-            allowed_schools = settings.STATISTICS_ENABLED_SCHOOLS
-            if not self.school or self.school.slug not in allowed_schools:
-                return False, False
-            csv_downloaders = settings.STATISTICS_CSV_DOWNLOADERS
-            profile = user.get_profile()
-            csv_permission = profile.username in csv_downloaders
+                return True
+            if self.is_organizing(user):
+                return True
+            if not self.school:
+                return False
             is_school_organizer = self.school.organizers.filter(
                 id=user.id).exists()
-            if is_school_organizer or self.is_organizing(user):
-                return True, csv_permission
-        return False, False
+            if is_school_organizer:
+                return True
+        return False
+
+    def get_metric_csv_permission(self, user):
+        """Provides metrics related permissions for metrics CSV download."""
+        if user.is_authenticated():
+            # check for explicit permission grant
+            csv_downloaders = settings.STATISTICS_CSV_DOWNLOADERS
+            profile = user.get_profile()
+            if profile.username in csv_downloaders:
+                return True
+            return self.get_metrics_permissions(user)
+        return False
 
     def activities(self):
         return Activity.objects.filter(deleted=False,
@@ -521,7 +530,7 @@ def post_save_project(sender, **kwargs):
     instance = kwargs.get('instance', None)
     created = kwargs.get('created', False)
     is_project = isinstance(instance, Project)
-    if created and is_project:
+    if created and is_project and not instance.test:
         statsd.Statsd.increment('groups')
 
 

@@ -90,6 +90,7 @@ INTERNAL_IPS = ('127.0.0.1',)
 # Sign up for an API key at https://www.google.com/recaptcha/admin/create
 RECAPTCHA_PUBLIC_KEY = ''
 RECAPTCHA_PRIVATE_KEY = ''
+RECAPTCHA_USE_SSL = True
 RECAPTCHA_URL = ('https://api-secure.recaptcha.net/challenge?k=%s' %
                  RECAPTCHA_PUBLIC_KEY)
 
@@ -157,7 +158,7 @@ MOZBADGES = {
 
 # Metrics
 STATISTICS_CSV_DOWNLOADERS = ('kfasimpaur',)
-STATISTICS_ENABLED_SCHOOLS = ('school-of-ed-pilot',)
+
 BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',
     'KaloogaBot', 'YodaoBot', 'Baiduspider', 'googlebot',
     'Speedy Spider', 'DotBot']

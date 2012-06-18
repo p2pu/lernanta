@@ -33,7 +33,11 @@
     {{ form.minor_update }} {{ _('Minor update (not posted to the wall).') }}
     {{ form.minor_update.errors }}
   </div>
+  {% if form.next_url and form.next_url.value %}
+  <a class="button" href="{{ form.next_url.value }}">
+  {% else %}
   <a class="button" href="{{ page.get_absolute_url }}">
+  {% endif %}
     {{ _('Cancel') }}
   </a>
   <button type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>

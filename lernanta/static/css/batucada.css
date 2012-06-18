@@ -891,7 +891,7 @@ header {}
 }
 
 .dropdown:hover {
-    background: url("/static/images/arrow-down-over.png") no-repeat scroll transparent;
+    background: url("/static/images/arrow-down.png") no-repeat scroll transparent;
     display: inline-block;
     height: 7px;
     width: 7px;

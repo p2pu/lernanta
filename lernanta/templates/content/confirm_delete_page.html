@@ -23,9 +23,13 @@
       {% csrf_token %}
       <span class="hint block">{{ _('Are you sure you want to delete this task?') }}</span>
       <p class="content_buttons">
-        <a class="button" href="{{ page.get_absolute_url }}">
-          {{ _('Cancel') }}
-        </a>
+        {% if next_page %}
+          <div style="display:none"><input type="hidden" value="{{ next_page }}" name="next_page">
+          </div>
+          <a class="button" href="{{ next_page }}">{{ _('Cancel') }}</a>
+        {% else %}
+          <a class="button" href="{{ page.get_absolute_url }}">{{ _('Cancel') }}</a>
+        {% endif %}
         <button type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
       </p>
     </form>

@@ -24,7 +24,11 @@
 {% endblock %}
 
 {% block page_form_buttons %}
+  {% if form.next_url and form.next_url.value %}
+  <a class="button" href="{{ form.next_url.value }}">
+  {% else %}
   <a class="button" href="{{ project.get_absolute_url }}">
+  {% endif %}
     {{ _('Cancel') }}
   </a>
   <button type="submit" value="{{ _('Create') }}">{{ _('Create') }}</button>

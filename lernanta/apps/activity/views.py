@@ -28,11 +28,6 @@ def index(request, activity_id):
         'domain': Site.objects.get_current().domain,
     }
     if activity.scope_object:
-        is_challenge = (activity.scope_object.category == Project.CHALLENGE)
-        from statuses.models import Status
-        status_ct = ContentType.objects.get_for_model(Status)
-        if is_challenge and activity.target_content_type != status_ct:
-            raise http.Http404
         scope_url = activity.scope_object.get_absolute_url()
         context['project'] = activity.scope_object
     else:
@@ -55,12 +50,7 @@ def index(request, activity_id):
 def delete_restore(request, activity_id):
     activity = get_object_or_404(Activity, id=activity_id)
     if activity.scope_object:
-        is_challenge = (activity.scope_object.category == Project.CHALLENGE)
-        from statuses.models import Status
-        status_ct = ContentType.objects.get_for_model(Status)
         if activity.scope_object.deleted:
-            raise http.Http404
-        if is_challenge and activity.target_content_type != status_ct:
             raise http.Http404
     if not activity.can_edit(request.user):
         return http.HttpResponseForbidden(_("You can't edit this activity"))

@@ -1,31 +1,82 @@
-{% extends "projects/project_edit.html" %}
+{% extends "base.html" %}
+
+{% load i18n %}
 {% load l10n_tags %}
 {% load project_tags %}
+
+{% block title %}{{ _('Create') }}{% endblock %}
+
+{% block bodyid %}project_create{% endblock %}
+
 {% block bodyclasses %}project import{% endblock %}
 
-{% block links %}{% if school %}<link rel="stylesheet" href="{% locale_url schools_css slug=school.slug %}?v=1">{% endif %}{% endblock %}
-
-{% block form %}
-<fieldset id="project_import" class="project clone tabpane">
-<h2>{{ _('Import from Old Site') }}</h2>
-<p class="hint">{{ _('Import a course from the old p2pu site. Note that if you start typing the matching suggestions will be displayed.') }}</p>
-<form action="{% locale_url projects_import %}" method="post">
-  {% csrf_token %}
-  <p>
-    <div class="field course{% if form.course.errors %} error{% endif %}">
-      <label for="id_course">{{ _('Course') }}</label>
-      {{ form.course }}
-      {{ form.course.errors }}
-    </div>
-  </p>
-  <p class="buttons">
-    <a class="button" href="{% learn_default %}">{{ _('Cancel') }}</a>
-    <button type="submit" value="{{ _('Create') }}">{{ _('Import') }}</button>
-  </p>
-</form>
-</fieldset>
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/course.css?v=1">
 {% endblock %}
 
+{% block links %}
+    {% if school %}
+        <link rel="stylesheet" href="{% locale_url schools_css slug=school.slug %}?v=1">
+    {% endif %}
+{% endblock %}
+
+{% block breadcrumbs_title %}
+{% endblock %}
+{% block breadcrumbs %}
+  <span class="arrow">&rsaquo;</span>
+  <a href="{% learn_default %}">{{ _('Learn') }}</a>
+{% endblock %}
+
+{% block body %}
+<section class="modal nav">
+  <article>
+    <h1>{{ _('Create Course') }}</h1>
+    <nav id="project-edit-nav" class="tabs">
+      <ul>
+        <li class="new">
+          <a href="{% locale_url projects_create %}{% if school %}?school={{ school.slug }}{% endif%}">
+            {{ _('Step 1: Create Course') }}</a>
+        </li>
+        <ul>
+          <li class="clone">
+            <a href="{% locale_url projects_clone %}{% if school %}?school={{ school.slug }}{% endif%}">
+              {{ _('Clone Existing') }}</a>
+          </li>
+          <li class="import active">
+            <a class="disabled">{{ _('Import from old site') }}</a>
+          </li>
+        </ul>
+        <li>
+          <a href="" class="disabled">{{ _('Step 2: Update Tasks') }}</a>
+        </li>
+        <li>
+          <a href="" class="disabled">{{ _('Step 3: Review and Publish') }}</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <fieldset id="project_import" class="project clone tabpane">
+        <h2>{{ _('Import from Old Site') }}</h2>
+        <p class="hint">{{ _('Import a course from the old p2pu site. Note that if you start typing the matching suggestions will be displayed.') }}</p>
+        <form action="{% locale_url projects_import %}" method="post">
+          {% csrf_token %}
+          <p>
+            <div class="field course{% if form.course.errors %} error{% endif %}">
+              <label for="id_course">{{ _('Course') }}</label>
+              {{ form.course }}
+              {{ form.course.errors }}
+            </div>
+          </p>
+          <p class="buttons">
+            <a class="button" href="{% learn_default %}">{{ _('Cancel') }}</a>
+            <button type="submit" value="{{ _('Create') }}">{{ _('Import') }}</button>
+          </p>
+        </form>
+    </fieldset>
+    
+  </article>
+</section>
+{% endblock %}
 
 {% block js %}
   <script type="text/javascript">

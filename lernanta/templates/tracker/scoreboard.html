@@ -7,8 +7,8 @@
 {% block bodyclasses %}scoreboard{% endblock %}
 
 {% block css %}
-  <link rel="stylesheet" href="{{ MEDIA_URL }}js/libs/datatables/media/css/demo_page.css">
-  <link rel="stylesheet" href="{{ MEDIA_URL }}js/libs/datatables/media/css/demo_table.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}js/libs/datatables/media/css/demo_page.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}js/libs/datatables/media/css/demo_table.css">
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -99,7 +99,7 @@
 {% endblock %}
 
 {% block js %}
-  <script src="{{ MEDIA_URL }}js/libs/datatables/dataTables.js" type="text/javascript"></script>
+  <script src="{{ STATIC_URL }}js/libs/datatables/dataTables.js" type="text/javascript"></script>
   <script>
     $(document).ready(function() {
       $('#scoreboard-details table#users-scoreboard-details').dataTable({

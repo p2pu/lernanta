@@ -29,8 +29,8 @@
               {% endwith %}
             {% endif %}
             {% if organizing and show_all and is_challenge %}
-	            {% if not forloop.first %}<a class="robttn up" href="{% locale_url page_index_up slug=project.slug counter=forloop.counter0 %}">(UP)</a>{% endif %}
-	            {% if not forloop.last %}<a class="robttn dwn" href="{% locale_url page_index_down slug=project.slug counter=forloop.counter0 %}">(DOWN)</a>{% endif %}
+	            {% if not forloop.first %}<a class="robttn up" href="{% locale_url page_index_up slug=project.slug page_slug=task.slug %}">(UP)</a>{% endif %}
+	            {% if not forloop.last %}<a class="robttn dwn" href="{% locale_url page_index_down slug=project.slug page_slug=task.slug %}">(DOWN)</a>{% endif %}
             {% endif %}
             {% if is_challenge %}
                 <a class="taskView" href="{{ task.get_absolute_url }}">{{ _('View and Discuss') }}</a>

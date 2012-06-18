@@ -1,2 +1,2 @@
 {% load l10n_tags %}
-[{{ answer.sign_up.project.name|slice:":20" }}] {{ answer.author }}{{ _(' submitted a new answer at the sign-up page.') }}
+[{{ answer.sign_up.project.name|safe|slice:":20" }}] {{ answer.author }}{{ _(' submitted a new answer at the sign-up page.') }}

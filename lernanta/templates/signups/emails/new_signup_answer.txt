@@ -1,5 +1,5 @@
 {% load l10n_tags %}
-{{ answer.author }}{{ _(' submitted a new answer at the sign-up page of ') }}{{ answer.sign_up.project.name }}{{ _('.') }}
+{{ answer.author }}{{ _(' submitted a new answer at the sign-up page of ') }}{{ answer.sign_up.project.name|safe }}{{ _('.') }}
 
 {{ _('Bio:') }} {{ answer.author.bio|striptags|safe }}
 

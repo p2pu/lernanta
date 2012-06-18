@@ -1,16 +1,16 @@
 /* @override 
-	http://127.0.0.1:8000/media/css/batucada.css?v=1
-	https://drumbeat.org/media/css/batucada.css?v=1
-	http://0.0.0.0:8000/media/css/batucada.css?v=1
+	http://127.0.0.1:8000/static/css/batucada.css?v=1
+	https://drumbeat.org/static/css/batucada.css?v=1
+	http://0.0.0.0:8000/static/css/batucada.css?v=1
 */
 
 @font-face{
         font-family: 'WebSymbolsRegular';
-        src: url('/media/fonts/websymbols-regular-webfont.eot');
-        src: url('/media/fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
-             url('/media/fonts/websymbols-regular-webfont.woff') format('woff'),
-             url('/media/fonts/websymbols-regular-webfont.ttf') format('truetype'),
-             url('/media/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+        src: url('/static/fonts/websymbols-regular-webfont.eot');
+        src: url('/static/fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('/static/fonts/websymbols-regular-webfont.woff') format('woff'),
+             url('/static/fonts/websymbols-regular-webfont.ttf') format('truetype'),
+             url('/static/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
         }
 
 html {
@@ -54,7 +54,7 @@ p {
 	margin-bottom: 1.4em;
 }
 a.openid {
-	background: url(/media/images/openid-22x25.png) 0 0 no-repeat;	padding-left: 27px;
+	background: url(/static/images/openid-22x25.png) 0 0 no-repeat;	padding-left: 27px;
 	}
 
 img.member-picture,
@@ -68,9 +68,15 @@ img.badge-graphic {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  behavior: url("/media/css/PIE.htc");
+  behavior: url("/static/css/PIE.htc");
 }
 
+.justify_content{
+	text-align: justify;
+/*ie*/
+	text-justify:inter-word;
+	
+}
 /* BUTTONS */
 
 button,
@@ -105,7 +111,7 @@ a.button,
     -webkit-box-shadow:
 	    inset 1px 1px rgba(255,255,255,1), 
 	    inset -1px -1px 0 rgba(0,0,0,0.1);
-    behavior: url("/media/css/PIE.htc");
+    behavior: url("/static/css/PIE.htc");
 	}
 input[type=submit],
 button[type=submit],
@@ -130,7 +136,7 @@ button[type=submit],
     -webkit-box-shadow: 
 	    inset 1px 1px 1px rgba(255,255,255,0.5), 
 	    inset -1px -1px rgba(0,0,0,0.1);
-    behavior: url("/media/css/PIE.htc");
+    behavior: url("/static/css/PIE.htc");
 	}
 button:hover,
 input[type=button]:hover,
@@ -197,7 +203,7 @@ input[type=submit]:focus,
     	inset -1px -1px rgba(0,0,0,0.1), 
     	0 0 1px 1px #e5f6ff, 
     	0 0 4px 2px #3ea1e6;
-    behavior: url("/media/css/PIE.htc");
+    behavior: url("/static/css/PIE.htc");
 	}
 button[type=submit]:active,
 input[type=submit]:active,
@@ -249,7 +255,7 @@ input[type=submit]:active,
 }
 
 .login_participate_button {
-    margin-top: 0px !important
+    margin-top: 0px !important;
 }
 
 .project-kind-challenge #sidebar .duration-time {
@@ -452,7 +458,7 @@ input[type=submit]:active,
 
 #task-body a.external-task span.external-task-text,
 #task-body-preview a.external-task span.external-task-text {
-    background: transparent url("/media/images/external.task.icon.png") no-repeat center right;
+    background: transparent url("/static/images/external.task.icon.png") no-repeat center right;
     padding-right: 20px;
 }
 
@@ -630,8 +636,8 @@ input[type="password"],
 input[type="search"],
 input[type="tel"],
 input[type="url"],
-input[type*="date"],
-input[type*="time"],
+input[type="date"],
+input[type="time"],
 textarea {
 	padding: 5px 8px;
 	margin-bottom: 0.5em;
@@ -655,8 +661,8 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="url"]:focus,
-input[type*="date"]:focus,
-input[type*="time"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
 textarea:focus {
 	outline: none;
 	border-color: #90c7ee;
@@ -682,11 +688,11 @@ form .small {
 	}
 
 ::-webkit-input-placeholder {
-  color: #ddd; !important
+  color: #ddd !important;
 }
 
 :-moz-placeholder {
-  color: #ddd; !important
+  color: #ddd !important;
 }
 		
 .hint {
@@ -802,7 +808,7 @@ header {}
 }
 
 .no-rgba #user-nav .menu a:hover, .no-rgba #main-nav .menu a:hover {
-    background: url("/media/images/user-nav.bg.png");
+    background: url("/static/images/user-nav.bg.png");
     color: #fff;
 }
 
@@ -852,7 +858,7 @@ header {}
 #user-nav .separator, #main-nav .separator {
     width: 2px;
     margin: 0 5px 0 3px;
-    background: url("/media/images/separator.bg.png") no-repeat left center;
+    background: url("/static/images/separator.bg.png") no-repeat left center;
     height: 37px;
 }
 
@@ -875,7 +881,7 @@ header {}
     }
 
 .dropdown {
-    background: url("/media/images/arrow-down.png") no-repeat scroll transparent;
+    background: url("/static/images/arrow-down.png") no-repeat scroll transparent;
     display: inline-block;
     height: 7px;
     width: 7px;
@@ -885,7 +891,7 @@ header {}
 }
 
 .dropdown:hover {
-    background: url("/media/images/arrow-down-over.png") no-repeat scroll transparent;
+    background: url("/static/images/arrow-down.png") no-repeat scroll transparent;
     display: inline-block;
     height: 7px;
     width: 7px;
@@ -1056,7 +1062,7 @@ header {}
     #breadcrumbs nav .arrow {
         color: #7f7f7f;
         display: inline;
-        background: url("/media/images/arrow.png") no-repeat left center;
+        background: url("/static/images/arrow.png") no-repeat left center;
         margin: 0 5px;
     }
 
@@ -1260,7 +1266,7 @@ header {}
         
           #project-links li a,
           #member_links li a{
-			background: url("/media/images/link-indicator.png") 0 0 no-repeat;
+			background: url("/static/images/link-indicator.png") 0 0 no-repeat;
 			padding-left: 20px;
           }
         */
@@ -1442,7 +1448,7 @@ header {}
 	    box-shadow: inset 1px 1px 0 rgba(255,255,255,0.2);
 	    -moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.2);
 	    -webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.2);	    
-	    behavior: url("/media/css/PIE.htc");
+	    behavior: url("/static/css/PIE.htc");
 	}
 	.card-list .project-list li:nth-child(4n),
 	.card-list .user-list li:nth-child(4n){
@@ -1467,7 +1473,7 @@ header {}
 		-moz-border-radius: 5px;
 		-o-border-radius: 5px;
 		-webkit-border-radius: 5px;
-		behavior: url("/media/css/PIE.htc");
+		behavior: url("/static/css/PIE.htc");
 	}
 	.card-list .user.card img {
 		float: left;
@@ -1640,7 +1646,7 @@ header {}
       border: 1px solid #c6c6c6;
       border-bottom: 2px solid #c6c6c6;
       padding: 8px;
-      behavior: url("/media/css/PIE.htc");
+      behavior: url("/static/css/PIE.htc");
       float: left;
       width: 630px;
     }
@@ -1670,7 +1676,7 @@ header {}
       margin: 20px 0 0 63px;
       border-top: 1px solid #c6c6c6;
       padding: 20px 8px 0 0;
-      behavior: url("/media/css/PIE.htc");
+      behavior: url("/static/css/PIE.htc");
       float: left;
 	}
 
@@ -1721,7 +1727,7 @@ header {}
 		-webkit-box-shadow: #fff 1px 1px 2px;
 		-moz-box-shadow: #fff 1px 1px 2px;
 		border: 1px solid #c6c6c6;		
-		behavior: url("/media/css/PIE.htc");
+		behavior: url("/static/css/PIE.htc");
 	}
 	#main .post-tags li a:hover,
 	.tags li a:hover, #main .post-tags li a.active-post-tag {
@@ -1861,25 +1867,25 @@ header {}
       color: #777;
     }
     #posts .reply-to {
-		background: url("/media/images/reply.icon.png") 0 0 no-repeat;
+		background: url("/static/images/reply.icon.png") 0 0 no-repeat;
 	}
     #posts .delete {
-		background: url("/media/images/delete-x.png") 0 0 no-repeat;
+		background: url("/static/images/delete-x.png") 0 0 no-repeat;
 	}
     .project-kind-challenge #posts .delete {
-		background: url("/media/images/delete-x.png") 3px 0 no-repeat;
+		background: url("/static/images/delete-x.png") 3px 0 no-repeat;
 	}
     #posts .restore {
-		background: url("/media/images/restore.icon.png") 0 0 no-repeat;
+		background: url("/static/images/restore.icon.png") 0 0 no-repeat;
 	}
     #posts .give_badge_action {
-		background: url("/media/images/give-badge.png") 0 0 no-repeat;
+		background: url("/static/images/give-badge.png") 0 0 no-repeat;
 	}
     #posts .edit {
-		background: url("/media/images/edit.icon.png") 0 0 no-repeat;
+		background: url("/static/images/edit.icon.png") 0 0 no-repeat;
 	}
     .project-kind-challenge #posts .edit {
-		background: url("/media/images/edit.icon.png") 4px 0 no-repeat;
+		background: url("/static/images/edit.icon.png") 4px 0 no-repeat;
 	}
 
     .project-kind-challenge #posts .reply-to.action-bottom, .project-kind-challenge #posts .delete.action-bottom,
@@ -1907,12 +1913,12 @@ header {}
     }
 
     .collaborative {
-        background: url("/media/images/collaborative.png") 0 0 no-repeat;
+        background: url("/static/images/collaborative.png") 0 0 no-repeat;
         padding-left: 42px;
     }
 	#posts .report,
 	.supplemental_actions .report {
-		background: url("/media/images/report.icon.png") 0 1px no-repeat;
+		background: url("/static/images/report.icon.png") 0 1px no-repeat;
 		padding-left: 15px;		
 	}
     .project-kind-challenge #posts .report,
@@ -2016,7 +2022,7 @@ header {}
                         min-height: 360px;
                 }
 		.modal.nav article {
-			background: #fff url(/media/images/panel-bg.png) 0 0 repeat-y;
+			background: #fff url(/static/images/panel-bg.png) 0 0 repeat-y;
 		}
 		.modal > article > h1{
 			width: 516px;
@@ -2301,20 +2307,20 @@ header {}
         .modal .participants .adopter .yes {
 			display: block;
 			text-indent: -9999px;
-			background: url(/media/images/check.png) 50% 50% no-repeat;
+			background: url(/static/images/check.png) 50% 50% no-repeat;
 		}
 		
 		.modal .links .subscription .no, .modal .participants .organizer .no,
         .modal .participants .adopter .no {
             display: block;
             text-indent: -9999px;
-            background: url(/media/images/delete-x.png) 50% 50% no-repeat;
+            background: url(/static/images/delete-x.png) 50% 50% no-repeat;
         }
 
         .modal .links .subscription .error{
             display: block;
             text-indent: -9999px;
-            background: url(/media/images/error.png) 50% 50% no-repeat;
+            background: url(/static/images/error.png) 50% 50% no-repeat;
         }
  
 		.modal .links tbody tr:last-child td, .modal .participants tbody tr:last-child td{
@@ -2544,7 +2550,7 @@ header {}
 	}
 
 #splash #featured_project ul {
-	background: url(/media/images/splash-featured-project-bg.png) 50% -5px no-repeat;
+	background: url(/static/images/splash-featured-project-bg.png) 50% -5px no-repeat;
 	height: 349px;
 	}
 
@@ -2570,7 +2576,7 @@ header {}
 	position: absolute;
 	top: 2px; right: 0;
 	text-indent: -9999px;
-	background: url(/media/images/feed-icon-16x16.png) 0 0 no-repeat;
+	background: url(/static/images/feed-icon-16x16.png) 0 0 no-repeat;
 	}
 
 #splash #main #blog_feed article h1 {
@@ -2678,7 +2684,7 @@ body#signup .modal button[type=submit] {
 	display: block;
 	width: 44px; height: 44px;	
 	text-indent: -9999px;
-	background: url(/media/images/openid-30x30.png) 50% 50% no-repeat;
+	background: url(/static/images/openid-30x30.png) 50% 50% no-repeat;
 	border: 1px solid #d1d1d1;
 	border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -2696,31 +2702,31 @@ body#signup .modal button[type=submit] {
 	margin-right: 0;
 	}
 .openid_providers #google a{
-	background-image: url(/media/images/openid/google.png);
+	background-image: url(/static/images/openid/google.png);
 	}
 .openid_providers #yahoo a{
-	background-image: url(/media/images/openid/yahoo.png);
+	background-image: url(/static/images/openid/yahoo.png);
 	}
 .openid_providers #aol a{
-	background-image: url(/media/images/openid/aol.png);
+	background-image: url(/static/images/openid/aol.png);
 	}
 .openid_providers #myopenid a{
-	background-image: url(/media/images/openid/myopenid.png);
+	background-image: url(/static/images/openid/myopenid.png);
 	}
 .openid_providers #wordpress a{
-	background-image: url(/media/images/openid/wordpress.png);
+	background-image: url(/static/images/openid/wordpress.png);
 	}
 .openid_providers #blogger a{
-	background-image: url(/media/images/openid/blogger.png);
+	background-image: url(/static/images/openid/blogger.png);
 	}
 .openid_providers #buzz a{
-	background-image: url(/media/images/openid/buzz.png);
+	background-image: url(/static/images/openid/buzz.png);
 	}
 .openid_providers #clickpass a{
-	background-image: url(/media/images/openid/clickpass.png);
+	background-image: url(/static/images/openid/clickpass.png);
 	}
 .openid_providers #verisign a{
-	background-image: url(/media/images/openid/verisign.png);
+	background-image: url(/static/images/openid/verisign.png);
 	}
 .signin.openid .or {
 	text-align: center;
@@ -2813,12 +2819,12 @@ div.warning h2 {
 	position: absolute;
 	left: -9px; 
 	top: 6px;
-	background: transparent url(/media/images/modal-error-arrow.png) left 50% no-repeat;
+	background: transparent url(/static/images/modal-error-arrow.png) left 50% no-repeat;
 }	
 .inline_label .errorlist {	
 	top: -5px;
 	}
-.error input:not([type=file]),
+.error input:not([type="file"]),
 .error textarea {
 	border-color: #a00;
 	box-shadow: 0 0 3px #a00;
@@ -2841,7 +2847,7 @@ div.warning h2 {
     left: 22em;
 	}	
 .edit.image .errorlist:before, .edit.links .errorlist:before {
-	background-image: url(/media/images/modal-error-arrow-up.png);
+	background-image: url(/static/images/modal-error-arrow-up.png);
 	background-position: 0 0;
 	top:-9px; left: 6px;
 	width: 18px; height: 9px;
@@ -3170,7 +3176,7 @@ ul.ui-autocomplete #ui-active-menuitem {
 	#member_links .up,
     #task_list_section .up {
 	   right:0px; 
-	   background-image:url('/media/images/arrows.png');
+	   background-image:url('/static/images/arrows.png');
 	}
 
     #task_list_section .up {
@@ -3186,7 +3192,7 @@ ul.ui-autocomplete #ui-active-menuitem {
 	#member_links .dwn,
     #task_list_section .dwn {
 	   right:20px; 
-	   background-image:url('/media/images/arrows.png'); 
+	   background-image:url('/static/images/arrows.png'); 
 	   background-position: 20px 0px;
 	}
 
@@ -3240,7 +3246,7 @@ h1.tasks-title {
     -o-border-radius: 3px;
     border-radius: 3px;
     display: block;
-    background: #e9e9e9 url('/media/images/arrow-down.png') no-repeat 118px center;
+    background: #e9e9e9 url('/static/images/arrow-down.png') no-repeat 118px center;
 }
 
 #task-nav li {
@@ -3797,7 +3803,7 @@ div.voting div.score {
 
 
 .project-kind-challenge #task_list_wall #progress .ui-widget-header {
-    background: url("/media/images/ui-bg_highlight-soft_75_81a810_1x100.png") repeat-x scroll 50% 50% #81A810;
+    background: url("/static/images/ui-bg_highlight-soft_75_81a810_1x100.png") repeat-x scroll 50% 50% #81A810;
 }
 
 #task_list_section ul {
@@ -4005,7 +4011,7 @@ div.voting div.score {
 #logo {
     background-position: 13px 17px;
     width: 165px; 
-    background-image: url("/media/images/logo.png");
+    background-image: url("/static/images/logo.png");
     height: 70px;
     margin-top: 2px;
     margin-right: 20px;
@@ -4133,23 +4139,23 @@ footer[id="footer-wrapper"] ul[class="connect-with-us"] li:last-child {
 }
 
 footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p1 {
-	background: url('/media/images/p1.png') no-repeat 0 10px;
+	background: url('/static/images/p1.png') no-repeat 0 10px;
 }
 
 footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p2 {
-	background: url('/media/images/p2.png') no-repeat 0 10px;
+	background: url('/static/images/p2.png') no-repeat 0 10px;
 }
 
 footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p3 {
-	background: url('/media/images/p3.png') no-repeat 0 10px;
+	background: url('/static/images/p3.png') no-repeat 0 10px;
 }
 
 footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p4 {
-	background: url('/media/images/p4.png') no-repeat 0 10px;
+	background: url('/static/images/p4.png') no-repeat 0 10px;
 }
 
 footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p5 {
-	background: url('/media/images/p5.png') no-repeat 0 10px;
+	background: url('/static/images/p5.png') no-repeat 0 10px;
 }
 
 
@@ -4170,7 +4176,7 @@ footer[id="footer-wrapper"] ul[class="connect-with-us"] li.p5 {
 
 #footer-bottom .icons a {
   display: block;
-  background: url('/media/images/cc-icons.png') no-repeat;
+  background: url('/static/images/cc-icons.png') no-repeat;
   height: 65px;
   width: 167px;
   text-indent: -999em;
@@ -4212,7 +4218,7 @@ footer[id="footer-wrapper"] ul[class="license-info"] li:last-child {
 
 #language-nav {
     background-color: #ffffff;
-    background-image: url("/media/images/icon.world.png");
+    background-image: url("/static/images/icon.world.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: 5px center;
@@ -4365,13 +4371,13 @@ footer[id="footer-wrapper"] ul[class="license-info"] li:last-child {
 }
 
 .rating { 
-    background: url(/media/images/blank.png) transparent 0 0 repeat-x;
+    background: url(/static/images/blank.png) transparent 0 0 repeat-x;
     height: 16px;
     width:60px;
     }
 
 .rating div { 
-    background: url(/media/images/circle.png) transparent 0 0 repeat-x; 
+    background: url(/static/images/circle.png) transparent 0 0 repeat-x; 
     height: 16px;
     }
 
@@ -4637,7 +4643,7 @@ footer[id="footer-wrapper"] ul[class="license-info"] li:last-child {
 }
 
 .stars div a {
-  background: transparent url(/media/images/blank.png) 0 0 no-repeat;
+  background: transparent url(/static/images/blank.png) 0 0 no-repeat;
   display: inline-block;
   height: 23px;
   width: 17px;
@@ -4646,12 +4652,12 @@ footer[id="footer-wrapper"] ul[class="license-info"] li:last-child {
 }
 
 .stars a.rating-over {
-  background: transparent url(/media/images/blank.png) 0 0 no-repeat;
+  background: transparent url(/static/images/blank.png) 0 0 no-repeat;
 }
 
 
 .stars a.rating {
-  background: transparent url(/media/images/circle.png) 0 0 no-repeat;
+  background: transparent url(/static/images/circle.png) 0 0 no-repeat;
 }
 
 #join-p2pu-section {
@@ -5022,7 +5028,7 @@ table.display thead, table.display tfoot {
      float: left;
      padding: 20px;
      border: 1px solid #eee;
-     background: #fbfbfb url('/media/images/border.gif') repeat-y 270px 0;
+     background: #fbfbfb url('/static/images/border.gif') repeat-y 270px 0;
      -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
      -ms-border-radius: 3px;
@@ -5529,7 +5535,7 @@ table.display thead, table.display tfoot {
 
 #user_profile #sidebar .member-bio {
     color: #aaaaaa;
-    margin-bottom: 0pt;#
+    margin-bottom: 0pt;
 }
 
 #user_profile #sidebar .member-location {
@@ -5790,7 +5796,7 @@ table.display thead, table.display tfoot {
 }
 
 .pages-jobs #jobs-top {
-    background-image: url('/media/images/jobs_page/workshop.png');
+    background-image: url('/static/images/jobs_page/workshop.png');
     height: 450px;
     width: 960px;
     padding-top: 0px;
@@ -5893,7 +5899,7 @@ table.display thead, table.display tfoot {
 .pages-jobs #jobs-bottom {
     margin-top: 20px;
     height: 630px;
-    background-image: url('/media/images/jobs_page/map.png')
+    background-image: url('/static/images/jobs_page/map.png')
 }
 
 .pages-jobs #jobs-bottom h2, .pages-jobs #jobs-bottom  a {

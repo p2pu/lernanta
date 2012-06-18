@@ -122,7 +122,7 @@ def get_image_url(fid):
         if f.filepath.startswith(settings.FILE_PATH_PREFIX):
             path = f.filepath[len(settings.FILE_PATH_PREFIX):]
             return settings.DRUPAL_FILES_URL + path
-    return settings.MEDIA_URL + PROJECT_MISSING_IMG
+    return settings.STATIC_URL + PROJECT_MISSING_IMG
 
 
 class Node(models.Model):

@@ -9,15 +9,15 @@
     <div class="container">
       <div id="footer-about">
         <h6 class="footer-header">{{ _('What is P2PU?') }}</h6>
-        <p>{{ _('The Peer 2 Peer University is a grassroots open education project that organizes learning outside of institutional walls and gives learners recognition for their achievements. P2PU creates a model for lifelong learning alongside traditional formal higher education. Leveraging the internet and educational materials openly available online, P2PU enables high-quality low-cost education opportunities.') }}</p>
+        <p class="justify_content">{{ _('The Peer 2 Peer University is a grassroots open education project that organizes learning outside of institutional walls and gives learners recognition for their achievements. P2PU creates a model for lifelong learning alongside traditional formal higher education. Leveraging the internet and educational materials openly available online, P2PU enables high-quality low-cost education opportunities.') }}</p>
         {% if not user.is_authenticated %}
           <p><a href="{% locale_url users_register %}">{{ _('Join P2PU Today! It\'s free.') }} &#8594;</a></p>
         {% endif %}
       </div>
       <div id="footer-supporters">
         <h6 class="footer-header">{{ _('Some of our supporters') }}</h6>
-        <a href="http://www.hewlett.org/" target="_blank"><img class="supporter" src="{{ MEDIA_URL }}images/footer-hewlett.png" height="64" width="353" alt="William and Flora Hewlett Foundation"></a>
-        <a href="http://www.shuttleworthfoundation.org/" target="_blank"><img class="supporter" src="{{ MEDIA_URL }}images/footer-shuttleworth.png" height="64" width="353" alt="Shuttleworth Foundation"></a>
+        <a href="http://www.hewlett.org/" target="_blank"><img class="supporter" src="{{ STATIC_URL }}images/footer-hewlett.png" height="64" width="353" alt="William and Flora Hewlett Foundation"></a>
+        <a href="http://www.shuttleworthfoundation.org/" target="_blank"><img class="supporter" src="{{ STATIC_URL }}images/footer-shuttleworth.png" height="64" width="353" alt="Shuttleworth Foundation"></a>
         <a class="more-supporters" href="{% locale_url static_page_show 'supporters' %}">{{ _('View all of our supporters') }}</a>
       </div>
       <div id="footer-connect">

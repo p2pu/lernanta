@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load l10n_tags %}
+{% load project_tags %}
+
+{% block title %}{{ _('Create tasks') }}{% endblock %}
+
+{% block bodyclasses %}project edit{% endblock %}
+
+{% block links %}
+    {% if school %}
+        <link rel="stylesheet" href="{% locale_url schools_css slug=school.slug %}?v=1">
+    {% endif %}
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/course.css?v=1">
+{% endblock %}
+
+{% block breadcrumbs_title %}
+{% endblock %}
+{% block breadcrumbs %}
+  <span class="arrow">&rsaquo;</span>
+  <a href="{% learn_default %}">{{ _('Learn') }}</a>
+{% endblock %}
+
+{% block body %}
+<section class="modal nav">
+  <article>
+    <h1>{{ _('Create Course') }}</h1>
+    <nav id="project-edit-nav" class="tabs">
+      <ul>
+        <li class="new">
+          <a href="{% locale_url projects_create_overview slug=project.slug %}">
+            {{ _('Step 1: Create Course') }}</a>
+        </li>
+        <li class="active">
+          <a href="" class="disabled">{{ _('Step 2: Add Tasks') }}</a>
+        </li>
+        <li>
+          <a href="{% locale_url projects_create_review slug=project.slug %}">
+            {{ _('Step 3: Review and Publish') }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <section id="id_tasks_edit">
+      <div>
+        <h1>{{ _('Create tasks') }}</h1>
+        <br/>
+        <div id="task-list">
+            <ol>
+            {% for page in tasks %}
+                <li class="{% cycle 'odd' 'even' %}">
+                    <div class="task_actions">
+                        <a id="id-task-edit_{{page.slug}}" href="{% locale_url page_edit slug=project.slug page_slug=page.slug %}?next_url={{request.get_full_path}}" >{{ _('Edit') }}</a>
+                        <a href="{% locale_url page_delete slug=project.slug page_slug=page.slug %}">{{ _('Delete') }}</a>
+                        {% if not forloop.first %}<a class="task-up" href="{% locale_url page_index_up slug=project.slug page_slug=page.slug%}">{{ _('Up') }}</a>{% endif %}
+                        {% if not forloop.last %}<a class="task-down" href="{% locale_url page_index_down slug=project.slug page_slug=page.slug%}">{{ _('Down') }}</a>{% endif %}
+                    </div>
+                    <span class="task-number">{{ forloop.counter }}.</span>
+                    <span class="task-header">{{ page.title }}</span>
+                    <p class="task-subheader">{{ page.sub_header|default:"&nbsp;" }}</p>
+                </li>
+            {% endfor %}
+            </ol>
+        </div>
+
+        <a id="id-task-add-button" class="button" href="{% locale_url page_create slug=project.slug %}?next_url={{request.get_full_path}}">{{ _('Add Task') }}</a>
+        <a id="id-task-add-button" class="button" href="{% locale_url projects_create_review slug=project.slug %}">{{ _('Go to step 3') }}</a>
+      </div>
+    </section>
+    
+  </article>
+</section>
+{% endblock %}
+

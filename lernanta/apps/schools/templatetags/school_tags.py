@@ -6,18 +6,20 @@ from schools.models import School
 register = template.Library()
 
 
-def schools_menu():
+def schools_menu(context):
     schools = School.objects.all()
-    return {'schools': schools}
+    context.update({'schools': schools})
+    return context
 
 
-register.inclusion_tag('schools/menu.html')(schools_menu)
+register.inclusion_tag('schools/menu.html', takes_context=True)(schools_menu)
 
 
-def schools_footer():
+def schools_footer(context):
     schools = School.objects.all().order_by(
         'short_name').exclude(id__gt=4)
-    return {'schools': schools}
+    context.update({'schools': schools})
+    return context
 
 
-register.inclusion_tag('schools/footer.html')(schools_footer)
+register.inclusion_tag('schools/footer.html', takes_context=True)(schools_footer)

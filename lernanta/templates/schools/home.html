@@ -25,7 +25,7 @@
       {% if school.logo %}
         <img src="{{ MEDIA_URL }}{{ school.logo }}" alt="project image"/>
       {% else %}
-        <img src="/media/images/school-missing.png" alt="project image"/>
+        <img src="{{ STATIC_URL}}images/school-missing.png" alt="project image"/>
       {% endif %}
     </figure>
     {% if school.show_school_organizers %}

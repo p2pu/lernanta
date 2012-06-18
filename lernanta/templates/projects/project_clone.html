@@ -1,31 +1,83 @@
-{% extends "projects/project_edit.html" %}
+{% extends "base.html" %}
+
+{% load i18n %}
 {% load l10n_tags %}
 {% load project_tags %}
-{% block bodyclasses %}project clone{% endblock %}
 
-{% block links %}{% if school %}<link rel="stylesheet" href="{% locale_url schools_css slug=school.slug %}?v=1">{% endif %}{% endblock %}
+{% block title %}{{ _('Create') }}{% endblock %}
 
-{% block form %}
-<fieldset id="project_clone" class="project clone tabpane">
-<h2>{{ _('Clone Existing') }}</h2>
-<p class="hint">{{ _('Create a new study group, course ... based on an existing one. Note that if you start typing the matching suggestions will be displayed.') }}</p>
-<form action="{% locale_url projects_clone %}" method="post">
-  {% csrf_token %}
-  <p>
-    <div class="field project{% if form.project.errors %} error{% endif %}">
-      <label for="id_project">{{ _('Short Name') }}</label>
-      {{ form.project }}
-      {{ form.project.errors }}
-    </div>
-  </p>
-  <p class="buttons">
-    <a class="button" href="{% learn_default %}">{{ _('Cancel') }}</a>
-    <button type="submit" value="{{ _('Clone') }}">{{ _('Clone') }}</button>
-  </p>
-</form>
-</fieldset>
+{% block bodyid %}project_create{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/course.css?v=1">
 {% endblock %}
 
+{% block bodyclasses %}project clone{% endblock %}
+
+{% block links %}
+    {% if school %}
+        <link rel="stylesheet" href="{% locale_url schools_css slug=school.slug %}?v=1">
+    {% endif %}
+{% endblock %}
+
+{% block breadcrumbs_title %}
+{% endblock %}
+{% block breadcrumbs %}
+  <span class="arrow">&rsaquo;</span>
+  <a href="{% learn_default %}">{{ _('Learn') }}</a>
+{% endblock %}
+
+{% block body %}
+<section class="modal nav">
+  <article>
+    <h1>{{ _('Create Course') }}</h1>
+    <nav id="project-edit-nav" class="tabs">
+      <ul>
+        <li class="new">
+          <a href="{% locale_url projects_create %}{% if school %}?school={{ school.slug }}{% endif%}">
+            {{ _('Step 1: Create Course') }}</a>
+        </li>
+        <ul>
+          <li class="clone active">
+            <a href="">
+              {{ _('Clone Existing') }}</a>
+          </li>
+          <li class="import">
+            <a href="{% locale_url projects_import %}{% if school %}?school={{ school.slug }}{% endif%}">
+              {{ _('Import from old site') }}</a>
+          </li>
+        </ul>
+        <li>
+          <a href="" class="disabled">{{ _('Step 2: Update Tasks') }}</a>
+        </li>
+        <li>
+          <a href="" class="disabled">{{ _('Step 3: Review and Publish') }}</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <fieldset id="project_clone" class="project clone tabpane">
+        <h2>{{ _('Clone Existing') }}</h2>
+        <p class="hint">{{ _('Create a new study group, course ... based on an existing one. Note that if you start typing the matching suggestions will be displayed.') }}</p>
+        <form action="{% locale_url projects_clone %}" method="post">
+          {% csrf_token %}
+          <p>
+            <div class="field project{% if form.project.errors %} error{% endif %}">
+              <label for="id_project">{{ _('Short Name') }}</label>
+              {{ form.project }}
+              {{ form.project.errors }}
+            </div>
+          </p>
+          <p class="buttons">
+            <a class="button" href="{% learn_default %}">{{ _('Cancel') }}</a>
+            <button type="submit" value="{{ _('Clone') }}">{{ _('Clone') }}</button>
+          </p>
+        </form>
+    </fieldset>
+    
+  </article>
+</section>
+{% endblock %}
 
 {% block js %}
   <script type="text/javascript">

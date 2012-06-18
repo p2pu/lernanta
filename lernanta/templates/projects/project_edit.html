@@ -4,65 +4,45 @@
 {% load l10n_tags %}
 {% load project_tags %}
 
-{% block title %}{% if project %}{{ _('Edit') }}{% else %}{{ _('Create') }}{% endif %}{% endblock %}
+{% block title %}{{ _('Edit') }}{% endblock %}
 
-{% block bodyid %}{% if project %}project_edit{% else %}project_create{% endif %}{% endblock %}
+{% block bodyid %}project_edit{% endblock %}
 
 {% block links %}
-  {% if project %}
-    {% if project.accepted_school %}<link rel="stylesheet" href="{% locale_url schools_css slug=project.accepted_school.slug %}?v=1">{% endif %}
-  {% endif %}
+    {% if project.accepted_school %}
+        <link rel="stylesheet" href="{% locale_url schools_css slug=project.accepted_school.slug %}?v=1">
+    {% endif %}
 {% endblock %}
 
 {% block breadcrumbs_title %}
-  {% if project %}
     <h1 id="project-name">
       <a href="{{ project.get_absolute_url }}" class="school_header">{{ project.name }}</a>
     </h1>
-  {% endif %}
 {% endblock %}
 {% block breadcrumbs %}
   <span class="arrow">&rsaquo;</span>
   <a href="{% learn_default %}">{{ _('Learn') }}</a>
-  {% if project %}
     <span class="arrow">&rsaquo;</span>
     <a href="{{ project.get_absolute_url }}">{{ project.name }}</a>
-  {% endif %}
 {% endblock %}
 
 {% block body %}
 <section class="modal nav">
   <article>
     <h1>
-      {% if project %}
       {{ _('Admin') }} {{ project.kind|title }}
       <a class="pester back_link" href="{{ project.get_absolute_url }}">({{ _('View') }})</a>
-      {% else %}
-      {{ _('Create') }}
-      {% endif %}</h1>
+    </h1>
     <nav id="project-edit-nav" class="tabs">
       <ul>
-    {% if project %}
-	<li class="summary {% if summary_tab %}active{% endif %}"><a href="{% locale_url projects_edit slug=project.slug %}">{{ _('Summary') }}</a></li>
-	<li class="image {% if image_tab %}active{% endif %}"><a href="{% locale_url projects_edit_image slug=project.slug %}">{{ _('Image') }}</a></li>
-	<li class="status {% if status_tab %}active{% endif %}"><a href="{% locale_url projects_edit_status slug=project.slug %}">{% if is_challenge %}{{ _('Status &amp; Duration')}}{% else %}{{ _('Status &amp; Dates') }}{% endif %}</a></li>
-    {% if not is_challenge %}<li class="status {% if signup_tab %}active{% endif %}"><a href="{% locale_url edit_signup slug=project.slug %}">{{ _('Signup') }}</a></li>{% endif %}
-	<li class="participants {% if participants_tab %}active{% endif %}"><a href="{% locale_url projects_edit_participants slug=project.slug %}">{{ _('Participants') }}</a></li>
-    {% if is_challenge %}<li class="next_steps {% if next_steps_tab %}active{% endif %}"><a href="{% locale_url projects_edit_next_steps slug=project.slug %}">{{ _('Associated Courses') }}</a></li>{% endif %}
-    {% if not is_challenge %}<li class="links {% if links_tab %}active{% endif %}"><a href="{% locale_url projects_edit_links slug=project.slug %}">{{ _('Links') }}</a></li>{% endif %}
-	{% if can_view_metric_overview %}<li class="metrics {% if metrics_tab %}active{% endif %}"><a href="{% locale_url projects_admin_metrics slug=project.slug %}">{{ _('Metrics') }}</a></li>{% endif %}
-    {% else %}
-    <li class="new {% if new_tab %}active{% endif %}"><a href="{% locale_url projects_create %}{% if school %}?school={{ school.slug }}{% endif%}">
-       {{ _('Create from Scratch') }}</a></li>
-    <li class="new {% if new_challenge_tab %}active{% endif %}"><a href="{% locale_url projects_create_challenge %}{% if school %}?school={{ school.slug }}{% endif%}">
-       {{ _('Create Challenge') }}</a></li>
-    <li class="sandbox"><a href="http://help.p2pu.org/kb/learning/looking-for-a-sandbox-to-test-the-creation-of-courses-challenges" target="_blank">
-       {{ _('Sandbox') }}</a></li>
-    <li class="clone {% if clone_tab %}active{% endif %}"><a href="{% locale_url projects_clone %}{% if school %}?school={{ school.slug }}{% endif%}">
-       {{ _('Clone Existing') }}</a></li>
-    <li class="import {% if import_tab %}active{% endif %}"><a href="{% locale_url projects_import %}{% if school %}?school={{ school.slug }}{% endif%}">
-        {{ _('Import from Old Site') }}</a></li>
-    {% endif %}
+	    <li class="summary {% if summary_tab %}active{% endif %}"><a href="{% locale_url projects_edit slug=project.slug %}">{{ _('Summary') }}</a></li>
+	    <li class="image {% if image_tab %}active{% endif %}"><a href="{% locale_url projects_edit_image slug=project.slug %}">{{ _('Image') }}</a></li>
+	    <li class="status {% if status_tab %}active{% endif %}"><a href="{% locale_url projects_edit_status slug=project.slug %}">{% if is_challenge %}{{ _('Status &amp; Duration')}}{% else %}{{ _('Status &amp; Dates') }}{% endif %}</a></li>
+        {% if not is_challenge %}<li class="status {% if signup_tab %}active{% endif %}"><a href="{% locale_url edit_signup slug=project.slug %}">{{ _('Signup') }}</a></li>{% endif %}
+	    <li class="participants {% if participants_tab %}active{% endif %}"><a href="{% locale_url projects_edit_participants slug=project.slug %}">{{ _('Participants') }}</a></li>
+        {% if is_challenge %}<li class="next_steps {% if next_steps_tab %}active{% endif %}"><a href="{% locale_url projects_edit_next_steps slug=project.slug %}">{{ _('Associated Courses') }}</a></li>{% endif %}
+        {% if not is_challenge %}<li class="links {% if links_tab %}active{% endif %}"><a href="{% locale_url projects_edit_links slug=project.slug %}">{{ _('Links') }}</a></li>{% endif %}
+	    {% if can_view_metric_overview %}<li class="metrics {% if metrics_tab %}active{% endif %}"><a href="{% locale_url projects_admin_metrics slug=project.slug %}">{{ _('Metrics') }}</a></li>{% endif %}
       </ul>
     </nav>
     

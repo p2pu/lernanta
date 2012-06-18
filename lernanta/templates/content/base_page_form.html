@@ -13,6 +13,7 @@
     <fieldset>
     <form action="{% block page_form_url %}{% endblock %}" method="post" {% block form_extra_attributes %}{% endblock %}>
       {% csrf_token %}
+      {{ form.next_url }}
       {% if preview %}
         <div class="preview">
             <h1 class="{% if page.collaborative %}collaborative{% endif %} school_header">

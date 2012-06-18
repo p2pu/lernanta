@@ -49,7 +49,7 @@
           {% for entry in feed_entries %}
             <article>
               <h1><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></h1>
-                <p>{{ entry.body|truncatechars:400 }}</p>
+                <p class="justify_content">{{ entry.body|truncatechars:400 }}</p>
             </article>
           {% endfor %}
       </section>

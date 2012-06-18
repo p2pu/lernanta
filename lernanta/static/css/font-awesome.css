@@ -24,8 +24,8 @@
 
 @font-face {
     font-family: 'FontAwesome';
-    src: url('/media/fonts/fontawesome-webfont.eot');
-    src: url('/media/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('/media/fonts/fontawesome-webfont.woff') format('woff'), url('/media/fonts/fontawesome-webfont.ttf') format('truetype'), url('/media/fonts/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'), url('/media/fonts/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+    src: url('/static/fonts/fontawesome-webfont.eot');
+    src: url('/static/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('/static/fonts/fontawesome-webfont.woff') format('woff'), url('/static/fonts/fontawesome-webfont.ttf') format('truetype'), url('/static/fonts/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'), url('/static/fonts/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }

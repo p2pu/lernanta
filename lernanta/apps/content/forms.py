@@ -10,6 +10,10 @@ from content.models import Page
 
 class OwnersPageForm(forms.ModelForm):
 
+    """ field used to indicate that successful page creation should redirect here """
+    next_url = forms.CharField(required=False,
+        widget=forms.widgets.HiddenInput())
+        
     class Meta:
         model = Page
         fields = ('title', 'sub_header', 'content',

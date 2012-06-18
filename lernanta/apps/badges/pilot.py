@@ -18,9 +18,9 @@ EMERALD = 5
 SAPPHIRE = 4
 
 BADGES_MISSING_IMAGES = {
-    RUBY: settings.MEDIA_URL + 'images/ruby-missing.png',
-    EMERALD: settings.MEDIA_URL + 'images/emerald-missing.png',
-    SAPPHIRE: settings.MEDIA_URL + 'images/sapphire-missing.png',
+    RUBY: settings.STATIC_URL + 'images/ruby-missing.png',
+    EMERALD: settings.STATIC_URL + 'images/emerald-missing.png',
+    SAPPHIRE: settings.STATIC_URL + 'images/sapphire-missing.png',
 }
 
 

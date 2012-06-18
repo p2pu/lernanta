@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load l10n_tags %}
 
-{% blocktrans with project_name=project.name %} We're excited to see you've created {{ project_name }}. {% endblocktrans %}
+{% blocktrans with project_name=project.name %} We're excited to see you've created {{ project_name|safe }}. {% endblocktrans %}
 
 {% trans "P2PU is here to help you design and run an awesome course." %}
 

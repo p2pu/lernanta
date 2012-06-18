@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-22 09:27+0200\n"
+"POT-Creation-Date: 2012-06-18 13:06+0200\n"
 "PO-Revision-Date: 2012-02-27 11:34+0800\n"
 "Last-Translator: 谢昱 <emiliaxie@qq.com>\n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
@@ -63,19 +63,19 @@ msgstr "分享"
 msgid "received"
 msgstr "接受"
 
-#: apps/activity/views.py:43
+#: apps/activity/views.py:38
 msgid "This activity was deleted."
 msgstr "此活动已删除。"
 
-#: apps/activity/views.py:66
+#: apps/activity/views.py:56
 msgid "You can't edit this activity"
 msgstr "你无法编辑此活动"
 
-#: apps/activity/views.py:71
+#: apps/activity/views.py:61
 msgid "Activity deleted!"
 msgstr "活动已删除!"
 
-#: apps/activity/views.py:73
+#: apps/activity/views.py:63
 msgid "Activity restored!"
 msgstr "活动恢复了!"
 
@@ -185,7 +185,7 @@ msgstr "%(score)s的%(rubric)s"
 msgid "%(user)s - %(badge)s"
 msgstr "%(user)s - %(badge)s"
 
-#: apps/badges/views.py:86 apps/projects/views.py:191
+#: apps/badges/views.py:86 apps/projects/views.py:192
 #, python-format
 msgid "The %s has been created."
 msgstr "%s已经被创造。"
@@ -203,8 +203,8 @@ msgid "Submission created and out for review!"
 msgstr "已提交，审查中！"
 
 #: apps/badges/views.py:122 apps/badges/views.py:257 apps/badges/views.py:314
-#: apps/content/views.py:115 apps/content/views.py:157
-#: apps/content/views.py:254 apps/content/views.py:359
+#: apps/content/views.py:120 apps/content/views.py:171
+#: apps/content/views.py:275 apps/content/views.py:388
 #: apps/replies/views.py:57 apps/replies/views.py:118
 #: apps/replies/views.py:152 apps/reviews/views.py:79
 #: apps/signups/views.py:149 apps/signups/views.py:189
@@ -231,7 +231,7 @@ msgstr "你不可以把这个勋章颁布给同辈。"
 msgid "Thank you for giving a badge to your peer!"
 msgstr "感谢你为你的同伴颁布勋章。"
 
-#: apps/content/forms.py:50
+#: apps/content/forms.py:54
 msgid "Post a link to your work."
 msgstr "请贴一个你的工作的链接。"
 
@@ -251,56 +251,57 @@ msgstr "本周"
 msgid "this month"
 msgstr "本月"
 
-#: apps/content/views.py:35 apps/projects/decorators.py:87
+#: apps/content/views.py:37 apps/projects/decorators.py:87
 #, python-format
 msgid "This page is not accesible on a %s."
 msgstr "此页不可在%s进入。"
 
-#: apps/content/views.py:39
+#: apps/content/views.py:41
 msgid "This task was deleted."
 msgstr "任务已删除。"
 
-#: apps/content/views.py:90 apps/content/views.py:97 apps/content/views.py:339
+#: apps/content/views.py:93 apps/content/views.py:100
+#: apps/content/views.py:368
 msgid "You can't edit this page"
 msgstr "你无法编辑此页。"
 
-#: apps/content/views.py:109 apps/projects/views.py:416
-#: apps/projects/views.py:761
+#: apps/content/views.py:112 apps/projects/views.py:223
+#: apps/projects/views.py:457 apps/projects/views.py:802
 #, python-format
 msgid "%s updated!"
 msgstr "%s被更新了！"
 
-#: apps/content/views.py:137
+#: apps/content/views.py:149
 msgid "You can not create a new task!"
 msgstr "你无法创建新任务！"
 
-#: apps/content/views.py:151
+#: apps/content/views.py:163
 msgid "Task created!"
 msgstr "任务已创建！"
 
-#: apps/content/views.py:252
+#: apps/content/views.py:273
 msgid "Please fill out the new task."
 msgstr ""
 
-#: apps/content/views.py:278 apps/content/views.py:280
+#: apps/content/views.py:299 apps/content/views.py:301
 msgid "You can't delete this page"
 msgstr "你无法删除此页。"
 
-#: apps/content/views.py:290
+#: apps/content/views.py:312
 #, python-format
 msgid "%s deleted!"
 msgstr "%s已被删除了！"
 
-#: apps/content/views.py:332
+#: apps/content/views.py:361
 msgid "You can't restore this page"
 msgstr "你无法恢复此页"
 
-#: apps/content/views.py:353
+#: apps/content/views.py:382
 #, python-format
 msgid "%s restored!"
 msgstr "%s已恢复！"
 
-#: apps/content/views.py:386 apps/content/views.py:416
+#: apps/content/views.py:417
 msgid "You can not change tasks order."
 msgstr "你不能改变任务顺序。"
 
@@ -308,7 +309,7 @@ msgstr "你不能改变任务顺序。"
 msgid "Please fill out your profile to finish registration."
 msgstr "请填写你的个人信息，完成登记。"
 
-#: apps/drumbeat/views.py:88
+#: apps/drumbeat/views.py:99
 msgid "Export selected objects as csv file"
 msgstr "选定对象导出为csv文件"
 
@@ -325,7 +326,7 @@ msgid "Can't send email"
 msgstr "不能发邮件"
 
 #: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
-#: apps/projects/views.py:995
+#: apps/projects/views.py:1037
 msgid "Message successfully sent."
 msgstr "信息发出成功。"
 
@@ -424,7 +425,7 @@ msgid "This %s was deleted."
 msgstr "此%s已被删除。"
 
 #: apps/projects/forms.py:42
-msgid "Write a catchy title, keep it short and sweet"
+msgid "Write a catchy title, keep it short and sweet."
 msgstr ""
 
 #: apps/projects/forms.py:44
@@ -439,8 +440,8 @@ msgstr ""
 
 #: apps/projects/forms.py:51
 msgid ""
-"What will your peers be able to do upon completion of this challenge? "
-"Separate with commas"
+"Tag your course so folks can find it. What will your audience be looking "
+"for? Separate with commas."
 msgstr ""
 
 #: apps/projects/forms.py:90 apps/schools/forms.py:36 apps/schools/forms.py:50
@@ -548,116 +549,112 @@ msgstr "%(name)s %(kind)s"
 msgid "created"
 msgstr "已创造"
 
-#: apps/projects/views.py:180 apps/projects/views.py:281
-#: apps/projects/views.py:362
+#: apps/projects/views.py:181 apps/projects/views.py:321
+#: apps/projects/views.py:403
 msgid "Full Description"
 msgstr "具体描述"
 
-#: apps/projects/views.py:197
-#, fuzzy, python-format
-msgid "Problem creating the %s"
+#: apps/projects/views.py:196
+#, fuzzy
+msgid "Problem creating the course"
 msgstr "创建勋章出问题了。"
 
-#: apps/projects/views.py:199
-msgid "Problem creating the study group, course, ..."
-msgstr "在开设学习小组，课程，⋯遇到的问题"
-
-#: apps/projects/views.py:306
+#: apps/projects/views.py:346
 #, python-format
 msgid "The %s has been cloned."
 msgstr "%s已被复制。"
 
-#: apps/projects/views.py:312
+#: apps/projects/views.py:352
 msgid "There was a problem cloning the study group, course, ..."
 msgstr "复制学校小组，课程中遇到问题。"
 
-#: apps/projects/views.py:380
+#: apps/projects/views.py:421
 #, python-format
 msgid "The %s has been imported."
 msgstr "%s已输入。"
 
-#: apps/projects/views.py:385
+#: apps/projects/views.py:426
 msgid "Problem importing the study group, course, ..."
 msgstr "在输入学习小组，课程⋯，遇到问题。"
 
-#: apps/projects/views.py:461 apps/schools/views.py:141
+#: apps/projects/views.py:502 apps/schools/views.py:141
 #: apps/schools/views.py:183 apps/schools/views.py:225
 #: apps/schools/views.py:267
 msgid "Image updated"
 msgstr "图片更新。"
 
-#: apps/projects/views.py:468 apps/schools/views.py:147
+#: apps/projects/views.py:509 apps/schools/views.py:147
 #: apps/schools/views.py:189 apps/schools/views.py:231
 #: apps/schools/views.py:273
 msgid "There was an error uploading your image"
 msgstr "更新照片有误。"
 
-#: apps/projects/views.py:495
+#: apps/projects/views.py:536
 msgid "Link added."
 msgstr "添加链接。"
 
-#: apps/projects/views.py:499
+#: apps/projects/views.py:540
 msgid "There was an error adding your link."
 msgstr "添加链接有误。"
 
-#: apps/projects/views.py:522 apps/projects/views.py:556
+#: apps/projects/views.py:563 apps/projects/views.py:597
 #: apps/users/views.py:659
 msgid "You can't edit this link"
 msgstr "你无法编辑此链接。"
 
-#: apps/projects/views.py:533
+#: apps/projects/views.py:574
 msgid "Link updated."
 msgstr "更新链接成功。"
 
-#: apps/projects/views.py:558
+#: apps/projects/views.py:599
 msgid "The link was deleted"
 msgstr "链接已删除。"
 
-#: apps/projects/views.py:581
+#: apps/projects/views.py:622
 msgid "Participant added."
 msgstr "增加参与者成功。"
 
-#: apps/projects/views.py:587
+#: apps/projects/views.py:628
 msgid "There was an error adding the participant."
 msgstr "添加参与者有误。"
 
-#: apps/projects/views.py:625
+#: apps/projects/views.py:666
 msgid "You can't make that person an organizer"
 msgstr "无法设定其为组织者。"
 
-#: apps/projects/views.py:631
+#: apps/projects/views.py:672
 msgid "The participant is now an organizer."
 msgstr "此人已是组织者。"
 
-#: apps/projects/views.py:647
+#: apps/projects/views.py:688
 #, fuzzy
 msgid "You cannot delete the only organizer"
 msgstr "你无法删除此答案。"
 
-#: apps/projects/views.py:655
+#: apps/projects/views.py:696
 #, fuzzy
 msgid "The organizer in now only a participant."
 msgstr "你现在是参与者了！"
 
-#: apps/projects/views.py:669
+#: apps/projects/views.py:710
 #, python-format
 msgid "The participant %s has been removed."
 msgstr "参与者%s已被踢除。"
 
-#: apps/projects/views.py:688
+#: apps/projects/views.py:729
 msgid "Next step added."
 msgstr "添加下一步。"
 
-#: apps/projects/views.py:694
+#: apps/projects/views.py:735
 msgid "There was an error adding that next step."
 msgstr "添加下一步有误。"
 
-#: apps/projects/views.py:740
+#: apps/projects/views.py:781
 #, python-format
 msgid "The %(name)s %(kind)s is not a next step anymore."
 msgstr "该%(name)s%(kind)s不再是下一步。"
 
-#: apps/projects/views.py:766
+#: apps/projects/views.py:807
 #, python-format
 msgid "There was a problem saving the %s's status."
 msgstr "在保存%s的数据中遇到问题。"
@@ -943,6 +940,7 @@ msgstr "标签"
 
 #: apps/tags/models.py:10 templates/projects/_learn_filters.html:19
 #: templates/projects/learn_tags.html:12
+#: templates/projects/project_create_overview.html:119
 #: templates/projects/project_edit_summary.html:69
 #: templates/projects/sidebar.html:96
 msgid "Tags"
@@ -1241,7 +1239,7 @@ msgstr "（更多）"
 msgid "CC BY SA"
 msgstr "知识共享创用CC BY SA"
 
-#: templates/_footer.html:46 templates/base.html:84 templates/base.html.py:96
+#: templates/_footer.html:46 templates/base.html:85 templates/base.html.py:97
 msgid "Help"
 msgstr "帮助"
 
@@ -1281,64 +1279,69 @@ msgstr "向所有人学习任何知识。"
 msgid "css/style-en.css"
 msgstr "css/style-zh-CN.css"
 
-#: templates/base.html:51 templates/activity/base.html:18
+#: templates/base.html:52 templates/activity/base.html:18
 #: templates/projects/base.html:22 templates/projects/learn.html:4
 #: templates/projects/learn.html.py:16 templates/projects/learn_tags.html:10
-#: templates/projects/project_edit.html:26
+#: templates/projects/project_clone.html:27
+#: templates/projects/project_create_overview.html:27
+#: templates/projects/project_create_review.html:25
+#: templates/projects/project_create_tasks.html:25
+#: templates/projects/project_edit.html:24
+#: templates/projects/project_import.html:27
 msgid "Learn"
 msgstr "学习"
 
-#: templates/base.html:52
+#: templates/base.html:53
 msgid "Contribute"
 msgstr "创造"
 
-#: templates/base.html:74 templates/dashboard/dashboard.html:18
+#: templates/base.html:75 templates/dashboard/dashboard.html:18
 #: templates/drumbeatmail/inbox.html:9
 msgid "Dashboard"
 msgstr "仪表盘"
 
-#: templates/base.html:75
+#: templates/base.html:76
 msgid "My Profile"
 msgstr "我的个人资料"
 
-#: templates/base.html:76
+#: templates/base.html:77
 msgid "My Settings"
 msgstr "我的设置"
 
-#: templates/base.html:77 templates/chat/chat.html:4
+#: templates/base.html:78 templates/chat/chat.html:4
 #: templates/chat/chat.html.py:10 templates/projects/sidebar.html:169
 msgid "Chat"
 msgstr "聊天"
 
-#: templates/base.html:78 templates/drumbeatmail/inbox.html:4
+#: templates/base.html:79 templates/drumbeatmail/inbox.html:4
 #: templates/drumbeatmail/inbox.html:11 templates/drumbeatmail/inbox.html:20
 msgid "Inbox"
 msgstr "收件箱"
 
-#: templates/base.html:79
+#: templates/base.html:80
 msgid "Logout"
 msgstr "退出"
 
-#: templates/base.html:89 templates/base.html.py:97
+#: templates/base.html:90 templates/base.html.py:98
 msgid "Blog"
 msgstr "博客"
 
-#: templates/base.html:95
+#: templates/base.html:96
 msgid "Login"
 msgstr "登录"
 
-#: templates/base.html:102 templates/search/search.html:15
+#: templates/base.html:103 templates/search/search.html:15
 msgid "Loading"
 msgstr "正在下载"
 
-#: templates/base.html:105 templates/base.html.py:212
+#: templates/base.html:106 templates/base.html.py:212
 #: templates/drumbeatmail/base.html:54
 #: templates/projects/contact_organizers.html:49
 #: templates/search/search.html:30 templates/users/profile_form_base.html:72
 msgid "en"
 msgstr "zn-CN"
 
-#: templates/base.html:125
+#: templates/base.html:126
 msgid "Home"
 msgstr "主页"
 
@@ -1364,8 +1367,9 @@ msgstr "举报"
 #: templates/activity/_activity_resource.html:18
 #: templates/activity/delete_restore.html:32
 #: templates/content/confirm_delete_page.html:19
-#: templates/content/confirm_delete_page.html:29
+#: templates/content/confirm_delete_page.html:33
 #: templates/content/page.html:23
+#: templates/projects/project_create_tasks.html:59
 #: templates/projects/project_edit_links.html:39
 #: templates/replies/_comment_threads.html:28
 #: templates/replies/_comment_threads.html:65
@@ -1443,19 +1447,21 @@ msgstr "你希望删除此活动吗？"
 #: templates/badges/badge_edit_summary.html:35
 #: templates/badges/badge_edit_summary.html:38
 #: templates/content/_toggle_completion.html:9
-#: templates/content/confirm_delete_page.html:27
-#: templates/content/create_page.html:28 templates/content/edit_page.html:37
+#: templates/content/confirm_delete_page.html:29
+#: templates/content/confirm_delete_page.html:31
+#: templates/content/create_page.html:32 templates/content/edit_page.html:41
 #: templates/content/restore_version.html:34
 #: templates/dashboard/dashboard.html:44
 #: templates/drumbeat/report_abuse.html:16 templates/drumbeatmail/base.html:40
 #: templates/projects/_wall.html:21
 #: templates/projects/contact_organizers.html:34
-#: templates/projects/project_clone.html:22
+#: templates/projects/project_clone.html:72
+#: templates/projects/project_create_overview.html:155
 #: templates/projects/project_edit_image.html:12
 #: templates/projects/project_edit_status.html:67
 #: templates/projects/project_edit_summary.html:104
 #: templates/projects/project_edit_summary.html:107
-#: templates/projects/project_import.html:22
+#: templates/projects/project_import.html:71
 #: templates/replies/comment_page.html:125
 #: templates/replies/delete_restore_comment.html:33
 #: templates/schools/school_edit_background.html:23
@@ -1760,7 +1766,7 @@ msgid ""
 msgstr ""
 
 #: templates/badges/badge_edit_summary.html:36
-#: templates/content/edit_page.html:39
+#: templates/content/edit_page.html:43
 #: templates/dashboard/setup_profile.html:9
 #: templates/projects/project_edit_status.html:68
 #: templates/projects/project_edit_summary.html:105
@@ -1778,11 +1784,14 @@ msgid "Save"
 msgstr "保存"
 
 #: templates/badges/badge_edit_summary.html:39
-#: templates/content/create_page.html:30 templates/projects/learn.html:20
-#: templates/projects/project_edit.html:7
-#: templates/projects/project_edit.html:41
+#: templates/content/create_page.html:34 templates/projects/learn.html:20
+#: templates/projects/project_clone.html:7
+#: templates/projects/project_create_overview.html:9
+#: templates/projects/project_create_overview.html:156
+#: templates/projects/project_create_review.html:7
 #: templates/projects/project_edit_summary.html:108
-#: templates/projects/project_import.html:23 templates/schools/home.html:15
+#: templates/projects/project_import.html:7
+#: templates/projects/project_import.html:72 templates/schools/home.html:15
 msgid "Create"
 msgstr "创建"
 
@@ -1984,12 +1993,14 @@ msgid "New Task"
 msgstr ""
 
 #: templates/content/_edit_pages_item.html:18
-#: templates/content/base_page_form.html:32
+#: templates/content/base_page_form.html:33
+#: templates/projects/project_create_overview.html:91
 #: templates/projects/project_edit_summary.html:22
 msgid "Title"
 msgstr "标题"
 
 #: templates/content/_edit_pages_item.html:23
+#: templates/projects/project_create_overview.html:96
 #: templates/projects/project_edit_summary.html:32
 msgid "Tagline"
 msgstr ""
@@ -2067,31 +2078,31 @@ msgstr "申请"
 msgid "Submitted"
 msgstr "提交"
 
-#: templates/content/base_page_form.html:19
+#: templates/content/base_page_form.html:20
 #: templates/replies/comment_page.html:77
 #: templates/signups/answer_sign_up.html:24
 msgid "[Preview]"
 msgstr "预览"
 
-#: templates/content/base_page_form.html:33
+#: templates/content/base_page_form.html:34
 msgid "A good title is short and descriptive."
 msgstr "好的标题应该简洁而概括。"
 
-#: templates/content/base_page_form.html:40
+#: templates/content/base_page_form.html:41
 #: templates/projects/project_edit_summary.html:34
 msgid "One sentence description"
 msgstr "一句话描述"
 
-#: templates/content/base_page_form.html:41
+#: templates/content/base_page_form.html:42
 #, fuzzy
 msgid "This description will be used as sub header below the task title."
 msgstr "该描述将作为副标题"
 
-#: templates/content/base_page_form.html:52
+#: templates/content/base_page_form.html:53
 msgid "Collaborative work (editable by all the participants)."
 msgstr "协作作业（可由参与者编辑）"
 
-#: templates/content/base_page_form.html:58
+#: templates/content/base_page_form.html:59
 #: templates/content/edit_pages.html:38
 #: templates/replies/comment_page.html:132
 #: templates/signups/answer_sign_up.html:98
@@ -2130,6 +2141,7 @@ msgstr ""
 
 #: templates/content/edit_page.html:18 templates/content/edit_pages.html:13
 #: templates/content/edit_pages.html:36 templates/content/page.html:22
+#: templates/projects/project_create_tasks.html:58
 #: templates/projects/project_edit.html:7
 #: templates/projects/project_edit_links.html:35
 #: templates/projects/sidebar.html:112
@@ -2162,6 +2174,7 @@ msgid "Save Progress"
 msgstr "进步"
 
 #: templates/content/edit_pages.html:41
+#: templates/projects/project_create_review.html:62
 msgid "Finish"
 msgstr ""
 
@@ -2780,7 +2793,7 @@ msgstr ""
 
 #: templates/projects/_project_card.html:27
 #: templates/projects/_user_list.html:71
-#: templates/projects/project_edit.html:50
+#: templates/projects/project_edit.html:42
 #: templates/projects/project_edit_participants.html:7
 #: templates/projects/sidebar.html:181
 #: templates/schools/_projectset_card.html:34
@@ -2790,6 +2803,7 @@ msgid "Participants"
 msgstr ""
 
 #: templates/projects/_project_edit_image.html:1
+#: templates/projects/project_create_overview.html:143
 msgid "Cover Image"
 msgstr ""
 
@@ -2831,7 +2845,7 @@ msgid "View and Discuss"
 msgstr ""
 
 #: templates/projects/_task_list.html:39
-#: templates/projects/project_edit.html:39
+#: templates/projects/project_edit.html:34
 msgid "View"
 msgstr ""
 
@@ -2983,7 +2997,7 @@ msgid ""
 msgstr ""
 
 #: templates/projects/imported_detailed_description.html:3
-#: templates/projects/project_edit.html:46
+#: templates/projects/project_edit.html:38
 #: templates/schools/school_edit.html:16
 msgid "Summary"
 msgstr ""
@@ -2996,7 +3010,7 @@ msgstr ""
 msgid "Show More Results"
 msgstr ""
 
-#: templates/projects/project.html:23 templates/projects/project_edit.html:38
+#: templates/projects/project.html:23 templates/projects/project_edit.html:33
 msgid "Admin"
 msgstr ""
 
@@ -3074,18 +3088,57 @@ msgid ""
 "weight to these page visits."
 msgstr ""
 
-#: templates/projects/project_clone.html:10
-#: templates/projects/project_edit.html:62
+#: templates/projects/project_clone.html:33
+#: templates/projects/project_create_overview.html:33
+#: templates/projects/project_create_review.html:31
+#: templates/projects/project_create_tasks.html:31
+#: templates/projects/project_import.html:33
+#, fuzzy
+msgid "Create Course"
+msgstr "创建任务"
+
+#: templates/projects/project_clone.html:38
+#: templates/projects/project_create_overview.html:38
+#: templates/projects/project_create_review.html:35
+#: templates/projects/project_create_tasks.html:36
+#: templates/projects/project_import.html:38
+msgid "Step 1: Create Course"
+msgstr ""
+
+#: templates/projects/project_clone.html:43
+#: templates/projects/project_clone.html:60
+#: templates/projects/project_create_overview.html:46
+#: templates/projects/project_import.html:43
 msgid "Clone Existing"
 msgstr ""
 
-#: templates/projects/project_clone.html:11
+#: templates/projects/project_clone.html:47
+#: templates/projects/project_create_overview.html:50
+#: templates/projects/project_import.html:46
+msgid "Import from old site"
+msgstr ""
+
+#: templates/projects/project_clone.html:51
+#: templates/projects/project_import.html:50
+msgid "Step 2: Update Tasks"
+msgstr ""
+
+#: templates/projects/project_clone.html:54
+#: templates/projects/project_create_overview.html:58
+#: templates/projects/project_create_overview.html:65
+#: templates/projects/project_create_review.html:41
+#: templates/projects/project_create_tasks.html:43
+#: templates/projects/project_import.html:53
+msgid "Step 3: Review and Publish"
+msgstr ""
+
+#: templates/projects/project_clone.html:61
 msgid ""
 "Create a new study group, course ... based on an existing one. Note that if "
 "you start typing the matching suggestions will be displayed."
 msgstr ""
 
-#: templates/projects/project_clone.html:16
+#: templates/projects/project_clone.html:66
 #: templates/projects/project_edit_next_steps.html:12
 #: templates/schools/school_edit_featured.html:13
 #: templates/schools/school_edit_membership.html:13
@@ -3093,34 +3146,169 @@ msgstr ""
 msgid "Short Name"
 msgstr ""
 
-#: templates/projects/project_clone.html:23
+#: templates/projects/project_clone.html:73
 msgid "Clone"
 msgstr ""
 
-#: templates/projects/project_edit.html:47
+#: templates/projects/project_create_overview.html:55
+#: templates/projects/project_create_overview.html:62
+#: templates/projects/project_create_review.html:38
+#: templates/projects/project_create_tasks.html:39
+msgid "Step 2: Add Tasks"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:79
+#, python-format
+msgid ""
+"Looking for advice on great course design? We have a <a href="
+"\"%(challenge_url)s\" target=\"_blank\">course</a> that can help you with "
+"the process and articles on our <a href=\"http://help.p2pu.org/kb\" >help "
+"desk</a>."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:85
+msgid "Just doing a test run? Check here to create a test course."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:87
+#: templates/projects/project_edit_summary.html:17
+msgid ""
+"Please check this if you are just testing. Your course will not generate "
+"updates or notification emails for other users."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:102
+msgid "How many hours will this course take to complete?"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:107
+#: templates/projects/project_create_overview.html:137
+#: templates/projects/project_edit_summary.html:50
+#: templates/projects/project_edit_summary.html:89
+#: templates/schools/school_edit_summary.html:22
+msgid "Description"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:113
+#: templates/projects/project_edit_summary.html:60
+#, fuzzy
+msgid "Language"
+msgstr "语言"
+
+#: templates/projects/project_create_overview.html:126
+msgid "Course style"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:127
+#: templates/projects/project_edit_summary.html:79
+msgid "What kind of learning environment do you want to create?"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:131
+#: templates/projects/project_edit_summary.html:83
+msgid "Or make up your own term."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:133
+#: templates/projects/project_edit_summary.html:85
+msgid "Term"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:148
+msgid ""
+"Your cover image is the public face of your course - choose it wisely! "
+"Select and upload an image.<br/>We only support JPG, GIF and PNG images<br/"
+">The image should measure 243x150 pixels<br/>The maximum size is 700k"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:156
+msgid "Go to step 2"
+msgstr ""
+
+#: templates/projects/project_create_review.html:47
+#, fuzzy
+msgid "Review your course"
+msgstr "评论已发表!"
+
+#: templates/projects/project_create_review.html:49
+msgid ""
+"This is what your project will look like to the world when it is published. "
+"Take a second to double check your course name, tagline, image and tags."
+msgstr ""
+
+#: templates/projects/project_create_review.html:54
+msgid ""
+"Join the <a href=\"https://p2pu.org/groups/make-a-challenge/\">P2PU Course "
+"Design Group</a> to get feedback on your course!"
+msgstr ""
+
+#: templates/projects/project_create_review.html:56
+msgid ""
+"You may also wish to add a badge to your challenge! For more information on "
+"badges and how to add them to your challenge, see <a href=\"https://p2pu.org/"
+"groups/how-do-i-make-a-badge/\">this</a> course!"
+msgstr ""
+
+#: templates/projects/project_create_review.html:58
+msgid ""
+"Once you hit the 'Finish' button, you will be taken to your course. You can "
+"still make changes to your course and add and update the tasks associated "
+"with your course."
+msgstr ""
+
+#: templates/projects/project_create_review.html:60
+msgid ""
+"Your course will remain a draft until you uncheck the 'Under Development' "
+"checkbox in the admin interface of your course."
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:7
+#: templates/projects/project_create_tasks.html:51
+#, fuzzy
+msgid "Create tasks"
+msgstr "创建任务"
+
+#: templates/projects/project_create_tasks.html:60
+msgid "Up"
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:61
+msgid "Down"
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:71
+#, fuzzy
+msgid "Add Task"
+msgstr "编辑徽章"
+
+#: templates/projects/project_create_tasks.html:72
+msgid "Go to step 3"
+msgstr ""
+
+#: templates/projects/project_edit.html:39
 msgid "Image"
 msgstr ""
 
-#: templates/projects/project_edit.html:48
+#: templates/projects/project_edit.html:40
 #: templates/projects/project_edit_status.html:10
 msgid "Status &amp; Duration"
 msgstr ""
 
-#: templates/projects/project_edit.html:48
+#: templates/projects/project_edit.html:40
 #: templates/projects/project_edit_status.html:12
 msgid "Status &amp; Dates"
 msgstr ""
 
-#: templates/projects/project_edit.html:49 templates/projects/sidebar.html:165
+#: templates/projects/project_edit.html:41 templates/projects/sidebar.html:165
 msgid "Signup"
 msgstr ""
 
-#: templates/projects/project_edit.html:51
+#: templates/projects/project_edit.html:43
 #: templates/projects/project_edit_next_steps.html:7
 msgid "Associated Courses"
 msgstr ""
 
-#: templates/projects/project_edit.html:52
+#: templates/projects/project_edit.html:44
 #: templates/projects/project_edit_links_base.html:7
 #: templates/users/profile_edit.html:27
 #: templates/users/profile_edit_links.html:8
@@ -3128,27 +3316,8 @@ msgstr ""
 msgid "Links"
 msgstr "链接"
 
-#: templates/projects/project_edit.html:53
+#: templates/projects/project_edit.html:45
 msgid "Metrics"
-msgstr ""
-
-#: templates/projects/project_edit.html:56
-msgid "Create from Scratch"
-msgstr ""
-
-#: templates/projects/project_edit.html:58
-#, fuzzy
-msgid "Create Challenge"
-msgstr "创建文档"
-
-#: templates/projects/project_edit.html:60
-#, fuzzy
-msgid "Sandbox"
-msgstr "说明手册"
-
-#: templates/projects/project_edit.html:64
-#: templates/projects/project_import.html:10
-msgid "Import from Old Site"
 msgstr ""
 
 #: templates/projects/project_edit_image.html:13
@@ -3358,24 +3527,12 @@ msgstr ""
 msgid "This is a test course"
 msgstr ""
 
-#: templates/projects/project_edit_summary.html:17
-msgid ""
-"Please check this if you are just testing. Your course will not generate "
-"updates or notification emails for other users."
-msgstr ""
-
 #: templates/projects/project_edit_summary.html:25
 msgid "Short and descriptive works best."
 msgstr ""
 
 #: templates/projects/project_edit_summary.html:35
 msgid "Used in search results and listings."
-msgstr ""
-
-#: templates/projects/project_edit_summary.html:50
-#: templates/projects/project_edit_summary.html:89
-#: templates/schools/school_edit_summary.html:22
-msgid "Description"
 msgstr ""
 
 #: templates/projects/project_edit_summary.html:52
@@ -3386,11 +3543,6 @@ msgstr ""
 msgid ""
 "What's this about? What will I learn? Tell me more, but keep it to the point."
 msgstr ""
-
-#: templates/projects/project_edit_summary.html:60
-#, fuzzy
-msgid "Language"
-msgstr "语言"
 
 #: templates/projects/project_edit_summary.html:67
 #, fuzzy
@@ -3405,29 +3557,21 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: templates/projects/project_edit_summary.html:79
-msgid "What kind of learning environment do you want to create?"
+#: templates/projects/project_import.html:59
+msgid "Import from Old Site"
 msgstr ""
 
-#: templates/projects/project_edit_summary.html:83
-msgid "Or make up your own term."
-msgstr ""
-
-#: templates/projects/project_edit_summary.html:85
-msgid "Term"
-msgstr ""
-
-#: templates/projects/project_import.html:11
+#: templates/projects/project_import.html:60
 msgid ""
 "Import a course from the old p2pu site. Note that if you start typing the "
 "matching suggestions will be displayed."
 msgstr ""
 
-#: templates/projects/project_import.html:16
+#: templates/projects/project_import.html:65
 msgid "Course"
 msgstr ""
 
-#: templates/projects/project_import.html:23
+#: templates/projects/project_import.html:72
 msgid "Import"
 msgstr ""
 
@@ -3577,7 +3721,7 @@ msgstr ""
 
 #: templates/projects/emails/project_created.txt:4
 #, python-format
-msgid " We're excited to see you've created %(project_name)s. "
+msgid " We're excited to see you've created %(project_name|safe)s. "
 msgstr ""
 
 #: templates/projects/emails/project_created.txt:6
@@ -4924,6 +5068,17 @@ msgstr ""
 #: templates/users/emails/registration_confirm_subject.txt:2
 msgid "[P2PU] Confirm Email Address!"
 msgstr ""
+
+#~ msgid "Problem creating the study group, course, ..."
+#~ msgstr "在开设学习小组，课程，⋯遇到的问题"
+
+#, fuzzy
+#~ msgid "Create Challenge"
+#~ msgstr "创建文档"
+
+#, fuzzy
+#~ msgid "Sandbox"
+#~ msgstr "说明手册"
 
 #~ msgid "Email updated"
 #~ msgstr "邮件更新"

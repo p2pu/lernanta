@@ -81,7 +81,7 @@ class Badge(ModelBase):
     def get_image_url(self):
         # TODO: using project's default image until a default badge
         # image is added.
-        missing = settings.MEDIA_URL + 'images/missing-badge.png'
+        missing = settings.STATIC_URL + 'images/missing-badge.png'
         image_path = self.image.url if self.image else missing
         return image_path
 

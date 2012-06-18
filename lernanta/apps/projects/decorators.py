@@ -49,9 +49,9 @@ def can_view_metric_detail(func):
         request = args[0]
         project = kwargs['slug']
         project = get_object_or_404(Project, slug=project)
-        metric_permissions = project.get_metrics_permissions(
+        metric_csv_permissions = project.get_metrics_permissions(
             request.user)
-        if not metric_permissions[1]:
+        if not metric_csv_permissions:
             msg = _("You are not authorized to view the detailed statistics.")
             return HttpResponseForbidden(msg)
         return func(*args, **kwargs)
@@ -69,7 +69,7 @@ def can_view_metric_overview(func):
         project = get_object_or_404(Project, slug=project)
         metric_permissions = project.get_metrics_permissions(
             request.user)
-        if not metric_permissions[0]:
+        if not metric_permissions:
             msg = _("You aren't authorized to view the statistics' overview.")
             return HttpResponseForbidden(msg)
         return func(*args, **kwargs)

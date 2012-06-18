@@ -159,9 +159,10 @@ def create(request, category=None):
                 project.category = category
             image_form = project_forms.ProjectImageForm(request.POST,
                 request.FILES, instance=project)
-            if category and image_form.is_valid():
+            if image_form.is_valid():
                 image_form.save()
             project.set_duration(form.cleaned_data['duration'] or 0)
+            #CS - too much logic in view
             act = Activity(actor=user,
                 verb=verbs['post'],
                 scope_object=project,
@@ -189,14 +190,10 @@ def create(request, category=None):
             project.create()
             messages.success(request,
                 _('The %s has been created.') % project.kind.lower())
-            return http.HttpResponseRedirect(reverse('projects_show', kwargs={
-                'slug': project.slug,
-            }))
+            return http.HttpResponseRedirect(reverse('projects_create_tasks',
+                kwargs={'slug': project.slug,}))
         else:
-            if category:
-                msg = _("Problem creating the %s") % category
-            else:
-                msg = _("Problem creating the study group, course, ...")
+            msg = _("Problem creating the course")
             messages.error(request, msg)
     else:
         form = project_forms.ProjectForm(category, initial={'test':True})
@@ -207,18 +204,60 @@ def create(request, category=None):
         'category': category,
         'is_challenge': (category == Project.CHALLENGE),
     }
-    if category:
-        tab = 'new_%s_tab' % ('_'.join(category.split()))
-        context[tab] = True
-    else:
-        context['new_tab'] = True
-    return render_to_response('projects/project_edit_summary.html',
+    return render_to_response('projects/project_create_overview.html',
         context, context_instance=RequestContext(request))
 
 
+@hide_deleted_projects
 @login_required
-def create_challenge(request):
-    return create(request, Project.CHALLENGE)
+@organizer_required
+def create_overview(request, slug):
+    project = get_object_or_404(Project, slug=slug)
+    is_challenge = (project.category == project.CHALLENGE)
+    if request.method == 'POST':
+        form = project_forms.ProjectForm(project.category, request.POST,
+            instance=project)
+        if form.is_valid():
+            form.save()
+            messages.success(request,
+                _('%s updated!') % project.kind.capitalize())
+            return http.HttpResponseRedirect(
+                reverse('projects_create_tasks',
+                    kwargs=dict(slug=project.slug)))
+    else:
+        form = project_forms.ProjectForm(project.category, instance=project)
+    metric_permissions = project.get_metrics_permissions(request.user)
+    return render_to_response('projects/project_create_overview.html', {
+        'form': form,
+        'project': project,
+        'school': project.school,
+        'summary_tab': True,
+        'can_view_metric_overview': metric_permissions,
+        'is_challenge': is_challenge,
+    }, context_instance=RequestContext(request))
+
+
+@hide_deleted_projects
+@login_required
+@organizer_required
+def create_tasks(request, slug):
+    project = get_object_or_404(Project, slug=slug)
+    pages = project.pages.filter(deleted=False,listed=True).order_by('index')
+    context = {
+        'project': project,
+        'tasks': pages
+    }
+    return render_to_response('projects/project_create_tasks.html', context,
+        context_instance=RequestContext(request))
+
+
+def create_review(request, slug):
+    project = get_object_or_404(Project, slug=slug)
+    context = {
+        'project': project
+    }
+    return render_to_response('projects/project_create_review.html', context,
+        context_instance=RequestContext(request))
 
 
 @login_required
@@ -258,6 +297,7 @@ def clone(request):
         form = project_forms.CloneProjectForm(request.POST)
         if form.is_valid():
             base_project = form.cleaned_data['project']
+            #CS - too much logic in view
             project = Project(name=base_project.name,
                 category=base_project.category,
                 other=base_project.other,
@@ -304,7 +344,7 @@ def clone(request):
             project.create()
             messages.success(request,
                 _('The %s has been cloned.') % project.kind.lower())
-            return http.HttpResponseRedirect(reverse('projects_show', kwargs={
+            return http.HttpResponseRedirect(reverse('projects_create_tasks', kwargs={
                 'slug': project.slug,
             }))
         else:
@@ -336,6 +376,7 @@ def import_from_old_site(request):
         form = project_forms.ImportProjectForm(request.POST)
         if form.is_valid():
             course = form.cleaned_data['course']
+            #CS - too much logic in view
             project = Project(name=course['name'], kind=course['kind'],
                 short_description=course['short_description'],
                 long_description=course['long_description'],
@@ -424,7 +465,7 @@ def edit(request, slug):
         'project': project,
         'school': project.school,
         'summary_tab': True,
-        'can_view_metric_overview': metric_permissions[0],
+        'can_view_metric_overview': metric_permissions,
         'is_challenge': is_challenge,
     }, context_instance=RequestContext(request))
 
@@ -472,7 +513,7 @@ def edit_image(request, slug):
         'project': project,
         'form': form,
         'image_tab': True,
-        'can_view_metric_overview': metric_permissions[0],
+        'can_view_metric_overview': metric_permissions,
         'is_challenge': (project.category == project.CHALLENGE),
     }, context_instance=RequestContext(request))
 
@@ -505,7 +546,7 @@ def edit_links(request, slug):
         'form': form,
         'links': links,
         'links_tab': True,
-        'can_view_metric_overview': metric_permissions[0],
+        'can_view_metric_overview': metric_permissions,
     }, context_instance=RequestContext(request))
 
 
@@ -540,7 +581,7 @@ def edit_links_edit(request, slug, link):
         'form': form,
         'link': link,
         'links_tab': True,
-        'can_view_metric_overview': metric_permissions[0],
+        'can_view_metric_overview': metric_permissions,
     }, context_instance=RequestContext(request))
 
 
@@ -592,7 +633,7 @@ def edit_participants(request, slug):
         'form': form,
         'participations': project.participants().order_by('joined_on'),
         'participants_tab': True,
-        'can_view_metric_overview': metric_permissions[0],
+        'can_view_metric_overview': metric_permissions,
         'is_challenge': (project.category == project.CHALLENGE),
     }, context_instance=RequestContext(request))
 
@@ -646,7 +687,7 @@ def edit_participants_organizer_delete(request, slug, username):
     if len(organizers) == 1:
         messages.error(request, _('You cannot delete the only organizer'))
     elif request.method != 'POST':
-        http.Http404
+        raise http.Http404
     else:
         participation.left_on = datetime.datetime.now()
         participation.save()
@@ -699,7 +740,7 @@ def edit_next_steps(request, slug):
         'form': form,
         'next_steps': project.next_projects.all(),
         'next_steps_tab': True,
-        'can_view_metric_overview': metric_permissions[0],
+        'can_view_metric_overview': metric_permissions,
         'is_challenge': (project.category == project.CHALLENGE),
     }, context_instance=RequestContext(request))
 
@@ -772,7 +813,7 @@ def edit_status(request, slug):
         'form': form,
         'project': project,
         'status_tab': True,
-        'can_view_metric_overview': metric_permissions[0],
+        'can_view_metric_overview': metric_permissions,
         'is_challenge': (project.category == project.CHALLENGE),
     }, context_instance=RequestContext(request))
 
@@ -787,11 +828,12 @@ def admin_metrics(request, slug):
     """
     project = get_object_or_404(Project, slug=slug)
     metric_permissions = project.get_metrics_permissions(request.user)
+    metric_csv_permissions = project.get_metric_csv_permission(request.user)
 
     return render_to_response('projects/project_admin_metrics.html', {
             'project': project,
-            'can_view_metric_overview': metric_permissions[0],
-            'can_view_metric_detail': metric_permissions[1],
+            'can_view_metric_overview': metric_permissions,
+            'can_view_metric_detail': metric_csv_permissions,
             'metrics_tab': True,
             'is_challenge': (project.category == project.CHALLENGE),
     }, context_instance=RequestContext(request))
@@ -1066,3 +1108,5 @@ def toggle_task_completion(request, slug, page_slug):
             context, context_instance=RequestContext(request)).strip()
         json = simplejson.dumps(data)
         return http.HttpResponse(json, mimetype="application/json")
+
+    raise http.Http404

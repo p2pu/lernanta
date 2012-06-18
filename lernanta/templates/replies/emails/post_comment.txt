@@ -1,9 +1,9 @@
 {% load l10n_tags %}
 {% if comment.scope_object %}
-{{ comment.scope_object.name }}{{ _(' was updated.') }}
+{{ comment.scope_object.name|safe }}{{ _(' was updated.') }}
 {% endif %}
 
-{{ comment.author }}{{ _(' posted a new comment at ') }}{{ comment.page_object }}{{ _('.') }}
+{{ comment.author }}{{ _(' posted a new comment at ') }}{{ comment.page_object|safe }}{{ _('.') }}
 
 {{ _('Comment:') }}
 {{ comment.content|striptags|safe }}

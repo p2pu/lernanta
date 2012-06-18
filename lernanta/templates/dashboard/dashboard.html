@@ -25,7 +25,7 @@
 <div id="main">
   {% if show_welcome %}
     <article class="welcome">
-      <header><a href="{% locale_url dashboard_hide_welcome %}" title="Hide this message"><img class="close_button" src="{{ MEDIA_URL }}images/closeButton.png"></a></header>
+      <header><a href="{% locale_url dashboard_hide_welcome %}" title="Hide this message"><img class="close_button" src="{{ STATIC_URL }}images/closeButton.png"></a></header>
       <h1>{{ _('Welcome to P2PU!') }}</h1>
       <p>{{ _('To get started, you should ') }}<a href="{% locale_url users_profile_edit %}">{{ _('update your profile</a>. This is a great way to tell people a bit more about yourself. Then find ') }}<a href="{% locale_url users_user_list %}">{{_('people</a> and ') }}<a href="{% learn_default %}">{{ _('groups</a> that interest you and start following them! You can also ') }}<a href="{% locale_url projects_create %}">{{ _('create new groups</a> and update how often P2PU ') }}<a href="{% locale_url preferences_settings %}">{{_('contacts you</a>.') }}</p>
     </article>

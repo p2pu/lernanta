@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LERNANTA 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-22 09:27+0200\n"
+"POT-Creation-Date: 2012-06-18 13:07+0200\n"
 "PO-Revision-Date: 2012-03-07 19:54+0100\n"
 "Last-Translator: Leo Larsson <friutbildning@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,19 +64,19 @@ msgstr "delat"
 msgid "received"
 msgstr "tog emot"
 
-#: apps/activity/views.py:43
+#: apps/activity/views.py:38
 msgid "This activity was deleted."
 msgstr "Denna aktivitet togs bort."
 
-#: apps/activity/views.py:66
+#: apps/activity/views.py:56
 msgid "You can't edit this activity"
 msgstr "Du kan inte redigera denna aktivitet"
 
-#: apps/activity/views.py:71
+#: apps/activity/views.py:61
 msgid "Activity deleted!"
 msgstr "Aktivitet borttagen!"
 
-#: apps/activity/views.py:73
+#: apps/activity/views.py:63
 msgid "Activity restored!"
 msgstr "Aktivitet återställd!"
 
@@ -187,7 +187,7 @@ msgstr "%(score)s för %(rubric)s"
 msgid "%(user)s - %(badge)s"
 msgstr "%(user)s - %(badge)s"
 
-#: apps/badges/views.py:86 apps/projects/views.py:191
+#: apps/badges/views.py:86 apps/projects/views.py:192
 #, python-format
 msgid "The %s has been created."
 msgstr "%s har skapats."
@@ -205,8 +205,8 @@ msgid "Submission created and out for review!"
 msgstr "Inlämning skapades och är öppen för utvärdering!"
 
 #: apps/badges/views.py:122 apps/badges/views.py:257 apps/badges/views.py:314
-#: apps/content/views.py:115 apps/content/views.py:157
-#: apps/content/views.py:254 apps/content/views.py:359
+#: apps/content/views.py:120 apps/content/views.py:171
+#: apps/content/views.py:275 apps/content/views.py:388
 #: apps/replies/views.py:57 apps/replies/views.py:118
 #: apps/replies/views.py:152 apps/reviews/views.py:79
 #: apps/signups/views.py:149 apps/signups/views.py:189
@@ -233,7 +233,7 @@ msgstr "Du kan inte ge den här medaljen till en vän. "
 msgid "Thank you for giving a badge to your peer!"
 msgstr "Tack för att du gav en medalj till din vän!"
 
-#: apps/content/forms.py:50
+#: apps/content/forms.py:54
 msgid "Post a link to your work."
 msgstr "Skicka en länk till ditt arbete."
 
@@ -253,57 +253,58 @@ msgstr "denna vecka"
 msgid "this month"
 msgstr "denna månad"
 
-#: apps/content/views.py:35 apps/projects/decorators.py:87
+#: apps/content/views.py:37 apps/projects/decorators.py:87
 #, python-format
 msgid "This page is not accesible on a %s."
 msgstr "Sidan är inte åtkomlig på en %s."
 
-#: apps/content/views.py:39
+#: apps/content/views.py:41
 msgid "This task was deleted."
 msgstr "Uppgiften togs bort."
 
-#: apps/content/views.py:90 apps/content/views.py:97 apps/content/views.py:339
+#: apps/content/views.py:93 apps/content/views.py:100
+#: apps/content/views.py:368
 msgid "You can't edit this page"
 msgstr "Du kan inte redigera denna sida"
 
-#: apps/content/views.py:109 apps/projects/views.py:416
-#: apps/projects/views.py:761
+#: apps/content/views.py:112 apps/projects/views.py:223
+#: apps/projects/views.py:457 apps/projects/views.py:802
 #, python-format
 msgid "%s updated!"
 msgstr "%s uppdaterad!"
 
-#: apps/content/views.py:137
+#: apps/content/views.py:149
 msgid "You can not create a new task!"
 msgstr "Du kan inte skapa en ny uppgift!"
 
-#: apps/content/views.py:151
+#: apps/content/views.py:163
 msgid "Task created!"
 msgstr "Uppgift skapad!"
 
-#: apps/content/views.py:252
+#: apps/content/views.py:273
 #, fuzzy
 msgid "Please fill out the new task."
 msgstr "Fyll i %(kind)s'ens fullständiga beskrivning."
 
-#: apps/content/views.py:278 apps/content/views.py:280
+#: apps/content/views.py:299 apps/content/views.py:301
 msgid "You can't delete this page"
 msgstr "Du kan inte ta bort den här sidan"
 
-#: apps/content/views.py:290
+#: apps/content/views.py:312
 #, python-format
 msgid "%s deleted!"
 msgstr "%s togs bort!"
 
-#: apps/content/views.py:332
+#: apps/content/views.py:361
 msgid "You can't restore this page"
 msgstr "Du kan inte återställa denna sida"
 
-#: apps/content/views.py:353
+#: apps/content/views.py:382
 #, python-format
 msgid "%s restored!"
 msgstr "%s återställd!"
 
-#: apps/content/views.py:386 apps/content/views.py:416
+#: apps/content/views.py:417
 msgid "You can not change tasks order."
 msgstr "Du kan inte ändra ordning på uppgifter."
 
@@ -311,7 +312,7 @@ msgstr "Du kan inte ändra ordning på uppgifter."
 msgid "Please fill out your profile to finish registration."
 msgstr "Fyll i din profil för att avsluta registreringen."
 
-#: apps/drumbeat/views.py:88
+#: apps/drumbeat/views.py:99
 msgid "Export selected objects as csv file"
 msgstr "Exportera valda objekt som en csv-fil"
 
@@ -328,7 +329,7 @@ msgid "Can't send email"
 msgstr "Kan inte skicka e-post"
 
 #: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
-#: apps/projects/views.py:995
+#: apps/projects/views.py:1037
 msgid "Message successfully sent."
 msgstr "Meddelandet har skickats."
 
@@ -429,7 +430,7 @@ msgid "This %s was deleted."
 msgstr "Denna %s togs bort."
 
 #: apps/projects/forms.py:42
-msgid "Write a catchy title, keep it short and sweet"
+msgid "Write a catchy title, keep it short and sweet."
 msgstr ""
 
 #: apps/projects/forms.py:44
@@ -444,8 +445,8 @@ msgstr ""
 
 #: apps/projects/forms.py:51
 msgid ""
-"What will your peers be able to do upon completion of this challenge? "
-"Separate with commas"
+"Tag your course so folks can find it. What will your audience be looking "
+"for? Separate with commas."
 msgstr ""
 
 #: apps/projects/forms.py:90 apps/schools/forms.py:36 apps/schools/forms.py:50
@@ -557,116 +558,112 @@ msgstr "%(name)s %(kind)s"
 msgid "created"
 msgstr "skapad"
 
-#: apps/projects/views.py:180 apps/projects/views.py:281
-#: apps/projects/views.py:362
+#: apps/projects/views.py:181 apps/projects/views.py:321
+#: apps/projects/views.py:403
 msgid "Full Description"
 msgstr "Fullständig beskrivning"
 
-#: apps/projects/views.py:197
-#, fuzzy, python-format
-msgid "Problem creating the %s"
+#: apps/projects/views.py:196
+#, fuzzy
+msgid "Problem creating the course"
 msgstr "Problem att skapa medalj."
 
-#: apps/projects/views.py:199
-msgid "Problem creating the study group, course, ..."
-msgstr "Problem med att skapa studiegruppen, kursen, ..."
-
-#: apps/projects/views.py:306
+#: apps/projects/views.py:346
 #, python-format
 msgid "The %s has been cloned."
 msgstr "%s har klonats."
 
-#: apps/projects/views.py:312
+#: apps/projects/views.py:352
 msgid "There was a problem cloning the study group, course, ..."
 msgstr "Det uppstod ett problem med kloning av studiegruppen, kursen, ..."
 
-#: apps/projects/views.py:380
+#: apps/projects/views.py:421
 #, python-format
 msgid "The %s has been imported."
 msgstr "%s har importerats."
 
-#: apps/projects/views.py:385
+#: apps/projects/views.py:426
 msgid "Problem importing the study group, course, ..."
 msgstr "Problem med att importera studiegruppen, kursen, ..."
 
-#: apps/projects/views.py:461 apps/schools/views.py:141
+#: apps/projects/views.py:502 apps/schools/views.py:141
 #: apps/schools/views.py:183 apps/schools/views.py:225
 #: apps/schools/views.py:267
 msgid "Image updated"
 msgstr "Bild uppdaterad"
 
-#: apps/projects/views.py:468 apps/schools/views.py:147
+#: apps/projects/views.py:509 apps/schools/views.py:147
 #: apps/schools/views.py:189 apps/schools/views.py:231
 #: apps/schools/views.py:273
 msgid "There was an error uploading your image"
 msgstr "Ett fel uppstod när din bild laddades upp"
 
-#: apps/projects/views.py:495
+#: apps/projects/views.py:536
 msgid "Link added."
 msgstr "Länk lades till."
 
-#: apps/projects/views.py:499
+#: apps/projects/views.py:540
 msgid "There was an error adding your link."
 msgstr "Ett fel uppstod när din länk lades till."
 
-#: apps/projects/views.py:522 apps/projects/views.py:556
+#: apps/projects/views.py:563 apps/projects/views.py:597
 #: apps/users/views.py:659
 msgid "You can't edit this link"
 msgstr "Du kan inte ändra den här länken"
 
-#: apps/projects/views.py:533
+#: apps/projects/views.py:574
 msgid "Link updated."
 msgstr "Länk uppdaterades."
 
-#: apps/projects/views.py:558
+#: apps/projects/views.py:599
 msgid "The link was deleted"
 msgstr "Länken togs bort"
 
-#: apps/projects/views.py:581
+#: apps/projects/views.py:622
 msgid "Participant added."
 msgstr "Deltagare lades till."
 
-#: apps/projects/views.py:587
+#: apps/projects/views.py:628
 msgid "There was an error adding the participant."
 msgstr "Ett fel uppstod när deltagaren lades till."
 
-#: apps/projects/views.py:625
+#: apps/projects/views.py:666
 msgid "You can't make that person an organizer"
 msgstr "Du kan inte göra personen till en organisatör"
 
-#: apps/projects/views.py:631
+#: apps/projects/views.py:672
 msgid "The participant is now an organizer."
 msgstr "Deltagaren är nu en arrangör."
 
-#: apps/projects/views.py:647
+#: apps/projects/views.py:688
 #, fuzzy
 msgid "You cannot delete the only organizer"
 msgstr "Du kan inte ta bort detta svar."
 
-#: apps/projects/views.py:655
+#: apps/projects/views.py:696
 #, fuzzy
 msgid "The organizer in now only a participant."
 msgstr "Du är nu en deltagare!"
 
-#: apps/projects/views.py:669
+#: apps/projects/views.py:710
 #, python-format
 msgid "The participant %s has been removed."
 msgstr "Deltagaren %s har tagits bort."
 
-#: apps/projects/views.py:688
+#: apps/projects/views.py:729
 msgid "Next step added."
 msgstr "Nästa steg tillagd."
 
-#: apps/projects/views.py:694
+#: apps/projects/views.py:735
 msgid "There was an error adding that next step."
 msgstr "Ett fel uppstod när nästa steg lades till."
 
-#: apps/projects/views.py:740
+#: apps/projects/views.py:781
 #, python-format
 msgid "The %(name)s %(kind)s is not a next step anymore."
 msgstr "Denna %(name)s %(kind)s är inte längre ett nästa steg."
 
-#: apps/projects/views.py:766
+#: apps/projects/views.py:807
 #, python-format
 msgid "There was a problem saving the %s's status."
 msgstr "Ett problem uppstod när %s's status sparades."
@@ -952,6 +949,7 @@ msgstr "Tagg"
 
 #: apps/tags/models.py:10 templates/projects/_learn_filters.html:19
 #: templates/projects/learn_tags.html:12
+#: templates/projects/project_create_overview.html:119
 #: templates/projects/project_edit_summary.html:69
 #: templates/projects/sidebar.html:96
 msgid "Tags"
@@ -1264,7 +1262,7 @@ msgstr "(mer)"
 msgid "CC BY SA"
 msgstr "CC BY SA"
 
-#: templates/_footer.html:46 templates/base.html:84 templates/base.html.py:96
+#: templates/_footer.html:46 templates/base.html:85 templates/base.html.py:97
 msgid "Help"
 msgstr "Hjälp"
 
@@ -1304,64 +1302,69 @@ msgstr "Lärande för alla, av alla, om nästan vad som helst."
 msgid "css/style-en.css"
 msgstr "css/style-sv.css"
 
-#: templates/base.html:51 templates/activity/base.html:18
+#: templates/base.html:52 templates/activity/base.html:18
 #: templates/projects/base.html:22 templates/projects/learn.html:4
 #: templates/projects/learn.html.py:16 templates/projects/learn_tags.html:10
-#: templates/projects/project_edit.html:26
+#: templates/projects/project_clone.html:27
+#: templates/projects/project_create_overview.html:27
+#: templates/projects/project_create_review.html:25
+#: templates/projects/project_create_tasks.html:25
+#: templates/projects/project_edit.html:24
+#: templates/projects/project_import.html:27
 msgid "Learn"
 msgstr "Lära"
 
-#: templates/base.html:52
+#: templates/base.html:53
 msgid "Contribute"
 msgstr "Bidra"
 
-#: templates/base.html:74 templates/dashboard/dashboard.html:18
+#: templates/base.html:75 templates/dashboard/dashboard.html:18
 #: templates/drumbeatmail/inbox.html:9
 msgid "Dashboard"
 msgstr "Kontrollpanel"
 
-#: templates/base.html:75
+#: templates/base.html:76
 msgid "My Profile"
 msgstr "Min Profil"
 
-#: templates/base.html:76
+#: templates/base.html:77
 msgid "My Settings"
 msgstr "Mina Inställningar"
 
-#: templates/base.html:77 templates/chat/chat.html:4
+#: templates/base.html:78 templates/chat/chat.html:4
 #: templates/chat/chat.html.py:10 templates/projects/sidebar.html:169
 msgid "Chat"
 msgstr "Chatt"
 
-#: templates/base.html:78 templates/drumbeatmail/inbox.html:4
+#: templates/base.html:79 templates/drumbeatmail/inbox.html:4
 #: templates/drumbeatmail/inbox.html:11 templates/drumbeatmail/inbox.html:20
 msgid "Inbox"
 msgstr "Inkorg"
 
-#: templates/base.html:79
+#: templates/base.html:80
 msgid "Logout"
 msgstr "Logga ut"
 
-#: templates/base.html:89 templates/base.html.py:97
+#: templates/base.html:90 templates/base.html.py:98
 msgid "Blog"
 msgstr "Blogg"
 
-#: templates/base.html:95
+#: templates/base.html:96
 msgid "Login"
 msgstr "Logga in"
 
-#: templates/base.html:102 templates/search/search.html:15
+#: templates/base.html:103 templates/search/search.html:15
 msgid "Loading"
 msgstr "Hämtar"
 
-#: templates/base.html:105 templates/base.html.py:212
+#: templates/base.html:106 templates/base.html.py:212
 #: templates/drumbeatmail/base.html:54
 #: templates/projects/contact_organizers.html:49
 #: templates/search/search.html:30 templates/users/profile_form_base.html:72
 msgid "en"
 msgstr "sv"
 
-#: templates/base.html:125
+#: templates/base.html:126
 msgid "Home"
 msgstr "Hem"
 
@@ -1387,8 +1390,9 @@ msgstr "Rapportera Missbruk"
 #: templates/activity/_activity_resource.html:18
 #: templates/activity/delete_restore.html:32
 #: templates/content/confirm_delete_page.html:19
-#: templates/content/confirm_delete_page.html:29
+#: templates/content/confirm_delete_page.html:33
 #: templates/content/page.html:23
+#: templates/projects/project_create_tasks.html:59
 #: templates/projects/project_edit_links.html:39
 #: templates/replies/_comment_threads.html:28
 #: templates/replies/_comment_threads.html:65
@@ -1466,19 +1470,21 @@ msgstr "Är du säker på att du vill ta bort denna aktivitet?"
 #: templates/badges/badge_edit_summary.html:35
 #: templates/badges/badge_edit_summary.html:38
 #: templates/content/_toggle_completion.html:9
-#: templates/content/confirm_delete_page.html:27
-#: templates/content/create_page.html:28 templates/content/edit_page.html:37
+#: templates/content/confirm_delete_page.html:29
+#: templates/content/confirm_delete_page.html:31
+#: templates/content/create_page.html:32 templates/content/edit_page.html:41
 #: templates/content/restore_version.html:34
 #: templates/dashboard/dashboard.html:44
 #: templates/drumbeat/report_abuse.html:16 templates/drumbeatmail/base.html:40
 #: templates/projects/_wall.html:21
 #: templates/projects/contact_organizers.html:34
-#: templates/projects/project_clone.html:22
+#: templates/projects/project_clone.html:72
+#: templates/projects/project_create_overview.html:155
 #: templates/projects/project_edit_image.html:12
 #: templates/projects/project_edit_status.html:67
 #: templates/projects/project_edit_summary.html:104
 #: templates/projects/project_edit_summary.html:107
-#: templates/projects/project_import.html:22
+#: templates/projects/project_import.html:71
 #: templates/replies/comment_page.html:125
 #: templates/replies/delete_restore_comment.html:33
 #: templates/schools/school_edit_background.html:23
@@ -1781,7 +1787,7 @@ msgid ""
 msgstr "Regelsamling för tilldelning av medalj ändras efter typ av medalj."
 
 #: templates/badges/badge_edit_summary.html:36
-#: templates/content/edit_page.html:39
+#: templates/content/edit_page.html:43
 #: templates/dashboard/setup_profile.html:9
 #: templates/projects/project_edit_status.html:68
 #: templates/projects/project_edit_summary.html:105
@@ -1799,11 +1805,14 @@ msgid "Save"
 msgstr "Spara"
 
 #: templates/badges/badge_edit_summary.html:39
-#: templates/content/create_page.html:30 templates/projects/learn.html:20
-#: templates/projects/project_edit.html:7
-#: templates/projects/project_edit.html:41
+#: templates/content/create_page.html:34 templates/projects/learn.html:20
+#: templates/projects/project_clone.html:7
+#: templates/projects/project_create_overview.html:9
+#: templates/projects/project_create_overview.html:156
+#: templates/projects/project_create_review.html:7
 #: templates/projects/project_edit_summary.html:108
-#: templates/projects/project_import.html:23 templates/schools/home.html:15
+#: templates/projects/project_import.html:7
+#: templates/projects/project_import.html:72 templates/schools/home.html:15
 msgid "Create"
 msgstr "Skapa"
 
@@ -1992,12 +2001,14 @@ msgid "New Task"
 msgstr "Ny uppgift"
 
 #: templates/content/_edit_pages_item.html:18
-#: templates/content/base_page_form.html:32
+#: templates/content/base_page_form.html:33
+#: templates/projects/project_create_overview.html:91
 #: templates/projects/project_edit_summary.html:22
 msgid "Title"
 msgstr "Titel"
 
 #: templates/content/_edit_pages_item.html:23
+#: templates/projects/project_create_overview.html:96
 #: templates/projects/project_edit_summary.html:32
 msgid "Tagline"
 msgstr ""
@@ -2067,32 +2078,32 @@ msgstr "Ansök om"
 msgid "Submitted"
 msgstr "inlämnad"
 
-#: templates/content/base_page_form.html:19
+#: templates/content/base_page_form.html:20
 #: templates/replies/comment_page.html:77
 #: templates/signups/answer_sign_up.html:24
 msgid "[Preview]"
 msgstr "[Förhandsgranska]"
 
-#: templates/content/base_page_form.html:33
+#: templates/content/base_page_form.html:34
 msgid "A good title is short and descriptive."
 msgstr "En bra titel är kort och beskrivande."
 
-#: templates/content/base_page_form.html:40
+#: templates/content/base_page_form.html:41
 #: templates/projects/project_edit_summary.html:34
 msgid "One sentence description"
 msgstr "Beskrivning i en mening"
 
-#: templates/content/base_page_form.html:41
+#: templates/content/base_page_form.html:42
 msgid "This description will be used as sub header below the task title."
 msgstr ""
 "Den här beskrivningen kommer att användas som underrubrik under uppgiftens "
 "titel."
 
-#: templates/content/base_page_form.html:52
+#: templates/content/base_page_form.html:53
 msgid "Collaborative work (editable by all the participants)."
 msgstr "Kollaborativt arbete (redigerbar av alla deltagare)."
 
-#: templates/content/base_page_form.html:58
+#: templates/content/base_page_form.html:59
 #: templates/content/edit_pages.html:38
 #: templates/replies/comment_page.html:132
 #: templates/signups/answer_sign_up.html:98
@@ -2134,6 +2145,7 @@ msgstr ""
 
 #: templates/content/edit_page.html:18 templates/content/edit_pages.html:13
 #: templates/content/edit_pages.html:36 templates/content/page.html:22
+#: templates/projects/project_create_tasks.html:58
 #: templates/projects/project_edit.html:7
 #: templates/projects/project_edit_links.html:35
 #: templates/projects/sidebar.html:112
@@ -2166,6 +2178,7 @@ msgid "Save Progress"
 msgstr "Framsteg:"
 
 #: templates/content/edit_pages.html:41
+#: templates/projects/project_create_review.html:62
 msgid "Finish"
 msgstr ""
 
@@ -2785,7 +2798,7 @@ msgstr "Uppdateringar"
 
 #: templates/projects/_project_card.html:27
 #: templates/projects/_user_list.html:71
-#: templates/projects/project_edit.html:50
+#: templates/projects/project_edit.html:42
 #: templates/projects/project_edit_participants.html:7
 #: templates/projects/sidebar.html:181
 #: templates/schools/_projectset_card.html:34
@@ -2795,6 +2808,7 @@ msgid "Participants"
 msgstr "Deltagare"
 
 #: templates/projects/_project_edit_image.html:1
+#: templates/projects/project_create_overview.html:143
 #, fuzzy
 msgid "Cover Image"
 msgstr "Bild"
@@ -2835,7 +2849,7 @@ msgid "View and Discuss"
 msgstr "Visa och diskutera"
 
 #: templates/projects/_task_list.html:39
-#: templates/projects/project_edit.html:39
+#: templates/projects/project_edit.html:34
 msgid "View"
 msgstr "Visa"
 
@@ -2997,7 +3011,7 @@ msgstr ""
 "kommer slutuppgiften bestå av?"
 
 #: templates/projects/imported_detailed_description.html:3
-#: templates/projects/project_edit.html:46
+#: templates/projects/project_edit.html:38
 #: templates/schools/school_edit.html:16
 msgid "Summary"
 msgstr "Sammanfattning"
@@ -3010,7 +3024,7 @@ msgstr "Lärandemål"
 msgid "Show More Results"
 msgstr ""
 
-#: templates/projects/project.html:23 templates/projects/project_edit.html:38
+#: templates/projects/project.html:23 templates/projects/project_edit.html:33
 msgid "Admin"
 msgstr "Admin"
 
@@ -3099,12 +3113,52 @@ msgstr ""
 "tiden på en minut för sidan så att du kan välja en annan konstant som ger "
 "vikt åt dessa sidbesök."
 
-#: templates/projects/project_clone.html:10
-#: templates/projects/project_edit.html:62
+#: templates/projects/project_clone.html:33
+#: templates/projects/project_create_overview.html:33
+#: templates/projects/project_create_review.html:31
+#: templates/projects/project_create_tasks.html:31
+#: templates/projects/project_import.html:33
+#, fuzzy
+msgid "Create Course"
+msgstr "De senaste kurserna"
+
+#: templates/projects/project_clone.html:38
+#: templates/projects/project_create_overview.html:38
+#: templates/projects/project_create_review.html:35
+#: templates/projects/project_create_tasks.html:36
+#: templates/projects/project_import.html:38
+msgid "Step 1: Create Course"
+msgstr ""
+
+#: templates/projects/project_clone.html:43
+#: templates/projects/project_clone.html:60
+#: templates/projects/project_create_overview.html:46
+#: templates/projects/project_import.html:43
 msgid "Clone Existing"
 msgstr "Klona befintlig"
 
-#: templates/projects/project_clone.html:11
+#: templates/projects/project_clone.html:47
+#: templates/projects/project_create_overview.html:50
+#: templates/projects/project_import.html:46
+#, fuzzy
+msgid "Import from old site"
+msgstr "Importera från gammal sajt"
+
+#: templates/projects/project_clone.html:51
+#: templates/projects/project_import.html:50
+msgid "Step 2: Update Tasks"
+msgstr ""
+
+#: templates/projects/project_clone.html:54
+#: templates/projects/project_create_overview.html:58
+#: templates/projects/project_create_overview.html:65
+#: templates/projects/project_create_review.html:41
+#: templates/projects/project_create_tasks.html:43
+#: templates/projects/project_import.html:53
+msgid "Step 3: Review and Publish"
+msgstr ""
+
+#: templates/projects/project_clone.html:61
 msgid ""
 "Create a new study group, course ... based on an existing one. Note that if "
 "you start typing the matching suggestions will be displayed."
@@ -3112,7 +3166,7 @@ msgstr ""
 "Skapa en ny studiegrupp, kurs ... som bygger på en befintlig. Börja skriva "
 "något i fältet så kommer matchande förslag visas."
 
-#: templates/projects/project_clone.html:16
+#: templates/projects/project_clone.html:66
 #: templates/projects/project_edit_next_steps.html:12
 #: templates/schools/school_edit_featured.html:13
 #: templates/schools/school_edit_membership.html:13
@@ -3120,34 +3174,170 @@ msgstr ""
 msgid "Short Name"
 msgstr "Kortnamn"
 
-#: templates/projects/project_clone.html:23
+#: templates/projects/project_clone.html:73
 msgid "Clone"
 msgstr "Klona"
 
-#: templates/projects/project_edit.html:47
+#: templates/projects/project_create_overview.html:55
+#: templates/projects/project_create_overview.html:62
+#: templates/projects/project_create_review.html:38
+#: templates/projects/project_create_tasks.html:39
+#, fuzzy
+msgid "Step 2: Add Tasks"
+msgstr "Se alla uppgifter"
+
+#: templates/projects/project_create_overview.html:79
+#, python-format
+msgid ""
+"Looking for advice on great course design? We have a <a href="
+"\"%(challenge_url)s\" target=\"_blank\">course</a> that can help you with "
+"the process and articles on our <a href=\"http://help.p2pu.org/kb\" >help "
+"desk</a>."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:85
+msgid "Just doing a test run? Check here to create a test course."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:87
+#: templates/projects/project_edit_summary.html:17
+msgid ""
+"Please check this if you are just testing. Your course will not generate "
+"updates or notification emails for other users."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:102
+msgid "How many hours will this course take to complete?"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:107
+#: templates/projects/project_create_overview.html:137
+#: templates/projects/project_edit_summary.html:50
+#: templates/projects/project_edit_summary.html:89
+#: templates/schools/school_edit_summary.html:22
+msgid "Description"
+msgstr "Beskrivning"
+
+#: templates/projects/project_create_overview.html:113
+#: templates/projects/project_edit_summary.html:60
+msgid "Language"
+msgstr "Språk"
+
+#: templates/projects/project_create_overview.html:126
+#, fuzzy
+msgid "Course style"
+msgstr "Kurser"
+
+#: templates/projects/project_create_overview.html:127
+#: templates/projects/project_edit_summary.html:79
+msgid "What kind of learning environment do you want to create?"
+msgstr "Vilken typ av lärmiljö vill du skapa?"
+
+#: templates/projects/project_create_overview.html:131
+#: templates/projects/project_edit_summary.html:83
+msgid "Or make up your own term."
+msgstr "Eller hitta på en egen term."
+
+#: templates/projects/project_create_overview.html:133
+#: templates/projects/project_edit_summary.html:85
+msgid "Term"
+msgstr "Term"
+
+#: templates/projects/project_create_overview.html:148
+msgid ""
+"Your cover image is the public face of your course - choose it wisely! "
+"Select and upload an image.<br/>We only support JPG, GIF and PNG images<br/"
+">The image should measure 243x150 pixels<br/>The maximum size is 700k"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:156
+msgid "Go to step 2"
+msgstr ""
+
+#: templates/projects/project_create_review.html:47
+#, fuzzy
+msgid "Review your course"
+msgstr "En bedömning är skickad."
+
+#: templates/projects/project_create_review.html:49
+msgid ""
+"This is what your project will look like to the world when it is published. "
+"Take a second to double check your course name, tagline, image and tags."
+msgstr ""
+
+#: templates/projects/project_create_review.html:54
+msgid ""
+"Join the <a href=\"https://p2pu.org/groups/make-a-challenge/\">P2PU Course "
+"Design Group</a> to get feedback on your course!"
+msgstr ""
+
+#: templates/projects/project_create_review.html:56
+msgid ""
+"You may also wish to add a badge to your challenge! For more information on "
+"badges and how to add them to your challenge, see <a href=\"https://p2pu.org/"
+"groups/how-do-i-make-a-badge/\">this</a> course!"
+msgstr ""
+
+#: templates/projects/project_create_review.html:58
+msgid ""
+"Once you hit the 'Finish' button, you will be taken to your course. You can "
+"still make changes to your course and add and update the tasks associated "
+"with your course."
+msgstr ""
+
+#: templates/projects/project_create_review.html:60
+msgid ""
+"Your course will remain a draft until you uncheck the 'Under Development' "
+"checkbox in the admin interface of your course."
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:7
+#: templates/projects/project_create_tasks.html:51
+#, fuzzy
+msgid "Create tasks"
+msgstr "Skapa uppgift"
+
+#: templates/projects/project_create_tasks.html:60
+msgid "Up"
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:61
+msgid "Down"
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:71
+#, fuzzy
+msgid "Add Task"
+msgstr "Visa uppgifter"
+
+#: templates/projects/project_create_tasks.html:72
+msgid "Go to step 3"
+msgstr ""
+
+#: templates/projects/project_edit.html:39
 msgid "Image"
 msgstr "Bild"
 
-#: templates/projects/project_edit.html:48
+#: templates/projects/project_edit.html:40
 #: templates/projects/project_edit_status.html:10
 msgid "Status &amp; Duration"
 msgstr "Status &amp; Tidsperiod"
 
-#: templates/projects/project_edit.html:48
+#: templates/projects/project_edit.html:40
 #: templates/projects/project_edit_status.html:12
 msgid "Status &amp; Dates"
 msgstr "Status &amp; Datum"
 
-#: templates/projects/project_edit.html:49 templates/projects/sidebar.html:165
+#: templates/projects/project_edit.html:41 templates/projects/sidebar.html:165
 msgid "Signup"
 msgstr "Registrering"
 
-#: templates/projects/project_edit.html:51
+#: templates/projects/project_edit.html:43
 #: templates/projects/project_edit_next_steps.html:7
 msgid "Associated Courses"
 msgstr "Tillagda kurser"
 
-#: templates/projects/project_edit.html:52
+#: templates/projects/project_edit.html:44
 #: templates/projects/project_edit_links_base.html:7
 #: templates/users/profile_edit.html:27
 #: templates/users/profile_edit_links.html:8
@@ -3155,27 +3345,9 @@ msgstr "Tillagda kurser"
 msgid "Links"
 msgstr "Länkar"
 
-#: templates/projects/project_edit.html:53
+#: templates/projects/project_edit.html:45
 msgid "Metrics"
 msgstr "Metrisk"
-
-#: templates/projects/project_edit.html:56
-msgid "Create from Scratch"
-msgstr "Skapa från nytt"
-
-#: templates/projects/project_edit.html:58
-#, fuzzy
-msgid "Create Challenge"
-msgstr "Lämna utmaning"
-
-#: templates/projects/project_edit.html:60
-msgid "Sandbox"
-msgstr ""
-
-#: templates/projects/project_edit.html:64
-#: templates/projects/project_import.html:10
-msgid "Import from Old Site"
-msgstr "Importera från gammal sajt"
 
 #: templates/projects/project_edit_image.html:13
 #: templates/schools/school_edit_background.html:24
@@ -3390,12 +3562,6 @@ msgstr "Aktiv från"
 msgid "This is a test course"
 msgstr "De senaste kurserna"
 
-#: templates/projects/project_edit_summary.html:17
-msgid ""
-"Please check this if you are just testing. Your course will not generate "
-"updates or notification emails for other users."
-msgstr ""
-
 #: templates/projects/project_edit_summary.html:25
 msgid "Short and descriptive works best."
 msgstr "Kort och beskrivande fungerar bäst."
@@ -3403,12 +3569,6 @@ msgstr "Kort och beskrivande fungerar bäst."
 #: templates/projects/project_edit_summary.html:35
 msgid "Used in search results and listings."
 msgstr "Visas i sökresultat och på registersidan."
-
-#: templates/projects/project_edit_summary.html:50
-#: templates/projects/project_edit_summary.html:89
-#: templates/schools/school_edit_summary.html:22
-msgid "Description"
-msgstr "Beskrivning"
 
 #: templates/projects/project_edit_summary.html:52
 msgid "One paragraph description"
@@ -3418,10 +3578,6 @@ msgstr "Beskrivning i en paragraf"
 msgid ""
 "What's this about? What will I learn? Tell me more, but keep it to the point."
 msgstr "Vad handlar det om? Vad kommer jag lära? Berätta mer för mig om ämnet."
-
-#: templates/projects/project_edit_summary.html:60
-msgid "Language"
-msgstr "Språk"
 
 #: templates/projects/project_edit_summary.html:67
 #, fuzzy
@@ -3436,19 +3592,11 @@ msgstr "Komma-separerad lista med taggar."
 msgid "Type"
 msgstr "typ"
 
-#: templates/projects/project_edit_summary.html:79
-msgid "What kind of learning environment do you want to create?"
-msgstr "Vilken typ av lärmiljö vill du skapa?"
+#: templates/projects/project_import.html:59
+msgid "Import from Old Site"
+msgstr "Importera från gammal sajt"
 
-#: templates/projects/project_edit_summary.html:83
-msgid "Or make up your own term."
-msgstr "Eller hitta på en egen term."
-
-#: templates/projects/project_edit_summary.html:85
-msgid "Term"
-msgstr "Term"
-
-#: templates/projects/project_import.html:11
+#: templates/projects/project_import.html:60
 msgid ""
 "Import a course from the old p2pu site. Note that if you start typing the "
 "matching suggestions will be displayed."
@@ -3456,11 +3604,11 @@ msgstr ""
 "Importera en kurs från den gamla p2pu sajten. Observera att om du börjar "
 "skriva kommer matchande förslag visas."
 
-#: templates/projects/project_import.html:16
+#: templates/projects/project_import.html:65
 msgid "Course"
 msgstr "Kurs"
 
-#: templates/projects/project_import.html:23
+#: templates/projects/project_import.html:72
 msgid "Import"
 msgstr "Importera"
 
@@ -3610,7 +3758,7 @@ msgstr "Du har fått detta meddelande genom formuläret Kontakta Organisatör i 
 
 #: templates/projects/emails/project_created.txt:4
 #, python-format
-msgid " We're excited to see you've created %(project_name)s. "
+msgid " We're excited to see you've created %(project_name|safe)s. "
 msgstr ""
 
 #: templates/projects/emails/project_created.txt:6
@@ -5017,6 +5165,16 @@ msgstr "[P2PU] Slutför registrering!"
 #, fuzzy
 msgid "[P2PU] Confirm Email Address!"
 msgstr "E-postadress"
+
+#~ msgid "Problem creating the study group, course, ..."
+#~ msgstr "Problem med att skapa studiegruppen, kursen, ..."
+
+#~ msgid "Create from Scratch"
+#~ msgstr "Skapa från nytt"
+
+#, fuzzy
+#~ msgid "Create Challenge"
+#~ msgstr "Lämna utmaning"
 
 #~ msgid "Email updated"
 #~ msgstr "E-post uppdaterad"

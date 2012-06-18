@@ -230,7 +230,7 @@ class UserProfile(ModelBase):
 
     def image_or_default(self):
         """Return user profile image or a default."""
-        avatar = '%s%s' % (settings.MEDIA_URL, '/images/member-missing.png')
+        avatar = '%s%s' % (settings.STATIC_URL, '/images/member-missing.png')
         if not self.deleted:
             gravatarUrl = self.gravatar(240)
             if self.image:

@@ -46,7 +46,7 @@ def edit_signup(request, slug):
         'project': project,
         'sign_up': sign_up,
         'signup_tab': True,
-        'can_view_metric_overview': metrics_permissions[0],
+        'can_view_metric_overview': metrics_permissions,
     }, context_instance=RequestContext(request))
 
 

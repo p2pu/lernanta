@@ -1,0 +1,162 @@
+.task_view {
+    margin: 0 10px 10px 0;
+}
+
+.task_view h2 {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 1em;
+    padding: 18px 9px;
+}
+
+.task_view h3 {
+    font-size: 14px;
+    padding: 0 9px;
+}
+
+.task_view .task_body{
+    padding: 0 9px;
+}
+
+.task_actions {
+    float: right;
+    margin-bottom: 1em;
+    padding: 18px 9px 0 0;
+}
+
+.task-down {
+    float: right;
+    display: block;
+    text-indent: -9999em;
+    background-image: url("/static/images/arrows.png");
+    background-position: 20px 0;
+    width: 20px;
+}
+
+.task-up {
+    float: right;
+    display: block;
+    text-indent: -9999em;
+    background-image: url("/static/images/arrows.png");
+    background-position: 0 0;
+    width: 20px;
+}
+
+#id_tasks_edit {
+    background-color: #FFFFFF;
+    line-height: 22px;
+    margin: auto;
+    padding-left: 10px;
+    width: 990px;
+}
+
+.modal.nav #id_tasks_edit {
+    margin-left: 200px;
+    width: auto;
+}
+
+.modal.nav fieldset {
+    margin-left: 5px;
+}
+
+#id_tasks_edit .container {
+    padding: 13px 3px;
+    width: auto;
+}
+
+.disabled {
+   pointer-events: none;
+   cursor: default;
+}
+
+.or-separator {
+    margin-left: 36px;
+    margin-bottom: 5px;
+}
+
+#task-list ol {
+    margin-left: 0px;
+}
+
+#task-list li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 11px;
+    padding: 8px 13px 8px 0;
+    background-color: #f8fcff;
+}
+
+#task-list li.odd {
+    background-color: #f3f8fe;
+}
+
+#task-list .task-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444444;
+    padding: 7px 5px 7px 15px;
+}
+
+#task-list .task-header {
+    font-size: 18px;
+}
+
+#task-list .task-subheader {
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+#id-course-preview {
+    background: -moz-linear-gradient(center top , #777777, #848484) repeat scroll 0 0 transparent;
+    border: 1px solid #636363;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2) inset;
+    display: inline-block;
+    margin: 0 8px 8px 0;
+    padding: 3px;
+    vertical-align: top;
+    width: 225px;
+}
+
+#id-course-preview a {
+    pointer-events: none;
+    cursor: default;
+}
+
+#project-edit-summary-form button {
+    width: auto;
+}
+
+.card-list .card {
+    min-height: 200px;
+}
+
+.bubble {
+    background: -moz-linear-gradient(top, #FFFAE4 0%, #FFF4BE 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFAE4), color-stop(100%,#FFF4BE));
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px #B2B2B2;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 5px;
+}
+
+#project-create-advanced {
+    display: None;
+    opacity: 0;
+}
+
+#project-create-advanced-toggle {
+    text-align: right;
+    font-size: 10px;
+}
+
+.modal article nav a#project-create-advanced-toggle:hover {
+    background: #FFFFFF;
+}
+
+nav ul ul {
+    margin-left: 30px;
+}
+
+

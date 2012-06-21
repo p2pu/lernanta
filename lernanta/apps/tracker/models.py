@@ -85,6 +85,11 @@ class PageView(ModelBase):
 
 
 class PageViewMetrics(ModelBase):
+    """ Store consolidated PageViews for a given access_date
+        per project -> page_path,
+        per user or ip_address,
+        per page_path        
+    """
     project = models.ForeignKey('projects.Project',
         related_name='pageview_metrics')
     user = models.ForeignKey(User, null=True, blank=True)
@@ -99,8 +104,8 @@ class PageViewMetrics(ModelBase):
 
 def update_metrics_cache(project):
     # Only computes metrics for dates before today or yesterday
-    # (depending on how early it is on the day).
-    # This metrics are cacheable because they will not change
+    # (depending on how early it is in the day).
+    # These metrics are cacheable because they will not change
     # due to future pageviews.
     # Does not recompute cached metrics (i.e. also restricts
     # how recent the dates to process should be based on what

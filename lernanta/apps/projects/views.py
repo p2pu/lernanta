@@ -847,7 +847,6 @@ def admin_metrics_data_ajax(request, slug):
     participants = project.participants(
         include_deleted=True).order_by('user__username')
     participant_profiles = (participant.user for participant in participants)
-    tracker_models.update_metrics_cache(project)
     metrics = tracker_models.metrics_summary(project, participant_profiles)
     json = simplejson.dumps(
         {'aaData': list(metrics)},
@@ -862,7 +861,6 @@ def export_detailed_csv(request, slug):
     """Display detailed CSV for certain users."""
     project = get_object_or_404(Project, slug=slug)
     # Preprocessing
-    tracker_models.update_metrics_cache(project)
     organizers = project.organizers(include_deleted=True).order_by('user__username')
     organizer_profiles = (organizer.user for organizer in organizers)
     organizer_ids = organizers.values('user_id')

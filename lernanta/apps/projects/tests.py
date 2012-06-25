@@ -83,10 +83,10 @@ class ProjectTests(TestCase):
     def test_get_projects_excluded_from_listing(self):
         deleted_project = Project(deleted=True, test=False)
         deleted_project.save()
-       
+
         not_listed_project = Project(not_listed=True, test=False)
         not_listed_project.save()
-       
+
         under_dev_project = Project(name="under_dev:default", test=False)
         under_dev_project.save()
 
@@ -98,7 +98,7 @@ class ProjectTests(TestCase):
 
         project = Project(name="listed", under_development=False, test=False)
         project.save()
-       
+
         not_listed = Project.get_projects_excluded_from_listing()
         not_listed_ids = []
         for project_entry in not_listed:
@@ -109,3 +109,30 @@ class ProjectTests(TestCase):
         self.assertTrue(under_dev_project.id in not_listed_ids)
         self.assertTrue(test_project.id in not_listed_ids)
         self.assertFalse(project.id in not_listed_ids)
+
+
+class ProjectViewTests(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+        self.locale = 'en'
+
+    def test_all_kinds_of_projects_appear_in_listing(self):
+
+        challenge = Project(under_development=False, test=True,
+            category=Project.CHALLENGE)
+        challenge.save()
+
+        course = Project(under_development=False, test=True,
+            category=Project.COURSE)
+        course.save()
+
+        study_group = Project(under_development=False, test=True,
+            category=Project.STUDY_GROUP)
+        study_group.save()
+
+        response = self.client.get('/%s/groups/?all_languages=on' %
+            (self.locale))
+        print response.context['pagination_current_page'].object_list
+        self.assertEqual(3,
+            len(response.context['pagination_current_page'].object_list))

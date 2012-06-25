@@ -417,10 +417,15 @@ class Project(ModelBase):
             return Project.objects.none()
 
     @classmethod
+    def get_projects_excluded_from_listing(cls): 
+        return Project.objects.filter(Q(not_listed=True)
+            |Q(deleted=True)|Q(archived=True)
+            |Q(under_development=True)|Q(test=True)).values('id')
+
+    @classmethod
     def get_popular_tags(cls, max_count=10):
         ct = ContentType.objects.get_for_model(Project)
-        not_listed = Project.objects.filter(
-            Q(not_listed=True)|Q(deleted=True)).values('id')
+        not_listed = Project.get_projects_excluded_from_listing()
         return GeneralTaggedItem.objects.filter(
             content_type=ct).exclude(object_id__in=not_listed).values(
             'tag__name').annotate(tagged_count=Count('object_id')).order_by(
@@ -429,8 +434,7 @@ class Project(ModelBase):
     @classmethod
     def get_weighted_tags(cls, min_count=2, min_weight=1.0, max_weight=7.0):
         ct = ContentType.objects.get_for_model(Project)
-        not_listed = Project.objects.filter(
-            Q(not_listed=True)|Q(deleted=True)).values('id')
+        not_listed = Project.get_projects_excluded_from_listing()
         tags = GeneralTaggedItem.objects.filter(
             content_type=ct).exclude(object_id__in=not_listed).values(
             'tag__name').annotate(tagged_count=Count('object_id')).filter(

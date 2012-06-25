@@ -1,14 +1,14 @@
 {% load l10n_tags %}
 {{ project.name|safe }}{{ _(' was updated.') }}
 
-{{ instance.author }}{{ _(' created a new task: ') }}{{ instance.title|safe }}{{ _('.') }}
+{{ instance.author }}{{ _(' contributed with a new task: ') }}{{ instance.title|safe }}{{ _('.') }}
 
 {{ instance.title|safe }}
 {{ instance.content|striptags|safe }}
 
-{{ _('See task at:') }} http://{{domain}}{{ instance.get_absolute_url }}
+{{ _('Check out their update and respond at:') }} http://{{domain}}{{ instance.get_absolute_url }}
 
-{{ _('Sincerely,') }}
+{{ _('Booyah,') }}
 {{ _('The P2PU Team') }}
 
-{{ _('Manage your subscriptions:') }} http://{{domain}}/profile/edit/settings/
+{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/settings/

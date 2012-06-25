@@ -1,2 +1,2 @@
 {% load l10n_tags %}
-[{{ project.name|safe|slice:":20" }}] {{ status.author }}{{ _(' posted a message to the wall.') }}
+[{{ project.name|safe|slice:":20" }}] {{ status.author }}{{ _(' made a comment in your course.') }}

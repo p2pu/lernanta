@@ -417,26 +417,31 @@ class Project(ModelBase):
             return Project.objects.none()
 
     @classmethod
-    def get_projects_excluded_from_listing(cls): 
-        return Project.objects.filter(Q(not_listed=True)
-            |Q(deleted=True)|Q(archived=True)
-            |Q(under_development=True)|Q(test=True)).values('id')
+    def get_listed_projects(cls):
+        """ return all the projects that should be listed """
+        listed = Project.objects.filter(
+            not_listed=False,
+            deleted=False,
+            archived=False,
+            under_development=False,
+            test=False)
+        return listed
 
     @classmethod
     def get_popular_tags(cls, max_count=10):
         ct = ContentType.objects.get_for_model(Project)
-        not_listed = Project.get_projects_excluded_from_listing()
+        listed = list(Project.get_listed_projects().values_list('id', flat=True))
         return GeneralTaggedItem.objects.filter(
-            content_type=ct).exclude(object_id__in=not_listed).values(
+            content_type=ct, object_id__in=listed).values(
             'tag__name').annotate(tagged_count=Count('object_id')).order_by(
             '-tagged_count')[:max_count]
 
     @classmethod
     def get_weighted_tags(cls, min_count=2, min_weight=1.0, max_weight=7.0):
         ct = ContentType.objects.get_for_model(Project)
-        not_listed = Project.get_projects_excluded_from_listing()
+        listed = Project.get_listed_projects().values('id')
         tags = GeneralTaggedItem.objects.filter(
-            content_type=ct).exclude(object_id__in=not_listed).values(
+            content_type=ct, object_id__in=listed).values(
             'tag__name').annotate(tagged_count=Count('object_id')).filter(
             tagged_count__gte=min_count)
         if tags.count():
@@ -457,8 +462,8 @@ class Project(ModelBase):
         items = GeneralTaggedItem.objects.filter(
             content_type=ct, tag__name=tag_name).values(
             'object_id')
-        if projects == None:
-            project = Project.objects
+        if not projects:
+            projects = Project.objects
         return projects.filter(id__in=items)
 
     def is_challenge(self):
@@ -484,6 +489,19 @@ class Project(ModelBase):
 
 register_filter('default', Project.filter_activities)
 register_filter('learning', Project.filter_learning_activities)
+
+
+def get_active_projects():
+    """ get all projects that are not deleted, archived, tests
+        or under development
+    """
+    active_projects = Project.objects.filter(
+        archived=False,
+        deleted=False,
+        test=False,
+        under_development=False
+    )
+    return active_projects
 
 
 class Participation(ModelBase):

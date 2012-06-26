@@ -80,7 +80,7 @@ class ProjectTests(TestCase):
         self.assertEqual(challenge.category, Project.CHALLENGE)
         self.assertEqual(challenge.duration_hours, 10)
 
-    def test_get_projects_excluded_from_listing(self):
+    def test_get_listed_projects(self):
         deleted_project = Project(deleted=True, test=False)
         deleted_project.save()
        
@@ -99,13 +99,10 @@ class ProjectTests(TestCase):
         project = Project(name="listed", under_development=False, test=False)
         project.save()
        
-        not_listed = Project.get_projects_excluded_from_listing()
-        not_listed_ids = []
-        for project_entry in not_listed:
-            not_listed_ids.append(project_entry['id'])
+        listed_projects = Project.get_listed_projects()
 
-        self.assertTrue(deleted_project.id in not_listed_ids)
-        self.assertTrue(not_listed_project.id in not_listed_ids)
-        self.assertTrue(under_dev_project.id in not_listed_ids)
-        self.assertTrue(test_project.id in not_listed_ids)
-        self.assertFalse(project.id in not_listed_ids)
+        self.assertFalse(deleted_project in listed_projects)
+        self.assertFalse(not_listed_project in listed_projects)
+        self.assertFalse(under_dev_project in listed_projects)
+        self.assertFalse(test_project in listed_projects)
+        self.assertTrue(project in listed_projects)

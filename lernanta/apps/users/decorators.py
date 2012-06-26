@@ -37,7 +37,7 @@ def login_required(func=None, profile_required=True):
     """
     if profile_required:
         test = lambda u: (u.is_authenticated() and
-                          len(UserProfile.objects.filter(user=u)) > 0)
+                          UserProfile.objects.filter(user=u).count() > 0)
     else:
         test = lambda u: u.is_authenticated()
     actual_decorator = user_passes_test(test)

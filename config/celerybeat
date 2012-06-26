@@ -1,0 +1,14 @@
+# Where the Django project is.
+CELERYBEAT_CHDIR="/path_to_lernanta/lernanta/lernanta"
+
+# Virtual Env
+LERNANTA_VIRTUALENV_DIR="/path_to_virtual_env/"
+
+# Name of the projects settings module.
+export DJANGO_SETTINGS_MODULE="settings_local"
+
+# Path to celerybeat
+CELERYBEAT="$LERNANTA_VIRTUALENV_DIR/bin/python $CELERYD_CHDIR/manage.py celerybeat"
+
+# Extra arguments to celerybeat
+CELERYBEAT_OPTS="--schedule=/var/run/celerybeat-schedule"

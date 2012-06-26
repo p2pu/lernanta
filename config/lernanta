@@ -1,0 +1,26 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName p2pu.org
+    ErrorLog /var/log/apache2/lernanta-error.log
+    Options -Indexes
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+    CustomLog /var/log/apache2/lernanta-access.log combined
+
+    <Location /robots.txt>
+        SetHandler None
+        Order deny,allow
+        Allow from all
+        AllowOverride None
+    </Location>
+    Alias /robots.txt /home/zuzelvp/lernanta/lernanta/static_serv/robots.txt
+ 
+    # Rule to direct all traffic to https://
+    RewriteEngine on
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+</VirtualHost>
+

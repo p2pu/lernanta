@@ -46,8 +46,7 @@ log = logging.getLogger(__name__)
 
 
 def learn(request, max_count=24):
-    projects = Project.objects.filter(not_listed=False,
-        deleted=False).order_by('-created_on')
+    projects = Project.get_listed_projects()
     get_params = request.GET.copy()
     if not 'language' in get_params:
         get_params['language'] = get_language()
@@ -60,19 +59,9 @@ def learn(request, max_count=24):
         'infinite_scroll': request.GET.get('infinite_scroll', False),
     }
     if form.is_valid():
-        archived = form.cleaned_data['archived']
-        under_development = form.cleaned_data['under_development']
-        projects = projects.filter(archived=archived,
-            under_development=under_development)
-        closed_signup = form.cleaned_data['closed_signup']
-        if closed_signup:
-            projects = projects.exclude(
-                category=Project.CHALLENGE).filter(
-                sign_up__status=Signup.CLOSED)
-        else:
-            projects = projects.filter(Q(category=Project.CHALLENGE)
-                | Q(sign_up__status=Signup.MODERATED)
-                | Q(sign_up__status=Signup.NON_MODERATED))
+        projects = projects.filter(Q(category=Project.CHALLENGE)
+            | Q(sign_up__status=Signup.MODERATED)
+            | Q(sign_up__status=Signup.NON_MODERATED))
         featured = form.cleaned_data['featured']
         if featured == project_forms.ProjectsFilterForm.SHOWCASE:
             context['learn_showcase'] = True

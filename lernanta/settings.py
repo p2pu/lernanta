@@ -236,7 +236,7 @@ FEED_URLS = {
 }
 
 # Ckeditor
-CKEDITOR_MEDIA_PREFIX = "/media/ckeditor/"
+CKEDITOR_MEDIA_PREFIX = "/static/ckeditor/"
 CKEDITOR_UPLOAD_PATH = path("media/uploads/images")
 CKEDITOR_FILE_UPLOAD_PATH = path("media/uploads/files")
 CKEDITOR_RESTRICT_BY_USER = True

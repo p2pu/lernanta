@@ -1,0 +1,62 @@
+<VirtualHost *:443>
+    ServerAdmin webmaster@localhost
+    ServerName p2pu.org
+
+    ErrorLog /var/log/apache2/lernanta-ssl-error.log
+
+    # SSL setup
+    SSLEngine on
+    SSLCertificateFile /etc/apache2/ssl/certificate.crt
+    SSLCertificateKeyFile /etc/apache2/ssl/p2pu.org.key
+    SSLCACertificateFile /etc/apache2/ssl/intermediate.crt
+    SetEnv HTTPS on
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+    CustomLog /var/log/apache2/lernanta-ssl-access.log combined
+
+    # run mod_wsgi process for django in daemon mode
+    # this allows avoiding confused timezone settings when
+    # another application runs in the same virtual host
+    WSGIDaemonProcess LernantaSSL
+    WSGIProcessGroup LernantaSSL
+
+    <Location /robots.txt>
+        Order deny,allow
+        Allow from all
+        SetHandler None
+        AllowOverride None
+    </Location>
+    Alias /robots.txt /home/zuzelvp/lernanta/lernanta/static_serv/robots.txt
+
+    # force all content to be served as static files
+    # otherwise django will be crunching images through itself wasting time
+    Alias /media/ "/path_to_lernanta/lernanta/lernanta/media/"
+    <Directory "/path_to_lernanta/lernanta/lernanta/media">
+        Order deny,allow
+        Allow from all
+        Options MultiViews FollowSymLinks
+        AllowOverride None
+    </Directory>
+
+    Alias /static/ "/path_to_lernanta/lernanta/lernanta/static_serv/"
+    <Directory "/path_to_lernanta/lernanta/lernanta/static_serv">
+        Order deny,allow
+        Allow from all
+        Options MultiViews FollowSymLinks
+        AllowOverride None
+    </Directory>
+
+    Alias /admin-media/ "/path_to_virtual_env/lib/python2.6/site-packages/django/contrib/admin/media/"
+    <Directory "/path_to_virtual_env/lib/python2.6/site-packages/django/contrib/admin/media">
+        Order deny,allow
+        Allow from all
+        Options MultiViews FollowSymLinks
+        AllowOverride None
+    </Directory>
+
+    #this is your wsgi script described in the prev section
+    WSGIScriptAlias / /path_to_lernanta/lernanta/lernanta/wsgi/production.wsgi
+</VirtualHost>
+

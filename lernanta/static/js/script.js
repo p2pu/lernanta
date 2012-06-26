@@ -134,7 +134,7 @@ var attachFileUploadHandler = function($inputs) {
         $(this).ajaxSubmitInput({
             url: $(this).closest('form').attr('data-url'),
             beforeSubmit: function($input) {
-                updatePicturePreview("/media/images/ajax-loader.gif");
+                updatePicturePreview("/static/images/ajax-loader.gif");
                 $options = {};
                 $options.filename = $input.val().split(/[\/\\]/).pop();
                 return $options;

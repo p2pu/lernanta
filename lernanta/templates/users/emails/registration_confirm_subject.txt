@@ -1,2 +1,2 @@
 {% load l10n_tags %}
-{% if new_user %}{{ _('[P2PU] Complete Registration!') }}{% else %}{{ _('[P2PU] Confirm Email Address!') }}{% endif %}
+{% if new_user %}{{ _('Ready to get learning?!') }}{% else %}{{ _('Greetings from P2PU. Ready to get learning?') }}{% endif %}

@@ -10,6 +10,8 @@
 
 {{ _('See comment at:') }} http://{{domain}}{{ comment.get_absolute_url }}
 
+{{ _('You can reply to this comment by replying to this email! Just put your reply above this message.') }}
+
 {{ _('Sincerely,') }}
 {{ _('The P2PU Team') }}
 

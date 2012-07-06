@@ -1,21 +1,21 @@
 {% load l10n_tags %}
-{{ project.name|safe }}{{ _(' was updated.') }}
+{{ project.name|safe }}{{ _(' update.') }}
 
 {% if status.important %}
-{{ status.author }}{{ _(' posted an important message to the wall:') }}
+{{ status.author }}{{ _(Update from the flight deck: ' posted an urgent message:') }}
 {% else %}
-{{ status.author }}{{ _(' posted a message to the wall:') }}
+{{ status.author }}{{ _(Update from the flight deck:' made an update:') }}
 {% endif %}
 
 {{ status.status|striptags|safe }}
 
-{{ _('See message at:') }} http://{{domain}}{{ status.get_absolute_url }}
+{{ _('See what they said at:') }} http://{{domain}}{{ status.get_absolute_url }}
 
-{{ _('Sincerely,') }}
+{{ _('Go get 'em,') }}
 {{ _('The P2PU Team') }}
 
 {% if status.important %}
 {{ _('This message was marked as important by an organizer. Participants can not turn off notifications for important updates.') }}
 {% else %}
-{{ _('Manage your subscriptions:') }} http://{{domain}}/profile/edit/settings/
+{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/settings/
 {% endif %}

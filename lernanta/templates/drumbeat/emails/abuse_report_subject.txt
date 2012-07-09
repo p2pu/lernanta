@@ -1,2 +1,2 @@
 {% load l10n_tags %}
-{{ _('Abuse Report') }}
+{{ _('Notice from the Abuse Desk at P2PU') }}

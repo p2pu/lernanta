@@ -57,11 +57,11 @@
       <hr class="break">
       <h3 class="peers-challenge">{{ _('Peers taking this challenge') }}</h3>
       <br>
-      {% for participant in participants %}
+      {% for participant in participants_not_completed %}
         <a href="{{ participant.user.get_absolute_url }}" title="{{ participant.user }}"><img class="member-picture" src="{{ participant.user.image_or_default }}" height="40" width="40" alt="{{ participant.user }}"></a>
       {% endfor %}
       {% if paginate_sections %}
-        {% with prefix='participants_' page_url=user_list_url %}
+        {% with prefix='participants_not_completed_' page_url=user_list_url %}
           {% pagination_links %}
         {% endwith %}
       {% endif %}

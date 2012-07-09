@@ -274,6 +274,8 @@ def project_user_list(request, project, max_count=64, with_sections=False,
         organizers = project.adopters().order_by('-organizing', '-id')
         participants = project.non_adopter_participants().order_by('-id')
         followers = project.completed_tasks_users()
+        usernames = [i.source.username for i in followers]
+        participants_not_completed = participants.exclude(user__username__in=usernames)
     else:
         organizers = project.organizers()
         participants = project.non_organizer_participants()
@@ -286,6 +288,11 @@ def project_user_list(request, project, max_count=64, with_sections=False,
                 per_section_max_count, prefix='organizers_'))
             context.update(get_pagination_context(request, participants,
                 per_section_max_count, prefix='participants_'))
+            if is_challenge:
+                context.update(get_pagination_context(request,
+                                                      participants_not_completed,
+                                                      per_section_max_count,
+                                                      prefix='participants_not_completed_'))
             context.update(get_pagination_context(request, followers,
                 per_section_max_count, prefix='followers_'))
             context['organizers'] = context[
@@ -297,6 +304,9 @@ def project_user_list(request, project, max_count=64, with_sections=False,
         else:
             context['organizers'] = organizers[:per_section_max_count]
             context['participants'] = participants[:per_section_max_count]
+            if is_challenge:
+                context['participants_not_completed'] = \
+                    participants_not_completed[:per_section_max_count]
             context['followers'] = followers[:per_section_max_count]
             show_more_link = (organizers.count() > per_section_max_count)
             show_more_link = show_more_link or (
@@ -311,6 +321,10 @@ def project_user_list(request, project, max_count=64, with_sections=False,
         if remaining > 0:
             context['participants'] = participants[:remaining]
             remaining -= context['participants'].count()
+        if remaining > 0 and is_challenge:
+            context['participants_not_completed'] = \
+                participants_not_completed[:remaining]
+            remaining -= context['participants_not_completed'].count()
         if remaining > 0:
             context['followers'] = followers[:remaining]
             remaining -= context['followers'].count()

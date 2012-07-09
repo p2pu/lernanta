@@ -1,5 +1,5 @@
 {% load l10n_tags %}
-{{ user }} {{ _('has reported the following content as objectionable:') }}
+{{ user }} {{ _('A Community member has let us know they're uncomfortable with something you posted.:') }}
 
 {{ url }}
 

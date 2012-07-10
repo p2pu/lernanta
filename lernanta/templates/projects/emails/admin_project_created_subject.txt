@@ -1,2 +1,2 @@
 {% load l10n_tags %}
-{{ _('[P2PU] New ') }} {{ project.kind|title }}: {{ project.name|safe }}
+{{ _('New ') }} {{ project.kind|title }}: {{ project.name|safe }}

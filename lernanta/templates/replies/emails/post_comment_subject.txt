@@ -1,2 +1,2 @@
 {% load l10n_tags %}
-[{% if comment.scope_object %}{{ comment.scope_object.name|safe|slice:":20" }}{% else %}p2pu{% endif%}] {{ comment.author }}{{ _(' posted a new comment at ') }}{{ comment.page_object|safe }}{{ _('.') }}
+{{ comment.author }}{{ _(' posted a new comment at ') }}{{ comment.page_object|safe }}{% if comment.scope_object %}{{ _(' in ')}}{{ comment.scope_object.name|safe|slice:":20" }}{% endif%}{{ _('.') }}

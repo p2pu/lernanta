@@ -1,6 +1,6 @@
 {% load l10n_tags %}
 {{ body|safe }}
 
-{{ _('Howdy Organizer. Someone's contacted you') }}
+{{ _('Howdy Organizer. Someone\'s contacted you.') }}
 {{ project.name|safe }}: http://{{ domain }}{{ project.get_absolute_url }}
 

@@ -1,2 +1,2 @@
 {% load l10n_tags %}
-[P2PU] {{ _('New submission for the') }} {{ submission.badge }}!
+{{ _("Make someone's day. Review a badge for ") }} {{ submission.badge }}!

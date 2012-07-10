@@ -76,3 +76,26 @@ class PageTests(TestCase):
             self.assertEqual(page.sub_header, 'New Tagline %s' % page.id)
             self.assertEqual(page.content, 'New Content %s' % page.id)
             self.assertEquals(page.index, new_order[page.id])
+
+    def test_page_reorder(self):
+        self.client.login(username=self.test_username,
+            password=self.test_password)
+
+        #slugs = [slug[0] for slug in self.project.pages.values_list('slug')]
+        slug1 = self.project.pages.all()[0].slug
+        slug2 = self.project.pages.all()[1].slug
+        slug3 = self.project.pages.all()[2].slug
+
+        data = { 'tasks': [slug1, slug3, slug2], }
+
+        reorder_url = "/{0}/groups/{1}/content/index/reorder/".format(
+            self.locale, self.project.slug)
+        response = self.client.post(reorder_url, data, 'json')
+        self.assertEqual(response.status_code, 200)
+
+        page1 = self.project.pages.get(slug=slug1)
+        page2 = self.project.pages.get(slug=slug2)
+        page3 = self.project.pages.get(slug=slug3)
+
+        self.assertTrue(page1.index < page3.index)
+        self.assertTrue(page3.index < page2.index)

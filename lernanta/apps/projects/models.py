@@ -22,7 +22,7 @@ from drumbeat.models import ModelBase
 from relationships.models import Relationship
 from activity.models import Activity, RemoteObject, register_filter
 from activity.schema import object_types, verbs
-from users.tasks import SendNotifications
+from notifications.models import send_notifications
 from richtext.models import RichTextField
 from content.models import Page
 from replies.models import PageComment
@@ -285,8 +285,7 @@ class Project(ModelBase):
             'domain': Site.objects.get_current().domain,
         }
         profiles = [recipient.user for recipient in self.organizers()]
-        SendNotifications.apply_async((profiles, subject_template, body_template,
-            context))
+        send_notifications(profiles, subject_template, body_template, context)
         if not self.test:
             admin_subject = render_to_string(
                 "projects/emails/admin_project_created_subject.txt",

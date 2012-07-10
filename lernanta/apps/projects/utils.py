@@ -4,6 +4,7 @@ import urllib2
 import Image
 import logging
 import datetime
+import simplejson
 
 from lxml import html
 

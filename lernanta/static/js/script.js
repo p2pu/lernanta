@@ -698,7 +698,6 @@ $(".right-aligned-rating").hover(
         $(this).find("div.rating-key").show();
 });
 
-
 function disableLearn() {
     $("#learn #main #show-more-results").addClass('disabled');
     $("#learn #sidebar a.filter").addClass('disabled');
@@ -823,4 +822,85 @@ function submitLearnFilterFormField(e) {
 $('#learn #main #show-more-results').click(submitLearnShowMore);
 bindLearnFilters();
 
+(function(){
+	var oldIndex;
+	var oldOrder;
+	$("#content-pages ul").sortable({
+	    start: function (event, ui) {
+	         oldIndex = $(ui.item).parent().children().index(ui.item);
+	         oldOrder = $(this);
+	    },
+		update: function(event, ui) {
+			var newIndex = $(ui.item).parent().children().index(ui.item);
+			if (newIndex  == oldIndex) {
+				return false;
+			}
+			var url = $("#reorder_tasks").attr("action");
+            var tasks = [];
+            tasks = $.makeArray($(this).children().find("a.taskLink"))
+                .map(function(t, i)
+                {
+                    return $(t).attr("id");
+                });
+	        $.ajax({
+	            type: 'POST',
+	            url: url,
+	            data: {
+                    csrfmiddlewaretoken: $("input[name='csrfmiddlewaretoken']").val(),
+                    tasks: tasks,
+	            },
+	            dataType: "json",
+	            success: function(data) {
+	            	renderTasks($(ui.item).parent(), data);
+            	},
+	            error: function() {
+	            	oldOrder.sortable('cancel');
+            	},
+	        });
+		},
+
+	});
+	
+	if ($("input[name=canChangeOrder]").val() != "True"){
+		$("#content-pages ul").sortable('disable');	
+	}
+})();
+
+function renderTasks(task_ui, tasks){
+	var task_len = task_ui.children('li').length;
+	$.each(task_ui.children('li'), function(counter, task_dom){
+		var task = $(task_dom);
+		task.children('a.taskLink')
+			.text(tasks[counter]["title"])
+			.attr("href", tasks[counter]["url"]);
+			
+		if (counter == 0){
+			if (task.children("a.robttn.up").length){
+				task.children("a.robttn.up").remove();
+			}
+		} else {
+			var button_up = task.children("a.robttn.up");
+			if (!button_up.length){
+				button_up = $(document.createElement('a'))
+							.addClass("robttn up").text("(UP)");
+				task.append(button_up);
+			}
+			button_up.attr("href", tasks[counter]["bttnUpUrl"]);
+		}
+		
+		if (counter == task_len - 1){
+			if (task.children("a.robttn.dwn").length){
+				task.children("a.robttn.dwn").remove();
+			}
+		} else {
+			var button_down = task.children("a.robttn.dwn");
+			if (!button_down.length){
+				button_down = $(document.createElement('a'))
+							.addClass("robttn dwn").text("(DOWN)");
+				task.prepend(button_down);
+			}
+			button_down.attr("href", tasks[counter]["bttnDownUrl"]);
+		}
+	});
+}
 

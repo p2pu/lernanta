@@ -32,71 +32,42 @@
       <div id="posts">
         {% if reply_to %}
           <div class="post-container">
-            {% if is_challenge %}
-              <span class="{% if reply_to.reply_to %}post-replies{% else %}first-post{% endif %}">
-            {% endif %}
+            <span class="{% if reply_to.reply_to %}post-replies{% else %}first-post{% endif %}">
               <img class="member-picture" width="54" height="54" src="{{ reply_to.author.image_or_default }}">
               <div class="post-contents">
                 <div class="post-details">
-                  {% if is_challenge%}<h3>{% endif %}
-                  {{ reply_to.author }}
-                  {% if is_challenge %}
-                    {{ _(' said:') }}</h3>
-                  {% else %}
-                    &nbsp; {{ reply_to.created_on }}
-                    {% if reply_to.reply_to %}
-                      <br> {{ _('In Reply To:') }} &nbsp;
-                      {{ reply_to.reply_to.author }} &nbsp; {{ reply_to.reply_to.created_on }}
-                    {% endif %}
-                  {% endif %}
+                  <h3>{{ reply_to.author }}{{ _(' said:') }}</h3>
                 </div>
                 <div class="post-body">
                   {{ reply_to.content|embed|safe }}
                 </div>
-                {% if is_challenge %}
-                  <div class="post-details">
-                    {{ _('on ') }} {{ reply_to.created_on }}
-                    {% if reply_to.reply_to %}{{ _('in reply to ') }}  {{ reply_to.reply_to.author }} {% endif %}
-                    <br />
-                  </div>
-                {% endif %}
+                <div class="post-details">
+                  {{ _('on ') }} {{ reply_to.created_on }}
+                  {% if reply_to.reply_to %}{{ _('in reply to ') }}  {{ reply_to.reply_to.author }} {% endif %}
+                  <br />
+                </div>
               </div>
-            {% if is_challenge %}</span>{% else %}</div>{% endif %}
+            </span>
         {% endif %}
         {% if preview %}
-          {% if is_challenge %}
-            {% if not reply_to %}<div class="post-container">{% endif %}
-            <span class="{% if reply_to %}post-replies{% else %}first-post{% endif %}">
-          {% else %}
-            <div class="post-container {% if reply_to %}post-replies{% endif %}">
-          {% endif %}
+          {% if not reply_to %}<div class="post-container">{% endif %}
+          <span class="{% if reply_to %}post-replies{% else %}first-post{% endif %}">
             <img class="member-picture" width="54" height="54" src="{{ comment.author.image_or_default }}">
             <div class="post-contents">
               <div class="post-details">
-                {% if is_challenge %}<h3>{% endif %}
-                {{ _('[Preview]') }} {{ comment.author }}
-                {% if is_challenge %}
-                  {{ _(' said:') }}</h3>
-                {% else %}
-                  &nbsp; {{ comment.created_on }}
-                  {% if reply_to %}
-                    <br> {{ _('In Reply To:') }} &nbsp;
-                    {{ reply_to.author }} &nbsp; {{ reply_to.created_on }}
-                  {% endif %}
-                {% endif %}
+                <h3>
+                {{ _('[Preview]') }} {{ comment.author }}{{ _(' said:') }}</h3>
               </div>
               <div class="post-body">
                 {{ comment.content|embed|safe }}
               </div>
-              {% if is_challenge %}
-                <div class="post-details">
-                  {{ _('on ') }} {{ comment.created_on }}
-                  {% if reply_to %}{{ _('in reply to ') }} {{ reply_to.author }}{% endif %}
-                  <br />
-                </div>
-              {% endif %}
+              <div class="post-details">
+                {{ _('on ') }} {{ comment.created_on }}
+                {% if reply_to %}{{ _('in reply to ') }} {{ reply_to.author }}{% endif %}
+                <br />
+              </div>
             </div>
-          {% if is_challenge %}</span>{% if not reply_to %}</div>{% endif %}{% else %}</div>{% endif %}
+          </span>{% if not reply_to %}</div>{% endif %}
         {% endif %}
       </div>
       <br clear="both">
@@ -117,11 +88,13 @@
           <p class="content_buttons">
             {% if not create %}
               <a class="button" href="{{ comment.get_absolute_url }}">
-            {% else %}{% if reply_to %}
-              <a class="button" href="{{ reply_to.get_absolute_url }}">
             {% else %}
-              <a class="button" href="{{ page_object.get_absolute_url }}">
-            {% endif %}{% endif %}
+              {% if reply_to %}
+                <a class="button" href="{{ reply_to.get_absolute_url }}">
+              {% else %}
+                <a class="button" href="{{ page_object.get_absolute_url }}">
+              {% endif %}
+            {% endif %}
               {{ _('Cancel') }}
             </a>
             {% if not create %}

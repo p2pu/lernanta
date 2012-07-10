@@ -1,6 +1,6 @@
 {% load l10n_tags %}
 {{ body|safe }}
 
-{{ _('You received this message through the Contact Organizer form at ') }}
+{{ _('Howdy Organizer. Someone\'s contacted you.') }}
 {{ project.name|safe }}: http://{{ domain }}{{ project.get_absolute_url }}
 

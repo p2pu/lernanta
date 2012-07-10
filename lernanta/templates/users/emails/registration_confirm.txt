@@ -3,11 +3,11 @@
 {{ _('Welcome to P2PU!') }}
 {% endif %}
 
-{{ _('Please confirm your email address by clicking here:') }}
+{{ _('We\'re so happy you\'re here. Confirm your email below to get started:') }}
 
 {{ confirmation_url }}
 
-{{ _('Thank you!') }}
+{{ _('Go forth and learn stuff!') }}
 
-{{ _('Sincerely,') }}
+{{ _('Cheerio,') }}
 {{ _('The P2PU Team') }}

@@ -55,7 +55,9 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
-SUPPORTED_NONLOCALES = ('media', 'static', '.well-known', 'pubsub', 'broadcasts', 'ajax')
+SUPPORTED_NONLOCALES = (
+    'media', 'static', '.well-known', 'pubsub', 'broadcasts', 'ajax'
+)
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
@@ -83,9 +85,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     path('static'),
 )
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = 'std3j$ropgs216z1aa#8+p3a2w2q06mns_%2vfx_#$$i!+6o+x'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -125,8 +124,8 @@ TEMPLATE_DIRS = (
     path('templates'),
 )
 
-# Use the fully qualified name for our apps so django_nose does not add duplicates
-# on INSTALLED_APPS.
+# Use the fully qualified name for our apps so django_nose does not
+# add duplicates on INSTALLED_APPS.
 INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.auth',
@@ -172,6 +171,7 @@ INSTALLED_APPS = (
     'lernanta.apps.tags',
     'lernanta.apps.tracker',
     'lernanta.apps.reviews',
+    'lernanta.apps.notifications',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -218,6 +218,7 @@ CACHE_COUNT_TIMEOUT = 60
 # Email goes to the console by default.  s/console/smtp/ for regular delivery
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'admin@p2pu.org'
+REPLY_EMAIL_DOMAIN = 'reply.p2pu.org'
 
 CELERY_RESULT_BACKEND = "amqp"
 
@@ -232,7 +233,7 @@ PUSH_HUB = 'http://pubsubhubbub.appspot.com/'
 SOUTH_TESTS_MIGRATE = False
 
 FEED_URLS = {
-    'splash': 'http://blogs.p2pu.org/feed/',
+    'splash': 'http://info.p2pu.org/feed/',
 }
 
 # Ckeditor
@@ -240,10 +241,12 @@ CKEDITOR_MEDIA_PREFIX = "/static/ckeditor/"
 CKEDITOR_UPLOAD_PATH = path("media/uploads/images")
 CKEDITOR_FILE_UPLOAD_PATH = path("media/uploads/files")
 CKEDITOR_RESTRICT_BY_USER = True
-CKEDITOR_IMAGE_UPLOAD_EXTENSIONS = ['.jpg','.jpeg','.gif','.png','.tif','.tiff']
+CKEDITOR_IMAGE_UPLOAD_EXTENSIONS = [
+    '.jpg', '.jpeg', '.gif', '.png', '.tif', '.tiff'
+]
 CKEDITOR_FILE_UPLOAD_EXTENSIONS = CKEDITOR_IMAGE_UPLOAD_EXTENSIONS + ['.pdf',
-    '.doc','.rtf','.txt','.xls','.csv','.mov','.wmv','.mpeg','.mpg',
-    '.avi','.rm','.mp3','.mp4','.wav','.aiff','.midi','.m4p']
+    '.doc', '.rtf', '.txt', '.xls', '.csv', '.mov', '.wmv', '.mpeg', '.mpg',
+    '.avi', '.rm', '.mp3', '.mp4', '.wav', '.aiff', '.midi', '.m4p']
 
 # Where the default image for sending to Gravatar
 DEFAULT_PROFILE_IMAGE = 'https://p2pu.org/static/images/member-missing.png'

@@ -3,24 +3,17 @@
 
 {% blocktrans with project_name=project.name %} We're excited to see you've created {{ project_name|safe }}. {% endblocktrans %}
 
-{% trans "P2PU is here to help you design and run an awesome course." %}
+{% trans "We\'re here to help you design, promote and run a stellar course." %}
 
-{% trans "There are three places you can get help from the community." %}
+{% trans "Check out these ways to connect with the community, get feedback and promote the heck out it." %}
 
 {% trans "1. We have a help desk where you can bring all your questions to our staff:" %} help.p2pu.org
-{% trans "2. We have a group just for project-based course designers on the site:" %} http://{{domain}}/groups/make-a-challenge/
-{% trans "3. We have an awesome P2PU community mailing list where you can pitch your course for feedback and review:" %} groups.google.com/groups/p2pu-community
+{% trans "2. We have a group just for course designers on the site:" %} http://{{domain}}/groups/make-a-course/
+{% trans "3. We have a totally sweet P2PU community mailing list where you can pitch your course:" %} groups.google.com/groups/p2pu-community
+{% trans "4. To give you course more marketing TLC, get it featured in the showcase. Send us a note at help@p2pu.org." %}
 
-{% trans "Now that you know where to find help, here\'s what next:" %}
+{% trans "When your course is ready, uncheck \"under development\" in the course settings. Your course will then be live and ready for participants." %}
 
-{% trans "Right now your course is Under Development. Use this time to design your tasks, and remember to make sure all content is freely available so all future participant can have fair access. We especially encourage the reuse of openly licensed materials." %}
 
-{% trans "When your course is ready, uncheck "under development" in the course settings. Your course will now appear in the main listing." %}
-
-{% trans "To get it featured in the showcase, send us a note at help.p2pu.org." %}
-
-{% trans "P2PU will also help you with promoting your course. For more information see: http://help.p2pu.org/kb/learning/how-can-i-promote-my-course" %}
-
-{% trans "Looking forward to learning from you!" %}
-
-P2PU
+{% trans "Yay! The learnings!" %}
+-The P2PU Team

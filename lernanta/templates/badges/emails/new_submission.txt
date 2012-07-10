@@ -1,10 +1,10 @@
 {% load l10n_tags %}
-{{ _('Hello!') }}
+{{ _('Howdy!') }}
 
-{{ _('A new peer is waiting for you to review their submission for the') }} {{ submission.badge }}. {{ _('Go ahead and take a look at their work here') }}: http://{{domain}}{{ submission.get_absolute_url }}. {{ _('They will love you!') }}
+{{ _('Someone has just submitted work for the') }} {{ submission.badge }}. {{ _('Go ahead and take a look at their work here:') }} http://{{domain}}{{ submission.get_absolute_url }}. {{ _('They will love you!') }}
 
-{{ _('Thanks,') }}
+{{ _('Go get \'em,') }}
 
 {{ _('The P2PU team') }}
 
-{{ _('Manage your subscriptions:') }} http://{{domain}}/profile/edit/settings/
+{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/settings/

@@ -1,4 +1,5 @@
 import datetime
+from urlparse import urlsplit
 
 from django.shortcuts import render_to_response, get_object_or_404
 from django import http
@@ -7,8 +8,6 @@ from django.utils.translation import ugettext as _
 from django.template.loader import render_to_string
 from django.utils import simplejson
 from django.forms.models import modelformset_factory
-
-from urlparse import urlsplit
 
 from l10n.urlresolvers import reverse
 from users.decorators import login_required
@@ -24,10 +23,8 @@ from content.forms import OwnersPageForm, OwnersNotListedPageForm
 from content.models import Page, PageVersion
 from content.templatetags.content_tags import task_toggle_completion
 
-
 import logging
 log = logging.getLogger(__name__)
-
 
 @hide_deleted_projects
 def show_page(request, slug, page_slug):
@@ -458,3 +455,49 @@ def page_index_up(request, slug, page_slug):
 def page_index_down(request, slug, page_slug):
     # Page goes down in the sidebar index (page.index increases).
     return _move_page(request, slug, page_slug, 'down')
+
+
+@hide_deleted_projects
+@login_required
+@participation_required
+def page_index_reorder(request, slug):
+    project = get_object_or_404(Project, slug=slug)
+    organizing = project.is_organizing(request.user)
+    if not organizing and project.category != Project.STUDY_GROUP:
+        messages.error(request, _('You can not change tasks order.'))
+        return http.HttpResponseRedirect(project.get_absolute_url())
+
+    # newIndex = int(request.POST['newIndex']) + 1  # task indices are 1-based
+    content_pages = Page.objects.filter(project__pk=project.pk, listed=True,
+        deleted=False,
+    )
+    if content_pages.count() <= 0:
+        raise http.Http404
+
+    task_new_order = request.POST.getlist('tasks[]')
+    for i in range(len(task_new_order)):
+        task = content_pages.filter(slug=task_new_order[i])
+        if (len(task) > 1):
+            raise http.Http404
+        task[0].index = i + 1
+        task[0].save()
+    #refresh tasks
+    content_pages = Page.objects.filter(project__pk=project.pk, listed=True,
+        deleted=False,
+    ).order_by('index')
+
+    #tasks = content_pages.values()
+    tasks = []
+    for task in (content_pages):
+        tasks.append({"title": task.title,
+                     "href": task.get_absolute_url(),
+                     "bttnUpUrl": reverse('page_index_up',
+                         kwargs={'slug': project.slug, 
+                                'page_slug': task.slug}),
+                     "bttnDownUrl": reverse('page_index_down',
+                         kwargs={'slug': project.slug,
+                                'page_slug': task.slug}),
+    })
+
+    json = simplejson.dumps(tasks)
+    return http.HttpResponse(json, mimetype="application/json")

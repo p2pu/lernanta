@@ -8,9 +8,11 @@
 {{ _('Comment:') }}
 {{ comment.content|striptags|safe }}
 
-{{ _('See comment at:') }} http://{{domain}}{{ comment.get_absolute_url }}
+{{ _('See comment at:') }} https://{{domain}}{{ comment.get_absolute_url }}
+
+{{ _('You can reply to this comment by email! Just type your reply at the top.') }}
 
 {{ _('Sincerely,') }}
 {{ _('The P2PU Team') }}
 
-{{ _('Manage your subscriptions:') }} http://{{domain}}/profile/edit/settings/
+{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/settings/

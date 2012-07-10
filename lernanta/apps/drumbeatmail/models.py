@@ -3,7 +3,7 @@ from django.contrib.sites.models import Site
 
 from l10n.urlresolvers import reverse
 from messages.models import Message
-from users.tasks import SendNotifications
+from notifications.models import send_notifications
 from preferences.models import AccountPreferences
 from richtext import clean_html
 
@@ -34,7 +34,7 @@ def message_sent_handler(sender, **kwargs):
         'domain': Site.objects.get_current().domain,
         'reply_url': reply_url,
     }
-    SendNotifications.apply_async(([recipient], subject_template, body_template, context))
+    send_notifications([recipient], subject_template, body_template, context)
 
 post_save.connect(message_sent_handler, sender=Message,
     dispatch_uid='drumbeatmail_message_sent_handler')

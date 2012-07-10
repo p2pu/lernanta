@@ -53,8 +53,9 @@
             "created_on": "2011-10-13 02:01:34", 
             "slug": "test-webmaking-101", 
             "start_date": null, 
-            "under_development": true, 
-            "featured": false, 
+            "under_development": false, 
+            "featured": true, 
+            "community_featured": true, 
             "other": "", 
             "next_projects": [
                 2
@@ -84,8 +85,9 @@
             "created_on": "2011-10-13 02:03:50", 
             "slug": "test-webmaking-101-2", 
             "start_date": null, 
-            "under_development": true, 
+            "under_development": false, 
             "featured": false, 
+            "community_featured": true, 
             "other": "", 
             "next_projects": [
                 3
@@ -115,8 +117,9 @@
             "created_on": "2011-10-13 02:05:54", 
             "slug": "test-webmaking-101-3", 
             "start_date": null, 
-            "under_development": true, 
-            "featured": false, 
+            "under_development": false, 
+            "featured": true, 
+            "community_featured": true, 
             "other": "", 
             "next_projects": [
                 4
@@ -146,7 +149,7 @@
             "created_on": "2011-10-13 02:23:46", 
             "slug": "test-webmaking-101-4", 
             "start_date": null, 
-            "under_development": true, 
+            "under_development": false, 
             "featured": false, 
             "other": "", 
             "next_projects": [
@@ -177,7 +180,7 @@
             "created_on": "2011-10-13 02:24:42", 
             "slug": "test-webmaking-101-5", 
             "start_date": null, 
-            "under_development": true, 
+            "under_development": false, 
             "featured": false, 
             "other": "", 
             "next_projects": [
@@ -208,7 +211,7 @@
             "created_on": "2011-10-13 02:26:11", 
             "slug": "test-webmaking-101-6", 
             "start_date": null, 
-            "under_development": true, 
+            "under_development": false, 
             "featured": false, 
             "other": "", 
             "next_projects": [
@@ -239,7 +242,7 @@
             "created_on": "2011-10-13 02:26:34", 
             "slug": "test-webmaking-101-7", 
             "start_date": null, 
-            "under_development": true, 
+            "under_development": false, 
             "featured": false, 
             "other": "", 
             "next_projects": [], 

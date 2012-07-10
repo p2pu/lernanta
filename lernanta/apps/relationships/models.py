@@ -12,7 +12,7 @@ from drumbeat.models import ModelBase
 from activity.models import Activity, register_filter
 from activity.schema import verbs
 from preferences.models import AccountPreferences
-from users.tasks import SendNotifications
+from notifications.models import send_notifications
 
 
 log = logging.getLogger(__name__)
@@ -108,8 +108,7 @@ def follow_handler(sender, **kwargs):
         'project': rel.target_project,
         'domain': Site.objects.get_current().domain
     }
-    SendNotifications.apply_async((recipients, subject_template, body_template,
-        context))
+    send_notifications(recipients, subject_template, body_template, context)
 
 post_save.connect(follow_handler, sender=Relationship,
     dispatch_uid='relationships_follow_handler')

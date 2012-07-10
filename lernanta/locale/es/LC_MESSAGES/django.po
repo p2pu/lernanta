@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LERNANTA 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-18 13:07+0200\n"
+"POT-Creation-Date: 2012-07-10 17:32+0200\n"
 "PO-Revision-Date: 2011-04-11 8:23-0500\n"
 "Last-Translator: Vladimir Támara Patiño <vtamara@pasosdeJesus.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -139,11 +139,11 @@ msgstr "Sin Respuesta"
 msgid "%(author)s's application for %(badge)s"
 msgstr "aplicación de %(author)s para %(badge)s"
 
-#: apps/badges/models.py:324
+#: apps/badges/models.py:323
 msgid "Allows to give more or less weight to the assessor's vote."
 msgstr "Permite dar más o menos peso a los votos."
 
-#: apps/badges/models.py:335
+#: apps/badges/models.py:334
 msgid ""
 "If submission is blank, this is a peer awarded assessment or superuser "
 "granted"
@@ -151,37 +151,37 @@ msgstr ""
 "Si el campo submission está en blanco, este es un peer awarded assessment o "
 "superuser granted"
 
-#: apps/badges/models.py:338
+#: apps/badges/models.py:337
 msgid "If all rubric ratings were provided."
 msgstr "Si ya tiene las evaluaciones para todas las rubricas."
 
-#: apps/badges/models.py:341
+#: apps/badges/models.py:340
 #, python-format
 msgid "%(assessor)s for %(assessed)s for %(badge)s"
 msgstr "%(assessor)s para %(assessed)s para %(badge)s"
 
-#: apps/badges/models.py:404
+#: apps/badges/models.py:403
 msgid "Never"
 msgstr "Nunca"
 
-#: apps/badges/models.py:405
+#: apps/badges/models.py:404
 msgid "Sometimes"
 msgstr "A veces"
 
-#: apps/badges/models.py:406
+#: apps/badges/models.py:405
 msgid "Most of the time"
 msgstr "La mayoría de las veces"
 
-#: apps/badges/models.py:407
+#: apps/badges/models.py:406
 msgid "Always"
 msgstr "Siempre"
 
-#: apps/badges/models.py:415
+#: apps/badges/models.py:414
 #, python-format
 msgid "%(score)s for %(rubric)s"
 msgstr "%(score)s para %(rubric)s"
 
-#: apps/badges/models.py:434
+#: apps/badges/models.py:433
 #, python-format
 msgid "%(user)s - %(badge)s"
 msgstr "%(user)s - %(badge)s"
@@ -204,10 +204,10 @@ msgid "Submission created and out for review!"
 msgstr "Respuesta salvada y lista para ser revisada!"
 
 #: apps/badges/views.py:122 apps/badges/views.py:257 apps/badges/views.py:314
-#: apps/content/views.py:120 apps/content/views.py:171
-#: apps/content/views.py:275 apps/content/views.py:388
-#: apps/replies/views.py:57 apps/replies/views.py:118
-#: apps/replies/views.py:152 apps/reviews/views.py:79
+#: apps/content/views.py:117 apps/content/views.py:168
+#: apps/content/views.py:272 apps/content/views.py:385
+#: apps/replies/views.py:65 apps/replies/views.py:132
+#: apps/replies/views.py:212 apps/reviews/views.py:79
 #: apps/signups/views.py:149 apps/signups/views.py:189
 msgid "Please correct errors below."
 msgstr "Por favor corrija los errores mostrados a continuación."
@@ -252,57 +252,56 @@ msgstr "esta semana"
 msgid "this month"
 msgstr "este mes"
 
-#: apps/content/views.py:37 apps/projects/decorators.py:87
+#: apps/content/views.py:34 apps/projects/decorators.py:87
 #, python-format
 msgid "This page is not accesible on a %s."
 msgstr "Esta página no es accesible en un %s."
 
-#: apps/content/views.py:41
+#: apps/content/views.py:38
 msgid "This task was deleted."
 msgstr "Esta tarea fue eliminada."
 
-#: apps/content/views.py:93 apps/content/views.py:100
-#: apps/content/views.py:368
+#: apps/content/views.py:90 apps/content/views.py:97 apps/content/views.py:365
 msgid "You can't edit this page"
 msgstr "Usted no puede editar esta página"
 
-#: apps/content/views.py:112 apps/projects/views.py:223
+#: apps/content/views.py:109 apps/projects/views.py:223
 #: apps/projects/views.py:457 apps/projects/views.py:802
 #, python-format
 msgid "%s updated!"
 msgstr "¡%s actualizado!"
 
-#: apps/content/views.py:149
+#: apps/content/views.py:146
 msgid "You can not create a new task!"
 msgstr "¡Usted no puede crear una nueva tarea!"
 
-#: apps/content/views.py:163
+#: apps/content/views.py:160
 msgid "Task created!"
 msgstr "¡Tarea creada!"
 
-#: apps/content/views.py:273
+#: apps/content/views.py:270
 msgid "Please fill out the new task."
 msgstr "Por favor llene los detalles de la nueva tarea."
 
-#: apps/content/views.py:299 apps/content/views.py:301
+#: apps/content/views.py:296 apps/content/views.py:298
 msgid "You can't delete this page"
 msgstr "Usted no eliminar esta página"
 
-#: apps/content/views.py:312
+#: apps/content/views.py:309
 #, python-format
 msgid "%s deleted!"
 msgstr "¡%s eliminada!"
 
-#: apps/content/views.py:361
+#: apps/content/views.py:358
 msgid "You can't restore this page"
 msgstr "Usted no puede restaurar esta página"
 
-#: apps/content/views.py:382
+#: apps/content/views.py:379
 #, python-format
 msgid "%s restored!"
 msgstr "¡%s restaurada!"
 
-#: apps/content/views.py:417
+#: apps/content/views.py:414 apps/content/views.py:467
 msgid "You can not change tasks order."
 msgstr "Usted no puede modificar el orden de las tareas."
 
@@ -310,7 +309,7 @@ msgstr "Usted no puede modificar el orden de las tareas."
 msgid "Please fill out your profile to finish registration."
 msgstr "Por favor llene su perfil para completar la creación de la cuenta."
 
-#: apps/drumbeat/views.py:99
+#: apps/drumbeat/views.py:100
 msgid "Export selected objects as csv file"
 msgstr "Exportar los objectos seleccionados como un fichero csv"
 
@@ -327,7 +326,7 @@ msgid "Can't send email"
 msgstr "No puede enviarse correo"
 
 #: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
-#: apps/projects/views.py:1037
+#: apps/projects/views.py:1035
 msgid "Message successfully sent."
 msgstr "Mensaje enviado con éxito."
 
@@ -674,49 +673,49 @@ msgstr "No puede crear una relacion consigo mismo."
 msgid "You can't unfollow"
 msgstr "Usted no puede dejar de seguir"
 
-#: apps/replies/models.py:50
+#: apps/replies/models.py:53
 #, python-format
 msgid "comment at %s"
 msgstr "comentario en %s"
 
-#: apps/replies/views.py:18 templates/replies/_comment_threads.html:12
+#: apps/replies/views.py:25 templates/replies/_comment_threads.html:12
 msgid "This comment was deleted."
 msgstr "Este comentario fue eliminado."
 
-#: apps/replies/views.py:39
+#: apps/replies/views.py:46
 msgid "You can not reply to this comment."
 msgstr "Usted no puede responder a este comentario"
 
-#: apps/replies/views.py:54 apps/replies/views.py:115
+#: apps/replies/views.py:62 apps/replies/views.py:129
 msgid "Comment posted!"
 msgstr "¡Comentario publicado!"
 
-#: apps/replies/views.py:92
+#: apps/replies/views.py:99
 #, python-format
 msgid "You can not post a comment at %s."
 msgstr "Usted no puede publicar un comentario en %s."
 
-#: apps/replies/views.py:141
+#: apps/replies/views.py:201
 msgid "You can not edit this comment."
 msgstr "Usted no puede editar este comentario."
 
-#: apps/replies/views.py:149
+#: apps/replies/views.py:209
 msgid "Comment updated!"
 msgstr "¡Comentario actualizado!"
 
-#: apps/replies/views.py:175
+#: apps/replies/views.py:231
 msgid "You can not restore this comment."
 msgstr "Usted no puede restaurar este comentario."
 
-#: apps/replies/views.py:177
+#: apps/replies/views.py:233
 msgid "You can not delete this comment."
 msgstr "Usted no puede eliminar este comentario."
 
-#: apps/replies/views.py:184
+#: apps/replies/views.py:240
 msgid "Comment deleted!"
 msgstr "¡Comentario eliminado!"
 
-#: apps/replies/views.py:186
+#: apps/replies/views.py:242
 msgid "Comment restored!"
 msgstr "¡Comentario restaurado!"
 
@@ -933,11 +932,11 @@ msgstr ""
 "Usted está ahora listado entre los colegas que ofrecieron su ayuda en este "
 "reto."
 
-#: apps/statuses/models.py:32
+#: apps/statuses/models.py:33
 msgid "statuses"
 msgstr "estados"
 
-#: apps/statuses/models.py:35
+#: apps/statuses/models.py:36
 #, python-format
 msgid "message: %s"
 msgstr "mensaje: %s"
@@ -1489,7 +1488,7 @@ msgstr "¿Está seguro que desea borrar esta actividad?"
 #: templates/projects/project_edit_summary.html:104
 #: templates/projects/project_edit_summary.html:107
 #: templates/projects/project_import.html:71
-#: templates/replies/comment_page.html:125
+#: templates/replies/comment_page.html:98
 #: templates/replies/delete_restore_comment.html:33
 #: templates/schools/school_edit_background.html:23
 #: templates/schools/school_edit_groups_icon.html:23
@@ -1732,11 +1731,11 @@ msgstr "Esta medalla puede ser ganada en estos Retos:"
 msgid "Peers that are applying for this badge:"
 msgstr "Colegas que están aplicando por esta medalla:"
 
-#: templates/badges/badge.html:91 templates/projects/sidebar.html:302
+#: templates/badges/badge.html:91 templates/projects/sidebar.html:306
 msgid "Awarded"
 msgstr "Otorgadas"
 
-#: templates/badges/badge.html:91 templates/projects/sidebar.html:306
+#: templates/badges/badge.html:91 templates/projects/sidebar.html:310
 msgid "Pending"
 msgstr "Pendiente"
 
@@ -1796,7 +1795,7 @@ msgstr ""
 #: templates/dashboard/setup_profile.html:9
 #: templates/projects/project_edit_status.html:68
 #: templates/projects/project_edit_summary.html:105
-#: templates/replies/comment_page.html:128
+#: templates/replies/comment_page.html:101
 #: templates/schools/school_edit_mentorship.html:25
 #: templates/schools/school_edit_styles.html:69
 #: templates/schools/school_edit_summary.html:35
@@ -1961,15 +1960,16 @@ msgstr ""
 "dirección de correo <strong>%(email)s</strong> cuando entre a ese sitio."
 
 #: templates/badges/emails/new_submission.txt:2
-msgid "Hello!"
-msgstr "¡Hola!"
+msgid "Howdy!"
+msgstr ""
 
 #: templates/badges/emails/new_submission.txt:4
-msgid "A new peer is waiting for you to review their submission for the"
-msgstr "Un colega esta esperando por usted para que revise su respuesta a"
+msgid "Someone has just submitted work for the"
+msgstr ""
 
 #: templates/badges/emails/new_submission.txt:4
-msgid "Go ahead and take a look at their work here"
+#, fuzzy
+msgid "Go ahead and take a look at their work here:"
 msgstr "Échele un vistazo a su trabajo en"
 
 #: templates/badges/emails/new_submission.txt:4
@@ -1977,8 +1977,9 @@ msgid "They will love you!"
 msgstr "¡Ellos te lo van a agradecer!"
 
 #: templates/badges/emails/new_submission.txt:6
-msgid "Thanks,"
-msgstr "Gracias,"
+#: templates/statuses/emails/wall_updated.txt:16
+msgid "Go get 'em,"
+msgstr ""
 
 #: templates/badges/emails/new_submission.txt:8
 msgid "The P2PU team"
@@ -1986,19 +1987,17 @@ msgstr "El Equipo de P2PU"
 
 #: templates/badges/emails/new_submission.txt:10
 #: templates/content/emails/content_update.txt:14
-#: templates/drumbeatmail/emails/direct_message.txt:11
-#: templates/relationships/emails/new_follower.txt:14
-#: templates/replies/emails/post_comment.txt:16
-#: templates/statuses/emails/wall_updated.txt:20
-msgid "Manage your subscriptions:"
-msgstr "Configure sus notificaciones:"
+#: templates/replies/emails/post_comment.txt:18
+#: templates/statuses/emails/wall_updated.txt:22
+msgid "Manage how often you get these delightful messages at:"
+msgstr ""
 
 #: templates/badges/emails/new_submission_subject.txt:2
-msgid "New submission for the"
-msgstr "Nueva respuestas para"
+msgid "Make someone's day. Review a badge for "
+msgstr ""
 
 #: templates/content/_edit_pages_item.html:5
-#: templates/projects/project.html:22 templates/projects/sidebar.html:246
+#: templates/projects/project.html:22 templates/projects/sidebar.html:250
 msgid "New Task"
 msgstr "Nueva Tarea"
 
@@ -2080,7 +2079,7 @@ msgid "Submitted"
 msgstr "¡Enviada!"
 
 #: templates/content/base_page_form.html:20
-#: templates/replies/comment_page.html:77
+#: templates/replies/comment_page.html:59
 #: templates/signups/answer_sign_up.html:24
 msgid "[Preview]"
 msgstr "[Vista Previa]"
@@ -2105,7 +2104,7 @@ msgstr "Trabajo colaborativo (editable por todos los participantes)."
 
 #: templates/content/base_page_form.html:59
 #: templates/content/edit_pages.html:38
-#: templates/replies/comment_page.html:132
+#: templates/replies/comment_page.html:105
 #: templates/signups/answer_sign_up.html:98
 msgid "Preview"
 msgstr "Vista Previa"
@@ -2214,13 +2213,12 @@ msgstr "Discusión de la Tarea"
 
 #: templates/content/emails/content_update.txt:2
 #: templates/replies/emails/post_comment.txt:3
-#: templates/statuses/emails/wall_updated.txt:2
 msgid " was updated."
 msgstr " fue actualizado."
 
 #: templates/content/emails/content_update.txt:4
-#: templates/content/emails/content_update_subject.txt:2
-msgid " created a new task: "
+#, fuzzy
+msgid " contributed with a new task: "
 msgstr " creó una nueva tarea: "
 
 #: templates/content/emails/content_update.txt:4
@@ -2232,30 +2230,28 @@ msgid "."
 msgstr "."
 
 #: templates/content/emails/content_update.txt:9
-msgid "See task at:"
-msgstr "Ver tarea en:"
+msgid "Check out their update and respond at:"
+msgstr ""
 
 #: templates/content/emails/content_update.txt:11
-#: templates/drumbeatmail/emails/direct_message.txt:8
-#: templates/relationships/emails/new_follower.txt:11
-#: templates/replies/emails/post_comment.txt:13
-#: templates/signups/emails/new_signup_answer.txt:21
-#: templates/statuses/emails/wall_updated.txt:14
-#: templates/users/emails/forgot_password.txt:11
-#: templates/users/emails/registration_confirm.txt:12
-msgid "Sincerely,"
-msgstr "Sinceramente,"
+msgid "Booyah,"
+msgstr ""
 
 #: templates/content/emails/content_update.txt:12
 #: templates/drumbeatmail/emails/direct_message.txt:9
 #: templates/relationships/emails/new_follower.txt:12
-#: templates/replies/emails/post_comment.txt:14
+#: templates/replies/emails/post_comment.txt:16
 #: templates/signups/emails/new_signup_answer.txt:22
-#: templates/statuses/emails/wall_updated.txt:15
-#: templates/users/emails/forgot_password.txt:12
+#: templates/statuses/emails/wall_updated.txt:17
+#: templates/users/emails/forgot_password.txt:11
 #: templates/users/emails/registration_confirm.txt:13
 msgid "The P2PU Team"
 msgstr "El Equipo de P2PU"
+
+#: templates/content/emails/content_update_subject.txt:2
+#, fuzzy
+msgid " made a new task for "
+msgstr " creó una nueva tarea: "
 
 #: templates/dashboard/_join_p2pu.html:6
 msgid "Join the Community"
@@ -2534,6 +2530,18 @@ msgstr "Ha recibido un nuevo mensaje directo de"
 #: templates/drumbeatmail/emails/direct_message.txt:6
 msgid "Reply:"
 msgstr "Respuesta:"
+
+#: templates/drumbeatmail/emails/direct_message.txt:8
+#: templates/relationships/emails/new_follower.txt:11
+#: templates/replies/emails/post_comment.txt:15
+#: templates/signups/emails/new_signup_answer.txt:21
+msgid "Sincerely,"
+msgstr "Sinceramente,"
+
+#: templates/drumbeatmail/emails/direct_message.txt:11
+#: templates/relationships/emails/new_follower.txt:14
+msgid "Manage your subscriptions:"
+msgstr "Configure sus notificaciones:"
 
 #: templates/drumbeatmail/emails/direct_message_subject.txt:2
 msgid "New Message from"
@@ -2844,7 +2852,7 @@ msgstr "Ver y Discutir"
 msgid "View"
 msgstr "Vista"
 
-#: templates/projects/_task_list.html:45 templates/projects/sidebar.html:241
+#: templates/projects/_task_list.html:45 templates/projects/sidebar.html:245
 msgid "No tasks have been added."
 msgstr "Ninguna tarea ha sido añadida."
 
@@ -3261,7 +3269,7 @@ msgstr ""
 
 #: templates/projects/project_create_review.html:54
 msgid ""
-"Join the <a href=\"https://p2pu.org/groups/make-a-challenge/\">P2PU Course "
+"Join the <a href=\"https://p2pu.org/groups/make-a-course/\">P2PU Course "
 "Design Group</a> to get feedback on your course!"
 msgstr ""
 
@@ -3705,23 +3713,23 @@ msgstr "Contactar Organizador(es)"
 msgid "Contact Organizer"
 msgstr "Contactar Organizador"
 
-#: templates/projects/sidebar.html:252
+#: templates/projects/sidebar.html:256
 msgid "External Links"
 msgstr "Enlaces Externos"
 
-#: templates/projects/sidebar.html:270
+#: templates/projects/sidebar.html:274
 msgid "No external links have been added."
 msgstr "Ningún enlace externo ha sido añadido."
 
-#: templates/projects/sidebar.html:275
+#: templates/projects/sidebar.html:279
 msgid "Edit Links"
 msgstr "Editar Enlaces"
 
-#: templates/projects/sidebar.html:286
+#: templates/projects/sidebar.html:290
 msgid "Help your peers"
 msgstr "Ayude a sus colegas"
 
-#: templates/projects/sidebar.html:287
+#: templates/projects/sidebar.html:291
 msgid ""
 "Would you be interested in becoming a Mentor? Your peers are going to run "
 "into road blocks and they could really use your help."
@@ -3729,29 +3737,30 @@ msgstr ""
 "¿Estaría interesado en convertirse en un mentor? Sus colegas van a encontrar "
 "dificultades y realmente podría necesitar su ayuda."
 
-#: templates/projects/sidebar.html:288
+#: templates/projects/sidebar.html:292
 msgid "Become a Mentor"
 msgstr "Conviértase en un Mentor"
 
-#: templates/projects/sidebar.html:313
+#: templates/projects/sidebar.html:317
 #, python-format
 msgid "%(counter)s peer needs your review!"
 msgid_plural "%(counter)s peers need your review!"
 msgstr[0] "¡%(counter)s respuesta de un colega necesita revisión!"
 msgstr[1] "¡%(counter)s respuestas de colegas necesitan revisión!"
 
-#: templates/projects/sidebar.html:313
+#: templates/projects/sidebar.html:317
 #: templates/users/_openid_providers.html:14
 msgid "Go"
 msgstr "Ir"
 
 #: templates/projects/emails/admin_project_created_subject.txt:2
-msgid "[P2PU] New "
-msgstr "Nuevo [P2PU] "
+#, fuzzy
+msgid "New "
+msgstr "Nueva Tarea"
 
 #: templates/projects/emails/contact_organizer.txt:4
-msgid "You received this message through the Contact Organizer form at "
-msgstr "Usted recibió este mensaje porque es un organizador en "
+msgid "Howdy Organizer. Someone's contacted you."
+msgstr ""
 
 #: templates/projects/emails/project_created.txt:4
 #, python-format
@@ -3759,11 +3768,13 @@ msgid " We're excited to see you've created %(project_name|safe)s. "
 msgstr ""
 
 #: templates/projects/emails/project_created.txt:6
-msgid "P2PU is here to help you design and run an awesome course."
+msgid "We\\'re here to help you design, promote and run a stellar course."
 msgstr ""
 
 #: templates/projects/emails/project_created.txt:8
-msgid "There are three places you can get help from the community."
+msgid ""
+"Check out these ways to connect with the community, get feedback and promote "
+"the heck out it."
 msgstr ""
 
 #: templates/projects/emails/project_created.txt:10
@@ -3772,48 +3783,32 @@ msgid ""
 msgstr ""
 
 #: templates/projects/emails/project_created.txt:11
-msgid "2. We have a group just for project-based course designers on the site:"
+msgid "2. We have a group just for course designers on the site:"
 msgstr ""
 
 #: templates/projects/emails/project_created.txt:12
 msgid ""
-"3. We have an awesome P2PU community mailing list where you can pitch your "
-"course for feedback and review:"
+"3. We have a totally sweet P2PU community mailing list where you can pitch "
+"your course:"
 msgstr ""
 
-#: templates/projects/emails/project_created.txt:14
-msgid "Now that you know where to find help, here\\'s what next:"
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:16
+#: templates/projects/emails/project_created.txt:13
 msgid ""
-"Right now your course is Under Development. Use this time to design your "
-"tasks, and remember to make sure all content is freely available so all "
-"future participant can have fair access. We especially encourage the reuse "
-"of openly licensed materials."
+"4. To give you course more marketing TLC, get it featured in the showcase. "
+"Send us a note at help@p2pu.org."
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:15
+msgid "When your course is ready, uncheck \\"
 msgstr ""
 
 #: templates/projects/emails/project_created.txt:18
-msgid "When your course is ready, uncheck "
+msgid "Yay! The learnings!"
 msgstr ""
-
-#: templates/projects/emails/project_created.txt:20
-msgid "To get it featured in the showcase, send us a note at help.p2pu.org."
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:22
-msgid ""
-"P2PU will also help you with promoting your course. For more information "
-"see: http://help.p2pu.org/kb/learning/how-can-i-promote-my-course"
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:24
-msgid "Looking forward to learning from you!"
-msgstr "¡Esperamos poder aprender con y de usted!"
 
 #: templates/projects/emails/project_created_subject.txt:3
 #, python-format
-msgid "[P2PU] Let P2PU help you turn %(project_name)s into an awesome course."
+msgid " Take %(project_name)s to the next level."
 msgstr ""
 
 #: templates/relationships/emails/new_follower.txt:2
@@ -3846,27 +3841,25 @@ msgstr "ahora está siguiendo "
 
 #: templates/replies/_comment_threads.html:43
 #: templates/replies/_comment_threads.html:101
-#: templates/replies/comment_page.html:44
-#: templates/replies/comment_page.html:79
+#: templates/replies/comment_page.html:39
+#: templates/replies/comment_page.html:59
 msgid " said:"
 msgstr " dijo:"
 
 #: templates/replies/_comment_threads.html:54
 #: templates/replies/_comment_threads.html:116
-#: templates/replies/comment_page.html:58
-#: templates/replies/comment_page.html:93
+#: templates/replies/comment_page.html:45
+#: templates/replies/comment_page.html:65
 msgid "on "
 msgstr "en "
 
 #: templates/replies/_comment_threads.html:105
-#: templates/replies/comment_page.html:48
-#: templates/replies/comment_page.html:83
 msgid "In Reply To:"
 msgstr "En Respuesta A:"
 
 #: templates/replies/_comment_threads.html:117
-#: templates/replies/comment_page.html:59
-#: templates/replies/comment_page.html:94
+#: templates/replies/comment_page.html:46
+#: templates/replies/comment_page.html:66
 msgid "in reply to "
 msgstr "en Respuesta a "
 
@@ -3882,7 +3875,7 @@ msgstr "Respuesta al Comentario"
 msgid "New Comment"
 msgstr "Nuevo Comentario"
 
-#: templates/replies/comment_page.html:130
+#: templates/replies/comment_page.html:103
 #: templates/signups/answer_sign_up.html:94
 msgid "Post"
 msgstr "Publicar"
@@ -3911,6 +3904,16 @@ msgstr " publicó un comentario en "
 #: templates/replies/emails/post_comment.txt:11
 msgid "See comment at:"
 msgstr "Ver comentario en:"
+
+#: templates/replies/emails/post_comment.txt:13
+#: templates/statuses/emails/wall_updated.txt:14
+msgid ""
+"You can reply to this comment by email! Just type your reply at the top."
+msgstr ""
+
+#: templates/replies/emails/post_comment_subject.txt:2
+msgid " in "
+msgstr ""
 
 #: templates/reviews/_project_review_action.html:3
 #: templates/reviews/_projects_reviews_list_item.html:3
@@ -4589,19 +4592,26 @@ msgstr "Ver respuesta en:"
 msgid " submitted a new answer at the sign-up page."
 msgstr " envió una nueva respuesta a la página de inscripción."
 
+#: templates/statuses/emails/wall_updated.txt:2
+#, fuzzy
+msgid " update."
+msgstr "actualizó"
+
 #: templates/statuses/emails/wall_updated.txt:5
-msgid " posted an important message to the wall:"
-msgstr " publicó un mensaje importante para este grupo de estudio:"
+#, python-format
+msgid " Update from the flight deck: %(username)s posted an urgent message:"
+msgstr ""
 
 #: templates/statuses/emails/wall_updated.txt:7
-msgid " posted a message to the wall:"
-msgstr " publicó un mensaje para este grupo de estudio:"
+#, python-format
+msgid " Update from the flight deck: %(username)s made an update:"
+msgstr ""
 
 #: templates/statuses/emails/wall_updated.txt:12
-msgid "See message at:"
-msgstr "Ver mensaje en:"
+msgid "See what they said at:"
+msgstr ""
 
-#: templates/statuses/emails/wall_updated.txt:18
+#: templates/statuses/emails/wall_updated.txt:20
 msgid ""
 "This message was marked as important by an organizer. Participants can not "
 "turn off notifications for important updates."
@@ -4611,8 +4621,8 @@ msgstr ""
 "importantes."
 
 #: templates/statuses/emails/wall_updated_subject.txt:2
-msgid " posted a message to the wall."
-msgstr " publicó un mensaje en el muro."
+msgid " made a comment in your course."
+msgstr ""
 
 #: templates/tracker/scoreboard.html:4 templates/tracker/scoreboard.html:16
 #: templates/tracker/scoreboard.html:21
@@ -5130,38 +5140,103 @@ msgid "New People"
 msgstr "Nuevas"
 
 #: templates/users/emails/forgot_password.txt:4
-msgid "A request was received to reset the password for this account on "
+msgid "We're here to help reset your password."
 msgstr ""
-"Se ha recibido una solicitud para restablecer la contraseña de esta cuenta "
-"en "
 
-#: templates/users/emails/forgot_password.txt:5
+#: templates/users/emails/forgot_password.txt:4
+#, fuzzy
 msgid ""
-"To change this password please click on the following link, or paste it into "
-"your browser's location bar:"
+"To get a new password, go ahead and click on the link below, or paste it "
+"into your browser:"
 msgstr ""
 "Para cambiar esta contraseña, siga el siguiente enlace o copie la url en la "
 "barra de direcciones de su navegador:"
 
-#: templates/users/emails/forgot_password.txt:9
-msgid "If you did not request this email there is no need for further action."
-msgstr "Si no solicitó este mensaje, no tiene que realizar acción alguna."
+#: templates/users/emails/forgot_password.txt:8
+msgid "If you didn't request a new password, no worries. You're all set."
+msgstr ""
+
+#: templates/users/emails/forgot_password.txt:10
+#, fuzzy
+msgid "Happy learning."
+msgstr "Aprendiendo"
 
 #: templates/users/emails/registration_confirm.txt:6
-msgid "Please confirm your email address by clicking here:"
-msgstr "Por favor confirme su dirección de correo siguiendo este enlace:"
+msgid "We're so happy you're here. Confirm your email below to get started:"
+msgstr ""
 
 #: templates/users/emails/registration_confirm.txt:10
-msgid "Thank you!"
-msgstr "Gracias!"
+msgid "Go forth and learn stuff!"
+msgstr ""
+
+#: templates/users/emails/registration_confirm.txt:12
+msgid "Cheerio,"
+msgstr ""
 
 #: templates/users/emails/registration_confirm_subject.txt:2
-msgid "[P2PU] Complete Registration!"
-msgstr "[P2PU] Termine de Crear su Cuenta."
+msgid "Ready to get learning?!"
+msgstr ""
 
 #: templates/users/emails/registration_confirm_subject.txt:2
-msgid "[P2PU] Confirm Email Address!"
-msgstr "[P2PU] Confirmar Dirección de Correo."
+msgid "Greetings from P2PU. Your email address was changed."
+msgstr ""
+
+#~ msgid "Hello!"
+#~ msgstr "¡Hola!"
+
+#~ msgid "A new peer is waiting for you to review their submission for the"
+#~ msgstr "Un colega esta esperando por usted para que revise su respuesta a"
+
+#~ msgid "Thanks,"
+#~ msgstr "Gracias,"
+
+#~ msgid "New submission for the"
+#~ msgstr "Nueva respuestas para"
+
+#~ msgid "See task at:"
+#~ msgstr "Ver tarea en:"
+
+#~ msgid "[P2PU] New "
+#~ msgstr "Nuevo [P2PU] "
+
+#~ msgid "You received this message through the Contact Organizer form at "
+#~ msgstr "Usted recibió este mensaje porque es un organizador en "
+
+#~ msgid "Looking forward to learning from you!"
+#~ msgstr "¡Esperamos poder aprender con y de usted!"
+
+#~ msgid " posted an important message to the wall:"
+#~ msgstr " publicó un mensaje importante para este grupo de estudio:"
+
+#~ msgid " posted a message to the wall:"
+#~ msgstr " publicó un mensaje para este grupo de estudio:"
+
+#~ msgid "See message at:"
+#~ msgstr "Ver mensaje en:"
+
+#~ msgid " posted a message to the wall."
+#~ msgstr " publicó un mensaje en el muro."
+
+#~ msgid "A request was received to reset the password for this account on "
+#~ msgstr ""
+#~ "Se ha recibido una solicitud para restablecer la contraseña de esta "
+#~ "cuenta en "
+
+#~ msgid ""
+#~ "If you did not request this email there is no need for further action."
+#~ msgstr "Si no solicitó este mensaje, no tiene que realizar acción alguna."
+
+#~ msgid "Please confirm your email address by clicking here:"
+#~ msgstr "Por favor confirme su dirección de correo siguiendo este enlace:"
+
+#~ msgid "Thank you!"
+#~ msgstr "Gracias!"
+
+#~ msgid "[P2PU] Complete Registration!"
+#~ msgstr "[P2PU] Termine de Crear su Cuenta."
+
+#~ msgid "[P2PU] Confirm Email Address!"
+#~ msgstr "[P2PU] Confirmar Dirección de Correo."
 
 #~ msgid "Problem creating the study group, course, ..."
 #~ msgstr "Problema creando el grupo de estudio, curso, ..."

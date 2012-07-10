@@ -71,7 +71,7 @@ database in settings_local.py, for example by adding:
         'NAME': 'lernanta.db',
     },
 
-You are declaring a Database in SQLite,  and you can update it with:
+You are declaring a Database in SQLite, and you can update it with:
 
 	./manage.py syncdb --database s --migrate
 
@@ -94,6 +94,7 @@ And apply all of them again:
 If you want to run other interactive test with this one, rename it in 
 settings_local.py from 's' to 'default' and start the server as usual:
 	./manage.py runserver
+
 
 The graph of migrations of directory docs can be updated (given
 you have installed Graphviz) with:

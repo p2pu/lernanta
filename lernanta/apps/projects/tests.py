@@ -79,3 +79,30 @@ class ProjectTests(TestCase):
         challenge = Project.objects.get(slug=slug)
         self.assertEqual(challenge.category, Project.CHALLENGE)
         self.assertEqual(challenge.duration_hours, 10)
+
+    def test_get_listed_projects(self):
+        deleted_project = Project(deleted=True, test=False)
+        deleted_project.save()
+       
+        not_listed_project = Project(not_listed=True, test=False)
+        not_listed_project.save()
+       
+        under_dev_project = Project(name="under_dev:default", test=False)
+        under_dev_project.save()
+
+        archived_project = Project(under_development=False, archived=True)
+        archived_project.save()
+
+        test_project = Project(under_development=False, test=True)
+        test_project.save()
+
+        project = Project(name="listed", under_development=False, test=False)
+        project.save()
+       
+        listed_projects = Project.get_listed_projects()
+
+        self.assertFalse(deleted_project in listed_projects)
+        self.assertFalse(not_listed_project in listed_projects)
+        self.assertFalse(under_dev_project in listed_projects)
+        self.assertFalse(test_project in listed_projects)
+        self.assertTrue(project in listed_projects)

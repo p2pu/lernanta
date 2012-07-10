@@ -22,7 +22,7 @@ from drumbeat.models import ModelBase
 from relationships.models import Relationship
 from activity.models import Activity, RemoteObject, register_filter
 from activity.schema import object_types, verbs
-from users.tasks import SendNotifications
+from notifications.models import send_notifications
 from richtext.models import RichTextField
 from content.models import Page
 from replies.models import PageComment
@@ -285,8 +285,7 @@ class Project(ModelBase):
             'domain': Site.objects.get_current().domain,
         }
         profiles = [recipient.user for recipient in self.organizers()]
-        SendNotifications.apply_async((profiles, subject_template, body_template,
-            context))
+        send_notifications(profiles, subject_template, body_template, context)
         if not self.test:
             admin_subject = render_to_string(
                 "projects/emails/admin_project_created_subject.txt",
@@ -417,22 +416,31 @@ class Project(ModelBase):
             return Project.objects.none()
 
     @classmethod
+    def get_listed_projects(cls):
+        """ return all the projects that should be listed """
+        listed = Project.objects.filter(
+            not_listed=False,
+            deleted=False,
+            archived=False,
+            under_development=False,
+            test=False)
+        return listed
+
+    @classmethod
     def get_popular_tags(cls, max_count=10):
         ct = ContentType.objects.get_for_model(Project)
-        not_listed = Project.objects.filter(
-            Q(not_listed=True)|Q(deleted=True)).values('id')
+        listed = list(Project.get_listed_projects().values_list('id', flat=True))
         return GeneralTaggedItem.objects.filter(
-            content_type=ct).exclude(object_id__in=not_listed).values(
+            content_type=ct, object_id__in=listed).values(
             'tag__name').annotate(tagged_count=Count('object_id')).order_by(
             '-tagged_count')[:max_count]
 
     @classmethod
     def get_weighted_tags(cls, min_count=2, min_weight=1.0, max_weight=7.0):
         ct = ContentType.objects.get_for_model(Project)
-        not_listed = Project.objects.filter(
-            Q(not_listed=True)|Q(deleted=True)).values('id')
+        listed = Project.get_listed_projects().values('id')
         tags = GeneralTaggedItem.objects.filter(
-            content_type=ct).exclude(object_id__in=not_listed).values(
+            content_type=ct, object_id__in=listed).values(
             'tag__name').annotate(tagged_count=Count('object_id')).filter(
             tagged_count__gte=min_count)
         if tags.count():
@@ -453,8 +461,8 @@ class Project(ModelBase):
         items = GeneralTaggedItem.objects.filter(
             content_type=ct, tag__name=tag_name).values(
             'object_id')
-        if projects == None:
-            project = Project.objects
+        if not projects:
+            projects = Project.objects
         return projects.filter(id__in=items)
 
     def is_challenge(self):

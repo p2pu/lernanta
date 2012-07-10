@@ -223,10 +223,13 @@
   <br>
   {% if content_pages %}
     <nav id="content-pages">
+    <form id="reorder_tasks" method="post" action="{%locale_url page_index_reorder slug=project.slug%}">
+    {% csrf_token %}
+    <div style='display:none'><input type='hiden' name='canChangeOrder' value='{{can_change_order}}'/></div>
       <ul>
         {% for page in content_pages %}
 	<li>	
-	    <a class="taskLink" href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+	    <a class="taskLink" id="{{page.slug}}" href="{{ page.get_absolute_url }}">{{ page.title }}</a>
 	    
             {% if can_change_order %}
 	            {% if not forloop.first %}<a class="robttn up" href="{% locale_url page_index_up slug=project.slug page_slug=page.slug %}">(UP)</a>{% endif %}
@@ -236,6 +239,7 @@
 	</li>
         {% endfor %}
       </ul>
+    </form>
     </nav>
   {% else %}
     {{ _('No tasks have been added.') }}

@@ -394,7 +394,7 @@ def edit_membership(request, slug):
                 kwargs=dict(slug=school.slug)))
         else:
             messages.error(request,
-                _("There was an adding %s to this school.") % slug)
+                _("There was an error adding %s to this school.") % slug)
     else:
         form = school_forms.SchoolAddProjectForm(school)
     return render_to_response('schools/school_edit_membership.html', {

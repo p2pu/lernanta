@@ -7,6 +7,8 @@ from projects.models import Project, Participation
 
 class ProjectAdmin(admin.ModelAdmin):
     actions = [export_as_csv]
+    raw_id_fields = ('detailed_description', 'next_projects',
+        'completion_badges', 'clone_of')
     date_hierarchy = 'created_on'
     list_display = ('id', 'name', 'clone_of', 'language', 'created_on')
     list_filter = ('school', 'featured', 'under_development', 'not_listed',
@@ -16,6 +18,7 @@ class ProjectAdmin(admin.ModelAdmin):
 
 
 class ParticipationAdmin(admin.ModelAdmin):
+    raw_id_fields = ('project', 'user')
     date_hierarchy = 'joined_on'
     list_display = ('id', 'user', 'project', 'organizing', 'joined_on',
         'left_on', 'no_organizers_wall_updates',

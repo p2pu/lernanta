@@ -4,12 +4,14 @@ from signups.models import Signup, SignupAnswer
 
 
 class SignupAdmin(admin.ModelAdmin):
+    raw_id_fields = ('project', 'author')
     list_display = ('id', 'project', 'status')
     list_filter = list_display[2:]
     search_fields = ('id', 'project__slug', 'project__name')
 
 
 class SignupAnswerAdmin(admin.ModelAdmin):
+    raw_id_fields = ('sign_up', 'author')
     date_hierarchy = 'created_on'
     list_display = ('id', 'author', 'project',
         'created_on', 'accepted', 'deleted')

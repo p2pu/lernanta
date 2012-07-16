@@ -3,6 +3,7 @@ from statuses.models import Status
 
 
 class StatusAdmin(admin.ModelAdmin):
+    raw_id_fields = ('author', 'project')
     date_hierarchy = 'created_on'
     list_display = ('id', 'author', 'project', 'created_on', 'important')
     list_filter = list_display[3:]

@@ -4,6 +4,7 @@ from tracker.models import PageView, GoogleAnalyticsTrackingCode, GoogleAnalytic
 
 
 class PageViewAdmin(admin.ModelAdmin):
+    raw_id_fields = ('user',)
     date_hierarchy = 'access_time'
     list_display = ('id', 'session_key', 'user', 'access_time',
         'request_url', 'referrer_url', 'ip_address', 'time_on_page',

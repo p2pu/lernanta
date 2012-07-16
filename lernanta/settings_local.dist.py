@@ -165,10 +165,6 @@ MOZBADGES = {
 # Metrics
 STATISTICS_CSV_DOWNLOADERS = ('kfasimpaur',)
 
-BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',
-    'KaloogaBot', 'YodaoBot', 'Baiduspider', 'googlebot',
-    'Speedy Spider', 'DotBot']
-
 # Single Sign On (with multipass tender tokens)
 SSO_REDIRECT_FIELD_NAMES = ['to']
 SSO_EXTERNAL_REDIRECTS = {

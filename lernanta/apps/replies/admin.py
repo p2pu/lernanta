@@ -4,6 +4,8 @@ from replies.models import PageComment
 
 
 class PageCommentAdmin(admin.ModelAdmin):
+    fields = ('author', 'content')
+    raw_id_fields = ('author',)
     date_hierarchy = 'created_on'
     list_display = ('id', 'author', 'scope_content_type',
         'page_content_type', 'created_on', 'deleted')

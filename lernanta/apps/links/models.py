@@ -25,6 +25,9 @@ class Link(models.Model):
     subscription = models.ForeignKey(Subscription, null=True)
     index = models.IntegerField(null=True, default=0, blank=True)
 
+    def __unicode__(self):
+        return self.name
+
     def save(self, *args, **kwargs):
         if not self.index:
             if self.project:

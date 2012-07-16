@@ -11,6 +11,7 @@ class UserProfileAdmin(admin.ModelAdmin):
 
 
 class TaggedProfileAdmin(admin.ModelAdmin):
+    raw_id_fields = ('tag',)
     list_display = ('id', 'tag')
 
 admin.site.register(UserProfile, UserProfileAdmin)

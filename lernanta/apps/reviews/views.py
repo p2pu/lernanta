@@ -73,6 +73,7 @@ def review_project(request, slug):
                 project.deleted = review.mark_deleted
             if reviewer.can_feature or reviewer.can_delete:
                 project.save()
+            review.send_notifications()
             messages.success(request, _('Review posted!'))
             return http.HttpResponseRedirect(review.get_absolute_url())
         else:

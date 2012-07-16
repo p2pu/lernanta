@@ -1,0 +1,10 @@
+{% load i18n %}{% load l10n_tags %}{% blocktrans with reviewer=reviewer course=course|safe %}Hi there!
+
+{{ reviewer }} had a look at {{ course }} and here is what they had to say:{% endblocktrans %}
+
+{{ review_text|striptags|safe }}
+
+{% blocktrans with domain=domain review_url=review_url%}You can also have a look at their feedback here: https://{{ domain }}{{ review_url }}
+
+Cheerio
+The P2PU team{% endblocktrans %}

@@ -4,6 +4,7 @@ from content.models import Page, PageVersion
 
 
 class PageAdmin(admin.ModelAdmin):
+    raw_id_fields = ('author', 'project', 'badges_to_apply')
     date_hierarchy = 'last_update'
     list_display = ('id', 'title', 'author', 'project', 'index', 'last_update',
         'listed', 'collaborative', 'deleted')
@@ -13,6 +14,7 @@ class PageAdmin(admin.ModelAdmin):
 
 
 class PageVersionAdmin(admin.ModelAdmin):
+    raw_id_fields = ('author', 'page')
     date_hierarchy = 'date'
     list_display = ('id', 'page', 'author', 'date', 'deleted')
     list_filter = list_display[3:]

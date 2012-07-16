@@ -64,8 +64,8 @@ class OpenIDForm(forms.Form):
     openid_identifier = forms.URLField()
 
     def clean_openid_identifier(self):
-        msg = _('This google openid is not supported. ')
-        msg += _('Please use your google profile openid.')
+        msg = _('This Google OpenID is not supported. ')
+        msg += _('Please use your Google profile OpenID.')
         openid = self.cleaned_data['openid_identifier']
         if drupal.GOOGLE_OPENID in openid:
             raise forms.ValidationError(msg)

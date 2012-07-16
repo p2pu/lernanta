@@ -304,3 +304,7 @@ TRACKING_PREFIXES = [
     r'^/\w{2}/schools/[\w-]+/sets/[\w-]+/$',
     r'^/\w{2}/schools/[\w-]+/$',
 ]
+
+BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',
+    'KaloogaBot', 'YodaoBot', 'Baiduspider', 'googlebot',
+    'Speedy Spider', 'DotBot']

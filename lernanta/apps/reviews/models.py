@@ -2,9 +2,11 @@ import logging
 import datetime
 
 from django.db import models
+from django.contrib.sites.models import Site
 
 from drumbeat.models import ModelBase
 from richtext.models import RichTextField
+from notifications.models import send_notifications
 
 log = logging.getLogger(__name__)
 
@@ -38,3 +40,15 @@ class Review(ModelBase):
             'slug': self.project.slug,
         })
 
+    def send_notifications(self):
+        subject_template = 'reviews/emails/review_submitted_subject.txt'
+        body_template = 'reviews/emails/review_submitted.txt'
+        context = {
+            'course': self.project.name,
+            'reviewer': self.author.username,
+            'review_text': self.content,
+            'review_url': self.get_absolute_url(),
+            'domain': Site.objects.get_current().domain, 
+        }
+        profiles = [recipient.user for recipient in self.project.organizers()]
+        send_notifications(profiles, subject_template, body_template, context)

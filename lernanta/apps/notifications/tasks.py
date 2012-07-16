@@ -1,13 +1,12 @@
 import urllib
 import urllib2
 
-from l10n.models import localize_email
-
 from django.conf import settings
 from django.contrib.sites.models import Site
 
 from celery.task import Task
 
+from l10n.models import localize_email
 
 class SendNotifications(Task):
     """Send email notification to the users specified by ``profiles``."""
@@ -18,9 +17,9 @@ class SendNotifications(Task):
         subjects, bodies = localize_email(subject_template,
             body_template, context)
             
-        from_email = settings.DEFAULT_FROM_EMAIL
+        from_email = "P2PU Notifications <{0}>".format(settings.DEFAULT_FROM_EMAIL)
         if reply_token:
-            from_email = "reply+{0}@{1}".format(reply_token,
+            from_email = "P2PU Notifications <reply+{0}@{1}>".format(reply_token,
                 settings.REPLY_EMAIL_DOMAIN)
             
         for profile in profiles:

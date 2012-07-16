@@ -60,7 +60,7 @@ def send_notifications(user_profiles, subject_template, body_template,
     args = (user_profiles, subject_template, body_template, template_context,
         token_text,)
 
-    log.debug("sending notification {0}".format(args))
+    log.debug("notifications.send_notifications: {0}".format(args))
     SendNotifications.apply_async(args)
 
 

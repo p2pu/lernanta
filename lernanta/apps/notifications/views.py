@@ -55,7 +55,6 @@ def response(request):
 
     if token and user and reply_text:
         # post to token.response_callback
-        log.debug("notifications.response: token: {0}, user: {1}, text: {2}".format(token, user, reply_text))
         post_notification_response(token, user.email, reply_text)
     else:
         log.error("notifications.response: Invalid response")

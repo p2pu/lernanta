@@ -496,7 +496,7 @@ def get_active_projects(projects=None):
         or under development
     """
     if not projects:
-        projects = Projects.objects.all()
+        active_projects = Projects.objects.all()
     active_projects = Project.objects.filter(
         archived=False,
         deleted=False,

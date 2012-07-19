@@ -423,7 +423,7 @@ class Project(ModelBase):
             deleted=False,
             archived=False,
             under_development=False,
-            test=False)
+            test=False).order_by('-created_on')
         return listed
 
     @classmethod
@@ -490,10 +490,12 @@ register_filter('default', Project.filter_activities)
 register_filter('learning', Project.filter_learning_activities)
 
 
-def get_active_projects():
+def get_active_projects(projects=None):
     """ get all projects that are not deleted, archived, tests
         or under development
     """
+    if not projects:
+        active_projects = Projects.objects.all()
     active_projects = Project.objects.filter(
         archived=False,
         deleted=False,

@@ -83,10 +83,10 @@ class ProjectTests(TestCase):
     def test_get_listed_projects(self):
         deleted_project = Project(deleted=True, test=False)
         deleted_project.save()
-       
+
         not_listed_project = Project(not_listed=True, test=False)
         not_listed_project.save()
-       
+
         under_dev_project = Project(name="under_dev:default", test=False)
         under_dev_project.save()
 
@@ -106,3 +106,61 @@ class ProjectTests(TestCase):
         self.assertFalse(under_dev_project in listed_projects)
         self.assertFalse(test_project in listed_projects)
         self.assertTrue(project in listed_projects)
+
+
+class ProjectViewTests(TestCase):
+
+    test_username = 'testuser'
+    test_email = 'test@mozillafoundation.org'
+    test_password = 'testpass'
+
+    def setUp(self):
+        self.client = Client()
+        self.locale = 'en'
+        django_user = User(
+            username=self.test_username,
+            email=self.test_email,
+        )
+        self.user = create_profile(django_user)
+        self.user.set_password(self.test_password)
+        self.user.save()
+
+    def test_all_kinds_of_projects_appear_in_listing(self):
+
+        #Should appear in listing
+        challenge = Project(under_development=False, test=False,
+            category=Project.CHALLENGE)
+        challenge.save()
+
+        course = Project(under_development=False, test=False,
+            category=Project.COURSE)
+        course.save()
+        from signups.models import Signup
+        sign_up = Signup(project=course, author=self.user,
+            status=Signup.MODERATED)
+        sign_up.save()
+
+        study_group = Project(under_development=False, test=False,
+            category=Project.STUDY_GROUP)
+        study_group.save()
+        sign_up = Signup(project=study_group, author=self.user,
+            status=Signup.NON_MODERATED)
+        sign_up.save()
+
+        #Should not appear in listing
+        test_challenge = Project(under_development=False, test=True,
+            category=Project.CHALLENGE)
+        test_challenge.save()
+
+        closed_study_group = Project(under_development=False, test=False,
+            category=Project.STUDY_GROUP)
+        closed_study_group.save()
+        sign_up = Signup(project=closed_study_group, author=self.user,
+            status=Signup.CLOSED)
+        sign_up.save()
+
+        response = self.client.get('/%s/groups/?all_languages=on' %
+            (self.locale))
+        print response.context['pagination_current_page'].object_list
+        self.assertEqual(3,
+            len(response.context['pagination_current_page'].object_list))

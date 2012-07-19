@@ -1,9 +1,9 @@
 {% load l10n_tags %}
 {{ _('Howdy!') }}
 
-{{ _('Someone has just submitted work for the') }} {{ submission.badge }}. {{ _('Go ahead and take a look at their work here') }}: http://{{domain}}{{ submission.get_absolute_url }}. {{ _('They will love you!') }}
+{{ _('Someone has just submitted work for the') }} {{ submission.badge }}. {{ _('Go ahead and take a look at their work here:') }} http://{{domain}}{{ submission.get_absolute_url }}. {{ _('They will love you!') }}
 
-{{ _('Go get 'em,') }}
+{{ _('Go get \'em,') }}
 
 {{ _('The P2PU team') }}
 

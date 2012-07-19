@@ -9,6 +9,8 @@ urlpatterns = patterns('content.views',
   url(r'^index/(?P<page_slug>[\w-]+)/down/$', 'page_index_down',
       name='page_index_down'),
       
+  url(r'^index/reorder/$', 'page_index_reorder',
+      name='page_index_reorder'),
   url(r'^(?P<page_slug>[\w-]+)/$', 'show_page', name='page_show'),
       
   url(r'^(?P<page_slug>[\w-]+)/edit/$', 'edit_page', name='page_edit'),

@@ -14,7 +14,7 @@ from django.http import HttpResponse
 
 from l10n.urlresolvers import reverse
 from users.models import UserProfile
-from users.tasks import SendNotifications
+from notifications.models import send_notifications
 from drumbeat.forms import AbuseForm
 import django.contrib.sites as sites
 
@@ -28,8 +28,10 @@ def page_not_found(request):
     domain = "http://%s" % domain
     d = dict(language=settings.LANGUAGE_CODE,
              domain=domain)
-    return render_to_response("404.html", d,
-                              context_instance=RequestContext(request))
+
+    return http.HttpResponseNotFound(
+        loader.render_to_string('404.html', d,
+        context_instance=RequestContext(request)) )
 
 
 def server_error(request):
@@ -61,8 +63,7 @@ def report_abuse(request, model, app_label, pk):
         }
         try:
             profile = UserProfile.objects.get(email=settings.ADMINS[0][1])
-            SendNotifications.apply_async(args=([profile], subject_template, body_template,
-                context))
+            send_notifications([profile], subject_template, body_template, context)
         except:
             log.debug("Error sending abuse report: %s" % sys.exc_info()[0])
             pass

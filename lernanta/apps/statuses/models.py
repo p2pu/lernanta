@@ -10,8 +10,9 @@ from django.contrib.contenttypes import generic
 from activity.models import Activity, register_filter
 from activity.schema import object_types, verbs
 from drumbeat.models import ModelBase
-from users.tasks import SendNotifications
+from notifications.models import send_notifications
 from richtext.models import RichTextField
+from l10n.urlresolvers import reverse
 
 
 class Status(ModelBase):
@@ -64,8 +65,22 @@ class Status(ModelBase):
                 unsubscribed = recipient.no_participants_wall_updates
             if self.author != profile and not unsubscribed:
                 profiles.append(profile)
-        SendNotifications.apply_async((profiles, subject_template, body_template,
-            context))
+
+        kwargs = {
+            'page_app_label':'activity',
+            'page_model': 'activity',
+            'page_pk' : self.activity.get().id,
+        }
+        if self.project:
+            kwargs.update({
+                'scope_app_label': 'projects',
+                'scope_model': 'project',
+                'scope_pk': self.project.id,
+            })
+        callback_url = reverse('page_comment_callback', kwargs=kwargs)
+    
+        send_notifications( profiles, subject_template, body_template, context,
+            callback_url )
 
     @staticmethod
     def filter_activities(activities):

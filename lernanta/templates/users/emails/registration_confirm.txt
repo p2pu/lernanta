@@ -3,7 +3,7 @@
 {{ _('Welcome to P2PU!') }}
 {% endif %}
 
-{{ _('We're so happy you're here. Confirm your email below to get started:') }}
+{{ _('We\'re so happy you\'re here. Confirm your email below to get started:') }}
 
 {{ confirmation_url }}
 

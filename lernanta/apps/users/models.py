@@ -24,7 +24,7 @@ from drumbeat.utils import get_partition_id, safe_filename
 from drumbeat.models import ModelBase
 from relationships.models import Relationship
 from projects.models import Project, Participation
-from users.tasks import SendNotifications
+from notifications.models import send_notifications
 from activity.schema import object_types
 from users.managers import CategoryTaggableManager
 from richtext.models import RichTextField
@@ -225,8 +225,7 @@ class UserProfile(ModelBase):
         subject_template = 'users/emails/registration_confirm_subject.txt'
         body_template = 'users/emails/registration_confirm.txt'
         context = {'confirmation_url': url, 'new_user': new_user}
-        SendNotifications.apply_async(([self], subject_template, body_template,
-            context))
+        send_notifications([self], subject_template, body_template, context)
 
     def image_or_default(self):
         """Return user profile image or a default."""

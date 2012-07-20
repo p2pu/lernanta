@@ -15,6 +15,7 @@ bleach==1.1.1
 django-maintenancemode==0.9.3.1
 tender_multipass==0.2.1
 simplejson==2.6.0
+django-tastypie==0.9.11
 
 -e git://github.com/jbalogh/django-cache-machine.git#egg=python_xrd-dev
 -e git://github.com/jsocol/commonware.git#egg=commonware

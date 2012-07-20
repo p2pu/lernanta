@@ -55,9 +55,8 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
-SUPPORTED_NONLOCALES = (
-    'media', 'static', '.well-known', 'pubsub', 'broadcasts', 'ajax'
-)
+SUPPORTED_NONLOCALES = ('media', 'static', '.well-known', 'pubsub', 'broadcasts',
+'ajax', 'alpha',)
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
@@ -104,6 +103,7 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 MIDDLEWARE_CLASSES = (
     'drumbeat.middleware.NotFoundMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
+    'api.middleware.APISubdomainMiddleware',
     'l10n.middleware.LocaleURLRewriter',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -172,6 +172,8 @@ INSTALLED_APPS = (
     'lernanta.apps.tracker',
     'lernanta.apps.reviews',
     'lernanta.apps.notifications',
+    'lernanta.apps.api',
+    'tastypie',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

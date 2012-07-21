@@ -10,13 +10,16 @@ from django.conf.urls.defaults import url
 class UserProfileResource(ModelResource):
     class Meta:
         queryset = UserProfile.objects.all()
-        fields = ['username', 'bio', 'gravatar', 'following', 'followers']
+        fields = ['username', 'bio', 'gravatar', 'following', 'followers',
+            'skills']
         resource_name = 'users'
         
     def dehydrate(self, bundle):
         bundle.data['gravatar'] = bundle.obj.gravatar()
         bundle.data['following'] = bundle.obj.get_current_projects()
         bundle.data['followers'] = bundle.obj.followers()
+        bundle.data['skills'] = map( lambda profile_tag: profile_tag.name,
+            bundle.obj.tags.filter(category='skill') )
 
         return bundle
 

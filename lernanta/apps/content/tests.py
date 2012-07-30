@@ -86,11 +86,11 @@ class PageTests(TestCase):
         slug2 = self.project.pages.all()[1].slug
         slug3 = self.project.pages.all()[2].slug
 
-        data = { 'tasks': [slug1, slug3, slug2], }
+        data = { 'tasks[]':[slug1, slug3, slug2] }
 
         reorder_url = "/{0}/groups/{1}/content/index/reorder/".format(
             self.locale, self.project.slug)
-        response = self.client.post(reorder_url, data, 'json')
+        response = self.client.post(reorder_url, data)
         self.assertEqual(response.status_code, 200)
 
         page1 = self.project.pages.get(slug=slug1)

@@ -1,0 +1,1 @@
+{% load l10n_tags %}{{ _('P2PU calling. Are we getting your machine?') }}

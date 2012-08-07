@@ -820,6 +820,17 @@ def edit_status(request, slug):
 
 @hide_deleted_projects
 @login_required
+@organizer_required
+def publish(request, slug):
+    project = get_object_or_404(Project, slug=slug)
+    project.publish()
+    return http.HttpResponseRedirect(reverse('projects_show', kwargs={
+        'slug': project.slug,
+    }))
+    
+
+@hide_deleted_projects
+@login_required
 @can_view_metric_overview
 def admin_metrics(request, slug):
     """Overview metrics for course organizers.

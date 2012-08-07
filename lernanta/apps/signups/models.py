@@ -78,6 +78,13 @@ class Signup(ModelBase):
         return url + '?pagination_page_number=%s#answer-%s' % (
             page, answer.id)
 
+    def set_unmoderated_signup(self):
+        self.status = self.NON_MODERATED
+        self.save()
+
+    def is_closed(self):
+        return self.status == self.CLOSED
+
 
 class SignupAnswer(ModelBase):
     object_type = object_types['comment']

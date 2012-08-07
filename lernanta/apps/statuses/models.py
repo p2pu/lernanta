@@ -80,7 +80,7 @@ class Status(ModelBase):
         callback_url = reverse('page_comment_callback', kwargs=kwargs)
     
         send_notifications( profiles, subject_template, body_template, context,
-            callback_url )
+            callback_url, self.author.username )
 
     @staticmethod
     def filter_activities(activities):

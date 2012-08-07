@@ -18,7 +18,6 @@ def extract_reply(text):
     for pattern in patterns:
         match = pattern.search(text)
         if match:
-            print('match!')
             text = text[:match.start()]
             break
     return text

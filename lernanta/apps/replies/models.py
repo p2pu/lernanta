@@ -102,7 +102,7 @@ class PageComment(ModelBase):
                 profiles.append(profile)
         reply_url = reverse('email_reply', args=[self.id])
         send_notifications(profiles, subject_template, body_template, context,
-            reply_url
+            reply_url, self.author.username
         )
 
 
@@ -119,7 +119,6 @@ def fire_activity(sender, **kwargs):
         ct = ContentType.objects.get_for_model(SignupAnswer)
         if instance.page_content_type != ct:
             statsd.Statsd.increment('comments')
-        #instance.send_comment_notification()
         if instance.page_object.comments_fire_activity():
             from activity.models import Activity
             activity = Activity(actor=instance.author, verb=verbs['post'],

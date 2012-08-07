@@ -1,16 +1,13 @@
 {% load l10n_tags %}
-{% if comment.scope_object %}
-{{ comment.scope_object.name|safe }}{{ _(' was updated.') }}
-{% endif %}
+{% load i18n %}
 
-{{ comment.author }}{{ _(' posted a new comment at ') }}{{ comment.page_object|safe }}{{ _('.') }}
-
-{{ _('Comment:') }}
 {{ comment.content|striptags|safe }}
 
-{{ _('See comment at:') }} https://{{domain}}{{ comment.get_absolute_url }}
+{% if comment.scope_object %}{% blocktrans with scope=comment.scope_object.name|safe %}This comment was posted at {{ scope }}.{% endblocktrans %}{% endif %}
 
-{{ _('You can reply to this comment by email! Just type your reply at the top.') }}
+{{ _('You can view this comment online at:') }} https://{{domain}}{{ comment.get_absolute_url }}
+
+{{ _('To reply to this comment by email, simply type your reply at the top!') }}
 
 {{ _('Sincerely,') }}
 {{ _('The P2PU Team') }}

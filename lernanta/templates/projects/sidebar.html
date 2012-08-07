@@ -7,11 +7,14 @@
 <div id="sidebar">
   <section id="project"class="panel">
     <figure class="project_img">
-      <a href="{{ project.get_absolute_url }}">
+      <a id="id-course-image-link" href="{{ project.get_absolute_url }}">
         {% if project.image %}
-  	         <img src="{{ MEDIA_URL }}{{ project.image }}" width="243" height="150" alt="project image"/>
+  	         <img id="id-course-image" src="{{ MEDIA_URL }}{{ project.image }}" alt="course image"/>
         {% else %}
-             <img src="{{ STATIC_URL}}images/project-missing.png" width="243" height="150" alt="project image"/>
+             <img id="id-course-image" src="{{ STATIC_URL}}images/project-missing.png" alt="course image"/>
+        {% endif %}
+        {% if project.under_development %}
+          <img id="id-course-image-overlay" src="{{ STATIC_URL }}images/course-draft.png" alt="draft course"/>
         {% endif %}
       </a>
     </figure>
@@ -35,6 +38,7 @@
       <p id="participate_button" {% if not user.is_authenticated %}class="login_participate_button"{% endif %}>
         <a href="{% locale_url sign_up_answer slug=project.slug %}">{{ _('Participate')}}</a>
       </p>
+        
     {% endif %}
 
     <br>
@@ -110,6 +114,9 @@
     </a>
     {% if organizing %}
       <a class="button" href="{% locale_url projects_edit slug=project.slug %}">{{ _('Edit') }} {{ project.kind|title }}</a>
+      {% if project.under_development %}
+          <a href="{% locale_url projects_publish slug=project.slug %}" class="button">Publish</a>
+      {% endif %}
     {% else %}
       {% if user.is_authenticated %}
         <p class="supplemental_actions">
@@ -133,7 +140,7 @@
       {% if project.archived %}
       <li class="beta-development">{{ _('Archived') }}</li>
       {% endif %}
-      {% if project.under_development%}
+      {% if project.under_development %}
       <li class="beta-development">{{ _('Under Development') }}</li>
       {% endif %}
       {% if project.not_listed %}

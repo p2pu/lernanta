@@ -14,13 +14,16 @@
 
 {% block bodyid %}project_landing{% endblock %}
 
-
 {% block join_p2pu_section %}{% join_p2pu request %}{% endblock %}
 
 {% block breadcrumbs_actions%}
   {% if is_challenge and organizing %}
     <a class="button" href="{% locale_url page_create slug=project.slug %}">{{ _('New Task') }}</a>
     <a class="button" href="{% locale_url projects_edit slug=project.slug %}">{{ _('Admin') }} {{ project.kind|title }}</a>
+    {% if project.under_development %}
+      <a href="{% locale_url projects_publish slug=project.slug %}" class="button">Publish</a>
+    {% endif %}
+
   {% endif %}
   {% project_review_action project user %}
 {% endblock %}

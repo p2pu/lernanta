@@ -178,6 +178,16 @@ class Project(ModelBase):
     def organizers(self, include_deleted=False):
         return self.participants(include_deleted).filter(organizing=True)
 
+    def publish(self):
+        """ Remove all test, under_development and closed signups from the course """
+        self.test = False
+        self.under_development = False
+        self.save()
+        if self.category == self.COURSE:
+            signup = self.sign_up.get()
+            if signup.is_closed():
+                signup.set_unmoderated_signup()
+
     def is_organizing(self, user):
         if user.is_authenticated():
             profile = user.get_profile()

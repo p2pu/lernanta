@@ -157,15 +157,15 @@ def comment_page_callback(request, page_model, page_app_label, page_pk,
         log.error('Invalid API KEY used for internal API!')
         return http.HttpResponseForbidden()
     
-    from_email = request.POST.get('from')
+    from_user = request.POST.get('from')
     reply_text = request.POST.get('text')
     reply_text = utils.extract_reply(reply_text)
 
     user = None
     try:
-        user = UserProfile.objects.get(email=from_email)
+        user = UserProfile.objects.get(username=from_user)
     except UserProfile.DoesNotExist:
-        log.error("Invalid user attempted reply: {0}".format(from_email))
+        log.error("Invalid user attempted reply: {0}".format(from_user))
 
     page_object = None
     try:
@@ -259,14 +259,14 @@ def delete_restore_comment(request, comment_id):
 def email_reply(request, comment_id):
     """ handle a reply received via email """
 
-    log.debug("replies:email_reply")
+    log.debug("replies.views.email_reply")
 
     api_key = request.POST.get('api-key')
     if not api_key == settings.INTERNAL_API_KEY:
         log.error('Invalid API KEY used for internal API!')
         return http.HttpResponseForbidden()
     
-    from_email = request.POST.get('from')
+    from_user = request.POST.get('from')
     reply_text = request.POST.get('text')
     reply_text = utils.extract_reply(reply_text)
     
@@ -278,9 +278,9 @@ def email_reply(request, comment_id):
 
     user = None
     try:
-        user = UserProfile.objects.get(email=from_email)
+        user = UserProfile.objects.get(username=from_user)
     except UserProfile.DoesNotExist:
-        log.error("Invalid user attempted reply: {0}".format(from_email))
+        log.error("Invalid user attempted reply: {0}".format(from_user))
 
     if comment and user and reply_text and not comment.deleted:
         comment.reply(user, reply_text, True)

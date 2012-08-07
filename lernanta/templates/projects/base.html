@@ -6,6 +6,10 @@
 {% block title %}{{ project.name }} | {% block project_title %}{% endblock %}{% endblock %}
 {% block bodyclasses %}project-kind-{{ project.category|slugify }}{% endblock%}
 
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/course.css?v=1">
+{% endblock %}
+
 {% block links %}
 {% if project %}
   <meta name="thumbnail" property="og:image" content="{{ project.get_image_url }}" />

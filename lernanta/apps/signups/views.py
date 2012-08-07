@@ -111,8 +111,8 @@ def answer_sign_up(request, slug):
             _("You already joined this %s.") % project.kind)
         return http.HttpResponseRedirect(sign_up.get_absolute_url())
     elif sign_up.status == Signup.CLOSED:
-        msg = _("Sign-up is currently closed." \
-                "You can clone the %s if is full.")
+        msg = _("Sign-up is currently closed. " \
+                "You can clone the %s if it is full.")
         messages.error(request, msg % project.kind)
         return http.HttpResponseRedirect(sign_up.get_absolute_url())
     else:
@@ -270,7 +270,7 @@ def direct_signup(request, slug):
             _('Organizers can\'t use this page to leave their group.'))
     if request.method != 'POST':
         return http.HttpResponseForbidden(
-            _('This page can not be accessed with a get request.'))
+            _('This page can not be accessed with a GET request.'))
     participations = Participation.objects.filter(user=profile,
         project=project, left_on__isnull=True)
     if participations:
@@ -298,7 +298,7 @@ def direct_signup_adopter(request, slug):
     profile = request.user.get_profile()
     if request.method != 'POST':
         return http.HttpResponseForbidden(
-            _('This page can not be accessed with a get request.'))
+            _('This page can not be accessed with a GET request.'))
     try:
         participation = project.participants().get(user=profile)
     except Participation.DoesNotExist:
@@ -314,7 +314,7 @@ def direct_signup_adopter(request, slug):
         deleted=False).count()
     if completed_count != tasks_count:
         return http.HttpResponseForbidden(
-            _('You need to complete all tasks before becoming an adopter.'))
+            _('You need to complete all of the tasks before becoming an adopter.'))
     if participation.adopter:
         return http.HttpResponseForbidden(
             _('You already adopted this challenge.'))

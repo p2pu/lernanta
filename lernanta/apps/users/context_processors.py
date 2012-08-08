@@ -1,8 +1,12 @@
 from django.utils.http import urlquote
 from django.contrib.auth import REDIRECT_FIELD_NAME
+from django.conf import settings
 
 from messages.models import Message
 from l10n.urlresolvers import reverse
+
+from users.models import UserProfile
+from users.views import get_sso_token
 
 
 def messages(request):
@@ -25,3 +29,16 @@ def redirect_urls(request):
         'login_with_redirect_url': login_url,
         'register_with_redirect_url': register_url,
     }
+
+
+def help_sso_token(request):
+    if request.user.is_authenticated():
+        # if profile was created
+        try:
+            profile = request.user.get_profile()
+        except UserProfile.DoesNotExist:
+            return {}
+        sso_url = 'http://help.p2pu.org/'
+        token = get_sso_token(profile, sso_url)
+        return {'help_sso_token': token}
+    return {}

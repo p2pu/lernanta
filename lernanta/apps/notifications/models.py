@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 
 from tasks import SendNotifications, PostNotificationResponse
+from tracker import statsd
 
 import random
 import string
@@ -71,16 +72,30 @@ def send_notifications(user_profiles, subject_template, body_template,
     SendNotifications.apply_async(args)
 
 
+def _auto_response_filter(token, text):
+    """ check if we think this is a auto response """
+    delta = datetime.datetime.now() - token.creation_date
+    total_seconds = delta.seconds + delta.days * 24 * 3600 # hello python 2.6
+    if total_seconds < settings.MIN_EMAIL_RESPONSE_TIME:
+        return True
+
+    for trigger_word in settings.AUTO_REPLY_KEYWORDS:
+        if trigger_word in text:
+            return True
+
+    return False
+
+
 def post_notification_response(token, user, text):
     """ create response task and run asynchronously """
 
-    # check how much time elapse before this response was sent
-    delta = datetime.datetime.now() - token.creation_date
-    if delta.total_seconds() < settings.MIN_EMAIL_RESPONSE_TIME:
+    if _auto_response_filter(token, text):
         subject_template = 'notifications/emails/response_bounce_subject.txt'
         body_template = 'notifications/emails/response_bounce.txt'
-        context = {}
+        context = { 'original_message': text }
         send_notifications([user], subject_template, body_template, context)
+        log.debug('post_notification_response: quick response bounced')
+        statsd.Statsd.increment('auto-replies')
         return
 
     args = (token, user, text,)

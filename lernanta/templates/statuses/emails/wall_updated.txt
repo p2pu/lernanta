@@ -1,4 +1,5 @@
 {% load l10n_tags %}
+{% load i18n %}
 {{ project.name|safe }}{{ _(' update.') }}
 
 {% if status.important %}

@@ -26,7 +26,7 @@ urlpatterns = patterns('',
     (r'metrics/',        include('tracker.urls')),
     (r'reviews/',        include('reviews.urls')),
     (r'notifications/',   include('notifications.urls')),
-    (r'',                include('api.urls')),
+    (r'api/',                include('api.urls')),
     (r'',                include('users.urls')),
 )
 

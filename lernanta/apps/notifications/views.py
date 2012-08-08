@@ -6,6 +6,7 @@ from django.conf import settings
 from notifications.models import post_notification_response, send_notifications
 from notifications.models import ResponseToken
 from users.models import UserProfile
+from tracker import statsd
 
 import simplejson as json
 import logging
@@ -108,7 +109,7 @@ def notifications_create(request):
         }
         send_notifications([user], subject_template, body_template, context,
             callback_url, sender)
-
+        statsd.Statsd.increment('api-notifications')
         return http.HttpResponse(status=200)
 
     raise http.Http404

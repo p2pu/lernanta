@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LERNANTA 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-07 13:47+0200\n"
+"POT-Creation-Date: 2012-08-08 13:47+0200\n"
 "PO-Revision-Date: 2011-04-11 8:23-0500\n"
 "Last-Translator: Hèlen Grives <helengrives@hotmail.com>\n"
 "Language-Team: LANGUAGE <nl>\n"
@@ -337,7 +337,7 @@ msgid "Can't send email"
 msgstr "Kan e-mail niet versturen"
 
 #: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
-#: apps/projects/views.py:1046
+#: apps/projects/views.py:1049
 msgid "Message successfully sent."
 msgstr "Bericht met succes verstuurd."
 
@@ -678,6 +678,12 @@ msgstr "Het %(kind)s %(slug)s is geen deel van deze school."
 #, python-format
 msgid "There was a problem saving the %s's status."
 msgstr "Er is een probleem met het opslaan van de status van %s."
+
+#: apps/projects/views.py:827
+msgid ""
+"Congratulations, you sucessfully published your {0}!        It will now show "
+"up on the learning page!"
+msgstr ""
 
 #: apps/relationships/models.py:59
 msgid "Cannot create self referencing relationship."
@@ -1990,7 +1996,7 @@ msgid "They will love you!"
 msgstr ""
 
 #: templates/badges/emails/new_submission.txt:6
-#: templates/statuses/emails/wall_updated.txt:16
+#: templates/statuses/emails/wall_updated.txt:17
 msgid "Go get 'em,"
 msgstr ""
 
@@ -2002,7 +2008,7 @@ msgstr "Het P2PU Team"
 #: templates/badges/emails/new_submission.txt:10
 #: templates/content/emails/content_update.txt:14
 #: templates/replies/emails/post_comment.txt:15
-#: templates/statuses/emails/wall_updated.txt:22
+#: templates/statuses/emails/wall_updated.txt:23
 msgid "Manage how often you get these delightful messages at:"
 msgstr ""
 
@@ -2262,7 +2268,7 @@ msgstr ""
 #: templates/relationships/emails/new_follower.txt:12
 #: templates/replies/emails/post_comment.txt:13
 #: templates/signups/emails/new_signup_answer.txt:22
-#: templates/statuses/emails/wall_updated.txt:17
+#: templates/statuses/emails/wall_updated.txt:18
 #: templates/users/emails/forgot_password.txt:11
 #: templates/users/emails/registration_confirm.txt:13
 msgid "The P2PU Team"
@@ -2603,11 +2609,19 @@ msgid ""
 "But sometimes speedy responses are a sign that someone has an auto-responder "
 "on. And you wouldn't a gazillion of those in your inbox :)\n"
 "\n"
-"Sorry - we're going to ask you to send your message again. Just in case.\n"
-"\n"
+"Sorry - we're going to ask you to send your message again. Just in case."
+msgstr ""
+
+#: templates/notifications/emails/response_bounce.txt:7
+msgid "This was the message that we received:"
+msgstr ""
+
+#: templates/notifications/emails/response_bounce.txt:10
+#, fuzzy
+msgid ""
 "Cheerio,\n"
 "P2PU team"
-msgstr ""
+msgstr "Het P2PU Team"
 
 #: templates/notifications/emails/response_bounce_subject.txt:1
 msgid "P2PU calling. Are we getting your machine?"
@@ -4676,31 +4690,31 @@ msgstr "Bekijk het antwoord op:"
 msgid " submitted a new answer at the sign-up page."
 msgstr " heeft een nieuw antwoord achtergelaten op de aanmeldpagina."
 
-#: templates/statuses/emails/wall_updated.txt:2
+#: templates/statuses/emails/wall_updated.txt:3
 #, fuzzy
 msgid " update."
 msgstr " is bijgewerkt."
 
-#: templates/statuses/emails/wall_updated.txt:5
+#: templates/statuses/emails/wall_updated.txt:6
 #, python-format
 msgid " Update from the flight deck: %(username)s posted an urgent message:"
 msgstr ""
 
-#: templates/statuses/emails/wall_updated.txt:7
+#: templates/statuses/emails/wall_updated.txt:8
 #, python-format
 msgid " Update from the flight deck: %(username)s made an update:"
 msgstr ""
 
-#: templates/statuses/emails/wall_updated.txt:12
+#: templates/statuses/emails/wall_updated.txt:13
 msgid "See what they said at:"
 msgstr ""
 
-#: templates/statuses/emails/wall_updated.txt:14
+#: templates/statuses/emails/wall_updated.txt:15
 msgid ""
 "You can reply to this comment by email! Just type your reply at the top."
 msgstr ""
 
-#: templates/statuses/emails/wall_updated.txt:20
+#: templates/statuses/emails/wall_updated.txt:21
 msgid ""
 "This message was marked as important by an organizer. Participants can not "
 "turn off notifications for important updates."

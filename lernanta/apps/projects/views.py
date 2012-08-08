@@ -824,6 +824,9 @@ def edit_status(request, slug):
 def publish(request, slug):
     project = get_object_or_404(Project, slug=slug)
     project.publish()
+    msg = _('Congratulations, you sucessfully published your {0}!\
+        It will now show up on the learning page!')
+    messages.success(request, msg.format(project.kind.lower()))
     return http.HttpResponseRedirect(reverse('projects_show', kwargs={
         'slug': project.slug,
     }))

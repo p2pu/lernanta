@@ -38,7 +38,7 @@
     </div> <!-- /.post-body -->
 
     <div class="post-details">
-      <a href="{{ activity.get_absolute_url }}">{{ activity|time_since }}</a>
+      {{ activity|time_since }}
       {{ _('via') }}
       {% if activity.target_object.link %}
         <a href="{{ activity.target_object.link.url }}">{{ activity.target_object.link.name }}</a>

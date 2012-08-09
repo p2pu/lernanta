@@ -30,7 +30,6 @@
       <div id="badge-description">
 	    <h1>{{ badge }}</h1>
 	    <p>{{ badge.description }}</p>
-        <p>{{ _('This badge can be earned at all challenges.') }}</p>
         {% if badge.requirements %}
           <h2>{{ _('Requirements:') }}</h2> 
           {{ badge.requirements|embed|safe }}

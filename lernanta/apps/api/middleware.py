@@ -9,9 +9,11 @@ class APISubdomainMiddleware:
         host_s = host.replace('www.', '').split('.')
 
         if ((host_s[0] != 'api') and request.path.startswith('/alpha')):
+            request.session = {} #TODO - fix middleware depending on session
             raise Http404
 
         if ((host_s[0] == 'api') and not request.path.startswith('/alpha')):
+            request.session = {} #TODO - fix middleware depending on session
             raise Http404
 
         return None

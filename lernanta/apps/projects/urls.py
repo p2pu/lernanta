@@ -139,4 +139,8 @@ urlpatterns = patterns('',
     url(r'^(?P<slug>[\w-]+)/admin/export_detailed_csv/$',
         'projects.views.export_detailed_csv',
         name='projects_admin_export_detailed_csv'),
+
+    url(r'(?P<slug>[\w-]+)/edit/publish/$',
+        'projects.views.publish',
+        name='projects_publish'),
 )

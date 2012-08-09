@@ -56,7 +56,7 @@ USE_I18N = True
 USE_L10N = True
 
 SUPPORTED_NONLOCALES = ('media', 'static', '.well-known', 'pubsub', 'broadcasts',
-'ajax', 'alpha',)
+'ajax', 'api',)
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
@@ -103,7 +103,7 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 MIDDLEWARE_CLASSES = (
     'drumbeat.middleware.NotFoundMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-    'api.middleware.APISubdomainMiddleware',
+    #'api.middleware.APISubdomainMiddleware',
     'l10n.middleware.LocaleURLRewriter',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -217,10 +217,18 @@ CACHE_BACKEND = 'caching.backends.memcached://localhost:11211'
 CACHE_PREFIX = 'lernanta'
 CACHE_COUNT_TIMEOUT = 60
 
-# Email goes to the console by default.  s/console/smtp/ for regular delivery
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Email goes to a file by default.  s/filebased/smtp/ for regular delivery
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = path('mailbox') # change this to a proper location
+
 DEFAULT_FROM_EMAIL = 'admin@p2pu.org'
 REPLY_EMAIL_DOMAIN = 'reply.p2pu.org'
+
+# Quickest allowable response time in seconds
+MIN_EMAIL_RESPONSE_TIME = 30
+
+AUTO_REPLY_KEYWORDS = ['auto-reply', 'auto reply', 'auto-response',
+    'auto response']
 
 CELERY_RESULT_BACKEND = "amqp"
 
@@ -309,4 +317,4 @@ TRACKING_PREFIXES = [
 
 BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',
     'KaloogaBot', 'YodaoBot', 'Baiduspider', 'googlebot',
-    'Speedy Spider', 'DotBot']
+    'Speedy Spider', 'DotBot', 'Sogou']

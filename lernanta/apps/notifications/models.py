@@ -1,10 +1,13 @@
 from django.db import models
+from django.conf import settings
 
 from tasks import SendNotifications, PostNotificationResponse
+from tracker import statsd
 
-import logging
 import random
 import string
+import datetime
+import logging
 
 log = logging.getLogger(__name__)
 
@@ -19,6 +22,10 @@ class ResponseToken(models.Model):
 
     # URL to call when receiving a response
     response_callback = models.CharField(max_length=255, blank=False)
+
+    # Date that the token was created
+    creation_date = models.DateTimeField(auto_now_add=True,
+        default=datetime.datetime.now, blank=False)
 
     def save(self):
         """Generate response token."""
@@ -39,7 +46,7 @@ class ResponseToken(models.Model):
 
 
 def send_notifications(user_profiles, subject_template, body_template,
-        template_context, response_callback=None):
+        template_context, response_callback=None, sender=None):
     """Asynchronously send email notifications to users
     
     user_profiles - the users to send the notification to
@@ -49,6 +56,7 @@ def send_notifications(user_profiles, subject_template, body_template,
     response_callback - url called when a user responds to a notification
         If response_callback is None, it is assumed that the notification
         cannot be responded to
+    sender - the name to be used in the from address: sender <reply+token@domain>
     """
     token_text = None
     if (response_callback):
@@ -58,12 +66,37 @@ def send_notifications(user_profiles, subject_template, body_template,
         token_text = token.response_token
         
     args = (user_profiles, subject_template, body_template, template_context,
-        token_text,)
+        token_text, sender)
 
     log.debug("notifications.send_notifications: {0}".format(args))
     SendNotifications.apply_async(args)
 
 
-def post_notification_response(token, from_email, text):
-    args = (token, from_email, text,)
+def _auto_response_filter(token, text):
+    """ check if we think this is a auto response """
+    delta = datetime.datetime.now() - token.creation_date
+    total_seconds = delta.seconds + delta.days * 24 * 3600 # hello python 2.6
+    if total_seconds < settings.MIN_EMAIL_RESPONSE_TIME:
+        return True
+
+    for trigger_word in settings.AUTO_REPLY_KEYWORDS:
+        if trigger_word in text:
+            return True
+
+    return False
+
+
+def post_notification_response(token, user, text):
+    """ create response task and run asynchronously """
+
+    if _auto_response_filter(token, text):
+        subject_template = 'notifications/emails/response_bounce_subject.txt'
+        body_template = 'notifications/emails/response_bounce.txt'
+        context = { 'original_message': text }
+        send_notifications([user], subject_template, body_template, context)
+        log.debug('post_notification_response: quick response bounced')
+        statsd.Statsd.increment('auto-replies')
+        return
+
+    args = (token, user, text,)
     PostNotificationResponse.apply_async(args)

@@ -91,7 +91,7 @@ class RepliesViewsTests(TestCase):
 
         data = {
             u'api-key': settings.INTERNAL_API_KEY,
-            u'from': u'test@p2pu.org',
+            u'from': self.test_username,
             u'text': u'Maybe this time\n',
         }
 
@@ -113,7 +113,7 @@ class RepliesViewsTests(TestCase):
         
         data = {
             u'api-key': settings.INTERNAL_API_KEY,
-            u'from': u'test@p2pu.org',
+            u'from': self.test_username,
             u'text': u'Maybe this time\n',
         }
 
@@ -134,7 +134,7 @@ class RepliesViewsTests(TestCase):
         
         data = {
             u'api-key': 'notthecorrectkey',
-            u'from': u'test@p2pu.org',
+            u'from': self.test_username,
             u'text': u'Some stealthy reply that won\'t make it in!\n',
         }
 

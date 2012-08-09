@@ -159,4 +159,22 @@ nav ul ul {
     margin-left: 30px;
 }
 
+#id-course-image-link {
+    position: relative;
+    display: block;
+    height: 150px;
+    margin-bottom: 1em;
+}
 
+#id-course-image {
+    width: 243px;
+    height: 150px;
+    position: absolute;
+}
+
+#id-course-image-overlay {
+    width: 243px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+}

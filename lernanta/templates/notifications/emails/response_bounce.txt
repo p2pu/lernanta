@@ -1,0 +1,11 @@
+{% load l10n_tags %}{% load i18n %}{% blocktrans %}We love your enthusiasm for learning & for P2PU. Keep it up!
+
+But sometimes speedy responses are a sign that someone has an auto-responder on. And you wouldn't a gazillion of those in your inbox :)
+
+Sorry - we're going to ask you to send your message again. Just in case.{% endblocktrans %}
+
+{% blocktrans %}This was the message that we received:{% endblocktrans %}
+{{ original_message }}
+
+{% blocktrans %}Cheerio,
+P2PU team{% endblocktrans %}

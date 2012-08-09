@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-10 17:31+0200\n"
+"POT-Creation-Date: 2012-08-07 13:47+0200\n"
 "PO-Revision-Date: 2012-02-27 11:34+0800\n"
 "Last-Translator: 谢昱 <emiliaxie@qq.com>\n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
@@ -206,7 +206,7 @@ msgstr "已提交，审查中！"
 #: apps/content/views.py:117 apps/content/views.py:168
 #: apps/content/views.py:272 apps/content/views.py:385
 #: apps/replies/views.py:65 apps/replies/views.py:132
-#: apps/replies/views.py:212 apps/reviews/views.py:79
+#: apps/replies/views.py:212 apps/reviews/views.py:80
 #: apps/signups/views.py:149 apps/signups/views.py:189
 msgid "Please correct errors below."
 msgstr "请修改一下下面的错误。"
@@ -325,7 +325,7 @@ msgid "Can't send email"
 msgstr "不能发邮件"
 
 #: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
-#: apps/projects/views.py:1035
+#: apps/projects/views.py:1046
 msgid "Message successfully sent."
 msgstr "信息发出成功。"
 
@@ -716,7 +716,7 @@ msgstr "评论已恢复!"
 msgid "You need to be a reviewer."
 msgstr "你需要是评价者。"
 
-#: apps/reviews/views.py:76
+#: apps/reviews/views.py:77
 msgid "Review posted!"
 msgstr "评论已发表!"
 
@@ -796,8 +796,8 @@ msgid "The %s was added to this school."
 msgstr "%s增加进这所学校里。"
 
 #: apps/schools/views.py:397
-#, python-format
-msgid "There was an adding %s to this school."
+#, fuzzy, python-format
+msgid "There was an error adding %s to this school."
 msgstr "在学校中增加%s。"
 
 #: apps/schools/views.py:432
@@ -821,7 +821,7 @@ msgstr "限制注册"
 msgid "Non-moderated signup"
 msgstr "不限制注册"
 
-#: apps/signups/models.py:97
+#: apps/signups/models.py:104
 #, python-format
 msgid "the signup answer of %(author)s at %(project)s"
 msgstr "在%(author)s中%(project)s的注册答案"
@@ -840,8 +840,8 @@ msgid "You already joined this %s."
 msgstr "你已经参与这个%s。"
 
 #: apps/signups/views.py:114
-#, python-format
-msgid "Sign-up is currently closed.You can clone the %s if is full."
+#, fuzzy, python-format
+msgid "Sign-up is currently closed. You can clone the %s if it is full."
 msgstr "注册已关闭。如果这个%s已经满，你可以复制它。"
 
 #: apps/signups/views.py:123
@@ -893,7 +893,8 @@ msgid "Organizers can't use this page to leave their group."
 msgstr "组织者无法通过这个页面离开小组。"
 
 #: apps/signups/views.py:273 apps/signups/views.py:301
-msgid "This page can not be accessed with a get request."
+#, fuzzy
+msgid "This page can not be accessed with a GET request."
 msgstr "页面无法经过get请求得道。"
 
 #: apps/signups/views.py:306
@@ -905,7 +906,8 @@ msgid "Organizers do not need to adopt the challenges."
 msgstr "组织者不用使用挑战。"
 
 #: apps/signups/views.py:317
-msgid "You need to complete all tasks before becoming an adopter."
+#, fuzzy
+msgid "You need to complete all of the tasks before becoming an adopter."
 msgstr "在成为使用者前，你必须完成所有任务。"
 
 #: apps/signups/views.py:320
@@ -941,7 +943,7 @@ msgstr "标签"
 #: templates/projects/learn_tags.html:12
 #: templates/projects/project_create_overview.html:119
 #: templates/projects/project_edit_summary.html:69
-#: templates/projects/sidebar.html:96
+#: templates/projects/sidebar.html:100
 msgid "Tags"
 msgstr "标签"
 
@@ -962,11 +964,13 @@ msgid "Please choose another username."
 msgstr "请选择另一个用户名。"
 
 #: apps/users/forms.py:67
-msgid "This google openid is not supported. "
+#, fuzzy
+msgid "This Google OpenID is not supported. "
 msgstr "不支持这个谷歌开放账号。"
 
 #: apps/users/forms.py:68
-msgid "Please use your google profile openid."
+#, fuzzy
+msgid "Please use your Google profile OpenID."
 msgstr "请使用你的谷歌个人资料开放账号。"
 
 #: apps/users/forms.py:76
@@ -1279,7 +1283,7 @@ msgid "css/style-en.css"
 msgstr "css/style-zh-CN.css"
 
 #: templates/base.html:52 templates/activity/base.html:18
-#: templates/projects/base.html:22 templates/projects/learn.html:4
+#: templates/projects/base.html:26 templates/projects/learn.html:4
 #: templates/projects/learn.html.py:16 templates/projects/learn_tags.html:10
 #: templates/projects/project_clone.html:27
 #: templates/projects/project_create_overview.html:27
@@ -1308,7 +1312,7 @@ msgid "My Settings"
 msgstr "我的设置"
 
 #: templates/base.html:78 templates/chat/chat.html:4
-#: templates/chat/chat.html.py:10 templates/projects/sidebar.html:169
+#: templates/chat/chat.html.py:10 templates/projects/sidebar.html:176
 msgid "Chat"
 msgstr "聊天"
 
@@ -1356,7 +1360,7 @@ msgstr "js/script-zn-CN.js"
 #: templates/content/page.html:44 templates/drumbeat/report_abuse.html:10
 #: templates/drumbeat/report_received.html:10
 #: templates/drumbeatmail/inbox.html:49 templates/drumbeatmail/inbox.html:96
-#: templates/projects/sidebar.html:116
+#: templates/projects/sidebar.html:123
 #: templates/replies/_comment_threads.html:32
 #: templates/replies/_comment_threads.html:90
 #: templates/signups/sign_up.html:66 templates/users/sidebar.html:31
@@ -1527,7 +1531,6 @@ msgid "out of 4"
 msgstr "之4"
 
 #: templates/badges/_assessment_body.html:40
-#: templates/replies/emails/post_comment.txt:8
 msgid "Comment:"
 msgstr "评论："
 
@@ -1537,7 +1540,7 @@ msgstr "给予"
 
 #: templates/badges/_assessment_item.html:11
 #: templates/projects/project_edit_status.html:59
-#: templates/projects/sidebar.html:145
+#: templates/projects/sidebar.html:152
 msgid "to"
 msgstr "给"
 
@@ -1673,45 +1676,40 @@ msgstr "申请徽章"
 msgid "Award Badge to Peer"
 msgstr "给与你的同伴一个徽章"
 
-#: templates/badges/badge.html:33
-#, fuzzy
-msgid "This badge can be earned at all challenges."
-msgstr "你已经使用该挑战。"
-
-#: templates/badges/badge.html:35 templates/badges/peer_assessment.html:24
+#: templates/badges/badge.html:34 templates/badges/peer_assessment.html:24
 #: templates/badges/show_user_awards.html:20
 #: templates/badges/submission_edit.html:26
 #: templates/content/_toggle_completion.html:56
 msgid "Requirements:"
 msgstr ""
 
-#: templates/badges/badge.html:40
+#: templates/badges/badge.html:39
 #, fuzzy
 msgid "You need to have these badges:"
 msgstr "你没有任何徽章"
 
-#: templates/badges/badge.html:55
+#: templates/badges/badge.html:54
 msgid "Other badges you can apply for:"
 msgstr ""
 
-#: templates/badges/badge.html:67
+#: templates/badges/badge.html:66
 #, fuzzy
 msgid "Peers that have received this badge:"
 msgstr "用户 %s 没有受到所有基本勋章。"
 
-#: templates/badges/badge.html:79
+#: templates/badges/badge.html:78
 msgid "This badge can be earned at these Challenges:"
 msgstr ""
 
-#: templates/badges/badge.html:89
+#: templates/badges/badge.html:88
 msgid "Peers that are applying for this badge:"
 msgstr ""
 
-#: templates/badges/badge.html:91 templates/projects/sidebar.html:306
+#: templates/badges/badge.html:90 templates/projects/sidebar.html:313
 msgid "Awarded"
 msgstr "授奖"
 
-#: templates/badges/badge.html:91 templates/projects/sidebar.html:310
+#: templates/badges/badge.html:90 templates/projects/sidebar.html:317
 msgid "Pending"
 msgstr "待定"
 
@@ -1975,7 +1973,7 @@ msgstr ""
 
 #: templates/badges/emails/new_submission.txt:10
 #: templates/content/emails/content_update.txt:14
-#: templates/replies/emails/post_comment.txt:18
+#: templates/replies/emails/post_comment.txt:15
 #: templates/statuses/emails/wall_updated.txt:22
 msgid "Manage how often you get these delightful messages at:"
 msgstr ""
@@ -1985,7 +1983,7 @@ msgid "Make someone's day. Review a badge for "
 msgstr ""
 
 #: templates/content/_edit_pages_item.html:5
-#: templates/projects/project.html:22 templates/projects/sidebar.html:250
+#: templates/projects/project.html:21 templates/projects/sidebar.html:257
 msgid "New Task"
 msgstr ""
 
@@ -2141,7 +2139,7 @@ msgstr ""
 #: templates/projects/project_create_tasks.html:58
 #: templates/projects/project_edit.html:7
 #: templates/projects/project_edit_links.html:35
-#: templates/projects/sidebar.html:112
+#: templates/projects/sidebar.html:116
 #: templates/replies/_comment_threads.html:29
 #: templates/replies/_comment_threads.html:64
 #: templates/replies/_comment_threads.html:87
@@ -2208,7 +2206,6 @@ msgid "Task Discussion"
 msgstr "任务讨论"
 
 #: templates/content/emails/content_update.txt:2
-#: templates/replies/emails/post_comment.txt:3
 #, fuzzy
 msgid " was updated."
 msgstr "%s 更新"
@@ -2220,7 +2217,6 @@ msgstr "你无法创建新任务！"
 
 #: templates/content/emails/content_update.txt:4
 #: templates/content/emails/content_update_subject.txt:2
-#: templates/replies/emails/post_comment.txt:6
 #: templates/replies/emails/post_comment_subject.txt:2
 #: templates/signups/emails/new_signup_answer.txt:2
 msgid "."
@@ -2237,7 +2233,7 @@ msgstr ""
 #: templates/content/emails/content_update.txt:12
 #: templates/drumbeatmail/emails/direct_message.txt:9
 #: templates/relationships/emails/new_follower.txt:12
-#: templates/replies/emails/post_comment.txt:16
+#: templates/replies/emails/post_comment.txt:13
 #: templates/signups/emails/new_signup_answer.txt:22
 #: templates/statuses/emails/wall_updated.txt:17
 #: templates/users/emails/forgot_password.txt:11
@@ -2356,7 +2352,7 @@ msgstr "查看更多感兴趣的"
 
 #: templates/dashboard/sidebar.html:54
 #: templates/projects/_project_card.html:35
-#: templates/projects/_user_list.html:104 templates/projects/sidebar.html:185
+#: templates/projects/_user_list.html:104 templates/projects/sidebar.html:192
 #: templates/schools/school_edit_statistics.html:20
 #: templates/users/_profile_info.html:5 templates/users/_user_card.html:12
 msgid "Followers"
@@ -2526,7 +2522,7 @@ msgstr "重来"
 
 #: templates/drumbeatmail/emails/direct_message.txt:8
 #: templates/relationships/emails/new_follower.txt:11
-#: templates/replies/emails/post_comment.txt:15
+#: templates/replies/emails/post_comment.txt:12
 #: templates/signups/emails/new_signup_answer.txt:21
 msgid "Sincerely,"
 msgstr ""
@@ -2566,6 +2562,23 @@ msgstr "N j, Y, P"
 
 #: templates/messages/inbox.html:32
 msgid "delete"
+msgstr ""
+
+#: templates/notifications/emails/response_bounce.txt:1
+msgid ""
+"We love your enthusiasm for learning & for P2PU. Keep it up!\n"
+"\n"
+"But sometimes speedy responses are a sign that someone has an auto-responder "
+"on. And you wouldn't a gazillion of those in your inbox :)\n"
+"\n"
+"Sorry - we're going to ask you to send your message again. Just in case.\n"
+"\n"
+"Cheerio,\n"
+"P2PU team"
+msgstr ""
+
+#: templates/notifications/emails/response_bounce_subject.txt:1
+msgid "P2PU calling. Are we getting your machine?"
 msgstr ""
 
 #: templates/pages/get_involved_page.html:14
@@ -2792,7 +2805,7 @@ msgid "All"
 msgstr ""
 
 #: templates/projects/_project_card.html:23
-#: templates/projects/sidebar.html:173 templates/users/_user_card.html:20
+#: templates/projects/sidebar.html:180 templates/users/_user_card.html:20
 msgid "Updates"
 msgstr ""
 
@@ -2800,7 +2813,7 @@ msgstr ""
 #: templates/projects/_user_list.html:71
 #: templates/projects/project_edit.html:42
 #: templates/projects/project_edit_participants.html:7
-#: templates/projects/sidebar.html:181
+#: templates/projects/sidebar.html:188
 #: templates/schools/_projectset_card.html:34
 #: templates/schools/projectset_home.html:20
 #: templates/schools/school_edit_statistics.html:19
@@ -2830,7 +2843,7 @@ msgstr ""
 
 #: templates/projects/_task_list.html:6
 #: templates/projects/_tasks_list_wall.html:9
-#: templates/projects/sidebar.html:222
+#: templates/projects/sidebar.html:229
 msgid "Tasks"
 msgstr ""
 
@@ -2854,7 +2867,7 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: templates/projects/_task_list.html:45 templates/projects/sidebar.html:245
+#: templates/projects/_task_list.html:45 templates/projects/sidebar.html:252
 msgid "No tasks have been added."
 msgstr ""
 
@@ -2924,7 +2937,7 @@ msgstr ""
 msgid "Peers who have offered their help"
 msgstr ""
 
-#: templates/projects/_user_list.html:38 templates/projects/sidebar.html:177
+#: templates/projects/_user_list.html:38 templates/projects/sidebar.html:184
 #: templates/schools/school_edit_statistics.html:18
 msgid "Organizers"
 msgstr ""
@@ -3015,11 +3028,11 @@ msgstr ""
 msgid "Show More Results"
 msgstr ""
 
-#: templates/projects/project.html:23 templates/projects/project_edit.html:33
+#: templates/projects/project.html:22 templates/projects/project_edit.html:33
 msgid "Admin"
 msgstr ""
 
-#: templates/projects/project.html:40
+#: templates/projects/project.html:43
 msgid "Activity Wall"
 msgstr ""
 
@@ -3304,7 +3317,7 @@ msgstr ""
 msgid "Status &amp; Dates"
 msgstr ""
 
-#: templates/projects/project_edit.html:41 templates/projects/sidebar.html:165
+#: templates/projects/project_edit.html:41 templates/projects/sidebar.html:172
 msgid "Signup"
 msgstr ""
 
@@ -3437,7 +3450,7 @@ msgid ""
 msgstr ""
 
 #: templates/projects/project_edit_next_steps.html:26
-#: templates/projects/sidebar.html:161
+#: templates/projects/sidebar.html:168
 msgid "Kind"
 msgstr ""
 
@@ -3580,138 +3593,138 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
-#: templates/projects/sidebar.html:26 templates/users/sidebar.html:37
+#: templates/projects/sidebar.html:29 templates/users/sidebar.html:37
 msgid "Unfollow"
 msgstr ""
 
-#: templates/projects/sidebar.html:31 templates/users/sidebar.html:42
+#: templates/projects/sidebar.html:34 templates/users/sidebar.html:42
 msgid "Follow"
 msgstr ""
 
-#: templates/projects/sidebar.html:36
+#: templates/projects/sidebar.html:39
 msgid "Participate"
 msgstr ""
 
-#: templates/projects/sidebar.html:57
+#: templates/projects/sidebar.html:61
 msgid "Time it should take to complete:"
 msgstr ""
 
-#: templates/projects/sidebar.html:57
+#: templates/projects/sidebar.html:61
 msgid "hrs"
 msgstr ""
 
-#: templates/projects/sidebar.html:57
+#: templates/projects/sidebar.html:61
 #, fuzzy
 msgid "min"
 msgstr "在里面"
 
-#: templates/projects/sidebar.html:66 templates/projects/sidebar.html.py:69
+#: templates/projects/sidebar.html:70 templates/projects/sidebar.html.py:73
 msgid "Start Challenge"
 msgstr ""
 
-#: templates/projects/sidebar.html:73 templates/projects/sidebar.html.py:81
+#: templates/projects/sidebar.html:77 templates/projects/sidebar.html.py:85
 msgid "View Tasks"
 msgstr ""
 
-#: templates/projects/sidebar.html:75
+#: templates/projects/sidebar.html:79
 msgid "View Discussions"
 msgstr ""
 
-#: templates/projects/sidebar.html:79
+#: templates/projects/sidebar.html:83
 msgid "Request a Mentor"
 msgstr ""
 
-#: templates/projects/sidebar.html:83
+#: templates/projects/sidebar.html:87
 msgid "Discuss Challenge"
 msgstr ""
 
-#: templates/projects/sidebar.html:88
+#: templates/projects/sidebar.html:92
 msgid "Leave Challenge"
 msgstr ""
 
-#: templates/projects/sidebar.html:100
+#: templates/projects/sidebar.html:104
 msgid "View more tagged with "
 msgstr ""
 
-#: templates/projects/sidebar.html:109
+#: templates/projects/sidebar.html:113
 msgid "View Full Description"
 msgstr ""
 
-#: templates/projects/sidebar.html:134
+#: templates/projects/sidebar.html:141
 msgid "Archived"
 msgstr ""
 
-#: templates/projects/sidebar.html:137
+#: templates/projects/sidebar.html:144
 msgid "Under Development"
 msgstr ""
 
-#: templates/projects/sidebar.html:140
+#: templates/projects/sidebar.html:147
 msgid "Not Listed"
 msgstr ""
 
-#: templates/projects/sidebar.html:142
+#: templates/projects/sidebar.html:149
 msgid "DATE_FORMAT"
 msgstr "N j, Y"
 
-#: templates/projects/sidebar.html:144
+#: templates/projects/sidebar.html:151
 msgid "Runs"
 msgstr ""
 
-#: templates/projects/sidebar.html:150 templates/projects/sidebar.html:156
+#: templates/projects/sidebar.html:157 templates/projects/sidebar.html:163
 msgid "Based on"
 msgstr ""
 
-#: templates/projects/sidebar.html:190
+#: templates/projects/sidebar.html:197
 msgid "Pending Applicants"
 msgstr ""
 
-#: templates/projects/sidebar.html:209
+#: templates/projects/sidebar.html:216
 msgid "Edit Participants"
 msgstr ""
 
-#: templates/projects/sidebar.html:212
+#: templates/projects/sidebar.html:219
 msgid "Contact Organizer(s)"
 msgstr ""
 
-#: templates/projects/sidebar.html:215
+#: templates/projects/sidebar.html:222
 msgid "Contact Organizer"
 msgstr ""
 
-#: templates/projects/sidebar.html:256
+#: templates/projects/sidebar.html:263
 msgid "External Links"
 msgstr ""
 
-#: templates/projects/sidebar.html:274
+#: templates/projects/sidebar.html:281
 msgid "No external links have been added."
 msgstr ""
 
-#: templates/projects/sidebar.html:279
+#: templates/projects/sidebar.html:286
 msgid "Edit Links"
 msgstr ""
 
-#: templates/projects/sidebar.html:290
+#: templates/projects/sidebar.html:297
 #, fuzzy
 msgid "Help your peers"
 msgstr "你的同伴"
 
-#: templates/projects/sidebar.html:291
+#: templates/projects/sidebar.html:298
 msgid ""
 "Would you be interested in becoming a Mentor? Your peers are going to run "
 "into road blocks and they could really use your help."
 msgstr ""
 
-#: templates/projects/sidebar.html:292
+#: templates/projects/sidebar.html:299
 msgid "Become a Mentor"
 msgstr ""
 
-#: templates/projects/sidebar.html:317
+#: templates/projects/sidebar.html:324
 #, python-format
 msgid "%(counter)s peer needs your review!"
 msgid_plural "%(counter)s peers need your review!"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/projects/sidebar.html:317
+#: templates/projects/sidebar.html:324
 #: templates/users/_openid_providers.html:14
 msgid "Go"
 msgstr "继续"
@@ -3862,21 +3875,23 @@ msgid "Are you sure you want to delete this comment?"
 msgstr ""
 
 #: templates/replies/emails/post_comment.txt:6
+#, fuzzy, python-format
+msgid "This comment was posted at %(scope)s."
+msgstr "该评论已被删除。"
+
+#: templates/replies/emails/post_comment.txt:8
+#, fuzzy
+msgid "You can view this comment online at:"
+msgstr "无法编辑此评论。"
+
+#: templates/replies/emails/post_comment.txt:10
+msgid "To reply to this comment by email, simply type your reply at the top!"
+msgstr ""
+
 #: templates/replies/emails/post_comment_subject.txt:2
 #, fuzzy
 msgid " posted a new comment at "
 msgstr "无法在此发布发布评论。%s"
-
-#: templates/replies/emails/post_comment.txt:11
-#, fuzzy
-msgid "See comment at:"
-msgstr "在 %s 进行评论"
-
-#: templates/replies/emails/post_comment.txt:13
-#: templates/statuses/emails/wall_updated.txt:14
-msgid ""
-"You can reply to this comment by email! Just type your reply at the top."
-msgstr ""
 
 #: templates/replies/emails/post_comment_subject.txt:2
 msgid " in "
@@ -3944,6 +3959,29 @@ msgstr ""
 #, fuzzy
 msgid "Post New Review"
 msgstr "请检阅"
+
+#: templates/reviews/emails/review_submitted.txt:1
+#, python-format
+msgid ""
+"Hi there!\n"
+"\n"
+"%(reviewer)s had a look at %(course)s and here is what they had to say:"
+msgstr ""
+
+#: templates/reviews/emails/review_submitted.txt:7
+#, python-format
+msgid ""
+"You can also have a look at their feedback here: https://%(domain)s"
+"%(review_url)s\n"
+"\n"
+"Cheerio\n"
+"The P2PU team"
+msgstr ""
+
+#: templates/reviews/emails/review_submitted_subject.txt:3
+#, python-format
+msgid "%(user)s had a look at %(course_name)s!"
+msgstr ""
 
 #: templates/richtext/_external_link.html:2
 #, fuzzy
@@ -4540,6 +4578,11 @@ msgstr ""
 msgid "See what they said at:"
 msgstr ""
 
+#: templates/statuses/emails/wall_updated.txt:14
+msgid ""
+"You can reply to this comment by email! Just type your reply at the top."
+msgstr ""
+
 #: templates/statuses/emails/wall_updated.txt:20
 msgid ""
 "This message was marked as important by an organizer. Participants can not "
@@ -5079,6 +5122,14 @@ msgstr ""
 #: templates/users/emails/registration_confirm_subject.txt:2
 msgid "Greetings from P2PU. Your email address was changed."
 msgstr ""
+
+#, fuzzy
+#~ msgid "This badge can be earned at all challenges."
+#~ msgstr "你已经使用该挑战。"
+
+#, fuzzy
+#~ msgid "See comment at:"
+#~ msgstr "在 %s 进行评论"
 
 #, fuzzy
 #~ msgid "Thanks,"

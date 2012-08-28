@@ -1,12 +1,6 @@
 from django.conf.urls.defaults import patterns, url, include
 
 urlpatterns = patterns('',
-    url(r'^$', 'projects.views.learn',
-        name='projects_learn'),
-
-    url(r'^tags/$', 'projects.views.learn_tags',
-        name='projects_learn_tags'),
-
     url(r'^create/$', 'projects.views.create',
         name='projects_create'),
 

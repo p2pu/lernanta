@@ -25,12 +25,13 @@ def response(request):
 
     # clean up reply_text - original notification text should be removed by
     # module that sent the notification
-    reply_text = reply_text.strip()
-    if reply_text.startswith("['"):
-        reply_text = reply_text[2:]
-    if reply_text.endswith("']'"):
-        reply_text = reply_text[:-2]
-    
+    if reply_text:
+        reply_text = reply_text.strip()
+        if reply_text.startswith("['"):
+            reply_text = reply_text[2:]
+        if reply_text.endswith("']'"):
+            reply_text = reply_text[:-2]
+
     # get response token from 'reply+token@reply.p2pu.org'
     token_text = None
     if to_email.find('+') != -1 and to_email.find('@') != -1:

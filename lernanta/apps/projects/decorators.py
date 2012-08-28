@@ -5,7 +5,7 @@ from django.utils.translation import ugettext as _
 from l10n.urlresolvers import reverse
 from drumbeat import messages
 from projects.models import Project
-from projects.templatetags.project_tags import learn_default
+from learn.templatetags.learn_tags import learn_default
 
 
 def organizer_required(func):

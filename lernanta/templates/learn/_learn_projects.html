@@ -1,0 +1,9 @@
+{% load l10n_tags %}
+{% load i18n %}
+{% for project in pagination_current_page.object_list %}
+  <li>{% include "projects/_project_card.html" %}</li>
+{% empty %}
+  <div class="hint">{% blocktrans %}
+    Seems like we don't have any courses to show you. Try looking for courses in all languages or search for a course by keyword using the search box at the top of the page.
+  {% endblocktrans %}</div>
+{% endfor %}

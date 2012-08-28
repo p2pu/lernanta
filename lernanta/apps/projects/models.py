@@ -424,60 +424,7 @@ class Project(ModelBase):
                 id__in=joined)
         else:
             return Project.objects.none()
-
-    @classmethod
-    def get_listed_projects(cls):
-        """ return all the projects that should be listed """
-        listed = Project.objects.filter(
-            not_listed=False,
-            deleted=False,
-            archived=False,
-            under_development=False,
-            test=False)
-        return listed
-
-    @classmethod
-    def get_popular_tags(cls, max_count=10):
-        ct = ContentType.objects.get_for_model(Project)
-        listed = list(Project.get_listed_projects().values_list('id', flat=True))
-        return GeneralTaggedItem.objects.filter(
-            content_type=ct, object_id__in=listed).values(
-            'tag__name').annotate(tagged_count=Count('object_id')).order_by(
-            '-tagged_count')[:max_count]
-
-    @classmethod
-    def get_weighted_tags(cls, min_count=2, min_weight=1.0, max_weight=7.0):
-        ct = ContentType.objects.get_for_model(Project)
-        listed = Project.get_listed_projects().values('id')
-        tags = GeneralTaggedItem.objects.filter(
-            content_type=ct, object_id__in=listed).values(
-            'tag__name').annotate(tagged_count=Count('object_id')).filter(
-            tagged_count__gte=min_count)
-        if tags.count():
-            min_tagged_count = tags.order_by('tagged_count')[0]['tagged_count']
-            max_tagged_count = tags.order_by('-tagged_count')[0]['tagged_count']
-            if min_tagged_count == max_tagged_count:
-                factor = 1.0
-            else:
-                factor = float(max_weight - min_weight) / float(max_tagged_count - min_tagged_count)
-        tags = tags.order_by('tag__name')
-        for tag in tags:
-            tag['weight']  = max_weight - (max_tagged_count - tag['tagged_count']) * factor
-        return tags
-
-    @classmethod
-    def get_tagged_projects(self, tag_name, projects=None):
-        ct = ContentType.objects.get_for_model(Project)
-        items = GeneralTaggedItem.objects.filter(
-            content_type=ct, tag__name=tag_name).values(
-            'object_id')
-        if not projects:
-            projects = Project.objects
-        return projects.filter(id__in=items)
-
-    def is_challenge(self):
-        return (self.category == Project.CHALLENGE)
-
+   
     @staticmethod
     def filter_activities(activities):
         from statuses.models import Status

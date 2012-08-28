@@ -87,24 +87,6 @@ def sidebar(context):
 register.inclusion_tag('projects/sidebar.html', takes_context=True)(sidebar)
 
 
-def learn_default(tag=None, school=None):
-    learn_url = reverse('projects_learn')
-    learn_url += '?all_languages=on'
-    if school:
-        learn_url += "&school=%s" % school.id
-    if tag:
-        learn_url += '&tag=%s' % tag.name
-    if not school and not tag:
-        learn_url += '&featured=community'
-    return learn_url
-
-def school_learn_default(school, tag=None):
-    return learn_default(tag=tag, school=school)
-
-register.simple_tag(learn_default)
-register.simple_tag(school_learn_default)
-
-
 def task_list(project, user, show_all_tasks=True, short_list_length=3):
     tasks = Page.objects.filter(project=project, listed=True,
         deleted=False).order_by('index')

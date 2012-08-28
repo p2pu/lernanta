@@ -21,6 +21,7 @@ Crawl-delay: 10
 # Lernanta
 Disallow: /media/
 Disallow: /static/
+Disallow: /api/
 Disallow: /en/login/
 Disallow: /sv/login/
 Disallow: /es/login/

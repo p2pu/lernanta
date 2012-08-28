@@ -280,14 +280,6 @@ var batucada = {
             }
         }
     },
-    signup: {
-        onload: function() {
-            var $inputs = $('input[type=file]');
-            if ($inputs) {
-                attachFileUploadHandler($inputs);
-            }
-        }
-    },
     inbox: {
         onload: function() {
             loadMoreMessages();
@@ -429,38 +421,6 @@ $(document).ready(function() {
     }
     if ( $('#learn').length ) {
         enableLearn();
-    }
-
-    if ( $('#edit_pages #accordion') ) {
-        $('#edit_pages #accordion').accordion({
-            header: '> div > h3'
-        }).sortable({
-            axis: 'y',
-            handle: 'h3',
-            start: function( event, ui ) {
-                var $ckeditor_textarea = ui.item.find('textarea');
-                var ckeditor_text_area_id = $ckeditor_textarea.attr('id');
-                if ( CKEDITOR.instances[ckeditor_text_area_id] ) {
-                    $ckeditor_textarea.text(CKEDITOR.instances[ckeditor_text_area_id].getData());
-                }
-            },
-            stop: function( event, ui ) {
-                var $ckeditor_textarea = ui.item.find('textarea');
-                var ckeditor_text_area_id = $ckeditor_textarea.attr('id');
-                if ( CKEDITOR.instances[ckeditor_text_area_id] ) {
-                    CKEDITOR.instances[ckeditor_text_area_id].setData($ckeditor_textarea.text());
-                }
-                // IE doesn't register the blur when sorting
-                // so trigger focusout handlers to remove .ui-state-focus
-                ui.item.children( 'h3').triggerHandler( "focusout" );
-                
-            },
-            update: function( event, ui ) {
-                $(this).find('.accordion-section-order input').each(function(i) {
-                    $(this).val(i+1);
-                });
-            }
-          });
     }
 
 });

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load l10n_tags %}
-{% load project_tags %}
+{% load learn_tags %}
 {% block title %}{{ _('Learn') }}{% endblock %}
 {% block bodyid %}learn{% endblock %}
 {% block bodyclasses %}card-list{% endblock %}
@@ -13,7 +13,7 @@
     <a href="{{ learn_school.get_absolute_url }}">{{ learn_school.name }}</a>
   {% endif %}
   <span class="arrow">&rsaquo;</span>
-  <a href="{% if learn_school %}{% school_learn_default learn_school %}{% else %}{% learn_default %}{% endif %}">{{ _('Learn') }}</a>
+  <a href="{% if learn_school %}{% locale_url learn_schools school_slug=learn_school.slug %}{% else %}{% learn_default %}{% endif %}">{{ _('Learn') }}</a>
 {% endblock %}
 {% block breadcrumbs_actions %}
   {% if user.is_authenticated %}
@@ -23,22 +23,22 @@
 
 {% block body %}
   <div id="sidebar">
-    {% include "projects/_learn_filters.html"%}
+    {% include "learn/_learn_filters.html"%}
   </div>
 
   <div id="main">
     <br>
     <section>
       <h1 id="learn-header">
-        {% include "projects/_learn_header.html"%}
+        {% include "learn/_learn_header.html"%}
       </h1>
       <br>
       <ul class="project-list">
-        {% include "projects/_learn_projects.html" %}
+        {% include "learn/_learn_projects.html" %}
       </ul>
       <br clear="both">
       <div id="learn-pagination">
-        {% include "projects/_learn_pagination.html" %}
+        {% include "learn/_learn_pagination.html" %}
       </div>
       <a id="show-more-results" class="button" href="#">{{ _('Show More Results') }}</a>
     </section>

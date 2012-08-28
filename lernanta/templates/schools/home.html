@@ -1,7 +1,6 @@
 {% extends "schools/base.html" %}
 {% load l10n_tags %}
 {% load embed %}
-{% load project_tags %}
 
 {% block title %}{{ school.name }}{% endblock %}
 {% block bodyid %}school_home{% endblock %}
@@ -14,7 +13,7 @@
     {% if user.is_authenticated %}
        <a id="create-project" class="button" href="{% locale_url projects_create %}">{{ _('Create') }}</a>
     {% endif %}
-    <a class="button" href="{% school_learn_default school %}">{{ _('Browse') }}</a>
+    <a class="button" href="{% locale_url learn_schools school_slug=school.slug %}">{{ _('Browse') }}</a>
 {% endblock %}
 
 {% block body %}

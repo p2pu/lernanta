@@ -1051,7 +1051,7 @@ header {}
 
     #project_landing #breadcrumbs, #page #breadcrumbs, #edit_page #breadcrumbs, #comment #breadcrumbs, #delete_page #breadcrumbs, 
     #delete_restore_comment #breadcrumbs, #project_edit #breadcrumbs, #create_page #breadcrumbs, #signup #breadcrumbs, 
-    #project_user_list #breadcrumbs, #edit_pages #breadcrumbs {
+    #project_user_list #breadcrumbs {
         height: 6em;    
     }
     
@@ -2004,10 +2004,7 @@ header {}
 			border-radius:8px;
 			-moz-border-radius:8px;		
 		}
-                #edit_pages .modal {
-                    width: 655px;
-                }
-		.modal.nav{
+        .modal.nav{
 			width: 990px;
 		}
 		.modal article{
@@ -2051,9 +2048,6 @@ header {}
 			border-radius:5px 5px 0 0;
 			-moz-border-radius:5px 5px 0 0;
 		}
-                #edit_pages .modal > article > h1 {
-                    width: 581px;
-                }
 		.modal > article > h1 .pester{
 			font-size: 14px;
 			white-space: nowrap;
@@ -4022,7 +4016,6 @@ div.voting div.score {
 #footer-schools-wrapper {
   margin-top: 40px;
   background: #fff;
-  height: 150px;
   border-top: 1px solid #ccc;
 }
 
@@ -4032,32 +4025,14 @@ div.voting div.score {
   display: block;
   font-size: 16px;
   font-weight: normal;
-  margin: 15px 0 15px 60px;
+  margin: 15px 0 15px 0;
 }
 
 .school-small-icon {
-    width: 193px;
+    width: 200px;
     float: right;
-    margin-right: 35px;
-    margin-left: 25px;
+    text-align: center;
     margin-bottom: 10px;
-}
-
-#footer-schools-wrapper .school-small-icon.school-of-ed-pilot-small-icon {
-  width: 186px;
-  margin-right: 45px;
-}
-
-#footer-schools-wrapper .school-small-icon.school-of-webcraft-small-icon {
-  width: 155px;
-}
-
-#footer-schools-wrapper .school-small-icon.school-of-the-mathematical-future-small-icon {
-  width: 193px;
-}
-
-#footer-schools-wrapper .school-small-icon.school-of-social-innovation-small-icon {
-  width: 179px;
 }
 
 .school-small-icon a {
@@ -4070,18 +4045,14 @@ div.voting div.score {
 }
 
 .school-small-icon img {
-    width: 41px;
-    float: left;
-    margin-right: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 .school-small-icon p {
     font-size: 18px;
-}
-
-.school-small-icon.school-of-webcraft-small-icon p,
-.school-small-icon.school-of-ed-pilot-small-icon p {
-    margin-top: 10px;
+    height: 3em;
 }
 
 #footer-wrapper {
@@ -5744,6 +5715,30 @@ table.display thead, table.display tfoot {
     color: #FFFFFF;
 }
 
+#learn #sidebar a.active img {
+    float: right;
+}
+
+#learn div.hint {
+	padding: 24px 24px 24px;
+	background: -moz-linear-gradient(top, 
+		#FFFAE4 0%, 
+		#FFF4BE 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, 
+		color-stop(0%,#FFFAE4), 
+		color-stop(100%,#FFF4BE)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( 
+		startColorstr='#FFFAE4',
+		endColorstr='#FFF4BE',GradientType=0 );
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin-bottom: 18px;
+	box-shadow: #999 1px 1px 5px;
+	-moz-box-shadow: #999 1px 1px 5px;
+	-webkit-box-shadow: #999 1px 1px 5px;
+	position: relative;
+}
+
 #learn #sidebar a:hover, #learn #sidebar a:active {
     outline-width: 0pt;
     outline-style: none;
@@ -5920,51 +5915,3 @@ table.display thead, table.display tfoot {
     padding: 10px;
 }
 
-#edit_pages .accordion-section.deleted-page {
-    display: none;
-}
-
-#edit_pages .accordion-content {
-    height: 510px;
-}
-
-#edit_pages .accordion-content .accordion-preview {
-    display: none;
-}
-
-#edit_pages .accordion-content.show-preview-enabled {
-   height: auto;
-}
-
-#edit_pages .accordion-content.show-preview-enabled .accordion-preview {
-    display: inline;
-}
-
-#edit_pages .modal form {
-    width: 635px;
-}
-
-#edit_pages .modal form input[type="checkbox"] {
-    margin-left: 10px;
-    margin-top: 2px;
-}
-
-#edit_pages .accordion-content.show-preview-enabled .accordion-form-fields {
-    display: none;
-}
-
-#edit_pages .accordion-section-order {
-    display: none;
-}
-
-#edit_pages #addPageButton {
-    width: 180px;
-}
-
-#edit_pages #saveProgressButton {
-    width: 140px;
-}
-
-#edit_pages .errorlist {
-     left: 460px;
-}

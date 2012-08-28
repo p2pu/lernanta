@@ -1,21 +1,20 @@
 {% extends "base.html" %}
 {% load l10n_tags %}
-{% load project_tags %}
+{% load learn_tags %}
 {% block title %}{{ _('Learn | Tags') }}{% endblock %}
 {% block bodyid %}learn-tags{% endblock %}
-
 
 {% block breadcrumbs %}
   <span class="arrow">&rsaquo;</span>
   <a href="{% learn_default %}">{{ _('Learn') }}</a>
   <span class="arrow">&rsaquo;</span>
-  <a href="{% locale_url projects_learn_tags %}">{{ _('Tags') }}</a>
+  <a href="{% locale_url learn_tags %}">{{ _('Tags') }}</a>
 {% endblock %}
 
 {% block body %}
   <div id="main">
     {% for tag in tags %}
-      <a href="{% locale_url projects_learn %}?all_languages=on&tag={{ tag.tag__name }}">
+      <a href="{% locale_url learn_all %}?filter_tags={{ tag.tag__name }}">
           <font size={{tag.weight|floatformat:0}}>{{tag.tag__name}}</font>
       </a>
     {% endfor %}

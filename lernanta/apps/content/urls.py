@@ -2,7 +2,6 @@ from django.conf.urls.defaults import patterns, url
 
 urlpatterns = patterns('content.views',
   url(r'^create/$', 'create_page', name='page_create'),
-  url(r'^edit/$', 'edit_pages', name='edit_pages'),
   url(r'^index/(?P<page_slug>[\w-]+)/up/$', 'page_index_up',
       name='page_index_up'),
 

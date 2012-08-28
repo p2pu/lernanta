@@ -26,7 +26,7 @@ class UserProfileResource(ModelResource):
 
     def override_urls(self):
         return [
-            url(r"^(?P<resource_name>%s)/(?P<username>[\w\d_.-]+)/$" 
+            url(r"^(?P<resource_name>%s)/(?P<username>[\w\d\s_.-]+)/$" 
                 % self._meta.resource_name, self.wrap_view('dispatch_detail'), 
                 name="api_dispatch_detail"), 
         ]
@@ -52,3 +52,4 @@ class ProjectResource(ModelResource):
                 'long_description', 'name', 'other', 'other_description',
                 'resource_uri', 'short_description', 'slug', 'start_date',
                 'completion_badges']
+        resource_name = 'courses'

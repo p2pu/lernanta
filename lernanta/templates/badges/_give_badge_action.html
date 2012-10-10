@@ -1,11 +1,11 @@
 {% load l10n_tags %}
 {% if badges %}
-<div class="give_badge">
+<span class="give_badge">
   <a class="action give_badge_action action-bottom" href="#give_badge_dialog">{{ _('Give Badge') }}</a>
   <div class="give_badge_dialog" title="{{ _('Badges') }}">
     {% for badge in badges %}
       <a href="{% locale_url assessment_create slug=badge.slug %}?peer={{ peer.username }}" title="{{ badge|title }}"><img src="{{ badge.get_image_url }}" width="70" height="70" alt="{{ badge|title }}" class="badge-graphic"></a>
     {% endfor %}
   </div>
-</div>
+</span>
 {% endif %}

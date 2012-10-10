@@ -1,0 +1,171 @@
+/* line 2, ../sass/lernanta-activity.scss */
+#posts {
+  list-style: none;
+  margin: 13px 0;
+  padding: 0;
+}
+
+/* line 7, ../sass/lernanta-activity.scss */
+#posts .clear {
+  width: 600px;
+  height: 1px;
+  line-height: 1px;
+}
+
+/* line 13, ../sass/lernanta-activity.scss */
+#posts .action,
+.supplemental_actions .action {
+  display: block;
+  float: right;
+  color: #919191;
+  text-decoration: none;
+  padding-left: 20px;
+  margin-left: 18px;
+  left: 1px;
+  height: 16px;
+  line-height: 16px;
+}
+
+/* line 24, ../sass/lernanta-activity.scss */
+.supplemental_actions {
+  margin: 5px 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* line 29, ../sass/lernanta-activity.scss */
+.supplemental_actions .action {
+  display: inline;
+  margin: 0 5px 0 0px;
+  float: none;
+}
+
+/* line 34, ../sass/lernanta-activity.scss */
+#page #main .action {
+  float: right;
+}
+
+/* line 37, ../sass/lernanta-activity.scss */
+#page.project-kind-challenge #main .action.action-bottom {
+  float: left;
+}
+
+/* line 41, ../sass/lernanta-activity.scss */
+#posts .post-comments {
+  float: right;
+}
+
+/* line 45, ../sass/lernanta-activity.scss */
+#create_page .preview, #edit_page .preview {
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px #EEE;
+}
+
+/* line 52, ../sass/lernanta-activity.scss */
+#posts .action:hover,
+.supplemental_actions .action:hover {
+  color: #777;
+}
+
+/* line 55, ../sass/lernanta-activity.scss */
+#posts .reply-to {
+  background: url("/static/images/reply.icon.png") 0 0 no-repeat;
+}
+
+/* line 58, ../sass/lernanta-activity.scss */
+#posts .delete {
+  background: url("/static/images/delete-x.png") 0 0 no-repeat;
+}
+
+/* line 61, ../sass/lernanta-activity.scss */
+#posts .restore {
+  background: url("/static/images/restore.icon.png") 0 0 no-repeat;
+}
+
+/* line 64, ../sass/lernanta-activity.scss */
+#posts .give_badge_action {
+  background: url("/static/images/give-badge.png") 0 0 no-repeat;
+}
+
+/* line 67, ../sass/lernanta-activity.scss */
+#posts .edit {
+  background: url("/static/images/edit.icon.png") 0 0 no-repeat;
+}
+
+/* line 71, ../sass/lernanta-activity.scss */
+#posts .report,
+.supplemental_actions .report {
+  background: url("/static/images/report.icon.png") 0 1px no-repeat;
+  padding-left: 15px;
+}
+
+/* line 75, ../sass/lernanta-activity.scss */
+.supplemental_actions .report {
+  background-position: 0 0;
+}
+
+/* line 78, ../sass/lernanta-activity.scss */
+#posts .action:hover {
+  color: #777;
+}
+
+/* line 82, ../sass/lernanta-activity.scss */
+#posts .member-picture {
+  float: left;
+}
+
+/* line 85, ../sass/lernanta-activity.scss */
+#posts .post-contents {
+  padding-left: 64px;
+}
+
+/* line 89, ../sass/lernanta-activity.scss */
+.project-kind-challenge #posts .post-details h3 {
+  color: #919191;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/* line 95, ../sass/lernanta-activity.scss */
+#posts .post-details, #posts .post-details a {
+  color: #919191;
+}
+
+/* line 98, ../sass/lernanta-activity.scss */
+#posts .post-details a {
+  text-decoration: underline;
+}
+
+/* line 101, ../sass/lernanta-activity.scss */
+#posts .post-details a.member-name {
+  text-decoration: none;
+  color: #2084ca;
+}
+
+/* line 106, ../sass/lernanta-activity.scss */
+#posts .post-body, #posts .post-body p {
+  margin: 10px 0;
+}
+
+/* line 109, ../sass/lernanta-activity.scss */
+.project-kind-challenge #posts .post-body, #posts .post-body p {
+  color: #222;
+}
+
+/* line 113, ../sass/lernanta-activity.scss */
+.post-container {
+  -pie-background: linear-gradient(top, #ffffff, #f4f4f4);
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  /* min-height: 56px; */
+  margin: 0 0 9px;
+  border: 1px solid #c6c6c6;
+  border-bottom: 2px solid #c6c6c6;
+  padding: 8px;
+  behavior: url("/static/css/PIE.htc");
+  /* float: left; */
+  /* width: 630px; */
+}

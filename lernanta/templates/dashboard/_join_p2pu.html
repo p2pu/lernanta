@@ -2,10 +2,26 @@
 
 {% if display_join_p2pu %}
   <div class="container">
-    <div id="join-p2pu-section">
-      <a href="{% locale_url users_register %}" class="cta-button">{{ _('Join the Community') }}<br><span class="cta-button-second">{{ _('It\'s free!') }}</span></a>
-      <h1>{{ _('Learn anything, with your peers.') }}</h1>
-      <p>{{ _('At P2PU, people work together to learn a particular topic by completing tasks, assessing individual and group work, and providing constructive feedback.') }}</p>
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="well well-large">
+          <div class="span4 inherit-height">
+            <div class="vertical-center">   
+              <a href="{% locale_url users_register %}" class="btn btn-large btn-short btn-apricot">{{ _('Join the Community') }}<br /><small>{{ _('It\'s free!') }}</small></a>
+            </div>
+          </div>
+          <div class="span4 inherit-height">
+            <div class="vertical-center">
+              <h2><strong>{{ _('Learn anything, with your peers.') }}</strong></h2>
+            </div>
+          </div>
+          <div class="span4 inherit-height">
+            <div class="vertical-center">
+              <span class="wrap">{{ _('At P2PU, people work together to learn a particular topic by completing tasks, assessing individual and group work, and providing constructive feedback.') }}</span>
+            </div>
+          </div>
+        </div>    
+      </div>
     </div>
   </div>
 {% endif %}

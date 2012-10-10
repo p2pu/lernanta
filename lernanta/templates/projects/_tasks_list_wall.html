@@ -1,29 +1,92 @@
 {% load l10n_tags %}
 {% load project_tags %}
 
-<div id="task_list_wall" class="{% if toggled_tasks %}toggled_tasks{% else %}toggled_discussions{% endif %}">
-  {% if participating and tasks_count %}
-    {% tasks_completed_msg project user hidde_tasks_complete_msg adopter_request %}
-  {% endif %}
-    <div id="task_list_wall_toogle">
-		<input type="radio" id="radio1" name="radio" {% if toggled_tasks %}checked="checked"{% endif %} /><label for="radio1">{{ _('Tasks') }}</label>
-		<input type="radio" id="radio2" name="radio" {% if not toggled_tasks %}checked="checked"{% endif %} /><label for="radio2">{{ _('Discussions') }}</label>
-	</div>
-  {% if participating and tasks_count %}
-      <div id="progress">
-        <div id="progressbar" value="{{ progressbar_value }}"></div>
-        <p><span id="completed_count">{{ completed_count }}</span>/<span id="total_count">{{ tasks_count }}</span> {{ _('Completed') }}</p>
-      </div>
-  {% endif %}
-  {% task_list project user %}
-  {% project_wall request project discussion_area %}
-  {% if next_badges %}
-        <div class="next-steps">
-          <h3>{{ _('Badges you can earn in this challenge:') }}</h3>
-          <br>
-            {% for badge in next_badges %}
-              <a href="{{ badge.get_absolute_url }}" title="{{ badge|title }}"><img src="{{ badge.get_image_url }}" width="70" height="70" alt="{{ badge|title }}" /></a>
-            {% endfor %}
+
+
+<div class="row-fluid"> <!-- ProjectCourse:Challenge Nav Tab -->
+  <div id="task_list_wall" class="tabbable">
+
+          {% if participating and tasks_count %}
+            {% tasks_completed_msg project user hidde_tasks_complete_msg adopter_request %}
+          {% endif %}          
+
+     
+    <ul class="nav nav-tabs" id="task_list_wall_toogle">
+      <li class="active"><a href="#tasks-tab" data-toggle="tab">{{ _('Tasks') }}</a></li>
+
+      <!-- ALTERNATE CODE USING BOTH NAV-TAB AND DROPDOWN MENU -->
+      <!-- <li id="the-d" class="dropdown active" data-dropdown="dropdown"> -->
+      <!--   <a class="dropdown-toggle" href="#"> -->
+      <!--       {{ _('Tasks') }} -->
+      <!--       <b class="caret"></b> -->
+      <!--   </a> -->
+      <!--   <ul class="dropdown-menu"> -->
+      <!--     {% if tasks %} -->
+      <!--       {% for task in tasks %} -->
+      <!--         {% if forloop.counter <= 7 %} -->
+      <!--           <li><a class="taskLink" href="{{ task.get_absolute_url }}"><span class="taskNumber">{{ forloop.counter }}{% if is_challenge %}.{% endif %}</span> {{ task.title }}</a></li> -->
+      <!--         {% else %}{% if forloop.last %} -->
+      <!--           <li><a class="taskLink" href="{% locale_url projects_task_list slug=project.slug %}">{{ _('See All Tasks') }} &raquo;</a></li> -->
+      <!--         {% endif %}{% endif %} -->
+      <!--       {% endfor %} -->
+      <!--     {% endif %} -->
+      <!--   </ul> -->
+      <!-- </li> -->
+      <li><a href="#discussions-tab" data-toggle="tab">{{ _('Discussions') }}</a></li>
+      <li><a href="#people-tab" data-toggle="tab">{{ _('People') }}</a></li>
+      <li><a href="#links-tab" data-toggle="tab">{{ _('Links') }}</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tasks-tab"> <!-- Task List Tab Content -->
+        <div class="row-fluid">
+          {% if participating and tasks_count %}
+          <div class="span2 inherit-height add-top-bottom-margins"> </div>
+          <div class="span6 inherit-height add-top-bottom-margins">
+            <div class="progress progress-clemintine" id="progressbar">
+              <div class="bar" style="width: {{ progressbar_value }}%"></div>
+            </div>
+          </div>
+          <div class="span2 inherit-height add-top-bottom-margins">
+              <span id="completed_count">{{ completed_count }}</span>/<span id="total_count">{{ tasks_count }}</span> {{ _('Complete') }}
+          </div>
+          {% endif %}
         </div>
-   {% endif %}
+        {% task_list project user %}
+      </div> <!-- /Task List Tab Content -->
+      <div class="tab-pane" id="discussions-tab"> <!-- Activity Wall:Discussion Tab Content -->
+        {% project_wall request project discussion_area %}
+      </div> <!-- /Activity Wall:Discussion Tab Content -->
+      <div class="tab-pane" id="people-tab"> <!-- People Tab Content-->
+        <div id="main-people">
+          <section id="people" class="panel">
+            {% project_user_list request project 168 "True" %}
+          </section>
+        </div>
+      </div> <!-- /People Tab Content -->
+      <div class="tab-pane" id="links-tab"> <!-- Links Tab Content -->
+        Links Tab Content
+      </div> <!-- /Links Tab Content -->
+    </div>
+  </div>
+</div> <!-- /ProjectCourse:Challenge Nav Tab -->
+<hr />
+<div class="row-fluid">
+  {% if next_badges %}
+    <h2>{{ _('Badges you can earn in this challenge:') }}</h2>
+    <div class="well well-large">
+      {% for badge in next_badges %}
+        <div class="span2 inherit-height">
+          <div class="vertical-center">
+            <!-- <a href="{{ badge.get_absolute_url }}" title="{{ badge|upper }}">P2PU</a> -->
+            <a href="{{ badge.get_absolute_url }}" title="{{ badge|upper }}"><img src="{{ badge.get_image_url }}" width="80" height="80" alt="{{ badge|upper }}" /></a>
+          </div>
+        </div>
+        <div class="span2 inherit-height remove-left-margin">
+          <div class="vertical-center">
+            <span class="wrap"><a href="{{ badge.get_absolute_url }}" title="{{ badge|upper }}"><strong>{{ badge.name|upper }}</strong> BADGE</a></span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
 </div>

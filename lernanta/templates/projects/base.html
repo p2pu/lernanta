@@ -23,13 +23,10 @@
   <h1 id="project-name"><a href="{{ project.get_absolute_url }}" class="school_header">{{ project.name }}</a></h1>
 {% endblock %}
 {% block breadcrumbs %}
-  <span class="arrow">&rsaquo;</span>
-  <a href="{% learn_default %}">{{ _('Learn') }}</a>
-  <span class="arrow">&rsaquo;</span>
+  <li><span class="divider">&rsaquo;</span><a href="{% learn_default %}">{{ _('Learn') }}</a></li>
   {% if is_challenge and project.accepted_school %}
-  <a href="{{ project.accepted_school.get_absolute_url }}">{{ project.accepted_school }}</a>
-  <span class="arrow">&rsaquo;</span>
+  <li><span class="divider">&rsaquo;</span><a href="{{ project.accepted_school.get_absolute_url }}">{{ project.accepted_school }}</a></li>
   {% endif %}
-  <a href="{{ project.get_absolute_url }}">{{ project.name }}</a>
+  <li><span class="divider">&rsaquo;</span><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></li>
   {% block project_breadcrumbs %}{% endblock %}
 {% endblock %}

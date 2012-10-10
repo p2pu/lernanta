@@ -1,9 +1,40 @@
 {% load l10n_tags %}
 {% load i18n %}
+
+<!-- The enumeration below is designed to insert a new row after every 3rd project: -->
+
 {% for project in pagination_current_page.object_list %}
-  <li>{% include "projects/_project_card.html" %}</li>
-{% empty %}
-  <div class="hint">{% blocktrans %}
-    Seems like we don't have any courses to show you. Try looking for courses in all languages or search for a course by keyword using the search box at the top of the page.
-  {% endblocktrans %}</div>
+  
+  <!-- if this is the first time through the loop, create the first row -->
+  {% if forloop.first %}
+    <div class="row-fluid">
+      <ul class="thumbnails">
+  {% endif %}
+  
+        <!-- add the current project to the row -->
+        <li class="span4">{% include "projects/_project_card.html" %}</li>
+
+  <!-- if this was the 3rd project in the row, end the row -->			
+  {% if forloop.counter|divisibleby:"3" %}
+      </ul>
+    </div>    
+    <!-- as long as this is not the last project in the list, create a new row -->
+    {% if not forloop.last %}
+      <div class="row-fluid">
+        <ul class="thumbnails">
+    {% endif %}
+    
+  <!-- if this is the last project in the list, end the row if it hasn't been ended yet -->
+  {% else %}{% if forloop.last %}
+      </ul>
+    </div>
+  {% endif %}{% endif %}
+
+  {% empty %}
+    <div class="hint">
+      {% blocktrans %}
+        Seems like we don't have any courses to show you. Try looking for courses in all languages or search for a course by keyword using the search box at the top of the page.
+      {% endblocktrans %}
+    </div>
+
 {% endfor %}

@@ -3,332 +3,348 @@
 {% load project_tags %}
 {% load learn_tags %}
 
+
 <div id="sidebar-wrapper">
 
-<div id="sidebar">
-  <section id="project"class="panel">
-    <figure class="project_img">
-      <a id="id-course-image-link" href="{{ project.get_absolute_url }}">
-        {% if project.image %}
-  	         <img id="id-course-image" src="{{ MEDIA_URL }}{{ project.image }}" alt="course image"/>
-        {% else %}
-             <img id="id-course-image" src="{{ STATIC_URL}}images/project-missing.png" alt="course image"/>
-        {% endif %}
-        {% if project.under_development %}
-          <img id="id-course-image-overlay" src="{{ STATIC_URL }}images/course-draft.png" alt="draft course"/>
-        {% endif %}
-      </a>
-    </figure>
-
-    {% if not is_challenge %}
-
-    {% if not organizing and not participating and not project.archived %}
-      {% if user.is_authenticated %}
-        {% if following %}
-          <form id="unfollow_button" method="post" action="{% locale_url relationships_unfollow object_type='course' slug=project.slug %}">
-            {% csrf_token %}
-            <button>{{ _('Unfollow') }}</button>
-          </form>
-        {% else %}
-          <form id="follow_button" method="post" action="{% locale_url relationships_follow object_type='course' slug=project.slug %}">
-            {% csrf_token %}
-            <button>{{ _('Follow') }}</button>
-          </form>
-        {% endif %}
-      {% endif%}
-      <p id="participate_button" {% if not user.is_authenticated %}class="login_participate_button"{% endif %}>
-        <a href="{% locale_url sign_up_answer slug=project.slug %}">{{ _('Participate')}}</a>
-      </p>
-        
-    {% endif %}
-
-    <br>
-
-    {% endif %}
-
-    <div id="project-description">
-        {{ project.short_description }}
-    </div>
-    <br>
-    <div id="project-summary">
-      {{ project.long_description|safe }}
-    </div>
-
-    {% if is_challenge %}
-
-      {% if project.duration_hours or project.duration_minutes %}
-        <div class="duration-time">
-          <span class="left">P</span>
-          <span class="right"><span class="top">{{ _('Time it should take to complete:') }}</span><br>{% if project.duration_hours %} {{ project.duration_hours }} {{ _('hrs') }}{% endif %}{% if project.duration_minutes %} {{ project.duration_minutes }} {{ _('min') }}{% endif %}</span>
-        </div>
-      {% endif %}
-
-      {% if not organizing and not participating %}
-        {% if not archived %}
-          {% if user.is_authenticated %}
-            <form method="post" action="{% locale_url direct_signup slug=project.slug %}">
-              {% csrf_token %}
-              <button id="direct_signup_button">{{ _('Start Challenge') }}</button>
-            </form>
+<div class="well">
+  <div id="sidebar">
+    <div id="project" class="row-fluid panel">
+      <div class="row-fluid">
+        <a id="id-course-image-link" href="{{ project.get_absolute_url }}">
+          {% if project.image %}
+            <img id="id-course-image" src="{{ MEDIA_URL }}{{ project.image }}" alt="course image"/>
           {% else %}
-              <a id="direct_signup_button" href="{{ login_with_redirect_url }}">{{ _('Start Challenge')}}</a>
+            <img id="id-course-image" src="{{ STATIC_URL}}images/project-missing.png" alt="course image"/>
+          {% endif %}
+          {% if project.under_development %}
+            <img id="id-course-image-overlay" src="{{ STATIC_URL }}images/course-draft.png" alt="draft course"/>
+          {% endif %}
+        </a>
+      </div>
+    
+      <div class="row-fluid">
+        <div class="span12 center-via-text-align">
+        {% if not is_challenge %}
+          {% if not organizing and not participating and not project.archived %}
+            {% if user.is_authenticated %}
+              {% if following %}
+                <form id="unfollow_button" method="post" action="{% locale_url relationships_unfollow object_type='course' slug=project.slug %}">
+                  {% csrf_token %}
+                  <button class="btn btn-clemintine">{{ _('Unfollow') }}</button>                  
+                  <span id="participate_button" {% if not user.is_authenticated %}class="login_participate_button"{% endif %}>
+                    <a class="btn btn-olive" href="{% locale_url sign_up_answer slug=project.slug %}">{{ _('Participate')}}</a>
+                  </span>                  
+                </form>
+              {% else %}
+                <form id="follow_button" method="post" action="{% locale_url relationships_follow object_type='course' slug=project.slug %}">
+                  {% csrf_token %}
+                  <button class="btn btn-apricot">{{ _('Follow') }}</button>                  
+                  <span id="participate_button" {% if not user.is_authenticated %}class="login_participate_button"{% endif %}>
+                    <a class="btn btn-olive" href="{% locale_url sign_up_answer slug=project.slug %}">{{ _('Participate')}}</a>
+                  </span>                  
+                </form>
+              {% endif %}
+            {% else %}
+              <div id="participate_button" {% if not user.is_authenticated %}class="login_participate_button"{% endif %}>
+                <a class="btn btn-olive" href="{% locale_url sign_up_answer slug=project.slug %}">{{ _('Participate')}}</a>
+              </div>
+            {% endif%}
           {% endif %}
         {% endif %}
-        {% if not toggled_tasks %}
-          <a href="{{ project.get_absolute_url }}" class="discuss-link">{{ _('View Tasks')}}</a>
-        {% else %}
-          <a href="{% locale_url projects_discussion_area slug=project.slug %}" class="discuss-link">{{ _('View Discussions')}}</a>
-        {% endif %}
-      {% else %}
-        {% if project.school.mentee_form_url %}
-          <a href="{{ project.school.mentee_form_url }}" class="discuss-button" target="_blank">{{ _('Request a Mentor')}}</a>
-        {% else %}{% if not toggled_tasks %}
-          <a href="{{ project.get_absolute_url }}" class="discuss-button">{{ _('View Tasks')}}</a>
-        {% else %}
-          <a href="{% locale_url projects_discussion_area slug=project.slug %}" class="discuss-button">{{ _('Discuss Challenge')}}</a>
-        {% endif %}{% endif %}
-        {% if not organizing %}
-          <form method="post" action="{% locale_url direct_signup slug=project.slug %}">
-            {% csrf_token %}
-            <a id="leave_direct_signup_button">{{ _('Leave Challenge') }}</a>
-          </form>
-        {% endif %}
-      {% endif %}
+        </div>
+      </div>
 
-    {% else %}
+      <div class="row-fluid">
+        <div id="project-description">
+          <h4>
+            {{ project.short_description }}
+          </h4>
+        </div>
+      </div>
 
-    {% if tags %}
-      <h3><b>{{ _('Tags') }}</b></h3>
-      <ul class="tags">
-        {% for tag in tags %}
-          <li>
-            <a href="{% learn_default tag %}" title="{{ _('View more tagged with ') }}{{ tag.name }}">
-              {{ tag.name }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-    <a id="project-description-link"
-       href="{{ project.detailed_description.get_absolute_url }}">
-      {{ _('View Full Description') }}
-    </a>
-    {% if organizing %}
-      <a class="button" href="{% locale_url projects_edit slug=project.slug %}">{{ _('Edit') }} {{ project.kind|title }}</a>
-      {% if project.under_development %}
-          <a href="{% locale_url projects_publish slug=project.slug %}" class="button">Publish</a>
-      {% endif %}
-    {% else %}
-      {% if user.is_authenticated %}
-        <p class="supplemental_actions">
-          <a class="report abuse action" href="{% locale_url drumbeat_abuse  model="project" app_label="projects" pk=project.id %}">{{_('Report Abuse')}}</a>
-        </p>
-      {% endif %}
-    {% endif %}
-    <ul id="project-stats">
-      {% if project.accepted_school %}
-        <li class="school-small-icon {{ project.accepted_school.slug }}-small-icon">
-          <a href="{{ project.accepted_school.get_absolute_url }}" title="{{ project.accepted_school.name }}">
-            {% if project.accepted_school.groups_icon %}
-  	          <img class="school-small-icon" src="{{ MEDIA_URL }}{{ project.accepted_school.groups_icon }}" width="41" height="50" alt="{{ project.accepted_school.name }}"/>
+      <div class="row-fluid add-top-margin-15">
+        <div id="project-summary">
+          {{ project.long_description|safe }}
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        {% if is_challenge %}
+          <div class="row-fluid">
+            {% if project.duration_hours or project.duration_minutes %}
+              <div class="duration-time">
+                <span class="left"></span>
+                <span class="right"><span class="top">{{ _('Time it should take to complete:') }}</span><br>{% if project.duration_hours %} {{ project.duration_hours }} {{ _('hrs') }}{% endif %}{% if project.duration_minutes %} {{ project.duration_minutes }} {{ _('min') }}{% endif %}</span>
+              </div>
+            {% endif %}
+          </div>
+          <div class="row-fluid center-via-text-align">
+            {% if not organizing and not participating %}
+              {% if not archived %}
+                {% if user.is_authenticated %}
+                  <form method="post" action="{% locale_url direct_signup slug=project.slug %}">
+                    {% csrf_token %}
+                    <button class="btn btn-large btn-fit btn-olive" id="direct_signup_button">{{ _('Start Challenge') }}</button>
+                  </form>
+                {% else %}
+                    <a class="btn btn-large btn-fit btn-olive" id="direct_signup_button" href="{{ login_with_redirect_url }}">{{ _('Start Challenge')}}</a>
+                {% endif %}
+              {% endif %}
+              {% if not toggled_tasks %}
+                <a href="{{ project.get_absolute_url }}" class="btn discuss-link">{{ _('View Tasks')}}</a>
+              {% else %}
+                <a href="{% locale_url projects_discussion_area slug=project.slug %}" class="btn discuss-link">{{ _('View Discussions')}}</a>
+              {% endif %}
             {% else %}
-              <img src="{{STATIC_URL}}images/school-small-missing.png" width="41" height="50" alt="{{ project.accepted_school.name }}"/>
+              {% if project.school.mentee_form_url %}
+                <a href="{{ project.school.mentee_form_url }}" class="btn btn-apricot discuss-button" target="_blank">{{ _('Request a Mentor')}}</a>
+              {% else %}{% if not toggled_tasks %}
+                <a href="{{ project.get_absolute_url }}" class="btn btn-apricot discuss-button">{{ _('View Tasks')}}</a>
+              {% else %}
+                <a href="{% locale_url projects_discussion_area slug=project.slug %}" class="btn btn-apricot discuss-button">{{ _('Discuss Challenge')}}</a>
+              {% endif %}{% endif %}
+              {% if not organizing %}
+                <form method="post" action="{% locale_url direct_signup slug=project.slug %}">
+                  {% csrf_token %}
+                  <a class="btn btn-blood-orange" id="leave_direct_signup_button">{{ _('Leave Challenge') }}</a>
+                </form>
+              {% endif %}
             {% endif %}
-            <p>{{ project.accepted_school.short_name|upper }}</p>
-          </a>
-      </li>
-      {% endif %}
-      {% if project.archived %}
-      <li class="beta-development">{{ _('Archived') }}</li>
-      {% endif %}
-      {% if project.under_development %}
-      <li class="beta-development">{{ _('Under Development') }}</li>
-      {% endif %}
-      {% if project.not_listed %}
-      <li class="beta-development">{{ _('Not Listed') }}</li>
-      {% endif %}
-      <!-- This line is here so the {{ _('DATE_FORMAT') }} gets configured for different locales -->
-      {% if project.start_date or project.end_date %}
-        <li>{{ _('Runs') }} {% if project.start_date %} {{ project.start_date }} {% endif %} 
-        {% if project.end_date %} {{ _('to') }}  
-        {{ project.end_date }}{% endif %} </li>
-      {% endif %}
-      {% if project.clone_of %}
-      <li>
-        <div class="label">{{ _('Based on') }}</div>
-	    <div class="value"><a href="{{ project.clone_of.get_absolute_url }}">{{ project.clone_of.name }}</a></div>
-      </li>
-      {% endif %}
-      {% if imported_from %}
-      <li>
-        <div class="label">{{ _('Based on') }}</div>
-	    <div class="value"><a href="{{ imported_from.url }}">{{ imported_from.name }}</a></div>
-      </li>
-      {% endif %}
-      <li>
-        <div class="label">{{ _('Kind') }}</div>
-	    <div class="value">{{ project.kind|title }}</div>
-      </li>
-      <li>
-        <div class="label">{{ _('Signup') }}</div>
-	    <div class="value"><a href="{{ sign_up.get_absolute_url }}">{{ sign_up.get_status_display }}</a></div>
-      </li>
-      <li>
-        <div class="label">{{ _('Chat') }}</div>
-        <div class="value"><a href="{% locale_url chat %}" target="_blank">{{ chat }}</a></div>
-      </li>
-      <li>
-	<div class="label">{{ _('Updates') }}</div>
-	<div class="value">{{ update_count }}</div>
-      </li>
-      <li>
-	<div class="label">{{ _('Organizers') }}</div>
-	<div class="value">{{ organizers_count }}</div>
-      </li>
-      <li>
-	<div class="label">{{ _('Participants') }}</div>
-	<div class="value">{{ participants_count }}</div>
-      </li>
-      <li>
-	<div class="label">{{ _('Followers') }}</div>
-	<div class="value">{{ followers_count }}</div>
-      </li>
-    {% if organizing %}
-    <li>
-		<div class="label">{{ _('Pending Applicants') }}</div>
-		<div class="value">
-		<a href="{{ sign_up.get_absolute_url }}">{{ pending_signup_answers_count }}</a>
-		</div>
-    </li>
-    {% endif %}
-    </ul> <!-- /#project-stats -->
-
-    {% endif %}
-
-  </section>
-
-{% if not is_challenge %}
-
-<section id="people" class="panel">
-  {% project_user_list request project 64 %}
-
-  <br><br>
-  {% if organizing %}
-    <a class="button" href="{% locale_url projects_edit_participants slug=project.slug %}">{{ _('Edit Participants') }}</a>
-     <br>
-     <br>
-     <a class="button" href="{% locale_url projects_contact_organizers slug=project.slug %}">{{ _('Contact Organizer(s)')}}</a>
- 
-  {% else %}{% if user.is_authenticated %}
-    <a class="button" href="{% locale_url projects_contact_organizers slug=project.slug %}">{{ _('Contact Organizer')}}</a>
-  {% endif %}{% endif %}
-</section>
-
-<section id="course-content" class="panel">
-
-  <a name="tasks"></a>
-  <h2 class="school_header">{{ _('Tasks') }}</h2>
-  <br>
-  {% if content_pages %}
-    <nav id="content-pages">
-    <form id="reorder_tasks" method="post" action="{%locale_url page_index_reorder slug=project.slug%}">
-    {% csrf_token %}
-    <div style='display:none'><input type='hiden' name='canChangeOrder' value='{{can_change_order}}'/></div>
-      <ul>
-        {% for page in content_pages %}
-	<li>	
-	    <a class="taskLink" id="{{page.slug}}" href="{{ page.get_absolute_url }}">{{ page.title }}</a>
-	    
-            {% if can_change_order %}
-	            {% if not forloop.first %}<a class="robttn up" href="{% locale_url page_index_up slug=project.slug page_slug=page.slug %}">(UP)</a>{% endif %}
-	            {% if not forloop.last %}<a class="robttn dwn" href="{% locale_url page_index_down slug=project.slug page_slug=page.slug %}">(DOWN)</a>{% endif %}
+          </div>
+        {% else %}
+          {% if tags %}
+            <div class="row-fluid">
+              <ul class="nav nav-list">
+                <li class="divider"></li>
+                <li class="nav-header">
+                  {{ _('Tags') }}<i class="icon-tags icon-large"></i>
+                </li>
+                {% for tag in tags %}
+                  <li>
+                    <a href="{% learn_default tag %}" title="{{ _('View more tagged with ') }}{{ tag.name }}">
+                      {{ tag.name }}
+                    </a>
+                  </li>
+                {% endfor %}
+                <li class="divider"></li>
+              </ul>
+            </div>
+          {% endif %}
+          <div class="row-fluid center-via-text-align">
+            <a class="btn btn-cyan" id="project-description-link" href="{{ project.detailed_description.get_absolute_url }}">
+              {{ _('View Full Description') }}
+            </a>
+            {% if organizing %}
+              <a class="button btn btn-apricot add-top-margin-10" href="{% locale_url projects_edit slug=project.slug %}">{{ _('Edit') }} {{ project.kind|title }}</a>
+              {% if project.under_development %}
+                  <a href="{% locale_url projects_publish slug=project.slug %}" class="button btn btn-olive add-top-margin-10">Publish</a>
+              {% endif %}
+            {% else %}
+              {% if user.is_authenticated %}
+                <div class="supplemental_actions">
+                  <a class="report abuse action" href="{% locale_url drumbeat_abuse  model="project" app_label="projects" pk=project.id %}">{{_('Report Abuse')}}</a>
+                </div>
+              {% endif %}
             {% endif %}
-
-	</li>
-        {% endfor %}
-      </ul>
-    </form>
-    </nav>
-  {% else %}
-    {{ _('No tasks have been added.') }}
-        <br>
-  {% endif %}
-  {% if can_add_task %}
-    <br>
-    <a class="button" href="{% locale_url page_create slug=project.slug %}">{{ _('New Task') }}</a>
-  {% endif %}
-</section>
-
-
-<section id="external-links" class="panel">
-<h2 class="school_header">{{ _('External Links') }}</h2>
-  <br>
-  {% if links %}
-    <nav id="project-links">
-      <ul>
-        {% for link in links %}
-          <li><a class="externalLink" href="{{ link.url }}" target="_blank">{{ link.name }}</a>
-          
-            {% if can_change_order %}
-                {% if not forloop.first %}<a class="robttn up" href="{% locale_url link_index_up slug=project.slug counter=forloop.counter0 %}">(UP)</a>{% endif %}
-                {% if not forloop.last %}<a class="robttn dwn" href="{% locale_url link_index_down slug=project.slug counter=forloop.counter0 %}">(DOWN)</a>{% endif %}
+          </div>
+          <div class="row-fluid center-via-text-align add-top-margin-10" id="project-stats">
+            {% if project.accepted_school %}
+              <div class="school-small-icon {{ project.accepted_school.slug }}-small-icon">
+                <a href="{{ project.accepted_school.get_absolute_url }}" title="{{ project.accepted_school.name }}">
+                  {% if project.accepted_school.groups_icon %}
+        	          <img class="school-small-icon" src="{{ MEDIA_URL }}{{ project.accepted_school.groups_icon }}" width="41" height="50" alt="{{ project.accepted_school.name }}"/>
+                  {% else %}
+                    <img src="{{STATIC_URL}}images/school-small-missing.png" width="41" height="50" alt="{{ project.accepted_school.name }}"/>
+                  {% endif %}
+                  <p>{{ project.accepted_school.short_name|upper }}</p>
+                </a>
+              </div>
             {% endif %}
-          
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  {% else %}
-    {{ _('No external links have been added.') }}
-    <br>
-  {% endif %}
-  {% if organizing %}
-    <br>
-    <a class="button" href="{% locale_url projects_edit_links slug=project.slug %}">{{ _('Edit Links') }}</a>
-  {% endif %} 
-</section>
+            {% if project.archived %}
+              <div class="beta-development">{{ _('Archived') }}</li>
+            {% endif %}
+            {% if project.under_development %}
+              <div class="beta-development">{{ _('Under Development') }}</li>
+            {% endif %}
+            {% if project.not_listed %}
+              <div class="beta-development">{{ _('Not Listed') }}</li>
+            {% endif %}
+            <!-- This line is here so the {{ _('DATE_FORMAT') }} gets configured for different locales -->
+            <hr />
+            {% if project.start_date or project.end_date %}
+            <div class="row-fluid add-top-margin-10">
+              <span class="pull-left label label-clemintine">{{ _('Runs') }}</span>
+              <span class="pull-right">{% if project.start_date %} {{ project.start_date }} {% endif %} 
+              {% if project.end_date %} {{ _('to') }} {{ project.end_date }}{% endif %}</span>
+            </div>
+            {% endif %}
+            {% if project.clone_of %}
+              <div class="row-fluid add-top-margin-10">
+                <span class="pull-left label label-clemintine">{{ _('Based on') }}</span>
+                <span class="pull-right"><a href="{{ project.clone_of.get_absolute_url }}">{{ project.clone_of.name }}</a></span>
+              </div>
+            {% endif %}
+            {% if imported_from %}
+              <div class="row-fluid add-top-margin-10">
+                <span class="pull-left label label-clemintine">{{ _('Based on') }}</span>
+                <span class="pull-right"><a href="{{ imported_from.url }}">{{ imported_from.name }}</a></span>
+              </div>
+            {% endif %}
+            <div class="row-fluid add-top-margin-10">
+              <span class="pull-left label label-clemintine">{{ _('Kind') }}</span>
+              <span class="pull-right">{{ project.kind|title }}</span>
+            </div>
+            <div class="row-fluid add-top-margin-10">
+              <span class="pull-left label label-clemintine">{{ _('Signup') }}</span>
+              <span class="pull-right"><a href="{{ sign_up.get_absolute_url }}">{{ sign_up.get_status_display }}</a></span>
+            </div>
+            <div class="row-fluid add-top-margin-10">
+              <span class="pull-left label label-clemintine">{{ _('Chat') }}</span>
+              <span class="pull-right"><a href="{% locale_url chat %}" target="_blank">{{ chat }}</a></span>
+            </div>
+            <div class="row-fluid add-top-margin-10">
+              <span class="pull-left label label-clemintine">{{ _('Updates') }}</span>
+              <span class="pull-right">{{ update_count }}</span>
+            </div>
+            <div class="row-fluid add-top-margin-10">
+              <span class="pull-left label label-clemintine">{{ _('Organizers') }}</span>
+              <span class="pull-right">{{ organizers_count }}</span>
+            </div>
+            <div class="row-fluid add-top-margin-10">
+              <span class="pull-left label label-clemintine">{{ _('Participants') }}</span>
+              <span class="pull-right">{{ participants_count }}</span>
+            </div>
+            <div class="row-fluid add-top-margin-10">
+              <span class="pull-left label label-clemintine">{{ _('Followers') }}</span>
+              <span class="pull-right">{{ followers_count }}</span>
+            </div>
+            {% if organizing %}
+              <div class="row-fluid add-top-margin-10">
+                <span class="pull-left label label-clemintine">{{ _('Pending Applicants') }}</span>
+                <span class="pull-right"><a href="{{ sign_up.get_absolute_url }}">{{ pending_signup_answers_count }}</a></span>
+              </div>
+            {% endif %}
+            <hr />
+          </div> <!-- /#project-stats -->
+        {% endif %}
+      </div>
+    
+      <div class="row-fluid">
+        {% if not is_challenge %}
+          <section id="people" class="panel">
+            {% project_user_list request project 64 %}
+            <div class="row-fluid center-via-text-align add-top-margin-10">
+              {% if organizing %}
+                <a class="btn btn-slate" href="{% locale_url projects_edit_participants slug=project.slug %}">{{ _('Edit Participants') }}</a>
+                <a class="btn btn-cyan" href="{% locale_url projects_contact_organizers slug=project.slug %}">{{ _('Contact Organizer(s)')}}</a>
+              {% else %}{% if user.is_authenticated %}
+                <a class="btn btn-cyan" href="{% locale_url projects_contact_organizers slug=project.slug %}">{{ _('Contact Organizer')}}</a>
+              {% endif %}{% endif %}
+            </div>
+            <hr />
+          </section>
+          <section id="course-content" class="panel">
+            <a name="tasks"></a>
+            <h2 class="school_header">{{ _('Tasks') }}</h2>
+            {% if content_pages %}
+              <nav id="content-pages">
+              <form id="reorder_tasks" method="post" action="{%locale_url page_index_reorder slug=project.slug%}">
+              {% csrf_token %}
+              <div style='display:none'><input type='hiden' name='canChangeOrder' value='{{can_change_order}}'/></div>
+                <ol>
+                  {% for page in content_pages %}
+                    <li>	
+                      <a class="taskLink" id="{{page.slug}}" href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+                      {% if can_change_order %}
+                        {% if not forloop.first %}<a class="robttn up" href="{% locale_url page_index_up slug=project.slug page_slug=page.slug %}">(UP)</a>{% endif %}
+                        {% if not forloop.last %}<a class="robttn dwn" href="{% locale_url page_index_down slug=project.slug page_slug=page.slug %}">(DOWN)</a>{% endif %}
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ol>
+              </form>
+              </nav>
+            {% else %}
+              {{ _('No tasks have been added.') }}
+            {% endif %}
+            {% if can_add_task %}
+              <a class="button" href="{% locale_url page_create slug=project.slug %}">{{ _('New Task') }}</a>
+            {% endif %}
+            <hr />
+          </section>
 
-{% endif %}
-
-</div> <!-- /#sidebar -->
+          <section id="external-links" class="panel">
+            <h2 class="school_header">{{ _('External Links') }}</h2>
+            <br>
+            {% if links %}
+              <nav id="project-links">
+                {% for link in links %}
+                  <div class="row-fluid">
+                    <a class="externalLink" href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+                    {% if can_change_order %}
+                      {% if not forloop.first %}<a class="robttn up" href="{% locale_url link_index_up slug=project.slug counter=forloop.counter0 %}">(UP)</a>{% endif %}
+                      {% if not forloop.last %}<a class="robttn dwn" href="{% locale_url link_index_down slug=project.slug counter=forloop.counter0 %}">(DOWN)</a>{% endif %}
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              </nav>
+            {% else %}
+              {{ _('No external links have been added.') }}
+              <br>
+            {% endif %}
+            {% if organizing %}
+              <br>
+              <a class="button" href="{% locale_url projects_edit_links slug=project.slug %}">{{ _('Edit Links') }}</a>
+            {% endif %} 
+          </section>
+        {% endif %}
+      </div>
+    </div>
+  </div> <!-- /#sidebar -->
+</div> <!-- /well -->
 
 {% if is_challenge and project.school.mentee_form_url %}
-  <div class="bottom-sidebar">
-    <div class="become-a-mentor">
-      <h3>{{ _('Help your peers') }}</h3>
-      <p>{{ _('Would you be interested in becoming a Mentor? Your peers are going to run into road blocks and they could really use your help.') }}</p>
-      <a class="become-a-mentor-button" href="{{ project.school.mentor_form_url }}">{{ _('Become a Mentor') }}</a>
+  <div class ="well">
+    <div class="bottom-sidebar">
+      <div class="become-a-mentor">
+        <h4>{{ _('Help your peers') }}</h4>
+        <p>{{ _('Would you be interested in becoming a Mentor? Your peers are going to run into road blocks and they could really use your help.') }}</p>
+        <a class="become-a-mentor-button btn btn-apricot" href="{{ project.school.mentor_form_url }}">{{ _('Become a Mentor') }}</a>
+      </div>
     </div>
   </div>
 {% endif %}
 
+<!-- TODO: Find a page that displays this area and reformat it for better display -->
 {% if is_challenge and submission_enabled_badges %}
-  <div class="bottom-sidebar">
-    {% for badge in submission_enabled_badges %}
-      {% if not forloop.first %}<hr class="badge-break">{% endif %}
-      <div class="badge">
-        {% with awards_count=badge.awards.count pending_count=badge.get_pending_submissions.count %}
-          <div class="badge-top">
-            <a href="{{ badge.get_absolute_url }}" title="{{ badge|title }}"><img class="badge-graphic" src="{{ badge.get_image_url }}" width="80" height="80" alt="{{ badge|title }}"/></a>
-            <div class="badge-awarded">
-              <a class="badge-awarded-header" href="{% locale_url awarded_matching_submissions slug=badge.slug %}">{{ _('Awarded') }}</a>
-              <a class="badge-awarded-number" href="{% locale_url awarded_matching_submissions slug=badge.slug %}">{{ awards_count }}</a>
+  <div class="well">
+    <div class="bottom-sidebar">
+      {% for badge in submission_enabled_badges %}
+        {% if not forloop.first %}<hr class="badge-break">{% endif %}
+        <div class="badge">
+          {% with awards_count=badge.awards.count pending_count=badge.get_pending_submissions.count %}
+            <div class="badge-top">
+              <a href="{{ badge.get_absolute_url }}" title="{{ badge|title }}"><img class="badge-graphic" src="{{ badge.get_image_url }}" width="80" height="80" alt="{{ badge|title }}"/></a>
+              <div class="badge-awarded">
+                <a class="badge-awarded-header" href="{% locale_url awarded_matching_submissions slug=badge.slug %}">{{ _('Awarded') }}</a>
+                <a class="badge-awarded-number" href="{% locale_url awarded_matching_submissions slug=badge.slug %}">{{ awards_count }}</a>
+              </div>
+              <div class="badge-pending">
+                <a class="badge-pending-header" href="{% locale_url matching_submissions slug=badge.slug %}">{{ _('Pending') }}</a>
+                <a class="badge-pending-number" href="{% locale_url matching_submissions slug=badge.slug %}">{{ pending_count }}</a>
+              </div>
             </div>
-            <div class="badge-pending">
-              <a class="badge-pending-header" href="{% locale_url matching_submissions slug=badge.slug %}">{{ _('Pending') }}</a>
-              <a class="badge-pending-number" href="{% locale_url matching_submissions slug=badge.slug %}">{{ pending_count }}</a>
+            <div class="badge-bottom">
+              {% if pending_count %}
+                <a href="{% locale_url matching_submissions slug=badge.slug %}">
+                  {% blocktrans count counter=pending_count %}{{ counter }} peer needs your review!{% plural %}{{ counter }} peers need your review!{% endblocktrans %} {{ _('Go') }} →
+                </a>
+              {% endif %}
             </div>
-          </div>
-          <div class="badge-bottom">
-            {% if pending_count %}
-              <a href="{% locale_url matching_submissions slug=badge.slug %}">
-                {% blocktrans count counter=pending_count %}{{ counter }} peer needs your review!{% plural %}{{ counter }} peers need your review!{% endblocktrans %} {{ _('Go') }} →
-              </a>
-            {% endif %}
-          </div>
-        {% endwith %}
-      </div>
-    {% endfor %}
+          {% endwith %}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 {% endif %}
 

@@ -3,79 +3,141 @@
 {% load embed %}
 {% load badge_tags %}
 
+
+
+
+
+
 {% for comment in comments %}
   {% if comment.deleted %}
     {% if comment.has_visible_childs %}
-      <li class="post-container deleted">
-        {% if is_challenge %}<span class="first-post">{% endif %}
-          <a name="{{ comment.id }}"></a>
-          {{ _('This comment was deleted.') }}
-          {% if user|can_edit_comment:comment %}
-            <a class="action restore" href="{% locale_url comment_restore comment_id=comment.id %}">{{ _('Restore') }}</a>
-          {% endif %}
-      {% if is_challenge %}</span>{% else %}</li>{% endif %}
+      <tr class="post-container deleted">
+        <td>
+          {% if is_challenge %}<span class="first-post">{% endif %}
+            <a name="{{ comment.id }}"></a>
+            {{ _('This comment was deleted.') }}
+            {% if user|can_edit_comment:comment %}
+              <a class="action restore" href="{% locale_url comment_restore comment_id=comment.id %}">{{ _('Restore') }}</a>
+            {% endif %}
+          {% if is_challenge %}</span>{% endif %}
+        </td>
+      </tr>      
     {% endif %}
   {% else %}
-    <li class="post-container">
+    <tr class="post-container">
       {% if is_challenge %}<span class="first-post">{% endif %}
-        <a name="{{ comment.id }}"></a>
-        {% if user.is_authenticated %}
-          {% if not is_challenge and user|can_reply_comment:comment %}
-            <a class="action reply-to" href="{% locale_url comment_reply comment_id=comment.id %}">{{ _('Reply') }}</a>
-          {% endif %}
-          {% if user|can_edit_comment:comment %}
-            {% if not is_challenge %}
-              <a class="action delete" href="{% locale_url comment_delete comment_id=comment.id %}">{{ _('Delete') }}</a>
-              <a class="action edit" href="{% locale_url comment_edit comment_id=comment.id %}">{{ _('Edit') }}</a>
+        <td>
+          <a href="{{ comment.author.get_absolute_url }}">
+            <img class="member-picture" width="80" height="80" src="{{ comment.author.image_or_default }}">
+          </a>
+        </td>
+        <td>
+          <div class="post-contents">
+            <div class="post-details">
+              {% if is_challenge%}<h3>{% endif %}
+                <a href="{{ comment.author.get_absolute_url }}">{{ comment.author }}</a>
+              {% if is_challenge%}
+                {{ _(' said:') }}</h3>
+              {% else %}
+                &nbsp;
+                <a href="{{ comment.get_absolute_url }}">{{ comment.created_on }}</a>
+              {% endif %}
+            </div>
+            <div class="post-body">
+              {{ comment.content|embed|safe }}
+            </div>
+            {% if is_challenge %}
+              <div class="post-details">
+                {{ _('on ') }} <a href="{{ comment.get_absolute_url }}">{{ comment.created_on }}</a>
+                <br />
+                {% if user.is_authenticated %}
+                  {% if user|can_reply_comment:comment %}
+                    <a class="action reply-to action-bottom" href="{% locale_url comment_reply comment_id=comment.id %}">{{ _('Reply') }}</a>
+                    {% if comment.scope_object and not user|can_edit_comment:comment %}
+                      {% give_badge_action comment.scope_object comment.author %}
+                    {% endif %}
+                  {% endif %}
+                  {% if user|can_edit_comment:comment %}
+                    <a class="action edit action-bottom" href="{% locale_url comment_edit comment_id=comment.id %}">{{ _('Edit') }}</a>
+                    <a class="action delete action-bottom" href="{% locale_url comment_delete comment_id=comment.id %}">{{ _('Delete') }}</a>
+                  {% endif %}
+                {% endif %}
+              </div>
             {% endif %}
-          {% else %}
-            <a class="report abuse action" href="{% locale_url drumbeat_abuse model="pagecomment" app_label="replies" pk=comment.id %}">{{_('Report Abuse')}}</a>
+          </div>
+        </td>
+        <td>
+          <a name="{{ comment.id }}"></a>
+          {% if user.is_authenticated %}
+            {% if not is_challenge and user|can_reply_comment:comment %}
+              <a class="action reply-to" href="{% locale_url comment_reply comment_id=comment.id %}">{{ _('Reply') }}</a>
+            {% endif %}
+            {% if user|can_edit_comment:comment %}
+              {% if not is_challenge %}
+                <a class="action delete" href="{% locale_url comment_delete comment_id=comment.id %}">{{ _('Delete') }}</a>
+                <a class="action edit" href="{% locale_url comment_edit comment_id=comment.id %}">{{ _('Edit') }}</a>
+              {% endif %}
+            {% else %}
+              <a class="report abuse action" href="{% locale_url drumbeat_abuse model="pagecomment" app_label="replies" pk=comment.id %}">{{_('Report Abuse')}}</a>
+            {% endif %}
           {% endif %}
-        {% endif %}
-        <a href="{{ comment.author.get_absolute_url }}">
-          <img class="member-picture" width="54" height="54" src="{{ comment.author.image_or_default }}">
+        </td>
+      {% if is_challenge %}</span>{% endif %}
+    </tr>
+  {% endif%}
+  
+  {% for reply in comment.visible_replies %}
+    {% if is_challenge %}
+    <tr class="post-replies">
+    {% else %}
+    <tr class="post-container post-replies">
+    {% endif %}
+      <td>
+        <a href="{{ reply.author.get_absolute_url }}">
+          <img class="member-picture" width="80" height="80" src="{{ reply.author.image_or_default }}">
         </a>
+      </td>
+      <td>
         <div class="post-contents">
           <div class="post-details">
             {% if is_challenge%}<h3>{% endif %}
-              <a href="{{ comment.author.get_absolute_url }}">{{ comment.author }}</a>
-            {% if is_challenge%}
+              <a href="{{ reply.author.get_absolute_url }}">{{ reply.author }}</a>
+            {% if is_challenge %}
               {{ _(' said:') }}</h3>
             {% else %}
               &nbsp;
-              <a href="{{ comment.get_absolute_url }}">{{ comment.created_on }}</a>
+              <a href="{{ reply.get_absolute_url }}">{{reply.created_on}}</a>
+              <br> {{ _('In Reply To:') }} &nbsp;
+              <a href="{{ reply.reply_to.author.get_absolute_url }}">{{ reply.reply_to.author }}</a>
+              &nbsp;
+              <a href="{{ reply.reply_to.get_absolute_url }}">{{ reply.reply_to.created_on }}</a>
             {% endif %}
           </div>
           <div class="post-body">
-            {{ comment.content|embed|safe }}
+            {{ reply.content|embed|safe }}
           </div>
           {% if is_challenge %}
             <div class="post-details">
-              {{ _('on ') }} <a href="{{ comment.get_absolute_url }}">{{ comment.created_on }}</a>
+              {{ _('on ') }} <a href="{{ reply.get_absolute_url }}">{{ reply.created_on }}</a>
+              {{ _('in reply to ') }} <a href="{{ reply.reply_to.get_absolute_url }}">{{ reply.reply_to.author }}</a>
               <br />
               {% if user.is_authenticated %}
-                {% if user|can_reply_comment:comment %}
-                  <a class="action reply-to action-bottom" href="{% locale_url comment_reply comment_id=comment.id %}">{{ _('Reply') }}</a>
-                  {% if comment.scope_object and not user|can_edit_comment:comment %}
-                    {% give_badge_action comment.scope_object comment.author %}
+                {% if user|can_reply_comment:reply %}
+                  <a class="action reply-to action-bottom" href="{% locale_url comment_reply comment_id=reply.id %}">{{ _('Reply') }}</a>
+                  {% if reply.scope_object and not user|can_edit_comment:reply %}
+                    {% give_badge_action reply.scope_object reply.author %}
                   {% endif %}
                 {% endif %}
-                {% if user|can_edit_comment:comment %}
-                  <a class="action edit action-bottom" href="{% locale_url comment_edit comment_id=comment.id %}">{{ _('Edit') }}</a>
-                  <a class="action delete action-bottom" href="{% locale_url comment_delete comment_id=comment.id %}">{{ _('Delete') }}</a>
+                {% if user|can_edit_comment:reply %}
+                  <a class="action delete action-bottom" href="{% locale_url comment_delete comment_id=reply.id %}">{{ _('Delete') }}</a>
+                  <a class="action edit action-bottom" href="{% locale_url comment_edit comment_id=reply.id %}">{{ _('Edit') }}</a>
                 {% endif %}
               {% endif %}
             </div>
           {% endif %}
         </div>
-    {% if is_challenge %}</span>{% else %}</li>{% endif %}
-  {% endif%}
-  {% for reply in comment.visible_replies %}
-    {% if is_challenge %}
-      <span class="post-replies">
-    {% else %}
-      <li class="post-container post-replies">
-    {% endif %}
+      </td>
+      <td>
         <a name="{{ reply.id }}"></a>
         {% if user.is_authenticated %}
           {% if not is_challenge and user|can_reply_comment:reply %}
@@ -88,50 +150,10 @@
             {% endif %}
           {% else %}
             <a class="report abuse action" href="{% locale_url drumbeat_abuse model="pagecomment" app_label="replies" pk=reply.id %}">{{_('Report Abuse')}}</a>
-        {% endif %}
-      {% endif %}
-      <a href="{{ reply.author.get_absolute_url }}">
-        <img class="member-picture" width="54" height="54" src="{{ reply.author.image_or_default }}">
-      </a>
-      <div class="post-contents">
-        <div class="post-details">
-          {% if is_challenge%}<h3>{% endif %}
-            <a href="{{ reply.author.get_absolute_url }}">{{ reply.author }}</a>
-          {% if is_challenge %}
-            {{ _(' said:') }}</h3>
-          {% else %}
-            &nbsp;
-            <a href="{{ reply.get_absolute_url }}">{{reply.created_on}}</a>
-            <br> {{ _('In Reply To:') }} &nbsp;
-            <a href="{{ reply.reply_to.author.get_absolute_url }}">{{ reply.reply_to.author }}</a>
-            &nbsp;
-            <a href="{{ reply.reply_to.get_absolute_url }}">{{ reply.reply_to.created_on }}</a>
           {% endif %}
-        </div>
-        <div class="post-body">
-          {{ reply.content|embed|safe }}
-        </div>
-        {% if is_challenge %}
-          <div class="post-details">
-            {{ _('on ') }} <a href="{{ reply.get_absolute_url }}">{{ reply.created_on }}</a>
-            {{ _('in reply to ') }} <a href="{{ reply.reply_to.get_absolute_url }}">{{ reply.reply_to.author }}</a>
-            <br />
-            {% if user.is_authenticated %}
-              {% if user|can_reply_comment:reply %}
-                <a class="action reply-to action-bottom" href="{% locale_url comment_reply comment_id=reply.id %}">{{ _('Reply') }}</a>
-                {% if reply.scope_object and not user|can_edit_comment:reply %}
-                  {% give_badge_action reply.scope_object reply.author %}
-                {% endif %}
-              {% endif %}
-              {% if user|can_edit_comment:reply %}
-                <a class="action delete action-bottom" href="{% locale_url comment_delete comment_id=reply.id %}">{{ _('Delete') }}</a>
-                <a class="action edit action-bottom" href="{% locale_url comment_edit comment_id=reply.id %}">{{ _('Edit') }}</a>
-              {% endif %}
-            {% endif %}
-          </div>
         {% endif %}
-      </div>
-    {% if is_challenge %}</span>{% else %}</li>{% endif%}
+      </td>
+    </tr>
   {% endfor %}
-  {% if is_challenge %}</li>{% endif%}
+  
 {% endfor %}

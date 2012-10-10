@@ -1,54 +1,106 @@
 {% load i18n %}
 {% load l10n_tags %}
 {% load project_tags %}
+
+
 {% if tasks_count or show_all %}
-  <div id="task_list_section">
-    {% if not is_challenge %}<h2 class="school_header"><span>{{ _('Tasks') }}</span></h2>{% endif %}
-    {% if tasks_count %}
-      <ul>
+  <div class="row-fluid" id="task_list_section">
+    {% if tasks %}
+      <ul class="nav nav-list">
         {% for task in tasks %}
-          <li class="{% cycle 'odd' 'even' %} {% if task.is_done %}taskSelected{% endif %}">
-            {% if is_challenge and participating %}
-              <form method='post' action='{% locale_url toggle_task_completion slug=task.project.slug page_slug=task.slug %}'>
-                {% csrf_token %}
-                <input class="taskCheckbox" type="checkbox" {% if task.is_done %}checked="checked"{% endif%} title="Completed">
-              </form>
-            {% endif %}
-            <span class="taskNumber">{{ forloop.counter }}{% if is_challenge %}.{% endif %}</span> <a class="taskLink" href="{{ task.get_absolute_url }}">{{ task.title }}</a>
-            {% if is_challenge %}
-              {% with task_activity=task.recent_activity %}
-                <span class="taskActivity">
-                  {% if task_activity.0 %}
-                    <a href="{{ task.get_absolute_url }}">{{task_activity.0}} {{ _('new') }}
-                      <br>
-                      <span class="subtaskActivity">
-                      {% blocktrans count counter=task_activity.0 %}comment{% plural %}comments{% endblocktrans %} {{ task_activity.1 }}</span>
-                    </a>
+          <div class="row-fluid {% cycle 'odd' 'even' %} add-top-margin-20 task">
+            <li class="{% if task.is_done %}taskSelected{% endif %}">
+              
+              <!-- Completion Checkbox -->
+              <div class="span1 pull-left inherit-height">
+                <div class="span6"></div>
+                <div class="vertical-center">
+                  {% if is_challenge and participating %}
+                    <form method='post' action='{% locale_url toggle_task_completion slug=task.project.slug page_slug=task.slug %}'>
+                      {% csrf_token %}
+                      <input class="taskCheckbox" type="checkbox" {% if task.is_done %}checked="checked"{% endif%} title="Completed">
+                    </form>
                   {% endif %}
-                </span>
-              {% endwith %}
-            {% endif %}
-            {% if organizing and show_all and is_challenge %}
-	            {% if not forloop.first %}<a class="robttn up" href="{% locale_url page_index_up slug=project.slug page_slug=task.slug %}">(UP)</a>{% endif %}
-	            {% if not forloop.last %}<a class="robttn dwn" href="{% locale_url page_index_down slug=project.slug page_slug=task.slug %}">(DOWN)</a>{% endif %}
-            {% endif %}
-            {% if is_challenge %}
-                <a class="taskView" href="{{ task.get_absolute_url }}">{{ _('View and Discuss') }}</a>
-                <span class="taskSubheader">{{ task.sub_header|default:"&nbsp;" }}</span>
-            {% else %}
-              <span class="action-buttons"><a href="{{ task.get_absolute_url }}">{{ _('View') }}</a></span>
+                </div>
+              </div>
+              <!-- /Completion Checkbox -->
+              
+              <!-- Task Number-Title-Subtitle -->
+              <div class="span8 inherit-height">
+                <h1><span class="taskNumber">{{ forloop.counter }}.</span> <a class="taskLink" href="{{ task.get_absolute_url }}">{{ task.title }}</a><h1>
+                <h3 style="background-color: inherit;"><small>{{ task.sub_header|default:"&nbsp;" }}</small></h3>
+              </div>
+              <!-- /Task Number-Title-Subtitle -->
+              
+              <!-- Task New Comments Label -->
+              <div class="span3 pull-right inherit-height">
+                <!-- Hover Labels Added To Task List Item -->
+                <div class="span3 pull-right">
+                  {% if is_challenge %}
+                    <a class="show-on-hover" href="{{ task.get_absolute_url }}">{{ _('View and Discuss') }}</a>
+                  {% else %}
+                    <span class="action-buttons"><a href="{{ task.get_absolute_url }}">{{ _('View') }}</a></span>
+                  {% endif %}
+                </div>
+                <!-- /Hover Labels Added To Task List Item -->
+                <div class="vertical-center">
+                  <div class="span12">             
+                  {% if is_challenge %} 
+                    {% with task_activity=task.recent_activity %}
+                      <span class="taskActivity">
+                        {% if task_activity.0 %}
+                          <span class="label label-clemintine"><a href="{{ task.get_absolute_url }}">{{task_activity.0}}</a></span>
+                          <span class="label">
+                            <a href="{{ task.get_absolute_url }}">
+                              {{ _('new') }}
+                              <span class="subtaskActivity">
+                                {% blocktrans count counter=task_activity.0 %}comment{% plural %}comments{% endblocktrans %}
+                                <!-- {{ task_activity.1 }} -->
+                              </span>
+                            </a>
+                          </span>
+                        {% endif %}
+                      </span>
+                    {% endwith %}
+                  {% endif %}
+                  </div>
+                </div>
+              </div>
+              <!-- /Task New Comments Label -->
+              
+              <!-- Move Task Up-Down Buttons -->
+              <span class="pull-right"> 
+                {% if organizing and show_all and is_challenge %}
+                  {% if not forloop.first %}<a class="robttn up" href="{% locale_url page_index_up slug=project.slug page_slug=task.slug %}">(UP)</a>{% endif %}
+                  {% if not forloop.last %}<a class="robttn dwn" href="{% locale_url page_index_down slug=project.slug page_slug=task.slug %}">(DOWN)</a>{% endif %}
+                {% endif %}
+              </span>
+              <!-- /Move Task Up-Down Buttons -->
+              
+            </li>
+          </div>
+        {% endfor %}
+        <div class="row-fluid">
+          <li class="nav-header">
+            {% if visible_count < tasks_count %}
+              <span id="more_task_link">
+                <span id="task-count">{{ _('Displaying') }} {{ visible_count }} {{ _('of') }} {{ tasks_count }} {{ _('total tasks') }}</span>
+                <a href="{% locale_url projects_task_list slug=project.slug %}">{{ _('See All Tasks') }} &raquo;</a>
+              </span>
             {% endif %}
           </li>
-        {% endfor %}
+        </div>
       </ul>
     {% else %}
-      <br>{{ _('No tasks have been added.') }}<br><br>
-    {% endif %}
-    {% if visible_count < tasks_count %}
-      <p id="more_task_link">
-        <span id="task-count">{{ _('Displaying') }} {{ visible_count }} {{ _('of') }} {{ tasks_count }} {{ _('total tasks') }}</span>
-        <a href="{% locale_url projects_task_list slug=project.slug %}">{{ _('See All Tasks') }} &raquo;</a>
-      </p>
+      <div class="row-fluid"><div class="span1"></div></div>
+      <div class="row-fluid"><div class="span1"></div></div>
+      <div class="span1"></div>
+      <div class="span10">
+        <div class="well">
+          <h2>{{ _('No tasks have been added.') }}<br /><br /></h2>
+        </div>
+      </div>
+      <div class="span1"></div>
     {% endif %}
   </div>
 {% endif %}

@@ -7,8 +7,6 @@
 {% block bodyid %}page{% endblock %}
 
 {% block project_breadcrumbs %}
-  <span class="arrow">&rsaquo;</span>
-  <a href="{% locale_url projects_task_list slug=project.slug %}">{{ _('Task List') }}</a>
   <span class="arrow">&rsaquo;</span>      
   <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
   <span class="arrow">&rsaquo;</span>

@@ -3,69 +3,84 @@
 {% load l10n_tags %}
 
 {% block bodyclasses %}profile edit links{% endblock %}
+
+
 {% block form %}
+
 <fieldset id="profile_edit_links" class="profile edit links tabpane">
-<h2>{{ _('Links') }}</h2>
-<p class="hint">{{ _('Add links to your blog, homepage, twitter profile, github repository etc. These links will appear on your profile.') }}</p>
-<form action="{% locale_url users_profile_edit_links %}" method="post">
-  {% csrf_token %}
-  <div class="field link name{% if form.name.errors %} error{% endif %}">
-    <label for="id_name">{{ _('Name') }}</label>
-    {{ form.name }}
-    {{ form.name.errors }}
+  <h2>{{ _('Links') }}</h2>
+  <div class="alert alert-info">
+    {{ _('Add links to your blog, homepage, twitter profile, github repository etc. These links will appear on your profile.') }}
   </div>
-  <div class="field link url{% if form.url.errors %} error{% endif %}">
-    <label for="id_url">{{ _('Url') }}</label>
-    {{ form.url }}
-    {{ form.url.errors }}
-  </div>
-  <!--  <div class="field link subscribe {% if form.subscribe.errors %} error{% endif %}">
-    <label for="id_subscribe">{{ _('Subscribe') }}</label>
-    {{ form.subscribe }}
-    {{ form.subscribe.errors }}
-  </div>-->
-  <p class="buttons add-link">
-    <button type="submit">{{ _('Add') }}</button>
-  </p>
-</form>
-{% if links %}
-<table>
-<thead>
-  <tr>
-    <th>{{ _('Name') }}</th>
-    <th>{{ _('URL') }}</th>
-    <!--<th>{{ _('Subscribed') }}</th>-->
-    <th>{{ _('Actions') }}</th>
-  </tr>
-</thead>
-<tbody>
-  {% for link in links %}
-    <tr>
-      <td class="name">{{ link.name }}</td>
-      <td class="url"><a href="{{ link.url }}" title="{{ link.url }}" target="_blank">{{ link.url }}</a></td>
-      <!--<td class="subscription">
-	      {% if link.subscribe %}
-	        {% if link.subscription.verified %}<span class="yes" title="{{_('Subscribed.') }}">{{ _('yes') }}</span>
-	        {% else %}<span class="error" title="{{_('Error saving subscription.') }}">{{ _('error') }}</span>
-	        {% endif %}
-	      {% else %}
-	        <span class="no" title="{{_('Not subscribed.') }}">{{ _('no') }}</span>
-      {% endif %}</td>-->
-      <td class="actions">
-        <form action="{% locale_url users_profile_edit_links_edit link_id=link.id %}" method="get">
-          <button type="submit" value="{{ _('Edit') }}">{{ _('Edit') }}</button>
-        </form>
-        <form action="{% locale_url users_profile_edit_links_delete link=link.id %}" method="post">
-          {% csrf_token %}
-          <button type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
-        </form>
-      </td>
-    </tr>
-  {% endfor %}
-</tbody>
-</table>
-{% endif %}
-
-
+  <form class="form-horizontal" action="{% locale_url users_profile_edit_links %}" method="post">
+    {% csrf_token %}
+    <div class="control-group field link name{% if form.name.errors %} error{% endif %}">
+      <label class="control-label" for="id_name">{{ _('Name') }}</label>
+      <div class="controls">
+        {{ form.name }}
+        {{ form.name.errors }}
+      </div>
+    </div>
+    <div class="control-group field link url{% if form.url.errors %} error{% endif %}">
+      <label class="control-label" for="id_url">{{ _('Url') }}</label>
+      <div class="controls">
+        {{ form.url }}
+        {{ form.url.errors }}
+      </div>
+    </div>
+    <!--  <div class="control-group field link subscribe {% if form.subscribe.errors %} error{% endif %}">
+      <label class="control-label" for="id_subscribe">{{ _('Subscribe') }}</label>
+      <div class="controls">
+        {{ form.subscribe }}
+        {{ form.subscribe.errors }}
+      </div>
+    </div>  -->
+    <div class="control-group">
+      <div class="controls">        
+        <p class="buttons add-link">
+          <button class="btn btn-olive" type="submit">{{ _('Add') }}</button>
+        </p>
+      </div>
+    </div>
+  </form>
+  {% if links %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>{{ _('Name') }}</th>
+          <th>{{ _('URL') }}</th>
+          <!--<th>{{ _('Subscribed') }}</th>-->
+          <th>{{ _('Actions') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for link in links %}
+          <tr>
+            <td class="name">{{ link.name }}</td>
+            <td class="url"><a href="{{ link.url }}" title="{{ link.url }}" target="_blank">{{ link.url }}</a></td>
+            <!--<td class="subscription">
+              {% if link.subscribe %}
+                {% if link.subscription.verified %}<span class="yes" title="{{_('Subscribed.') }}">{{ _('yes') }}</span>
+                {% else %}<span class="error" title="{{_('Error saving subscription.') }}">{{ _('error') }}</span>
+                {% endif %}
+              {% else %}
+                <span class="no" title="{{_('Not subscribed.') }}">{{ _('no') }}</span>
+              {% endif %}
+            </td>  -->
+            <td class="actions">
+              <form class="form-horizontal" action="{% locale_url users_profile_edit_links_edit link_id=link.id %}" method="get">
+                <button class="btn btn-olive" type="submit" value="{{ _('Edit') }}">{{ _('Edit') }}</button>
+              </form>
+              <form class="form-horizontal" action="{% locale_url users_profile_edit_links_delete link=link.id %}" method="post">
+                {% csrf_token %}
+                <button class="btn btn-blood-orange" type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
 </fieldset>
+
 {% endblock %}

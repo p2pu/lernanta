@@ -11,70 +11,122 @@
 {% block bodyid %}page{% endblock %}
 
 {% block project_breadcrumbs %}
-  <span class="arrow">&rsaquo;</span>
-  <a href="{% locale_url projects_task_list slug=project.slug %}">{{ _('Task List') }}</a>
-  <span class="arrow">&rsaquo;</span>
-  <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+  <li><span class="divider">&rsaquo;</span><a href="{{ page.get_absolute_url }}">{{ page.title }}</a></li>
 {% endblock %}
 
 {% block breadcrumbs_actions%}
   {% if can_edit %}
-    <a class="button" href="{% locale_url page_edit slug=project.slug page_slug=page.slug %}">{{ _('Edit') }}</a>
-    {% if page.listed %}<a class="button" href="{% locale_url page_delete slug=project.slug page_slug=page.slug %}">{{ _('Delete') }}</a>{% endif %}
+    <a class="btn btn-skinny btn-slate button" href="{% locale_url page_edit slug=project.slug page_slug=page.slug %}">{{ _('Edit') }}</a>
+    {% if page.listed %}<a class="btn btn-skinny btn-blood-orange button" href="{% locale_url page_delete slug=project.slug page_slug=page.slug %}">{{ _('Delete') }}</a>{% endif %}
   {% endif %}
-  <a class="button" href="{% locale_url page_history slug=project.slug page_slug=page.slug %}">{{ _('View History') }}</a>
+  <a class="btn btn-skinny btn-cyan button" href="{% locale_url page_history slug=project.slug page_slug=page.slug %}">{{ _('View History') }}</a>
 {% endblock %}
 
 {% block body %}
-{% sidebar %}
-<div id="main" class="content_page">
-  
-	<ul id="task-nav">
-	  <li class="tasks">
-	    <p class="task-nav-header">{{ _('Task Navigation') }}</p>
-	      <ul class="task-nav-list">
-            {% for task in all_listed_pages %}
-	          <li class="task-sub-nav"><a href="{{ task.get_absolute_url }}">{{ forloop.counter }}. {{ task.title }}</a></li>
-            {% endfor %}
-	      </ul>
-	    </li>
-	</ul>
 
-  {% if user.is_authenticated %}
-    <p class="supplemental_actions"><a class="report abuse action" href="{% locale_url drumbeat_abuse model="page" app_label="content" pk=page.id %}">{{_('Report Abuse')}}</a></p>
-  {% endif %}
-  <h1 class="{% if page.collaborative %}collaborative{% endif %} tasks-title school_header">{{ page.title }}</h1>
-  {% if is_challenge %}
-    <br>{{ page.sub_header|default:"" }}
-  {% endif %}
-  <hr />
 
-  <div id="task-body">
-    {{ page.content|embed|safe }}
+<div class="row-fluid content_page" id="main">
+  <div class="span9">
+    <div class="row-fluid"> <!-- Main Section -->
+      <div class="row-fluid"> <!-- ProjectCourse:NotChallenge Nav Tab -->
+        <div id="task_list_wall" class="tabbable">
+          <ul class="nav nav-tabs" id="task_list_wall_toogle"> <!-- ProjectCourse:NotChallenge Nav Tab LIST -->
+            <li class="active"><a href="#tasks-tab" data-toggle="tab">{{ _('Tasks') }}</a></li>
+            <li><a href="#activity-wall-tab" data-toggle="tab">{{ _('Activity Wall') }}</a></li>
+            <li><a href="#people-tab" data-toggle="tab">{{ _('People') }}</a></li>
+            <li><a href="#links-tab" data-toggle="tab">{{ _('Links') }}</a></li>
+          </ul> <!-- /ProjectCourse:NotChallenge Nav Tab LIST-->
+          <div class="tab-content"> <!-- ProjectCourse:NotChallenge Nav Tab CONTENT -->
+            <div class="tab-pane active" id="tasks-tab"> <!-- Task List Tab Content -->
+              <div class="row-fluid">
+                <h1 class="{% if page.collaborative %}collaborative{% endif %} tasks-title school_header">{{ page.title }}</h1>
+                {% if is_challenge %}
+                  <br>{{ page.sub_header|default:"" }}
+                {% endif %}
+                <div class="btn-group pull-right">
+                  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                    Task Navigation
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    {% for task in all_listed_pages %}
+                      <li class="task-sub-nav"><a href="{{ task.get_absolute_url }}">{{ forloop.counter }}. {{ task.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div class="pull-right">
+                  {% if user.is_authenticated %}
+                    <p class="supplemental_actions">
+                      <a class="btn btn-blood-orange report abuse action" href="{% locale_url drumbeat_abuse model="page" app_label="content" pk=page.id %}">
+                        {{_('Report Abuse')}}
+                      </a>
+                    </p>
+                  {% endif %}
+                </div>
+              </div>
+              <hr />
+              <div class="row-fluid">
+                <div id="task-body">
+                  {{ page.content|embed|safe }}
+                </div>
+              </div>
+              <hr />
+              <div class="row-fluid">
+                {% if is_challenge %}
+                  <div id="task-footer-toggle-completion">
+                    {% task_toggle_completion request page %}
+                  </div>
+                {% endif %}
+              </div>
+              <div class="row-fluid">
+                <div id="task-discussion" class="content_page">
+                  {% if can_comment %}
+                    <a class="button post-task-comment" href="{{ new_comment_url }}">{{ _('Post Comment') }}</a>
+                  {% endif %}
+                  <h1 class="tasks-title">{{_('Task Discussion')}}</h1>
+                  <br>
+                  <div class="feature-box">	
+                    <div id="task-link-submit-jquery-comment-placeholder"></div>
+                    <div class="pull-left">
+                      <div class="row-fluid">
+                        <table class="table table-bordered">
+                          <tbody>
+                            {% with comments=pagination_current_page.object_list %}
+                              {% comment_threads %}
+                            {% endwith %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  {% with prefix='' page_url=page.get_absolute_url %}
+                    {% pagination_links %}
+                  {% endwith %}
+                </div>
+              </div>             
+            </div> <!-- /Task List Tab Content -->
+            <div class="tab-pane" id="activity-wall-tab"> <!-- Activity Wall:Default Tab Content -->
+              {% project_wall request project %}
+            </div> <!-- /Activity Wall:Default Tab Content -->
+            <div class="tab-pane" id="people-tab"> <!-- People Tab Content-->
+              <div id="main-people">
+                <section id="people" class="panel">
+                  {% project_user_list request project 168 "True" %}
+                </section>
+              </div>
+            </div> <!-- /People Tab Content -->
+            <div class="tab-pane" id="links-tab"> <!-- Links Tab Content -->
+              Links Tab Content
+            </div> <!-- /Links Tab Content -->
+          </div> <!-- /ProjectCourse:NotChallenge Nav Tab CONTENT-->
+        </div>
+      </div> <!-- /ProjectCourse:NotChallenge Nav Tab -->
+    </div> <!-- /Main Section -->
   </div>
-
-  {% if is_challenge %}
-    <div id="task-footer-toggle-completion">
-      {% task_toggle_completion request page %}
-    </div>
-  {% endif %}
-</div><!--main-->
-
-  <div id="task-discussion" class="content_page">
-    {% if can_comment %}
-      <a class="button post-task-comment" href="{{ new_comment_url }}">{{ _('Post Comment') }}</a>
-    {% endif %}
-    <h1 class="tasks-title">{{_('Task Discussion')}}</h1>
-    <br>
-    <ul id="posts">
-      <div id="task-link-submit-jquery-comment-placeholder"></div>
-      {% with comments=pagination_current_page.object_list %}
-        {% comment_threads %}
-      {% endwith %}
-    </ul>
-    {% with prefix='' page_url=page.get_absolute_url %}
-      {% pagination_links %}
-    {% endwith %}
+  <div class="span3">
+    {% sidebar %}
   </div>
+</div>
+
 {% endblock %}
 

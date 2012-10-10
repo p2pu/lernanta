@@ -1,6 +1,7 @@
 {% load l10n_tags %}
 {% load pagination_tags %}
-
+<div class="row-fluid">
+  <div class="span12">
 {% if not with_sections %}
   {% if show_more_link %}
     <a class="more_people_link" href="{% locale_url projects_user_list slug=project.slug %}">{{_('See All')}} &raquo;</a>
@@ -119,8 +120,9 @@
     {% endif %}
   {% endif %}
   {% if show_more_link %}
-    <p></p>
-    <a class="more_people_link" href="{% locale_url projects_user_list slug=project.slug %}">{{_('View all')}} &raquo;</a>
+    <p>
+    <a class="more_people_link btn pull-right" href="{% locale_url projects_user_list slug=project.slug %}">{{_('View all')}} &raquo;</a></p>
   {% endif %}
 {% endif %}
-
+ </div>
+ </div>

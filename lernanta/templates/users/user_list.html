@@ -6,55 +6,152 @@
 {% block bodyid %}user_list{% endblock %}
 {% block bodyclasses %}card-list{% endblock %}
 {% block breadcrumbs %}
-  <span class="arrow">&rsaquo;</span>
-  <a href="{% locale_url users_user_list %}">{{ _('People') }}</a>
+  <li><span class="divider">&rsaquo;</span><a href="{% locale_url users_user_list %}">{{ _('People') }}</a></li>
 {% endblock %}
 
 {% block body %}
-<div id="main">
-<h1>{{ _('Browse <b>People</b>') }}</h1>
+<div class="row-fluid">
+  <div class="row-fluid">
+	  <h1>{{ _('Browse ') }}<b>{{ _('People') }}</b></h1>
+  </div>
+  {% if tagged %}
+    <div class="row-fluid" id="featured_users">
+      <div class="row-fluid">
+        <h4><span>{{ tag.get_category_display }} {{ _('in') }} {{ tag.name }}</span></h4>
+      </div>
+      <div class="row-fluid user-list">
+        {% for person in tagged %}
+          {% if forloop.first %} <!-- if this is the first time through the loop, create the first row -->
+            <div class="row-fluid">
+              <ul class="thumbnails">
+          {% endif %}
+              <li class="span3"> <!-- add the current project to the row -->
+                {% include "users/_user_card.html" %}
+              </li>		
+          {% if forloop.counter|divisibleby:"4" %} <!-- if this was the 2nd project in the row, end the row -->	
+              </ul>
+            </div>
+            {% if not forloop.last %} <!-- as long as this is not the last project in the list, create a new row -->
+              <div class="row-fluid">
+                <ul class="thumbnails">
+            {% endif %}
+          {% else %}{% if forloop.last %} <!-- if this is the last project in the list, end the row if it hasn't been ended yet -->
+              </ul>
+            </div>
+          {% endif %}{% endif %}
+          {% empty %}
+            <div class="hint">
+              <!-- TODO: Add this message back in, it was causing an error when it was enclosed in blocktrans - endblocktrans template tags -->
+              <!-- Seems like we don't have any Challege Sets to show you. Reload the page or try again later.  -->
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
 
-{% if tagged %}
-<section id="featured_users">
-  <h1><span>{{ tag.get_category_display }} {{ _('in') }} {{ tag.name }}</span></h1>
-  <ul class="user-list">
-    {% for person in tagged %}
-      <li>{% include "users/_user_card.html" %}</li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
+  {% if featured %}
+    <div class="row-fluid" id="featured_users">
+      <div class="row-fluid">
+        <h1><span>{{ _('Featured') }}</span></h1>
+      </div>
+      <div class="user-list">
+        {% for person in featured %}
+          {% if forloop.first %} <!-- if this is the first time through the loop, create the first row -->
+            <div class="row-fluid">
+              <ul class="thumbnails">
+          {% endif %}
+              <li class="span3"> <!-- add the current project to the row -->
+                {% include "users/_user_card.html" %}
+              </li>		
+          {% if forloop.counter|divisibleby:"4" %} <!-- if this was the 2nd project in the row, end the row -->	
+              </ul>
+            </div>
+            {% if not forloop.last %} <!-- as long as this is not the last project in the list, create a new row -->
+              <div class="row-fluid">
+                <ul class="thumbnails">
+            {% endif %}
+          {% else %}{% if forloop.last %} <!-- if this is the last project in the list, end the row if it hasn't been ended yet -->
+              </ul>
+            </div>
+          {% endif %}{% endif %}
+          {% empty %}
+            <div class="hint">
+              <!-- TODO: Add this message back in, it was causing an error when it was enclosed in blocktrans - endblocktrans template tags -->
+              <!-- Seems like we don't have any Challege Sets to show you. Reload the page or try again later.  -->
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
 
-{% if featured %}
-<section id="featured_users">
-  <h1><span>{{ _('Featured') }}</span></h1>
-  <ul class="user-list">
-    {% for person in featured %}
-      <li>{% include "users/_user_card.html" %}</li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
-{% if popular %}
-  <section id="popular_users">
-  <h1><span>{{ _('Active this Week') }}</span></h1>
-  <ul class="user-list">
-    {% for person in popular %}
-      <li>{% include "users/_user_card.html" %}</li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
+  {% if popular %}
+    <div class="row-fluid" id="popular_users">
+      <div class="row-fluid">
+        <h1><span>{{ _('Active this Week') }}</span></h1>
+      </div>
+      <div class="user-list">
+        {% for person in popular %}
+          {% if forloop.first %} <!-- if this is the first time through the loop, create the first row -->
+            <div class="row-fluid">
+              <ul class="thumbnails">
+          {% endif %}
+              <li class="span3"> <!-- add the current project to the row -->
+                {% include "users/_user_card.html" %}
+              </li>		
+          {% if forloop.counter|divisibleby:"4" %} <!-- if this was the 2nd project in the row, end the row -->	
+              </ul>
+            </div>
+            {% if not forloop.last %} <!-- as long as this is not the last project in the list, create a new row -->
+              <div class="row-fluid">
+                <ul class="thumbnails">
+            {% endif %}
+          {% else %}{% if forloop.last %} <!-- if this is the last project in the list, end the row if it hasn't been ended yet -->
+              </ul>
+            </div>
+          {% endif %}{% endif %}
+          {% empty %}
+            <div class="hint">
+              <!-- TODO: Add this message back in, it was causing an error when it was enclosed in blocktrans - endblocktrans template tags -->
+              <!-- Seems like we don't have any Challege Sets to show you. Reload the page or try again later.  -->
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
 
-{% if new %}
-<section id="new_users">
-  <h1><span>{{ _('New People') }}</span></h1>
-  <ul class="user-list">
-    {% for person in recent %}
-      <li>{% include "users/_user_card.html" %}</li>
-    {% endfor %}
-  </ul>
-</section>
-{% endif %}
+  {% if new %}
+    <div class="row-fluid" id="new_users">
+      <div class="row-fluid">
+        <h1><span>{{ _('New People') }}</span></h1>
+      </div>
+      <div class="user-list">
+        {% for person in recent %}
+          {% if forloop.first %} <!-- if this is the first time through the loop, create the first row -->
+            <div class="row-fluid">
+              <ul class="thumbnails">
+          {% endif %}
+              <li class="span3"> <!-- add the current project to the row -->
+                {% include "users/_user_card.html" %}
+              </li>		
+          {% if forloop.counter|divisibleby:"4" %} <!-- if this was the 2nd project in the row, end the row -->	
+              </ul>
+            </div>
+            {% if not forloop.last %} <!-- as long as this is not the last project in the list, create a new row -->
+              <div class="row-fluid">
+                <ul class="thumbnails">
+            {% endif %}
+          {% else %}{% if forloop.last %} <!-- if this is the last project in the list, end the row if it hasn't been ended yet -->
+              </ul>
+            </div>
+          {% endif %}{% endif %}
+          {% empty %}
+            <div class="hint">
+              <!-- TODO: Add this message back in, it was causing an error when it was enclosed in blocktrans - endblocktrans template tags -->
+              <!-- Seems like we don't have any Challege Sets to show you. Reload the page or try again later.  -->
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
 </div>
 {% endblock %}

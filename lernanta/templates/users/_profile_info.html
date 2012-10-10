@@ -1,14 +1,31 @@
 {% load l10n_tags %}
 <div class="profile-wrapper">
   <div class="profile-top">
-    <ul class="followers-following">
-      <li><span class="number">{{ users_followers|length }}</span> <span class="title">{{ _('Followers') }}</span></li>
-      <li><span class="number">{{ users_following|length }}</span> <span class="title">{{ _('Followings') }}</span></li>
-      <li><span class="number">{{ current_projects.count }}</span> <span class="title">{{ _('Courses') }}</span></li>
-      <li><span class="number">{{ badges_count }}</span> <span class="title">{{ _('Badges') }}</span></li>
-    </ul>
 
+    <div class="row-fluid">
+    <div class="span12">
+    <div class="navbar-title">
+    <div class="navbar-inner">
+    <div class="navbar-center">
+    <ul class="nav followers-following">
+      <li><a><span class="number">{{ users_followers|length }}</span>
+      <span class="title">{{ _('Followers') }}</span></a></li>
+      <li class="divider-vertical"></li>
+      <li><a><span class="number">{{ users_following|length }}</span>
+      <span class="title">{{ _('Followings') }}</span></a></li>
+      <li class="divider-vertical"></li>
+      <li><a><span class="number">{{ current_projects.count }}</span>
+      <span class="title">{{ _('Courses') }}</span></a></li>
+      <li class="divider-vertical"></li>
+      <li><a><span class="number">{{ badges_count }}</span> <span class="title">{{ _('Badges') }}</span></a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
     {% if current_projects.organizing or current_projects.participating or current_projects.following or past_projects or past_drupal_courses %}
+    <div class="row-fluid">
     <div class="profile-courses">
       <h3>{{ _('Latest Courses') }} <a class="show-all-courses">{{ _('View All') }}</a></h3>
       <ul>
@@ -37,9 +54,11 @@
           {% endfor %}
       </ul>
     </div>
+    </div>
     {% endif %}
 
     {% if badges or pilot_badges %}
+    <div class="row-fluid">
     <div class="profile-badges">
       <h3>
         {{ _('Latest Badges') }}
@@ -55,8 +74,9 @@
         {% endfor %}
       </ul>
     </div>
+    </div>
     {% endif %}
-
+    <div class="row-fluid">
     <div class="profile-interests">
       {% if skills %}
       <h3>{{ _('My Skills') }}</h3>
@@ -94,6 +114,7 @@
         {% endfor %}
       </ul>
       {% endif %}
+    </div>
     </div>
   </div>
 </div>

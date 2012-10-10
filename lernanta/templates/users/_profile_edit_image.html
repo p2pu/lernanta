@@ -1,17 +1,37 @@
-  <label for="id_image">{{ _('Current Profile Image') }}</label>
-  {% if profile.image %}
-  <p class="hint">{{ _('Upload an image file from your computer to replace your current profile image:') }}</p>  
-  {% else %}
-  <p class="hint">{{ _('Personalize your profile image by uploading an image file from your computer:') }}</p>  
-  {% endif %}
-  <p class="picture-preview"><img class="member-picture" src="{{ profile.image_or_default }}" width="97" height="97" alt="Profile Image" /></p>
-  <div class="field{% if profile_image_form.image.errors %} error{% endif %}">
-    <!-- Note the "Browse..." button comes from your OS so it will
-    only appear in another language if you configure your PC for that language.
-    -->
-    <input type="file" name="image" id="id_image"/>
-    <small class="hint block">{{ _('File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 240x240 pixels') }}</small>
-    {{ profile_image_form.image.errors }}
+<div class="row-fluid">
+  
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="span2">
+        <label for="id_image">{{ _('Current Profile Image') }}</label>
+      </div>
+      <div class="span10">
+        <div class="field{% if profile_image_form.image.errors %} error{% endif %}">
+          {% if profile.image %}
+            <div class="alert alert-info">{{ _('Upload an image file from your computer to replace your current profile image:') }}</div>
+          {% else %}
+            <div class="alert alert-info">{{ _('Personalize your profile image by uploading an image file from your computer:') }}</div> 
+          {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
-  <br clear="all" />
+  
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="span2">
+        <span class="picture-preview"><img class="member-picture" src="{{ profile.image_or_default }}" width="97" height="97" alt="Profile Image" /></span>
+      </div>
+      <div class="span10">
+        <!-- Note the "Browse..." button comes from your OS so it will only appear in another language if you configure your PC for that language. -->
+        <input type="file" name="image" id="id_image"/>
+        <small class="hint block">{{ _('File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 240x240 pixels') }}</small>
+        {{ profile_image_form.image.errors }}  
+      </div>
+    </div>  
+  </div>
+  
+</div>
+
+<br clear="all" />
 

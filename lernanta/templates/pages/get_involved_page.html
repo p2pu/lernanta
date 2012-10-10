@@ -5,13 +5,13 @@
 {% load embed %}
  
 {% block title %}{{ _('Get Involved') }}{% endblock %}
- 
+{% block css %}<link rel="stylesheet" href="{{ STATIC_URL }}css/lernanta2.css?v=1">{% endblock %}
+
 {% block bodyid %}one-column-page{% endblock %}
 {% block bodyclasses %}page pages-get-involved{% endblock %}
 
 {% block breadcrumbs %}
-  <span class="arrow">&rsaquo;</span>
-  <a href="{% locale_url static_get_involved_page %}">{{ _('Get Involved.') }}</a>
+  <li><span class="divider">&rsaquo;</span><a href="{% locale_url static_get_involved_page %}">{{ _('Get Involved.') }}</a></li>
 {% endblock %}
 
 {% block body %}
@@ -19,7 +19,7 @@
 	<div id="main">
 		<h1>{{ _('Get Involved.') }}</h1>
 		<hr />
-		<div class="richtext_section">
+		<div class="richtext_section well lernanta-style">
 			<div id="contribute-wrapper">
 				<p>{% blocktrans %}Welcome to the P2PU Community. We are a respectful and dynamic group who are excited by the idea of finding new ways to learn online. There are several different ways you can get involved in the P2PU Community.{% endblocktrans %}</p>
   

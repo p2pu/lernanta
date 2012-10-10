@@ -1,23 +1,23 @@
 {% load l10n_tags %}
-<article class="user vcard card">
-  <figure>    
-    <a href="{{  person.get_absolute_url }}">
-      <img class="member-picture" src="{{ person.image_or_default }}" height="54" width="54" alt="{{ person }}">
-    </a>
-  </figure>
-  <h1 class="fn"><a href="{{  person.get_absolute_url }}">{{ person }}</a></h1>
-  <div class="meta">
-    <dl class="followers">
-      <dd>{{person.followers|length}}</dd>
-      <dt>{{ _('Followers') }}</dt>
+<div class="thumbnail user vcard card" id="small">
+  <div class="caption">
+    <div class="vertical-center">
+      <a href="{{ person.get_absolute_url }}"><img class="member-picture" src="{{ person.image_or_default }}" height="54" width="54" alt="{{ person }}"></a>
+      <h3><a href="{{  person.get_absolute_url }}"><span class="truncate-to-2-lines">{{ person }}</span></a></h3>
+    </div>
+  </div>    
+  <div class="well well-large">
+    <dl>
+      <dt><span class="label">{{ _('Followers') }}</span></dt>
+      	<dd><span class="badge">{{person.followers|length}}</span></dd>
     </dl>
-    <dl class="following">
-      <dd>{{ person.following|length }}</dd>
-      <dt>{{ _('Following') }}</dt>
+    <dl>
+      <dt><span class="label">{{ _('Following') }}</span></dt>
+        <dd><span class="badge">{{ person.following|length }}</span></dd>
     </dl>
-    <dl class="updates">
-      <dd>{{ person.status_set.count }}</dd>
-      <dt>{{ _('Updates') }}</dt>
+    <dl>
+      <dt><span class="label">{{ _('Updates') }}</span></dt>
+        <dd><span class="badge">{{ person.status_set.count }}</span></dd>
     </dl>
   </div>
-</article>
+</div>

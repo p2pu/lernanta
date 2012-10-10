@@ -27,12 +27,12 @@ body {
     width: {{ school.sidebar_width }};
 }
 
-#main-nav, #breadcrumbs, #language-nav, #main, #sidebar,
-footer[role="main"] ul > li:first-child, .card-list .card,
-.modal article, #splash #content header, .modal.nav article,
-.signin .modal article >h1, .signin.openid .or span, #project_landing h2 span {
-    background-color: {{ school.background_color }};
-}
+/* #main-nav, #breadcrumbs, #language-nav, #main, #sidebar, */
+/* footer[role="main"] ul > li:first-child, .card-list .card, */
+/* .modal article, #splash #content header, .modal.nav article, */
+/* .signin .modal article >h1, .signin.openid .or span, #project_landing h2 span { */
+/*    background-color: {{ school.background_color }}; */
+/* } */
 
 .menu.open, .menu.open a, .menu.open ul, .menu.open li, #user:hover,
 #follow_button button, #unfollow_button button {

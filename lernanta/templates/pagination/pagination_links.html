@@ -1,14 +1,6 @@
 {% if prev_page_url or next_page_url %}
-  <div class="pagination">
-    {% if prev_page_url %}
-      <a class="btn previous" href="{{ prev_page_url }}">← {{ _('previous') }}</a>
-    {% else %}
-      <span class="btn">← {{ _('previous') }}</span>
-    {% endif %}
-    {% if next_page_url %}
-      <a class="btn next" href="{{ next_page_url }}">{{ _('next') }} →</a>
-    {% else %}
-      <span class="btn">{{_('next')}} →</span>
-    {% endif %}
+  <div class="pager">
+    <li class="previous {% if not prev_page_url%}disabled{% endif %}"><a href="{{ prev_page_url }}">← {{ _('previous') }}</a></li>
+    <li class="next {% if not next_page_url%}disabled{% endif %}"><a href="{{ next_page_url }}">{{ _('next') }} →</a></li>
   </div>
 {% endif %}

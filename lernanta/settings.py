@@ -135,7 +135,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.redirects',
     'django.contrib.staticfiles',
-    'south',
+    #'south',
     'robots',
     'wellknown',
     'lernanta.apps.pagination',
@@ -188,6 +188,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'messages.context_processors.inbox',
     'users.context_processors.messages',
     'users.context_processors.redirect_urls',
+    'django.core.context_processors.request',
 )
 
 TEST_RUNNER = 'test_utils.runner.RadicalTestSuiteRunner'

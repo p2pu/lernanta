@@ -1,0 +1,39 @@
+{% extends "courses/course_base.html" %}
+{% load l10n_tags %}
+{% load i18n %}
+{% load learn_tags %}
+{% load embed %}
+
+{% block tab-pane-content %}
+  {% if course.content|length %}
+    <table class="table table-striped">
+      {% for task in course.content %}
+        <tr>
+          <td><a class="taskLink" href="{% locale_url courses_content_show course_id=course.id, content_id=task.id %}">{{ task.title }}</a></td>
+          {% if organizer %}
+              <td>{% if not forloop.first %}<a class="robttn up" href="{% locale_url courses_content_up course_id=course.id content_id=task.id %}"><i class="icon-arrow-up"></i></a>{% endif %}</td>
+              <td>{% if not forloop.last %}<a class="robttn dwn" href="{% locale_url courses_content_down course_id=course.id content_id=task.id%}"><i class="icon-arrow-down"></i></a>{% endif %}</td>
+          {% endif %}
+
+          {% if organizer %}
+            <td><form class="form-inline" action="{% locale_url courses_content_remove course_id=course.id content_id=task.id %}" method="POST">
+              {% csrf_token %}
+              <button class="btn btn-mini btn-danger" type="submit">{% trans "remove" %}</button>
+            </form></td>
+          <td><a href="{% locale_url courses_content_edit course_id=course.id content_id=task.id %}?next_url={{ course_url }}">
+              <i class="icon-edit"></i>
+          </a></td>
+          {% endif %}
+        </tr>
+      {% endfor %}
+    </table>
+
+    {% if organizer %}
+      <a class="btn" href="{% locale_url courses_create_content course_id=course.id %}?next_url={{ course_url }}">{% trans "Add more content" %}</a>
+    {% endif %}
+  {% else %}
+    {% if organizer %}
+      <p class="text-info">{% blocktrans %}This course doesn't have any content yet. {% endblocktrans %}<a href="{% locale_url courses_create_content course_id=course.id%}">Click here</a> to add some.</p>
+    {% endif %}
+  {% endif %}
+{% endblock %}

@@ -113,7 +113,7 @@ var loadMoreMessages = function() {
             if (nextPage > parseInt(npages)) {
                 $('a#inbox_more').hide();
             }
-            // update more link. very hacky :( 
+            // update more link. very hacky :(
             var href = $('a#inbox_more').attr('href');
             var newHref = href.substr(0, href.length - 2) + nextPage + '/';
             $('a#inbox_more').attr('href', newHref);
@@ -289,7 +289,7 @@ var batucada = {
 
 
 $(document).ready(function() {
-    // dispatch per-page onload handlers 
+    // dispatch per-page onload handlers
     var ns = window.batucada;
     var bodyId = document.body.id;
     if (ns && ns[bodyId] && (typeof ns[bodyId].onload == 'function')) {
@@ -323,7 +323,47 @@ $(document).ready(function() {
         return false;
     });
 
-    
+	// initialize and set trunk8 plugin
+	$('.truncate-to-1-line').trunk8({
+	   lines: 1
+	});
+
+	$('.truncate-to-2-lines').trunk8({
+	   lines: 2
+	});
+
+	$('.truncate-to-3-lines').trunk8({
+	   lines: 3
+	});
+
+	$('.truncate-to-4-lines').trunk8({
+	   lines: 4
+	});
+
+	$('.truncate-to-5-lines').trunk8({
+	   lines: 5
+	});
+
+	$('.truncate-to-6-lines').trunk8({
+	   lines: 6
+	});
+
+	$('.truncate-to-7-lines').trunk8({
+	   lines: 7
+	});
+
+	$('.truncate-to-8-lines').trunk8({
+	   lines: 8
+	});
+
+	$('.truncate-to-9-lines').trunk8({
+	   lines: 9
+	});
+
+	$('.truncate-to-10-lines').trunk8({
+	   lines: 10
+	});
+
     $('li.contribute-nav').click(function(){
     	var number = $(this).index();
     	$('li.contribute-item').hide().eq(number).fadeIn('slow');
@@ -343,9 +383,13 @@ $(document).ready(function() {
         $('#id_duration').spinner({min:0, max:9000, step:1, places:0});
     }
 
+    // Now using twitter bootstrap progressbar
     if ($('.project-kind-challenge #task_list_wall #progressbar').length) {
-        var progressbar_value = $(".project-kind-challenge #task_list_wall #progressbar").attr('value');
-        $(".project-kind-challenge #task_list_wall #progressbar").progressbar({'value': parseInt(progressbar_value)});
+        var $tasks_progressbar = $(".project-kind-challenge #task_list_wall #progressbar");
+        var percentage_done = (completed_count / total_count) * 100;
+        $tasks_progressbar.find('.bar').css('width', percentage_done + '%');
+        // var progressbar_value = $(".project-kind-challenge #task_list_wall #progressbar").attr('value');
+        // $(".project-kind-challenge #task_list_wall #progressbar").progressbar({'value': parseInt(progressbar_value)});
     }
 
     if ( $('#other-badges').length ) {
@@ -500,7 +544,9 @@ $(".project-kind-challenge #task_list_section .taskCheckbox").click(function(){
         $(".project-kind-challenge #task_list_wall #total_count").html(total_count);
         $(".project-kind-challenge #task_list_wall #completed_count").html(completed_count);
         var $tasks_progressbar = $(".project-kind-challenge #task_list_wall #progressbar");
-        $tasks_progressbar.progressbar("option", "value", progressbar_value);
+        var percentage_done = (completed_count / total_count) * 100;
+        $tasks_progressbar.find('.bar').css('width', percentage_done + '%');
+        // $tasks_progressbar.progressbar("option", "value", progressbar_value);
         $task_completion_checkbox.removeAttr('disabled');
         var $tasks_completed_msg = $('.project-kind-challenge .tasks-completed-msg');
         if( progressbar_value == "100" ) {
@@ -702,12 +748,12 @@ function updateLearnFilters(data) {
 function updateLearnProjectList(data) {
     var projects_html = data['projects_html'];
     var projects_pagination = data['projects_pagination'];
-    $('#learn #main ul.project-list').append(projects_html);
+    $('#learn #main #project-list').append(projects_html);
     $('#learn #main #learn-pagination').html(projects_pagination);
 }
 
 function reloadLearnProjectList(data) {
-    $('#learn #main ul.project-list').empty();
+    $('#learn #main #project-list').empty();
     updateLearnProjectList(data);
 }
 
@@ -766,6 +812,7 @@ function submitLearnFilterForm (e) {
     var form_data = $form.serialize();
     disableLearn();
     $.get(url, form_data, function(data) {
+        console.log(data);
         updateLearnHeader(data);
         updateLearnFilters(data);
         reloadLearnProjectList(data);
@@ -820,9 +867,9 @@ bindLearnFilters();
 		},
 
 	});
-	
+
 	if ($("input[name=canChangeOrder]").val() != "True"){
-		$("#content-pages ul").sortable('disable');	
+		$("#content-pages ul").sortable('disable');
 	}
 })();
 
@@ -833,7 +880,7 @@ function renderTasks(task_ui, tasks){
 		task.children('a.taskLink')
 			.text(tasks[counter]["title"])
 			.attr("href", tasks[counter]["url"]);
-			
+
 		if (counter == 0){
 			if (task.children("a.robttn.up").length){
 				task.children("a.robttn.up").remove();
@@ -847,7 +894,7 @@ function renderTasks(task_ui, tasks){
 			}
 			button_up.attr("href", tasks[counter]["bttnUpUrl"]);
 		}
-		
+
 		if (counter == task_len - 1){
 			if (task.children("a.robttn.dwn").length){
 				task.children("a.robttn.dwn").remove();

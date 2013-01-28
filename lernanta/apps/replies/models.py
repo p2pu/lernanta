@@ -86,10 +86,12 @@ class PageComment(ModelBase):
         reply_comment.sent_by_email = sent_by_email
         reply_comment.save()
         reply_comment.send_comment_notification()
-        return True
+        return reply_comment
 
     def send_comment_notification(self):
-        recipients = self.page_object.comment_notification_recipients(self)
+        recipients = []
+        if self.page_object:
+            recipients = self.page_object.comment_notification_recipients(self)
         subject_template = 'replies/emails/post_comment_subject.txt'
         body_template = 'replies/emails/post_comment.txt'
         context = {
@@ -119,7 +121,7 @@ def fire_activity(sender, **kwargs):
         ct = ContentType.objects.get_for_model(SignupAnswer)
         if instance.page_content_type != ct:
             statsd.Statsd.increment('comments')
-        if instance.page_object.comments_fire_activity():
+        if instance.page_object and instance.page_object.comments_fire_activity():
             from activity.models import Activity
             activity = Activity(actor=instance.author, verb=verbs['post'],
                 target_object=instance, scope_object=instance.scope_object)
@@ -127,3 +129,65 @@ def fire_activity(sender, **kwargs):
 
 post_save.connect(fire_activity, sender=PageComment,
     dispatch_uid='replies_pagecomment_fire_activity')
+
+
+def create_comment( comment_text, user_uri ):
+    # TODO: comments should only use user_uri
+    from users.models import UserProfile
+    username = user_uri.strip('/').split('/')[-1]
+    user = UserProfile.objects.get(username=username)
+
+    comment = PageComment()
+    comment.author = user
+    comment.content = comment_text
+    comment.sent_by_email = False
+    comment.save()
+    # TODO: comment.send_comment_notification()
+    return get_comment("/uri/comment/{0}".format(comment.id))
+
+
+def get_comment( comment_uri, limit_replies=-1 ):
+    comment_id = comment_uri.strip('/').split('/')[-1]
+    try:
+        comment_db = PageComment.objects.get(id=comment_id)
+    except:
+        return None
+
+    comment = {
+        "id": comment_db.id,
+        "uri": "/uri/comment/{0}".format(comment_db.id),
+        "content": comment_db.content,
+        "user_uri": "/uri/user/{0}".format(comment_db.author.username),
+        "replies": []
+    }
+
+    if limit_replies != 0:
+        replies = comment_db.replies.all().order_by("-created_on")
+        if limit_replies > 0:
+            replies = replies[:limit_replies]
+
+        for reply in replies:
+            comment['replies'] += [{
+                "id": reply.id,
+                "uri": "/uri/comment/{0}".format(reply.id),
+                "content": reply.content,
+                "user_uri": "/uri/user/{0}".format(reply.author.username),
+            }]
+    return comment
+
+
+def reply_to_comment( comment_uri, comment_content, user_uri ):
+    # TODO: comments should only use user_uri
+    from users.models import UserProfile
+    username = user_uri.strip('/').split('/')[-1]
+    user = UserProfile.objects.get(username=username)
+
+    comment_id = comment_uri.strip('/').split('/')[-1]
+    try:
+        comment_db = PageComment.objects.get(id=comment_id)
+    except:
+        return None
+
+    reply = comment_db.reply(user, comment_content)
+    return get_comment("/uri/comment/{0}".format(reply.id))
+

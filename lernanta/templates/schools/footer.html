@@ -1,19 +1,21 @@
 {% load l10n_tags %}
 
-<div id="footer-schools-wrapper">
-  <div class="container">
-    <h5>{{ _('P2PU Schools:') }}</h5>
-    {% for footer_school in schools %}
-      <div class="school-small-icon {{ footer_school.slug }}-small-icon">
-        <a href="{{ footer_school.get_absolute_url }}" title="{{ footer_school.name }}">
-          {% if footer_school.groups_icon %}
-  	        <img src="{{MEDIA_URL}}{{ footer_school.groups_icon }}" width="41" height="50" alt="{{ footer_school.name }}"/>
-          {% else %}
-            <img src="{{STATIC_URL}}images/school-small-missing.png" width="41" height="50" alt="{{ footer_school.name }}"/>
-          {% endif %}
-          <p>{{ footer_school.short_name|upper }}</p>
-        </a>
-      </div>
-     {% endfor %}
+<div class="container footer-schools">
+  <h5>{{ _('P2PU Schools:') }}</h5>
+  <div class="row-fluid center-content">
+  <div class="span12">
+  {% for footer_school in schools %}
+    <div class="school-small-icon {{ footer_school.slug }}-small-icon">
+      <a href="{{ footer_school.get_absolute_url }}" title="{{ footer_school.name }}">
+        {% if footer_school.groups_icon %}
+          <img src="{{MEDIA_URL}}{{ footer_school.groups_icon }}" width="41" height="50" alt="{{ footer_school.name }}"/>
+        {% else %}
+          <img src="{{STATIC_URL}}images/school-small-missing.png" width="41" height="50" alt="{{ footer_school.name }}"/>
+        {% endif %}
+        <p>{{ footer_school.short_name|upper }}</p>
+      </a>
+    </div>
+  {% endfor %}
+  </div>
   </div>
 </div>

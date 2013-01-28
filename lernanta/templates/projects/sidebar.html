@@ -155,47 +155,47 @@
       {% endif %}
       {% if project.clone_of %}
       <li>
-        <div class="label">{{ _('Based on') }}</div>
+        <div class="pull-left">{{ _('Based on') }}</div>
 	    <div class="value"><a href="{{ project.clone_of.get_absolute_url }}">{{ project.clone_of.name }}</a></div>
       </li>
       {% endif %}
       {% if imported_from %}
       <li>
-        <div class="label">{{ _('Based on') }}</div>
+        <div class="pull-left">{{ _('Based on') }}</div>
 	    <div class="value"><a href="{{ imported_from.url }}">{{ imported_from.name }}</a></div>
       </li>
       {% endif %}
       <li>
-        <div class="label">{{ _('Kind') }}</div>
+        <div class="pull-left">{{ _('Kind') }}</div>
 	    <div class="value">{{ project.kind|title }}</div>
       </li>
       <li>
-        <div class="label">{{ _('Signup') }}</div>
+        <div class="pull-left">{{ _('Signup') }}</div>
 	    <div class="value"><a href="{{ sign_up.get_absolute_url }}">{{ sign_up.get_status_display }}</a></div>
       </li>
       <li>
-        <div class="label">{{ _('Chat') }}</div>
+        <div class="pull-left">{{ _('Chat') }}</div>
         <div class="value"><a href="{% locale_url chat %}" target="_blank">{{ chat }}</a></div>
       </li>
       <li>
-	<div class="label">{{ _('Updates') }}</div>
+	<div class="pull-left">{{ _('Updates') }}</div>
 	<div class="value">{{ update_count }}</div>
       </li>
       <li>
-	<div class="label">{{ _('Organizers') }}</div>
+	<div class="pull-left">{{ _('Organizers') }}</div>
 	<div class="value">{{ organizers_count }}</div>
       </li>
       <li>
-	<div class="label">{{ _('Participants') }}</div>
+	<div class="pull-left">{{ _('Participants') }}</div>
 	<div class="value">{{ participants_count }}</div>
       </li>
       <li>
-	<div class="label">{{ _('Followers') }}</div>
+	<div class="pull-left">{{ _('Followers') }}</div>
 	<div class="value">{{ followers_count }}</div>
       </li>
     {% if organizing %}
     <li>
-		<div class="label">{{ _('Pending Applicants') }}</div>
+		<div class="pull-left">{{ _('Pending Applicants') }}</div>
 		<div class="value">
 		<a href="{{ sign_up.get_absolute_url }}">{{ pending_signup_answers_count }}</a>
 		</div>
@@ -306,7 +306,7 @@
   <div class="bottom-sidebar">
     {% for badge in submission_enabled_badges %}
       {% if not forloop.first %}<hr class="badge-break">{% endif %}
-      <div class="badge">
+      <div class="badge-panel">
         {% with awards_count=badge.awards.count pending_count=badge.get_pending_submissions.count %}
           <div class="badge-top">
             <a href="{{ badge.get_absolute_url }}" title="{{ badge|title }}"><img class="badge-graphic" src="{{ badge.get_image_url }}" width="80" height="80" alt="{{ badge|title }}"/></a>

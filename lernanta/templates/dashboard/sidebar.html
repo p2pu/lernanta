@@ -2,110 +2,143 @@
 {% load l10n_tags %}
 {% load no_follow %}
 
-<div id="sidebar">
-  <div class="vcard panel">
-    <img class="member-picture" src="{{ profile.image_or_default }}" height="54" width="54" alt="{{ profile }}">
-    <div class="member-details">
-      <h1 class="member-name"><span class="fn">{{ profile }}</span></h1>
-    </div> 
+<div class="well">
+  <div id="sidebar">
+    <div class="row-fluid vcard panel">
+      <div class="row-fluid">
+        <img class="member-picture" src="{{ profile.image_or_default
+  }}" height="80" width="80" alt="{{ profile }}" />
+      </div>
+      <div class="row-fluid add-top-margin-10">
+        <h1 class="member-name"><span class="fn">{{ profile }}</span></h1>
+      </div> 
+
+      {% if not profile.deleted %}
+
+        <div class="row-fluid member-bio">
+          {{ profile.bio|nofollow|safe }}
+        </div>
+
+        {% if profile.location %}
+          <div class="row-fluid">
+            <hr />
+            <h4>{{ _('Location:') }}</h4> 
+            <p class="adr">{{ profile.location }}</p>
+          </div>
+        {% endif %}
+        {% if interests %}
+          <div class="row-fluid">
+            <div class="row-fluid">
+              <hr />
+              <h4>{{ _('Interests') }}:</h4>
+            </div>
+            <div class="row-fluid">
+              <ul class="tags interests">
+                
+                {% for interest in interests %}
+                    <li><a href="{% locale_url users_user_tagged_list interest.slug %}" title="{{ _('View more interested in ') }}{{ interest.name }}">
+                      {{ interest.name }}
+                    </a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+        {% if desired_topics %}
+          <div class="row-fluid">
+            <div class="row-fluid">
+              <hr />
+              <h4>{{ _('Wants To Learn About') }}:</h4>
+            </div>
+            <div class="row-fluid">
+              <ul class="tags interests">
+                {% for topic in desired_topics %}
+                    <li><a href="{% locale_url users_user_tagged_list topic.slug %}" title="{{ _('View more interested in learning more about ') }}{{ topic.name }}">
+                      {{ topic.name }}
+                    </a></li>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div> <!-- /.vcard -->
 
     {% if not profile.deleted %}
 
-      <div class="member-bio">
-        {{ profile.bio|nofollow|safe }}
-      </div>
+      <div id="member_relationships" class="row-fluid panel">
+        <div class="row-fluid">
+          <hr />
+          <h2>{{ _('Followers') }}: <span class="followers count">{{ users_followers|length }}</span></h2>
+        </div>
+        <div class="row-fluid">
+          <div class="users followers">
+            {% for user_follower in users_followers|slice:":36" %}
+                <a href="{{ user_follower.get_absolute_url }}" title="{{ user_follower }}">
+                  <img class="member-picture" src="{{ user_follower.image_or_default }}" height="26" width="26" alt="{{ user_follower }}">
+                </a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="row-fluid">
+          <hr />          
+          <h2>{{ _('Following') }}: <span class="following count">{{ users_following|length }}</span></h2>
+        </div>
+        <div class="row-fluid">
+          <div class="users following">
+            {% for user_following in users_following|slice:":36" %}
+                <a href="{{ user_following.get_absolute_url }}" title="{{ user_following }}">
+                  <img class="member-picture" src="{{ user_following.image_or_default }}" height="26" width="26" alt="{{ user_following }}">
+                </a>
+            {% endfor %}
+          </div>
+        </div>
+        {% if current_projects.count > 0 %}
+          <div class="row-fluid">
+            <div class="row-fluid">
+              <hr />
+              <h2>{{ _('Learning') }}: <span class="projects count">{{ current_projects.count }}</span></h2>
+            </div>
+            <div class="row-fluid">
+              <div class="following">
+                {% for project in current_projects.organizing %}
+                  {% include "dashboard/_project_image.html"%}
+                {% endfor %}
+                {% for project in current_projects.participating %}
+                  {% include "dashboard/_project_image.html"%}
+                {% endfor %}
+                {% for project in current_projects.following %}
+                  {% include "dashboard/_project_image.html"%}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div> <!-- /#member_relationships-->
 
-      {% if profile.location %}
-        <dl class="member-location">
-          <dt>{{ _('Location:') }}</dt> 
-          <dd class="adr">{{ profile.location }}</dd>
-        </dl>
-      {% endif %}
-      {% if interests %}
-        <h3>{{ _('Interests') }}</h3>
-        <ul class="tags interests">
-          {% for interest in interests %}
-            <li>
-              <a href="{% locale_url users_user_tagged_list interest.slug %}" title="{{ _('View more interested in ') }}{{ interest.name }}">
-                {{ interest.name }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      {% if desired_topics %}
-        <h3>{{ _('Want to learn more about') }}</h3>
-        <ul class="tags interests">
-          {% for topic in desired_topics %}
-            <li>
-              <a href="{% locale_url users_user_tagged_list topic.slug %}" title="{{ _('View more interested in learning more about ') }}{{ topic.name }}">
-                {{ topic.name }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    {% endif %}
-  </div> <!-- /.vcard -->
-
-  {% if not profile.deleted %}
-
-    <div id="member_relationships" class="panel">
-      <h3>{{ _('Followers') }} <span class="followers count">{{ users_followers|length }}</span></h3>
-      <ul class="users followers">
-        {% for user_follower in users_followers|slice:":36" %}
-          <li>
-            <a href="{{ user_follower.get_absolute_url }}" title="{{ user_follower }}">
-              <img class="member-picture" src="{{ user_follower.image_or_default }}" height="26" width="26" alt="{{ user_follower }}">
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-      <h3>{{ _('Following') }} <span class="following count">{{ users_following|length }}</span></h3>
-      <ul class="users following">
-        {% for user_following in users_following|slice:":36" %}
-          <li>
-            <a href="{{ user_following.get_absolute_url }}" title="{{ user_following }}">
-              <img class="member-picture" src="{{ user_following.image_or_default }}" height="26" width="26" alt="{{ user_following }}">
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-      {% if current_projects.count > 0 %}
-        <h3>{{ _('Learning') }} <span class="projects count">{{ current_projects.count }}</span></h3>
-        <ul class="following">
-          {% for project in current_projects.organizing %}
-            {% include "dashboard/_project_image.html"%}
-          {% endfor %}
-          {% for project in current_projects.participating %}
-            <li>{% include "dashboard/_project_image.html"%}</li>
-          {% endfor %}
-          {% for project in current_projects.following %}
-            <li>{% include "dashboard/_project_image.html"%}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </div> <!-- /#member_relationships-->
-
-    {% if links %}
-      <div id="member_links" class="panel">
-        <ul>
-          {% for link in links %}
-            <li>
-              <a class="externalLink" href="{{ link.url }}" title="{{ link.name }}" target="_blank">{{ link.name }}</a>
-              {% if user == profile.user %}
-                {% if not forloop.first %}
-                  <a class="robttn up" href="{% locale_url link_index_up counter=forloop.counter0 %}">{{ _('(UP)') }}</a>
+      {% if links %}
+      <div class="row-fluid add-top-margin-15">
+        <div id="member_links" class="row-fluid panel">
+          <div>
+            {% for link in links %}
+      <div class="row-fluid" style="position:relative;">
+            
+                <a class="externalLink" href="{{ link.url }}" title="{{ link.name }}" target="_blank">{{ link.name }}</a>
+                {% if user == profile.user %}
+                  {% if not forloop.first %}
+                    <a class="robttn up" href="{% locale_url link_index_up counter=forloop.counter0 %}">{{ _('(UP)') }}</a>
+                  {% endif %}
+                  {% if not forloop.last %}
+                    <a class="robttn dwn" href="{% locale_url link_index_down counter=forloop.counter0 %}">{{ _('(DOWN)') }}</a>
+                  {% endif %}
                 {% endif %}
-                {% if not forloop.last %}
-                  <a class="robttn dwn" href="{% locale_url link_index_down counter=forloop.counter0 %}">{{ _('(DOWN)') }}</a>
-                {% endif %}
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div> <!-- /#member_links -->
-    {% endif %}
+        </div>
+            {% endfor %}
+          </div>
+        </div> <!-- /#member_links -->
+      </div>        
+      {% endif %}
 
-  {% endif %}
-</div> <!-- /#sidebar -->
+    {% endif %}
+  </div> <!-- /#sidebar -->
+</div>

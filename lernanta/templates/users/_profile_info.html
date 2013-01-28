@@ -1,16 +1,29 @@
 {% load l10n_tags %}
 <div class="profile-wrapper">
   <div class="profile-top">
-    <ul class="followers-following">
-      <li><span class="number">{{ users_followers|length }}</span> <span class="title">{{ _('Followers') }}</span></li>
-      <li><span class="number">{{ users_following|length }}</span> <span class="title">{{ _('Followings') }}</span></li>
-      <li><span class="number">{{ current_projects.count }}</span> <span class="title">{{ _('Courses') }}</span></li>
-      <li><span class="number">{{ badges_count }}</span> <span class="title">{{ _('Badges') }}</span></li>
-    </ul>
 
+    <div class="row-fluid">
+    <div class="span12">
+    <div class="detailed-info">
+    <ul class="">
+      <li><a><span class="number">{{ users_followers|length }}</span>
+      <span class="title">{{ _('Followers') }}</span></a></li>
+      <li class="divider-vertical"></li>
+      <li><a><span class="number">{{ users_following|length }}</span>
+      <span class="title">{{ _('Followings') }}</span></a></li>
+      <li class="divider-vertical"></li>
+      <li><a><span class="number">{{ current_projects.count }}</span>
+      <span class="title">{{ _('Courses') }}</span></a></li>
+      <li class="divider-vertical"></li>
+      <li><a><span class="number">{{ badges_count }}</span> <span class="title">{{ _('Badges') }}</span></a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
     {% if current_projects.organizing or current_projects.participating or current_projects.following or past_projects or past_drupal_courses %}
+    <div class="row-fluid">
     <div class="profile-courses">
-      <h3>{{ _('Latest Courses') }} <a class="show-all-courses">{{ _('View All') }}</a></h3>
+      <h2>{{ _('Latest Courses') }} <small><a class="show-all-courses">{{ _('View All') }}</a></small></h2>
       <ul>
         {% for project in current_projects.organizing %}
           {% include "users/_project_image.html"%}
@@ -23,8 +36,8 @@
         {% endfor %}
         {% for project in past_projects %}
           <li>
-            <a href="{{ project.url }}" title="{{ project.name }} {% if project.organizer %}(organizer){% else%}(participant){% endif %}">
-              <img src="{{ project.image_url }}" width="150" height="93" alt="{{ project.name }}"/>
+            <a href="{{ project.url }}" title="{{ project.title }} {% if project.organizer %}(organizer){% else%}(participant){% endif %}">
+              <img src="{{ project.image_url }}" width="150" height="93" alt="{{ project.title }}"/>
             </a>
           </li>
           {% endfor %}
@@ -37,14 +50,16 @@
           {% endfor %}
       </ul>
     </div>
+    </div>
     {% endif %}
 
     {% if badges or pilot_badges %}
+    <div class="row-fluid">
     <div class="profile-badges">
-      <h3>
+      <h2>
         {{ _('Latest Badges') }}
         <a href="{% locale_url users_badges_manage %}" title="{{ _('Share your badges') }}"><i class="icon-share icon-large"></i></a>
-        <a class="show-all-badges">{{ _('View All') }}</a></h3>
+        <small><a class="show-all-badges">{{ _('View All') }}</a></small></h2>
       <ul>
         {% for badge in badges %}
           <li>
@@ -55,11 +70,12 @@
         {% endfor %}
       </ul>
     </div>
+    </div>
     {% endif %}
-
+    <div class="row-fluid">
     <div class="profile-interests">
       {% if skills %}
-      <h3>{{ _('My Skills') }}</h3>
+      <h2>{{ _('My Skills') }}</h2>
       <ul class="tags skills">
         {% for skill in skills %}
           <li>
@@ -71,7 +87,7 @@
       </ul>
       {% endif %}
       {% if interests %}
-      <h3>{{ _('My Interests') }}</h3>
+      <h2>{{ _('My Interests') }}</h2>
       <ul class="tags interests">
         {% for interest in interests %}
           <li>
@@ -83,7 +99,7 @@
       </ul>
       {% endif %}
       {% if desired_topics %}
-      <h3>{{ _('What I want to learn more about') }}</h3>
+      <h2>{{ _('What I want to learn more about') }}</h2>
       <ul class="tags interests">
         {% for topic in desired_topics %}
           <li>
@@ -94,6 +110,7 @@
         {% endfor %}
       </ul>
       {% endif %}
+    </div>
     </div>
   </div>
 </div>

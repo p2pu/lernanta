@@ -1,0 +1,51 @@
+/* See http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/ */
+
+/* Default font size in pixels if not overridden. */
+$baseFontSize: 16px;
+
+/* Convert PX units to EMs. */
+/* New Version of function able to accept arguments WITH *OR* WITHOUT the px unit attached. */
+/* Ex: margin-right: pem(16); *OR* Ex: margin-right: pem(16px); */
+@function pem($pxValue, $base: $baseFontSize) {
+  @if unitless($pxValue) {
+    $pxValue: $pxValue * 1px;
+  }
+
+  @if unitless($base) {
+    $base: $base * 1px;
+  }
+
+  @return ($pxValue / $base) * 1em;
+}
+
+/* Used to convert PX to EMs for multiple properties or values or both.
+$base is an optional measurement that allows making measurements relative to the parent font size rather than the current. Also accepts a list of lists (instead a list of values) for properties that accept multiple lists of values. Only numbers of converted; everything else is passed through.
+
+Examples:
+
+@include scale(line-height, 30)
+@include scale(line-height, 30, 16)
+@include scale(width height, 125);
+@include scale(padding, 0 25, 16);
+@include scale(text-shadow, (#0d6e28 1 1) (#777 0 0 2), 16);
+@include scale(box-shadow, (inset 0 0 0 1 #2a9022) (inset 0 0 3 #459966), 16);
+*/
+@mixin scale($props, $sizes, $base: $baseFontSize) {
+    $values: ();
+    $sublists: false;
+    @each $s in $sizes {
+        /* unwrap lists for values that have multiple list of values such as text-shadow */
+        @if type-of($s) == list {
+            $sublists: true;
+            $vv: ();
+            @each $ss in $s {
+                $vv: append($vv, if(type-of($ss) == number, #{$ss / $base}em, $ss));
+            }
+            $values: append($values, join((), $vv));
+        } @else {
+            $values: append($values, if(type-of($s) == number, #{$s / $base}em, $s));
+        }
+    }
+    $value: join((), $values, if($sublists, comma, space));
+    @each $prop in $props { #{$prop}: $value }
+}

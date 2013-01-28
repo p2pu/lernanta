@@ -1,0 +1,47 @@
+[
+    {
+        "pk": 1,
+        "model": "learn.list",
+        "fields": {
+            "url": "",
+            "name": "drafts",
+            "title": "Draft courses"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "learn.list",
+        "fields": {
+            "url": "",
+            "name": "listed",
+            "title": "Listed courses"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "learn.list",
+        "fields": {
+            "url": "",
+            "name": "archive",
+            "title": "Archived courses"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "learn.list",
+        "fields": {
+            "url": "",
+            "name": "community",
+            "title": "Community Picks"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "learn.list",
+        "fields": {
+            "url": "",
+            "name": "showcase",
+            "title": "Showcased"
+        }
+    }
+]

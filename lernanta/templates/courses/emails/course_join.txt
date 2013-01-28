@@ -1,0 +1,9 @@
+{% load i18n %}
+{% load l10n_tags %}
+
+{% trans 'Howdy course organizer!' %}
+
+{% blocktrans with course_title=course.title%}{{new_user}} signed up for {{course_title}}!{% endblocktrans %}
+
+{% blocktrans %}Regards
+The P2PU team{% endblocktrans %}

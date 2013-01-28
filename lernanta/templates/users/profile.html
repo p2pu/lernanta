@@ -4,6 +4,8 @@
 {% load activity_tags %}
 {% load pagination_tags %}
 
+<!-- lernanta2.css only used for activity feed styling at bottom -->
+{% block css %}<link rel="stylesheet" href="{{ STATIC_URL }}css/lernanta-activity.css?v=1">{% endblock %}
 {% block title %}{{ profile.username }}{% endblock %}
 
 {% block links %}
@@ -15,30 +17,54 @@
 {% block bodyid %}user_profile{% endblock %}
 
 {% block breadcrumbs %}
-  <span class="arrow">&rsaquo;</span>
-  <a href="{% locale_url users_user_list %}">{{ _('People') }}</a>
-  <span class="arrow">&rsaquo;</span>
-  <a href="{{ profile.get_absolute_url }}">{{ profile.username }}</a>
+  <li><span class="divider">&rsaquo;</span>
+  <a href="{% locale_url users_user_list %}">{{ _('People') }}</a></li>
+  <li><span class="divider">&rsaquo;</span>
+  <a href="{{ profile.get_absolute_url }}">{{ profile.username }}</a></li>
+{% endblock %}
+{% block breadcrumbs_actions %}
+  {% if user.is_authenticated and user == profile.user %}
+    <a class="btn btn-clemintine pull-right" href="{% locale_url users_profile_edit %}">{{ _('Edit Profile') }}</a>
+  {% endif %}
 {% endblock %}
 
 {% block body %}
 
-  {% user_sidebar %}
+<div class="row-fluid">
+  <div class="span9">
+    <div class="well">
+    {% profile_info %}
+    <div class="row-fluid">
+      <div class="row-fluid">
+        <div class="btn-group pull-right">
+          {% activity_filters request profile.get_absolute_url %}
+        </div>
+      </div>
 
-  {% profile_info %}
+      <div class="feature-box" id="posts">	
+          <div class="row-fluid">
+          {% for activity in pagination_current_page.object_list %}
+            {% include "activity/_activity_resource.html" %}
+          {% endfor %}
+          </div>
+      {% with prefix='' page_url=profile.get_absolute_url %}
+          <div class="row-fluid">
+            <div class="pull-right">
+              {% pagination_links %}
+            </div>
+          </div>
+      {% endwith %}
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="span3">
+    {% user_sidebar %}
+  </div>
+</div>
 
-  <div id="main">
-    {% activity_filters request profile.get_absolute_url %}
-    <ul id="posts">
-      {% for activity in pagination_current_page.object_list %}
-        {% include "activity/_activity_resource.html" %}
-      {% endfor %}
-    </ul>
-    {% with prefix='' page_url=profile.get_absolute_url %}
-      {% pagination_links %}
-    {% endwith %}
 
-</div> <!-- /#main -->
+
 
 {% endblock %}
 

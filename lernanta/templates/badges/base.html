@@ -5,6 +5,11 @@
 
 {% block bodyid %}badges-page{% endblock %}
 
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/batucada.css?v=1">
+{% endblock %}
+
+
 {% block breadcrumbs %}
   <span class="arrow">&rsaquo;</span>
   <a href="{% locale_url badges_list %}">{{ _('Badges') }}</a>

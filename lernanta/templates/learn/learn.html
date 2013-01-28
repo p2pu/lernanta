@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load l10n_tags %}
+{% load project_tags %}
 {% load learn_tags %}
 {% block title %}{{ _('Learn') }}{% endblock %}
 {% block bodyid %}learn{% endblock %}
@@ -9,42 +10,61 @@
 
 {% block breadcrumbs %}
   {% if learn_school %}
-    <span class="arrow">&rsaquo;</span>
-    <a href="{{ learn_school.get_absolute_url }}">{{ learn_school.name }}</a>
+    <li><span class="divider">&rsaquo;</span><a href="{{ learn_school.get_absolute_url }}">{{ learn_school.name }}</a></li>
   {% endif %}
-  <span class="arrow">&rsaquo;</span>
-  <a href="{% if learn_school %}{% locale_url learn_schools school_slug=learn_school.slug %}{% else %}{% learn_default %}{% endif %}">{{ _('Learn') }}</a>
-{% endblock %}
-{% block breadcrumbs_actions %}
-  {% if user.is_authenticated %}
-    <a id="create-project" class="button" href="{% locale_url projects_create %}">{{ _('Create') }}</a>
-  {% endif %}
+  <li>
+	<span class="divider">&rsaquo;</span>
+	<a href="{% if learn_school %}{% locale_url learn_schools school_slug=learn_school.slug %}{% else %}{% learn_default %}{% endif %}">{{ _('Learn') }}</a>
+  </li>
 {% endblock %}
 
 {% block body %}
-  <div id="sidebar">
-    {% include "learn/_learn_filters.html"%}
-  </div>
 
-  <div id="main">
-    <br>
-    <section>
-      <h1 id="learn-header">
-        {% include "learn/_learn_header.html"%}
+<div id="learn" class="container-fluid">
+  <div class="row-fluid">
+	<div id="main" class="span9">
+	<!--Body content-->
+	  <div class="row-fluid">
+	    <!--  Old Learn Headers currently unused -->
+	     <h1> <span id="learn-header"> {% include "learn/_learn_header.html"%}</span>
+    <small class="directly-below">{{ _('Browse great courses available on P2PU by exploring featured ones, schools, and tags.') }}</small>
+
       </h1>
-      <br>
-      <ul class="project-list">
-        {% include "learn/_learn_projects.html" %}
-      </ul>
-      <br clear="both">
-      <div id="learn-pagination">
-        {% include "learn/_learn_pagination.html" %}
+	  </div>
+	  <div class="row-fluid" id="project-list">
+	    {% include "learn/_learn_projects.html" %}
+	  </div>
+      <div class="row-fluid">
+	    <div id="learn-pagination">{% include "learn/_learn_pagination.html" %}</div>
+        <a id="show-more-results" class="btn" href="#">{{ _('Show More Results') }}</a>
       </div>
-      <a id="show-more-results" class="button" href="#">{{ _('Show More Results') }}</a>
-    </section>
+		<div class="well well-large">
+		  <div class="vertical-center">
+        <div class="row-fluid">
+  		    <h2>{{ _('Didn\'t find yours? How about creating one?') }} &nbsp; &nbsp;</h2>
+        </div>
+        <div class="row-fluid">
+          <a class="btn btn-large btn-olive" href="{% locale_url courses_create %}">{{ _('Create a Course') }}</a>
+        </div>
+      </div>
+		</div> 
+	<!--End Body content-->
+	</div>
+	<div id="sidebar" class="span3">
+	<!--Sidebar content-->
+	  {% include "learn/_learn_filters.html"%}
+	<!--End Sidebar content-->
+	</div>
   </div>
+</div>
 
 {% endblock %}
+
+<div class="span4 inherit-height">
+  <div class="vertical-center">
+    <span class="wrap">{{ _('At P2PU, people work together to learn a particular topic by completing tasks, assessing individual and group work, and providing constructive feedback.') }}</span>
+  </div>
+
 
 {% block js %}
   <script type="text/javascript">

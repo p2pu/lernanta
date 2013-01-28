@@ -7,6 +7,7 @@
 {% load learn_tags %}
 
 {% block title %}{{ _('Your Dashboard') }}{% endblock %}
+{% block css %}<link rel="stylesheet" href="{{ STATIC_URL }}css/lernanta2.css?v=1">{% endblock %}
 {% block links %}
 <link rel="alternate" type="application/atom+xml" href="{% locale_url activity_profile_feed username=user.get_profile.username %}" title="{{_('Activity from your profile')}}" />
 <link rel="alternate" type="application/atom+xml" href="{% locale_url activity_dashboard_feed username=user.get_profile.username %}" title="{{_('Activity from your dashboard')}}"/>
@@ -14,52 +15,100 @@
 {% block bodyid %}dashboard{%endblock%}
 
 {% block breadcrumbs %}
-  <span class="arrow">&rsaquo;</span>
-  <a href="{{ dashboard_url }}">{{ _('Dashboard') }}</a>
+<li><span class="divider">&rsaquo;</span><a href="{{ dashboard_url }}">{{ _('Dashboard') }}</a></li>
 {% endblock %}
 
 {% block body %}
 
-{% include "dashboard/sidebar.html" %}
+<div class="row-fluid">
+  <div class="span9 well"> <!-- Main Area -->
 
-<div id="main">
-  {% if show_welcome %}
-    <article class="welcome">
-      <header><a href="{% locale_url dashboard_hide_welcome %}" title="Hide this message"><img class="close_button" src="{{ STATIC_URL }}images/closeButton.png"></a></header>
-      <h1>{{ _('Welcome to P2PU!') }}</h1>
-      <p>{{ _('To get started, you should ') }}<a href="{% locale_url users_profile_edit %}">{{ _('update your profile</a>. This is a great way to tell people a bit more about yourself. Then find ') }}<a href="{% locale_url users_user_list %}">{{_('people</a> and ') }}<a href="{% learn_default %}">{{ _('groups</a> that interest you and start following them! You can also ') }}<a href="{% locale_url projects_create %}">{{ _('create new groups</a> and update how often P2PU ') }}<a href="{% locale_url preferences_settings %}">{{_('contacts you</a>.') }}</p>
-    </article>
-  {% endif %}
-  <div id="create-post">
-    <div class="post-container">
-      <form id="post-status-update" method="post" action="{% locale_url statuses_create %}">
-	{% csrf_token %}
-	<input id="fake-message-input" type="text" value="{{ _('Post a message to your followers') }}">
-	<textarea name="status"></textarea>
+    
+      {% if show_welcome %}
+      <div class="row-fluid">
+        <div class="well well-large welcome"> <!-- Welcome Box -->
+          <span class="pull-right"><a href="{% locale_url dashboard_hide_welcome %}" title="Hide this message"><img class="close_button" src="{{ STATIC_URL }}images/closeButton.png"></a></span>
+          <div class="row-fluid">
+            <h2>{{ _('Welcome to P2PU!') }}</h2>
+          </div>
+          <div class="row-fluid">
+            {{ _('To get started, you should ') }}<a href="{% locale_url users_profile_edit %}">{{ _('update your profile</a>. This is a great way to tell people a bit more about yourself. Then find ') }}<a href="{% locale_url users_user_list %}">{{_('people</a> and ') }}<a href="{% learn_default %}">{{ _('groups</a> that interest you and start following them! You can also ') }}<a href="{% locale_url projects_create %}">{{ _('create new groups</a> and update how often P2PU ') }}<a href="{% locale_url preferences_settings %}">{{_('contacts you</a>.') }}
+          </div>
+        </div>
+      </div>
+      {% endif %}
 
-	<div class="status-and-actions">
-	  <div class="post-char-count">750</div>
 
-          <a class="button update cancel" href="{% locale_url dashboard %}">
-	    {{ _('Cancel') }}
-	  </a>
-          <button class="button update submit" id="post-update">{{ _('Post Update') }}</button>
-	</div> <!-- /.status-and-actions -->
+      
 
-      </form>
-    </div> <!-- /.post-container -->
-  </div> <!-- /#create-post -->
+    <div id="create-post" class="post-container">
+      <div class="row-fluid">
+        <!-- <div class="span2"> -->
+          <!-- <img class="member-picture" width="80px" height="80px" src="{{ activity.actor.image_or_default }}" alt="{{ activity.actor }}"> -->
+        <!-- </div> -->
+        <div class="span12">
 
-  <ul id="posts">
-    {% activity_filters request dashboard_url %}
-    {% for activity in pagination_current_page.object_list %}
-      {% include "activity/_activity_resource.html" %}
-    {% endfor %}
-  </ul>
-  {% with prefix='' page_url=dashboard_url %}
-    {% pagination_links %}
-  {% endwith %}
+        <form id="post-status-update" method="post" action="{% locale_url statuses_create %}">
+            {% csrf_token %}
+            <div class="row-fluid">
+              <div class="span12">
+                <input class="span12" id="fake-message-input" type="text" value="{{ _('Post a message...') }}">
+                <textarea class="span12" name="status"></textarea>
+              </div>
+            </div>
 
-</div> <!-- /#main -->
+            <div class="row-fluid status-and-actions">
+              <div class="span12">
+                {% if organizing %}
+                <div id="important-message" class="field{% if form.important.errors %} error{% endif %}">
+                  {{ form.important }} {{ _('Important message (participants can not turn off notifications for important messages).') }}
+                  {{ form.important.errors }}
+                </div>
+              {% endif %}
+              </div>
+            </div>
+            <div class="row-fluid status-and-actions">
+              <div class="span3">
+                <div class="pull-left post-char-count btn">750</div>
+              </div>
+              <div class="span9">
+                <a class="btn btn-blood-orange" href="{{ project.get_absolute_url }}">{{ _('Cancel') }}</a>
+                <button class="btn btn-slate" id="post-project-update">{{ _('Post Message') }}</button>
+              </div>
+            </div> <!-- /.status-and-actions -->
+          </form>
+        </div>
+      </div> <!-- /.post-container -->
+    </div> <!-- /.#create-post -->
+
+ 
+    <div class="row-fluid">
+      <div class="btn-group pull-right">
+        {% activity_filters request dashboard_url %}
+      </div>
+    </div>
+
+    <div class="feature-box" id="posts">	
+      <div class="pull-left">
+        <div class="row-fluid">
+        {% for activity in pagination_current_page.object_list %}
+          {% include "activity/_activity_resource.html" %}
+        {% endfor %}
+        </div>
+        {% with prefix='' page_url=wall_url %}
+        <div class="row-fluid">
+          <div class="pull-right">
+            {% pagination_links %}
+          </div>
+        </div>
+        {% endwith %}
+      </div>
+    </div>	
+  </div> <!-- span-9 -->
+  <div class="span3">
+    {% include "dashboard/sidebar.html" %}
+  </div>
+</div>    
 
 {% endblock %}
+

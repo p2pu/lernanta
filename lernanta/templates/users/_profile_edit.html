@@ -1,36 +1,54 @@
-  <div class="field{% if profile_form.full_name.errors %} error{% endif %}">
-    <label for="id_full_name">{{ _('Display Name') }}</label>
-    {{ profile_form.full_name }}
-    {{ profile_form.full_name.errors }}
+  <div class="control-group field{% if profile_form.full_name.errors %} error{% endif %}">
+    <label class="control-label" for="id_full_name">{{ _('Display Name') }}</label>
+    <div class="controls">
+      {{ profile_form.full_name }}
+      {{ profile_form.full_name.errors }}
+    </div>
   </div>
-  <div class="field{% if profile_form.location.errors %} error{% endif %}">
-    <label for="id_location">{{ _('Location') }}</label>
-    {{ profile_form.location }}
-    {{ profile_form.location.errors }}
+  <div class="control-group field{% if profile_form.location.errors %} error{% endif %}">
+    <label class="control-label" for="id_location">{{ _('Location') }}</label>
+      <div class="controls">
+        {{ profile_form.location }}
+        {{ profile_form.location.errors }}
+      </div>
   </div>
-  <div class="field{% if profile_form.location.errors %} error{% endif %}">
-    <label for="language">{{ _('Preferred Language') }}</label>
-    {{ profile_form.preflang}}
-    {{ profile_form.preflang.errors }}
+  <div class="control-group field{% if profile_form.location.errors %} error{% endif %}">
+    <label class="control-label" for="language">{{ _('Preferred Language') }}</label>
+    <div class="controls">
+      {{ profile_form.preflang}}
+      {{ profile_form.preflang.errors }}
+    </div>
   </div>
-  <div class="field{% if profile_form.bio.errors %} error{% endif %}">
-    <label for="id_bio">{{ _('About Me') }}</label>
-    {{ profile_form.bio }}
-    {{ profile_form.bio.errors }}
+  <div class="control-group field{% if profile_form.bio.errors %} error{% endif %}">
+    <label class="control-label" for="id_bio">{{ _('About Me') }}</label>
+    <div class="controls">
+      {{ profile_form.bio }}
+      {{ profile_form.bio.errors }}
+    </div>
   </div>
-<p>{{ _('Please describe your skills, interest, and the things you will want to learn, by providing a comma-separated list of tags.') }}</p>
-  <div class="field{% if profile_form.skill.errors %} error{% endif %}">
-    <label for="id_skill">{{ _('Skilled in') }}</label>
-    {{ profile_form.skill }}
-    {{ profile_form.skill.errors }}
+  <p>
+    {{ _('Please describe your skills, interest, and the things you will want to learn, by providing a comma-separated list of tags.')}}
+    <br />
+    <br />
+  </p>
+  <div class="control-group field{% if profile_form.skill.errors %} error{% endif %}">
+    <label class="control-label" for="id_skill">{{ _('Skilled in') }}</label>
+    <div class="controls">
+      {{ profile_form.skill }}
+      {{ profile_form.skill.errors }}
+    </div>
   </div>
-  <div class="field{% if profile_form.interest.errors %} error{% endif %}">
-    <label for="id_interest">{{ _('Interested in') }}</label>
-    {{ profile_form.interest }}
-    {{ profile_form.interest.errors }}
+  <div class="control-group field{% if profile_form.interest.errors %} error{% endif %}">
+    <label class="control-label" for="id_interest">{{ _('Interested in') }}</label>
+    <div class="controls">
+      {{ profile_form.interest }}
+      {{ profile_form.interest.errors }}
+    </div>
   </div>
-  <div class="field{% if profile_form.desired_topic.errors %} error{% endif %}">
-    <label for="id_desired_topic">{{ _('Want to learn more about') }}</label>
-    {{ profile_form.desired_topic }}
-    {{ profile_form.desired_topic.errors }}
+  <div class="control-group field{% if profile_form.desired_topic.errors %} error{% endif %}">
+    <label class="control-label" for="id_desired_topic">{{ _('Want to learn more about') }}</label>
+    <div class="controls">
+      {{ profile_form.desired_topic }}
+      {{ profile_form.desired_topic.errors }}
+    </div>
   </div>

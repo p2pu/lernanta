@@ -18,8 +18,8 @@ register.inclusion_tag('badges/_give_badge_action.html')(
 
 def badge_submissions(request, pending_page_url, awarded_page_url,
         mine_page_url, toggled_awards, toggled_mine, badge=None):
-    pending_submissions = Submission.objects.filter(pending=True)
-    awarded_submissions = Submission.objects.filter(pending=False)
+    pending_submissions = Submission.objects.filter(author__deleted=False, pending=True)
+    awarded_submissions = Submission.objects.filter(author__deleted=False, pending=False)
     if badge:
         pending_submissions = pending_submissions.filter(badge=badge)
         awarded_submissions = awarded_submissions.filter(badge=badge)

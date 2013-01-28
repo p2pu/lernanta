@@ -2,11 +2,12 @@
 {% load l10n_tags %}
 
 {% block body %}
+
 <section class="modal">
   <article>
     <h1>{% block heading %}{% endblock %}</h1>
     <fieldset>
-      <form method="post" action="{% block action %}{% endblock %}">
+      <form method="post" action="{% block action %}{% endblock %}" class="form-full-width">
         {% csrf_token %}
 	<div class="field{% if form.recipient.errors %} error{% endif %}">
 	  <label for="id_recipient">{{ _('To') }}</label>
@@ -37,8 +38,8 @@
         {% endif %}
     {%endblock%}
 	<p class="buttons">
-	  <a class="button" href="{% locale_url drumbeatmail_inbox %}">{{ _('Cancel') }}</a>
-	  <button type="submit" value="{{ _('Send') }}">{{ _('Send') }}</button>
+	  <a class="btn" href="{% locale_url drumbeatmail_inbox %}">{{ _('Cancel') }}</a>
+	  <button type="submit" class="btn-olive" value="{{ _('Send') }}">{{ _('Send') }}</button>
 	</p>
       </form>
     </fieldset>

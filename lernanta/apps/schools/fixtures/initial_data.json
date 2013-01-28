@@ -98,5 +98,30 @@
             "name": "School of Ed (pilot)",
             "short_name": "EDUCATION"
         }
+    },
+    {
+        "pk": 5, 
+        "model": "schools.school", 
+        "fields": {
+            "organizers": [], 
+            "groups_icon": "", 
+            "description": "", 
+            "extra_styles": "", 
+            "sidebar_width": "245px", 
+            "show_school_organizers": true, 
+            "old_term_name": null, 
+            "menu_color_light": "#4bd2c9", 
+            "headers_color": "#5a6579", 
+            "featured": [], 
+            "headers_color_light": "#f08c00", 
+            "background": "", 
+            "site_logo": "", 
+            "logo": "", 
+            "menu_color": "#36cdc4", 
+            "background_color": "#ffffff", 
+            "slug": "school-of-open", 
+            "name": "School of Open",
+            "short_name": "Open"
+        }
     }
 ]

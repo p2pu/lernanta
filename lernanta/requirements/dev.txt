@@ -7,6 +7,8 @@ nose==1.1.2
 jinja2==2.6
 pep8==0.6.1
 pyflakes==0.5.0
+django-extensions==1.0.1
+Werkzeug==0.8.3
 
 -e git://github.com/jbalogh/django-nose#egg=django-nose
 -e git://github.com/jbalogh/test-utils#egg=test-utils

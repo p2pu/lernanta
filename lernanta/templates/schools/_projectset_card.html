@@ -1,13 +1,14 @@
 {% load l10n_tags %}
-<article class="project card">
-  <figure>
-    <a href="{{ projectset.get_absolute_url }}">
-      <img src="{{ projectset.get_image_url  }}" width="399" height="125" alt="{{ projectset.name }}"/>
-    </a>
-  </figure>
+
+
+
+<div class="thumbnail-large thumbnail card">
+  <a href="{{ projectset.get_absolute_url }}">
+    <img src="{{ projectset.get_image_url  }}" width="399" height="125" alt="{{ projectset.name }}"/>
+  </a>
   <div class="ribbon-wrapper">
     <div class="ribbon-front">
-      <a href="{{ projectset.get_absolute_url }}"><h1>{{ projectset.name }}</h1></a>
+      <h1><a href="{{ projectset.get_absolute_url }}">{{ projectset.name }}</a></h1>
     </div>
     <div class="ribbon-edge-topleft"></div>
     <div class="ribbon-edge-topright"></div>
@@ -16,30 +17,30 @@
     <div class="ribbon-back-left"></div>
     <div class="ribbon-back-right"></div>
   </div>
-  <div class="info">
-    <div class="description">{{ projectset.short_description }}</div>
+  <div class="caption">
+    <p>{{ projectset.short_description }}</p>
   </div>
-  <div class="challenge-set-button">
-    <a class="challenge-set-modal-action" href="#challenge-set-data-{{ projectset.slug }}">
+  <div class="challenge-set-button center-via-text-align">
+    <a href="#challenge-set-data-{{ projectset.slug }}" class="btn btn-success challenge-set-modal-action">
       {{ _('View Challenges') }}
     </a>
   </div>
-  <div class="meta">
-    <dl class="meta-challenges">
-      <dd>{{ projectset.projects.count }}</dd>
-      <dt>{{ _('Challenges') }}</dt>
+  <div class="well well-large">
+    <dl>
+      <dt><span class="badge">{{ projectset.projects.count }}</span></dt>
+        <dd><span class="label">{{ _('Challenges') }}</span></dd>
     </dl>
-    <dl class="meta-participants">
-      <dd>{{ projectset.total_participants }}</dd>
-      <dt>{{ _('Participants') }}</dt>
+    <dl>
+      <dt><span class="badge">{{ projectset.total_participants }}</span></dt>
+        <dd><span class="label">{{ _('Participants') }}</span></dd>
     </dl>
-    <dl class="meta-adopters">
-      <dd>{{ projectset.total_adopters }}</dd>
-      <dt>{{ _('Adopters') }}</dt>
+    <dl>
+      <dt><span class="badge">{{ projectset.total_adopters }}</span></dt>
+        <dd><span class="label">{{ _('Adopters') }}</span></dd>
     </dl>
-    <dl class="meta-badges">
-      <dd>{{ projectset.total_badges }}</dd>
-      <dt>{{ _('Badges') }}</dt>
+    <dl>
+      <dt><span class="badge">{{ projectset.total_badges }}</span></dt>
+        <dd><span class="label">{{ _('Badges') }}</span></dd>
     </dl>
   </div>
   <div class="challenge-set-preview">
@@ -67,7 +68,9 @@
           </li>
         {% endfor %} 
       </ul>
-      <div class="challenge-set-button"><a href="{{ projectset.get_absolute_url }}">{{ _('View All Challenges') }}</a></div>
+      <div class="challenge-set-button"><a class="btn btn-olive" href="{{ projectset.get_absolute_url }}">{{ _('View All Challenges') }}</a></div>
     </div>
-  </div>
-</article>
+  </div>  
+</div>
+
+

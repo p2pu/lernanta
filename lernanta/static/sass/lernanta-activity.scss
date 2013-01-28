@@ -1,0 +1,130 @@
+
+    #posts {
+      list-style: none;
+      margin: 13px 0;
+      padding: 0;
+      font-family: sense-light, helvetica, sans-serif;
+    }
+    #posts .clear{
+      width: 600px;
+      height: 1px;
+      line-height: 1px;
+    }
+    #posts .action,
+    .supplemental_actions .action {
+      display: block;
+      float: right;
+      color: #919191;
+      text-decoration: none;
+      padding-left: 20px;
+      margin-left: 18px;
+      left: 1px;
+      height: 16px;
+      line-height: 12px;
+	}
+	.supplemental_actions {
+		margin: 5px 0;
+		font-size: 11px;
+		line-height: 1.5;
+	}
+	.supplemental_actions .action {
+		display: inline;
+		margin: 0 5px 0 0px;
+		float: none;
+	}
+	#page #main .action {
+	    float: right;
+	}
+	#page.project-kind-challenge #main .action.action-bottom {
+	    float: left;
+	}
+
+    #posts .post-comments {
+       float: right;
+    }
+
+    #create_page .preview, #edit_page .preview {
+       padding: 10px;
+       border-radius: 10px;
+       border: solid 1px #EEE;
+    }
+
+    #posts .action:hover,
+    .supplemental_actions .action:hover {
+      color: #777;
+    }
+    #posts .reply-to {
+		background: url("/static/images/reply.icon.png") 0 0 no-repeat;
+	}
+    #posts .delete {
+		background: url("/static/images/delete-x.png") 0 0 no-repeat;
+	}
+  #posts .restore {
+		background: url("/static/images/restore.icon.png") 0 0 no-repeat;
+	}
+    #posts .give_badge_action {
+		background: url("/static/images/give-badge.png") 0 0 no-repeat;
+	}
+    #posts .edit {
+		background: url("/static/images/edit.icon.png") 0 0 no-repeat;
+	}
+	#posts .report,
+	.supplemental_actions .report {
+		background: url("/static/images/report.icon.png") 0 1px no-repeat;
+		padding-left: 15px;		
+	}
+	.supplemental_actions .report {
+		background-position: 0 0;
+	}
+    #posts .action:hover {
+      color: #777;
+    }
+    
+    #posts .member-picture {
+      float: left;
+    }
+    #posts .post-contents {
+      padding-left: 64px;
+    }
+
+      .project-kind-challenge #posts .post-details h3 {
+        color: #919191;
+        font-weight: 300;
+        font-size: 16px;
+      }
+
+      #posts .post-details, #posts .post-details a {
+        color: #919191;
+      }
+      #posts .post-details a {
+        text-decoration: underline;
+      }
+      #posts .post-details a.member-name {
+        text-decoration: none;
+        color: #2084ca;
+      }
+      
+      #posts .post-body, #posts .post-body p {
+        margin: 10px 0;
+      }
+      .project-kind-challenge #posts .post-body, #posts .post-body p {
+        color: #222;
+      }
+
+    .post-container {
+      -pie-background: linear-gradient(top,#fff,#f4f4f4);
+      border-radius: 6px;
+      -moz-border-radius: 6px;
+      -o-border-radius: 6px;
+      -webkit-border-radius: 6px;
+      /* min-height: 56px; */
+      margin: 0 0 9px;
+      border: 1px solid #c6c6c6;
+      border-bottom: 2px solid #c6c6c6;
+      padding: 8px;
+      behavior: url("/static/css/PIE.htc");
+      /* float: left; */
+      /* width: 630px; */
+    }
+
+

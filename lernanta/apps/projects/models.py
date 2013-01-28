@@ -16,6 +16,7 @@ from django.db.models.signals import post_save
 
 from taggit.managers import TaggableManager
 
+from l10n.urlresolvers import reverse
 from drumbeat import storage
 from drumbeat.utils import get_partition_id, safe_filename
 from drumbeat.models import ModelBase
@@ -27,7 +28,7 @@ from richtext.models import RichTextField
 from content.models import Page
 from replies.models import PageComment
 from tags.models import GeneralTaggedItem
-from tracker import statsd
+from learn import models as learn_model
 
 log = logging.getLogger(__name__)
 
@@ -89,7 +90,10 @@ class Project(ModelBase):
 
     slug = models.SlugField(unique=True, max_length=110)
 
+    # this field is deprecated
     featured = models.BooleanField(default=False, verbose_name='staff favourite')
+
+    # this field is deprecated
     community_featured = models.BooleanField(default=False, verbose_name='community pick')
 
     created_on = models.DateTimeField(
@@ -183,6 +187,7 @@ class Project(ModelBase):
         self.test = False
         self.under_development = False
         self.save()
+
         if self.category == self.COURSE:
             signup = self.sign_up.get()
             if signup.is_closed():
@@ -249,6 +254,10 @@ class Project(ModelBase):
     def create(self):
         self.save()
         self.send_creation_notification()
+        learn_data = self.get_learn_api_data()
+        learn_model.add_course_listing(**learn_data)
+        learn_model.add_course_to_list(learn_data['course_url'], 'drafts')
+
 
     def save(self):
         """Make sure each project has a unique slug."""
@@ -262,7 +271,34 @@ class Project(ModelBase):
                     break
                 self.slug = "%s-%s" % (slug, count + 1)
                 count += 1
+
+        try:
+            learn_model.update_course_listing(**self.get_learn_api_data())
+        except:
+            pass
+
+        course_url = reverse('projects_show', kwargs={'slug': self.slug})
+        course_lists = learn_model.get_lists_for_course(course_url)
+        list_names = [ l['name'] for l in course_lists ]
+        if self.not_listed:
+            for list_name in list_names:
+                learn_model.remove_course_from_list(course_url, list_name)
+        else:
+            desired_list = 'drafts'
+            if self.under_development == False and self.archived == False:
+                desired_list = 'listed'
+            elif self.archived == True:
+                desired_list = 'archived'
+            possible_lists = ['drafts', 'listed', 'archived']
+            possible_lists.remove(desired_list)
+            for l in possible_lists:
+                if l in list_names:
+                    learn_model.remove_course_from_list(course_url, l)
+            if desired_list not in list_names:
+                learn_model.add_course_to_list(course_url, desired_list)
+
         super(Project, self).save()
+
 
     def set_duration(self, value):
         """Sets (without saving) duration in hours and minutes given a decimal value.
@@ -285,6 +321,20 @@ class Project(ModelBase):
         missing = settings.STATIC_URL + 'images/project-missing.png'
         image_path = self.image.url if self.image else missing
         return image_path
+
+    def get_learn_api_data(self):
+        """ return data used for learn API """
+        course_url = reverse('projects_show', kwargs={'slug': self.slug})
+        learn_api_data = {
+            "course_url": course_url,
+            "title": self.name,
+            "description": self.short_description,
+            "data_url": "",
+            "language": self.language,
+            "thumbnail_url": self.get_image_url(),
+            "tags": self.tags.all().values_list('name', flat=True)
+        }
+        return learn_api_data
 
     def send_creation_notification(self):
         """Send notification when a new project is created."""
@@ -326,11 +376,11 @@ class Project(ModelBase):
         completed_stats = PerUserTaskCompletion.objects.filter(
             page__project=self, page__deleted=False,
             unchecked_on__isnull=True).values(
-            'user__username').annotate(completed_count=Count('page')).filter(
+            'user').annotate(completed_count=Count('page')).filter(
             completed_count=total_count)
-        usernames = completed_stats.values(
-            'user__username')
-        return Relationship.objects.filter(source__username__in=usernames,
+        usernames = completed_stats.values_list(
+            'user', flat=True)
+        return Relationship.objects.filter(source__in=usernames,
             target_project=self, source__deleted=False)
 
     def get_badges(self):
@@ -447,19 +497,6 @@ register_filter('default', Project.filter_activities)
 register_filter('learning', Project.filter_learning_activities)
 
 
-def get_active_projects():
-    """ get all projects that are not deleted, archived, tests
-        or under development
-    """
-    active_projects = Project.objects.filter(
-        archived=False,
-        deleted=False,
-        test=False,
-        under_development=False
-    )
-    return active_projects
-
-
 class Participation(ModelBase):
     user = models.ForeignKey('users.UserProfile',
         related_name='participations')
@@ -502,27 +539,3 @@ def check_tasks_completion(sender, **kwargs):
 
 post_save.connect(check_tasks_completion, sender=PerUserTaskCompletion,
     dispatch_uid='projects_check_tasks_completion')
-
-
-def post_save_project(sender, **kwargs):
-    instance = kwargs.get('instance', None)
-    created = kwargs.get('created', False)
-    is_project = isinstance(instance, Project)
-    if created and is_project and not instance.test:
-        statsd.Statsd.increment('groups')
-
-
-post_save.connect(post_save_project, sender=Project,
-    dispatch_uid='projects_post_save_project')
-
-
-def post_save_participation(sender, **kwargs):
-    instance = kwargs.get('instance', None)
-    created = kwargs.get('created', False)
-    is_participation = isinstance(instance, Participation)
-    if created and is_participation:
-        statsd.Statsd.increment('joins')
-
-
-post_save.connect(post_save_participation, sender=Participation,
-    dispatch_uid='projects_post_save_participation')

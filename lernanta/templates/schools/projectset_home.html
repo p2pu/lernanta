@@ -10,36 +10,53 @@
 {% block body %}
 <div id="main">
   <div id="challenge-set">
-    <div class="left">
-      <h1>{{ projectset.name }}</h1>
-      <p>{{ projectset.short_description }}</p>
-      {{ projectset.description|embed|safe }}
-      <div class="details">
-        <ul>
-          <li>{{ projectset.projects.count }} {{ _('Challenges') }}</li>
-          <li>{{ projectset.total_participants }} {{ _('Participants') }}</li>
-          <li>{{ projectset.total_adopters }} {{ _('Adopters') }}</li>
-          <li>{{ projectset.total_badges }} {{ _('Badges') }}</li>
-        </ul>
-        {% if projectset.first_project %}
-          <a class="start-challenge" href="{{ projectset.first_project.get_absolute_url }}">{{ _('Start first Challenge') }} &#187;</a>
-        {% endif %}
+    <div class="row-fluid">
+      <div class="span2">
+        <img src="{{ projectset.get_image_url  }}" width="399" height="125" alt="{{ projectset.name }}"/>
+      </div>
+      <div class="span8">
+        <h1>{{ projectset.name }}</h1>
+        <p>{{ projectset.short_description }}</p>
+        {{ projectset.description|embed|safe }}
+        <div class="detailed-info add-top-margin-15">
+          <ul>
+            <li>{{ projectset.projects.count }} {{ _('Challenges') }}</li>
+            <li>{{ projectset.total_participants }} {{ _('Participants') }}</li>
+            <li>{{ projectset.total_adopters }} {{ _('Adopters') }}</li>
+            <li>{{ projectset.total_badges }} {{ _('Badges') }}</li>
+          </ul>
+          {% if projectset.first_project %}
+            <a class="btn btn-olive pull-right" href="{{ projectset.first_project.get_absolute_url }}">{{ _('Start first Challenge') }} &#187;</a>
+          {% endif %}
+        </div>    
       </div>
     </div>
-    <div class="right">
-      <img src="{{ projectset.get_image_url  }}" width="399" height="125" alt="{{ projectset.name }}"/>
-    </div>
   </div>
-  <br clear="all">
-  <br clear="all">
-  <section id="challenge-set-project-list">
-    <h1><span>{{_('Challenges')}}</span></h1>
-    <ul class="project-list">
-      {% for project in projectset.get_projects %}
-        <li>{% include "projects/_project_card.html" %}</li>
-      {% endfor %}
-    </ul>
-  </section>
+  <div class="row-fluid" id="schools-challenges">
+    <div class="span12 add-top-margin-20">      
+      <h1><span>{{_('Challenges')}}</span></h1>
+      <ul class="thumbnails">
+        {% for project in projectset.get_projects %}
+          {% if forloop.first %}
+            <div class="row-fluid">
+              <ul class="thumbnails">
+          {% endif %}
+                <li class="span3">{% include "projects/_project_card.html" %}</li>
+          {% if forloop.counter|divisibleby:"4" %}
+              </ul>
+            </div>    
+            {% if not forloop.last %}
+              <div class="row-fluid">
+                <ul class="thumbnails">
+            {% endif %}
+          {% else %}{% if forloop.last %}
+              </ul>
+            </div>
+          {% endif %}{% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>    
 </div>
 
 {% endblock %}

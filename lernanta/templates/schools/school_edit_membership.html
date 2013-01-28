@@ -8,19 +8,17 @@
 <p class="hint">{{ _('View, add and remove study groups, courses, ... to this school.') }}</p>
 <form action="{% locale_url schools_edit_membership slug=school.slug %}" method="post">
   {% csrf_token %}
+  <input type="hidden" id="id_course_url" name="course_url"></input>
   <p>
-    <div class="field member_group {% if form.project.errors %} error{% endif %}">
-      <label for="id_project">{{ _('Short Name') }}</label>
-      {{ form.project }}
-      {{ form.project.errors }}
-    </div>
+    <label for="id_course_title">{{ _('Course title') }}</label>
+    <input id="id_course_title" type="text" name="course_title">
   </p>
   <p class="buttons add-membership">
     <button type="submit">{{ _('Add') }}</button>
   </p>
 </form>
 
-{% if projects %}
+{% if courses %}
 <table>
 <thead>
   <tr>
@@ -29,12 +27,13 @@
   </tr>
 </thead>
 <tbody>
-  {% for project in projects %}
+  {% for course in courses %}
     <tr>
-      <td class="name"><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></td>
+      <td class="name"><a href="{{ course.url }}">{{ course.title }}</a></td>
       <td class="actions">
-        <form action="{% locale_url schools_edit_membership_delete slug=school.slug project_slug=project.slug %}" method="post">
+        <form action="{% locale_url schools_edit_membership_delete slug=school.slug %}" method="post">
           {% csrf_token %}
+          <input type="hidden" value="{{course.url}}" name="course_url"></input>
           <button type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
         </form>
       </td>
@@ -49,13 +48,11 @@
 
 {% block js %}
   <script type="text/javascript">
-    $('#id_project').autocomplete({
-        source: function( request, response ) {
-                url = "{% url matching_non_member slug=school.slug %}?term=" + request.term;
-                $.getJSON(url, function(data) {
-                    response(data);
-                });
-            }
+    $('#id_course_title').autocomplete({
+        source: "{% locale_url learn_auto_complete_lookup %}",
+        select: function( event, ui ) {
+            $('#id_course_url').val(ui.item.url);
+        }
     });
   </script>
 {% endblock %}

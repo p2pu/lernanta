@@ -78,4 +78,4 @@ class TestLocaleURLs(test_utils.TestCase):
             'password': 'testpass',
         })
         self.assertRedirects(response, '/en/dashboard/', status_code=302,
-                             target_status_code=200)
+                             target_status_code=302)

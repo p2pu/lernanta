@@ -8,60 +8,98 @@
 
 {% block breadcrumbs_actions %}
     {% if is_organizer %}
-      <a id="edit-school" class="button" href="{% locale_url schools_edit slug=school.slug %}">{{ _('Edit School') }}</a>
+      <a id="edit-school" class="btn btn-skinny btn-apricot" href="{% locale_url schools_edit slug=school.slug %}">{{ _('Edit School') }}</a>
     {% endif %}
     {% if user.is_authenticated %}
-       <a id="create-project" class="button" href="{% locale_url projects_create %}">{{ _('Create') }}</a>
+       <a id="create-project" class="btn btn-skinny btn-olive" href="{% locale_url projects_create %}">{{ _('Create') }}</a>
     {% endif %}
-    <a class="button" href="{% locale_url learn_schools school_slug=school.slug %}">{{ _('Browse') }}</a>
+    <a class="btn btn-skinny btn-cyan" href="{% locale_url learn_schools school_slug=school.slug %}">{{ _('Browse') }}</a>
 {% endblock %}
 
 {% block body %}
-<div id="main">
-  <div id="sidebar">
-    <br>
-    <figure class="school_img">
-      {% if school.logo %}
-        <img src="{{ MEDIA_URL }}{{ school.logo }}" alt="project image"/>
-      {% else %}
-        <img src="{{ STATIC_URL}}images/school-missing.png" alt="project image"/>
-      {% endif %}
-    </figure>
-    {% if school.show_school_organizers %}
-      <section id="people" class="panel">
-        <br>
-        <h2 class="school_header">{{ _('School Organizers') }}</h2>
-        <br>
-        {% for organizer in school.organizers.all %}
-          <a href="{{ organizer.get_absolute_url }}" title="{{ organizer }} (school organizer)"><img class="member-picture" src="{{ organizer.image_or_default }}" height="26" width="26" alt="{{ organizer }} (school organizer)"></a>
+
+<div class="fluid-grid">
+  <div class="row-fluid">
+    <div class="span9">
+      {{ school.description|embed|safe }}    
+    </div>
+    <div class="span3">
+      <div class="well">
+        {% if school.logo %}
+          <img class="school-logo" src="{{ MEDIA_URL }}{{ school.logo }}" alt="project image"/>
+        {% else %}
+          <img class="school-logo" src="{{ STATIC_URL}}images/school-missing.png" alt="project image"/>
+        {% endif %}
+        {% if school.show_school_organizers %}
+          <hr />
+          <h2 class="school_header">{{ _('School Organizers') }}</h2>
+          {% for organizer in school.organizers.all %}
+            <a href="{{ organizer.get_absolute_url }}" title="{{ organizer }} (school organizer)"><img class="member-picture" src="{{ organizer.image_or_default }}" height="26" width="26" alt="{{ organizer }} (school organizer)"></a>
+          {% endfor %}
+        {% endif %}
+      </div>      
+    </div>
+  </div>
+  
+  <div class="row-fluid" id="challenge-sets">
+    {% if featured_project_sets %}
+      <h1><span>{{ _('Challenge Sets') }}</span></h1>
+      <div class="challenge-set-list">        
+        {% for projectset in featured_project_sets %}
+          {% if forloop.first %} <!-- if this is the first time through the loop, create the first row -->
+            <div class="row-fluid">
+          {% endif %}
+              <div class="span6"> <!-- add the current project to the row -->
+                {% include "schools/_projectset_card.html" %}
+              </div>		
+          {% if forloop.counter|divisibleby:"2" %} <!-- if this was the 2nd project in the row, end the row -->	
+            </div>
+            {% if not forloop.last %} <!-- as long as this is not the last project in the list, create a new row -->
+              <div class="row-fluid add-top-margin-20">
+            {% endif %}
+          {% else %}{% if forloop.last %} <!-- if this is the last project in the list, end the row if it hasn't been ended yet -->
+            </div>
+          {% endif %}{% endif %}
+          {% empty %}
         {% endfor %}
-      </section>
+      </div>
     {% endif %}
   </div>
-  {{ school.description|embed|safe }}
-  <br clear="all">
-  <br>
-  {% if featured_project_sets %}
-    <section id="challenge-sets">
-      <h1><span>{{ _('Challenge Sets') }}</span></h1>
-      <ul class="challenge-set-list">
-        {% for projectset in featured_project_sets %}
-          <li>{% include "schools/_projectset_card.html" %}</li>
-        {% endfor %}
-      </ul>
-    </section>
-  {% endif %}
-  {% if featured %}
-    <section id="featured_projects">
-      <h1><span>{{_('Featured')}}</span></h1>
-      <ul class="project-list">
-        {% for project in featured %}
-          <li>{% include "projects/_project_card.html" %}</li>
-        {% endfor %}
-      </ul>
-    </section>
-  {% endif %}
-  {{ school.more_info|embed|safe }}
+  
+    {% if featured %}
+    <div class="row-fluid" id="schools-featured">
+      <div class="span12 add-top-margin-20">      
+        <h1><span>{{_('Featured')}}</span></h1>
+        <ul class="thumbnails">
+          {% for project in featured %}
+            {% if forloop.first %}
+              <div class="row-fluid">
+                <ul class="thumbnails">
+            {% endif %}
+                  <li class="span3">{% include "learn/_course_card.html" %}</li>
+            {% if forloop.counter|divisibleby:"4" %}
+                </ul>
+              </div>    
+              {% if not forloop.last %}
+                <div class="row-fluid">
+                  <ul class="thumbnails">
+              {% endif %}
+            {% else %}{% if forloop.last %}
+                </ul>
+              </div>
+            {% endif %}{% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    {% if school.more_info %}
+    <div class="row-fluid add-top-margin-20">
+      <div class="span9 well white-background">
+        {{ school.more_info|embed|safe }}      
+      </div>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock %}

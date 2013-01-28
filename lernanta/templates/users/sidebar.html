@@ -2,55 +2,62 @@
 {% load l10n_tags %}
 {% load no_follow %}
 
-<div id="sidebar">
+<div id="sidebar" class="well">
 
-  {% if user.is_authenticated and user == profile.user %}
-    <a class="button above-profile-pic" href="{% locale_url users_profile_edit %}">{{ _('Edit Profile') }}</a>
-  {% endif %}
-  <div class="vcard panel">
+
+  <div class="row-fluid">
     <img class="member-picture" src="{{ profile.image_or_default }}" height="240" width="240" alt="{{ profile }}">
-    <div class="member-details">
+    <div class="member-details add-top-margin-15">
       <h1 class="member-name"><span class="fn">{{ profile }}</span></h1>
     </div> 
 
     {% if not profile.deleted %}
 
-      <div class="member-bio">
+      <div class="row-fluid member-bio">
         {{ profile.bio|nofollow|safe }}
       </div>
 
       {% if profile.location %}
+      <div class="row-fluid">
         <dl class="member-location">
           <dt>{{ _('Lives in') }}</dt> 
           <dd class="adr">{{ profile.location }}</dd>
-        </dl>
+        </dl>  
+      </div>
       {% endif %}
 
       {% if user.is_authenticated and user != profile.user %}
+      <div class="row-fluid">        
         <p class="supplemental_actions">
           <a class="report abuse action" href="{% locale_url drumbeat_abuse model="userprofile" app_label="users" pk=profile.id  %}">{{_('Report Abuse')}}</a>
         </p>
+        </div>
+        <div class="row-fluid add-top-margin-15">
         <div class="member-actions">
           {% if profile in user.get_profile.following %}
             <form action="{% locale_url relationships_unfollow object_type='user' slug=profile.username %}" method="post">
               {% csrf_token %}
-             <button id="unfollow-user" >{{ _('Unfollow') }}</button>
-            </form>
+             <button class="btn btn-clemintine" id="unfollow-user" >{{ _('Unfollow') }}</button>
+          <a class="btn btn-slate" href="{% locale_url drumbeatmail_compose_to username=profile.username %}">{{ _('Private Message')}}</a>
+          </form>
           {% else %}
             <form action="{% locale_url relationships_follow object_type='user' slug=profile.username %}" method="post">
               {% csrf_token %}
-              <button id="follow-user">{{ _('Follow') }}</button>
-            </form>
+              <button class="btn btn-olive" id="follow-user">{{ _('Follow') }}</button>
+          <a class="btn btn-slate" href="{% locale_url drumbeatmail_compose_to username=profile.username %}">{{ _('Private Message')}}</a>
+
+          </form>
           {% endif %}
-          <a class="button" href="{% locale_url drumbeatmail_compose_to username=profile.username %}">{{ _('Private Message')}}</a>
         </div>
+      </div>        
       {% endif %}
 
     {% endif %}
   </div> <!-- /.vcard -->
 
   {% if not profile.deleted and links %}
-    <div id="member_links" class="panel">
+  <hr />
+    <div id="member_links" class="row-fluid panel">
       <ul>
         {% for link in links %}
           <li>

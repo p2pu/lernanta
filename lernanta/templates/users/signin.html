@@ -7,11 +7,10 @@
 {% block body %}
 <section class="modal">
   <article>
-    <h1>{{ _('Sign In') }} <span class="pester">{{ _('or') }} <a href="{% locale_url users_register %}{% if redirect_field_value %}?{{ redirect_field_name }}={{ redirect_field_value }}{% endif %}" tabindex="7">{{ _('create an account') }}</a></span></h1>
+    <h1>{{ _('Sign In') }} <small>{{ _('or') }} <a href="{% locale_url users_register %}{% if redirect_field_value %}?{{ redirect_field_name }}={{ redirect_field_value }}{% endif %}" tabindex="7">{{ _('create an account') }}</a></small></h1>
     <fieldset>
         <form action="{% locale_url users_login %}" method="post">
         {% csrf_token %}
-        <p>{{ _('You can login directly with your username and password from the old P2PU website.') }}</p>
         <div class="field{% if form.username.errors %} error{% endif %}">
           <label for="id_username">{{ _('Username or Email') }}</label>
           {{ form.username }}
@@ -30,7 +29,9 @@
           </label>
         </div>        
         <p class="submit">
-          <button id="login-submit-button" type="submit" tabindex="4">{{ _('Sign In') }}</button>
+          <button id="login-submit-button" class="btn btn-olive" type="submit" tabindex="4">{{ _('Sign In') }}</button>
+          <a class="btn" href="{% locale_url splash %}" tabindex="5">{{ _('Cancel')}}</a>        
+
           {{ _('or use') }}
           <a class="openid" href="{% locale_url users_login_openid %}" tabindex="5">{{ _('OpenID')}}</a>
         </p>

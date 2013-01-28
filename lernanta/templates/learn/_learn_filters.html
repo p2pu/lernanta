@@ -1,58 +1,106 @@
 {% load l10n_tags %}
 {% load learn_tags %}
-  <a class="filter {% if not learn_showcase and not learn_community and not learn_fresh and not learn_school and not learn_tag %}active{% endif %}" href="{% locale_url learn_all %}">{{ _('View All') }}</a>
-  <h2><i class="icon-star-empty icon-large"></i>{{ _('Featured') }}</h2>
-  <a class="filter {% if learn_community %}active{% endif %}" href="{% locale_url learn_featured feature='community' %}">
-    {{ _('Community Picks') }}
-  </a>
-  <a class="filter {% if learn_showcase %}active{% endif %}" href="{% locale_url learn_featured feature='showcase' %}">
-    {{ _('Showcase') }}
-  </a>
-  <a class="filter {% if learn_fresh %}active{% endif %}" href="{% locale_url learn_featured feature='fresh' %}">
-    {{ _('Fresh Additions') }}
-  </a>
-  <h2><i class="icon-trophy icon-large"></i>{{ _('Schools') }}</h2>
+
+<ul class="nav nav-list">
+  <li class="{% if not learn_showcase and not learn_community and not learn_fresh and not learn_school and not learn_tag %}active{% endif %}">
+    <a class="filter" href="{% locale_url learn_all %}">{{ _('View All') }}</a>
+  </li>
+  <li class="divider"></li>
+  <li class="nav-header">
+    <i class="icon-star-empty icon-large"></i>{{ _('Featured') }}
+  </li>
+  <li class="divider"></li>
+  <li class="{% if learn_community %}active{% endif %}">
+    <a class="filter" href="{% locale_url learn_list list_name='community' %}">{{ _('Community Picks') }}</a>
+  </li>
+  <!-- <li class="divider"></li> -->
+  <li class="{% if learn_showcase %}active{% endif %}">
+    <a class="filter" href="{% locale_url learn_list list_name='showcase' %}">{{ _('Staff Favorites') }}</a>
+  </li>
+  <!-- <li class="divider"></li> -->
+  <li class="{% if learn_fresh %}active{% endif %}">
+    <a class="filter" href="{% locale_url learn_fresh %}">{{ _('Fresh Additions') }}</a>
+  </li>
+  <!-- <li class="divider"></li> -->
+  <li class="nav-header">
+    <i class="icon-book icon-large"></i>{{ _('Schools') }}
+  </li>
+  <li class="divider"></li>
   {% for school in schools %}
-    <a class="filter {% if learn_school.id == school.id %}active{% endif %}" href="{% locale_url learn_schools school_slug=school.slug %}">
-      {{ school.short_name|title }}
-    </a>
+    <li class="{% if learn_school.id == school.id %}active{% endif %}">
+      <a class="filter" href="{% locale_url learn_schools school_slug=school.slug %}">{{ school.short_name|title }}</a>
+    </li>
+    <!-- <li class="divider"></li> -->
   {% endfor %}
-  <hr>
-  <h2><i class="icon-tags icon-large"></i>{{ _('Tags') }}</h2>
+  <li class="nav-header">
+    <i class="icon-tags icon-large"></i>{{ _('Tags') }}
+  </li>
+  <li class="divider"></li>
   {% for tag in filter_tags %}
-    <a class="filter active" href="./?filter_tags={% filter_remove_tag filter_tags tag %}">
-        {{tag}}<img src="{{STATIC_URL}}/images/delete-x.png">
-    </a>
+    <li class="active">
+      <a class="filter" href="./?filter_tags={% filter_remove_tag filter_tags tag %}">
+		{{tag}}<img src="{{STATIC_URL}}/images/delete-x.png">
+	  </a>
+    </li>
+    <li class="divider"></li>
   {% endfor %}
   {% for tag in popular_tags %}
-    <a class="filter" href="./?filter_tags={% filter_add_tag filter_tags tag.tag__name %}">
-      {{ tag.tag__name }} ({{ tag.tagged_count }})
-    </a>
+    {% if forloop.counter <= 4 %}
+      <li class="{% if learn_tag == tag.tag %}active{% endif %}">
+        <a class="filter" href="./?filter_tags={% filter_add_tag filter_tags tag.tag %}">{{ tag.tag }} ({{ tag.tagged_count }})</a>
+      </li>
+      <!-- <li class="divider"></li> -->
+    {% endif %}
   {% endfor %}
-  <a href="./"><strong>{{ _('Clear Tags') }}</strong></a>
-  <a href="{% locale_url learn_tags %}">
-    <strong>{{ _('Browse All Tags') }}</strong>
-    <i class="icon-arrow-right"></i>
-  </a>
-  <h2><i class="icon-pencil icon-large"></i>{{ _('Preferences') }}</h2>
-    <form id="learn-projects-filter" action="./" method="get">
-    {{ form.featured }}
-    {{ form.school }}
-    {{ form.tag }}
-    <div class="field{% if form.language.errors %} error{% endif %}">
-      <label for="id_language">
-        {{ _('Language:') }}
-        {{ form.language }}
-      </label>
-      {{ form.language.errors }}
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      {{ _('More Tags') }}
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      {% for tag in popular_tags %}
+        {% if forloop.counter > 4 %}
+          <li>
+            <a class="filter" href="./?filter_tags={% filter_add_tag filter_tags tag.tag %}">{{ tag.tag }} ({{ tag.tagged_count }})</a>
+          </li>
+        {% endif %}
+      {% endfor %} 
+      <li>
+        <a href="{% locale_url learn_tags %}">
+		  <strong>{{ _('Browse All Tags') }}</strong>
+	      <i class="icon-arrow-right"></i>
+		</a>
+      </li>
+    </ul>
+  </li>
+  <li class="divider"></li>
+  <li>
+    <a href="./" style="letter-spacing: 3px;">{{ _('CLEAR TAGS') }}</a>
+  </li>
+  <li class="divider"></li>
+  <li class="nav-header">
+    <i class="icon-globe icon-large"></i>{{ _('Language') }}
+  </li>
+  <li class="divider"></li>
+  <li>
+    <form id="learn-projects-filter" action="" method="get">
+      {{ form.featured }}
+      {{ form.school }}
+      {{ form.tag }}
+      <div class="field{% if form.language.errors %} error{% endif %}">
+        <label for="id_language">
+          {{ form.language }}
+        </label>
+        {{ form.language.errors }}
       </div>
       <div class="field{% if form.reviewed.errors %} error{% endif %}">
-      <label for="id_reviewed">
-        {{ form.reviewed }}
-        {{ _('Community Reviewed') }}
-      </label>
-      {{ form.reviewed.errors }}
-    </div>
-    <button type="submit" value="{{ _('Filter') }}">{{ _('Filter') }}</button>
-  </form>
-
+        <label for="id_reviewed">
+          {{ form.reviewed }}{{ _('Community Reviewed') }}
+        </label>
+        {{ form.reviewed.errors }}
+      </div>
+      <button type="submit" value="{{ _('Filter') }}">{{ _('Filter') }}</button>
+    </form>
+  </li>
+</ul>
+  

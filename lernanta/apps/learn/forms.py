@@ -3,7 +3,7 @@ from django.utils.translation import ugettext as _
 
 from learn.models import get_active_languages
 
-class ProjectsFilterForm(forms.Form):
+class CourseFilterForm(forms.Form):
     # Not Listed by Default
     archived = forms.BooleanField(required=False, widget=forms.HiddenInput)
     under_development = forms.BooleanField(required=False, widget=forms.HiddenInput)

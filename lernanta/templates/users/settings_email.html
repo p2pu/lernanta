@@ -4,30 +4,43 @@
 
 {% block bodyclasses %}edit account email{% endblock %}
 {% block title %}{{ _('Update Email') }}{% endblock %}
+
+
 {% block form %}
+
 <fieldset id="edit_account_email" class="edit account email tabpane">
-    <h2>{{ _('Update Email') }}</h2>
-    <form action="{% locale_url preferences_email %}" method="post">
-      {% csrf_token %}
-       <div class="field{% if form.email.errors %} error{% endif %}">
-        <label for="id_email">{{ _('Email Address') }}</label>
+  <h2>{{ _('Update Email') }}</h2>
+        {% if profile.confirmation_code and not form.is_bound %}
+          <div class="alert alert-warn"
+            <li>{{ _('Please confirm your email address') }}</li>
+          </div>
+        {% endif %}
+
+  <form class="form-horizontal" action="{% locale_url preferences_email %}" method="post">
+    {% csrf_token %}
+    <div class="control-group field{% if form.email.errors %} error{% endif %}">
+      <label class="control-label" for="id_email">{{ _('Email Address') }}</label>
+      <div class="controls">
         {{ form.email }}
         {{ form.email.errors }}
-        {% if profile.confirmation_code and not form.is_bound %}
-          <ul class="errorlist">
-            <li>{{ _('Please confirm your email address') }}</li>
-          </ul>
-        {% endif %}
       </div>
-       <div class="field{% if form.email_confirm.errors %} error{% endif %}">
-        <label for="id_email_confirm">{{ _('Re-enter Email Address') }}</label>
+    </div>
+    <div class="control-group field{% if form.email_confirm.errors %} error{% endif %}">
+      <label class="control-label" for="id_email_confirm">{{ _('Re-enter Email Address') }}</label>
+      <div class="controls">
         {{ form.email_confirm }}
         {{ form.email_confirm.errors }} 
       </div>
-      <p class="buttons">
-        <a class="button" href="{% locale_url dashboard %}">{{ _('Cancel') }}</a>
-        <button type="submit" value="{{ _('Save') }}" >{{ _('Save') }}</button>
-      </p>
-    </form>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <p class="buttons">
+          <a class="btn" href="{% locale_url dashboard %}">{{ _('Cancel') }}</a>
+          <button class="btn btn-olive" type="submit" value="{{ _('Save') }}" >{{ _('Save') }}</button>
+        </p>
+      </div>
+    </div>
+  </form>
 </fieldset>
+
 {% endblock %}

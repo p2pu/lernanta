@@ -1,0 +1,41 @@
+        <!--
+        {% for comment in comments %}
+          <div class="comment">
+            <a name="comment-{{comment.id}}"></a>
+            <p>{{comment.content}}</p>
+            {% if comment.replies|length > 0 %}
+              <a data-toggle="collapse" data-target="#comment-{{comment.id}}-replies">
+                {% blocktrans with reply_count=comment.replies|length %}{{reply_count}} replies{% endblocktrans %}
+              </a>
+              <div id="comment-{{comment.id}}-replies" class="collapse">
+                {% for reply in comment.replies %}
+                  <div class="reply">
+                    <a name="comment-{{reply.id}}"></a>
+                    <p>{{reply.content}}</p>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <a data-toggle="collapse" data-target="#comment-{{comment.id}}-reply"><i class="icon-comment"></i>{% trans 'Reply to comment' %}</a>
+            <div id="comment-{{comment.id}}-reply" class="collapse">
+              <form action="{% locale_url courses_post_comment_reply course_id=course.id content_id=about.id comment_id=comment.id %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next_url" value="{{course_url}}">
+                <p><textarea id="id_comment" name="comment" cols="40" rows="2"></textarea></p>
+                <input type="submit" value="{% trans "Post comment" %}"/>
+              </form>
+            </div>
+          </div>
+        {% endfor %}
+  
+        <div>
+          <h3>{% trans 'Post new comment' %}</h3>
+          <form action="{% locale_url courses_post_content_comment course_id=course.id content_id=about.id %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="next_url" value="{{course_url}}">
+            <p><textarea id="id_comment" name="comment" cols="40" rows="2"></textarea></p>
+            <input type="submit" value="{% trans "Post comment" %}"/>
+          </form>
+        </div>
+        -->
+

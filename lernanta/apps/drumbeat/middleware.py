@@ -1,7 +1,7 @@
 import urllib
 import logging
 
-from django.http import HttpResponseRedirect
+from django.http import HttpResponsePermanentRedirect
 from django.conf import settings
 
 log = logging.getLogger(__name__)
@@ -17,7 +17,7 @@ class NotFoundMiddleware(object):
             try:
                 page = urllib.urlopen(url)
                 if page.getcode() != 404:
-                    return HttpResponseRedirect(url)
+                    return HttpResponsePermanentRedirect(url)
             except UnicodeError:
                 pass
         return response

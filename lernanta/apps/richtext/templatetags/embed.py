@@ -43,8 +43,11 @@ def replace(match):
             if embedly_key:
                 client = Embedly(embedly_key)
                 obj = client.oembed(url, maxwidth=460)
+                extra_data = obj.dict
+                if 'dominant_colors' in extra_data:
+                    del extra_data['dominant_colors']
                 embedded_url = EmbeddedUrl(original_url=obj.original_url,
-                    html=(obj.html or ''), extra_data=obj.dict)
+                    html=(obj.html or ''), extra_data=extra_data)
                 embedded_url.save()
         if embedded_url and embedded_url.html:
             return embedded_url.html

@@ -158,6 +158,15 @@ class UserProfile(ModelBase):
         return model in self.following(model=model)
 
     def get_current_projects(self, only_public=False):
+        def to_dict(course):
+            course_dict = {
+                'title': course.name,
+                'url': course.get_absolute_url(),
+                'image_url': course.get_image_url(),
+                'user_role': course.relation_text
+            }
+            return course_dict
+            
         projects = self.following(model=Project)
         projects_organizing = []
         projects_participating = []
@@ -179,13 +188,24 @@ class UserProfile(ModelBase):
                     project.relation_text = _('(adopted)')
                 else:
                     project.relation_text = _('(organizing)')
-                projects_organizing.append(project)
+                projects_organizing.append(to_dict(project))
             elif participants.filter(user=self).exists():
                 project.relation_text = _('(participating)')
-                projects_participating.append(project)
+                projects_participating.append(to_dict(project))
             elif not is_challenge:
                 project.relation_text = _('(following)')
-                projects_following.append(project)
+                projects_following.append(to_dict(project))
+
+        from courses.models import get_user_courses
+        courses = get_user_courses("/uri/user/{0}".format(self.username))
+        for course in courses:
+            if course["user_role"] == "ORGANIZER":
+                course["user_role"] = _('(organizing)')
+                projects_organizing.append(course)
+            else:
+                course["user_role"] = _('(participating)')
+                projects_participating.append(course)
+
         data = {
             'organizing': projects_organizing,
             'participating': projects_participating,
@@ -206,7 +226,7 @@ class UserProfile(ModelBase):
                 past_projects[p.project.slug]['organizer'] |= p.organizing
             elif not only_public or not p.project.not_listed:
                 past_projects[p.project.slug] = {
-                    'name': p.project.name,
+                    'title': p.project.name,
                     'url': p.project.get_absolute_url(),
                     'organizer': p.organizing,
                     'image_url': p.project.get_image_url(),
@@ -300,6 +320,13 @@ def delete_spammer(spammer):
     for pc in spammer.comments.all():
         pc.deleted = True
         pc.save()
+
+
+def get_user_profile_image_url( user_uri ):
+    """ user_uri should look like /uri/user/username """
+    username = user_uri.strip('/').split('/')[-1]
+    user = UserProfile.objects.get(username=username)
+    return user.image_or_default()
 
 
 ###########

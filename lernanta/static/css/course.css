@@ -178,3 +178,33 @@ nav ul ul {
     position: absolute;
     left: 0;
 }
+
+.comment {
+    border: 1px solid white;
+    padding: 0.5em;
+}
+
+.reply {
+    margin-left: 1.5em;
+}
+
+figure {
+    margin: 0;
+}
+
+.nav-list {
+    padding-left: 0;
+}
+
+.user-tile img{
+    width: 40px;
+    height: 40px;
+}
+
+#sidebar-content-list li:nth-child(2n+1){
+    background-color: #FFFFFF;
+}
+
+#sidebar-content-list li {
+    margin-bottom: 0.5em;
+}

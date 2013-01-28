@@ -13,7 +13,7 @@
     <div class="badge-list">
     <ul class="badges">
       {% for badge in badges %}
-        <li><a href="{{ badge.get_absolute_url }}" class="badge" title="{{ badge }}">
+        <li><a href="{{ badge.get_absolute_url }}" class="p2pu-badge" title="{{ badge }}">
           <img src="{{ badge.get_image_url }}" width="80" height="80" alt="{{ badge }}"/>
           <span class="badge-name">{{ badge }}</span>
         </a></li>

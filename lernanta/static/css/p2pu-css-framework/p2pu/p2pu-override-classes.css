@@ -1,0 +1,63 @@
+/*
+Syntax error: Undefined mixin 'square_corners'.
+        on line 2 of /Volumes/home/Workspace/lernanta-dev-env/lernanta/lernanta/static/sass/p2pu-css-framework/p2pu/p2pu-override-classes.scss, in `square_corners'
+        from line 2 of /Volumes/home/Workspace/lernanta-dev-env/lernanta/lernanta/static/sass/p2pu-css-framework/p2pu/p2pu-override-classes.scss
+
+1: /Volumes/home/Workspace/lernanta-dev-env/lernanta/lernanta/static/sass/p2pu-css-framework/p2pu/p2pu-override-classes.scss
+
+Backtrace:
+/Volumes/home/Workspace/lernanta-dev-env/lernanta/lernanta/static/sass/p2pu-css-framework/p2pu/p2pu-override-classes.scss:2:in `square_corners'
+/Volumes/home/Workspace/lernanta-dev-env/lernanta/lernanta/static/sass/p2pu-css-framework/p2pu/p2pu-override-classes.scss:2
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:249:in `visit_mixin'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:316:in `visit_rule'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `map'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/tree/root_node.rb:20:in `render'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/update_project.rb:45:in `perform'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `call'
+/Volumes/home/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/Volumes/home/.rbenv/versions/1.9.3-p194/bin/compass:23:in `load'
+/Volumes/home/.rbenv/versions/1.9.3-p194/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'square_corners'.\A         on line 2 of /Volumes/home/Workspace/lernanta-dev-env/lernanta/lernanta/static/sass/p2pu-css-framework/p2pu/p2pu-override-classes.scss, in `square_corners'\A         from line 2 of /Volumes/home/Workspace/lernanta-dev-env/lernanta/lernanta/static/sass/p2pu-css-framework/p2pu/p2pu-override-classes.scss\A \A 1: /Volumes/home/Workspace/lernanta-dev-env/lernanta/lernanta/static/sass/p2pu-css-framework/p2pu/p2pu-override-classes.scss"; }

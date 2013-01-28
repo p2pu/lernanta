@@ -1,5 +1,6 @@
 {% load l10n_tags %}
-{% load school_tags %}
+{% load school_tags%}
+{% load project_tags %}
 {% load learn_tags %}
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
@@ -22,134 +23,169 @@
 
   <!-- Arvo font from google font api -->
   <link href='https://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
-  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="{{ STATIC_URL }}css/jcarousel/tango/skin.css">
   <link rel="stylesheet" href="https://www.google.com/cse/style/look/default.css" type="text/css" />
-  <link rel="stylesheet" href="{{ STATIC_URL }}css/font-awesome.css">
-  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?v=1">
-  <link rel="stylesheet" href="{{ STATIC_URL }}css/batucada.css?v=1">
-  <link rel="stylesheet" href="{{ STATIC_URL }}{{ _('css/style-en.css') }}?v=1">
-  <link rel="stylesheet" href="{{ STATIC_URL }}js/libs/prettify/prettify.css">
+
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/overrides.css">
+  <script src="{{ STATIC_URL }}js/libs/jquery-1.8.2.min.js"></script>
+  <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+  <script src="{{ STATIC_URL }}js/trunk8.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery.fancybox-1.3.4.css" media="screen" />
   <link rel="stylesheet" href="{{ STATIC_URL }}js/libs/jquery.ui.spinner/ui.spinner.css">
   {% block css %}{% endblock %}
   <script src="{{ STATIC_URL }}js/libs/modernizr-1.6.min.js"></script>
   <script src="{{ STATIC_URL }}ckeditor/ckeditor/ckeditor.js"></script>
-  <script src="{{ STATIC_URL }}js/libs/jquery-1.4.2.min.js"></script>
   {% block links %}{% endblock %}
 </head>
 <body id="{% block bodyid %}body{% endblock %}" class="{% block bodyclasses %}.body{% endblock %}">
 
 {% block header %}
-  <header>
-    <div id="masthead">
-      <div class="container">
 
-        <a id="logo" class="ir" href="{% if user.is_authenticated %}{% locale_url dashboard %}{% else %}{% locale_url splash %}{% endif %}">P2PU</a>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
 
-        <nav id="main-nav" class="nav-menus">
-          <ul>
-            <li><a href="{% learn_default %}" class="top-level">{{ _('Learn') }}</a></li>
-            <li><a href="{% locale_url static_page_show 'get-involved' %}" class="top-level">{{ _('Contribute') }}</a></li>
-          </ul>
-        </nav>
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
 
-        <nav id="user-nav" class="nav-menus">
-          {% if user.is_authenticated %}
-            <ul>
-              <li id="user" class="menu">
-                <a href="#" id="user-link" class="top-level">
-                  {# todo - come up with something better than image_or_default as profile isn't guaranteed to exist. #}
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <a class="brand" href="{% if user.is_authenticated %}{{ user.get_profile.get_absolute_url }}{% else %}{% locale_url splash %}{% endif %}">
+        <img src="/static/images/logo.png" />
+      </a>
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="left-link">
+            <a href="{% learn_default %}">{{ _('Find') }}</a>
+            <div class="navbar-custom-header-text">{{ _('Great Courses') }}</div>
+          </li>
+          <li class="divider-vertical"></li>
+          <li class="left-link">
+            <a class="make-blue" href="{% locale_url courses_create %}">{{ _('Create') }}</a>
+            <div class="navbar-custom-header-text">{{ _('a Course') }}</div>
+          </li>
+        </ul>
+        <div class="navbar-search nav-google-search">
+            <span id="cse-search-form" class="" action>
+              <!-- This will apply the updated styles to the search -->
+              <!-- bar. Google doesn't let you white label the box.  -->
+              <!-- <input type="text" class="search-query" placeholder="web design" /> -->
+              <!-- <i class="icon-search"></i> -->
+            </span>
+        </div>
+
+    {% if user.is_authenticated %}
+            <ul class="nav pull-right right-links">
+              <li ><a class="right-link-1" href="http://info.p2pu.org/about" target="_blank">{{ _('About') }}</a></li>
+              <li ><a class="right-link-2" href="http://info.p2pu.org" target="_blank">{{ _('Blog') }}</a></li>
+              <li><a class="right-link-2" href="http://help.p2pu.org" id="help-link" target="_blank">{{ _('Help') }}</a></li>              
+              <li class="dropdown" id="user-dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   {% if user.get_profile %}
-                    <img id="user-picture" src="{{ user.get_profile.image_or_default }}" height="19" width="19" alt="{{ user.get_profile }}">
-                  {% else %}
-                    <img id="user-picture" src="{{ STATIC_URL }}images/member-missing.png" height="19" width="19" alt="{{ user.get_profile }}">
+				          	<img id="user-picture" src="{{user.get_profile.image_or_default }}" height="30px" width="30px" alt="" />
+                  {% else %}           
+                    <img id="user-picture" src="{{ STATIC_URL }}images/john-icon.png" height="30px" width="30px" alt="" />
+
                   {% endif %}
-                  <span>{{ user.username }}</span>
-                  {% if messages_inbox_count > 0 %}
-                    <span id="inbox-count" class="new-messages">{{ messages_inbox_count }}</span>
-                  {% endif %}
-                  <span class="dropdown">&nbsp;</span>
-                </a>
-                <ul id="user-actions">
-                  <li><a href="{% locale_url dashboard %}" class="sub-level">{{ _('Dashboard') }}</a></li>
+                  <span class="add-standard-left-padding">{{ user.username }}</span>
+				  <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+                  <!-- <li><a href="{% locale_url dashboard %}" class="sub-level">{{ _('Dashboard') }}</a></li> -->
                   <li><a href="{{ user.get_profile.get_absolute_url }}" class="sub-level">{{ _('My Profile') }}</a></li>
                   <li><a href="{% locale_url users_profile_edit %}" class="sub-level">{{ _('My Settings') }}</a></li>
                   <li><a href="{% locale_url chat %}" class="sub-level" target="_blank">{{ _('Chat') }}</a></li>
                   <li><a href="{% locale_url drumbeatmail_inbox %}" class="sub-level">{{ _('Inbox') }} {% if messages_inbox_count > 0 %}<span id="inbox-count" class="new-messages">{{ messages_inbox_count }}</span>{% endif %}</a></li>
                   <li><a href="{% locale_url users_logout %}" class="sub-level">{{ _('Logout') }}</a></li>
                 </ul>
+                <!-- <a href="{% locale_url drumbeatmail_inbox %}" class="inbox-link-icon"> -->
+				  <!-- <i class="icon-flag"></i> -->
+				  {% if messages_inbox_count > 0 %}
+                    <span id="inbox-count" class="new-messages">{{ messages_inbox_count }}</span>
+                  {% endif %}
+				</a>
               </li> <!-- /#user -->
-              <li>
-                <a href="{% locale_url users_login %}?to=http%3A%2F%2Fhelp.p2pu.org%2F" id="help-link" class="top-level" target="_blank">
-                  <span>{{ _('Help') }}</span>
-                </a>
-              </li>
-              <li>
-                <a href="http://info.p2pu.org" class="top-level" target="_blank">
-                  <span>{{ _('Blog') }}</span>
-                </a>
-              </li>
-            </ul>
+            </ul>	
           {% else %} {# user not logged in #}
-            <ul id="login">
-              <li><a class="top-level" href="{{ login_with_redirect_url }}">{{ _('Login') }}</a></li>
-              <li><a href="http://help.p2pu.org" id="help-link" class="top-level" target="_blank"><span>{{ _('Help') }}</span></a></li>
-              <li><a href="http://info.p2pu.org" class="top-level" target="_blank"><span>{{ _('Blog') }}</span></a></li>
-            </ul>
+            <ul class="nav pull-right right-links">
+              <li ><a class="right-link-1" href="http://info.p2pu.org/about" target="_blank">{{ _('About') }}</a></li>
+              <li ><a class="right-link-2" href="http://info.p2pu.org" target="_blank">{{ _('Blog') }}</a></li>
+              <li><a class="right-link-2" href="http://help.p2pu.org" id="help-link" target="_blank">{{ _('Help') }}</a></li>
+              <li class="divider-vertical right-divider"></li>
+              <li><a class="right-link-3" href="{{ login_with_redirect_url }}">{{ _('Login') }}</a></li>
+            </ul>	
           {% endif %}
-        </nav> <!-- /#user-nav -->
 
-        <div id="cse-search-form" style="width: 100%;">{{ _('Loading') }}</div>
-        <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-        <script type="text/javascript"> 
-          google.load('search', '1', {language : '{{ _('en') }}'});
-          google.setOnLoadCallback(function() {
+        
+
+      </div> 
+
+
+         <!-- START old search box display and script -->
+
+            <!-- <div id="cse-search-form" style="width: 100%;">{{
+            _('Loading') }}</div> -->
+            <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+            <script type="text/javascript"> 
+            google.load('search', '1', {language : '{{ _('en') }}'});
+            google.setOnLoadCallback(function() {
             var customSearchControl = new google.search.CustomSearchControl('013528701088014865040:0q9njevslw0');
             customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
             var options = new google.search.DrawOptions();
             var search_page_url = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'p2pu.org/search';
             options.enableSearchboxOnly(search_page_url);
             customSearchControl.draw('cse-search-form', options);
-          }, true);
-        </script> 
+            }, true);
+            </script>
 
-      </div> <!-- /.container -->
-    </div> <!-- /#masthead -->
+        <!-- END old search box display and script -->
+    </div>
+  </div>
+</div>
+
+<div class="container breadcrumb-box">
+  <div class="row-fluid">
+	<div class="span9">
+      <ul class="breadcrumb"> 
+        <li><a href="{% locale_url splash %}">{{ _('Home') }}</a></li>
+        {% block breadcrumbs %}{% endblock %}
+        <span id="breadcrumbs-actions" class="pull-right">
+          {% block breadcrumbs_actions %}{% endblock %}
+        </span>
+      </ul>
+	  {% block breadcrumbs_title %}{% endblock %}
+	</div>
+  </div>
+</div>
+
+{% endblock %}
 
 {% block join_p2pu_section %}{% endblock %}
 
-    <div id="breadcrumbs">
-      <div class="container">
-        {% block breadcrumbs_title %}{% endblock %}
-        <nav>
-          <a href="{% locale_url splash %}">{{ _('Home') }}</a>
-          {% block breadcrumbs %}{% endblock %}
-        </nav>
-        <div id="breadcrumbs-actions">
-          {% block breadcrumbs_actions %}{% endblock %}
-        </div>
-      </div>
+    <div class="container body">
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{message.tags}}">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+      {% block body %}{% endblock %}
     </div>
-  </header>
-{% endblock %}
 
-  <div id="content" class="container">
-    {% if messages %}
-    <ul class="messages">
-    {% for message in messages %}
-      <li class="{{message.tags}}"><span class="closeNotification">'</span>{{ message }}</li>
-    {% endfor %}
-    </ul>
-    {% endif %}
-    {% block body %}{% endblock %}
-  </div>
+    {% block footer %}{% include "_footer.html" %}{% endblock %}
 
-{% block footer %}{% include "_footer.html" %}{% endblock %}
 
-  <script src="{{ STATIC_URL }}js/libs/jquery-ui-1.8.7.custom.min.js"></script>  
+
+  <script src="{{ STATIC_URL }}js/libs/jquery-ui-1.9.1.custom.min.js"></script>
   <script src="{{ STATIC_URL }}js/libs/jquery.tmpl.min.js"></script>
-  <script src="{{ STATIC_URL }}js/libs/jquery.wmd.js"></script>
   <script src="{{ STATIC_URL }}js/libs/jquery.ajaxupload.js"></script>
   <script src="{{ STATIC_URL }}js/libs/history.js/scripts/bundled/html5/jquery.history.js"></script>
   <script src="{{ STATIC_URL }}js/libs/jquery.jcarousel.min.js"></script>
@@ -216,8 +252,7 @@
             var google_conversion_value = 0;
           /* ]]> */
         </script>
-        <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
-        </script>
+        <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
         <noscript>
           <div style="display:inline;">
             <img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/{{ tracking_code.adwords_conversion_id }}/?value=0&amp;label={{ tracking_code.adwords_conversion_label }}&amp;guid=ON&amp;script=0"/>

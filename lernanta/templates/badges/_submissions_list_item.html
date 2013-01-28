@@ -3,7 +3,7 @@
 {% load badge_tags %}
 
 {% if not badge %}
-  <div class="badge">
+  <div class="p2pu-badge">
     <p>
       <a href="{% locale_url badges_show slug=submission.badge.slug %}" title="{{ submission.badge }}">
         <img src="{{ submission.badge.get_image_url }}" width="50" height="50" alt="{{ submission.badge.name }}"/>

@@ -109,6 +109,9 @@ P2PU_EMBEDS= (
     'http://etherpad.p2pu.org/'
 )
 
+# Site shortname to use for disqus
+DISQUS_SHORTNAME = ''
+
 # Use dummy caching for development.
 CACHE_BACKEND = 'dummy://'
 CACHE_PREFIX = 'lernanta'

@@ -2,29 +2,32 @@
 
 {% load l10n_tags %}
 {% block bodyclasses %}profile edit info{% endblock %}
+
 {% block form %}
 
 <fieldset id="profile_edit_image" class="profile edit image tabpane">
-<h2>{{ _('Basic Information') }}</h2>
-<form action="{% locale_url users_profile_edit_image %}" method="post" enctype="multipart/form-data"
-      data-url="{% locale_url users_profile_edit_image_async %}">
-  {% csrf_token %}
-  {% include "users/_profile_edit_image.html" %}
-  <p class="buttons">
-    <a class="button" href="{{ profile.get_absolute_url }}">Cancel</a>
-    <button type="submit" value="{{ _('Upload') }}">{{ _('Upload') }}</button>
-  </p>
-</form>
+  <h2>{{ _('Basic Information') }}</h2>
+  <form class="form-horizontal" action="{% locale_url users_profile_edit_image %}" method="post" enctype="multipart/form-data" data-url="{% locale_url users_profile_edit_image_async %}">
+    {% csrf_token %}
+    {% include "users/_profile_edit_image.html" %}
+    <p class="buttons">
+      <a class="btn" href="{{ profile.get_absolute_url }}">Cancel</a>
+      <button type="submit" class="btn btn-olive" value="{{ _('Upload') }}">{{ _('Upload') }}</button>
+    </p>
+  </form>
 </fieldset>
+
 <br clear="all" />
+
 <fieldset id="profile_edit_info" class="profile edit info tabpane">
-<form action="{% locale_url users_profile_edit %}" method="post">
-  {% csrf_token %}
-  {% include "users/_profile_edit.html" %}
-  <p class="buttons">
-  <a class="button" href="{{ profile.get_absolute_url }}">{{ _('Cancel') }}</a>
-  <button type="submit" >{{ _('Save') }}</button>
-  </p>
-</form>
+  <form class="form-horizontal" action="{% locale_url users_profile_edit %}" method="post">
+    {% csrf_token %}
+    {% include "users/_profile_edit.html" %}
+    <p class="buttons">
+      <a class="btn" href="{{ profile.get_absolute_url }}">{{ _('Cancel') }}</a>
+      <button type="submit" class="btn btn-olive" >{{ _('Save') }}</button>
+    </p>
+  </form>
 </fieldset>
+
 {% endblock %}

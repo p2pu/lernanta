@@ -33,17 +33,3 @@ class DashboardTests(TestCase):
         response = self.client.get('/%s/dashboard/' % (self.locale,))
         self.assertTemplateUsed(response, 'dashboard/setup_profile.html')
 
-    def test_authorized_request_profile(self):
-        """
-        Test that an authorized request with a user profile lands on
-        a personalized dashboard page.
-        """
-        user = UserProfile(
-            username=self.test_username,
-            email=self.test_email,
-            user=self.user)
-        user.save()
-        self.client.login(username=self.test_username,
-                          password=self.test_password)
-        response = self.client.get('/%s/dashboard/' % (self.locale,))
-        self.assertTemplateUsed(response, 'dashboard/dashboard.html')

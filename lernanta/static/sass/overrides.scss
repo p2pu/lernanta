@@ -1,0 +1,2438 @@
+@import "_pems.scss";
+@import "compass";
+
+@mixin input-placeholder($color) {
+  &.placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+$primary-font: "arvo", helvetica, sans-serif;
+$secondary-font: "sense", helvetica, sans-serif;
+$secondary-font-light: "sense-light", helvetica, sans-serif;
+
+/* Text-Header-Link Colors */
+$cyan: #05c6b4;
+$steel: #aab0bf;
+
+/*NOTE: $steel is also used for: thumbnail footer-badge-holder background, and nav-bar search box background, also for horizontal dividers in footer */
+$slate: #515665;
+
+/*also: footer header text and footer body text */
+$white: white;
+$apricot: #ff7300;
+
+/*NOTE: $apricot is also used for: 'Find Course' button background */
+$clemintine: #ffbc1a;
+$pumpkin: #f1b106;
+$dark-slate: #5b6b73;
+$link-color-on-white: darken($cyan, 8%);
+
+/* Background Colors */
+$olive: #b7d500;
+$snow: #fcfcfc;
+$cloud: #f3f4f8;
+$silver: #cccccc;
+$fog: #e1e4ed;
+$blood-orange: #ff7503;
+
+/*NOTE: $apricot is also used for: 'Find Course' button background */
+/*NOTE: $steel is also used for: thumbnail footer-badge-holder background, and nav-bar search box background */
+
+/* Border Colors */
+$zinc: #d1d4dd;
+$zinc2: #d2d5de;
+$pewter: #8e95a8;
+$metal: #d0d3dc;
+$pale-olive: #a4b359;
+$gray-olive: #b4bb92;
+$dark-pewter: #8b91a0;
+$dark-apricot: #bc5500;
+$dark-olive: #a3be00;
+$dark-fog: #c7cbd7;
+$darker-slate: #343741;
+$oranitang: #f2b202;
+$dark-clemintine: #d29502;
+
+/* SELECT OVERRIDE OF BOOTSTRAP SYSTEM VARIABLES DEFAULTS */
+// Scaffolding
+// -------------------------
+$bodyBackground: $cloud;
+$textColor: $slate;
+
+// Links
+// -------------------------
+$linkColor: $cyan;
+$linkColorHover: $clemintine;
+
+// Typography
+// -------------------------
+// $baseFontSize:       16px -- default value already overridden in _pems.scss
+$baseFontFamily: $primary-font;
+$baseLineHeight: 22px;
+$altFontFamily: $secondary-font;
+$headingsFontWeight: inherit;
+$headingsColor: $steel;
+
+// Hr border color
+// -------------------------
+$hrBorder: $steel;
+
+// Navbar
+// -------------------------
+/* $navbarHeight:                    110px */
+$navbarBackground: $snow;
+$navbarBackgroundHighlight: $snow;
+$navbarText: $headingsColor;
+$navbarLinkColor: $slate;
+$navbarLinkColorHover: $linkColorHover;
+$navbarLinkColorActive: $linkColorHover;
+$navbarLinkBackgroundHover: $navbarBackground;
+$navbarLinkBackgroundActive: $navbarBackground;
+$navbarSearchBackground: $steel;
+$navbarSearchBackgroundFocus: $navbarSearchBackground;
+$navbarSearchBorder: $dark-pewter;
+$navbarSearchPlaceholderColor: $white;
+
+// Hero unit
+// -------------------------
+$heroUnitBackground: $bodyBackground;
+$heroUnitHeadingColor: $headingsColor;
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+
+/* FONT SIZES */
+/* Custom Default Values */
+$baseFontSize-header: 18px;
+$baseFontSize-h1-header: 24px;
+$baseFontSize-subtext: 14px;
+
+/* Navbar */
+$navbar-link-h1-left: pem(20px);
+$navbar-link-h1-subtitle: pem($baseFontSize-subtext);
+$navbar-search-box: pem($baseFontSize);
+$navbar-link-h1-right: pem($baseFontSize);
+$navbar-link-h1-right-hover: pem(15px);
+
+/* Hero Unit */
+$hero-unit-h1: 58px;
+$hero-unit-h2: 34px;
+$hero-unit-p: 20px;
+
+/* Bulitin Box */
+$bulitin-btn: $baseFontSize-h1-header;
+$bulitin-note: $baseFontSize-subtext;
+$bulitin-p: $baseFontSize;
+
+/* Feature */
+$feature-h1: $baseFontSize-h1-header;
+$feature-h1-subtitle: $baseFontSize-subtext;
+$feature-hanging-badge-title: 11px;
+$feature-h2: $baseFontSize-header;
+$feature-p: $baseFontSize;
+$feature-badge-title: 12px;
+$feature-badge-count: $baseFontSize-subtext;
+
+/* Footer */
+$footer-h1: pem($baseFontSize-header);
+$footer-text: pem($baseFontSize);
+$footer-nav-lang-links: pem($baseFontSize-subtext);
+
+/* LINE HEIGHTS (for elements displaying more than one line of text) */
+/* Navbar */
+$navbar-link-h1-subtitle-lh: pem(16px);
+
+/* Hero Unit */
+$hero-unit-h1-lh: 62px;
+$hero-unit-h2-lh: 68px;
+$hero-unit-p-lh: 26px;
+
+/* Bulitin Box */
+$bulitin-p-lh: $baseLineHeight;
+
+/* Feature */
+$feature-h1-subtitle-lh: 18px;
+$feature-h2-lh: $baseLineHeight;
+$feature-p-lh: $baseLineHeight;
+
+/* Footer */
+$footer-text-lh: pem($baseLineHeight);
+$footer-nav-lang-links-lh: pem(24px);
+
+/* TOP MARGIN VALUES (does not include elements able to be centered with ) */
+/* Custom Default Values */
+$baseFontSize-header-tm: 18px;
+$baseFontSize-header-h1-tm: 58px;
+$baseFontSize-subtext-tm: 16px;
+$baseFontSize-subtext-bm: 40px;
+$baseFontSize-btn-large-tm: 15px;
+$baseFontSize-btn-large-sides-p: 40px;
+
+/* Navbar */
+$navbar-link-h1-left-tm: pem(20px);
+$navbar-link-h1-subtitle-tm: pem($baseFontSize-subtext);
+$navbar-search-box-tm: pem($baseFontSize);
+$navbar-link-h1-right-tm: pem($baseFontSize);
+$navbar-link-h1-right-hover-tm: pem(15px);
+
+/* Hero Unit */
+$hero-unit-h1-tm: 23px;
+$hero-unit-h2-tm: 34px;
+$hero-unit-p-first-tm: 45px;
+
+/* Bulitin Box */
+$bulitin-tm: 23px;
+$bulitin-tp: 15px;
+$bulitin-btn-tm: 14px;
+$bulitin-btn-pd: 19px;
+$bulitin-note-tm: 14px;
+$bulitin-p-first-tm: 14px;
+$bulitin-p-bp: 54px;
+$bulitin-p-bp-lower: 44px;
+
+/* Feature */
+$feature-h1-tm: 58px;
+$feature-h1-subtitle-tm: 27px;
+$feature-hanging-badge-title-tm: 11px;
+$feature-h2-tm: 9px;
+$feature-p-tm: $baseFontSize;
+$feature-badge-title-tm: 12px;
+$feature-badge-count-tm: $baseFontSize-subtext;
+$feature-table-tm: 5px;
+$feature-table-row-tm: 20px;
+
+/* Footer */
+$footer-h1-tm: 36px;
+$footer-text-tm: 17px;
+$footer-connect-links-tm: 13px;
+$footer-connect-links-li-tm: 7px;
+$footer-supporter-tm: 20px;
+$footer-more-supporters-link-tm: 15px;
+$footer-nav-lang-links-tm: pem($baseFontSize-subtext);
+
+/* START: Importing Bootstrap and compass_twitter_bootstrap files AFTER variables have been set */
+@import "bootstrap.scss";
+@import "responsive.scss";
+
+/* @import compass_twitter_bootstrap -- not used because using the orignal version of the compass in ruby is better */
+/*  END: Importing Bootstrap and compass_twitter_bootstrap files AFTER variables have been set */
+
+@mixin square-corners {
+  @include border-radius(0px);
+}
+
+@mixin no-shadow {
+  @include box-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+  @include box-shadow(inset 0px 0px 0px rgba(0, 0, 0, 0));
+}
+
+@mixin inset-1px-box-shadow-on-one-side($color, $side) {
+  @if $side == top {
+    @include box-shadow(0px 0px 0px $color);
+    @include box-shadow(inset 0px -1px 0px $color);
+  }
+  @if $side == bottom {
+    @include box-shadow(0px 0px 0px $color);
+    @include box-shadow(inset 0px 1px 0px $color);
+  }
+}
+
+@mixin glowing-shadow($color) {
+  $lighter-color: lighten($color, 50%);
+  @include box-shadow(0px 0px 3px $lighter-color);
+}
+
+@mixin custom-box-shadow-1 {
+  border-top: 1px solid darken($cyan, 5%);
+  border-left: 1px solid darken($cyan, 5%);
+  border-bottom: 1px solid darken($dark-pewter, 15%);
+  border-right: 1px solid darken($dark-pewter, 15%);
+  @include box-shadow(darken($dark-pewter, 5%) 2px 2px 4px);
+}
+
+@mixin custom-box-shadow-2 {
+  border-top: 1px solid darken($slate, 2%);
+  border-left: 1px solid darken($slate, 2%);
+  border-bottom: 1px solid $black;
+  border-right: 1px solid $black;
+  @include box-shadow(lighten($black, 15%) 2px 2px 4px);
+}
+
+@mixin custom-box-shadow-3 {
+  border-bottom: 1px solid darken($dark-pewter, 8%);
+  border-right: 1px solid darken($dark-pewter, 8%);
+  @include box-shadow(darken($dark-pewter, 5%) 2px 2px 4px);
+}
+
+@mixin add-custom-text-shadow($text-color, $bkgd-color, $side) {
+  $mixed-color: mix($text-color, $bkgd-color);
+  @if $side == top {
+    @include text-shadow(0px -1px 1px $mixed-color);
+  }
+  @if $side == right {
+    @include text-shadow(1px 0px 1px $mixed-color);
+  }
+  @if $side == bottom {
+    @include text-shadow(0px 1px 1px $mixed-color);
+  }
+  @if $side == left {
+    @include text-shadow(-1px 0px 1px $mixed-color);
+  }
+}
+
+@mixin add-left-right-text-shadow($t-color, $b-color) {
+  @include add-custom-text-shadow($t-color, $b-color, left);
+  @include add-custom-text-shadow($t-color, $b-color, right);
+}
+
+@mixin add-top-bottom-text-shadow($t-color, $b-color) {
+  @include add-custom-text-shadow($t-color, $b-color, top);
+  @include add-custom-text-shadow($t-color, $b-color, bottom);
+}
+
+@mixin add-all-sides-text-shadow($t-color, $b-color) {
+  @include add-left-right-text-shadow($t-color, $b-color);
+  @include add-top-bottom-text-shadow($t-color, $b-color);
+}
+
+/* Vertical Rhythm Compass Settings */
+$base-font-size: $baseFontSize;
+$base-line-height: $baseLineHeight;
+
+@include establish-baseline;
+
+$base-no-leader-line-height: $base-font-size / $base-line-height;
+
+// Headings
+header {
+  background-color: $snow;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+footer {
+  background-color: $fog;
+  &.schools {
+    background-color: $white;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    margin-top: 15px;
+  }
+}
+
+body {
+  font-family: $secondary-font, sans-serif;
+  font-size: pem($baseFontSize);
+  background-color: $cloud;
+}
+
+small {
+  font-size: 65%;
+}
+
+h1 {
+  font-family: $primary-font;
+  font-weight: normal;
+  @include adjust-font-size-to($baseFontSize-h1-header);
+  @include adjust-leading-to($base-no-leader-line-height);
+  margin-bottom: 15px;
+  color: $slate;
+  &.add-top-margin {
+    @include margin-leader($base-no-leader-line-height * $baseFontSize-header-h1-tm / $baseFontSize-h1-header);
+  }
+  a {
+    @include link-colors($slate, $slate, $slate, $slate, $slate);
+  }
+  small {
+    font-size: $baseFontSize-subtext;
+    color: $steel;
+    font-family: $secondary-font;
+    &.directly-below {
+      @include adjust-leading-to($base-no-leader-line-height * $baseFontSize-subtext / $baseFontSize-h1-header);
+      @include margin-leader($base-no-leader-line-height * $baseFontSize-subtext-tm / $baseFontSize-h1-header);
+      @include margin-trailer($base-no-leader-line-height * $baseFontSize-subtext-bm / $baseFontSize-h1-header);
+      display: block;
+    }
+  }
+}
+
+h2 {
+  font-family: $primary-font;
+  font-size: pem(18px);
+  small {
+    font-size: pem(12px);
+  }
+}
+
+h3 {
+  font-family: $secondary-font;
+  font-size: pem(16px);
+  font-weight: bold;
+  margin-top: pem(15px);
+}
+
+h4 {
+  font-family: $primary-font;
+  font-size: pem(18px);
+  color: $slate;
+}
+
+p {
+  line-height: pem(22px);
+  margin: 0px;
+  margin-top: pem(10px);
+  .no-top-margin {
+    margin: 0px;
+  }
+}
+
+a {
+  color: $cyan;
+  &:hover {
+    color: lighten($cyan, 10%);
+  }
+}
+
+// Forms
+
+form {
+  margin: 0px;
+}
+
+input {
+  &[type="text"], &[type="password"], &[type="datetime"], &[type="datetime-local"], &[type="date"], &[type="month"], &[type="time"], &[type="week"], &[type="number"], &[type="email"], &[type="url"], &[type="search"], &[type="tel"], &[type="color"] {
+    background-color: $cloud;
+    border: none;
+    /* @include border-radius(none) */
+    @include border-radius(3px);
+    /* @include inset-1px-box-shadow-on-one-side($dark-pewter, top) */
+    color: $slate;
+    @include input-placeholder($silver);
+    font-family: $secondary-font;
+  }
+}
+
+select {
+  font-family: $secondary-font;
+}
+
+#breadcrumbs-actions {
+  a, .btn {
+    margin-right: 0px;
+  }
+}
+
+#learn #breadcrumbs-actions {
+  a, .btn {
+    margin-right: 53px;
+  }
+}
+
+.course-create input {
+  &[type="text"], &[type="password"], &[type="datetime"], &[type="datetime-local"], &[type="date"], &[type="month"], &[type="time"], &[type="week"], &[type="number"], &[type="email"], &[type="url"], &[type="search"], &[type="tel"], &[type="color"] {
+    background-color: $white;
+    border: none;
+    /* @include border-radius(none) */
+    @include border-radius(3px);
+    /* @include inset-1px-box-shadow-on-one-side($dark-pewter, top) */
+    color: $slate;
+    @include input-placeholder($silver);
+    font-family: $secondary-font;
+  }
+}
+
+.course-create textarea {
+  @include input-placeholder($silver);
+}
+
+stuff {
+  &:focus {
+    background-color: $cloud;
+    font-family: "sense";
+    @include input-placeholder($slate);
+  }
+}
+
+input, textarea {
+  width: 230px;
+}
+
+.form-horizontal {
+  input, textarea {
+    width: 400px;
+  }
+}
+
+// Navigation
+.nav-tabs {
+  font-family: $primary-font;
+  font-size: 16px;
+  border-bottom: 1px solid $white;
+  a {
+    color: inherit;
+    &:hover {
+      color: $cyan;
+    }
+  }
+  .dropdown-menu{
+    margin-top: 0px;
+  }
+  .dropdown-toggle {
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    .active a {
+      &:hover {
+        background-color: #dfe4ec;
+      }
+    }
+  }
+  .active a {
+    border: 1px solid $white;
+    border-bottom: 0px;
+    background-color: $snow;
+    box-shadow: 1px 1px 1px $white;
+    &:hover {
+      color: $cyan;
+      background-color: $white;
+      border: 1px solid $white;
+      border-bottom: 0px;
+    }
+  }
+}
+
+.tabs-left {
+  .nav-tabs {
+    margin-right: 0px;
+  }
+  .tab-content {
+    border: 1px solid rgb(221, 221, 221);
+    min-height: 350px;
+  }
+}
+
+.navbar-title {
+  @extend .navbar;
+  .navbar-center {
+    float: right;
+    position: relative;
+    left: -50%;
+    .nav {
+      left: 50%;
+    }
+  }
+  li {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .navbar-inner .nav li a:hover {
+    background-color: transparent;
+    /* color: transparent */
+  }
+}
+
+
+
+
+////////////////////////////////////////////////
+// NAVBAR redone - responsive
+/////////////////////////////////////////////
+
+
+.navbar a.brand{
+  padding-top: 3px;
+  margin-bottom: 20px;
+  margin-right: 25px;
+}
+
+.nav li.left-link{
+  padding-left: 10px;
+  a{
+    padding: 0px;
+  }
+}
+
+.navbar ul.right-links li a{
+  @include adjust-font-size-to($base-font-size);
+  @include adjust-leading-to($base-no-leader-line-height);
+
+}
+
+.navbar-custom-header-text {
+    @include adjust-font-size-to(14px);
+    @include adjust-leading-to($base-no-leader-line-height);
+    margin-bottom: 0;
+    color: $steel;
+    font-family: $altFontFamily;
+    /* @include add-all-sides-text-shadow($steel, $snow) */
+}
+
+div.nav-google-search{
+  margin-top: 12px;
+  margin-left: 30px;
+  margin-bottom: 0px;
+  border: none;
+  .gse-search-box{
+    @extend .navbar-search;
+  }
+  .gsc-input{
+    @extend .search-query;
+    width: 150px;
+  }
+}
+
+.navbar .navbar-inner{
+  min-height: 85px;
+  font-family: $baseFontFamily;
+  padding-top: 35px;
+
+}
+.navbar .navbar-inner .container{
+  @extend .container;
+//  padding-left: 50px;
+//  padding-right: 50px;
+}
+
+.navbar a.btn-navbar{
+  @include background($cyan);
+//  position: absolute;
+//  top: 35px;
+//  right: 35px;
+  margin-top: 11px;
+}
+
+.navbar .nav a {
+        @include adjust-font-size-to(20px);
+        float: none;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        @include adjust-leading-to($base-no-leader-line-height);
+        color: $slate;
+        text-decoration: none;
+        /* @include add-all-sides-text-shadow($slate, $snow) */
+        @include margin-leader($base-no-leader-line-height * 6px / $base-font-size);
+        &.make-blue {
+          @include link-colors($linkColor, $linkColorHover, $linkColorHover, $linkColor, $linkColorHover);
+        }
+        .right-link-1 {
+          @include adjust-font-size-to($base-font-size);
+          @include adjust-leading-to($base-no-leader-line-height);
+          margin-right: pem(29px);
+          margin-left: 0px;
+        }
+        .right-link-2 {
+          @include adjust-font-size-to($base-font-size);
+          @include adjust-leading-to($base-no-leader-line-height);
+          margin-right: pem(24px);
+          margin-left: 0px;
+        }
+        .right-link-3 {
+          @include adjust-font-size-to($base-font-size);
+          @include adjust-leading-to($base-no-leader-line-height);
+        }
+      }
+
+.nav .divider-vertical {
+    width: 1px;
+    height: 23px;
+    margin-top: pem(9px);
+    overflow: hidden;
+    border-right: 1px solid $slate;
+    margin-left: pem(26px);
+    margin-right: pem(23px);
+    &.right-divider {
+      margin-top: pem(6px);
+      margin-left: 0px;
+    }
+  }
+
+.nav li#user-dropdown {
+  //margin-right: 15px;
+  > a {
+    height: 30px;
+    margin-top: 10px;
+    padding: 0px;
+    padding-right: 7px;
+    @include background(#fed713);
+    color: $dark-slate;
+    @include adjust-font-size-to(12px);
+    font-weight: normal;
+    @include inline-block;
+    span{
+      display: inline;
+      height: 30px;
+      margin-top: 20px;
+    }
+    &:hover{
+      @include background(#fed713);
+      color: $dark-slate;
+    }
+  }
+  &.open {
+    a.dropdown-toggle{
+      background-color: $dark-slate;
+      color: #e6f9ff;
+    }
+    span {
+      color: $pumpkin;
+      text-shadow: none;
+    }
+    .dropdown-toggle {
+      .caret {
+        border-bottom-color: white;
+        border-top-color: white;
+        @include rotate(180deg);
+      }
+    }
+    ul.dropdown-menu:after, ul.dropdown-menu:before{
+      display: none;
+      content: none;
+    }
+  }
+  ul.dropdown-menu{
+//    @include background($dark-slate);
+    border: none;
+    background-color: $dark-slate;
+    margin-top: 0px;
+    width: 100%;
+    min-width: 120px;
+    @include square-corners;
+    > li {
+     > a {
+      //width: 100%;
+      padding-left: 20%;    
+      padding-right: 0px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      @include link-colors(#e6f9ff);
+      @include adjust-font-size-to(13px);
+      &:hover, &:focus{
+        @include background($snow);
+        color: $dark-slate;
+        text-decoration: none;
+      }
+      }
+    }
+  }
+  .dropdown-toggle {
+    .caret {
+      border-bottom-color: $dark-slate;
+      border-top-color: $dark-slate;
+      text-shadow: none;
+      vertical-align: inline;
+      margin-top: 13px;
+      opacity: 1;
+    }
+  }
+}
+
+.collapse .nav li{
+  &.left-link{
+//    margin-top: 15px;
+  }
+  &.right-links{
+//    margin-top: 0px;
+  }
+  a{
+    @include square-corners;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  .dropdown-menu{
+    margin: 0px;
+    padding: 0px;
+    max-width: 170px;
+    li{ 
+      a{
+        margin-left: 0px;
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////
+
+
+.nav-list li a {
+        @include adjust-font-size-to(18px);
+        float: none;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 17px;
+        margin-bottom: 7px;
+        color: $slate;
+        text-decoration: none;
+        &:hover{
+          color: $cyan;
+        }
+}
+
+.nav-list .nav-header {
+  font-size: 20px;
+  padding: 20px 0px 0px 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  i{
+    margin-right: 5px;
+    vertical-align: baseline;
+  }
+}
+
+
+
+.nav-list > li > form {
+  margin-left: 0px;
+  margin-top: 0px;
+  input[type="checkbox"] {
+    vertical-align: top;
+    @media (min-width: 1200px) {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+  select {
+    margin-top: 0px;
+    width: 100%;
+  }
+}
+
+.nav-list > li > a {
+  margin-left: 0px;
+  margin-right: 0px;
+//  padding-left: 30px;
+}
+
+
+
+.nav-list > .active > a {
+  @include border-radius(5px);
+  /* @include custom-box-shadow-1 */
+  position: relative;
+  img /* used for close tag 'x' image */ {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+  }
+}
+
+.nav-list > .active > a:hover {
+  @include border-radius(5px);
+  @include background(darken($cyan, 5%));
+}
+
+.nav-list li a:hover {
+  @include border-radius(5px);
+  @include background(darken($cloud, 5%));
+  @include text-shadow(0px 0px 0px);
+}
+
+.nav-list li.active a:visited {
+  color: $white;
+}
+
+#sidebar #project {
+  form {
+    margin-top: 15px;
+  }
+  h2, .more_people_link {
+    line-height: 24px;
+  }
+  ol {
+    margin-left: 0px;
+    li {
+      list-style-position: inside;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: solid 1px #eeeeee;
+      &:first-child {
+        border-top: solid 1px #eeeeee;
+      }
+    }
+  }
+}
+
+#project .nav .nav-header {
+  padding-top: 0px;
+}
+
+#project .nav-list {
+  padding-left: 10px;
+  li {
+    padding-left: 0px;
+  }
+  & > li > a {
+    margin-left: 0px;
+    padding-left: 10px;
+  }
+  .nav-header {
+    padding-left: 10px;
+  }
+}
+
+
+
+// HERO UNIT
+// ---------
+
+.custom-hero-unit {
+  margin-bottom: 0px;
+  background-color: $heroUnitBackground;
+  @include border-radius(0px);
+  .p-first-line {
+    @include margin-leader($base-no-leader-line-height * $hero-unit-p-first-tm / $hero-unit-p);
+    font-weight: 100;
+  }
+  h1 {
+    margin-bottom: 0;
+    @include adjust-font-size-to($hero-unit-h1);
+    @include adjust-leading-to($base-no-leader-line-height * $hero-unit-h1-lh / $hero-unit-h1);
+    color: $heroUnitHeadingColor;
+    letter-spacing: normal;
+    .highlight-1 {
+      color: $cyan;
+    }
+    .highlight-2 {
+      color: $apricot;
+    }
+  }
+  h2 {
+    color: $heroUnitHeadingColor;
+    @include adjust-font-size-to($hero-unit-h2);
+    @include adjust-leading-to($base-no-leader-line-height);
+    @include margin-leader($base-no-leader-line-height * $hero-unit-h2-tm / $hero-unit-h2);
+    .highlight-1 {
+      color: $cyan;
+    }
+    .highlight-2 {
+      color: $apricot;
+    }
+  }
+  p {
+    @include adjust-font-size-to($hero-unit-p);
+    @include adjust-leading-to($base-no-leader-line-height * $hero-unit-p-lh / $hero-unit-p);
+    font-weight: 100;
+    color: $textColor;
+    .make-bold {
+      font-weight: bold;
+    }
+  }
+}
+
+// BULITIN FEATURE
+// ---------
+
+.bulitin-feature {
+  margin-bottom: 0px;
+  background-color: $snow;
+  @include border-radius(0px);
+  @include padding-leader($bulitin-tp / $base-line-height);
+  &.with-leader {
+    @include margin-leader($base-no-leader-line-height * $bulitin-tm / $base-font-size);
+  }
+  border-bottom: 2px solid $metal;
+  h1 {
+    margin-bottom: 0;
+    @include adjust-font-size-to($bulitin-btn);
+    @include adjust-leading-to($base-no-leader-line-height);
+    @include padding-leader($base-no-leader-line-height * $bulitin-btn-pd / $bulitin-btn);
+    @include padding-trailer($base-no-leader-line-height * $bulitin-btn-pd / $bulitin-btn);
+    @include border-radius(3px);
+    margin-left: pem(15px, $bulitin-btn);
+    margin-right: pem(15px, $bulitin-btn);
+    color: $white;
+    letter-spacing: normal;
+    &.top-bulitin-button  /* THIS IS THE BEST EXAMPLE OF HOW TO USE CLASSES OF ROOT ELEMENTS EFFECTIVELY */ {
+      @include background($apricot);
+      border-bottom: 2px solid $dark-apricot;
+      text-align: center;
+      vertical-align: middle;
+      a {
+        @include link-colors($white, $white, $white, $white, $white);
+        @include hover-link;
+      }
+    }
+    &.bottom-bulitin-button /* THIS IS THE BEST EXAMPLE OF HOW TO USE CLASSES OF ROOT ELEMENTS EFFECTIVELY */ {
+      @include background($olive);
+      border-bottom: 2px solid $dark-olive;
+      text-align: center;
+      vertical-align: middle;
+      a {
+        @include link-colors($white, $white, $white, $white, $white);
+        @include hover-link;
+      }
+    }
+  }
+  h2 {
+    &.top-bulitin-box-note-format {
+      text-align: center;
+      @include padding-leader($bulitin-note-tm / $bulitin-note);
+      @include padding-trailer($bulitin-note-tm / $bulitin-note);
+    }
+    color: $steel;
+    @include adjust-font-size-to($bulitin-note);
+    @include adjust-leading-to($base-no-leader-line-height);
+    margin-left: pem(20px * $base-font-size / $bulitin-note);
+    margin-right: pem(20px * $base-font-size / $bulitin-note);
+    a {
+      @include adjust-font-size-to($baseFontSize-header * $base-font-size / $bulitin-note);
+      @include adjust-leading-to($base-no-leader-line-height * $base-line-height / $baseFontSize-header);
+      font-family: $primary-font;
+    }
+  }
+  p {
+    @include adjust-font-size-to($bulitin-p);
+    @include adjust-leading-to($base-no-leader-line-height * $bulitin-p-lh / $bulitin-p);
+    @include margin-leader($base-no-leader-line-height * $bulitin-p-first-tm / $bulitin-p);
+    @include padding-trailer($base-no-leader-line-height * $bulitin-p-first-tm / $bulitin-p);
+    font-weight: normal;
+    color: $textColor;
+    margin-left: pem(20px * $base-font-size / $bulitin-p);
+    margin-right: pem(20px * $base-font-size / $bulitin-p);
+    &.top-bulitin-box {
+      margin-left: pem(15px * $base-font-size / $bulitin-p);
+      margin-right: pem(15px * $base-font-size / $bulitin-p);
+    }
+    &.bottom-bulitin-box {
+      @include padding-trailer($base-no-leader-line-height * $bulitin-p-bp / $bulitin-p);
+    }
+    &.bottom-bulitin-box-lower {
+      @include padding-trailer($base-no-leader-line-height * $bulitin-p-bp-lower / $bulitin-p);
+    }
+  }
+}
+
+// FEATURE
+// -----------
+.feature-box {
+  h1 {
+    @include adjust-font-size-to($feature-h1);
+    @include adjust-leading-to($base-no-leader-line-height);
+    @include margin-leader($base-no-leader-line-height * $feature-h1-tm / $feature-h1);
+    color: $slate;
+    a {
+      @include link-colors($slate);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  h2 {
+    @include adjust-font-size-to($feature-h1-subtitle);
+    @include adjust-leading-to($base-no-leader-line-height);
+    color: $steel;
+    font-family: $secondary-font;
+    @include margin-trailer($base-no-leader-line-height * $feature-h1-subtitle-tm / $feature-h1-subtitle);
+    a {
+      @include adjust-font-size-to($baseFontSize-header * $base-font-size / $feature-h1-subtitle);
+      @include adjust-leading-to($base-no-leader-line-height);
+    }
+  }
+}
+
+.table-bordered {
+  @include square-corners;
+  border-top: pem(5px) solid $bodyBackground;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  @include background($snow);
+  tbody {
+    border-top: 0px;
+    @include square-corners;
+    &:first-child {
+      border-top: 0px;
+      @include square-corners;
+      tr {
+        border-top: 0px;
+        @include square-corners;
+        td {
+          &:first-child {
+            vertical-align: top;
+            min-width: 80px;
+            max-width: 80px;
+          }
+          &:last-child {
+            vertical-align: bottom;
+          }
+        }
+        &:first-child {
+          border-top: 0px;
+          @include square-corners;
+          td {
+            border-top: pem(20px) solid $bodyBackground;
+            @include square-corners;
+          }
+        }
+      }
+    }
+    td {
+      @include square-corners;
+      vertical-align: middle;
+      border-top: pem(20px) solid $bodyBackground;
+      border-bottom: 1px solid $zinc;
+      border-left: 0px;
+      border-right: 0px;
+      padding: 0px;
+      .reference-link-area  /* THIS IS THE BEST EXAMPLE OF HOW TO USE CLASSES FOR DIVs AND SPANs EFFECTIVELY */ {
+        a {
+          @include link-colors($steel);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.thumbnail {
+  h1 {
+    @include adjust-font-size-to($feature-h1);
+    @include adjust-leading-to($base-no-leader-line-height);
+    @include margin-leader($base-no-leader-line-height * $feature-h1-tm / $feature-h1);
+    color: $slate;
+    a {
+      @include link-colors($slate);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  @include background($snow);
+  @include square-corners;
+  padding: 0px;
+  .caption {
+    padding: 0px pem(9px);
+    h3 {
+      @include adjust-font-size-to($feature-h2);
+      @include adjust-leading-to($base-no-leader-line-height * $feature-h2-lh / $feature-h2);
+      margin-top: 0px;
+      @include margin-leader($base-no-leader-line-height * $feature-h2-tm / $feature-h2);
+      width: 100%;
+      font-weight: normal;
+      color: $slate;
+      font-family: $primary-font;
+      text-overflow-y: hidden;
+      overflow-y: hidden;
+      a {
+        height: auto;
+        span {
+          height: auto;
+        }
+      }
+    }
+    p {
+      font-family: $secondary-font;
+      @include adjust-font-size-to($feature-p);
+      @include adjust-leading-to($base-no-leader-line-height * $feature-p-lh / $feature-p);
+      @include margin-leader($base-no-leader-line-height * $feature-p-tm / $feature-p);
+      @include margin-trailer($base-no-leader-line-height * $feature-p-tm / $feature-p);
+      height: 4.125em;
+      text-overflow-y: hidden;
+      overflow-y: hidden;
+    }
+  }
+  img {
+    padding-top: pem(5px);
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .well {
+    padding: 0px;
+    @include square-corners;
+    @include background($steel);
+    border: 0px;
+    border-top: 1px $pewter;
+    height: pem(34px);
+    margin-bottom: 0px;
+    &:before {
+      content: "";
+      @include inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    &:after {
+      content: "";
+      @include inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    p {
+      width: pem(210px);
+      @include inline-block;
+      @include adjust-leading-to($base-no-leader-line-height);
+      text-align: center;
+      .label {
+        color: $white;
+        @include adjust-font-size-to($feature-badge-title);
+        @include adjust-leading-to($base-no-leader-line-height);
+        font-weight: bold;
+        font-family: $primary-font;
+        padding-left: 7px;
+        padding-right: 5px;
+        @include background($steel);
+      }
+      .badge {
+        color: $white;
+        @include adjust-font-size-to($feature-badge-count);
+        @include adjust-leading-to($base-no-leader-line-height);
+        font-weight: normal;
+        font-family: $secondary-font;
+        padding-left: 0px;
+        padding-right: 7px;
+        padding: auto;
+        @include background($steel);
+      }
+    }
+  }
+  .well-large {
+    //height: pem(57px);
+    text-align: center;
+    height: 55px;
+    dl {
+      @include inline-block;
+      @include adjust-leading-to($base-no-leader-line-height);
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;     
+      dt {
+        .label {
+          color: $white;
+          @include adjust-font-size-to($feature-badge-title);
+          @include adjust-leading-to($base-no-leader-line-height);
+          font-weight: normal;
+          font-family: $secondary-font;
+          @include background($steel);
+          padding: 0px;
+        }
+      }
+      dd {
+        margin-left: 0px;
+        .badge {
+          color: $white;
+          @include adjust-font-size-to($feature-badge-title);
+          @include adjust-leading-to($base-no-leader-line-height);
+          font-weight: bold;
+          font-family: $primary-font;
+          @include background($steel);
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
+
+#learn, #splash, #schools-featured, #schools-challenges {
+  .thumbnail {
+    width: pem(220px);
+  }
+}
+
+.custom-footer {
+  @include background($fog);
+  @include padding-leader($base-no-leader-line-height * $footer-h1-tm / $base-font-size);
+  h1 {
+    color: $slate;
+    @include adjust-font-size-to($baseFontSize-header);
+    @include adjust-leading-to($base-no-leader-line-height);
+  }
+  ul {
+    margin: 0px;
+    hr {
+      margin: pem(7px) 0px 0px 0px;
+    }
+    &.connect-links {
+      @include padding-leader($base-no-leader-line-height * $footer-connect-links-tm / $base-font-size);
+      li {
+        @include padding-leader($base-no-leader-line-height * $footer-connect-links-li-tm / $base-font-size);
+      }
+    }
+    list-style-type: none;
+  }
+  p {
+    text-align: justify;
+    /*ie */
+    text-justify: inter-word;
+    @include padding-leader($base-no-leader-line-height * $footer-text-tm / $base-font-size);
+  }
+  img {
+    &.supporter-image {
+      @include margin-leader($base-no-leader-line-height * $footer-supporter-tm / $base-font-size);
+      @include square-corners;
+      @include border-radius(2px);
+      border-bottom: 1px solid $dark-fog;
+      @include background($white);
+    }
+    &.cc-icons-image {
+      max-width: none;
+      position: relative;
+      left: -20px;
+    }
+  }
+  a {
+    &.align-supporter-link-right {
+      @include padding-leader($base-no-leader-line-height * $footer-more-supporters-link-tm / $base-font-size);
+      float: right;
+    }
+  }
+  hr {
+    margin: pem(35px) 0px pem(24px) 0px;
+  }
+  .language-box {
+    padding-bottom: 5px;
+    margin-bottom: 28px;
+    @include background($white);
+    .table {
+      margin-bottom: 5px;
+      @include square-corners;
+      border: 0px;
+      @include background($white);
+      tbody {
+        border: 0px;
+        @include square-corners;
+        &:first-child {
+          border: 0px;
+          @include square-corners;
+          tr {
+            border: 0px;
+            @include square-corners;
+            &:first-child {
+              border: 0px;
+              @include square-corners;
+              td {
+                border: 0px;
+                @include square-corners;
+                img {
+                  padding-left: pem(30px);
+                  padding-right: pem(5px);
+                  padding-top: 7px;
+                }
+              }
+            }
+          }
+        }
+        td {
+          @include square-corners;
+          vertical-align: middle;
+          border: 0px;
+          padding: 0px;
+        }
+      }
+    }
+    ul {
+      @include inline-block-list;
+      padding: 7px 0px 0px 0px;
+      text-align: justify;
+      /*ie */
+      text-justify: inter-word;
+    }
+  }
+  .info-links-box {
+    ul {
+      @include inline-block-list;
+      padding: 7px 0px 0px 0px;
+      text-align: justify;
+      /*ie */
+      text-justify: inter-word;
+    }
+  }
+}
+
+.icon-search {
+  position: relative;
+  left: pem(208);
+  top: pem(-29);
+}
+
+.well {
+  @extend .white-background;
+  /* @include square-corners */
+  @include border-radius(5px);
+  @include background($snow);
+  padding: pem(10px);
+  border-bottom: 2px solid $silver;
+}
+
+.white-background {
+  background-color: $white;
+  a:not(.btn) {
+    color: $link-color-on-white;
+  }
+  .tags li a {
+    color: $slate;
+  }
+}
+
+.school-logo {
+  display: block;
+  margin: auto;
+}
+
+.well-large {
+  padding: 0px;
+  @include square-corners;
+//  @include border-radius(5px);
+  @include background($snow);
+  border: 0px;
+  border-bottom: 1px solid $zinc2;
+  padding: 0px;
+//  height: pem(89px);
+  margin-bottom: 0px;
+  margin-top: 10px;
+  text-align: center;
+  ul {
+    @include inline-block;
+    @include inline-block-list;
+    padding: 7px 15px 0px 15px;
+    text-align: justify;
+    /*ie */
+    text-justify: inter-word;
+    clear: none;
+    li {
+      float: none;
+      &.wrap {
+        white-space: normal;
+      }
+    }
+  }
+  h2 {
+    @include inline-block;
+    color: $dark-slate;
+    @include adjust-leading-to($base-no-leader-line-height);
+    padding-left: pem(10px);
+  }
+  dl {
+    @include inline-block;
+    @include adjust-leading-to($base-no-leader-line-height);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    dt {
+      .label {
+        color: $white;
+        @include adjust-font-size-to($feature-badge-title);
+        @include adjust-leading-to($base-no-leader-line-height);
+        font-weight: normal;
+        font-family: $secondary-font;
+        @include background($steel);
+        padding: 0px;
+      }
+    }
+    dd {
+      margin-left: 0px;
+      .badge {
+        color: $white;
+        @include adjust-font-size-to($feature-badge-title);
+        @include adjust-leading-to($base-no-leader-line-height);
+        font-weight: bold;
+        font-family: $primary-font;
+        @include background($steel);
+        padding: 0px;
+      }
+    }
+  }
+}
+
+// P2PU Customized Buttons
+// --------------------------------------------------
+// Set size
+.btn-large {
+  padding: 0px;
+  font-family: $primary-font;
+  @include adjust-font-size-to($baseFontSize-h1-header);
+  @include adjust-leading-to($base-no-leader-line-height);
+  @include padding-leader($base-no-leader-line-height * $baseFontSize-btn-large-tm / $baseFontSize-h1-header);
+  @include padding-trailer($base-no-leader-line-height * $baseFontSize-btn-large-tm / $baseFontSize-h1-header);
+  padding-left: pem($baseFontSize-btn-large-sides-p * $baseFontSize / $baseFontSize-h1-header);
+  padding-right: pem($baseFontSize-btn-large-sides-p * $baseFontSize / $baseFontSize-h1-header);
+  @include border-radius(3px);
+  text-align: center;
+  vertical-align: middle;
+  //margin-left: pem(15px, $bulitin-btn)
+  //margin-right: pem(15px, $bulitin-btn)
+  //a
+  // //@include link-colors($white, $white, $white, $white, $white)
+  // //@include hover-link
+}
+
+.btn-fit {
+  padding-left: pem(5px);
+  padding-right: pem(5px);
+  @media (min-width: 1200px) {
+    padding-left: pem(20px);
+    padding-right: pem(20px);
+  }
+}
+
+.btn-short {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+// Set text color
+// -------------------------
+.btn-apricot,
+.btn-apricot:hover,
+.btn-cyan,
+.btn-cyan:hover,
+.btn-olive,
+.btn-olive:hover,
+.btn-slate,
+.btn-slate:hover,
+.btn-blood-orange,
+.btn-blood-orange:hover,
+.btn-clemintine,
+.btn-clemintine:hover {
+  color: $white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+// Provide *some* extra contrast for those who can get it
+.btn-apricot.active,
+.btn-cyan.active,
+.btn-olive.active,
+.btn-slate.active,
+.btn-blood-orange.active,
+.btn-clemintine.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn {
+}
+
+.btn-apricot {
+  @include buttonBackground($apricot, darken($apricot, 10%));
+  border: 0px;
+  border-bottom: 2px solid $dark-apricot;
+}
+
+.btn-olive {
+  @include buttonBackground($olive, darken($olive, 10%));
+  border: 0px;
+  border-bottom: 2px solid $dark-olive;
+}
+
+.btn-cyan {
+  @include buttonBackground($cyan, darken($cyan, 10%));
+  border: 0px;
+  border-bottom: 2px solid darken($cyan, 5%);
+}
+
+.btn-slate {
+  @include buttonBackground($slate, darken($slate, 10%));
+  border: 0px;
+  border-bottom: 2px solid $darker-slate;
+}
+
+.btn-blood-orange {
+  @include buttonBackground($blood-orange, darken($blood-orange, 10%));
+  border: 0px;
+  border-bottom: 2px solid darken($blood-orange, 10%);
+}
+
+.btn-clemintine {
+  @include buttonBackground($clemintine, darken($clemintine, 10%));
+  border: 0px;
+  border-bottom: 2px solid $dark-clemintine;
+}
+
+.breadcrumb {
+  @include background($bodyBackground);
+  border: 0px;
+  padding: pem(20px) 0px;
+  margin-bottom: 0px;
+  @include adjust-font-size-to($baseFontSize-subtext);
+  .btn {
+    &:last-child {
+      margin-right: 3px;
+      @media (min-width: 1200px) {
+        margin-right: pem(55px);
+      }
+    }
+  }
+}
+
+.btn-group .btn {
+  font-family: $secondary-font-light;
+}
+
+#splash .breadcrumb {
+  display: none;
+}
+
+//.btn {
+//  border-style: none;
+//}
+
+button {
+  @extend .btn;
+//@include buttonBackground($cloud, darken($cloud, 10%));
+//color: $slate;
+//border: 0px;
+//border-bottom: 2px solid $slate;
+}
+
+.modal {
+  width: pem(560px);
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  overflow-x: visible;
+  overflow-y: auto;
+  margin: 0px;
+  left: 25%;
+  display: block;
+  position: relative;
+  h1 {
+    padding-bottom: 10px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  &.breadcrumb-box {
+    margin-bottom: pem(0px);
+  }
+  &.body {
+    margin-top: pem(23px);
+  }
+  &.footer-schools {
+    background: white;
+    height: 100%;
+    h5 {
+      color: #cccccc;
+      width: 100%;
+      display: block;
+      font-size: 16px;
+      font-weight: normal;
+      margin: 15px 0 15px 0;
+    }
+    .school-small-icon {
+      width: 220px;
+      @include inline-block;
+      text-align: center;
+      margin-bottom: 10px;
+      a {
+        color: #555555;
+        &:hover {
+          color: #2184ca;
+          text-decoration: underline;
+        }
+      }
+      img {
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        height: 3em;
+      }
+    }
+  }
+  &:before {
+    display: table;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 9999px;
+    right: 100%;
+    overflow-x: hidden;
+  }
+  &:after {
+    display: table;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 9999px;
+    left: 100%;
+    overflow-x: hidden;
+  }
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.add-standard-left-padding {
+  padding-left: 10px;
+}
+
+.row-fluid.center-content [class*="span"]:first-child {
+  @include center-block;
+}
+
+@media (min-width: 1200px) {
+  .row-fluid.center-content [class*="span"]:first-child {
+    @include center-block;
+  }
+}
+
+[class*="span"] .inherit-height {
+  height: inherit;
+}
+
+[class*="span"] .remove-left-margin {
+  margin-left: -25px;
+}
+
+.vertical-center {
+  @include inline-block;
+  height: inherit;
+  &:before {
+    content: "";
+    @include inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  &:after {
+    content: "";
+    @include inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.wrap {
+  @include inline-block;
+  white-space: normal;
+  vertical-align: middle;
+  width: 95%;
+  a {
+    @include link-colors($slate, $slate, $linkColorHover, $linkColorHover, $linkColorHover);
+  }
+}
+
+// PROGRESS BARS
+// -------------
+// COLORS
+// ------
+// Apricot
+.progress-clemintine .bar {
+  @include gradient-vertical($clemintine, $clemintine);
+}
+
+.progress-clemintine.progress-striped .bar {
+  @include gradient-striped(lighten($clemintine, 15%));
+}
+
+// LABELS & BADGES
+// ---------------
+// Colors
+// Only give background-color difference to links (and to simplify, we dont qualifty with `a` but [href] attribute)
+// Clemintine (New Comments)
+
+.label-clemintine, .badge-clemintine {
+  background-color: $clemintine;
+}
+
+.label-clemintine[href], .badge-clemintine[href] {
+  background-color: darken($clemintine, 4%);
+}
+
+.row-fluid.odd {
+  @include background($cloud);
+}
+
+#tasks-tab {
+  ul .nav .nav-list {
+    @include background($snow);
+  }
+}
+
+.tab-content {
+  @include background($snow);
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  ul.nav-list {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.nav-tabs {
+  margin-bottom: 0px;
+}
+
+.add-top-bottom-margins {
+  margin-top: pem(40px);
+  margin-bottom: pem(30px);
+}
+
+.add-top-margin-20 {
+  margin-top: pem(25px);
+}
+
+.add-top-margin-15 {
+  margin-top: pem(15px);
+}
+
+.add-top-margin-10 {
+  margin-top: pem(10px);
+}
+
+a.show-on-hover {
+  visibility: hidden;
+  text-align: center;
+  a:hover {
+    visibility: visible;
+  }
+}
+
+/* #cse-search-form */
+/*   margin-top: -10px */
+/*   margin-right: 300px */
+/*   width: 161px */
+
+/* #cse-search-form input */
+/*   background: #ccc */
+/*   border: 1px solid #aaa */
+/*   border-radius: 20px */
+/*   color: #5A6579 */
+/*   height: 22px */
+/*   width: 161px */
+/*   padding: 0 17px */
+/*   float: right */
+
+#cse-search-form .gsc-search-button, #cse-search-form .gsc-clear-button {
+  display: none;
+}
+
+#cse .gsc-search-box {
+  display: none;
+}
+
+.gsc-control-cse {
+  border-radius: 10px;
+  border: solid 1px #eeeeee;
+  width: 960px;
+}
+
+.center-via-text-align {
+  text-align: center;
+}
+
+.make-inline-block {
+  @include inline-block;
+}
+
+.center-via-auto-margins {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#school_home .thumbnail-large,
+.thumbnail-large {
+  h1 {
+    @include adjust-font-size-to(20px);
+    @include adjust-leading-to($base-no-leader-line-height);
+    margin-top: 0px;
+    color: $white;
+    text-align: center;
+    @include text-shadow(0 1px 1px #2d5f74);
+    a {
+      @include link-colors($white, $white, $clemintine, $white, $clemintine);
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  width: pem(416px);
+  @include background($snow);
+  @include square-corners;
+  padding: 0px;
+  margin-top: pem(10px);
+  margin-bottom: pem(40px);
+  .caption {
+    padding: 0px pem(8px);
+    p {
+      font-family: $secondary-font;
+      @include adjust-font-size-to($feature-p);
+      @include adjust-leading-to($base-no-leader-line-height * $feature-p-lh / $feature-p);
+      @include margin-leader($base-no-leader-line-height * $feature-p-tm / $feature-p);
+      @include margin-trailer($base-no-leader-line-height * $feature-p-tm / $feature-p);
+      height: 3em;
+    }
+  }
+  img {
+    padding-top: pem(8px);
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .well {
+    padding: 0px;
+    @include square-corners;
+    @include background($steel);
+    border: 0px;
+    border-top: 1px solid $pewter;
+    height: pem(34px);
+    //padding: 30px 8px 20px 8px
+    margin-top: -15px;
+    margin-bottom: -15px;
+    &:before {
+      content: "";
+      @include inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    &:after {
+      content: "";
+      @include inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+  .well-large {
+    height: pem(57px);
+    text-align: center;
+    dl {
+      @include inline-block;
+      @include adjust-leading-to($base-no-leader-line-height);
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
+      dd {
+        margin-bottom: -5px;
+        .label {
+          color: $white;
+          @include adjust-font-size-to($feature-badge-title);
+          @include adjust-leading-to($base-no-leader-line-height);
+          font-weight: normal;
+          font-family: $secondary-font;
+          @include background($steel);
+          padding: 0px;
+        }
+      }
+      dt {
+        margin-left: 0px;
+        margin-bottom: -10px;
+        .badge {
+          color: $white;
+          @include adjust-font-size-to($feature-badge-title);
+          @include adjust-leading-to($base-no-leader-line-height);
+          font-weight: bold;
+          font-family: $primary-font;
+          @include background($steel);
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
+
+.thumbnail#small {
+  width: pem(220px);
+  @include background($snow);
+  @include square-corners;
+  padding: 0px;
+  .caption {
+    padding: pem(9px);
+    a {
+      @include inline-block;
+    }
+    h3 {
+      @include inline-block;
+      @include adjust-font-size-to($feature-h2);
+      @include adjust-leading-to($base-no-leader-line-height * $feature-h2-lh / $feature-h2);
+      margin-top: 0px;
+      width: 95%;
+      font-weight: normal;
+      color: $slate;
+      font-family: $primary-font;
+      height: 2.5em;
+      text-overflow-y: hidden;
+      overflow-y: hidden;
+      a {
+        @include inline-block;
+        height: auto;
+        span {
+          @include inline-block;
+          height: auto;
+        }
+      }
+    }
+  }
+  img {
+    padding-top: 0px;
+    @include inline-block;
+  }
+  .well-large {
+    height: pem(57px);
+    text-align: center;
+    dl {
+      @include inline-block;
+      @include adjust-leading-to($base-no-leader-line-height);
+      margin-top: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
+      dt {
+        .label {
+          color: $white;
+          @include adjust-font-size-to($feature-badge-title);
+          @include adjust-leading-to($base-no-leader-line-height);
+          font-weight: normal;
+          font-family: $secondary-font;
+          @include background($steel);
+          padding: 0px;
+        }
+      }
+      dd {
+        margin-left: 0px;
+        .badge {
+          color: $white;
+          @include adjust-font-size-to($feature-badge-title);
+          @include adjust-leading-to($base-no-leader-line-height);
+          font-weight: bold;
+          font-family: $primary-font;
+          @include background($steel);
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
+
+.alert p {
+  margin-top: 0px;
+}
+
+.tab-content {
+  padding-bottom: 15px;
+}
+
+.connect-links a img {
+  margin-left: 7px;
+}
+
+.richtext_section {
+  ul {
+    padding-top: 10px;
+  }
+}
+
+// ------------------------------------------------------------
+// ----Batucada _projectsets_card.html Ribbon Creation Code----
+// ------------------------------------------------------------
+#challenge-sets .card .ribbon-wrapper {
+  position: relative;
+  margin: -30px 0 20px 0px;
+}
+
+#challenge-sets .card .ribbon-front {
+  background-color: #8fbbca;
+  background: -moz-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4b8fba), color-stop(100%, #3e6493));
+  background: -webkit-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  background: -o-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  background: -ms-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  background: linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b8fba', endColorstr='#3e6493',GradientType=0 );
+  height: 40px;
+  width: 456px;
+  position: relative;
+  left: -20px;
+  z-index: 2;
+  padding-top: 20px;
+}
+
+#challenge-sets .card .ribbon-front,
+#challenge-sets .card .ribbon-back-left,
+#challenge-sets .card .ribbon-back-right {
+  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -khtml-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -o-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+}
+
+#challenge-sets .card .ribbon-edge-topleft,
+#challenge-sets .card .ribbon-edge-topright,
+#challenge-sets .card .ribbon-edge-bottomleft,
+#challenge-sets .card .ribbon-edge-bottomright {
+  position: absolute;
+  z-index: 1;
+  border-style: solid;
+  height: 0px;
+  width: 0px;
+}
+
+#challenge-sets .card .ribbon-edge-bottomleft,
+#challenge-sets .card .ribbon-edge-bottomright {
+  top: 40px;
+}
+
+#challenge-sets .card .ribbon-edge-topleft,
+#challenge-sets .card .ribbon-edge-bottomleft {
+  left: -20px;
+  border-color: transparent #2d5f74 transparent transparent;
+}
+
+#challenge-sets .card .ribbon-edge-topleft {
+  top: -10px;
+  border-width: 10px 20px 0 0;
+}
+
+#challenge-sets .card .ribbon-edge-bottomleft {
+  border-width: 0 20px 0px 0;
+}
+
+#challenge-sets .card .ribbon-edge-topright,
+#challenge-sets .card .ribbon-edge-bottomright {
+  left: 416px;
+  border-color: transparent transparent transparent #2d5f74;
+}
+
+#challenge-sets .card .ribbon-edge-topright {
+  top: -10px;
+  border-width: 10px 0 0 20px;
+}
+
+#challenge-sets .card .ribbon-edge-bottomright {
+  border-width: 0 0 0px 20px;
+}
+
+#challenge-sets .card .ribbon-back-left {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 0px;
+  height: 40px;
+  z-index: 0;
+}
+
+#challenge-sets .card .ribbon-back-right {
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  width: 0px;
+  height: 40px;
+  z-index: 0;
+}
+
+// batucada create posts
+
+#posts .post-container {
+  margin-left: 0px;
+}
+
+#create-post .post-container {
+  /* min-height: 46px */
+  margin-top: 15px;
+}
+
+.post-container a{
+  color: $link-color-on-white;
+}
+
+#create-post #fake-message-input, #create-post textarea {
+  /* width: 99%    */
+  display: block;
+  font-size: 16px;
+  padding: 12px;
+  /* margin-righct: 50px */
+}
+
+#create-post #fake-message-input {
+  /* color: #919191 */
+  margin-bottom: 0;
+  min-height: 40px;
+}
+
+#create-post form {
+  margin: 0px;
+}
+
+#create-post textarea, #create-post #important-message, #create-post .status-and-actions {
+  display: none;
+}
+
+#create-post .status-and-actions {
+  margin-top: 10px;
+  height: 28px;
+  text-align: right;
+}
+
+#create-post #fake-message-input {
+  color: $slate;
+  background-color: white;
+}
+
+#create-post .update {
+  font-size: 14px;
+  line-height: 25px;
+  min-height: 31px;
+}
+
+#create-post .cancel {
+  font-size: 14px;
+  line-height: 25px;
+  min-height: 25px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+#create-post.expanded #fake-message-input {
+  display: none;
+}
+
+#create-post.expanded textarea, #create-post.expanded #important-message, #create-post.expanded .status-and-actions {
+  display: block;
+}
+
+#create-post.expanded textarea {
+  height: 160px;
+}
+
+/* batucada activity feed styles */
+
+.activity-body{
+  font-family: $secondary-font-light;
+  margin-top: 7px;
+}
+
+.supplemental_actions .action {
+  display: block;
+  float: right;
+  color: #919191;
+  text-decoration: none;
+  padding-left: 20px;
+  margin-left: 18px;
+  left: 1px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.supplemental_actions {
+  margin: 5px 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* .supplemental_actions .action */
+/*   display: inline */
+/*   margin: 0 5px 0 0px */
+/*   float: none */
+
+.supplemental_actions .report {
+  background: url("/static/images/report.icon.png") 0 1px no-repeat;
+  padding-left: 15px;
+}
+
+.message-container {
+  border: 1px solid $silver;
+  @include border-radius(3px);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form-full-width {
+  input, textarea {
+    width: 100%;
+  }
+}
+
+#member_links ul {
+  list-style: none;
+  margin-left: 0px;
+}
+
+.no-list-style {
+  list-style: none;
+  margin-left: 0px;
+}
+
+.member-location {
+  margin-bottom: 0px;
+}
+
+.profile-wrapper {
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+}
+
+.profile-courses img {
+  margin: 5px;
+  /* border: 1px solid $slate */
+}
+
+.tags li {
+  display: inline-block;
+  float: none;
+  margin: 10px 0px 0px 0px;
+}
+
+.tags li a {
+  display: block;
+  background: #eeeeee;
+  /* color: #919191 */
+  color: $slate;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 20px;
+  height: 20px;
+  padding: 1px 6px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  text-shadow: white 1px 1px 0px;
+  -moz-text-shadow: white 1px 1px 0px;
+  -webkit-text-shadow: white 1px 1px 0px;
+  box-shadow: white 1px 1px 2px;
+  -webkit-box-shadow: white 1px 1px 2px;
+  -moz-box-shadow: white 1px 1px 2px;
+  border: 1px solid #c6c6c6;
+  behavior: url("/static/css/PIE.htc");
+}
+
+.challenge-set-preview {
+  display: none;
+}
+
+.challenge-set-modal-data {
+  padding: 20px;
+  width: 715px;
+}
+
+.challenge-set-modal-data h2 {
+  font-size: 24px;
+  font-weight: medium;
+  padding-bottom: 10px;
+  color: #222222;
+}
+
+.challenge-set-modal-data p {
+  font-size: 15px;
+}
+
+.challenge-set-modal-data {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.challenge-set-modal-data ul li {
+  display: inline-block;
+  padding: 17px;
+}
+
+.challenge-set-modal-data a {
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.challenge-set-modal-data ul {
+  margin: 0;
+  list-style: none;
+}
+
+.challenge-set-modal-data li {
+  display: inline-block;
+  padding-bottom: 2em;
+  text-align: center;
+  vertical-align: top;
+  width: 150px;
+}
+
+.challenge-set-modal-data li {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.challenge-set-modal-data .project-name {
+  display: block;
+  padding: 5px;
+}
+
+.detailed-info {
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: $snow;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  float: left;
+  width: 100%;
+  ul {
+    list-style: none;
+    float: left;
+    margin: 6px 0 0 10px;
+    font-size: 14px;
+  }
+  ul li {
+    display: inline-block;
+    margin: 0 80px 0 0;
+    padding: 0;
+  }
+  ul li:last-child {
+    margin: 0;
+  }
+  a {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+#school_home .challenge-set-modal-data h2 {
+  margin: 0px;
+  padding-bottom: 0px;
+}
+
+.challenge-set-button {
+  text-align: center;
+  /* a */
+  /*   display: block */
+  /*   margin: auto */
+}
+
+#main h1{
+  margin-top: 0px;
+}

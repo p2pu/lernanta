@@ -69,7 +69,7 @@
             <form method="post" action="{% locale_url direct_signup slug=project.slug %}">
               {% csrf_token %}
               <button id="direct_signup_button">{{ _('Start Challenge') }}</button>
-            </form>
+            </form><br />
           {% else %}
               <a id="direct_signup_button" href="{{ login_with_redirect_url }}">{{ _('Start Challenge')}}</a>
           {% endif %}

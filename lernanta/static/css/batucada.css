@@ -195,6 +195,7 @@ input[type=submit]:active,
     float: right;
     margin-top: -23px;
     margin-right: 2px;
+    margin-bottom: 15px;
 }
 
 #participate_button a {
@@ -292,7 +293,7 @@ input[type=submit]:active,
 }
 
 .project-kind-challenge #sidebar a#leave_direct_signup_button, .project-kind-challenge #sidebar a.discuss-link {
-  margin: 0 0 0 65px;
+  margin: 30px 0 0 65px;
   padding-top: 40px;
   display: block;
 }
@@ -770,6 +771,10 @@ form .small {
 	    -webkit-box-shadow:  0 1px 0 rgba(255,255,255,0.8);
 	}
 
+  #sidebar h2.school_header{
+    margin-top: 0px;
+  }
+
     .project-kind-challenge #sidebar .panel {
         border-bottom: none;
     }
@@ -1162,9 +1167,8 @@ form .small {
 
 #project_user_list .card-list .card dl.updates {
     width: 30%;    
-}    
+}  
 
-  
 #main, #task-discussion {
   margin-left: 40px;
   width: 652px;
@@ -1187,7 +1191,7 @@ form .small {
   margin-top: 20px;
   padding: 20px;
   width: 652px;
-  float: right;
+  float: left;
   border-radius: 10px;
   z-index: -9999;
   border: solid 1px #EEE;
@@ -1203,7 +1207,8 @@ form .small {
   font-weight: 500;
   font-size: 16px;
   color: #444;
-  margin-top: -50px;
+  margin-top: -63px;
+  margin-bottom: -25px;
   padding: 0 10px 20px 10px;
   text-align: center;
   background: #fff;
@@ -2921,7 +2926,7 @@ h1.tasks-title {
 
 #task-discussion {
     margin-top: 20px;
-    float: right;
+    float: left;
 }
 
 .project-kind-challenge #task-discussion h1 {
@@ -3210,7 +3215,7 @@ div.voting div.score {
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: #bebebe;
-    margin-top: 26px;
+    margin-top: 13px;
     margin-right: 0pt;
     margin-bottom: 0pt;
     margin-left: 2px;
@@ -3348,7 +3353,7 @@ div.voting div.score {
 }
 
 .project-kind-challenge #task_list_wall #task_list_wall_toogle {
-    width: 200px;
+    /* width: 200px; */
 }
 
 .project-kind-challenge #task_list_wall.toggled_tasks #project_wall_section,
@@ -3398,14 +3403,14 @@ div.voting div.score {
 }
 
 #task_list_section ul {
-    margin: 13px 0 5px 2px;
+    margin: 0px 0 5px 2px;
     padding-bottom: 17px;
 }
 
 
 .project-kind-challenge #task_list_section ul {
     border-top: 1px solid #BEBEBE;
-    margin: 26px 0 0 2px;
+    margin: 0px 0 0 2px;
     padding-top: 17px;
     padding-bottom: 0px;
 }
@@ -5315,3 +5320,7 @@ table.display thead, table.display tfoot {
     padding: 10px;
 }
 
+.content-wrapper{
+  float: left;
+  width: 652px;
+}

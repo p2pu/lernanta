@@ -1,3 +1,5 @@
+<div class="btn-group">
 {% for filter in filters %}
-    <a href="{{ url }}?activities_filter={{ filter }}" class="{% if filter == active_filter %}active-post-tag{% endif %} btn btn-fit">{{ filter|title }}</a>
+    <a href="{{ url }}?activities_filter={{ filter }}" class="{% if filter == active_filter %}active-post-tag{% endif %} btn">{{ filter|title }}</a>
 {% endfor %}
+</div>

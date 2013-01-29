@@ -8809,10 +8809,6 @@ div.nav-google-search .gsc-input {
   margin-left: 0px;
 }
 
-/* line 662, ../sass/overrides.scss */
-.nav li#user-dropdown {
-  margin-right: 15px;
-}
 /* line 664, ../sass/overrides.scss */
 .nav li#user-dropdown > a {
   height: 30px;
@@ -8873,7 +8869,7 @@ div.nav-google-search .gsc-input {
   background-color: #5b6b73;
   margin-top: 0px;
   width: 100%;
-  min-width: 50px;
+  min-width: 120px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -9019,59 +9015,54 @@ div.nav-google-search .gsc-input {
   color: white;
 }
 
-/* line 858, ../sass/overrides.scss */
-#sidebar {
-  margin-top: 15px;
-}
-
-/* line 863, ../sass/overrides.scss */
+/* line 859, ../sass/overrides.scss */
 #sidebar #project form {
   margin-top: 15px;
 }
-/* line 866, ../sass/overrides.scss */
+/* line 862, ../sass/overrides.scss */
 #sidebar #project h2, #sidebar #project .more_people_link {
   line-height: 24px;
 }
-/* line 869, ../sass/overrides.scss */
+/* line 865, ../sass/overrides.scss */
 #sidebar #project ol {
   margin-left: 0px;
 }
-/* line 871, ../sass/overrides.scss */
+/* line 867, ../sass/overrides.scss */
 #sidebar #project ol li {
   list-style-position: inside;
   padding-top: 5px;
   padding-bottom: 5px;
   border-bottom: solid 1px #eeeeee;
 }
-/* line 876, ../sass/overrides.scss */
+/* line 872, ../sass/overrides.scss */
 #sidebar #project ol li:first-child {
   border-top: solid 1px #eeeeee;
 }
 
-/* line 883, ../sass/overrides.scss */
+/* line 879, ../sass/overrides.scss */
 #project .nav .nav-header {
   padding-top: 0px;
 }
 
-/* line 887, ../sass/overrides.scss */
+/* line 883, ../sass/overrides.scss */
 #project .nav-list {
   padding-left: 10px;
 }
-/* line 889, ../sass/overrides.scss */
+/* line 885, ../sass/overrides.scss */
 #project .nav-list li {
   padding-left: 0px;
 }
-/* line 892, ../sass/overrides.scss */
+/* line 888, ../sass/overrides.scss */
 #project .nav-list > li > a {
   margin-left: 0px;
   padding-left: 10px;
 }
-/* line 896, ../sass/overrides.scss */
+/* line 892, ../sass/overrides.scss */
 #project .nav-list .nav-header {
   padding-left: 10px;
 }
 
-/* line 906, ../sass/overrides.scss */
+/* line 902, ../sass/overrides.scss */
 .custom-hero-unit {
   margin-bottom: 0px;
   background-color: #f3f4f8;
@@ -9079,12 +9070,12 @@ div.nav-google-search .gsc-input {
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 910, ../sass/overrides.scss */
+/* line 906, ../sass/overrides.scss */
 .custom-hero-unit .p-first-line {
   margin-top: 2.25em;
   font-weight: 100;
 }
-/* line 914, ../sass/overrides.scss */
+/* line 910, ../sass/overrides.scss */
 .custom-hero-unit h1 {
   margin-bottom: 0;
   font-size: 3.625em;
@@ -9093,15 +9084,15 @@ div.nav-google-search .gsc-input {
   color: #aab0bf;
   letter-spacing: normal;
 }
-/* line 920, ../sass/overrides.scss */
+/* line 916, ../sass/overrides.scss */
 .custom-hero-unit h1 .highlight-1 {
   color: #05c6b4;
 }
-/* line 923, ../sass/overrides.scss */
+/* line 919, ../sass/overrides.scss */
 .custom-hero-unit h1 .highlight-2 {
   color: #ff7300;
 }
-/* line 927, ../sass/overrides.scss */
+/* line 923, ../sass/overrides.scss */
 .custom-hero-unit h2 {
   color: #aab0bf;
   font-size: 2.125em;
@@ -9109,15 +9100,15 @@ div.nav-google-search .gsc-input {
   line-height: 1em;
   margin-top: 1em;
 }
-/* line 932, ../sass/overrides.scss */
+/* line 928, ../sass/overrides.scss */
 .custom-hero-unit h2 .highlight-1 {
   color: #05c6b4;
 }
-/* line 935, ../sass/overrides.scss */
+/* line 931, ../sass/overrides.scss */
 .custom-hero-unit h2 .highlight-2 {
   color: #ff7300;
 }
-/* line 939, ../sass/overrides.scss */
+/* line 935, ../sass/overrides.scss */
 .custom-hero-unit p {
   font-size: 1.25em;
   line-height: 2.2em;
@@ -9125,12 +9116,12 @@ div.nav-google-search .gsc-input {
   font-weight: 100;
   color: #515665;
 }
-/* line 944, ../sass/overrides.scss */
+/* line 940, ../sass/overrides.scss */
 .custom-hero-unit p .make-bold {
   font-weight: bold;
 }
 
-/* line 953, ../sass/overrides.scss */
+/* line 949, ../sass/overrides.scss */
 .bulitin-feature {
   margin-bottom: 0px;
   background-color: #fcfcfc;
@@ -9140,11 +9131,11 @@ div.nav-google-search .gsc-input {
   padding-top: 0.9375em;
   border-bottom: 2px solid #d0d3dc;
 }
-/* line 958, ../sass/overrides.scss */
+/* line 954, ../sass/overrides.scss */
 .bulitin-feature.with-leader {
   margin-top: 1.4375em;
 }
-/* line 962, ../sass/overrides.scss */
+/* line 958, ../sass/overrides.scss */
 .bulitin-feature h1 {
   margin-bottom: 0;
   font-size: 1.5em;
@@ -9160,14 +9151,14 @@ div.nav-google-search .gsc-input {
   color: white;
   letter-spacing: normal;
 }
-/* line 973, ../sass/overrides.scss */
+/* line 969, ../sass/overrides.scss */
 .bulitin-feature h1.top-bulitin-button {
   background: #ff7300;
   border-bottom: 2px solid #bc5500;
   text-align: center;
   vertical-align: middle;
 }
-/* line 978, ../sass/overrides.scss */
+/* line 974, ../sass/overrides.scss */
 .bulitin-feature h1.top-bulitin-button a {
   color: white;
   text-decoration: none;
@@ -9192,14 +9183,14 @@ div.nav-google-search .gsc-input {
 .bulitin-feature h1.top-bulitin-button a:hover {
   text-decoration: underline;
 }
-/* line 983, ../sass/overrides.scss */
+/* line 979, ../sass/overrides.scss */
 .bulitin-feature h1.bottom-bulitin-button {
   background: #b7d500;
   border-bottom: 2px solid #a3be00;
   text-align: center;
   vertical-align: middle;
 }
-/* line 988, ../sass/overrides.scss */
+/* line 984, ../sass/overrides.scss */
 .bulitin-feature h1.bottom-bulitin-button a {
   color: white;
   text-decoration: none;
@@ -9224,7 +9215,7 @@ div.nav-google-search .gsc-input {
 .bulitin-feature h1.bottom-bulitin-button a:hover {
   text-decoration: underline;
 }
-/* line 994, ../sass/overrides.scss */
+/* line 990, ../sass/overrides.scss */
 .bulitin-feature h2 {
   color: #aab0bf;
   font-size: 0.875em;
@@ -9233,20 +9224,20 @@ div.nav-google-search .gsc-input {
   margin-left: 1.42857em;
   margin-right: 1.42857em;
 }
-/* line 995, ../sass/overrides.scss */
+/* line 991, ../sass/overrides.scss */
 .bulitin-feature h2.top-bulitin-box-note-format {
   text-align: center;
   padding-top: 1.375em;
   padding-bottom: 1.375em;
 }
-/* line 1005, ../sass/overrides.scss */
+/* line 1001, ../sass/overrides.scss */
 .bulitin-feature h2 a {
   font-size: 1.28571em;
   line-height: 2.13889em;
   line-height: 1.22222em;
   font-family: "arvo", helvetica, sans-serif;
 }
-/* line 1011, ../sass/overrides.scss */
+/* line 1007, ../sass/overrides.scss */
 .bulitin-feature p {
   font-size: 1em;
   line-height: 1.375em;
@@ -9258,21 +9249,21 @@ div.nav-google-search .gsc-input {
   margin-left: 1.25em;
   margin-right: 1.25em;
 }
-/* line 1020, ../sass/overrides.scss */
+/* line 1016, ../sass/overrides.scss */
 .bulitin-feature p.top-bulitin-box {
   margin-left: 0.9375em;
   margin-right: 0.9375em;
 }
-/* line 1024, ../sass/overrides.scss */
+/* line 1020, ../sass/overrides.scss */
 .bulitin-feature p.bottom-bulitin-box {
   padding-bottom: 3.375em;
 }
-/* line 1027, ../sass/overrides.scss */
+/* line 1023, ../sass/overrides.scss */
 .bulitin-feature p.bottom-bulitin-box-lower {
   padding-bottom: 2.75em;
 }
 
-/* line 1036, ../sass/overrides.scss */
+/* line 1032, ../sass/overrides.scss */
 .feature-box h1 {
   font-size: 1.5em;
   line-height: 1.83333em;
@@ -9280,15 +9271,15 @@ div.nav-google-search .gsc-input {
   margin-top: 2.41667em;
   color: #515665;
 }
-/* line 1041, ../sass/overrides.scss */
+/* line 1037, ../sass/overrides.scss */
 .feature-box h1 a {
   color: #515665;
 }
-/* line 1043, ../sass/overrides.scss */
+/* line 1039, ../sass/overrides.scss */
 .feature-box h1 a:hover {
   text-decoration: underline;
 }
-/* line 1048, ../sass/overrides.scss */
+/* line 1044, ../sass/overrides.scss */
 .feature-box h2 {
   font-size: 0.875em;
   line-height: 1.57143em;
@@ -9297,14 +9288,14 @@ div.nav-google-search .gsc-input {
   font-family: "sense", helvetica, sans-serif;
   margin-bottom: 1.92857em;
 }
-/* line 1054, ../sass/overrides.scss */
+/* line 1050, ../sass/overrides.scss */
 .feature-box h2 a {
   font-size: 1.28571em;
   line-height: 2.13889em;
   line-height: 1em;
 }
 
-/* line 1061, ../sass/overrides.scss */
+/* line 1057, ../sass/overrides.scss */
 .table-bordered {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -9315,52 +9306,52 @@ div.nav-google-search .gsc-input {
   border-bottom: 0px;
   background: #fcfcfc;
 }
-/* line 1068, ../sass/overrides.scss */
+/* line 1064, ../sass/overrides.scss */
 .table-bordered tbody {
   border-top: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1071, ../sass/overrides.scss */
+/* line 1067, ../sass/overrides.scss */
 .table-bordered tbody:first-child {
   border-top: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1074, ../sass/overrides.scss */
+/* line 1070, ../sass/overrides.scss */
 .table-bordered tbody:first-child tr {
   border-top: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1078, ../sass/overrides.scss */
+/* line 1074, ../sass/overrides.scss */
 .table-bordered tbody:first-child tr td:first-child {
   vertical-align: top;
   min-width: 80px;
   max-width: 80px;
 }
-/* line 1083, ../sass/overrides.scss */
+/* line 1079, ../sass/overrides.scss */
 .table-bordered tbody:first-child tr td:last-child {
   vertical-align: bottom;
 }
-/* line 1087, ../sass/overrides.scss */
+/* line 1083, ../sass/overrides.scss */
 .table-bordered tbody:first-child tr:first-child {
   border-top: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1090, ../sass/overrides.scss */
+/* line 1086, ../sass/overrides.scss */
 .table-bordered tbody:first-child tr:first-child td {
   border-top: 1.25em solid #f3f4f8;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1097, ../sass/overrides.scss */
+/* line 1093, ../sass/overrides.scss */
 .table-bordered tbody td {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -9372,13 +9363,13 @@ div.nav-google-search .gsc-input {
   border-right: 0px;
   padding: 0px;
 }
-/* line 1106, ../sass/overrides.scss */
+/* line 1102, ../sass/overrides.scss */
 .table-bordered tbody td .reference-link-area a {
   color: #aab0bf;
   text-decoration: underline;
 }
 
-/* line 1115, ../sass/overrides.scss */
+/* line 1111, ../sass/overrides.scss */
 .thumbnail {
   background: #fcfcfc;
   -webkit-border-radius: 0px;
@@ -9386,7 +9377,7 @@ div.nav-google-search .gsc-input {
   border-radius: 0px;
   padding: 0px;
 }
-/* line 1116, ../sass/overrides.scss */
+/* line 1112, ../sass/overrides.scss */
 .thumbnail h1 {
   font-size: 1.5em;
   line-height: 1.83333em;
@@ -9394,19 +9385,19 @@ div.nav-google-search .gsc-input {
   margin-top: 2.41667em;
   color: #515665;
 }
-/* line 1121, ../sass/overrides.scss */
+/* line 1117, ../sass/overrides.scss */
 .thumbnail h1 a {
   color: #515665;
 }
-/* line 1123, ../sass/overrides.scss */
+/* line 1119, ../sass/overrides.scss */
 .thumbnail h1 a:hover {
   text-decoration: underline;
 }
-/* line 1131, ../sass/overrides.scss */
+/* line 1127, ../sass/overrides.scss */
 .thumbnail .caption {
   padding: 0px 0.5625em;
 }
-/* line 1133, ../sass/overrides.scss */
+/* line 1129, ../sass/overrides.scss */
 .thumbnail .caption h3 {
   font-size: 1.125em;
   line-height: 1.22222em;
@@ -9417,19 +9408,18 @@ div.nav-google-search .gsc-input {
   font-weight: normal;
   color: #515665;
   font-family: "arvo", helvetica, sans-serif;
-  height: 2.5em;
   text-overflow-y: hidden;
   overflow-y: hidden;
 }
-/* line 1145, ../sass/overrides.scss */
+/* line 1140, ../sass/overrides.scss */
 .thumbnail .caption h3 a {
   height: auto;
 }
-/* line 1147, ../sass/overrides.scss */
+/* line 1142, ../sass/overrides.scss */
 .thumbnail .caption h3 a span {
   height: auto;
 }
-/* line 1152, ../sass/overrides.scss */
+/* line 1147, ../sass/overrides.scss */
 .thumbnail .caption p {
   font-family: "sense", helvetica, sans-serif;
   font-size: 1em;
@@ -9441,7 +9431,7 @@ div.nav-google-search .gsc-input {
   text-overflow-y: hidden;
   overflow-y: hidden;
 }
-/* line 1163, ../sass/overrides.scss */
+/* line 1158, ../sass/overrides.scss */
 .thumbnail img {
   padding-top: 0.3125em;
   display: block;
@@ -9449,7 +9439,7 @@ div.nav-google-search .gsc-input {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 1170, ../sass/overrides.scss */
+/* line 1165, ../sass/overrides.scss */
 .thumbnail .well {
   padding: 0px;
   -webkit-border-radius: 0px;
@@ -9461,7 +9451,7 @@ div.nav-google-search .gsc-input {
   height: 2.125em;
   margin-bottom: 0px;
 }
-/* line 1178, ../sass/overrides.scss */
+/* line 1173, ../sass/overrides.scss */
 .thumbnail .well:before {
   content: "";
   display: -moz-inline-stack;
@@ -9473,7 +9463,7 @@ div.nav-google-search .gsc-input {
   height: 100%;
   vertical-align: middle;
 }
-/* line 1184, ../sass/overrides.scss */
+/* line 1179, ../sass/overrides.scss */
 .thumbnail .well:after {
   content: "";
   display: -moz-inline-stack;
@@ -9485,7 +9475,7 @@ div.nav-google-search .gsc-input {
   height: 100%;
   vertical-align: middle;
 }
-/* line 1190, ../sass/overrides.scss */
+/* line 1185, ../sass/overrides.scss */
 .thumbnail .well p {
   width: 13.125em;
   display: -moz-inline-stack;
@@ -9497,7 +9487,7 @@ div.nav-google-search .gsc-input {
   line-height: 1em;
   text-align: center;
 }
-/* line 1195, ../sass/overrides.scss */
+/* line 1190, ../sass/overrides.scss */
 .thumbnail .well p .label {
   color: white;
   font-size: 0.75em;
@@ -9509,7 +9499,7 @@ div.nav-google-search .gsc-input {
   padding-right: 5px;
   background: #aab0bf;
 }
-/* line 1205, ../sass/overrides.scss */
+/* line 1200, ../sass/overrides.scss */
 .thumbnail .well p .badge {
   color: white;
   font-size: 0.875em;
@@ -9522,11 +9512,12 @@ div.nav-google-search .gsc-input {
   padding: auto;
   background: #aab0bf;
 }
-/* line 1218, ../sass/overrides.scss */
+/* line 1213, ../sass/overrides.scss */
 .thumbnail .well-large {
   text-align: center;
+  height: 55px;
 }
-/* line 1221, ../sass/overrides.scss */
+/* line 1217, ../sass/overrides.scss */
 .thumbnail .well-large dl {
   display: -moz-inline-stack;
   display: inline-block;
@@ -9541,7 +9532,7 @@ div.nav-google-search .gsc-input {
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 1230, ../sass/overrides.scss */
+/* line 1226, ../sass/overrides.scss */
 .thumbnail .well-large dl dt .label {
   color: white;
   font-size: 0.75em;
@@ -9552,11 +9543,11 @@ div.nav-google-search .gsc-input {
   background: #aab0bf;
   padding: 0px;
 }
-/* line 1240, ../sass/overrides.scss */
+/* line 1236, ../sass/overrides.scss */
 .thumbnail .well-large dl dd {
   margin-left: 0px;
 }
-/* line 1242, ../sass/overrides.scss */
+/* line 1238, ../sass/overrides.scss */
 .thumbnail .well-large dl dd .badge {
   color: white;
   font-size: 0.75em;
@@ -9568,48 +9559,48 @@ div.nav-google-search .gsc-input {
   padding: 0px;
 }
 
-/* line 1257, ../sass/overrides.scss */
+/* line 1253, ../sass/overrides.scss */
 #learn .thumbnail, #splash .thumbnail, #schools-featured .thumbnail, #schools-challenges .thumbnail {
   width: 13.75em;
 }
 
-/* line 1262, ../sass/overrides.scss */
+/* line 1258, ../sass/overrides.scss */
 .custom-footer {
   background: #e1e4ed;
   padding-top: 2.25em;
 }
-/* line 1265, ../sass/overrides.scss */
+/* line 1261, ../sass/overrides.scss */
 .custom-footer h1 {
   color: #515665;
   font-size: 1.125em;
   line-height: 1.22222em;
   line-height: 1em;
 }
-/* line 1270, ../sass/overrides.scss */
+/* line 1266, ../sass/overrides.scss */
 .custom-footer ul {
   margin: 0px;
   list-style-type: none;
 }
-/* line 1272, ../sass/overrides.scss */
+/* line 1268, ../sass/overrides.scss */
 .custom-footer ul hr {
   margin: 0.4375em 0px 0px 0px;
 }
-/* line 1275, ../sass/overrides.scss */
+/* line 1271, ../sass/overrides.scss */
 .custom-footer ul.connect-links {
   padding-top: 0.8125em;
 }
-/* line 1277, ../sass/overrides.scss */
+/* line 1273, ../sass/overrides.scss */
 .custom-footer ul.connect-links li {
   padding-top: 0.4375em;
 }
-/* line 1283, ../sass/overrides.scss */
+/* line 1279, ../sass/overrides.scss */
 .custom-footer p {
   text-align: justify;
   /*ie */
   text-justify: inter-word;
   padding-top: 1.0625em;
 }
-/* line 1290, ../sass/overrides.scss */
+/* line 1286, ../sass/overrides.scss */
 .custom-footer img.supporter-image {
   margin-top: 1.25em;
   -webkit-border-radius: 0px;
@@ -9621,28 +9612,28 @@ div.nav-google-search .gsc-input {
   border-bottom: 1px solid #c7cbd7;
   background: white;
 }
-/* line 1297, ../sass/overrides.scss */
+/* line 1293, ../sass/overrides.scss */
 .custom-footer img.cc-icons-image {
   max-width: none;
   position: relative;
   left: -20px;
 }
-/* line 1304, ../sass/overrides.scss */
+/* line 1300, ../sass/overrides.scss */
 .custom-footer a.align-supporter-link-right {
   padding-top: 0.9375em;
   float: right;
 }
-/* line 1309, ../sass/overrides.scss */
+/* line 1305, ../sass/overrides.scss */
 .custom-footer hr {
   margin: 2.1875em 0px 1.5em 0px;
 }
-/* line 1312, ../sass/overrides.scss */
+/* line 1308, ../sass/overrides.scss */
 .custom-footer .language-box {
   padding-bottom: 5px;
   margin-bottom: 28px;
   background: white;
 }
-/* line 1316, ../sass/overrides.scss */
+/* line 1312, ../sass/overrides.scss */
 .custom-footer .language-box .table {
   margin-bottom: 5px;
   -webkit-border-radius: 0px;
@@ -9651,48 +9642,48 @@ div.nav-google-search .gsc-input {
   border: 0px;
   background: white;
 }
-/* line 1321, ../sass/overrides.scss */
+/* line 1317, ../sass/overrides.scss */
 .custom-footer .language-box .table tbody {
   border: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1324, ../sass/overrides.scss */
+/* line 1320, ../sass/overrides.scss */
 .custom-footer .language-box .table tbody:first-child {
   border: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1327, ../sass/overrides.scss */
+/* line 1323, ../sass/overrides.scss */
 .custom-footer .language-box .table tbody:first-child tr {
   border: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1330, ../sass/overrides.scss */
+/* line 1326, ../sass/overrides.scss */
 .custom-footer .language-box .table tbody:first-child tr:first-child {
   border: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1333, ../sass/overrides.scss */
+/* line 1329, ../sass/overrides.scss */
 .custom-footer .language-box .table tbody:first-child tr:first-child td {
   border: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-/* line 1336, ../sass/overrides.scss */
+/* line 1332, ../sass/overrides.scss */
 .custom-footer .language-box .table tbody:first-child tr:first-child td img {
   padding-left: 1.875em;
   padding-right: 0.3125em;
   padding-top: 7px;
 }
-/* line 1345, ../sass/overrides.scss */
+/* line 1341, ../sass/overrides.scss */
 .custom-footer .language-box .table tbody td {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -9701,7 +9692,7 @@ div.nav-google-search .gsc-input {
   border: 0px;
   padding: 0px;
 }
-/* line 1353, ../sass/overrides.scss */
+/* line 1349, ../sass/overrides.scss */
 .custom-footer .language-box ul {
   margin: 0;
   padding: 0;
@@ -9735,7 +9726,7 @@ div.nav-google-search .gsc-input {
   *display: inline;
   white-space: nowrap;
 }
-/* line 1362, ../sass/overrides.scss */
+/* line 1358, ../sass/overrides.scss */
 .custom-footer .info-links-box ul {
   margin: 0;
   padding: 0;
@@ -9770,14 +9761,14 @@ div.nav-google-search .gsc-input {
   white-space: nowrap;
 }
 
-/* line 1372, ../sass/overrides.scss */
+/* line 1368, ../sass/overrides.scss */
 .icon-search {
   position: relative;
   left: 13em;
   top: -1.8125em;
 }
 
-/* line 1378, ../sass/overrides.scss */
+/* line 1374, ../sass/overrides.scss */
 .well {
   /* @include square-corners */
   -webkit-border-radius: 5px;
@@ -9788,26 +9779,26 @@ div.nav-google-search .gsc-input {
   border-bottom: 2px solid #cccccc;
 }
 
-/* line 1387, ../sass/overrides.scss */
+/* line 1383, ../sass/overrides.scss */
 .white-background, .well {
   background-color: white;
 }
-/* line 1389, ../sass/overrides.scss */
+/* line 1385, ../sass/overrides.scss */
 .white-background a:not(.btn), .well a:not(.btn) {
   color: #049e90;
 }
-/* line 1392, ../sass/overrides.scss */
+/* line 1388, ../sass/overrides.scss */
 .white-background .tags li a, .well .tags li a {
   color: #515665;
 }
 
-/* line 1397, ../sass/overrides.scss */
+/* line 1393, ../sass/overrides.scss */
 .school-logo {
   display: block;
   margin: auto;
 }
 
-/* line 1402, ../sass/overrides.scss */
+/* line 1398, ../sass/overrides.scss */
 .well-large {
   padding: 0px;
   -webkit-border-radius: 0px;
@@ -9821,7 +9812,7 @@ div.nav-google-search .gsc-input {
   margin-top: 10px;
   text-align: center;
 }
-/* line 1414, ../sass/overrides.scss */
+/* line 1410, ../sass/overrides.scss */
 .well-large ul {
   display: -moz-inline-stack;
   display: inline-block;
@@ -9862,15 +9853,15 @@ div.nav-google-search .gsc-input {
   *display: inline;
   white-space: nowrap;
 }
-/* line 1422, ../sass/overrides.scss */
+/* line 1418, ../sass/overrides.scss */
 .well-large ul li {
   float: none;
 }
-/* line 1424, ../sass/overrides.scss */
+/* line 1420, ../sass/overrides.scss */
 .well-large ul li.wrap {
   white-space: normal;
 }
-/* line 1429, ../sass/overrides.scss */
+/* line 1425, ../sass/overrides.scss */
 .well-large h2 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -9882,7 +9873,7 @@ div.nav-google-search .gsc-input {
   line-height: 1em;
   padding-left: 0.625em;
 }
-/* line 1435, ../sass/overrides.scss */
+/* line 1431, ../sass/overrides.scss */
 .well-large dl {
   display: -moz-inline-stack;
   display: inline-block;
@@ -9897,7 +9888,7 @@ div.nav-google-search .gsc-input {
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 1444, ../sass/overrides.scss */
+/* line 1440, ../sass/overrides.scss */
 .well-large dl dt .label {
   color: white;
   font-size: 0.75em;
@@ -9908,11 +9899,11 @@ div.nav-google-search .gsc-input {
   background: #aab0bf;
   padding: 0px;
 }
-/* line 1454, ../sass/overrides.scss */
+/* line 1450, ../sass/overrides.scss */
 .well-large dl dd {
   margin-left: 0px;
 }
-/* line 1456, ../sass/overrides.scss */
+/* line 1452, ../sass/overrides.scss */
 .well-large dl dd .badge {
   color: white;
   font-size: 0.75em;
@@ -9924,7 +9915,7 @@ div.nav-google-search .gsc-input {
   padding: 0px;
 }
 
-/* line 1472, ../sass/overrides.scss */
+/* line 1468, ../sass/overrides.scss */
 .btn-large {
   padding: 0px;
   font-family: "arvo", helvetica, sans-serif;
@@ -9942,26 +9933,26 @@ div.nav-google-search .gsc-input {
   vertical-align: middle;
 }
 
-/* line 1491, ../sass/overrides.scss */
+/* line 1487, ../sass/overrides.scss */
 .btn-fit {
   padding-left: 0.3125em;
   padding-right: 0.3125em;
 }
 @media (min-width: 1200px) {
-  /* line 1491, ../sass/overrides.scss */
+  /* line 1487, ../sass/overrides.scss */
   .btn-fit {
     padding-left: 1.25em;
     padding-right: 1.25em;
   }
 }
 
-/* line 1500, ../sass/overrides.scss */
+/* line 1496, ../sass/overrides.scss */
 .btn-short {
   padding-top: 10px;
   padding-bottom: 5px;
 }
 
-/* line 1518, ../sass/overrides.scss */
+/* line 1514, ../sass/overrides.scss */
 .btn-apricot,
 .btn-apricot:hover,
 .btn-cyan,
@@ -9978,7 +9969,7 @@ div.nav-google-search .gsc-input {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 1529, ../sass/overrides.scss */
+/* line 1525, ../sass/overrides.scss */
 .btn-apricot.active,
 .btn-cyan.active,
 .btn-olive.active,
@@ -9988,39 +9979,7 @@ div.nav-google-search .gsc-input {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* line 1535, ../sass/overrides.scss */
-.btn, button {
-  color: white;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #e6e8f0;
-  background-image: -moz-linear-gradient(top, #f3f4f8, #d3d6e5);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f3f4f8), to(#d3d6e5));
-  background-image: -webkit-linear-gradient(top, #f3f4f8, #d3d6e5);
-  background-image: -o-linear-gradient(top, #f3f4f8, #d3d6e5);
-  background-image: linear-gradient(to bottom, #f3f4f8, #d3d6e5);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF3F4F8', endColorstr='#FFD3D6E5', GradientType=0);
-  border-color: #d3d6e5 #d3d6e5 #a2aac9;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #d3d6e5;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-  color: #515665;
-  border: 0px;
-  border-bottom: 2px solid #515665;
-}
-/* line 496, ../sass/p2pu-css-framework/lib/_mixins.scss */
-.btn:hover, button:hover, .btn:active, button:active, .btn.active, button.active, .btn.disabled, button.disabled, .btn[disabled], button[disabled] {
-  color: white;
-  background-color: #d3d6e5;
-  *background-color: #c3c8dc;
-}
-/* line 504, ../sass/p2pu-css-framework/lib/_mixins.scss */
-.btn:active, button:active, .btn.active, button.active {
-  background-color: #b3b9d2 \9;
-}
-
-/* line 1542, ../sass/overrides.scss */
+/* line 1534, ../sass/overrides.scss */
 .btn-apricot {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -10051,7 +10010,7 @@ div.nav-google-search .gsc-input {
   background-color: #994500 \9;
 }
 
-/* line 1548, ../sass/overrides.scss */
+/* line 1540, ../sass/overrides.scss */
 .btn-olive {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -10082,7 +10041,7 @@ div.nav-google-search .gsc-input {
   background-color: #5f6f00 \9;
 }
 
-/* line 1554, ../sass/overrides.scss */
+/* line 1546, ../sass/overrides.scss */
 .btn-cyan {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -10113,7 +10072,7 @@ div.nav-google-search .gsc-input {
   background-color: #02635a \9;
 }
 
-/* line 1560, ../sass/overrides.scss */
+/* line 1552, ../sass/overrides.scss */
 .btn-slate {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -10144,7 +10103,7 @@ div.nav-google-search .gsc-input {
   background-color: #24262c \9;
 }
 
-/* line 1566, ../sass/overrides.scss */
+/* line 1558, ../sass/overrides.scss */
 .btn-blood-orange {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -10175,7 +10134,7 @@ div.nav-google-search .gsc-input {
   background-color: #9c4700 \9;
 }
 
-/* line 1572, ../sass/overrides.scss */
+/* line 1564, ../sass/overrides.scss */
 .btn-clemintine {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -10206,7 +10165,7 @@ div.nav-google-search .gsc-input {
   background-color: #b37f00 \9;
 }
 
-/* line 1578, ../sass/overrides.scss */
+/* line 1570, ../sass/overrides.scss */
 .breadcrumb {
   background: #f3f4f8;
   border: 0px;
@@ -10215,33 +10174,28 @@ div.nav-google-search .gsc-input {
   font-size: 0.875em;
   line-height: 1.57143em;
 }
-/* line 1585, ../sass/overrides.scss */
+/* line 1577, ../sass/overrides.scss */
 .breadcrumb .btn:last-child, .breadcrumb button:last-child {
   margin-right: 3px;
 }
 @media (min-width: 1200px) {
-  /* line 1585, ../sass/overrides.scss */
+  /* line 1577, ../sass/overrides.scss */
   .breadcrumb .btn:last-child, .breadcrumb button:last-child {
     margin-right: 3.4375em;
   }
 }
 
-/* line 1594, ../sass/overrides.scss */
+/* line 1586, ../sass/overrides.scss */
 .btn-group .btn, .btn-group button {
   font-family: "sense-light", helvetica, sans-serif;
 }
 
-/* line 1598, ../sass/overrides.scss */
+/* line 1590, ../sass/overrides.scss */
 #splash .breadcrumb {
   display: none;
 }
 
-/* line 1602, ../sass/overrides.scss */
-.btn, button {
-  border-style: none;
-}
-
-/* line 1610, ../sass/overrides.scss */
+/* line 1606, ../sass/overrides.scss */
 .modal {
   width: 35em;
   padding-top: 15px;
@@ -10255,29 +10209,29 @@ div.nav-google-search .gsc-input {
   display: block;
   position: relative;
 }
-/* line 1622, ../sass/overrides.scss */
+/* line 1618, ../sass/overrides.scss */
 .modal h1 {
   padding-bottom: 10px;
 }
 
-/* line 1627, ../sass/overrides.scss */
+/* line 1623, ../sass/overrides.scss */
 .container, .navbar .navbar-inner .container, .navbar-title .navbar-inner .container {
   margin: 0 auto;
 }
-/* line 1629, ../sass/overrides.scss */
+/* line 1625, ../sass/overrides.scss */
 .container.breadcrumb-box, .navbar .navbar-inner .breadcrumb-box.container, .navbar-title .navbar-inner .breadcrumb-box.container {
   margin-bottom: 0em;
 }
-/* line 1632, ../sass/overrides.scss */
+/* line 1628, ../sass/overrides.scss */
 .container.body, .navbar .navbar-inner .body.container, .navbar-title .navbar-inner .body.container {
   margin-top: 1.4375em;
 }
-/* line 1635, ../sass/overrides.scss */
+/* line 1631, ../sass/overrides.scss */
 .container.footer-schools, .navbar .navbar-inner .footer-schools.container, .navbar-title .navbar-inner .footer-schools.container {
   background: white;
   height: 100%;
 }
-/* line 1638, ../sass/overrides.scss */
+/* line 1634, ../sass/overrides.scss */
 .container.footer-schools h5, .navbar .navbar-inner .footer-schools.container h5, .navbar-title .navbar-inner .footer-schools.container h5 {
   color: #cccccc;
   width: 100%;
@@ -10286,7 +10240,7 @@ div.nav-google-search .gsc-input {
   font-weight: normal;
   margin: 15px 0 15px 0;
 }
-/* line 1646, ../sass/overrides.scss */
+/* line 1642, ../sass/overrides.scss */
 .container.footer-schools .school-small-icon, .navbar-title .navbar-inner .footer-schools.container .school-small-icon {
   width: 220px;
   display: -moz-inline-stack;
@@ -10298,27 +10252,27 @@ div.nav-google-search .gsc-input {
   text-align: center;
   margin-bottom: 10px;
 }
-/* line 1651, ../sass/overrides.scss */
+/* line 1647, ../sass/overrides.scss */
 .container.footer-schools .school-small-icon a, .navbar-title .navbar-inner .footer-schools.container .school-small-icon a {
   color: #555555;
 }
-/* line 1653, ../sass/overrides.scss */
+/* line 1649, ../sass/overrides.scss */
 .container.footer-schools .school-small-icon a:hover {
   color: #2184ca;
   text-decoration: underline;
 }
-/* line 1658, ../sass/overrides.scss */
+/* line 1654, ../sass/overrides.scss */
 .container.footer-schools .school-small-icon img, .navbar-title .navbar-inner .footer-schools.container .school-small-icon img {
   display: block;
   margin: auto;
   margin-bottom: 10px;
 }
-/* line 1663, ../sass/overrides.scss */
+/* line 1659, ../sass/overrides.scss */
 .container.footer-schools .school-small-icon p, .navbar-title .navbar-inner .footer-schools.container .school-small-icon p {
   font-size: 18px;
   height: 3em;
 }
-/* line 1669, ../sass/overrides.scss */
+/* line 1665, ../sass/overrides.scss */
 .container:before, .navbar .navbar-inner .container:before, .navbar-title .navbar-inner .container:before {
   display: table;
   content: "";
@@ -10328,7 +10282,7 @@ div.nav-google-search .gsc-input {
   right: 100%;
   overflow-x: hidden;
 }
-/* line 1678, ../sass/overrides.scss */
+/* line 1674, ../sass/overrides.scss */
 .container:after, .navbar .navbar-inner .container:after, .navbar-title .navbar-inner .container:after {
   display: table;
   content: "";
@@ -10339,18 +10293,18 @@ div.nav-google-search .gsc-input {
   overflow-x: hidden;
 }
 
-/* line 1689, ../sass/overrides.scss */
+/* line 1685, ../sass/overrides.scss */
 .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
 }
 
-/* line 1694, ../sass/overrides.scss */
+/* line 1690, ../sass/overrides.scss */
 .add-standard-left-padding {
   padding-left: 10px;
 }
 
-/* line 1698, ../sass/overrides.scss */
+/* line 1694, ../sass/overrides.scss */
 .row-fluid.center-content [class*="span"]:first-child {
   display: block;
   margin-left: auto;
@@ -10358,24 +10312,24 @@ div.nav-google-search .gsc-input {
 }
 
 @media (min-width: 1200px) {
-  /* line 1703, ../sass/overrides.scss */
+  /* line 1699, ../sass/overrides.scss */
   .row-fluid.center-content [class*="span"]:first-child {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
 }
-/* line 1708, ../sass/overrides.scss */
+/* line 1704, ../sass/overrides.scss */
 [class*="span"] .inherit-height {
   height: inherit;
 }
 
-/* line 1712, ../sass/overrides.scss */
+/* line 1708, ../sass/overrides.scss */
 [class*="span"] .remove-left-margin {
   margin-left: -25px;
 }
 
-/* line 1716, ../sass/overrides.scss */
+/* line 1712, ../sass/overrides.scss */
 .vertical-center {
   display: -moz-inline-stack;
   display: inline-block;
@@ -10385,7 +10339,7 @@ div.nav-google-search .gsc-input {
   *display: inline;
   height: inherit;
 }
-/* line 1719, ../sass/overrides.scss */
+/* line 1715, ../sass/overrides.scss */
 .vertical-center:before {
   content: "";
   display: -moz-inline-stack;
@@ -10397,7 +10351,7 @@ div.nav-google-search .gsc-input {
   height: 100%;
   vertical-align: middle;
 }
-/* line 1725, ../sass/overrides.scss */
+/* line 1721, ../sass/overrides.scss */
 .vertical-center:after {
   content: "";
   display: -moz-inline-stack;
@@ -10410,7 +10364,7 @@ div.nav-google-search .gsc-input {
   vertical-align: middle;
 }
 
-/* line 1733, ../sass/overrides.scss */
+/* line 1729, ../sass/overrides.scss */
 .wrap {
   display: -moz-inline-stack;
   display: inline-block;
@@ -10422,7 +10376,7 @@ div.nav-google-search .gsc-input {
   vertical-align: middle;
   width: 95%;
 }
-/* line 1738, ../sass/overrides.scss */
+/* line 1734, ../sass/overrides.scss */
 .wrap a {
   color: #515665;
 }
@@ -10443,7 +10397,7 @@ div.nav-google-search .gsc-input {
   color: #ffbc1a;
 }
 
-/* line 1748, ../sass/overrides.scss */
+/* line 1744, ../sass/overrides.scss */
 .progress-clemintine .bar {
   background-color: #ffbc1a;
   background-image: -moz-linear-gradient(top, #ffbc1a, #ffbc1a);
@@ -10455,7 +10409,7 @@ div.nav-google-search .gsc-input {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFBC1A', endColorstr='#FFFFBC1A', GradientType=0);
 }
 
-/* line 1752, ../sass/overrides.scss */
+/* line 1748, ../sass/overrides.scss */
 .progress-clemintine.progress-striped .bar {
   background-color: #ffd266;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
@@ -10465,71 +10419,71 @@ div.nav-google-search .gsc-input {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-/* line 1762, ../sass/overrides.scss */
+/* line 1758, ../sass/overrides.scss */
 .label-clemintine, .badge-clemintine {
   background-color: #ffbc1a;
 }
 
-/* line 1766, ../sass/overrides.scss */
+/* line 1762, ../sass/overrides.scss */
 .label-clemintine[href], .badge-clemintine[href] {
   background-color: #ffb606;
 }
 
-/* line 1770, ../sass/overrides.scss */
+/* line 1766, ../sass/overrides.scss */
 .row-fluid.odd {
   background: #f3f4f8;
 }
 
-/* line 1775, ../sass/overrides.scss */
+/* line 1771, ../sass/overrides.scss */
 #tasks-tab ul .nav .nav-list {
   background: #fcfcfc;
 }
 
-/* line 1780, ../sass/overrides.scss */
+/* line 1776, ../sass/overrides.scss */
 .tab-content {
   background: #fcfcfc;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 1785, ../sass/overrides.scss */
+/* line 1781, ../sass/overrides.scss */
 .tab-content ul.nav-list {
   padding-left: 0px;
   padding-right: 0px;
 }
 
-/* line 1791, ../sass/overrides.scss */
+/* line 1787, ../sass/overrides.scss */
 .nav-tabs {
   margin-bottom: 0px;
 }
 
-/* line 1795, ../sass/overrides.scss */
+/* line 1791, ../sass/overrides.scss */
 .add-top-bottom-margins {
   margin-top: 2.5em;
   margin-bottom: 1.875em;
 }
 
-/* line 1800, ../sass/overrides.scss */
+/* line 1796, ../sass/overrides.scss */
 .add-top-margin-20 {
   margin-top: 1.5625em;
 }
 
-/* line 1804, ../sass/overrides.scss */
+/* line 1800, ../sass/overrides.scss */
 .add-top-margin-15 {
   margin-top: 0.9375em;
 }
 
-/* line 1808, ../sass/overrides.scss */
+/* line 1804, ../sass/overrides.scss */
 .add-top-margin-10 {
   margin-top: 0.625em;
 }
 
-/* line 1812, ../sass/overrides.scss */
+/* line 1808, ../sass/overrides.scss */
 a.show-on-hover {
   visibility: hidden;
   text-align: center;
 }
-/* line 1815, ../sass/overrides.scss */
+/* line 1811, ../sass/overrides.scss */
 a.show-on-hover a:hover {
   visibility: visible;
 }
@@ -10547,29 +10501,29 @@ a.show-on-hover a:hover {
 /*   width: 161px */
 /*   padding: 0 17px */
 /*   float: right */
-/* line 1835, ../sass/overrides.scss */
+/* line 1831, ../sass/overrides.scss */
 #cse-search-form .gsc-search-button, #cse-search-form .gsc-clear-button {
   display: none;
 }
 
-/* line 1839, ../sass/overrides.scss */
+/* line 1835, ../sass/overrides.scss */
 #cse .gsc-search-box {
   display: none;
 }
 
-/* line 1843, ../sass/overrides.scss */
+/* line 1839, ../sass/overrides.scss */
 .gsc-control-cse {
   border-radius: 10px;
   border: solid 1px #eeeeee;
   width: 960px;
 }
 
-/* line 1849, ../sass/overrides.scss */
+/* line 1845, ../sass/overrides.scss */
 .center-via-text-align {
   text-align: center;
 }
 
-/* line 1853, ../sass/overrides.scss */
+/* line 1849, ../sass/overrides.scss */
 .make-inline-block {
   display: -moz-inline-stack;
   display: inline-block;
@@ -10579,13 +10533,13 @@ a.show-on-hover a:hover {
   *display: inline;
 }
 
-/* line 1857, ../sass/overrides.scss */
+/* line 1853, ../sass/overrides.scss */
 .center-via-auto-margins {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 1863, ../sass/overrides.scss */
+/* line 1859, ../sass/overrides.scss */
 #school_home .thumbnail-large,
 .thumbnail-large {
   width: 26em;
@@ -10597,7 +10551,7 @@ a.show-on-hover a:hover {
   margin-top: 0.625em;
   margin-bottom: 2.5em;
 }
-/* line 1864, ../sass/overrides.scss */
+/* line 1860, ../sass/overrides.scss */
 #school_home .thumbnail-large h1,
 .thumbnail-large h1 {
   font-size: 1.25em;
@@ -10608,7 +10562,7 @@ a.show-on-hover a:hover {
   text-align: center;
   text-shadow: 0 1px 1px #2d5f74;
 }
-/* line 1871, ../sass/overrides.scss */
+/* line 1867, ../sass/overrides.scss */
 #school_home .thumbnail-large h1 a,
 .thumbnail-large h1 a {
   color: white;
@@ -10633,17 +10587,17 @@ a.show-on-hover a:hover {
 .thumbnail-large h1 a:active {
   color: #ffbc1a;
 }
-/* line 1873, ../sass/overrides.scss */
+/* line 1869, ../sass/overrides.scss */
 #school_home .thumbnail-large h1 a:hover,
 .thumbnail-large h1 a:hover {
   text-decoration: none;
 }
-/* line 1884, ../sass/overrides.scss */
+/* line 1880, ../sass/overrides.scss */
 #school_home .thumbnail-large .caption,
 .thumbnail-large .caption {
   padding: 0px 0.5em;
 }
-/* line 1886, ../sass/overrides.scss */
+/* line 1882, ../sass/overrides.scss */
 #school_home .thumbnail-large .caption p,
 .thumbnail-large .caption p {
   font-family: "sense", helvetica, sans-serif;
@@ -10654,7 +10608,7 @@ a.show-on-hover a:hover {
   margin-bottom: 1em;
   height: 3em;
 }
-/* line 1895, ../sass/overrides.scss */
+/* line 1891, ../sass/overrides.scss */
 #school_home .thumbnail-large img,
 .thumbnail-large img {
   padding-top: 0.5em;
@@ -10663,7 +10617,7 @@ a.show-on-hover a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 1902, ../sass/overrides.scss */
+/* line 1898, ../sass/overrides.scss */
 #school_home .thumbnail-large .well,
 .thumbnail-large .well {
   padding: 0px;
@@ -10677,7 +10631,7 @@ a.show-on-hover a:hover {
   margin-top: -15px;
   margin-bottom: -15px;
 }
-/* line 1912, ../sass/overrides.scss */
+/* line 1908, ../sass/overrides.scss */
 #school_home .thumbnail-large .well:before,
 .thumbnail-large .well:before {
   content: "";
@@ -10690,7 +10644,7 @@ a.show-on-hover a:hover {
   height: 100%;
   vertical-align: middle;
 }
-/* line 1918, ../sass/overrides.scss */
+/* line 1914, ../sass/overrides.scss */
 #school_home .thumbnail-large .well:after,
 .thumbnail-large .well:after {
   content: "";
@@ -10703,13 +10657,13 @@ a.show-on-hover a:hover {
   height: 100%;
   vertical-align: middle;
 }
-/* line 1925, ../sass/overrides.scss */
+/* line 1921, ../sass/overrides.scss */
 #school_home .thumbnail-large .well-large,
 .thumbnail-large .well-large {
   height: 3.5625em;
   text-align: center;
 }
-/* line 1928, ../sass/overrides.scss */
+/* line 1924, ../sass/overrides.scss */
 #school_home .thumbnail-large .well-large dl,
 .thumbnail-large .well-large dl {
   display: -moz-inline-stack;
@@ -10725,12 +10679,12 @@ a.show-on-hover a:hover {
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 1936, ../sass/overrides.scss */
+/* line 1932, ../sass/overrides.scss */
 #school_home .thumbnail-large .well-large dl dd,
 .thumbnail-large .well-large dl dd {
   margin-bottom: -5px;
 }
-/* line 1938, ../sass/overrides.scss */
+/* line 1934, ../sass/overrides.scss */
 #school_home .thumbnail-large .well-large dl dd .label,
 .thumbnail-large .well-large dl dd .label {
   color: white;
@@ -10742,13 +10696,13 @@ a.show-on-hover a:hover {
   background: #aab0bf;
   padding: 0px;
 }
-/* line 1948, ../sass/overrides.scss */
+/* line 1944, ../sass/overrides.scss */
 #school_home .thumbnail-large .well-large dl dt,
 .thumbnail-large .well-large dl dt {
   margin-left: 0px;
   margin-bottom: -10px;
 }
-/* line 1951, ../sass/overrides.scss */
+/* line 1947, ../sass/overrides.scss */
 #school_home .thumbnail-large .well-large dl dt .badge,
 .thumbnail-large .well-large dl dt .badge {
   color: white;
@@ -10761,7 +10715,7 @@ a.show-on-hover a:hover {
   padding: 0px;
 }
 
-/* line 1965, ../sass/overrides.scss */
+/* line 1961, ../sass/overrides.scss */
 .thumbnail#small {
   width: 13.75em;
   background: #fcfcfc;
@@ -10770,11 +10724,11 @@ a.show-on-hover a:hover {
   border-radius: 0px;
   padding: 0px;
 }
-/* line 1970, ../sass/overrides.scss */
+/* line 1966, ../sass/overrides.scss */
 .thumbnail#small .caption {
   padding: 0.5625em;
 }
-/* line 1972, ../sass/overrides.scss */
+/* line 1968, ../sass/overrides.scss */
 .thumbnail#small .caption a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -10783,7 +10737,7 @@ a.show-on-hover a:hover {
   zoom: 1;
   *display: inline;
 }
-/* line 1975, ../sass/overrides.scss */
+/* line 1971, ../sass/overrides.scss */
 .thumbnail#small .caption h3 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -10803,7 +10757,7 @@ a.show-on-hover a:hover {
   text-overflow-y: hidden;
   overflow-y: hidden;
 }
-/* line 1987, ../sass/overrides.scss */
+/* line 1983, ../sass/overrides.scss */
 .thumbnail#small .caption h3 a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -10813,7 +10767,7 @@ a.show-on-hover a:hover {
   *display: inline;
   height: auto;
 }
-/* line 1990, ../sass/overrides.scss */
+/* line 1986, ../sass/overrides.scss */
 .thumbnail#small .caption h3 a span {
   display: -moz-inline-stack;
   display: inline-block;
@@ -10823,7 +10777,7 @@ a.show-on-hover a:hover {
   *display: inline;
   height: auto;
 }
-/* line 1997, ../sass/overrides.scss */
+/* line 1993, ../sass/overrides.scss */
 .thumbnail#small img {
   padding-top: 0px;
   display: -moz-inline-stack;
@@ -10833,12 +10787,12 @@ a.show-on-hover a:hover {
   zoom: 1;
   *display: inline;
 }
-/* line 2001, ../sass/overrides.scss */
+/* line 1997, ../sass/overrides.scss */
 .thumbnail#small .well-large {
   height: 3.5625em;
   text-align: center;
 }
-/* line 2004, ../sass/overrides.scss */
+/* line 2000, ../sass/overrides.scss */
 .thumbnail#small .well-large dl {
   display: -moz-inline-stack;
   display: inline-block;
@@ -10853,7 +10807,7 @@ a.show-on-hover a:hover {
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 2013, ../sass/overrides.scss */
+/* line 2009, ../sass/overrides.scss */
 .thumbnail#small .well-large dl dt .label {
   color: white;
   font-size: 0.75em;
@@ -10864,11 +10818,11 @@ a.show-on-hover a:hover {
   background: #aab0bf;
   padding: 0px;
 }
-/* line 2023, ../sass/overrides.scss */
+/* line 2019, ../sass/overrides.scss */
 .thumbnail#small .well-large dl dd {
   margin-left: 0px;
 }
-/* line 2025, ../sass/overrides.scss */
+/* line 2021, ../sass/overrides.scss */
 .thumbnail#small .well-large dl dd .badge {
   color: white;
   font-size: 0.75em;
@@ -10880,33 +10834,33 @@ a.show-on-hover a:hover {
   padding: 0px;
 }
 
-/* line 2039, ../sass/overrides.scss */
+/* line 2035, ../sass/overrides.scss */
 .alert p {
   margin-top: 0px;
 }
 
-/* line 2043, ../sass/overrides.scss */
+/* line 2039, ../sass/overrides.scss */
 .tab-content {
   padding-bottom: 15px;
 }
 
-/* line 2047, ../sass/overrides.scss */
+/* line 2043, ../sass/overrides.scss */
 .connect-links a img {
   margin-left: 7px;
 }
 
-/* line 2052, ../sass/overrides.scss */
+/* line 2048, ../sass/overrides.scss */
 .richtext_section ul {
   padding-top: 10px;
 }
 
-/* line 2060, ../sass/overrides.scss */
+/* line 2056, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-wrapper {
   position: relative;
   margin: -30px 0 20px 0px;
 }
 
-/* line 2065, ../sass/overrides.scss */
+/* line 2061, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-front {
   background-color: #8fbbca;
   background: -moz-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
@@ -10924,7 +10878,7 @@ a.show-on-hover a:hover {
   padding-top: 20px;
 }
 
-/* line 2084, ../sass/overrides.scss */
+/* line 2080, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-front,
 #challenge-sets .card .ribbon-back-left,
 #challenge-sets .card .ribbon-back-right {
@@ -10934,7 +10888,7 @@ a.show-on-hover a:hover {
   -o-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
 }
 
-/* line 2094, ../sass/overrides.scss */
+/* line 2090, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-edge-topleft,
 #challenge-sets .card .ribbon-edge-topright,
 #challenge-sets .card .ribbon-edge-bottomleft,
@@ -10946,49 +10900,49 @@ a.show-on-hover a:hover {
   width: 0px;
 }
 
-/* line 2103, ../sass/overrides.scss */
+/* line 2099, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-edge-bottomleft,
 #challenge-sets .card .ribbon-edge-bottomright {
   top: 40px;
 }
 
-/* line 2108, ../sass/overrides.scss */
+/* line 2104, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-edge-topleft,
 #challenge-sets .card .ribbon-edge-bottomleft {
   left: -20px;
   border-color: transparent #2d5f74 transparent transparent;
 }
 
-/* line 2113, ../sass/overrides.scss */
+/* line 2109, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-edge-topleft {
   top: -10px;
   border-width: 10px 20px 0 0;
 }
 
-/* line 2118, ../sass/overrides.scss */
+/* line 2114, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-edge-bottomleft {
   border-width: 0 20px 0px 0;
 }
 
-/* line 2123, ../sass/overrides.scss */
+/* line 2119, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-edge-topright,
 #challenge-sets .card .ribbon-edge-bottomright {
   left: 416px;
   border-color: transparent transparent transparent #2d5f74;
 }
 
-/* line 2128, ../sass/overrides.scss */
+/* line 2124, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-edge-topright {
   top: -10px;
   border-width: 10px 0 0 20px;
 }
 
-/* line 2133, ../sass/overrides.scss */
+/* line 2129, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-edge-bottomright {
   border-width: 0 0 0px 20px;
 }
 
-/* line 2137, ../sass/overrides.scss */
+/* line 2133, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-back-left {
   position: absolute;
   top: -10px;
@@ -10998,7 +10952,7 @@ a.show-on-hover a:hover {
   z-index: 0;
 }
 
-/* line 2146, ../sass/overrides.scss */
+/* line 2142, ../sass/overrides.scss */
 #challenge-sets .card .ribbon-back-right {
   position: absolute;
   top: -10px;
@@ -11008,15 +10962,20 @@ a.show-on-hover a:hover {
   z-index: 0;
 }
 
-/* line 2157, ../sass/overrides.scss */
+/* line 2153, ../sass/overrides.scss */
 #posts .post-container {
   margin-left: 0px;
 }
 
-/* line 2161, ../sass/overrides.scss */
+/* line 2157, ../sass/overrides.scss */
 #create-post .post-container {
   /* min-height: 46px */
   margin-top: 15px;
+}
+
+/* line 2162, ../sass/overrides.scss */
+.post-container a {
+  color: #049e90;
 }
 
 /* line 2166, ../sass/overrides.scss */
@@ -11091,6 +11050,12 @@ a.show-on-hover a:hover {
 
 /* batucada activity feed styles */
 /* line 2227, ../sass/overrides.scss */
+.activity-body {
+  font-family: "sense-light", helvetica, sans-serif;
+  margin-top: 7px;
+}
+
+/* line 2232, ../sass/overrides.scss */
 .supplemental_actions .action {
   display: block;
   float: right;
@@ -11103,7 +11068,7 @@ a.show-on-hover a:hover {
   line-height: 16px;
 }
 
-/* line 2239, ../sass/overrides.scss */
+/* line 2244, ../sass/overrides.scss */
 .supplemental_actions {
   margin: 5px 0;
   font-size: 11px;
@@ -11114,13 +11079,13 @@ a.show-on-hover a:hover {
 /*   display: inline */
 /*   margin: 0 5px 0 0px */
 /*   float: none */
-/* line 2250, ../sass/overrides.scss */
+/* line 2255, ../sass/overrides.scss */
 .supplemental_actions .report {
   background: url("/static/images/report.icon.png") 0 1px no-repeat;
   padding-left: 15px;
 }
 
-/* line 2255, ../sass/overrides.scss */
+/* line 2260, ../sass/overrides.scss */
 .message-container {
   border: 1px solid #cccccc;
   -webkit-border-radius: 3px;
@@ -11130,51 +11095,51 @@ a.show-on-hover a:hover {
   margin-bottom: 20px;
 }
 
-/* line 2263, ../sass/overrides.scss */
+/* line 2268, ../sass/overrides.scss */
 .form-full-width input, .form-full-width textarea {
   width: 100%;
 }
 
-/* line 2268, ../sass/overrides.scss */
+/* line 2273, ../sass/overrides.scss */
 #member_links ul {
   list-style: none;
   margin-left: 0px;
 }
 
-/* line 2273, ../sass/overrides.scss */
+/* line 2278, ../sass/overrides.scss */
 .no-list-style {
   list-style: none;
   margin-left: 0px;
 }
 
-/* line 2278, ../sass/overrides.scss */
+/* line 2283, ../sass/overrides.scss */
 .member-location {
   margin-bottom: 0px;
 }
 
-/* line 2283, ../sass/overrides.scss */
+/* line 2288, ../sass/overrides.scss */
 .profile-wrapper ul {
   list-style: none;
 }
-/* line 2286, ../sass/overrides.scss */
+/* line 2291, ../sass/overrides.scss */
 .profile-wrapper li {
   display: inline-block;
 }
 
-/* line 2291, ../sass/overrides.scss */
+/* line 2296, ../sass/overrides.scss */
 .profile-courses img {
   margin: 5px;
   /* border: 1px solid $slate */
 }
 
-/* line 2296, ../sass/overrides.scss */
+/* line 2301, ../sass/overrides.scss */
 .tags li {
   display: inline-block;
   float: none;
   margin: 10px 0px 0px 0px;
 }
 
-/* line 2302, ../sass/overrides.scss */
+/* line 2307, ../sass/overrides.scss */
 .tags li a {
   display: block;
   background: #eeeeee;
@@ -11200,18 +11165,18 @@ a.show-on-hover a:hover {
   behavior: url("/static/css/PIE.htc");
 }
 
-/* line 2327, ../sass/overrides.scss */
+/* line 2332, ../sass/overrides.scss */
 .challenge-set-preview {
   display: none;
 }
 
-/* line 2331, ../sass/overrides.scss */
+/* line 2336, ../sass/overrides.scss */
 .challenge-set-modal-data {
   padding: 20px;
   width: 715px;
 }
 
-/* line 2336, ../sass/overrides.scss */
+/* line 2341, ../sass/overrides.scss */
 .challenge-set-modal-data h2 {
   font-size: 24px;
   font-weight: medium;
@@ -11219,38 +11184,38 @@ a.show-on-hover a:hover {
   color: #222222;
 }
 
-/* line 2343, ../sass/overrides.scss */
+/* line 2348, ../sass/overrides.scss */
 .challenge-set-modal-data p {
   font-size: 15px;
 }
 
-/* line 2347, ../sass/overrides.scss */
+/* line 2352, ../sass/overrides.scss */
 .challenge-set-modal-data {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* line 2353, ../sass/overrides.scss */
+/* line 2358, ../sass/overrides.scss */
 .challenge-set-modal-data ul li {
   display: inline-block;
   padding: 17px;
 }
 
-/* line 2358, ../sass/overrides.scss */
+/* line 2363, ../sass/overrides.scss */
 .challenge-set-modal-data a {
   font-size: 15px;
   font-style: italic;
   margin-top: 10px;
 }
 
-/* line 2364, ../sass/overrides.scss */
+/* line 2369, ../sass/overrides.scss */
 .challenge-set-modal-data ul {
   margin: 0;
   list-style: none;
 }
 
-/* line 2369, ../sass/overrides.scss */
+/* line 2374, ../sass/overrides.scss */
 .challenge-set-modal-data li {
   display: inline-block;
   padding-bottom: 2em;
@@ -11259,19 +11224,19 @@ a.show-on-hover a:hover {
   width: 150px;
 }
 
-/* line 2377, ../sass/overrides.scss */
+/* line 2382, ../sass/overrides.scss */
 .challenge-set-modal-data li {
   margin-right: 25px;
   margin-left: 25px;
 }
 
-/* line 2382, ../sass/overrides.scss */
+/* line 2387, ../sass/overrides.scss */
 .challenge-set-modal-data .project-name {
   display: block;
   padding: 5px;
 }
 
-/* line 2387, ../sass/overrides.scss */
+/* line 2392, ../sass/overrides.scss */
 .detailed-info {
   border: 1px solid #cccccc;
   -webkit-border-radius: 5px;
@@ -11285,39 +11250,44 @@ a.show-on-hover a:hover {
   float: left;
   width: 100%;
 }
-/* line 2399, ../sass/overrides.scss */
+/* line 2404, ../sass/overrides.scss */
 .detailed-info ul {
   list-style: none;
   float: left;
   margin: 6px 0 0 10px;
   font-size: 14px;
 }
-/* line 2405, ../sass/overrides.scss */
+/* line 2410, ../sass/overrides.scss */
 .detailed-info ul li {
   display: inline-block;
   margin: 0 80px 0 0;
   padding: 0;
 }
-/* line 2410, ../sass/overrides.scss */
+/* line 2415, ../sass/overrides.scss */
 .detailed-info ul li:last-child {
   margin: 0;
 }
-/* line 2413, ../sass/overrides.scss */
+/* line 2418, ../sass/overrides.scss */
 .detailed-info a {
   margin-left: 8px;
   margin-right: 8px;
 }
 
-/* line 2419, ../sass/overrides.scss */
+/* line 2424, ../sass/overrides.scss */
 #school_home .challenge-set-modal-data h2 {
   margin: 0px;
   padding-bottom: 0px;
 }
 
-/* line 2424, ../sass/overrides.scss */
+/* line 2429, ../sass/overrides.scss */
 .challenge-set-button {
   text-align: center;
   /* a */
   /*   display: block */
   /*   margin: auto */
+}
+
+/* line 2436, ../sass/overrides.scss */
+#main h1 {
+  margin-top: 0px;
 }

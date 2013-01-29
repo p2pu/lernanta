@@ -5,7 +5,7 @@
   {% if participating and tasks_count %}
     {% tasks_completed_msg project user hidde_tasks_complete_msg adopter_request %}
   {% endif %}
-    <div id="task_list_wall_toogle">
+  <div id="task_list_wall_toogle">
 		<input type="radio" id="radio1" name="radio" {% if toggled_tasks %}checked="checked"{% endif %} /><label for="radio1">{{ _('Tasks') }}</label>
 		<input type="radio" id="radio2" name="radio" {% if not toggled_tasks %}checked="checked"{% endif %} /><label for="radio2">{{ _('Discussions') }}</label>
 	</div>

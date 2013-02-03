@@ -396,10 +396,12 @@ def create_course_cohort(course_uri, organizer_uri):
 
 def get_course_cohort_uri(course_uri):
     course_db = _get_course_db(course_uri)
-    if course_db.cohort_set.count() != 1:
+    try:
+        cohort_db = db.Cohort.objects.get(course=course_db)
+    except:
         raise DataIntegrityException
-    return "/uri/cohort/{0}".format(course_db.cohort_set.all().values('id')[0]['id'])
- 
+    return "/uri/cohort/{0}".format(cohort_db.id)
+
 
 def get_course_cohort(course_uri):
     return get_cohort(get_course_cohort_uri(course_uri))

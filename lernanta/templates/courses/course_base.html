@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load l10n_tags %}
+{% load i18n %}
+{% load learn_tags %}
+{% load embed %}
+
+{% block title %}{{course.title}}{% endblock %}
+{% block bodyclasses %}course-landing{% endblock%}
+
+{% block css %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/course.css">
+{% endblock %}
+
+{% block links %}
+{% if project %}
+  <meta name="thumbnail" property="og:image" content="{{ project.get_image_url }}" />
+{% endif %}
+{% endblock %}
+
+{% block breadcrumbs_title %}
+  <h1>{{course.title}}</h1>
+{% endblock %}
+
+{% block breadcrumbs %}
+  <li class="active"><span class="divider">&rsaquo;</span>{{course.title}}</li>
+{% endblock %}
+
+{% block body %}
+
+<div class="row">
+
+  <div id="sidebar-wrapper" class="span3">
+    {% include "courses/course_sidebar.html" %}
+  </div>
+
+  <div id="main" class="span9">
+    <div class="tabbable">
+      <ul class="nav nav-tabs">
+        <li {% if about_active %}class="active"{% endif %}>
+          <a href="{% locale_url courses_show course_id=course.id slug=course.slug %}">{% trans 'About' %}</a>
+        </li>
+        <li class="dropdown{% if content_active %} active{% endif %}">
+          <a class="dropdown-toggle" data-toggle="dropdown">{% trans 'Content' %}<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            {% for task in course.content %}
+              <li {% if content and content.id = task.id %}class="active"{% endif %}>
+                <a href="{% locale_url courses_content_show course_id=course.id, content_id=task.id %}">{{ task.title }}</a>
+              </li>
+            {% endfor %}
+            {% if can_edit %}
+              <li class="divider"></li>
+              <li>
+                <a href="{% locale_url courses_admin_content course_id=course.id %}">{% trans "Organize and add content" %}</a>
+              </li>
+            {% endif %}
+          </ul>
+        </li>
+  
+        <li {% if discussion_active %}class="active"{% endif %}>
+          <a href="{% locale_url courses_discussion course_id=course.id %}">{% trans 'Discussion' %}</a>
+        </li>
+        <li {% if people_active %}class="active"{% endif %}>
+          <a href="{% locale_url courses_people course_id=course.id%}">{% trans 'People' %}</a>
+        </li>
+        {% if organizer %}
+          <li {% if settings_active %}class="active"{% endif %}>
+            <a href="{% locale_url courses_settings course_id=course.id %}">{% trans 'Settings' %}</a>
+          </li>
+        {% endif %}
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active">
+          {% block tab-pane-content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div> <!-- /#tabbable -->
+  </div> <!-- /#main -->
+</div> <!-- /#row -->
+
+{% endblock %}

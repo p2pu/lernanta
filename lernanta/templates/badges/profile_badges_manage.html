@@ -5,22 +5,24 @@
 
 {% block bodyclasses %}manage profile badges{% endblock %}
 {% block title %}{{ _('Share Badges') }}{% endblock %}
+
+
 {% block form %}
+
 <fieldset id="manage_profile_badges" class="manage profile badges tabpane">
   <h2>{{ _('Share Badges') }}</h2>
-
-  <p class="hint">
+  <p>
     {% blocktrans with badges_help_url=badges_help_url %}In order to allow you to share your <a href="{{ badges_help_url }}" target="_blank">badges</a> with other sites and communities, P2PU has plugged into the Mozilla Open Badge Infrastructure (OBI).{% endblocktrans %}
   </p>
-
-  <p class="hint">
+  <p>
     {% blocktrans with obi_url=obi_url email=user.email %}Start by sending your badges to the <a href="{{ obi_url }}" target="_blank">Mozilla Open Badge Backpack</a> as {{ email }}.{% endblocktrans %}
   </p>
   {% if has_badges %}
       {% send_badges_action %}
   {% else %}
-    <strong>{{ _('You don\'t have any badges.') }}</strong>
+    <p><strong>{{ _('You don\'t have any badges.') }}</strong></p>
     {% blocktrans with badges_url=badges_url %}Check out the <a href="{{ badges_url }}">existing badges</a> you can earn!{% endblocktrans %}
   {% endif %}
 </fieldset>
+
 {% endblock %}

@@ -121,7 +121,7 @@ class RegisterForm(forms.ModelForm):
     password_confirm = forms.CharField(
         max_length=128,
         widget=forms.PasswordInput(render_value=False))
-    preflang = forms.CharField(max_length=3,
+    preflang = forms.CharField(max_length=5,
             widget=forms.Select(choices=settings.SUPPORTED_LANGUAGES),
             initial=settings.LANGUAGE_CODE)
     recaptcha = captcha_fields.ReCaptchaField()

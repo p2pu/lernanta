@@ -50,8 +50,11 @@ def create(request, category=None):
                 project.category = category
             image_form = project_forms.ProjectImageForm(request.POST,
                 request.FILES, instance=project)
-            if image_form.is_valid():
-                image_form.save()
+            try:
+                if image_form.is_valid():
+                    image_form.save()
+            except:
+                pass
             project.set_duration(form.cleaned_data['duration'] or 0)
             #CS - too much logic in view
             act = Activity(actor=user,
@@ -1013,3 +1016,19 @@ def toggle_task_completion(request, slug, page_slug):
         return http.HttpResponse(json, mimetype="application/json")
 
     raise http.Http404
+
+
+def project_data(request, slug):
+    # callback used for course index api
+    project = get_object_or_404(Project, slug=slug)
+
+    data = {
+        "title": project.name,
+        "image_url": "?",
+        "description": project.short_description,
+        "tags": [],
+        "url": project.get_absolute_url(),
+        "data_url": request.url
+    }
+    json = simplejson.dumps(data)
+    return http.HttpResponse(json, mimetype="application/json")

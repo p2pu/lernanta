@@ -103,7 +103,6 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 MIDDLEWARE_CLASSES = (
     'drumbeat.middleware.NotFoundMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-    #'api.middleware.APISubdomainMiddleware',
     'l10n.middleware.LocaleURLRewriter',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -115,7 +114,7 @@ MIDDLEWARE_CLASSES = (
     'commonware.middleware.FrameOptionsHeader',
     'django.middleware.locale.LocaleMiddleware',
     'users.middleware.ProfileExistMiddleware',
-    'tracker.middleware.PageViewTrackerMiddleware',
+    'users.middleware.UserActivityMiddleware',
 )
 
 ROOT_URLCONF = 'lernanta.urls'
@@ -135,7 +134,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.redirects',
     'django.contrib.staticfiles',
-    'south',
+    #'south',
     'robots',
     'wellknown',
     'lernanta.apps.pagination',
@@ -166,6 +165,8 @@ INSTALLED_APPS = (
     'lernanta.apps.pages',
     'lernanta.apps.projects',
     'lernanta.apps.learn',
+    'lernanta.apps.courses',
+    'lernanta.apps.content2',
     'lernanta.apps.badges',
     'lernanta.apps.drumbeat',
     'django_obi',
@@ -175,6 +176,7 @@ INSTALLED_APPS = (
     'lernanta.apps.notifications',
     'lernanta.apps.api',
     'tastypie',
+    'lernanta.apps.media',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -188,6 +190,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'messages.context_processors.inbox',
     'users.context_processors.messages',
     'users.context_processors.redirect_urls',
+    'django.core.context_processors.request',
 )
 
 TEST_RUNNER = 'test_utils.runner.RadicalTestSuiteRunner'
@@ -318,4 +321,5 @@ TRACKING_PREFIXES = [
 
 BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',
     'KaloogaBot', 'YodaoBot', 'Baiduspider', 'googlebot',
-    'Speedy Spider', 'DotBot', 'Sogou']
+    'Speedy Spider', 'DotBot', 'Sogou', 'YoudaoBot',
+    'YandexBot', 'rogerbot']

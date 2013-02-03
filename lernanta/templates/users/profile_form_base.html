@@ -5,7 +5,7 @@
 {% block body %}
 <section class="modal">
   <article>
-    <h1>{% block heading %}{% endblock %} <span class="pester">{{  _('or') }} <a href="{% locale_url users_login %}{% if redirect_field_value %}?{{ redirect_field_name }}={{ redirect_field_value }}{% endif %}">{{_('sign in')}}</a></span></h1>
+    <h1>{% block heading %}{% endblock %}</h1>
     <fieldset>
       <form action="{% block action %}{% endblock %}" method="post">
         {% csrf_token %}
@@ -55,7 +55,8 @@
           {{ _('By creating an account on') }} {{ domain }}{{ _(', you accept our') }} <a href="{% locale_url static_page_show 'privacy' %}">{{ _('privacy guidelines') }}</a> , <a href="{% locale_url static_page_show 'license' %}">{{ _('license provisions') }}</a> {{ _('and') }} <a href="{% locale_url static_page_show 'terms-of-use' %}">{{ _('terms of use') }}</a>. {{ _('By default all content you create on this site is publicly viewable.') }}
         </p>
         <p class="submit">
-          <button type="submit">{% block button_label %}{% endblock %}</button>
+          <button class="btn-olive" type="submit">{% block button_label %}{% endblock %}</button>          
+          <a class="btn" href="{% locale_url splash %}" tabindex="5">{{ _('Cancel')}}</a>
           {% block openid_link %}{% endblock %}
         </p>
       </form>

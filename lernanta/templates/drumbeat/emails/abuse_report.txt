@@ -1,6 +1,4 @@
 {% load l10n_tags %}
-{{ user }} {{ _('has reported the following content as objectionable:') }}
-
-{{ url }}
-
-(model: {{ model }}, app_label: {{ app_label }}, pk: {{ pk }})
+{% load i18n %}
+{% blocktrans %}{{ user }} has reported {{ url }} as {{ reason }}.'{% endblocktrans %}
+{% blocktrans %}More info: {{ other }}{% endblocktrans %}

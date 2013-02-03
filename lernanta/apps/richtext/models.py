@@ -53,6 +53,6 @@ add_introspection_rules([], ["^richtext\.models\.JSONField"])
 class EmbeddedUrl(ModelBase):
     original_url = models.URLField(max_length=1023)
     html = models.TextField()
-    extra_data = JSONField()
+    extra_data = JSONField() #This field doesn't seem to be used!
     created_on = models.DateTimeField(
         auto_now_add=True, default=datetime.datetime.now)

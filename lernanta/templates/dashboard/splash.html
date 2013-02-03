@@ -2,6 +2,7 @@
 {% load l10n_tags %}
 {% load truncate_chars %}
 {% load learn_tags %}
+{% load project_tags %}
 
 {% block title %}{{ _('Learning for everyone, by everyone, about almost anything') }}{% endblock %}
 {% block bodyid %}splash{% endblock %}
@@ -13,47 +14,76 @@
 {% block body %}
 
 
-<header id="intro">
-  <div class="container">
-    <nav id="intro-links">
-      <a href="{% learn_default %}" class="big-find-course">{{ _('Browse Groups & Courses') }}</a>
-      <a href="{% locale_url projects_create %}" class="big-run-course">{{ _('Start Your Own') }}</a>
-    </nav>
-    <div id="call-to-action">
-      <h1>{{ _('<em class="highlight3">Learn</em> anything<br>with your <em class="highlight2">peers</em>.<br><span class="sub">It\'s <em class="highlight2">online</em> and totally <em class="highlight3">free</em></span>.') }}</h1>
+<div class="fluid-grid">
+  <div class="row-fluid">
+    <div class="align-to-top">	
+      <div class="span8">
+        <div class="custom-hero-unit">
+          <h1><span class="highlight-1">{{ _('LEARN') }}</span>{{ _(' ANYTHING') }}</h1>
+          <h1>{{ _('WITH YOUR ') }}<span class="highlight-2">{{ _('PEERS') }}</span></h1>
+          <h2>{{ _('IT\'S ') }}<span class="highlight-1">{{ _('ONLINE') }}</span>{{ _(' AND TOTALLY ') }}<span class="highlight-2">{{ _('FREE.') }}</span></h2>
+          <p class="p-first-line">{{ _('At ') }}<span class="make-bold">P2PU</span>{{ _(', people work together to learn a particular topic by completing') }}</p>
+		      <p>{{ _('tasks, assessing individual and group work, and providing constructive') }}</p>
+		      <p>{{ _('feedback.') }}</p>
+        </div>
+      </div>
+      <div class="span4">
+	      <div class="bulitin-feature">
+          <h1 class="top-bulitin-button"><a href="{% learn_default %}" class="big-find-course">{{ _('Find Course') }}</a></h1>
+          <h2 class="top-bulitin-box-note-format">{{ _('OR') }}</h2>
+          <h1 class="bottom-bulitin-button"><a href="{% locale_url courses_create %}" class="big-run-course">{{ _('Create Course') }}</a></h1>
+          <p class="top-bulitin-box">{{ _(' ') }}</p>
+	      </div>
+      </div>
     </div>
-    <p>{{ _('At') }} <em class="highlight3">P</em><em class="highlight1">2</em><em class="highlight2">P</em><em class="highlight4">U</em>, {{ _('people work together to learn a particular topic by completing tasks, assessing individual and group work, and providing constructive feedback.') }}</p>
   </div>
-</header> <!-- /#intro -->
-<section id="main">
-  <div class="container">
-    <ul id="posts">
-	{% for activity in activities %}
-        {% include "activity/_activity_resource.html" %}
-      {% endfor %}
-    </ul>
-    <aside>
-    	{% if featured_project %}
-      <section id="featured_project" class="card-list">
-        <h1>{{ _('Featured') }}</h1>
-	      <ul class="project-list">
-          {% with featured_project as project %}
-            <li>{% include "projects/_project_card.html" %}</li>
-          {% endwith %}
-        </ul>
-      </section>
+  {% if featured_projects %}
+    <div class="feature-box">
+      <div class="row-fluid">
+        <div class="span12 pull-left">
+	        <h1>{{ _('Featured Courses') }}</h1>
+	        <h2>{{ _('These are staff picked courses currently running.') }}</h2>
+        </div>
+      </div>
+      {% for project in featured_projects %}
+        {% if forloop.first %}
+          <div class="row-fluid">
+            <ul class="thumbnails">
         {% endif %}
+            <li class="span3">{% include "learn/_course_card.html" %}</li>
+        {% if forloop.counter|divisibleby:"4" %}
+            </ul>
+          </div>    
+          {% if not forloop.last %}
+            <div class="row-fluid">
+              <ul class="thumbnails">
+          {% endif %}
+        {% else %}{% if forloop.last %}
+            </ul>
+          </div>
+        {% endif %}{% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  <div class="row-fluid">
+    <div class="span9">
+	    <div class="row-fluid">
+	      <h1 class="add-top-margin"><a href="http://info.p2pu.org/" title="{{ _('P2PU Blog') }}" target="_blank">P2PU {{ _('Blog') }}</a></h1>
+	    </div>
+	    <div class="bulitin-feature with-leader">
+        <!-- Currently unused; retained just in case feed needs to be called to get the feed_entries -->
+        <!-- <a class="feed-link" href="{{ feed_url }}" title="{{ _('Subscribe to the Peer 2 Peer University blog') }}"  target="_blank"> {{ _('feed') }}</a> -->
+        {% for entry in feed_entries %}
+          {% if forloop.counter <= 2 %}
+	          <div class="row-fluid">
+		          <h2><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></h2>
+		          <p class="bottom-bulitin-box">{{ entry.body|truncatechars:400 }}</p>
+	          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div> 
 
-      <section id="blog_feed">
-        <h1><a href="http://info.p2pu.org/" title="{{ _('P2PU Blog') }}" target="_blank">{{ _('P2PU Blog') }}</a> <a class="feed-link" href="{{ feed_url }}" title="{{ _('Subscribe to the Peer 2 Peer University blog') }}"  target="_blank"> {{ _('feed') }}</a></h1>
-          {% for entry in feed_entries %}
-            <article>
-              <h1><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></h1>
-                <p class="justify_content">{{ entry.body|truncatechars:400 }}</p>
-            </article>
-          {% endfor %}
-      </section>
-    </aside>
-  </div>  
-</section>
 {% endblock %}

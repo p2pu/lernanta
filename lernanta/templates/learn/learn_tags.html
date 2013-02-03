@@ -12,11 +12,10 @@
 {% endblock %}
 
 {% block body %}
-  <div id="main">
+  <h1>Tag Cloud</h1>
+  <div id="main" class="well">
     {% for tag in tags %}
-      <a href="{% locale_url learn_all %}?filter_tags={{ tag.tag__name }}">
-          <font size={{tag.weight|floatformat:0}}>{{tag.tag__name}}</font>
-      </a>
+      <a style="font-size:{{tag.weight}}pt" href="{% locale_url learn_all %}?filter_tags={{ tag.tag }}">{{tag.tag}}({{tag.count}})</a>
     {% endfor %}
   </div>
 {% endblock %}

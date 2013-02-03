@@ -11,7 +11,7 @@ south==0.7.3
 django-messages==0.4.4
 python-openid==2.2.5
 markdown==2.1.1
-bleach==1.1.1
+bleach==1.1.5
 django-maintenancemode==0.9.3.1
 tender_multipass==0.2.1
 simplejson==2.6.0

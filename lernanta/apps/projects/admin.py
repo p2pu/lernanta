@@ -10,7 +10,7 @@ class ProjectAdmin(admin.ModelAdmin):
     raw_id_fields = ('detailed_description', 'next_projects',
         'completion_badges', 'clone_of')
     date_hierarchy = 'created_on'
-    list_display = ('id', 'name', 'clone_of', 'language', 'created_on')
+    list_display = ('id', 'name', 'slug', 'clone_of', 'language', 'created_on')
     list_filter = ('school', 'featured', 'under_development', 'not_listed',
         'archived', 'deleted', 'test')
     search_fields = ('id', 'name', 'slug', 'school__name',

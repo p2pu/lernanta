@@ -151,10 +151,7 @@ def delete(request):
         profile.user.is_active = False
         profile.save()
         profile.user.save()
-        # logout the user.
-        for s in Session.objects.all():
-            if s.get_decoded().get('_auth_user_id') == profile.user.id:
-                s.delete()
+        # logout the user on next access in user middleware.
         return HttpResponseRedirect(reverse('users_logout'))
     context = {
         'pending_projects': pending_projects,

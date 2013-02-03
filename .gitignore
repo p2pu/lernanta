@@ -20,3 +20,11 @@ SRC
 *.DS_Store
 *.sublime-project
 lernanta/lernanta
+.sass-cache
+lernanta/db_seed_lernanta.sql
+lernanta/runserver.log
+lernanta/static_serv/
+lernanta/static/sass/.sass-cache
+lernanta/static/css/ie.css
+lernanta/static/css/print.css
+lernanta/static/css/screen.css

@@ -1,0 +1,3 @@
+[submodule "lernanta/static/sass/p2pu-css-framework"]
+	path = lernanta/static/sass/p2pu-css-framework
+	url = http://github.com/p2pu/p2pu-css-framework

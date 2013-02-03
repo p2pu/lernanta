@@ -42,8 +42,9 @@ def reply_comment(request, comment_id):
         return http.HttpResponseRedirect(reply_to.get_absolute_url())
     can_reply = reply_to.page_object.can_comment(request.user,
         reply_to=reply_to)
+    can_reply = can_reply and request.user.get_profile().can_post()
     if not can_reply:
-        messages.error(request, _('You can not reply to this comment.'))
+        messages.error(request, _('You can not reply to this comment. Please ensure that you have confirmed your email address.'))
         return http.HttpResponseRedirect(reply_to.get_absolute_url())
     user = request.user.get_profile()
     comment = None
@@ -95,6 +96,7 @@ def comment_page(request, page_model, page_app_label, page_pk,
         scope_object = get_object_or_404(scope_ct_cls, pk=scope_pk)
 
     can_comment = page_object.can_comment(request.user)
+    can_comment = can_comment and request.user.get_profile().can_post()
     if not can_comment:
         msg = _('You can not post a comment at %s.')
         messages.error(request, msg % page_object)
@@ -183,7 +185,7 @@ def comment_page_callback(request, page_model, page_app_label, page_pk,
     except:
         log.error("could not find scope object")
 
-    if user and page_object and page_object.can_comment(user.user) and scope_object and reply_text:
+    if user and user.can_post() and page_object and page_object.can_comment(user.user) and scope_object and reply_text:
         comment = PageComment(content=reply_text)
         comment.page_object = page_object
         comment.scope_object = scope_object
@@ -226,7 +228,7 @@ def edit_comment(request, comment_id):
 @login_required
 def delete_restore_comment(request, comment_id):
     comment = get_object_or_404(PageComment, id=comment_id)
-    if not comment.can_edit(request.user):
+    if not comment.can_edit(request.user) or not request.user.get_profile().can_post():
         if comment.deleted:
             msg = _('You can not restore this comment.')
         else:

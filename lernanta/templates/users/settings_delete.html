@@ -1,10 +1,12 @@
-{% extends "users/profile_edit.html" %}
+	{% extends "users/profile_edit.html" %}
 
 {% load l10n_tags %}
 
 {% block bodyclasses %}edit account delete{% endblock %}
 {% block title %}{{ _('Delete Your Account') }}{% endblock %}
+
 {% block form %}
+
 <fieldset id="edit_account_delete" class="edit account delete tabpane">
   <div class="warning">
     <h2>{{ _('Delete Your Account') }}</h2>
@@ -19,12 +21,17 @@
       <p>Before you can delete your account you need to select another organizer for them, or change their status appropiatedly.</p>
     {% endif %}
   </div>
-  <form method="post" action="{% locale_url preferences_delete %}">
+  <form class="form-horizontal" method="post" action="{% locale_url preferences_delete %}">
     {% csrf_token %}
-    <p class="buttons">
-      <a class="button" href="{% locale_url dashboard %}">{{ _('Cancel') }}</a>
-      <button type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
-    </p>
+    <div class="control-group">
+      <div class="controls">
+        <p class="buttons">
+          <a class="btn" href="{% locale_url dashboard %}">{{ _('Cancel') }}</a>
+          <button class="btn btn-blood-orange" type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
+        </p>
+      </div>
+    </div>
   </form>
 </fieldset>
+
 {% endblock %}

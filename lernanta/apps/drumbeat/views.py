@@ -10,12 +10,13 @@ from django.contrib.contenttypes.models import ContentType
 from django.core.urlresolvers import NoReverseMatch
 from django.utils.translation import ugettext as _
 from django.core.exceptions import PermissionDenied
-from django.http import HttpResponse
 
 from l10n.urlresolvers import reverse
 from users.models import UserProfile
 from notifications.models import send_notifications
-from drumbeat.forms import AbuseForm
+from drumbeat.models import send_abuse_report
+from drumbeat.forms import AbuseForm, AbuseReasonForm
+from drumbeat import messages
 import django.contrib.sites as sites
 
 log = logging.getLogger(__name__)
@@ -35,10 +36,11 @@ def page_not_found(request):
 
 
 def server_error(request):
-    """Make MEDIA_URL available to the 500 template."""
+    """Make MEDIA_URL and STATIC_URL available to the 500 template."""
     t = loader.get_template('500.html')
     return http.HttpResponseServerError(t.render(Context({
         'MEDIA_URL': settings.MEDIA_URL,
+        'STATIC_URL': settings.STATIC_URL,
     })))
 
 
@@ -54,19 +56,10 @@ def report_abuse(request, model, app_label, pk):
             url = request.build_absolute_uri(instance.get_absolute_url())
         except NoReverseMatch:
             url = request.build_absolute_uri(reverse('dashboard'))
-        subject_template = 'drumbeat/emails/abuse_report_subject.txt'
-        body_template = 'drumbeat/emails/abuse_report.txt'
-        context = {
-            'user': request.user.get_profile(),
-            'url': url, 'model': model,
-            'app_label': app_label, 'pk': pk,
-        }
-        try:
-            profile = UserProfile.objects.get(email=settings.ADMINS[0][1])
-            send_notifications([profile], subject_template, body_template, context)
-        except:
-            log.debug("Error sending abuse report: %s" % sys.exc_info()[0])
-            pass
+
+        reason = "abusive"
+        other = "model: {}, app_label: {}, pk: {}".format(model, app_label, pk)
+        send_abuse_report(url, reason, other, request.user.get_profile())
         return render_to_response('drumbeat/report_received.html', {},
                                   context_instance=RequestContext(request))
     else:
@@ -79,6 +72,23 @@ def report_abuse(request, model, app_label, pk):
     }, context_instance=RequestContext(request))
 
 
+def prompt_abuse_reason(request):
+    form = AbuseReasonForm(request.POST)
+    if form.is_valid():
+        # report abuse
+        abuse_url = form.cleaned_data.get('url')
+        reason = form.cleaned_data.get('reason')
+        other = form.cleaned_data.get('other')
+        send_abuse_report(abuse_url, reason, other, request.user.get_profile())
+        messages.success(request, _("Thank you for filing an abuse report!"))
+        return http.HttpResponseRedirect(abuse_url)
+
+    context = { 'form': form }
+    return render_to_response('drumbeat/abuse_reason.html',
+        context,
+        context_instance=RequestContext(request))
+
+
 def export_as_csv(modeladmin, request, queryset):
     """
     Generic csv export admin action.
@@ -86,7 +96,7 @@ def export_as_csv(modeladmin, request, queryset):
     if not request.user.is_staff:
         raise PermissionDenied
     opts = modeladmin.model._meta
-    response = HttpResponse(mimetype='text/csv')
+    response = http.HttpResponse(mimetype='text/csv')
     response['Content-Disposition'] = 'attachment; filename=%s.csv' % unicode(
         opts).replace('.', '_')
     writer = unicodecsv.writer(response, encoding='utf-8')

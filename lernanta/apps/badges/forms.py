@@ -7,15 +7,12 @@ from badges.models import Badge, Submission, Assessment, Rating
 
 
 class BadgeForm(forms.ModelForm):
-
     class Meta:
         model = Badge
-        fields = ('name', 'description', 'image',
-            'rubrics')
+        fields = ('name', 'description', 'image', 'rubrics')
 
 
 class SubmissionForm(forms.ModelForm):
-
     class Meta:
         model = Submission
         fields = ('url', 'content',)
@@ -28,7 +25,6 @@ class AssessmentForm(forms.ModelForm):
 
 
 class RatingForm(forms.ModelForm):
-
     class Meta:
         model = Rating
         fields = ('score',)

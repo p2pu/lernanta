@@ -1,6 +1,5 @@
-<ul class="post-tags">
+<div class="btn-group">
 {% for filter in filters %}
-    <li><a href="{{ url }}?activities_filter={{ filter }}" class="{% if filter == active_filter %}active-post-tag{% endif %}">{{ filter|title }}</a></li>
+    <a href="{{ url }}?activities_filter={{ filter }}" class="{% if filter == active_filter %}active-post-tag{% endif %} btn">{{ filter|title }}</a>
 {% endfor %}
-</ul>
-<br clear="all">
+</div>

@@ -1,14 +1,28 @@
 {% load l10n_tags %}
 
 {% if message %}
-<strong>{{ message }}</strong>
+  <div class="control-group">
+    <div class="controls">
+      <strong>{{ message }}</strong>
+    </div>
+  </div>
 {% endif %}
-<ul class="openid_providers featured">
-  <!--<li id="google"><a href="#google" title="{{ _('Sign In with your Google account') }}">Google</a></li>-->
-  <li id="yahoo"><a href="#yahoo" title="{{ _('Sign In with your Yahoo! account') }}">Yahoo!</a></li>
-  <li id="myopenid"><a href="#myopenid" title="{{ _('Sign In with your myOpenID account') }}">myOpenID</a></li>
-</ul>
-<p class="or"><span>{{ _('or') }}</span></p>
-<input type="text" placeholder="{{ _('enter any OpenID URL') }}" name="openid_identifier" id="id_openid_identifier" /> 
-{{ form.openid_identifier.errors }}
-<button type="submit" value="submit" id="other_submit">{{ _('Go') }}</button>
+<div class="control-group">
+  <div class="controls">
+      <!--<li id="google"><a class="btn btn-cyan add-top-margin-10" href="#google" title="{{ _('Sign In with your Google account') }}">Google</a></li>-->
+      <a class="btn add-top-margin-10" href="#yahoo" title="{{ _('Sign In with your Yahoo! account') }}">Yahoo!</a>
+      <a class="btn add-top-margin-10" href="#myopenid" title="{{ _('Sign In with your myOpenID account') }}">myOpenID</a>
+  </div>
+</div>
+<div class="control-group">
+  <div class="controls">
+    {{ _('or') }}
+  </div>
+</div>
+<div class="control-group">
+  <div class="controls">
+    <input type="text" placeholder="{{ _('enter any OpenID URL') }}" name="openid_identifier" id="id_openid_identifier" /> 
+    {{ form.openid_identifier.errors }}
+    <button class="btn btn-olive" type="submit" value="submit" id="other_submit">{{ _('Go') }}</button>
+  </div>
+</div>

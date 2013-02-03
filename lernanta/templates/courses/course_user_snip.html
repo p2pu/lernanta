@@ -1,0 +1,22 @@
+{% load l10n_tags %}
+{% load i18n %}
+
+<li class="user-tile">
+  <a href="{% locale_url users_profile_view username=user.username %}">
+    <img src="{{ user.profile_image_url }}" alt="{{user.username}}">
+  </a>
+  <div>
+  {% if can_edit %}
+    <form action="{% locale_url courses_leave course_id=course.id username=user.username %}" method="POST">
+      {% csrf_token %}
+      <button class="btn btn-mini btn-danger" type="submit">{% trans "Remove user" %}</button>
+    </form>
+    {% if user.role == "LEARNER" %}
+      <form action="{% locale_url courses_add_organizer course_id=course.id username=user.username %}" method="POST">
+        {% csrf_token %}
+        <button class="btn btn-mini" type="submit">{% trans "Make organizer" %}</button>
+      </form>
+    {% endif %}
+  {% endif %}
+  </div>
+</li>

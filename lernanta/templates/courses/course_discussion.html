@@ -1,0 +1,25 @@
+{% extends "courses/course_base.html" %}
+{% load l10n_tags %}
+{% load i18n %}
+{% load learn_tags %}
+{% load embed %}
+{% load settings_tags %}
+
+{% block tab-pane-content %}
+  <p class="text-info">{% blocktrans %}This page is for general discussion of the course. Feel free to post questions, comments, ideas.{% endblocktrans %}</p>
+   <br/>
+   <div id="disqus_thread"></div>
+   <script type="text/javascript">
+     var disqus_shortname = '{% settings_value "DISQUS_SHORTNAME" %}';
+     {% if debug %}var disqus_developer = 1;{% endif %}
+     var disqus_identifier = "{{course.id}}";
+     /* * * DON'T EDIT BELOW THIS LINE * * */
+     (function() {
+       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+       dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+   </script>
+   <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+   <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+{% endblock %}

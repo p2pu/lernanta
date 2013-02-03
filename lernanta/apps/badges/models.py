@@ -48,7 +48,7 @@ def get_awarded_badges(user):
 
 
 class Badge(ModelBase):
-    """Representation of a Badge"""
+    """ Representation of a Badge """
     name = models.CharField(max_length=225, blank=False)
     slug = models.SlugField(unique=True, max_length=110)
     description = models.CharField(max_length=225, blank=False)
@@ -194,6 +194,8 @@ class Badge(ModelBase):
             return False
         if user.is_authenticated():
             profile = user.get_profile()
+            if not profile.can_post():
+                return False
             if not self.is_eligible(profile):
                 return False
             awards = Award.objects.filter(user=profile, badge=self)

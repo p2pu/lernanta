@@ -3,37 +3,44 @@
 {% load l10n_tags %}
 
 {% block bodyclasses %}profile edit openids{% endblock %}
+
+
 {% block form %}
+
 <fieldset id="profile_edit_openids" class="profile edit openids tabpane">
-<h2>{{ _('OpenIDs') }}</h2>
-<p class="hint">{{ _('Add openid urls to login to your account. If you do not have any openids you can access your account with username and password.') }}</p>
-<form action="{% locale_url users_profile_edit_openids %}" method="post">
-  {% csrf_token %}
-  {% include "users/_openid_providers.html" %}
-</form>
-<br><br>
-{% if openids %}
-  <table>
-  <thead>
-    <tr>
-      <th>{{ _('OpenID') }}</th>
-      <th>{{ _('Actions') }}</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for openid in openids %}
-      <tr>
-        <td class="url">{{ openid.display_id }}</td>
-        <td class="actions">
-          <form action="{% locale_url users_profile_edit_openids_delete openid_pk=openid.pk %}" method="post">
-            {% csrf_token %}
-            <button type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
-          </form>
-        </td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
-{% endif %}
+  <h2>{{ _('OpenIDs') }}</h2>
+  <div class="alert alert-info">
+    {{ _('Add openid urls to login to your account. If you do not have any openids you can access your account with username and password.') }}
+  </div>
+  <form class="form-horizontal" action="{% locale_url users_profile_edit_openids %}" method="post">
+    {% csrf_token %}
+    {% include "users/_openid_providers.html" %}
+  </form>
+  <br />
+  <br />
+  {% if openids %}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>{{ _('OpenID') }}</th>
+          <th>{{ _('Actions') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for openid in openids %}
+          <tr>
+            <td class="url">{{ openid.display_id }}</td>
+            <td class="actions">
+              <form class="form-horizontal" action="{% locale_url users_profile_edit_openids_delete openid_pk=openid.pk %}" method="post">
+                {% csrf_token %}
+                <button class="btn btn-blood-orange" type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
 </fieldset>
+
 {% endblock %}

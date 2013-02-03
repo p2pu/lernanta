@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load l10n_tags %}
+{% load i18n %}
+
+{% block title %}{{ _('Abuse Report Received') }}{% endblock %}
+{% block bodyclasses %}signin report{% endblock %}
+{% block body %}
+<section class="modal">
+  <article>
+    <h1>{{ _('Report Abuse') }}</h1>
+    <fieldset>
+      <form action="{% locale_url report_abuse %}" method="post">
+	    {% csrf_token %}
+        {{ form.url.as_hidden }}
+        <p>
+          <label for="id_reason">{% trans 'Why are you reporting this?' %}
+          {{ form.reason }}
+        </p>
+        <p>
+          <label for="id_other">{% trans 'Reason if you selected other.' %}
+          {{ form.other }}
+        </p>
+        <p>
+	      <button type="submit">{{ _('Report') }}</button>
+	      <a class="btn" href="{{ form.url.value }}">{{ _('Cancel') }}</a>
+        </p>
+      </form>
+    </fieldset>
+  </article>
+</section>
+{% endblock %}

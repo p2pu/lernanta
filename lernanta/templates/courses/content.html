@@ -1,0 +1,47 @@
+{% extends "courses/course_base.html" %}
+{% load i18n %}
+{% load l10n_tags %}
+{% load embed %}
+{% load content2_tags %}
+{% load settings_tags %}
+
+{% block title %}{{course.title}} | {{content.title}}{% endblock %}
+{% block bodyclasses %}course-content{% endblock%}
+
+{% block breadcrumbs %}
+  <li>
+    <span class="divider">&rsaquo;</span>
+    <a href="{% locale_url courses_show course_id=course.id slug=course.slug%}">{{course.title}}</a>
+  </li>
+  <li class="active"><span class="divider">&rsaquo;</span>{{ content.title }}</li>
+{% endblock %}
+
+{% block tab-pane-content %}
+  <h2>{{ content.title }}</h2>
+  <div>{{content.content|convert_content|embed|safe}}</div>
+  {% if can_edit %}
+    <p>
+      <a class="btn" href="{% locale_url courses_content_edit course_id=course.id content_id=content.id %}">
+        <i class="icon-edit"></i> {% trans "edit" %}
+      </a>
+    </p>
+  {% endif %}
+
+  <hr/>
+
+  <h2>{% trans "Comments" %}</h2>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = '{% settings_value "DISQUS_SHORTNAME" %}';
+    {% if debug %}var disqus_developer = 1;{% endif %}
+    var disqus_identifier = "{{course.id}}" + "-" + "{{content.id}}";
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+{% endblock %}

@@ -41,7 +41,7 @@ class TestLogins(TestCase):
             full = "/%s/%s" % (self.locale, path)
             response = self.client.get(full)
             self.assertRedirects(response, '/en/dashboard/', status_code=302,
-                                 target_status_code=200)
+                                 target_status_code=302)
         self.client.logout()
 
     def test_unauthenticated_redirects(self):
@@ -63,9 +63,8 @@ class TestLogins(TestCase):
             'password': self.test_password,
         })
         self.assertRedirects(response, '/en/dashboard/', status_code=302,
-                             target_status_code=200)
+                             target_status_code=302)
         response2 = self.client.get(response["location"])
-        self.assertContains(response2, 'id="dashboard"')
         self.client.logout()
 
         response5 = self.client.post(path, {

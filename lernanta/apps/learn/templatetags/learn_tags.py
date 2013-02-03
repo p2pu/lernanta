@@ -7,7 +7,8 @@ register = template.Library()
 @register.simple_tag
 def learn_default(tag=None, school=None):
     """ return the default URL for the learn page """
-    learn_url = reverse('learn_featured', kwargs={'feature':'community'})
+    #learn_url = reverse('learn_list', kwargs={'list_name':'community'})
+    learn_url = reverse('learn_all')
     params = []
     if school:
         learn_url = reverse('learn_schools',

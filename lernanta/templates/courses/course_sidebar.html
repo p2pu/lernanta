@@ -1,0 +1,89 @@
+{% load l10n_tags %}
+{% load i18n %}
+
+<div id="sidebar">
+    <figure class="project_img">
+      <a id="id-course-image-link" href="{{ course.get_absolute_url }}">
+        {% if course.image %}
+  	         <img id="id-course-image" src="{{ course.image.url }}" alt="course image"/>
+        {% else %}
+             <img id="id-course-image" src="{{ STATIC_URL}}images/project-missing.png" alt="course image"/>
+        {% endif %}
+        {% if course.status == 'draft' %}
+          <img id="id-course-image-overlay" src="{{ STATIC_URL }}images/course-draft.png" alt="draft course"/>
+        {% endif %}
+      </a>
+    </figure>
+
+    <div>
+      <ul class="nav nav-list">
+        <li class="nav-header">{% trans "Navigation"%}</li>
+        <li class="divider"></li>
+        <li {% if not content%}class="active"{% endif %}>
+          <a href="{% locale_url courses_show course_id=course.id slug=course.slug %}">{% trans "About" %}</a>
+        </li>
+        <li class="divider"></li>
+        {% for task in course.content %}
+          {% if content and content.id = task.id %}
+            <li class="active">
+          {% else %}
+            <li>
+          {% endif %}
+            <a href="{% locale_url courses_content_show course_id=course.id, content_id=task.id %}">{{ task.title }}</a>
+            <div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+    {% if organizer or learner %}
+      <hr/>
+      <div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="{% trans 'en' %}" data-text="{% blocktrans with title=course.title hashtag=course.hashtag%}I'm learning &quot;{{ title }}&quot; @P2PU - check it: {% endblocktrans %}" data-url="http://{{ site.domain }}{{ course_url }}" data-related="p2pu" data-hashtags="{{ course.hashtag }}">{% trans "Tweet me" %}</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+        <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone" data-size="medium"></div>
+
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+      </div>
+    {% endif %}
+    <hr/>
+    <div id="course-singup">
+      {% if show_signup %}
+        <form method="post" action="{% locale_url courses_signup course_id=course.id %}">
+          {% csrf_token %}
+          <p><button id="signup_button">{{ _('Start Course') }}</button></p>
+        </form>
+      {% endif %}
+      {% if show_leave_course %}
+        <form method="post" action="{% locale_url courses_leave course_id=course.id username=user.username %}">
+          {% csrf_token %}
+          <p><button id="leave_direct_signup_button">{{ _('Leave Course') }}</button></p>
+        </form>
+      {% endif %}
+    </div>
+
+    <div>
+      <form action="{% locale_url report_abuse %}" method="post">
+        {% csrf_token %}
+        <input id="id_url" name="url" type="hidden" value="{{request.get_full_path}}"/>
+        <button type="submit">Report abuse</button>
+      </form>
+    </div>
+
+    <!--div id="course-description">
+      <h2>{% trans "Description" %}</h2>
+      <p>{{ course.description }}</p>
+    </div-->
+</div> <!-- /#sidebar -->
+

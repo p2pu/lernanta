@@ -14,15 +14,17 @@
 {% endblock %}
 
 {% block body %}
-<section class="modal nav">
-  <article>
+    <div class="row-fluid">
+      <h1>
+          {{ _('Edit Profile') }}
+          <a class="pester back_link" href="{{ profile.get_absolute_url }}">({{ _('View Profile') }})</a>
+        </h1>
+    </div>
 
-    <h1>
-      {{ _('Edit Profile') }}
-      <a class="pester back_link" href="{{ profile.get_absolute_url }}">({{ _('View Profile') }})</a>
-    </h1>
-    <nav id="profile-edit-nav" class="tabs">
-	    <ul>
+    <div class="row-fluid">
+      <div class="span12">
+      <div class="tabbable tabs-left">
+      <ul class="nav nav-tabs">
         <li class="info {% if general_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit %}">{{ _('Basic Information') }}</a></li>
         <li class="links {% if link_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit_links %}">{{ _('Links') }}</a></li>
         <li class="notifications {% if settings_tab %}active{% endif %}"><a href="{% locale_url preferences_settings %}">{{ _('Notifications') }}</a></li>
@@ -31,12 +33,14 @@
         <li class="links {% if openids_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit_openids %}">{{ _('OpenIDs') }}</a></li>
         <li class="badges {% if badges_tab %}active{% endif %}"><a href="{% locale_url users_badges_manage %}">{{ _('Share Badges') }}</a></li>
         <li class="delete {% if delete_tab %}active{% endif %}"><a href="{% locale_url preferences_delete %}">{{ _('Delete Account') }}</a></li>
-	    </ul>
-    </nav>
-
-      {% block form %}{% endblock %}
-
-  </article>
-</section>
+      </ul>
+      
+    
+    <div class="tab-content">
+            {% block form %}{% endblock %}
+    </div>
+    </div>
+    </div>
+    </div>
 {% endblock %}
 

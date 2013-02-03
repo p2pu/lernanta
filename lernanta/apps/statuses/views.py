@@ -16,18 +16,20 @@ log = logging.getLogger(__name__)
 
 @login_required
 def create(request):
-    if request.method != 'POST' or 'status' not in request.POST:
-        return HttpResponseRedirect(reverse('dashboard'))
-    form = StatusForm(data=request.POST)
-    if form.is_valid():
-        status = form.save(commit=False)
-        status.author = request.user.get_profile()
-        status.save()
-    else:
-        log.debug("form error: %s" % (str(form.errors)))
-        messages.error(request, _('There was an error posting '
-                                  'your status update'))
+    messages.error(request, _('Posting a update to your dashboard is no longer supported'))
     return HttpResponseRedirect(reverse('dashboard'))
+    #if request.method != 'POST' or 'status' not in request.POST:
+    #    return HttpResponseRedirect(reverse('dashboard'))
+    #form = StatusForm(data=request.POST)
+    #if form.is_valid() and len( request.user.get_profile().can_post() )>0:
+    #    status = form.save(commit=False)
+    #    status.author = request.user.get_profile()
+    #    status.save()
+    #else:
+    #    log.debug("form error: %s" % (str(form.errors)))
+    #    messages.error(request, _('There was an error posting '
+    #                              'your status update'))
+    #return HttpResponseRedirect(reverse('dashboard'))
 
 
 @login_required

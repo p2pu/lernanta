@@ -9,25 +9,20 @@ from django.template import RequestContext
 from django.utils import simplejson
 from django.utils.translation import ugettext as _
 from django.template.loader import render_to_string
-from django.db.models import Q, Count, Max
-from django.contrib.contenttypes.models import ContentType
 
-# from links.tasks import UnsubscribeFromFeed
 from pagination.views import get_pagination_context
 
-from projects.models import Project
-from learn import forms as project_forms
+from learn.forms import CourseFilterForm
 from learn.models import get_listed_courses
 from learn.models import get_popular_tags
 from learn.models import get_weighted_tags
-from learn.models import get_courses_by_tag
 from learn.models import get_courses_by_tags
 from learn.models import get_courses_by_list
+from learn.models import get_courses_by_language
 from learn.models import get_tags_for_courses
+from learn.models import search_course_title
 from l10n.urlresolvers import reverse
-from relationships.models import Relationship
 from schools.models import School
-from activity.models import Activity, RemoteObject
 from reviews.models import Review
 
 log = logging.getLogger(__name__)
@@ -39,10 +34,13 @@ def _filter_and_return(request, context, projects, max_count):
     if tag_string:
         filter_tags = tag_string.split('|')
     context['filter_tags'] = filter_tags
-
+    
     if filter_tags:
         projects = get_courses_by_tags(filter_tags, projects)
-        
+
+    language = request.session['search_language']
+    projects = get_courses_by_language(language, projects)
+
     context['popular_tags'] = get_tags_for_courses(projects, filter_tags)
     context['projects'] = projects
     context.update(get_pagination_context(request, projects, max_count))
@@ -67,93 +65,83 @@ def _filter_and_return(request, context, projects, max_count):
         context_instance=RequestContext(request))
 
 
-def learn(request, max_count=24):
-    projects = get_listed_courses().order_by('-created_on')
+def _language_prefs(request):
     get_params = request.GET.copy()
     if not 'language' in get_params:
         language = request.session.get('search_language') or 'all'
         get_params['language'] = language
-    form = project_forms.ProjectsFilterForm(get_params)
- 
+    form = CourseFilterForm(get_params)
+
+    if form.is_valid():
+        language = form.cleaned_data['language']
+        request.session['search_language'] = language
+
+    return form
+
+
+def learn(request, max_count=24):
+    projects = get_courses_by_list('listed')
+    
+    form = _language_prefs(request)
+
     context = {
         'schools': School.objects.all(),
         'popular_tags': get_popular_tags(),
         'form': form,
-        'learn_url': reverse('learn_all'),
+        'load_more_url': reverse('learn_all'),
         'infinite_scroll': request.GET.get('infinite_scroll', False),
     }
-    if form.is_valid():
-        language = form.cleaned_data['language']
-        request.session['search_language'] = language
-        if language != 'all':
-            projects = projects.filter(language__startswith=language)
-
-        reviewed = form.cleaned_data['reviewed']
-        if reviewed:
-            accepted_reviews = Review.objects.filter(
-                accepted=True).values('project_id')
-            projects = projects.filter(id__in=accepted_reviews)
 
     return _filter_and_return(request, context, projects, max_count)
 
 
 def schools(request, school_slug, max_count=24):
     school = get_object_or_404(School, slug=school_slug)
-    projects = get_listed_courses().order_by('-created_on')
+    projects = get_listed_courses()
 
-    get_params = request.GET.copy()
-    if not 'language' in get_params:
-        language = request.session.get('search_language') or 'all'
-        get_params['language'] = language
-    form = project_forms.ProjectsFilterForm(get_params)
-
+    form = _language_prefs(request)
+     
     context = {
         'schools': School.objects.all(),
         'popular_tags': get_popular_tags(),
         'form': form,
-        'learn_url': reverse('learn_all'),
+        'load_more_url': reverse('learn_schools', kwargs={"school_slug": school_slug}),
         'infinite_scroll': request.GET.get('infinite_scroll', False),
         'learn_school': school,
     }
 
-    projects = projects.filter(school=school)
+    #projects = projects.filter(school=school)
+    projects = get_courses_by_list(school_slug, projects)
+  
+    return _filter_and_return(request, context, projects, max_count)
 
-    if form.is_valid():
-        language = form.cleaned_data['language']
-        request.session['search_language'] = language
-        if language != 'all':
-            projects = projects.filter(language__startswith=language)
-    
+
+def fresh(request, max_count=24):
+    context = {
+        "learn_fresh": True,
+        'schools': School.objects.all()
+    }
+    projects = get_listed_courses()[:24]
     return _filter_and_return(request, context, projects, max_count)
 
    
-def featured(request, feature, max_count=24):
-    projects = get_listed_courses().order_by('-created_on')
+def list(request, list_name, max_count=24):
+    projects = get_listed_courses()
     get_params = request.GET.copy()
 
-    if not 'language' in get_params:
-        language = request.session.get('search_language') or 'all'
-        get_params['language'] = language
-
-    form = project_forms.ProjectsFilterForm(get_params)
-
+    form = _language_prefs(request)
+ 
     context = {
         'schools': School.objects.all(),
         'popular_tags': get_popular_tags(),
         'form': form,
-        'learn_url': reverse('learn_all'),
+        'load_more_url': reverse('learn_list', kwargs={"list_name": list_name}),
         'infinite_scroll': request.GET.get('infinite_scroll', False),
     }
 
-    projects = get_courses_by_list(feature, projects)
-    context['learn_{0}'.format(feature)] = True
+    projects = get_courses_by_list(list_name, projects)
+    context['learn_{0}'.format(list_name)] = True
 
-    if form.is_valid():
-        language = form.cleaned_data['language']
-        request.session['search_language'] = language
-        if language != 'all':
-            projects = projects.filter(language__startswith=language)
-    
     return _filter_and_return(request, context, projects, max_count)
 
     
@@ -162,3 +150,24 @@ def learn_tags(request):
     return render_to_response('learn/learn_tags.html', {'tags': tags},
         context_instance=RequestContext(request))
 
+
+def auto_complete_lookup(request):
+    term = request.GET.get('term', None)
+    course_list = []
+
+    if term:
+        course_list = search_course_title(term)
+
+    json = simplejson.dumps(
+        [{"label": course.title, "url": course.url} for course in course_list]
+    )
+    return http.HttpResponse(json, mimetype="application/json")
+
+
+def add_course(request):
+    return render_to_response('learn/add_course.html', {}, 
+        context_instance=RequestContext(request))
+
+
+def update_course(request):
+    pass

@@ -70,6 +70,8 @@ class Statsd(object):
         """
         Squirt the metrics over UDP
         """
+        #TODO - disabling statsd for now
+        return
         try:
             host = settings.STATSD_HOST
             port = settings.STATSD_PORT

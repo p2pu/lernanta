@@ -2,6 +2,7 @@ import logging
 
 from django import template
 from django.utils.encoding import smart_str
+from django.conf import settings
 
 from l10n.urlresolvers import reverse
 
@@ -26,3 +27,8 @@ class LocaleURLNode(template.Node):
 def locale_url(parser, token):
     node = template.defaulttags.url(parser, token)
     return LocaleURLNode(node)
+
+
+@register.simple_tag
+def language_name(language_code):
+    return dict(settings.LANGUAGES).get(language_code, language_code)

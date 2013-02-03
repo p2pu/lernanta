@@ -1,0 +1,26 @@
+{% extends "courses/course_base.html" %}
+{% load l10n_tags %}
+{% load i18n %}
+{% load learn_tags %}
+{% load embed %}
+{% load content2_tags %}
+
+{% block tab-pane-content %}
+  {% if about.content|length == 0 %}
+    {% if can_edit %}
+      <div class="alert alert-info">
+        <p class="text-info">{% blocktrans %}You can add some information here by editing this page!</a>{% endblocktrans %}
+        </p>
+      </div>
+    {% endif %}
+  {% else %}
+    <div>{{about.content|convert_content|embed|safe}}</div>
+  {% endif %}
+  <p>
+  {% if can_edit %}
+    <p>
+      <a class="btn" href="{% locale_url courses_content_edit course_id=course.id content_id=about.id %}?next_url={{course_url}}"><i class="icon-edit"></i> {% trans "edit" %}</a>
+    </p>
+  {% endif %}
+  </p>
+{% endblock %}

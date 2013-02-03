@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n_tags %}
+
+{% block title %}{{content.title}}{% endblock %}
+{% block bodyclasses %}course-content{% endblock%}
+
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/course.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}pagedown/pagedown.css">
+{% endblock %}
+
+{% block breadcrumbs_title %}
+  <h1 id="project-name">
+    <a href="{% locale_url courses_show course_id=course.id slug=course.slug%}">{{course.title}}</a></h1>
+{% endblock %}
+
+{% block breadcrumbs %}
+  <li>
+    <span class="divider">&rsaquo;</span>
+    <a href="{% locale_url courses_show course_id=course.id slug=course.slug%}">{{course.title}}</a>
+  </li>
+
+{% endblock %}
+
+{% block body %}
+<div class="row">
+  <div id="sidebar-wrapper" class="span3">
+    {% include "courses/course_sidebar.html" %}
+  </div>
+   
+  <div id="content-container" class="span9">
+    <h2>{{ content.title }}</h2>
+    {% include "courses/content_form_snip.html" %}
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+  <script src="{{ STATIC_URL }}pagedown/Markdown.Converter.js"></script>
+  <script src="{{ STATIC_URL }}pagedown/Markdown.Sanitizer.js"></script>
+  <script src="{{ STATIC_URL }}pagedown/Markdown.Editor.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var converter1 = Markdown.getSanitizingConverter();
+      var editor1 = new Markdown.Editor(converter1, "id_content");
+      editor1.run();
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#preview-tab').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+        $("#content-preview-placeholder").load(
+            "{% locale_url courses_preview_content %}",
+            {
+                "content":$("#id_content").attr("value"),
+                "csrfmiddlewaretoken": "{{ csrf_token }}"
+            }
+        );
+      });
+    });
+  </script>
+
+{% endblock %}

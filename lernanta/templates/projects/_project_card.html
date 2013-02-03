@@ -1,39 +1,38 @@
 {% load l10n_tags %}
-<article class="project card {% if project.accepted_school %}background-{{ project.accepted_school.slug }}{% endif%}">
-  <figure>
-    <a href="{{ project.get_absolute_url }}">
-      {% if project.image %}
+<!-- Article tag currently unused in new mock up; Code retained for possible reference to intended background change based on school -->
+<!-- <article class="project card {% if project.accepted_school %}background-{{ project.accepted_school.slug }}{% endif%}"> ... </article> -->
+
+<div class="thumbnail">
+  <a href="{{ project.get_absolute_url }}">
+    {% if project.image %}
       <img src="{{ MEDIA_URL }}{{ project.image }}" width="203" height="125" alt="{{ project.name }}"/>
-      {% else %}
+    {% else %}
       <img src="{{ STATIC_URL}}images/project-missing.png" width="203" height="125" alt="{{ project.name }}"/>
-      {% endif %}
-    </a>
-  </figure>
-  <div class="info">
-    <h1><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></h1>
-    <!-- 
-     ! TODO: set a character maximum for project.description that works
-     ! with this layout. See also /static/css/batucada.css line ~485
-     -->  
-    <div class="description">{{ project.short_description }}</div>
+    {% endif %}
+  </a>
+  <div class="caption">
+    <h3><a href="{{ project.get_absolute_url }}"><span class="truncate-to-2-lines">{{ project.name }}<br /></span></a></h3>
+    <span class="truncate-to-3-lines">{{ project.short_description }}</span>
   </div>
-  <div class="meta">
-    <dl class="updates">
-      <dd>{{ project.activities.count }}</dd>
-      <dt>{{ _('Updates') }}</dt>
+  <div class="well well-large">
+    {% if project.duration_hours %}
+      <dl>
+        <dt><span class="label">{{ _('Time to Finish') }}</span></dt>
+        <dd><span class="badge"> {{ project.duration_hours }} {{ _('hrs') }}</span></dd>
+      </dl>
+    {% endif %}
+    <dl>
+      <dt><span class="label">{{ _('Peers') }}</span></dt>
+      <dd><span class="badge">{{ project.participants.count }}</span></dd>
     </dl>
-    <dl class="participants">
-      <dd>{{ project.participants.count }}</dd>
-      <dt>{{ _('Participants') }}</dt>
-    </dl>
-    <dl class="followers">
+    <dl>
       {% if project.is_challenge %}
-        <dd>{{ project.get_badges.count }}</dd>
-        <dt>{{ _('Badges') }}</dt>
+        <dt><span class="label">{{ _('Badges') }}</span></dt>
+        <dd><span class="badge">{{ project.get_badges.count }}</span></dd>
       {% else %}
-        <dd>{{ project.non_participant_followers.count }}</dd>
-        <dt>{{ _('Followers') }}</dt>
+        <dt><span class="label">{{ _('Followers') }}</span></dt>
+        <dd><span class="badge">{{ project.non_participant_followers.count }}</span></dd>
       {% endif %}
     </dl>
   </div>
-</article>
+</div>

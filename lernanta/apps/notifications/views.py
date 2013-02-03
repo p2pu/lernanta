@@ -72,7 +72,7 @@ def notifications_create(request):
         Json data should look like:
         {
             api-key: '34jsd8s04kl24j50sdf809sdfj',
-            user: 'https://api.p2pu.org/alpha/users/username/',
+            user: 'username',
             subject: 'Notification subject',
             text: 'Notification text.\nProbably containing multiple paragraphs',
             callback: 'https://mentors.p2pu.org/api/reply',

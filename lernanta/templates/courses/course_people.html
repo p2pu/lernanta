@@ -1,0 +1,37 @@
+{% extends "courses/course_base.html" %}
+{% load l10n_tags %}
+{% load i18n %}
+{% load learn_tags %}
+{% load embed %}
+
+{% block tab-pane-content %}
+  <div id="learner-list" class="user-list">
+    <h3>{% trans "Learners" %}</h3>
+    <ul class="thumbnails">
+      {% for user in cohort.users.values %}
+        {% if user.role == "LEARNER" %}
+          {% include "courses/course_user_snip.html" %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="learner-list" class="user-list">
+    <h3>{% trans "Organizers" %}</h3>
+    <ul class="thumbnails">
+    {% for user in cohort.users.values %}
+      {% if user.role == "ORGANIZER" %}
+        {% include "courses/course_user_snip.html" %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+  {% if can_edit %}
+    <p>
+      <form action="{% locale_url courses_add_user course_id=course.id %}" method="POST">
+        {% csrf_token %}
+        <p><input type="text" name="username" autocomplete="off"/></p>
+        <button type="submit">{% trans "Add user" %}</button>
+      </form>
+    </p>
+  {% endif %}
+{% endblock %}

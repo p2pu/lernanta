@@ -1,22 +1,23 @@
 {% extends "schools/school_edit.html" %}
 {% load l10n_tags %}
+{% load i18n %}
 {% block bodyclasses %}school edit featured{% endblock %}
 
 {% block form %}
 <fieldset id="school_edit_featured" class="school edit featured_groups tabpane">
 <h2>{{ _('Featured') }}</h2>
-<p class="hint">{{ _('View, add and remove featured study groups, courses, ... to this school.') }}</p>
+<p class="hint">{% trans "View, add and remove featured courses to this school." %}</p>
 <form action="{% locale_url schools_edit_featured slug=school.slug %}" method="post">
   {% csrf_token %}
+  <input type="hidden" id="id_course_url" name="course_url"></input>
   <p>
-    <div class="field featured_group project{% if form.project.errors %} error{% endif %}">
-      <label for="id_project">{{ _('Short Name') }}</label>
-      {{ form.project }}
-      {{ form.project.errors }}
+    <div class="field featured_group project">
+      <label for="id_course_title">{% trans "Course Title" %}</label>
+      <input type="text" id="id_course_title" name="course_title"></input>
     </div>
   </p>
   <p class="buttons add-featured">
-    <button type="submit">{{ _('Add') }}</button>
+    <button type="submit">{% trans "Add" %}</button>
   </p>
 </form>
 
@@ -29,12 +30,13 @@
   </tr>
 </thead>
 <tbody>
-  {% for project in featured %}
+  {% for course in featured %}
     <tr>
-      <td class="name"><a href="{{ project.get_absolute_url }}">{{ project.name }}</a></td>
+      <td class="name"><a href="{{ project.url }}">{{ course.title }}</a></td>
       <td class="actions">
-        <form action="{% locale_url schools_edit_featured_delete slug=school.slug project_slug=project.slug %}" method="post">
+        <form action="{% locale_url schools_edit_featured_delete slug=school.slug %}" method="post">
           {% csrf_token %}
+          <input type="hidden" value="{{course.url}}" name="course_url"></input>
           <button type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
         </form>
       </td>
@@ -49,13 +51,11 @@
 
 {% block js %}
   <script type="text/javascript">
-    $('#id_project').autocomplete({
-        source: function( request, response ) {
-                url = "{% url matching_non_featured slug=school.slug %}?term=" + request.term;
-                $.getJSON(url, function(data) {
-                    response(data);
-                });
-            }
+    $('#id_course_title').autocomplete({
+        source: "{% locale_url learn_auto_complete_lookup %}",
+        select: function( event, ui ) {
+            $('#id_course_url').val(ui.item.url);
+        }
     });
   </script>
 {% endblock %}

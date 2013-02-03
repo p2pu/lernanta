@@ -4,41 +4,44 @@
 {% load activity_tags %}
 {% load badge_tags %}
 
-<li class="post-container">
-  <a name="activity-{{ activity.id }}"></a>
-  {% if user.is_authenticated %}
-    {% if user.id != activity.actor.id %}
-      <a class="report abuse action" href="{% locale_url drumbeat_abuse model="activity" app_label="activity" pk=activity.id %}">{{ _('Report Abuse') }}</a>
-      {% if is_challenge and activity.scope_object %}
-        <div class="action-top">
-          {% give_badge_action activity.scope_object activity.actor %}
-        </div>
+<div class="post-container span12">  
+<div class="row-fluid">
+  <div class="span2">
+    <a href="{{ activity.actor.get_absolute_url }}">
+      <img class="member-picture" width="80px" height="80px" src="{{ activity.actor.image_or_default }}" alt="{{ activity.actor }}">
+    </a>
+  </div>
+  <div class="span10">
+  <!-- <div class="pull-right"> -->
+    <a name="activity-{{ activity.id }}"></a>
+    {% if user.is_authenticated %}
+      {% if user.id != activity.actor.id %}
+        <a class="report abuse action" href="{% locale_url drumbeat_abuse model="activity" app_label="activity" pk=activity.id %}">{{ _('Report Abuse') }}</a>
+        {% if is_challenge and activity.scope_object %}
+          <span class="action-top">
+            {% give_badge_action activity.scope_object activity.actor %}
+          </span>
+        {% endif %}
+      {% else %}
+        <a class="action delete" href="{% locale_url activity_delete activity_id=activity.id %}">{{ _('Delete') }}</a>
       {% endif %}
-    {% else %}
-      <a class="action delete" href="{% locale_url activity_delete activity_id=activity.id %}">{{ _('Delete') }}</a>
+      {% activity_reply_action activity user %}
     {% endif %}
-    {% activity_reply_action activity user %}
-  {% endif %}
-  <a href="{{ activity.actor.get_absolute_url }}">
-    <img class="member-picture" width="54" height="54" src="{{ activity.actor.image_or_default }}" alt="{{ activity.actor }}">
-  </a>
+  <!-- </div> -->
 
-  <div class="post-contents">
-
-    <div class="post-details">
-      <a class="member-name" href="{{ activity.actor.get_absolute_url }}">{{ activity.actor }}</a>
-      {% if activity.scope_object %}
-        {{ _('at') }}
-        <a class="member-name" href="{{ activity.scope_object.get_absolute_url }}">{{ activity.scope_object.name|slice:":50" }}</a>
-      {% endif %}
-    </div>
-
-    <div class="post-body">
-      {% include "activity/_activity_body.html" %}
-    </div> <!-- /.post-body -->
-
-    <div class="post-details">
-      {{ activity|time_since }}
+  <div>
+    <a class="member-name" href="{{ activity.actor.get_absolute_url }}">{{ activity.actor }}</a>
+    {% if activity.scope_object %}
+      {{ _('at') }}
+      <a class="member-name" href="{{ activity.scope_object.get_absolute_url }}">{{ activity.scope_object.name|slice:":50" }}</a>
+    {% endif %}
+  </div>
+  <div class="activity-body">
+    {% include "activity/_activity_body.html" %}
+  </div>
+  <div>
+    <span class="reference-link-area">
+      <a href="#" onclick="return false">{{ activity|time_since }}</a>
       {{ _('via') }}
       {% if activity.target_object.link %}
         <a href="{{ activity.target_object.link.url }}">{{ activity.target_object.link.name }}</a>
@@ -56,10 +59,11 @@
           </a>
         </div>
       {% endif %}
-    </div>
+    </span>
+  </div>        
 
-    <div class="clear ir"></div>
+  </div>
+</div>
+</div>
+  
 
-  </div> <!-- /.post-contents -->
-
-</li> <!-- /li.post-container -->

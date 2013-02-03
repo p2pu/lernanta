@@ -30,11 +30,13 @@
   {% activity_filters request project.get_absolute_url %}
 {% endif %}
 
+{% if pagination_current_page.object_list %}
 <ul id="posts">
   {% for activity in pagination_current_page.object_list %}
     {% include "activity/_activity_resource.html" %}
   {% endfor %}
 </ul>
+{% endif %}
 
 {% with prefix='' page_url=wall_url %}
   {% pagination_links %}

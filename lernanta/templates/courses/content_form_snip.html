@@ -1,0 +1,38 @@
+{% load i18n %}
+{% load l10n_tags %}
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="next_url" value="{{next_url}}"/>
+  {% include "courses/content_form_buttons_snip.html" %}
+  <div class="tabbable">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#edit-tab-pane" data-toggle="tab">{% trans "Edit" %}</a></li>
+      <li><a id="preview-tab" href="#preview-tab-pane" data-toggle="tab">{% trans "Preview" %}</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="edit-tab-pane">
+        <div id="content-editor" class="">
+          <p>
+            <label for="id_title">{% trans "Title" %}</label>
+            {{ form.title.errors }}
+            <input class="span8" type="text" id="id_title" name="title" value="{{form.title.value|default_if_none:""}}"/>
+          </p>
+          <p>
+            <label for="id_content">{% trans "Content" %}</label>
+            {{ form.content.errors }}
+            <div id="id_content-wmd-button-bar"></div>
+            <textarea id="id_content" name="content" class="span8" rows="20">{{form.content.value|default_if_none:""}}</textarea>
+            <p class="help-block">{% blocktrans %}You can use markdown for your content. For some help on using markdown, look <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">here</a>{% endblocktrans %}</p>
+          </p>
+        </div>
+      </div>
+      <div class="tab-pane" id="preview-tab-pane">
+        <div class="hidden" id="id_content-wmd-preview"></div>
+        <div id="content-preview-placeholder"></div>
+      </div>
+      {% include "courses/content_form_buttons_snip.html" %}
+    </div>
+  </div>
+</form>
+

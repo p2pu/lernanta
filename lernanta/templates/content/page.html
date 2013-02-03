@@ -10,35 +10,32 @@
 
 {% block bodyid %}page{% endblock %}
 
-{% block project_breadcrumbs %}
-  <span class="arrow">&rsaquo;</span>
-  <a href="{% locale_url projects_task_list slug=project.slug %}">{{ _('Task List') }}</a>
-  <span class="arrow">&rsaquo;</span>
-  <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+{% block project_breadcrumbs %} 
+  <li class="active"><span class="divider">&rsaquo;</span>{{ page.title }}</li>
 {% endblock %}
 
 {% block breadcrumbs_actions%}
   {% if can_edit %}
-    <a class="button" href="{% locale_url page_edit slug=project.slug page_slug=page.slug %}">{{ _('Edit') }}</a>
-    {% if page.listed %}<a class="button" href="{% locale_url page_delete slug=project.slug page_slug=page.slug %}">{{ _('Delete') }}</a>{% endif %}
+    <a class="btn" href="{% locale_url page_edit slug=project.slug page_slug=page.slug %}">{{ _('Edit') }}</a>
+    {% if page.listed %}<a class="btn" href="{% locale_url page_delete slug=project.slug page_slug=page.slug %}">{{ _('Delete') }}</a>{% endif %}
   {% endif %}
-  <a class="button" href="{% locale_url page_history slug=project.slug page_slug=page.slug %}">{{ _('View History') }}</a>
+  <a class="btn btn-primary" href="{% locale_url page_history slug=project.slug page_slug=page.slug %}">{{ _('View History') }}</a>
 {% endblock %}
 
 {% block body %}
 {% sidebar %}
+<div class="content-wrapper">
 <div id="main" class="content_page">
-  
-	<ul id="task-nav">
-	  <li class="tasks">
-	    <p class="task-nav-header">{{ _('Task Navigation') }}</p>
-	      <ul class="task-nav-list">
+  <!-- margin-top is a temporary hack until we get this page all bootstraperized -->
+        <div class="dropdown pull-right" style="margin-top: 5px;">
+          <a class="btn dropdown-toggle" data-toggle="dropdown">{{ _('Task Navigation') }}&nbsp;<b class="caret"></b></a>
+          <ul class="dropdown-menu">
             {% for task in all_listed_pages %}
-	          <li class="task-sub-nav"><a href="{{ task.get_absolute_url }}">{{ forloop.counter }}. {{ task.title }}</a></li>
+	          <li class=""><a href="{{ task.get_absolute_url }}">{{ forloop.counter }}. {{ task.title }}</a></li>
             {% endfor %}
-	      </ul>
-	    </li>
-	</ul>
+          </ul>
+        </div>
+
 
   {% if user.is_authenticated %}
     <p class="supplemental_actions"><a class="report abuse action" href="{% locale_url drumbeat_abuse model="page" app_label="content" pk=page.id %}">{{_('Report Abuse')}}</a></p>
@@ -76,5 +73,6 @@
       {% pagination_links %}
     {% endwith %}
   </div>
+ </div>
 {% endblock %}
 

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load l10n_tags %}
+
+{% block title %}Create a new course{% endblock %}
+{% block bodyclasses %}course-create{% endblock%}
+
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/course.css">
+{% endblock %}
+
+{% block links %}
+{% endblock %}
+
+{% block breadcrumbs_title %}
+    <h1>{% trans "Create a new course" %}</h1>
+{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="span3">
+      {% blocktrans %}
+        <h2>Ready to create a course?</h2>
+        <p>First, give your course a title--we recommend something zippy, snappy and attention-grabby.</p>
+        <p>Next, create a "hashtag" or handle for your course.</p>
+        <p>Give a few more details in the "description" field, hit the button and voilà! You've created a P2PU course!</p>
+        <p>Need further guidance on how to make a stellar experience? Check out the <a href="https://p2pu.org/en/groups/make-a-course/">"Create a Course"</a> materials!</p>
+        <p>Be sure to have a look at our <a href="/groups/list/community/">featured</a> courses for good examples.</p>
+        <p>If you'd like help or feedback on your course, drop a line to the P2PU Community <a href="http://groups.google.com/group/p2pu-community" target="_blank">mailing list</a> and say 'Hi'.</p>
+      {% endblocktrans %}
+    </div>
+
+    <div class="span7 offset1">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <p>
+          <label for="id_title">{% trans "Course Title:" %}</label>
+          {{form.title.errors}}
+          <input class="span6" type="text" name="title" id="id_title" placeholder="{% trans "A catchy title for the course, ex. 'Get CC Savvy'" %}" value="{{form.title.value|default_if_none:""}}"/>
+          <span class="help-inline"></span>
+        </p>
+        <p>
+          <label for="id_hashtag">{% trans "Hashtag:"%} <a class="form-tip" href="#" rel="tooltip" data-original-title="{% trans "Specify a short hashtag of up to 20 characters that should be used when sending out notifications and tweets about the course."%}">?</a></label> 
+          {{form.hashtag.errors}}
+
+          <input class="span6" type="text" name="hashtag" id="id_hashtag" placeholder="{% trans "A short handle for the course, ex. 'ccsavvy'" %}" value="{{form.hashtag.value|default_if_none:""}}"/>
+
+        </p>
+        <p>
+          <label for="id_description">{% trans "Description:" %} <a class="form-tip" href="#" rel="tooltip" data-original-title="{% trans "This description is used in places where your course will be listed."%}">?</a></label> 
+          {{form.description.errors}}
+          <textarea class="span6" id="id_description" rows="4" name="description" placeholder="{% trans "A brief description of what the course is about, ex. 'Learn when, where and how to use a CC license'" %}">{{form.description.value|default_if_none:""}}</textarea>
+        </p>
+        <p>
+          <label for="id_language">Language: <a class="form-tip" href="#" rel="tooltip" data-original-title="{% trans "This is the language that your course will use. It will help people searching for courses in a particular language."%}">?</a></label>
+          {{ form.language }}
+        </p>
+        <button class="btn-primary" type="submit">{% trans "Create my course!" %}</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $(".form-tip").tooltip({placement:"right"});
+    });
+  </script>
+{% endblock %}

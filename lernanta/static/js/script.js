@@ -287,43 +287,7 @@ var batucada = {
     },
 };
 
-
-$(document).ready(function() {
-    // dispatch per-page onload handlers
-    var ns = window.batucada;
-    var bodyId = document.body.id;
-    if (ns && ns[bodyId] && (typeof ns[bodyId].onload == 'function')) {
-        ns[bodyId].onload();
-    }
-    // attach handlers for elements that appear on most pages
-     $('#main-nav').find('li.menu').bind('mouseover mouseout', function(event) {
-        $(this).toggleClass('open');
-    });
-
-    $('#user-nav').find('li.menu').bind('mouseover mouseout', function(event) {
-        $(this).toggleClass('open');
-    });
-
-    // modals using jQueryUI dialog
-    $('.button.openmodal').live('click', function(){
-        var url = this.href;
-        var selector = '.modal';
-        var urlFragment =  url + ' ' + selector;
-        var dialog = $('<div></div>').appendTo('body');
-        // load remote content
-        dialog.load(
-            urlFragment,
-            function (responseText, textStatus, XMLHttpRequest) {
-                dialog.dialog({
-                    draggable: true
-                });
-            }
-        );
-        // prevent the browser to follow the link
-        return false;
-    });
-
-	// initialize and set trunk8 plugin
+function applyTruncate(){
 	$('.truncate-to-1-line').trunk8({
 	   lines: 1
 	});
@@ -363,6 +327,47 @@ $(document).ready(function() {
 	$('.truncate-to-10-lines').trunk8({
 	   lines: 10
 	});
+};
+
+
+
+$(document).ready(function() {
+    // dispatch per-page onload handlers
+    var ns = window.batucada;
+    var bodyId = document.body.id;
+    if (ns && ns[bodyId] && (typeof ns[bodyId].onload == 'function')) {
+        ns[bodyId].onload();
+    }
+    // attach handlers for elements that appear on most pages
+     $('#main-nav').find('li.menu').bind('mouseover mouseout', function(event) {
+        $(this).toggleClass('open');
+    });
+
+    $('#user-nav').find('li.menu').bind('mouseover mouseout', function(event) {
+        $(this).toggleClass('open');
+    });
+
+    // modals using jQueryUI dialog
+    $('.button.openmodal').live('click', function(){
+        var url = this.href;
+        var selector = '.modal';
+        var urlFragment =  url + ' ' + selector;
+        var dialog = $('<div></div>').appendTo('body');
+        // load remote content
+        dialog.load(
+            urlFragment,
+            function (responseText, textStatus, XMLHttpRequest) {
+                dialog.dialog({
+                    draggable: true
+                });
+            }
+        );
+        // prevent the browser to follow the link
+        return false;
+    });
+
+	// initialize and set trunk8 plugin
+    applyTruncate();
 
     $('li.contribute-nav').click(function(){
     	var number = $(this).index();
@@ -750,6 +755,7 @@ function updateLearnProjectList(data) {
     var projects_pagination = data['projects_pagination'];
     $('#learn #main #project-list').append(projects_html);
     $('#learn #main #learn-pagination').html(projects_pagination);
+    applyTruncate();
 }
 
 function reloadLearnProjectList(data) {

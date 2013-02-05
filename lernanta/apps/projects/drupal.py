@@ -51,7 +51,7 @@ def get_course(slug, full=False):
     try:
         try:
             alias = UrlAlias.objects.using(DRUPAL_DB).get(dst=slug)
-        except UrlAlias.DoesNotExist:
+        except:
             return course
         nid = int(alias.src[len('node/'):])
         node = Node.objects.using(DRUPAL_DB).get(type=COURSE_TYPE, nid=nid)

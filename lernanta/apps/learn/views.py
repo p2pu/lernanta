@@ -38,7 +38,7 @@ def _filter_and_return(request, context, projects, max_count):
     if filter_tags:
         projects = get_courses_by_tags(filter_tags, projects)
 
-    language = request.session['search_language']
+    language = request.session.get('search_language', 'all')
     projects = get_courses_by_language(language, projects)
 
     context['popular_tags'] = get_tags_for_courses(projects, filter_tags)

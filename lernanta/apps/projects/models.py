@@ -275,7 +275,7 @@ class Project(ModelBase):
         try:
             learn_model.update_course_listing(**self.get_learn_api_data())
         except:
-            pass
+            learn_model.add_course_listing(**self.get_learn_api_data())
 
         course_url = reverse('projects_show', kwargs={'slug': self.slug})
         course_lists = learn_model.get_lists_for_course(course_url)

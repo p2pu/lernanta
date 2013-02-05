@@ -255,7 +255,8 @@ def project_user_list(request, project, max_count=64, with_sections=False,
     if is_challenge:
         organizers = project.adopters().order_by('-organizing', '-id')
         participants = project.non_adopter_participants().order_by('-id')
-        followers = project.completed_tasks_users()
+        #followers = project.completed_tasks_users()
+        followers = project.non_participant_followers()
     else:
         organizers = project.organizers()
         participants = project.non_organizer_participants()

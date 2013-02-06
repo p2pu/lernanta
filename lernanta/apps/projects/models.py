@@ -254,24 +254,10 @@ class Project(ModelBase):
     def create(self):
         self.save()
         self.send_creation_notification()
-        learn_data = self.get_learn_api_data()
-        learn_model.add_course_listing(**learn_data)
-        learn_model.add_course_to_list(learn_data['course_url'], 'drafts')
 
-
-    def save(self):
-        """Make sure each project has a unique slug."""
-        count = 1
-        if not self.slug:
-            slug = slugify(self.name)
-            self.slug = slug
-            while True:
-                existing = Project.objects.filter(slug=self.slug)
-                if len(existing) == 0:
-                    break
-                self.slug = "%s-%s" % (slug, count + 1)
-                count += 1
-
+    def update_learn_api(self):
+        if not self.pk:
+            return
         try:
             learn_model.update_course_listing(**self.get_learn_api_data())
         except:
@@ -297,6 +283,25 @@ class Project(ModelBase):
             if desired_list not in list_names:
                 learn_model.add_course_to_list(course_url, desired_list)
 
+
+    def save(self):
+        """Make sure each project has a unique slug."""
+        count = 1
+        if not self.slug:
+            slug = slugify(self.name)
+            self.slug = slug
+            while True:
+                existing = Project.objects.filter(slug=self.slug)
+                if len(existing) == 0:
+                    break
+                self.slug = "%s-%s" % (slug, count + 1)
+                count += 1
+
+        try:
+            self.update_learn_api()
+        except:
+            log.error('Could not update course info in the learn API')
+        
         super(Project, self).save()
 
 

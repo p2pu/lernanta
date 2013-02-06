@@ -68,11 +68,11 @@ urlpatterns = patterns('',
         'courses.views.show_course',
         name='courses_show'),
 
-    url(r'^(?P<course_id>[\d]+)/remove_user/(?P<username>[\w\-\.]+)/$',
+    url(r'^(?P<course_id>[\d]+)/remove_user/(?P<username>[\w\-\. ]+)/$',
         'courses.views.course_leave',
         name='courses_leave'),
 
-    url(r'^(?P<course_id>[\d]+)/add_organizer/(?P<username>[\w\-\.]+)/$',
+    url(r'^(?P<course_id>[\d]+)/add_organizer/(?P<username>[\w\-\. ]+)/$',
         'courses.views.course_add_organizer',
         name='courses_add_organizer'),
 

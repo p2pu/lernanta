@@ -13,6 +13,7 @@ from django.core.exceptions import PermissionDenied
 
 from l10n.urlresolvers import reverse
 from users.models import UserProfile
+from users.decorators import login_required
 from notifications.models import send_notifications
 from drumbeat.models import send_abuse_report
 from drumbeat.forms import AbuseForm, AbuseReasonForm
@@ -44,6 +45,7 @@ def server_error(request):
     })))
 
 
+@login_required
 def report_abuse(request, model, app_label, pk):
     """Report abusive or irrelavent content."""
     if request.method == 'POST':
@@ -72,6 +74,7 @@ def report_abuse(request, model, app_label, pk):
     }, context_instance=RequestContext(request))
 
 
+@login_required
 def prompt_abuse_reason(request):
     form = AbuseReasonForm(request.POST)
     if form.is_valid():

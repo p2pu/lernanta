@@ -51,12 +51,6 @@ class PageViewTrackerMiddleware:
             now = datetime.datetime.now()
             profile = request.user.get_profile()
             pageview.user = request.user
-            try:
-                profile.last_active = now
-                profile.save()
-            except Exception, error:
-                msg = 'An error occurred saving user record: %s'
-                logging.error(msg % error)
 
         try:
             pageview.save()

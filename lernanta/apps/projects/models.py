@@ -266,14 +266,14 @@ class Project(ModelBase):
         course_url = reverse('projects_show', kwargs={'slug': self.slug})
         course_lists = learn_model.get_lists_for_course(course_url)
         list_names = [ l['name'] for l in course_lists ]
-        if self.not_listed:
+        if self.not_listed or self.test:
             for list_name in list_names:
                 learn_model.remove_course_from_list(course_url, list_name)
         else:
             desired_list = 'drafts'
-            if self.under_development == False and self.archived == False:
+            if not (self.under_development or self.archived):
                 desired_list = 'listed'
-            elif self.archived == True:
+            elif self.archived:
                 desired_list = 'archived'
             possible_lists = ['drafts', 'listed', 'archived']
             possible_lists.remove(desired_list)

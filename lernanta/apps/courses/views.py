@@ -427,11 +427,13 @@ def course_update_tags( request, course_id ):
 def show_content( request, course_id, content_id):
     content_uri = '/uri/content/{0}'.format(content_id)
     user_uri = "/uri/user/{0}".format(request.user.username)
+    context = _populate_course_context(request, course_id, {})
+
+    if not any( c['uri'] == content_uri for c in context['course']['content']):
+       raise http.Http404
+
     content = content_model.get_content(content_uri)
-    context = { 
-        'content': content, 
-    }
-    context = _populate_course_context(request, course_id, context)
+    context['content'] = content
     context['content_active'] = True
     #context['comments'] = course_model.get_cohort_comments(cohort['uri'], content['uri'])
     context['form'] = ContentForm(content)

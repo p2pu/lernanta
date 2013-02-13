@@ -1,5 +1,6 @@
 from django.test import Client
 from django.contrib.auth.models import User
+from users.models import create_profile
 
 from test_utils import TestCase
 
@@ -10,8 +11,12 @@ from content2 import models as content_model
 class CourseTests(TestCase):
 
     test_username = 'testuser'
-    test_email = 'test@mozillafoundation.org'
+    test_email = 'test@mail.org'
     test_password = 'testpass'
+
+    test_username2 = 'bob'
+    test_email2 = 'bob@mail.org'
+    test_password2 = '13245'
 
     test_title = "A test course"
     test_hashtag = "hashtag"
@@ -20,6 +25,24 @@ class CourseTests(TestCase):
     def setUp(self):
         self.client = Client()
         self.locale = 'en'
+
+        django_user = User(
+            username=self.test_username,
+            email=self.test_email,
+        )
+        self.user = create_profile(django_user)
+        self.user.set_password(self.test_password)
+        self.user.save()
+        
+        django_user2 = User(
+            username=self.test_username2,
+            email=self.test_email2,
+        )
+        self.user2 = create_profile(django_user2)
+        self.user2.set_password(self.test_password2)
+        self.user2.save()
+
+
         self.course = course_model.create_course(
             **{
                 "title": self.test_title,
@@ -29,14 +52,7 @@ class CourseTests(TestCase):
                 "organizer_uri": '/uri/users/testuser',
             }
         )
-        #django_user = User(
-        #    username=self.test_username,
-        #    email=self.test_email,
-        #)
-        #self.user = create_profile(django_user)
-        #self.user.set_password(self.test_password)
-        #self.user.save()
-
+        
     def test_course_creation(self):
         course = course_model.create_course(
             **{

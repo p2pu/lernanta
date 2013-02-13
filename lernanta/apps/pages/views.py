@@ -23,9 +23,3 @@ def show_page(request, slug):
         'pages/page.html', {'page': page, },
         context_instance=RequestContext(request)
     )
-
-
-def jobs_page(request):
-    raise http.Http404
-    return render_to_response('pages/jobs_page.html', {},
-        context_instance=RequestContext(request))

@@ -3,24 +3,27 @@ from django.conf import settings
 from django.utils.translation import ugettext as _
 from django.forms.widgets import RadioSelect
 
+import re
+
+class HashtagField(forms.CharField):
+    def clean(self, value):
+        if not re.match('^[#]*[a-z,A-Z][a-z,A-Z,0-9,_,-]*$', value):
+            raise forms.ValidationError(_("The hashtag must start with letter and contain only letters, digits, _ and -"))
+        return super(HashtagField, self).clean(value.strip('#'))
+
+
 class CourseCreationForm(forms.Form):
     title = forms.CharField()
-    hashtag = forms.CharField(max_length=20)
+    hashtag = HashtagField(max_length=20)
     description = forms.CharField(widget=forms.Textarea)
     language = forms.ChoiceField(choices=settings.LANGUAGES)
-
-    def clean_hashtag(self):
-        return self.cleaned_data['hashtag'].strip('#')
 
 
 class CourseUpdateForm(forms.Form):
     title = forms.CharField(required=False)
-    hashtag = forms.CharField(required=False, max_length=20)
+    hashtag = HashtagField(required=False, max_length=20)
     description = forms.CharField(widget=forms.Textarea, required=False)
     language = forms.ChoiceField(choices=settings.LANGUAGES, required=False)
-
-    def clean_hashtag(self):
-        return self.cleaned_data['hashtag'].strip('#')
 
 
 class CourseImageForm(forms.Form):

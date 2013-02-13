@@ -39,8 +39,8 @@ class UserActivityMiddleware:
     def process_request(self, request):
         if request.user.is_authenticated():
             now = datetime.datetime.now()
-            profile = request.user.get_profile()
             try:
+                profile = request.user.get_profile()
                 profile.last_active = now
                 profile.save()
             except Exception, error:

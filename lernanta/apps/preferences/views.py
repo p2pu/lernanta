@@ -138,14 +138,10 @@ def delete(request):
     profile = request.user.get_profile()
     current_projects = profile.get_current_projects()
     pending_projects = []
-    for project in current_projects['organizing']:
-        if not project.archived and project.organizers().count() == 1:
-            pending_projects.append(project)
-    msg = _('You are the only organizer of %s active ')
-    msg += _('study groups, courses, ...')
     if request.method == 'POST':
-        if pending_projects:
-            messages.error(request, msg % len(pending_projects))
+        if len(current_projects['organizing']) > 0:
+            msg = _('You are the organizer of %s active courses. You need to archive these courses or remove yourself as organizer before you can delete your profile.')
+            messages.error(request, msg % len(current_projects['organizing']))
             return HttpResponseRedirect(reverse('preferences_delete'))
         profile.deleted = True
         profile.user.is_active = False

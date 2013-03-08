@@ -7,7 +7,9 @@
   {% else %}{% if learn_fresh %}
     {{ _('Featured - Fresh Additions') }}
   {% else %}{% if learn_school %}
-    {{ learn_school }}
+      <a href="{{ learn_school.get_absolute_url }}">
+         {{ learn_school.name }}
+      </a>
   {% else %}{% if learn_tag %}
     {{ _('Tags - ') }} '{{ learn_tag }}'
   {% else %}

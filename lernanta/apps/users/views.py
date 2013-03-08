@@ -81,7 +81,7 @@ def _clean_redirect_url(request, field_name):
     """Prevent us from redirecting unauthorized external urls."""
     gets = request.GET.copy()
     url = urllib2.unquote(gets[field_name])
-    invalid_redirect = (url and '://' in url)
+    invalid_redirect = (url and not url.startswith('/oauth/') and '://' in url)
     for sso_redirect in settings.SSO_EXTERNAL_REDIRECTS:
         if url.startswith(sso_redirect):
             invalid_redirect = False

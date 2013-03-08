@@ -29,6 +29,7 @@ urlpatterns = patterns('',
     (r'reviews/',        include('reviews.urls')),
     (r'notifications/',  include('notifications.urls')),
     (r'api/',            include('api.urls')),
+    (r'^oauth/',         include('oauthprovider.urls')),
     (r'',                include('users.urls')),
 )
 

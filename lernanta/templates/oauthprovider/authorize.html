@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Authorize{% endblock %}
+
+{% block bodyclasses %}signin{% endblock %}
+{% block body %}
+<form action="{{ form_action }}" method="post">
+  {% csrf_token %}
+  <input type="checkbox" name="connect"> Yes, please allow access
+  <input type="submit" value="Submit" />
+</form>
+{% endblock %}

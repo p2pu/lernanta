@@ -6,7 +6,7 @@ from django.contrib.sites.models import Site
 
 from drumbeat.models import ModelBase
 from richtext.models import RichTextField
-from notifications.models import send_notifications
+from notifications.models import send_notifications_i18n
 
 log = logging.getLogger(__name__)
 
@@ -40,7 +40,7 @@ class Review(ModelBase):
             'slug': self.project.slug,
         })
 
-    def send_notifications(self):
+    def send_notifications_i18n(self):
         subject_template = 'reviews/emails/review_submitted_subject.txt'
         body_template = 'reviews/emails/review_submitted.txt'
         context = {
@@ -51,4 +51,4 @@ class Review(ModelBase):
             'domain': Site.objects.get_current().domain, 
         }
         profiles = [recipient.user for recipient in self.project.organizers()]
-        send_notifications(profiles, subject_template, body_template, context)
+        send_notifications_i18n(profiles, subject_template, body_template, context)

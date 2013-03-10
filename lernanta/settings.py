@@ -56,7 +56,7 @@ USE_I18N = True
 USE_L10N = True
 
 SUPPORTED_NONLOCALES = ('media', 'static', '.well-known', 'pubsub', 'broadcasts',
-'ajax', 'api',)
+'ajax', 'api', 'oauth',)
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
@@ -177,6 +177,8 @@ INSTALLED_APPS = (
     'lernanta.apps.api',
     'tastypie',
     'lernanta.apps.media',
+    'oauth2app',
+    'oauthprovider',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

@@ -9,7 +9,7 @@ from django.contrib.contenttypes import generic
 from django.db.models import Q
 from django.conf import settings
 
-from notifications.models import send_notifications
+from notifications.models import send_notifications_i18n
 from drumbeat.models import ModelBase
 from richtext.models import RichTextField
 from activity.schema import object_types
@@ -192,7 +192,7 @@ def send_new_signup_answer_notification(answer):
         'domain': Site.objects.get_current().domain,
     }
     profiles = [recipient.user for recipient in recipients]
-    send_notifications(profiles, subject_template, body_template, context)
+    send_notifications_i18n(profiles, subject_template, body_template, context)
 
 
 ###########

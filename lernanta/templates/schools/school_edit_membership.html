@@ -5,13 +5,13 @@
 {% block form %}
 <fieldset id="school_edit_membership" class="school edit member_groups tabpane">
 <h2>{{ _('Membership') }}</h2>
-<p class="hint">{{ _('View, add and remove study groups, courses, ... to this school.') }}</p>
+<p class="alert alert-info">{{ _('View, add and remove courses to this school.') }}</p>
 <form action="{% locale_url schools_edit_membership slug=school.slug %}" method="post">
   {% csrf_token %}
   <input type="hidden" id="id_course_url" name="course_url"></input>
   <p>
     <label for="id_course_title">{{ _('Course title') }}</label>
-    <input id="id_course_title" type="text" name="course_title">
+    <input id="id_course_title" type="text" name="course_title" class="span12">
   </p>
   <p class="buttons add-membership">
     <button type="submit">{{ _('Add') }}</button>

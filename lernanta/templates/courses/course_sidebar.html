@@ -15,6 +15,17 @@
       </a>
     </figure>
 
+    {% if lists %}
+      <div>
+        <h2>{% trans 'Featured in:' %}</h2>
+        <ul class="unstyled">
+          {% for list in lists %}
+            <li><a href="{{list.url}}">{{list.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
     <div>
       <ul class="nav nav-list">
         <li class="nav-header">{% trans "Navigation"%}</li>

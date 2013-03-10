@@ -2,40 +2,51 @@ import requests
 
 from django.conf import settings
 from django.contrib.sites.models import Site
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMessage, EmailMultiAlternatives
 
 from celery.task import Task
 
 from l10n.models import localize_email
 
-class SendNotifications(Task):
+class TranslateAndSendNotifications(Task):
     """Send email notification to the users specified by ``profiles``."""
-    name = 'notifications.tasks.SendNotifications'
+    name = 'notifications.tasks.TranslateAndSendNotifications'
 
-    def run(self, profiles, subject_template, body_template, context, reply_token=None, sender=None, **kwargs):
+    def run(self, profiles, subject_template, body_template, context, sender, **kwargs):
         log = self.get_logger(**kwargs)
         subjects, bodies = localize_email(subject_template,
             body_template, context)
 
-        from_name = "P2PU Notifications"
-        if sender:
-            from_name = sender
-            
-        from_email = "{0} <{1}>".format(from_name, settings.DEFAULT_FROM_EMAIL)
-        if reply_token:
-            from_email = "{0} <reply+{1}@{2}>".format(from_name, reply_token,
-                settings.REPLY_EMAIL_DOMAIN)
-            
         for profile in profiles:
             if profile.deleted:
                 continue
             subject = subjects[profile.preflang]
             body = bodies[profile.preflang]
-            log.debug("Sending email to user %d with subject %s" % (
-                profile.user.id, subject,))
-            email = EmailMessage(subject, body, from_email, [profile.user.email])
+            log.debug(u"Sending email to %s with subject %s" % (
+                profile.user.username, subject,))
+            email = EmailMessage(subject, body, sender, [profile.user.email])
             email.send()
-            #profile.user.email_user(subject, body, from_email)
+
+
+class SendNotifications(Task):
+    """Send email notification to the users specified by ``profiles``."""
+    name = 'notifications.tasks.SendNotifications'
+
+    def run(self, profiles, subject, text_body, html_body=None, sender=None, **kwargs):
+        log = self.get_logger(**kwargs)
+        log.debug('SendNotifications.run()')
+
+        for profile in profiles:
+            if profile.deleted:
+                continue
+            log.debug(u"Sending email to %s with subject %s" % (
+                profile.user.username, subject,))
+            email = EmailMultiAlternatives(subject, text_body, sender, 
+                [profile.user.email]
+            )
+            if html_body:
+               email.attach_alternative(html_body, "text/html")
+            email.send()
 
 
 class PostNotificationResponse(Task):

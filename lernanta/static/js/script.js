@@ -738,7 +738,7 @@ function updateLearnHeader(data) {
 }
 
 function bindLearnFilters() {
-    $('#learn #sidebar a.filter').click(submitLearnFilterLinks);
+    //$('#learn #sidebar a.filter').click(submitLearnFilterLinks);
     $('#learn #sidebar form#learn-projects-filter select').change(submitLearnFilterFormField);
     $('#learn #sidebar form#learn-projects-filter input').click(submitLearnFilterFormField);
     $('#learn #sidebar form#learn-projects-filter').submit(submitLearnFilterForm);
@@ -818,7 +818,6 @@ function submitLearnFilterForm (e) {
     var form_data = $form.serialize();
     disableLearn();
     $.get(url, form_data, function(data) {
-        console.log(data);
         updateLearnHeader(data);
         updateLearnFilters(data);
         reloadLearnProjectList(data);

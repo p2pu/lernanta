@@ -10,7 +10,7 @@ from django.contrib.contenttypes import generic
 from activity.models import Activity, register_filter
 from activity.schema import object_types, verbs
 from drumbeat.models import ModelBase
-from notifications.models import send_notifications
+from notifications.models import send_notifications_i18n
 from richtext.models import RichTextField
 from l10n.urlresolvers import reverse
 
@@ -79,7 +79,7 @@ class Status(ModelBase):
             })
         callback_url = reverse('page_comment_callback', kwargs=kwargs)
     
-        send_notifications( profiles, subject_template, body_template, context,
+        send_notifications_i18n( profiles, subject_template, body_template, context,
             callback_url, self.author.username )
 
     @staticmethod

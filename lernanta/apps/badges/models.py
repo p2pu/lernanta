@@ -12,7 +12,7 @@ from drumbeat import storage
 from drumbeat.utils import get_partition_id, safe_filename, MultiQuerySet
 from drumbeat.models import ModelBase
 from richtext.models import RichTextField
-from notifications.models import send_notifications
+from notifications.models import send_notifications_i18n
 from l10n.urlresolvers import reverse
 
 
@@ -315,7 +315,7 @@ class Submission(ModelBase):
             'domain': Site.objects.get_current().domain,
         }
         profiles = self.badge.get_adopters()
-        send_notifications(profiles, subject_template, body_template, context)
+        send_notifications_i18n(profiles, subject_template, body_template, context)
 
 
 class Assessment(ModelBase):

@@ -10,7 +10,7 @@ from django.contrib.sites.models import Site
 from drumbeat.models import ModelBase
 from activity.schema import verbs, object_types
 from tracker import statsd
-from notifications.models import send_notifications
+from notifications.models import send_notifications_i18n
 from l10n.urlresolvers import reverse
 
 from richtext.models import RichTextField
@@ -103,7 +103,7 @@ class PageComment(ModelBase):
             if self.author != profile:
                 profiles.append(profile)
         reply_url = reverse('email_reply', args=[self.id])
-        send_notifications(profiles, subject_template, body_template, context,
+        send_notifications_i18n(profiles, subject_template, body_template, context,
             reply_url, self.author.username
         )
 

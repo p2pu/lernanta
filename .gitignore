@@ -28,3 +28,5 @@ lernanta/static/sass/.sass-cache
 lernanta/static/css/ie.css
 lernanta/static/css/print.css
 lernanta/static/css/screen.css
+lernanta/mailbox
+celerybeat-schedule

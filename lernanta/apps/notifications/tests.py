@@ -9,9 +9,11 @@ from projects.models import Project, Participation
 from content.models import Page
 from notifications.models import ResponseToken
 from notifications.models import post_notification_response
+from notifications.models import send_notifications_i18n
 from notifications.models import send_notifications
 
 from test_utils import TestCase
+from mock import patch
 
 import simplejson as json
 
@@ -58,7 +60,7 @@ class NotificationsTests(TestCase):
         self.comment.content = "blah blah"
         self.comment.save()
 
-    def test_send_notification(self):
+    def test_send_notification_i18n(self):
         """ Test non replyable notification """
 
         #TODO use templates and context that doesn't rely on another app!
@@ -69,11 +71,21 @@ class NotificationsTests(TestCase):
             'domain': 'example.org',
         }
         message_count = len(mail.outbox)
-        send_notifications(self.user, subject_template, body_template, context)
+        send_notifications_i18n([self.user], subject_template, body_template, context)
         self.assertEqual(ResponseToken.objects.count(), 0)
+        self.assertEqual(len(mail.outbox), message_count + 1)
 
-        #TODO check that 1 email was sent
-        #self.assertEqual(len(mail.outbox), message_count + 1)
+
+    def test_send_notification(self):
+
+        subject = 'Notification subject'
+        text = 'Notifications body.\n\nSome random text.'
+        html = '<html></html>'
+        message_count = len(mail.outbox)
+        send_notifications([self.user], subject, text, html)
+        self.assertEqual(ResponseToken.objects.count(), 0)
+        self.assertEqual(len(mail.outbox), message_count + 1)
+
 
     def test_notification_with_response(self):
         """ Test notification with possible response """
@@ -83,8 +95,11 @@ class NotificationsTests(TestCase):
             'comment': self.comment,
             'domain': 'example.org',
         }
-        send_notifications(self.user, subject_template, body_template, context, "/call/me/back")
+        message_count = len(mail.outbox)
+        send_notifications_i18n([self.user], subject_template, body_template, context, "/call/me/back")
         self.assertEqual(ResponseToken.objects.count(), 1)
+        self.assertEqual(len(mail.outbox), message_count + 1)
+
 
     def test_respond_by_email_hook(self):
         """ Test that email hook works and returns status code 200 """
@@ -136,7 +151,7 @@ class NotificationsTests(TestCase):
             'domain': 'example.org',
         }
         callback_url = "/{0}/comments/{1}/email_reply/".format(self.locale, self.comment.id)
-        send_notifications(
+        send_notifications_i18n(
             self.user, subject_template, body_template, context, callback_url
         )
         self.assertEqual(ResponseToken.objects.count(), 1)
@@ -150,9 +165,11 @@ class NotificationsTests(TestCase):
         }
 
         #post_notification_response(token, 'test@p2pu.org', 'my response') 
-
-        response = self.client.post('/{0}/notifications/response/'.format(self.locale), data)
-        self.assertEqual(response.status_code, 200)
+        
+        with patch('requests.post') as requests_post:
+            response = self.client.post('/{0}/notifications/response/'.format(self.locale), data)
+            self.assertEqual(response.status_code, 200)
+            #self.assertTrue(requests_post.called)
 
         # i wish, the test db isn't running a server that can take the callback
         #comments = PageComment.objects.all()
@@ -166,8 +183,9 @@ class NotificationsTests(TestCase):
             'user': self.user.username,
             'subject': 'notification',
             'text': 'Some notification text.\nAnd some more',
-            'callback_url': 'http://mentor.p2pu.org/message/43234',
-            'from': self.user.username,
+            'html': '<html><head></head><body></body></html>',
+            'callback': 'http://mentor.p2pu.org/message/43234',
+            'sender': self.user.username,
         }
 
         json_data = json.dumps(notification_data)
@@ -177,8 +195,6 @@ class NotificationsTests(TestCase):
             "text/json"
         )
         self.assertEqual(response.status_code, 200)
-        
-        #TODO check that email was sent
-        #self.assertEqual(len(mail.outbox), 1)
+        self.assertEqual(len(mail.outbox), 1)
 
 

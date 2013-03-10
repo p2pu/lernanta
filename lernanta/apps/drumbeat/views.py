@@ -14,7 +14,7 @@ from django.core.exceptions import PermissionDenied
 from l10n.urlresolvers import reverse
 from users.models import UserProfile
 from users.decorators import login_required
-from notifications.models import send_notifications
+from notifications.models import send_notifications_i18n
 from drumbeat.models import send_abuse_report
 from drumbeat.forms import AbuseForm, AbuseReasonForm
 from drumbeat import messages

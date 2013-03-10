@@ -13,7 +13,7 @@ from django.conf import settings
 from drumbeat.models import ModelBase
 from activity.models import Activity
 from activity.schema import verbs, object_types
-from notifications.models import send_notifications
+from notifications.models import send_notifications_i18n
 from richtext.models import RichTextField
 from replies.models import PageComment
 from badges.models import Submission, Award
@@ -233,7 +233,7 @@ def send_email_notification(instance):
             unsubscribed = recipient.no_participants_content_updates
         if instance.author != profile and not unsubscribed:
             profiles.append(profile)
-    send_notifications(profiles, subject_template, body_template, context)
+    send_notifications_i18n(profiles, subject_template, body_template, context)
 
 
 ###########

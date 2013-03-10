@@ -1,12 +1,19 @@
 {% extends "base.html" %}
+{% load i18n %}
+{% load l10n_tags %}
 
-{% block title %}Authorize{% endblock %}
+{% block title %}{% trans 'Authorize' %}{% endblock %}
 
 {% block bodyclasses %}signin{% endblock %}
 {% block body %}
-<form action="{{ form_action }}" method="post">
-  {% csrf_token %}
-  <input type="checkbox" name="connect"> Yes, please allow access
-  <input type="submit" value="Submit" />
-</form>
+  <section class="modal">
+    <h2>{% blocktrans %}{{ client_description }} is asking us to authenticate you.{% endblocktrans %}</h2>
+    <form action="{{ form_action }}" method="post">
+      {% csrf_token %}
+      <fieldset>
+        <input class="btn" type="submit" value="{% trans 'Yes, please allow' %}" />
+        <a href="{% locale_url splash %}" class="btn">{% trans 'Cancel' %}</a>
+      </fieldset>
+    </form>
+  </section>
 {% endblock %}

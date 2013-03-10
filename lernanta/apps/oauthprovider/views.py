@@ -21,7 +21,12 @@ def whoami(request):
     except AuthenticationException:
         return authenticator.error_response()
 
-    return authenticator.response({"user": authenticator.access_token.user.username})
+    user = authenticator.access_token.user
+    return authenticator.response({
+        "user": user.username,
+        "url": user.get_profile().get_absolute_url(),
+        "image_url": user.get_profile().image_or_default()
+    })
 
 
 @login_required
@@ -43,13 +48,11 @@ def authorize(request):
     if request.method == 'GET':
         return render_to_response('oauthprovider/authorize.html', {
             'form': AuthorizeForm(),
-            'form_action': '%s?%s' % (reverse('oauth_authorize'), authorizer.query_string)
+            'form_action': '%s?%s' % (reverse('oauth_authorize'), authorizer.query_string),
+            'client_description': authorizer.client.description
         }, context_instance=RequestContext(request))
     elif request.method == 'POST':
         form = AuthorizeForm(request.POST)
         if form.is_valid():
-            if request.POST.get('connect') == "on":
-                return authorizer.grant_redirect()
-            else:
-                return authorizer.error_redirect()
+            return authorizer.grant_redirect()
     return authorizer.error_redirect()

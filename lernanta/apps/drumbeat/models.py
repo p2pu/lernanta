@@ -3,7 +3,7 @@ from django.conf import settings
 
 import caching.base
 
-from notifications.models import send_notifications
+from notifications.models import send_notifications_i18n
 import logging
 
 log = logging.getLogger(__name__)
@@ -32,6 +32,6 @@ def send_abuse_report(url, reason, other, user):
             'reason': reason,
             'other': other
         }
-        send_notifications([profile], subject_template, body_template, context)
+        send_notifications_i18n([profile], subject_template, body_template, context)
     except:
         log.debug("Error sending abuse report!")

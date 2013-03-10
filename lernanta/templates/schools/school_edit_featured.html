@@ -4,22 +4,25 @@
 {% block bodyclasses %}school edit featured{% endblock %}
 
 {% block form %}
-<fieldset id="school_edit_featured" class="school edit featured_groups tabpane">
+<fieldset id="school_edit_featured">
 <h2>{{ _('Featured') }}</h2>
-<p class="hint">{% trans "View, add and remove featured courses to this school." %}</p>
+<p class="alert alert-info">{% trans "View, add and remove courses featured by this school." %}</p>
+
+<div>
 <form action="{% locale_url schools_edit_featured slug=school.slug %}" method="post">
   {% csrf_token %}
   <input type="hidden" id="id_course_url" name="course_url"></input>
   <p>
-    <div class="field featured_group project">
+    <div>
       <label for="id_course_title">{% trans "Course Title" %}</label>
-      <input type="text" id="id_course_title" name="course_title"></input>
+      <input type="text" id="id_course_title" name="course_title" class="span12"></input>
     </div>
   </p>
   <p class="buttons add-featured">
     <button type="submit">{% trans "Add" %}</button>
   </p>
 </form>
+</div>
 
 {% if featured %}
 <table>

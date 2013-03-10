@@ -7,6 +7,8 @@ import re
 
 class HashtagField(forms.CharField):
     def clean(self, value):
+        if not value:
+            return super(HashtagField, self).clean(value)
         if not re.match('^[#]*[a-z,A-Z][a-z,A-Z,0-9,_,-]*$', value):
             raise forms.ValidationError(_("The hashtag must start with letter and contain only letters, digits, _ and -"))
         return super(HashtagField, self).clean(value.strip('#'))

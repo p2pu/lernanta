@@ -519,7 +519,7 @@ def add_user_to_cohort(cohort_uri, user_uri, role, notify_organizers=False):
         }
         subject_template = 'courses/emails/course_join_subject.txt'
         body_template = 'courses/emails/course_join.txt'
-        notification_model.send_notifications(organizers, subject_template, body_template, context)
+        notification_model.send_notifications_i18n(organizers, subject_template, body_template, context)
     
     signup = {
         "cohort_uri": cohort_uri,

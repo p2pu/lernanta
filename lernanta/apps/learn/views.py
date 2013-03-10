@@ -159,7 +159,7 @@ def auto_complete_lookup(request):
         course_list = search_course_title(term)
 
     json = simplejson.dumps(
-        [{"label": course.title, "url": course.url} for course in course_list]
+        [{"label": u"{0} ({1})".format(course.title, course.url), "url": course.url} for course in course_list]
     )
     return http.HttpResponse(json, mimetype="application/json")
 

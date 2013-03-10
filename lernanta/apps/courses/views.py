@@ -27,6 +27,8 @@ from content2 import models as content_model
 from content2.forms import ContentForm
 from content2 import utils
 
+from learn import models as learn_model
+
 from media import models as media_model
 
 from replies import models as comment_model
@@ -65,6 +67,16 @@ def _populate_course_context( request, course_id, context ):
         context['learner'] = True
     elif cohort['signup'] == "OPEN":
         context['show_signup'] = True
+
+    try:
+        course_lists = learn_model.get_lists_for_course(reverse(
+            'courses_slug_redirect',
+            kwargs={'course_id': course_id}
+        ))
+        f = lambda l: l['name'] not in ['drafts', 'listed', 'archived']
+        context['lists'] = filter(f, course_lists)
+    except:
+        log.error("Could not get lists for course!")
 
     return context
 

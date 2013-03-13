@@ -7,11 +7,11 @@
 {% block bodyclasses %}signin{% endblock %}
 {% block body %}
   <section class="modal">
-    <h2>{% blocktrans %}{{ client_description }} is asking us to authenticate you.{% endblocktrans %}</h2>
+    <h2>{% blocktrans %}We're going to connect you with {{ client_description }}. Ok with you?{% endblocktrans %}</h2>
     <form action="{{ form_action }}" method="post">
       {% csrf_token %}
       <fieldset>
-        <input class="btn" type="submit" value="{% trans 'Yes, please allow' %}" />
+        <input class="btn" type="submit" value="{% trans 'Yes' %}" />
         <a href="{% locale_url splash %}" class="btn">{% trans 'Cancel' %}</a>
       </fieldset>
     </form>

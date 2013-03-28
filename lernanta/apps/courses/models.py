@@ -60,6 +60,8 @@ def get_course(course_uri):
         "slug": slugify(course_db.title),
         "description": course_db.description,
         "language": course_db.language,
+        "date_created": course_db.creation_date,
+        "author_uri": course_db.creator_uri
     }
 
     course["status"] = 'published'
@@ -497,7 +499,7 @@ def add_user_to_cohort(cohort_uri, user_uri, role, notify_organizers=False):
 
     username = user_uri.strip('/').split('/')[-1]
     if not UserProfile.objects.filter(username=username).exists():
-        raise ResourceNotFoundException('User does not exist')
+        raise ResourceNotFoundException(u'User {0} does not exist'.format(user_uri))
 
     if db.CohortSignup.objects.filter(cohort=cohort_db, user_uri=user_uri, leave_date__isnull=True).exists():
         return None

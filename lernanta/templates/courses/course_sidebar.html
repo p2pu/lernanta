@@ -3,11 +3,11 @@
 
 <div id="sidebar">
     <figure class="project_img">
-      <a id="id-course-image-link" href="{{ course.get_absolute_url }}">
+      <a id="id-course-image-link" href="{% locale_url courses_show course_id=course.id slug=course.slug %}">
         {% if course.image %}
-  	         <img id="id-course-image" src="{{ course.image.url }}" alt="course image"/>
+  	         <img id="id-course-image" src="{{ course.image.url }}" alt="course image" itemprop="image" />
         {% else %}
-             <img id="id-course-image" src="{{ STATIC_URL}}images/project-missing.png" alt="course image"/>
+             <img id="id-course-image" src="{{ STATIC_URL}}images/project-missing.png" alt="course image" itemprop="image" />
         {% endif %}
         {% if course.status == 'draft' %}
           <img id="id-course-image-overlay" src="{{ STATIC_URL }}images/course-draft.png" alt="draft course"/>

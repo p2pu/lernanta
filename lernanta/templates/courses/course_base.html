@@ -18,7 +18,7 @@
 {% endblock %}
 
 {% block breadcrumbs_title %}
-  <h1>{{course.title}}</h1>
+  <h1 itemprop="name">{{course.title}}</h1>
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -34,6 +34,27 @@
   </div>
 
   <div id="main" class="span9">
+    <meta itemprop="description" content="{{course.description}}">
+    <meta itemprop="inLanguage" content="{{course.language}}">
+    <meta itemprop="url" content="https://p2pu.org{% locale_url courses_show course_id=course.id slug=course.slug %}">
+    <meta itemprop="dateCreated" content="{{course.date_created.date.isoformat}}">
+    <meta itemprop="author" content="{{course.author}}" >
+
+    <meta itemprop="useRightsUrl" content="http://creativecommons.org/licenses/by-sa/3.0/">
+    <meta itemprop="learningResourceType" content="Course">
+
+    {% for metaitem in meta_data.items %}
+      <meta itemprop="{{metaitem.0}}" content="{{metaitem.1}}">
+    {% endfor %}
+
+    {% if educational_alignment %}
+      <span itemprop="educationalAlignment" itemscope itemtype="http://schema.org/AlignmentObject">
+        {% for metaitem in educational_alignment.items %}
+          <meta itemprop="{{metaitem.0}}" content="{{metaitem.1}}">
+        {% endfor %}
+      </span>
+    {% endif %}
+    
     <div class="tabbable">
       <ul class="nav nav-tabs">
         <li {% if about_active %}class="active"{% endif %}>

@@ -136,6 +136,54 @@
         </form>
       </div>
     </div>
+    <hr/>
+    <div id="course-metadata">
+      <h3>{% trans 'Meta data' %}</h3>
+      <p>{% blocktrans %}For more information about the supported meta data, see <a href="http://www.lrmi.net/the-specification">lrmi.net</a>{% endblocktrans %}</p>
+      <form action="{% locale_url courses_update_metadata course.id %}" method="POST">
+        {% csrf_token %}
+        <fieldset>
+          <p>
+            <label for="id_about">{% trans 'About (subject)' %}</label>
+            {{ metadata_form.about }}
+          </p>
+          <p>
+            <label for="id_timerequired">{% blocktrans %}Time Required (In <a href="http://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601</a> duration format){% endblocktrans %}</label>
+            {{ metadata_form.timerequired }}
+          </p>
+          <p>
+            <label for="id_typicalagerange">{% trans 'Typical Age Range' %}</label>
+            {{ metadata_form.typicalagerange }}
+          </p>
+          <p>
+            <label for="id_isbasedonurl">{% trans 'Is Based on URL' %}</label>
+            {{ metadata_form.isbasedonurl }}
+          </p>
+          <p>
+            <label for="id_educationalrole">{% trans 'Educational Role (target audience)' %}</label>
+            {{ metadata_form.educationalrole }}
+          </p>
+          <p>
+            <label for="id_educationaluse">{% trans 'Educational Use' %}</label>
+            {{ metadata_form.educationaluse }}
+          </p>
+          <p>
+            <label for="id_interactivitytype">{% trans 'Interactivity Type' %}</label> 
+            {{ metadata_form.interactivitytype }}
+          </p>
+        </fieldset>
+        
+        <label>{% trans 'Educational Alignment' %}</label>
+        <fieldset>
+          <span class="row-fluid">
+            <span class="span11 offset1">
+              {{ educational_alignment_form }}
+            </span>
+          </span>
+        </fieldset>
+        <p><button type="submit">{% trans 'Save metadata' %}</button></p>
+      </form>
+    </div>
   {% endif %}
 {% endblock %}
 

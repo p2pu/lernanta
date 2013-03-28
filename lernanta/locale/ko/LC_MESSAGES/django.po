@@ -1,0 +1,5466 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-15 16:37+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: apps/activity/feeds.py:70
+#, python-format
+msgid "Activity feed from %s"
+msgstr ""
+
+#: apps/activity/feeds.py:114
+#, python-format
+msgid "Activity feed from %s's dashboard"
+msgstr ""
+
+#: apps/activity/models.py:99
+msgid "activities"
+msgstr ""
+
+#: apps/activity/models.py:106
+#, python-format
+msgid "%(actor)s %(verb)s %(target)s"
+msgstr ""
+
+#: apps/activity/models.py:124
+#, python-format
+msgid "wall activity from %s"
+msgstr ""
+
+#: apps/activity/schema.py:22
+msgid "started following"
+msgstr ""
+
+#: apps/activity/schema.py:23
+msgid "joined"
+msgstr ""
+
+#: apps/activity/schema.py:24
+msgid "posted"
+msgstr ""
+
+#: apps/activity/schema.py:25
+msgid "updated"
+msgstr ""
+
+#: apps/activity/schema.py:26
+msgid "shared"
+msgstr ""
+
+#: apps/activity/schema.py:27
+msgid "received"
+msgstr ""
+
+#: apps/activity/views.py:38
+msgid "This activity was deleted."
+msgstr ""
+
+#: apps/activity/views.py:56
+msgid "You can't edit this activity"
+msgstr ""
+
+#: apps/activity/views.py:61
+msgid "Activity deleted!"
+msgstr ""
+
+#: apps/activity/views.py:63
+msgid "Activity restored!"
+msgstr ""
+
+#: apps/badges/forms.py:52
+msgid "You cannot give a badge to yourself."
+msgstr ""
+
+#: apps/badges/forms.py:57 apps/projects/forms.py:120 apps/schools/forms.py:96
+msgid "That user account was deleted."
+msgstr ""
+
+#: apps/badges/forms.py:60 apps/projects/forms.py:123 apps/schools/forms.py:99
+#, python-format
+msgid "There is no user with username: %s."
+msgstr ""
+
+#: apps/badges/forms.py:63
+#, python-format
+msgid "User %s needs to be your peer."
+msgstr ""
+
+#: apps/badges/forms.py:66
+#, python-format
+msgid "User %s has not received all the prerequisite badges."
+msgstr ""
+
+#: apps/badges/models.py:64
+msgid "Regulates how the badge is awarded to users."
+msgstr ""
+
+#: apps/badges/models.py:73 templates/badges/_submissions_list_item.html:11
+msgid "Badge"
+msgstr ""
+
+#: apps/badges/models.py:262
+msgid "Minimum number of votes."
+msgstr ""
+
+#: apps/badges/models.py:265
+msgid "Minimum average rating."
+msgstr ""
+
+#: apps/badges/models.py:268
+msgid "If the badge can only be awarded to the user once."
+msgstr ""
+
+#: apps/badges/models.py:274
+msgid "Submission Required"
+msgstr ""
+
+#: apps/badges/models.py:275
+msgid "Submission Optional"
+msgstr ""
+
+#: apps/badges/models.py:276
+msgid "No submissions"
+msgstr ""
+
+#: apps/badges/models.py:299
+#, python-format
+msgid "%(author)s's application for %(badge)s"
+msgstr ""
+
+#: apps/badges/models.py:325
+msgid "Allows to give more or less weight to the assessor's vote."
+msgstr ""
+
+#: apps/badges/models.py:336
+msgid ""
+"If submission is blank, this is a peer awarded assessment or superuser "
+"granted"
+msgstr ""
+
+#: apps/badges/models.py:339
+msgid "If all rubric ratings were provided."
+msgstr ""
+
+#: apps/badges/models.py:342
+#, python-format
+msgid "%(assessor)s for %(assessed)s for %(badge)s"
+msgstr ""
+
+#: apps/badges/models.py:405
+msgid "Never"
+msgstr ""
+
+#: apps/badges/models.py:406
+msgid "Sometimes"
+msgstr ""
+
+#: apps/badges/models.py:407
+msgid "Most of the time"
+msgstr ""
+
+#: apps/badges/models.py:408
+msgid "Always"
+msgstr ""
+
+#: apps/badges/models.py:416
+#, python-format
+msgid "%(score)s for %(rubric)s"
+msgstr ""
+
+#: apps/badges/models.py:435
+#, python-format
+msgid "%(user)s - %(badge)s"
+msgstr ""
+
+#: apps/badges/views.py:86 apps/projects/views.py:86
+#, python-format
+msgid "The %s has been created."
+msgstr ""
+
+#: apps/badges/views.py:91
+msgid "Problem creating the badge."
+msgstr ""
+
+#: apps/badges/views.py:105
+msgid "You can not apply for this badge."
+msgstr ""
+
+#: apps/badges/views.py:119
+msgid "Submission created and out for review!"
+msgstr ""
+
+#: apps/badges/views.py:122 apps/badges/views.py:257 apps/badges/views.py:314
+#: apps/content/views.py:117 apps/content/views.py:168
+#: apps/content/views.py:282 apps/replies/views.py:66
+#: apps/replies/views.py:134 apps/replies/views.py:214
+#: apps/reviews/views.py:80 apps/signups/views.py:149
+#: apps/signups/views.py:189
+msgid "Please correct errors below."
+msgstr ""
+
+#: apps/badges/views.py:219
+msgid "You cannot assess your own work."
+msgstr ""
+
+#: apps/badges/views.py:223
+msgid "You have already assessed this submission."
+msgstr ""
+
+#: apps/badges/views.py:254
+msgid "Assessment saved. Thank you for your feedback!"
+msgstr ""
+
+#: apps/badges/views.py:296
+msgid "You can not give this badge to a peer."
+msgstr ""
+
+#: apps/badges/views.py:311
+msgid "Thank you for giving a badge to your peer!"
+msgstr ""
+
+#: apps/content/forms.py:54
+msgid "Post a link to your work."
+msgstr ""
+
+#: apps/content/models.py:65
+msgid "added"
+msgstr ""
+
+#: apps/content/models.py:170
+msgid "today"
+msgstr ""
+
+#: apps/content/models.py:185
+msgid "this week"
+msgstr ""
+
+#: apps/content/models.py:189
+msgid "this month"
+msgstr ""
+
+#: apps/content/views.py:34 apps/projects/decorators.py:87
+#, python-format
+msgid "This page is not accesible on a %s."
+msgstr ""
+
+#: apps/content/views.py:38
+msgid "This task was deleted."
+msgstr ""
+
+#: apps/content/views.py:90 apps/content/views.py:97 apps/content/views.py:262
+msgid "You can't edit this page"
+msgstr ""
+
+#: apps/content/views.py:109 apps/projects/views.py:117
+#: apps/projects/views.py:351 apps/projects/views.py:696
+#, python-format
+msgid "%s updated!"
+msgstr ""
+
+#: apps/content/views.py:146
+msgid "You can not create a new task!"
+msgstr ""
+
+#: apps/content/views.py:160
+msgid "Task created!"
+msgstr ""
+
+#: apps/content/views.py:193 apps/content/views.py:195
+msgid "You can't delete this page"
+msgstr ""
+
+#: apps/content/views.py:206
+#, python-format
+msgid "%s deleted!"
+msgstr ""
+
+#: apps/content/views.py:255
+msgid "You can't restore this page"
+msgstr ""
+
+#: apps/content/views.py:276
+#, python-format
+msgid "%s restored!"
+msgstr ""
+
+#: apps/content/views.py:311 apps/content/views.py:364
+msgid "You can not change tasks order."
+msgstr ""
+
+#: apps/courses/decorators.py:19
+msgid "You need to be a course organizer."
+msgstr ""
+
+#: apps/courses/forms.py:13
+msgid ""
+"The hashtag must start with letter and contain only letters, digits, _ and -"
+msgstr ""
+
+#: apps/courses/forms.py:45
+msgid "Draft"
+msgstr ""
+
+#: apps/courses/forms.py:46
+msgid "Published"
+msgstr ""
+
+#: apps/courses/forms.py:47 templates/projects/sidebar.html:142
+msgid "Archived"
+msgstr ""
+
+#: apps/courses/forms.py:54
+msgid "Open"
+msgstr ""
+
+#: apps/courses/forms.py:55
+msgid "Moderated"
+msgstr ""
+
+#: apps/courses/forms.py:56
+msgid "Closed"
+msgstr ""
+
+#: apps/courses/models.py:134 templates/_footer.html:74 templates/base.html:85
+#: templates/base.html.py:117 templates/courses/course_base.html:40
+#: templates/courses/course_sidebar.html:34
+msgid "About"
+msgstr ""
+
+#: apps/courses/models.py:539
+msgid "No such user in cohort"
+msgstr ""
+
+#: apps/courses/models.py:547
+msgid "Cannot remove last organizer"
+msgstr ""
+
+#: apps/courses/views.py:261
+msgid "Could not upload image"
+msgstr ""
+
+#: apps/courses/views.py:273
+msgid "You are now signed up for this course."
+msgstr ""
+
+#: apps/courses/views.py:275
+msgid "This course isn't open for signup."
+msgstr ""
+
+#: apps/courses/views.py:288
+msgid "Please select a user to add."
+msgstr ""
+
+#: apps/courses/views.py:294
+msgid "User added."
+msgstr ""
+
+#: apps/courses/views.py:296
+msgid "User does not exist."
+msgstr ""
+
+#: apps/courses/views.py:309
+msgid "Could not remove user"
+msgstr ""
+
+#: apps/courses/views.py:335
+msgid "Only other organizers can add a new organizer"
+msgstr ""
+
+#: apps/courses/views.py:361
+msgid "Course status updated."
+msgstr ""
+
+#: apps/courses/views.py:377
+msgid "Could not change cohort signup"
+msgstr ""
+
+#: apps/courses/views.py:379
+msgid "Invalid choice for signup"
+msgstr ""
+
+#: apps/courses/views.py:399
+msgid "Could not update fixed term dates"
+msgstr ""
+
+#: apps/courses/views.py:416
+msgid "Could not update {0}."
+msgstr ""
+
+#: apps/courses/views.py:433
+msgid "Course tags successfully updated"
+msgstr ""
+
+#: apps/courses/views.py:566
+msgid "Could not move content up!"
+msgstr ""
+
+#: apps/courses/views.py:578
+msgid "Could not move content down!"
+msgstr ""
+
+#: apps/dashboard/views.py:76
+msgid "Please fill out your profile to finish registration."
+msgstr ""
+
+#: apps/drumbeat/views.py:86
+msgid "Thank you for filing an abuse report!"
+msgstr ""
+
+#: apps/drumbeat/views.py:113
+msgid "Export selected objects as csv file"
+msgstr ""
+
+#: apps/drumbeat/templatetags/time_since.py:16
+msgid " ago"
+msgstr ""
+
+#: apps/drumbeatmail/fields.py:22
+msgid "No such user with that username or email."
+msgstr ""
+
+#: apps/drumbeatmail/views.py:174
+msgid "Can't send email"
+msgstr ""
+
+#: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
+#: apps/projects/views.py:943
+msgid "Message successfully sent."
+msgstr ""
+
+#: apps/drumbeatmail/views.py:183 apps/drumbeatmail/views.py:213
+msgid "There was an error sending your message. Please try again."
+msgstr ""
+
+#: apps/links/views.py:27 apps/links/views.py:53
+msgid "You can not change links order."
+msgstr ""
+
+#: apps/preferences/forms.py:23
+msgid "That email address is register under a different username."
+msgstr ""
+
+#: apps/preferences/forms.py:31 apps/users/forms.py:111
+#: apps/users/forms.py:177
+msgid "Email addresses do not match."
+msgstr ""
+
+#: apps/preferences/forms.py:36 apps/users/forms.py:37
+msgid "Password must be at least 8 characters long "
+msgstr ""
+
+#: apps/preferences/forms.py:37 apps/users/forms.py:38
+msgid "and contain both numbers and letters."
+msgstr ""
+
+#: apps/preferences/forms.py:42 apps/users/forms.py:43
+msgid "That password is too common. Please choose another."
+msgstr ""
+
+#: apps/preferences/forms.py:73 apps/users/forms.py:173
+msgid "Passwords do not match."
+msgstr ""
+
+#: apps/preferences/views.py:50
+msgid "Thank you, your settings have been saved."
+msgstr ""
+
+#: apps/preferences/views.py:86 apps/users/views.py:386
+#, python-format
+msgid "A link to confirm your email address was sent to %s."
+msgstr ""
+
+#: apps/preferences/views.py:95
+#, python-format
+msgid ""
+"If you did not receive the confirmation email, make sure your email service "
+"did not mark it as \"junk mail\" or \"spam\". If you need to, you can have "
+"us <a href=\"%s\">resend the confirmation message</a> to your email address."
+msgstr ""
+
+#: apps/preferences/views.py:120
+msgid "Password updated"
+msgstr ""
+
+#: apps/preferences/views.py:124 apps/users/views.py:294
+#: apps/users/views.py:440
+msgid "There are errors in this form. Please correct them and resubmit."
+msgstr ""
+
+#: apps/preferences/views.py:143
+#, python-format
+msgid ""
+"You are the organizer of %s active courses. You need to archive these "
+"courses or remove yourself as organizer before you can delete your profile."
+msgstr ""
+
+#: apps/projects/decorators.py:22
+#, python-format
+msgid "You are not organizing this %s."
+msgstr ""
+
+#: apps/projects/decorators.py:38
+#, python-format
+msgid "You are not participating in this %s."
+msgstr ""
+
+#: apps/projects/decorators.py:55
+msgid "You are not authorized to view the detailed statistics."
+msgstr ""
+
+#: apps/projects/decorators.py:73
+msgid "You aren't authorized to view the statistics' overview."
+msgstr ""
+
+#: apps/projects/decorators.py:105
+#, python-format
+msgid "This %s was deleted."
+msgstr ""
+
+#: apps/projects/forms.py:39
+msgid "Write a catchy title, keep it short and sweet."
+msgstr ""
+
+#: apps/projects/forms.py:41
+msgid "e.g. Learn to write HTML by hand, literally."
+msgstr ""
+
+#: apps/projects/forms.py:43
+msgid ""
+"Who is the challenge for? <br>What are they going to be doing? <br>How are "
+"they going to be doing it? <br>Why are they doing it?"
+msgstr ""
+
+#: apps/projects/forms.py:48
+msgid ""
+"Tag your course so folks can find it. What will your audience be looking "
+"for? Separate with commas."
+msgstr ""
+
+#: apps/projects/forms.py:87 apps/schools/forms.py:36 apps/schools/forms.py:50
+#: apps/schools/forms.py:64 apps/schools/forms.py:78 apps/users/forms.py:260
+#, python-format
+msgid "Image exceeds max image size: %(max)dk"
+msgstr ""
+
+#: apps/projects/forms.py:128
+#, python-format
+msgid "User %s is already an organizer."
+msgstr ""
+
+#: apps/projects/forms.py:133
+#, python-format
+msgid "User %s is already a participant."
+msgstr ""
+
+#: apps/projects/forms.py:147
+#, python-format
+msgid "A %s can not be its own next step."
+msgstr ""
+
+#: apps/projects/forms.py:149
+#, python-format
+msgid "There is no challenge, study group, ... with short name: %s."
+msgstr ""
+
+#: apps/projects/forms.py:155
+#, python-format
+msgid "The %(slug)s %(kind)s is already a next step."
+msgstr ""
+
+#: apps/projects/forms.py:167 templates/drumbeatmail/base.html:18
+#: templates/messages/inbox.html:12
+#: templates/projects/contact_organizers.html:12
+msgid "Subject"
+msgstr ""
+
+#: apps/projects/forms.py:169
+msgid "Body"
+msgstr ""
+
+#: apps/projects/forms.py:179
+msgid "That study group, course, ... does not exist."
+msgstr ""
+
+#: apps/projects/forms.py:199
+#, python-format
+msgid "There is no study group, course, ... with short name: %s."
+msgstr ""
+
+#: apps/projects/forms.py:215
+msgid "There is no course with this short name on the archive."
+msgstr ""
+
+#: apps/projects/models.py:56
+msgid ""
+"Study Group -- group of people working collaboratively to acquire and share "
+"knowledge."
+msgstr ""
+
+#: apps/projects/models.py:58
+msgid ""
+"Course -- led by one or more organizers with skills on a field who direct "
+"and help participants during their learning."
+msgstr ""
+
+#: apps/projects/models.py:61
+msgid "Challenge -- series of tasks peers can engage in to develop skills."
+msgstr ""
+
+#: apps/projects/models.py:123
+msgid "group"
+msgstr ""
+
+#: apps/projects/models.py:126
+#, python-format
+msgid "%(name)s %(kind)s"
+msgstr ""
+
+#: apps/projects/models.py:137
+msgid "created"
+msgstr ""
+
+#: apps/projects/views.py:75 apps/projects/views.py:215
+#: apps/projects/views.py:297
+msgid "Full Description"
+msgstr ""
+
+#: apps/projects/views.py:90
+msgid "Problem creating the course"
+msgstr ""
+
+#: apps/projects/views.py:240
+#, python-format
+msgid "The %s has been cloned."
+msgstr ""
+
+#: apps/projects/views.py:246
+msgid "There was a problem cloning the study group, course, ..."
+msgstr ""
+
+#: apps/projects/views.py:315
+#, python-format
+msgid "The %s has been imported."
+msgstr ""
+
+#: apps/projects/views.py:320
+msgid "Problem importing the study group, course, ..."
+msgstr ""
+
+#: apps/projects/views.py:396 apps/schools/views.py:147
+#: apps/schools/views.py:189 apps/schools/views.py:231
+#: apps/schools/views.py:273
+msgid "Image updated"
+msgstr ""
+
+#: apps/projects/views.py:403 apps/schools/views.py:153
+#: apps/schools/views.py:195 apps/schools/views.py:237
+#: apps/schools/views.py:279
+msgid "There was an error uploading your image"
+msgstr ""
+
+#: apps/projects/views.py:430
+msgid "Link added."
+msgstr ""
+
+#: apps/projects/views.py:434
+msgid "There was an error adding your link."
+msgstr ""
+
+#: apps/projects/views.py:457 apps/projects/views.py:491
+#: apps/users/views.py:659
+msgid "You can't edit this link"
+msgstr ""
+
+#: apps/projects/views.py:468
+msgid "Link updated."
+msgstr ""
+
+#: apps/projects/views.py:493
+msgid "The link was deleted"
+msgstr ""
+
+#: apps/projects/views.py:516
+msgid "Participant added."
+msgstr ""
+
+#: apps/projects/views.py:522
+msgid "There was an error adding the participant."
+msgstr ""
+
+#: apps/projects/views.py:560
+msgid "You can't make that person an organizer"
+msgstr ""
+
+#: apps/projects/views.py:566
+msgid "The participant is now an organizer."
+msgstr ""
+
+#: apps/projects/views.py:582
+msgid "You cannot delete the only organizer"
+msgstr ""
+
+#: apps/projects/views.py:590
+msgid "The organizer in now only a participant."
+msgstr ""
+
+#: apps/projects/views.py:604
+#, python-format
+msgid "The participant %s has been removed."
+msgstr ""
+
+#: apps/projects/views.py:623
+msgid "Next step added."
+msgstr ""
+
+#: apps/projects/views.py:629
+msgid "There was an error adding that next step."
+msgstr ""
+
+#: apps/projects/views.py:675
+#, python-format
+msgid "The %(name)s %(kind)s is not a next step anymore."
+msgstr ""
+
+#: apps/projects/views.py:701
+#, python-format
+msgid "There was a problem saving the %s's status."
+msgstr ""
+
+#: apps/projects/views.py:721
+msgid ""
+"Congratulations, you sucessfully published your {0}!        It will now show "
+"up on the learning page!"
+msgstr ""
+
+#: apps/relationships/models.py:59
+msgid "Cannot create self referencing relationship."
+msgstr ""
+
+#: apps/relationships/views.py:55
+msgid "You can't unfollow"
+msgstr ""
+
+#: apps/replies/models.py:53
+#, python-format
+msgid "comment at %s"
+msgstr ""
+
+#: apps/replies/views.py:25 templates/replies/_comment_threads.html:12
+msgid "This comment was deleted."
+msgstr ""
+
+#: apps/replies/views.py:47
+msgid ""
+"You can not reply to this comment. Please ensure that you have confirmed "
+"your email address."
+msgstr ""
+
+#: apps/replies/views.py:63 apps/replies/views.py:131
+msgid "Comment posted!"
+msgstr ""
+
+#: apps/replies/views.py:101
+#, python-format
+msgid "You can not post a comment at %s."
+msgstr ""
+
+#: apps/replies/views.py:203
+msgid "You can not edit this comment."
+msgstr ""
+
+#: apps/replies/views.py:211
+msgid "Comment updated!"
+msgstr ""
+
+#: apps/replies/views.py:233
+msgid "You can not restore this comment."
+msgstr ""
+
+#: apps/replies/views.py:235
+msgid "You can not delete this comment."
+msgstr ""
+
+#: apps/replies/views.py:242
+msgid "Comment deleted!"
+msgstr ""
+
+#: apps/replies/views.py:244
+msgid "Comment restored!"
+msgstr ""
+
+#: apps/reviews/decorators.py:14
+msgid "You need to be a reviewer."
+msgstr ""
+
+#: apps/reviews/views.py:77
+msgid "Review posted!"
+msgstr ""
+
+#: apps/richtext/views.py:131
+#, python-format
+msgid "Extension %(ext)s is not allowed. "
+msgstr ""
+
+#: apps/richtext/views.py:132
+#, python-format
+msgid "Only %(allowed)s are allowed."
+msgstr ""
+
+#: apps/schools/decorators.py:20
+msgid "You are not school organizer"
+msgstr ""
+
+#: apps/schools/forms.py:102
+#, python-format
+msgid "User %s is organizing the school."
+msgstr ""
+
+#: apps/schools/views.py:87
+msgid "School updated!"
+msgstr ""
+
+#: apps/schools/views.py:108
+msgid "School styles updated!"
+msgstr ""
+
+#: apps/schools/views.py:299
+msgid "School organizer added."
+msgstr ""
+
+#: apps/schools/views.py:304
+msgid "There was an error adding the school organizer."
+msgstr ""
+
+#: apps/schools/views.py:340
+msgid "The course is now featured for this school."
+msgstr ""
+
+#: apps/schools/views.py:346
+msgid "There was an error marking the course as featured."
+msgstr ""
+
+#: apps/schools/views.py:368
+msgid "The course stopped being featured for this school."
+msgstr ""
+
+#: apps/schools/views.py:371
+msgid "Could not remove course from featured list"
+msgstr ""
+
+#: apps/schools/views.py:388
+msgid "The course was added to this school."
+msgstr ""
+
+#: apps/schools/views.py:395
+#, python-format
+msgid "There was an error adding %s to this school."
+msgstr ""
+
+#: apps/schools/views.py:415
+msgid "The course is no longer part of this school."
+msgstr ""
+
+#: apps/schools/views.py:417
+msgid "Could not remove course from school"
+msgstr ""
+
+#: apps/schools/views.py:487
+msgid "School mentorship details updated!"
+msgstr ""
+
+#: apps/signups/models.py:30
+msgid "Closed signup"
+msgstr ""
+
+#: apps/signups/models.py:31
+msgid "Moderated signup"
+msgstr ""
+
+#: apps/signups/models.py:32
+msgid "Non-moderated signup"
+msgstr ""
+
+#: apps/signups/models.py:38
+#, python-format
+msgid "%s signup"
+msgstr ""
+
+#: apps/signups/models.py:107
+#, python-format
+msgid "the signup answer of %(author)s at %(project)s"
+msgstr ""
+
+#: apps/signups/views.py:38
+msgid "Signup updated!"
+msgstr ""
+
+#: apps/signups/views.py:89 templates/signups/sign_up.html:51
+msgid "This answer was deleted."
+msgstr ""
+
+#: apps/signups/views.py:111
+#, python-format
+msgid "You already joined this %s."
+msgstr ""
+
+#: apps/signups/views.py:114
+#, python-format
+msgid "Sign-up is currently closed. You can clone the %s if it is full."
+msgstr ""
+
+#: apps/signups/views.py:123
+msgid "You already posted an answer to the signup questions."
+msgstr ""
+
+#: apps/signups/views.py:144
+msgid "You are now a participant!"
+msgstr ""
+
+#: apps/signups/views.py:146
+msgid "Answer submitted!"
+msgstr ""
+
+#: apps/signups/views.py:174
+msgid "You can't edit this answer"
+msgstr ""
+
+#: apps/signups/views.py:186
+msgid "Answer updated!"
+msgstr ""
+
+#: apps/signups/views.py:221
+msgid "Organizer added!"
+msgstr ""
+
+#: apps/signups/views.py:223
+msgid "Participant added!"
+msgstr ""
+
+#: apps/signups/views.py:235
+msgid "You can not restore this answer."
+msgstr ""
+
+#: apps/signups/views.py:237
+msgid "You can not delete this answer."
+msgstr ""
+
+#: apps/signups/views.py:244
+msgid "Answer deleted!"
+msgstr ""
+
+#: apps/signups/views.py:246
+msgid "Answer restored!"
+msgstr ""
+
+#: apps/signups/views.py:270
+msgid "Organizers can't use this page to leave their group."
+msgstr ""
+
+#: apps/signups/views.py:273 apps/signups/views.py:301
+msgid "This page can not be accessed with a GET request."
+msgstr ""
+
+#: apps/signups/views.py:306
+msgid "You need to be active in this challenge to become an adopter."
+msgstr ""
+
+#: apps/signups/views.py:309
+msgid "Organizers do not need to adopt the challenges."
+msgstr ""
+
+#: apps/signups/views.py:317
+msgid "You need to complete all of the tasks before becoming an adopter."
+msgstr ""
+
+#: apps/signups/views.py:320
+msgid "You already adopted this challenge."
+msgstr ""
+
+#: apps/signups/views.py:323
+msgid "Thanks! "
+msgstr ""
+
+#: apps/signups/views.py:324
+msgid "You are now listed among the peers who offered their help."
+msgstr ""
+
+#: apps/statuses/models.py:33
+msgid "statuses"
+msgstr ""
+
+#: apps/statuses/models.py:36
+#, python-format
+msgid "message: %s"
+msgstr ""
+
+#: apps/statuses/views.py:19
+msgid "Posting a update to your dashboard is no longer supported"
+msgstr ""
+
+#: apps/statuses/views.py:60
+msgid "There was an error posting your status update"
+msgstr ""
+
+#: apps/tags/models.py:9
+msgid "Tag"
+msgstr ""
+
+#: apps/tags/models.py:10 templates/courses/course_settings.html:123
+#: templates/learn/_learn_filters.html:35 templates/learn/learn_tags.html:11
+#: templates/projects/project_create_overview.html:119
+#: templates/projects/project_edit_summary.html:70
+#: templates/projects/sidebar.html:101
+msgid "Tags"
+msgstr ""
+
+#: apps/tags/models.py:19
+msgid "Tagged Item"
+msgstr ""
+
+#: apps/tags/models.py:20
+msgid "Tagged Items"
+msgstr ""
+
+#: apps/users/decorators.py:24
+msgid "You are already logged into an account."
+msgstr ""
+
+#: apps/users/fields.py:20 apps/users/fields.py:24
+msgid "Please choose another username."
+msgstr ""
+
+#: apps/users/forms.py:67
+msgid "This Google OpenID is not supported. "
+msgstr ""
+
+#: apps/users/forms.py:68
+msgid "Please use your Google profile OpenID."
+msgstr ""
+
+#: apps/users/forms.py:76
+msgid "Your account was migrated from the old P2PU website."
+msgstr ""
+
+#: apps/users/forms.py:154
+msgid "User profile with this Username already exists."
+msgstr ""
+
+#: apps/users/forms.py:160
+msgid "This field is required."
+msgstr ""
+
+#: apps/users/forms.py:163
+msgid "User profile with this Email already exists."
+msgstr ""
+
+#: apps/users/forms.py:295
+msgid "That e-mail address isn't associated to a user account. "
+msgstr ""
+
+#: apps/users/forms.py:296
+msgid "You didn't finish registering the last time. "
+msgstr ""
+
+#: apps/users/forms.py:297
+msgid "Please register a new account."
+msgstr ""
+
+#: apps/users/forms.py:300
+msgid "Username not found. "
+msgstr ""
+
+#: apps/users/forms.py:301
+msgid "Are you sure you've registered?"
+msgstr ""
+
+#: apps/users/models.py:127
+msgid "Anonym"
+msgstr ""
+
+#: apps/users/models.py:188
+msgid "(adopted)"
+msgstr ""
+
+#: apps/users/models.py:190 apps/users/models.py:203
+msgid "(organizing)"
+msgstr ""
+
+#: apps/users/models.py:193 apps/users/models.py:206
+msgid "(participating)"
+msgstr ""
+
+#: apps/users/models.py:196
+msgid "(following)"
+msgstr ""
+
+#: apps/users/views.py:193
+msgid "Incorrect username, email or password."
+msgstr ""
+
+#: apps/users/views.py:278
+msgid "Congratulations! Your user account was successfully created."
+msgstr ""
+
+#: apps/users/views.py:286
+msgid ""
+"Thanks! We have sent an email to {0} with instructions for completing your "
+"registration."
+msgstr ""
+
+#: apps/users/views.py:364
+msgid "Hmm, that doesn't look like the correct confirmation code"
+msgstr ""
+
+#: apps/users/views.py:371
+msgid "Success! You have verified your email address."
+msgstr ""
+
+#: apps/users/views.py:395
+msgid "This user account was deleted."
+msgstr ""
+
+#: apps/users/views.py:433
+#, python-format
+msgid ""
+"Thanks! We have sent an email to %s with instructions for completing your "
+"registration."
+msgstr ""
+
+#: apps/users/views.py:457
+msgid "Profile updated"
+msgstr ""
+
+#: apps/users/views.py:463
+msgid ""
+"There were problems updating your profile. Please correct the problems and "
+"submit again."
+msgstr ""
+
+#: apps/users/views.py:500
+#, python-format
+msgid "The identity %s has already been claimed by you."
+msgstr ""
+
+#: apps/users/views.py:501
+#, python-format
+msgid "The identity %s has already been claimed by another user."
+msgstr ""
+
+#: apps/users/views.py:514
+#, python-format
+msgid "The identity %s has been saved."
+msgstr ""
+
+#: apps/users/views.py:521
+#, python-format
+msgid "OpenID authentication failed: %s"
+msgstr ""
+
+#: apps/users/views.py:524
+msgid "Authentication cancelled."
+msgstr ""
+
+#: apps/users/views.py:527
+#, python-format
+msgid "Unknown OpenID response type: %r"
+msgstr ""
+
+#: apps/users/views.py:529
+msgid "This is an OpenID relying party endpoint."
+msgstr ""
+
+#: apps/users/views.py:538
+msgid "You can't edit this openid"
+msgstr ""
+
+#: apps/users/views.py:540
+msgid "The openid was deleted."
+msgstr ""
+
+#: apps/users/views.py:570
+msgid "Profile image updated"
+msgstr ""
+
+#: apps/users/views.py:575
+msgid "There was an error uploading your image."
+msgstr ""
+
+#: apps/users/views.py:605
+msgid "Profile link added."
+msgstr ""
+
+#: apps/users/views.py:614
+msgid "There was an error saving your link."
+msgstr ""
+
+#: apps/users/views.py:638
+msgid "Profile link updated"
+msgstr ""
+
+#: apps/users/views.py:661
+msgid "The link was deleted."
+msgstr ""
+
+#: templates/404.html:6
+msgid "Page not found"
+msgstr ""
+
+#: templates/404.html:8
+msgid ""
+"Oops. That links doesn't seem to work. Maybe the page you are looking for is "
+"on the old p2pu site? Try "
+msgstr ""
+
+#: templates/404.html:9
+msgid ""
+"If you think this is an error, please let us know by <a href=\"http://p2pu."
+"lighthouseapp.com/projects/71002\" target=\"_blank\">filling a bug report</"
+"a>."
+msgstr ""
+
+#: templates/500.html:6
+msgid "Internal server error"
+msgstr ""
+
+#: templates/500.html:8
+msgid ""
+"Clearly what was supposed to happen, didn't. You can help us to solve this "
+"problem by <a href=\"http://help.p2pu.org\">filing a bug report</a>, and "
+"telling us what you were doing when the problem occurred."
+msgstr ""
+
+#: templates/503.html:5
+msgid "Down for maintenance, come back soon"
+msgstr ""
+
+#: templates/503.html:7
+msgid ""
+"We are probably in the process of upgrading the site. We apologize for any "
+"inconvenience, and hope that you will like the new features."
+msgstr ""
+
+#: templates/_footer.html:16
+msgid "What is P2PU?"
+msgstr ""
+
+#: templates/_footer.html:17
+msgid ""
+"The Peer 2 Peer University is a grassroots open education project that "
+"organizes learning outside of institutional walls and gives learners "
+"recognition for their achievements. P2PU creates a model for lifelong "
+"learning alongside traditional formal higher education. Leveraging the "
+"internet and educational materials openly available online, P2PU enables "
+"high-quality low-cost education opportunities."
+msgstr ""
+
+#: templates/_footer.html:20
+msgid "Connect With Us"
+msgstr ""
+
+#: templates/_footer.html:23
+msgid "Facebook"
+msgstr ""
+
+#: templates/_footer.html:25
+msgid "Twitter"
+msgstr ""
+
+#: templates/_footer.html:27 templates/pages/get_involved_page.html:7
+msgid "Get Involved"
+msgstr ""
+
+#: templates/_footer.html:29 templates/base.html:86 templates/base.html.py:118
+#: templates/dashboard/splash.html:71
+msgid "Blog"
+msgstr ""
+
+#: templates/_footer.html:31
+msgid "Send us an email"
+msgstr ""
+
+#: templates/_footer.html:35
+msgid "Some of Our Supporters"
+msgstr ""
+
+#: templates/_footer.html:38
+msgid "View all of our supporters"
+msgstr ""
+
+#: templates/_footer.html:62
+msgid "(more)"
+msgstr ""
+
+#: templates/_footer.html:73 templates/base.html:87 templates/base.html.py:119
+msgid "Help"
+msgstr ""
+
+#: templates/_footer.html:75
+msgid "Announcements"
+msgstr ""
+
+#: templates/_footer.html:76
+msgid "Wiki"
+msgstr ""
+
+#: templates/_footer.html:77
+msgid "Found a Bug?"
+msgstr ""
+
+#: templates/_footer.html:80
+msgid "Creative Commons"
+msgstr ""
+
+#: templates/_footer.html:81
+msgid "Share-Alike"
+msgstr ""
+
+#: templates/_footer.html:82
+msgid "Privacy Guidelines"
+msgstr ""
+
+#: templates/_footer.html:83
+msgid "Terms of Use"
+msgstr ""
+
+#: templates/base.html:17
+msgid "Learning for everyone, by everyone, about almost anything."
+msgstr ""
+
+#: templates/base.html:65
+msgid "Find"
+msgstr ""
+
+#: templates/base.html:66
+msgid "Great Courses"
+msgstr ""
+
+#: templates/base.html:70 templates/badges/badge_edit_summary.html:39
+#: templates/content/create_page.html:34
+#: templates/projects/project_clone.html:8
+#: templates/projects/project_create_overview.html:9
+#: templates/projects/project_create_overview.html:156
+#: templates/projects/project_create_review.html:8
+#: templates/projects/project_edit_summary.html:109
+#: templates/projects/project_import.html:8
+#: templates/projects/project_import.html:73 templates/schools/home.html:14
+msgid "Create"
+msgstr ""
+
+#: templates/base.html:71
+msgid "a Course"
+msgstr ""
+
+#: templates/base.html:100 templates/dashboard/dashboard.html:18
+#: templates/drumbeatmail/inbox.html:9
+msgid "Dashboard"
+msgstr ""
+
+#: templates/base.html:101
+msgid "My Profile"
+msgstr ""
+
+#: templates/base.html:102
+msgid "My Settings"
+msgstr ""
+
+#: templates/base.html:103 templates/chat/chat.html:4
+#: templates/chat/chat.html.py:10 templates/projects/sidebar.html:177
+msgid "Chat"
+msgstr ""
+
+#: templates/base.html:104 templates/drumbeatmail/inbox.html:4
+#: templates/drumbeatmail/inbox.html:11 templates/drumbeatmail/inbox.html:117
+msgid "Inbox"
+msgstr ""
+
+#: templates/base.html:105
+msgid "Logout"
+msgstr ""
+
+#: templates/base.html:121
+msgid "Login"
+msgstr ""
+
+#: templates/base.html:136 templates/base.html.py:250
+#: templates/courses/course_sidebar.html:55
+#: templates/drumbeatmail/base.html:55
+#: templates/projects/contact_organizers.html:49
+#: templates/search/search.html:30 templates/users/profile_form_base.html:73
+msgid "en"
+msgstr ""
+
+#: templates/base.html:156
+msgid "Home"
+msgstr ""
+
+#: templates/base.html:205
+msgid "jquery.ui.datepicker-en.js"
+msgstr ""
+
+#: templates/base.html:207
+msgid "js/script-en.js"
+msgstr ""
+
+#: templates/activity/_activity_resource.html:19
+#: templates/content/page.html:41 templates/drumbeat/abuse_reason.html:11
+#: templates/drumbeat/report_abuse.html:10
+#: templates/drumbeat/report_received.html:10
+#: templates/drumbeatmail/inbox.html:36 templates/drumbeatmail/inbox.html:89
+#: templates/projects/sidebar.html:124
+#: templates/replies/_comment_threads.html:32
+#: templates/replies/_comment_threads.html:90
+#: templates/signups/sign_up.html:66 templates/users/sidebar.html:32
+msgid "Report Abuse"
+msgstr ""
+
+#: templates/activity/_activity_resource.html:26
+#: templates/activity/delete_restore.html:32
+#: templates/content/confirm_delete_page.html:19
+#: templates/content/confirm_delete_page.html:33
+#: templates/content/page.html:20
+#: templates/projects/project_create_tasks.html:60
+#: templates/projects/project_edit_links.html:39
+#: templates/replies/_comment_threads.html:28
+#: templates/replies/_comment_threads.html:65
+#: templates/replies/_comment_threads.html:86
+#: templates/replies/_comment_threads.html:127
+#: templates/replies/delete_restore_comment.html:38
+#: templates/schools/school_edit_featured.html:43
+#: templates/schools/school_edit_membership.html:37
+#: templates/signups/delete_restore_answer.html:35
+#: templates/signups/sign_up.html:63
+#: templates/users/profile_edit_links.html:76
+#: templates/users/profile_edit_openids.html:36
+#: templates/users/settings_delete.html:30
+msgid "Delete"
+msgstr ""
+
+#: templates/activity/_activity_resource.html:35
+msgid "at"
+msgstr ""
+
+#: templates/activity/_activity_resource.html:45
+msgid "via"
+msgstr ""
+
+#: templates/activity/_activity_resource.html:54
+#, python-format
+msgid ""
+"\n"
+"              %(counter)s Comment\n"
+"            "
+msgid_plural ""
+"\n"
+"              %(counter)s Comments\n"
+"            "
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/activity/base.html:5
+#: templates/schools/school_edit_statistics.html:23
+msgid "Activity"
+msgstr ""
+
+#: templates/activity/base.html:18 templates/learn/learn.html:5
+#: templates/learn/learn.html.py:17 templates/learn/learn_tags.html:9
+#: templates/projects/project_clone.html:28
+#: templates/projects/project_create_overview.html:27
+#: templates/projects/project_create_review.html:26
+#: templates/projects/project_create_tasks.html:26
+#: templates/projects/project_edit.html:25
+#: templates/projects/project_import.html:28
+msgid "Learn"
+msgstr ""
+
+#: templates/activity/base.html:22 templates/courses/course_base.html:63
+#: templates/projects/_user_list.html:8
+#: templates/projects/project_user_list.html:7
+#: templates/projects/project_user_list.html:12
+#: templates/schools/school_edit_statistics.html:16
+#: templates/users/profile.html:21 templates/users/profile_edit.html:11
+#: templates/users/user_list.html:5 templates/users/user_list.html.py:9
+#: templates/users/user_list.html:15
+msgid "People"
+msgstr ""
+
+#: templates/activity/delete_restore.html:8
+msgid "Restore Activity"
+msgstr ""
+
+#: templates/activity/delete_restore.html:10
+msgid "Delete Activity"
+msgstr ""
+
+#: templates/activity/delete_restore.html:21
+msgid "Are you sure you want to restore this activity?"
+msgstr ""
+
+#: templates/activity/delete_restore.html:23
+msgid "Are you sure you want to delete this activity?"
+msgstr ""
+
+#: templates/activity/delete_restore.html:27
+#: templates/badges/badge_edit_summary.html:35
+#: templates/badges/badge_edit_summary.html:38
+#: templates/content/_toggle_completion.html:9
+#: templates/content/confirm_delete_page.html:29
+#: templates/content/confirm_delete_page.html:31
+#: templates/content/create_page.html:32 templates/content/edit_page.html:41
+#: templates/content/restore_version.html:34
+#: templates/courses/content_form_buttons_snip.html:6
+#: templates/courses/content_form_buttons_snip.html:9
+#: templates/courses/content_form_buttons_snip.html:11
+#: templates/dashboard/dashboard.html:75
+#: templates/drumbeat/abuse_reason.html:26
+#: templates/drumbeat/report_abuse.html:16 templates/drumbeatmail/base.html:41
+#: templates/oauthprovider/authorize.html:15 templates/projects/_wall.html:21
+#: templates/projects/contact_organizers.html:34
+#: templates/projects/project_clone.html:73
+#: templates/projects/project_create_overview.html:155
+#: templates/projects/project_edit_image.html:12
+#: templates/projects/project_edit_status.html:67
+#: templates/projects/project_edit_summary.html:105
+#: templates/projects/project_edit_summary.html:108
+#: templates/projects/project_import.html:72
+#: templates/replies/comment_page.html:98
+#: templates/replies/delete_restore_comment.html:33
+#: templates/schools/school_edit_background.html:23
+#: templates/schools/school_edit_groups_icon.html:23
+#: templates/schools/school_edit_logo.html:23
+#: templates/schools/school_edit_mentorship.html:24
+#: templates/schools/school_edit_site_logo.html:23
+#: templates/schools/school_edit_styles.html:68
+#: templates/schools/school_edit_summary.html:34
+#: templates/signups/answer_sign_up.html:96
+#: templates/signups/delete_restore_answer.html:30
+#: templates/signups/edit_signup.html:31
+#: templates/users/profile_edit_main.html:27
+#: templates/users/profile_form_base.html:59
+#: templates/users/settings_delete.html:29
+#: templates/users/settings_email.html:38
+#: templates/users/settings_notifications.html:70
+#: templates/users/settings_password.html:36 templates/users/signin.html:33
+msgid "Cancel"
+msgstr ""
+
+#: templates/activity/delete_restore.html:30
+#: templates/content/restore_version.html:21
+#: templates/content/restore_version.html:36
+#: templates/content/version_page.html:23
+#: templates/replies/_comment_threads.html:14
+#: templates/replies/delete_restore_comment.html:36
+#: templates/signups/delete_restore_answer.html:33
+#: templates/signups/sign_up.html:53
+msgid "Restore"
+msgstr ""
+
+#: templates/activity/index.html:20 templates/courses/content.html:32
+#: templates/projects/project_admin_metrics.html:25
+#: templates/projects/project_admin_metrics.html:36
+#: templates/tracker/scoreboard.html:55 templates/tracker/scoreboard.html:67
+#: templates/tracker/scoreboard.html:89
+msgid "Comments"
+msgstr ""
+
+#: templates/activity/reply_action_link.html:3
+#: templates/drumbeatmail/inbox.html:35 templates/drumbeatmail/inbox.html:88
+#: templates/drumbeatmail/reply.html:4 templates/drumbeatmail/reply.html:6
+#: templates/replies/_comment_threads.html:24
+#: templates/replies/_comment_threads.html:58
+#: templates/replies/_comment_threads.html:82
+#: templates/replies/_comment_threads.html:121
+#: templates/signups/sign_up.html:61
+msgid "Reply"
+msgstr ""
+
+#: templates/badges/_assessment_body.html:4
+msgid "Assessment from"
+msgstr ""
+
+#: templates/badges/_assessment_body.html:4
+#: templates/badges/_assessment_item.html:11
+#: templates/reviews/show_project_reviews.html:16
+msgid "on"
+msgstr ""
+
+#: templates/badges/_assessment_body.html:14
+#: templates/badges/_assessment_body.html:30
+msgid "out of 4"
+msgstr ""
+
+#: templates/badges/_assessment_body.html:40
+msgid "Comment:"
+msgstr ""
+
+#: templates/badges/_assessment_item.html:11
+msgid "Gave"
+msgstr ""
+
+#: templates/badges/_assessment_item.html:11
+#: templates/projects/project_edit_status.html:59
+#: templates/projects/sidebar.html:153
+msgid "to"
+msgstr ""
+
+#: templates/badges/_give_badge_action.html:4
+msgid "Give Badge"
+msgstr ""
+
+#: templates/badges/_give_badge_action.html:5
+#: templates/badges/badges_list.html:7 templates/badges/badges_list.html:11
+#: templates/badges/base.html:15 templates/learn/_course_card.html:30
+#: templates/projects/_project_card.html:30
+#: templates/schools/_projectset_card.html:43
+#: templates/schools/projectset_home.html:26
+#: templates/users/_profile_info.html:18
+msgid "Badges"
+msgstr ""
+
+#: templates/badges/_review_submission_action.html:4
+#: templates/badges/submission_show.html:47
+msgid "Review This Submission"
+msgstr ""
+
+#: templates/badges/_submission_item.html:11
+msgid "Submitted work on "
+msgstr ""
+
+#: templates/badges/_submission_item.html:16
+#, python-format
+msgid ""
+"\n"
+"            %(counter)s Review\n"
+"          "
+msgid_plural ""
+"\n"
+"            %(counter)s Reviews\n"
+"          "
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/badges/_submissions_list.html:6
+msgid "WOW!"
+msgstr ""
+
+#: templates/badges/_submissions_list.html:6
+msgid "Check out all these submissions!"
+msgstr ""
+
+#: templates/badges/_submissions_list.html:8
+msgid "Please take a few minutes and help a fellow peer."
+msgstr ""
+
+#: templates/badges/_submissions_list.html:10
+#: templates/projects/_tasks_completed_msg.html:17
+msgid "Awaiting Review"
+msgstr ""
+
+#: templates/badges/_submissions_list.html:11
+msgid "Previously Awarded"
+msgstr ""
+
+#: templates/badges/_submissions_list.html:12
+msgid "My Submissions"
+msgstr ""
+
+#: templates/badges/_submissions_list_item.html:29
+msgid "read more"
+msgstr ""
+
+#: templates/badges/_submissions_list_item.html:37
+msgid "submitted"
+msgstr ""
+
+#: templates/badges/_submissions_list_item.html:37
+msgid "ago"
+msgstr ""
+
+#: templates/badges/assessment_edit.html:19
+msgid "Review this submission:"
+msgstr ""
+
+#: templates/badges/assessment_edit.html:28
+#: templates/badges/submission_show.html:31
+msgid "Link to work submitted"
+msgstr ""
+
+#: templates/badges/assessment_edit.html:34
+msgid "How well was this peer able to:"
+msgstr ""
+
+#: templates/badges/assessment_edit.html:56
+msgid "Please explain your ratings."
+msgstr ""
+
+#: templates/badges/assessment_edit.html:57
+msgid "What did this peer do well? What advice or suggestions would you give?"
+msgstr ""
+
+#: templates/badges/assessment_edit.html:59
+#: templates/badges/peer_assessment.html:40
+msgid ""
+"Why do you feel this person deserves this badge? Any additional comments?"
+msgstr ""
+
+#: templates/badges/assessment_edit.html:66
+#: templates/badges/peer_assessment.html:46
+#: templates/badges/submission_edit.html:46
+#: templates/content/_toggle_completion.html:41
+#: templates/content/_toggle_completion.html:70
+#: templates/reviews/review_project.html:43
+msgid "Submit"
+msgstr ""
+
+#: templates/badges/badge.html:16
+msgid "View your Submissions"
+msgstr ""
+
+#: templates/badges/badge.html:19
+msgid "View Submissions"
+msgstr ""
+
+#: templates/badges/badge.html:24
+msgid "Apply for Badge"
+msgstr ""
+
+#: templates/badges/badge.html:27
+msgid "Award Badge to Peer"
+msgstr ""
+
+#: templates/badges/badge.html:34 templates/badges/peer_assessment.html:24
+#: templates/badges/show_user_awards.html:20
+#: templates/badges/submission_edit.html:26
+#: templates/content/_toggle_completion.html:56
+msgid "Requirements:"
+msgstr ""
+
+#: templates/badges/badge.html:39
+msgid "You need to have these badges:"
+msgstr ""
+
+#: templates/badges/badge.html:54
+msgid "Other badges you can apply for:"
+msgstr ""
+
+#: templates/badges/badge.html:66
+msgid "Peers that have received this badge:"
+msgstr ""
+
+#: templates/badges/badge.html:78
+msgid "This badge can be earned at these Challenges:"
+msgstr ""
+
+#: templates/badges/badge.html:88
+msgid "Peers that are applying for this badge:"
+msgstr ""
+
+#: templates/badges/badge.html:90 templates/projects/sidebar.html:314
+msgid "Awarded"
+msgstr ""
+
+#: templates/badges/badge.html:90 templates/projects/sidebar.html:318
+msgid "Pending"
+msgstr ""
+
+#: templates/badges/badge_edit.html:4 templates/badges/badge_edit.html:10
+msgid "Edit Badge"
+msgstr ""
+
+#: templates/badges/badge_edit_summary.html:10
+#: templates/projects/project_edit_links.html:14
+#: templates/projects/project_edit_links_base.html:13
+#: templates/projects/project_edit_next_steps.html:25
+#: templates/projects/project_edit_participants.html:36
+#: templates/projects/project_edit_summary.html:25
+#: templates/schools/school_edit_featured.html:31
+#: templates/schools/school_edit_membership.html:25
+#: templates/schools/school_edit_organizers.html:27
+#: templates/schools/school_edit_summary.html:10
+#: templates/users/profile_edit_links.html:18
+#: templates/users/profile_edit_links.html:50
+#: templates/users/profile_edit_links_edit.html:13
+msgid "Name"
+msgstr ""
+
+#: templates/badges/badge_edit_summary.html:15
+msgid "Brief description"
+msgstr ""
+
+#: templates/badges/badge_edit_summary.html:16
+msgid ""
+"This is used both on P2PU and within the Open Badges Infrastructure (OBI)"
+msgstr ""
+
+#: templates/badges/badge_edit_summary.html:21
+msgid "Requirements to get badge"
+msgstr ""
+
+#: templates/badges/badge_edit_summary.html:22
+msgid ""
+"Description of any requirements that must be satisfied to award the badge."
+msgstr ""
+
+#: templates/badges/badge_edit_summary.html:27
+msgid "Badge Type"
+msgstr ""
+
+#: templates/badges/badge_edit_summary.html:28
+msgid ""
+"The logic behind badge awarding will change depending on the badge type."
+msgstr ""
+
+#: templates/badges/badge_edit_summary.html:36
+#: templates/content/edit_page.html:43
+#: templates/courses/content_form_buttons_snip.html:4
+#: templates/courses/course_settings.html:15
+#: templates/courses/course_settings.html:26
+#: templates/courses/course_settings.html:37
+#: templates/courses/course_settings.html:66
+#: templates/courses/course_settings.html:85
+#: templates/courses/course_settings.html:115
+#: templates/courses/course_settings.html:125
+#: templates/dashboard/setup_profile.html:9
+#: templates/projects/project_edit_status.html:68
+#: templates/projects/project_edit_summary.html:106
+#: templates/replies/comment_page.html:101
+#: templates/schools/school_edit_mentorship.html:25
+#: templates/schools/school_edit_styles.html:69
+#: templates/schools/school_edit_summary.html:35
+#: templates/signups/answer_sign_up.html:101
+#: templates/signups/edit_signup.html:32
+#: templates/users/profile_edit_main.html:28
+#: templates/users/settings_email.html:39
+#: templates/users/settings_notifications.html:71
+#: templates/users/settings_password.html:37
+msgid "Save"
+msgstr ""
+
+#: templates/badges/peer_assessment.html:20
+msgid "Give this badge to your peer."
+msgstr ""
+
+#: templates/badges/peer_assessment.html:34
+msgid "Peer Username:"
+msgstr ""
+
+#: templates/badges/profile_badges_manage.html:7
+#: templates/badges/profile_badges_manage.html:13
+#: templates/users/profile_edit.html:34
+msgid "Share Badges"
+msgstr ""
+
+#: templates/badges/profile_badges_manage.html:15
+#, python-format
+msgid ""
+"In order to allow you to share your <a href=\"%(badges_help_url)s\" target="
+"\"_blank\">badges</a> with other sites and communities, P2PU has plugged "
+"into the Mozilla Open Badge Infrastructure (OBI)."
+msgstr ""
+
+#: templates/badges/profile_badges_manage.html:18
+#, python-format
+msgid ""
+"Start by sending your badges to the <a href=\"%(obi_url)s\" target=\"_blank"
+"\">Mozilla Open Badge Backpack</a> as %(email)s."
+msgstr ""
+
+#: templates/badges/profile_badges_manage.html:23
+msgid "You don't have any badges."
+msgstr ""
+
+#: templates/badges/profile_badges_manage.html:24
+#, python-format
+msgid ""
+"Check out the <a href=\"%(badges_url)s\">existing badges</a> you can earn!"
+msgstr ""
+
+#: templates/badges/show_assessment.html:6
+msgid "Award Justification for"
+msgstr ""
+
+#: templates/badges/show_assessment.html:30
+#: templates/badges/submission_show.html:37 templates/messages/inbox.html:13
+msgid "Received"
+msgstr ""
+
+#: templates/badges/show_assessment.html:39
+msgid "Award Justification"
+msgstr ""
+
+#: templates/badges/show_user_awards.html:11
+msgid "'s Awards to"
+msgstr ""
+
+#: templates/badges/show_user_awards.html:30
+#: templates/projects/imported_detailed_description.html:15
+msgid "Prerequisites"
+msgstr ""
+
+#: templates/badges/show_user_awards.html:40
+msgid "Awarded At"
+msgstr ""
+
+#: templates/badges/show_user_awards.html:51
+msgid "Evidence"
+msgstr ""
+
+#: templates/badges/submission_edit.html:22
+msgid "Apply for this badge."
+msgstr ""
+
+#: templates/badges/submission_edit.html:36
+msgid "URL to the work you are submitting:"
+msgstr ""
+
+#: templates/badges/submission_edit.html:41
+#: templates/content/_toggle_completion.html:66
+msgid "What did you learn? Why do you feel you deserve this badge?"
+msgstr ""
+
+#: templates/badges/submission_show.html:6
+msgid "Submission for"
+msgstr ""
+
+#: templates/badges/submission_show.html:20
+msgid "Submission"
+msgstr ""
+
+#: templates/badges/submission_show.html:34
+msgid "Progress:"
+msgstr ""
+
+#: templates/badges/submission_show.html:37
+msgid " reviews of the"
+msgstr ""
+
+#: templates/badges/submission_show.html:37
+msgid "reviews needed."
+msgstr ""
+
+#: templates/badges/submission_show.html:40
+msgid "The posted reviews give this work submission a total average score of"
+msgstr ""
+
+#: templates/badges/submission_show.html:40
+msgid "(needs to be at least"
+msgstr ""
+
+#: templates/badges/submission_show.html:40
+msgid "for the badge to be awarded)."
+msgstr ""
+
+#: templates/badges/submission_show.html:57 templates/reviews/base.html:4
+#: templates/reviews/base.html.py:10
+#: templates/reviews/show_project_reviews.html:6
+#: templates/reviews/show_project_reviews.html:12
+msgid "Reviews"
+msgstr ""
+
+#: templates/badges/submissions_list.html:7
+#: templates/badges/submissions_list.html:11
+msgid "Submissions"
+msgstr ""
+
+#: templates/badges/success_msg.html:3
+#, python-format
+msgid ""
+"The badges were send succesfully! You can now see your badges at <a href="
+"\"%(obi_url)s\" target=\"_blank\">%(obi_url)s</a>. Be sure to log in using "
+"the email <strong>%(email)s</strong>."
+msgstr ""
+
+#: templates/badges/emails/new_submission.txt:2
+msgid "Howdy!"
+msgstr ""
+
+#: templates/badges/emails/new_submission.txt:4
+msgid "Someone has just submitted work for the"
+msgstr ""
+
+#: templates/badges/emails/new_submission.txt:4
+msgid "Go ahead and take a look at their work here:"
+msgstr ""
+
+#: templates/badges/emails/new_submission.txt:4
+msgid "They will love you!"
+msgstr ""
+
+#: templates/badges/emails/new_submission.txt:6
+#: templates/statuses/emails/wall_updated.txt:17
+msgid "Go get 'em,"
+msgstr ""
+
+#: templates/badges/emails/new_submission.txt:8
+msgid "The P2PU team"
+msgstr ""
+
+#: templates/badges/emails/new_submission.txt:10
+#: templates/content/emails/content_update.txt:14
+#: templates/replies/emails/post_comment.txt:15
+#: templates/statuses/emails/wall_updated.txt:23
+msgid "Manage how often you get these delightful messages at:"
+msgstr ""
+
+#: templates/badges/emails/new_submission_subject.txt:2
+msgid "Make someone's day. Review a badge for "
+msgstr ""
+
+#: templates/content/_post_link_comment.html:2
+msgid "This is a link to my work:"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:8
+msgid "You've marked this task as completed."
+msgstr ""
+
+#: templates/content/_toggle_completion.html:13
+msgid "Are you done with this task?"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:14
+msgid "Yes, I'm done"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:30
+msgid "Post to Discussion Wall"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:36
+msgid "Submit this link to apply for the badges below"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:51
+msgid "Apply for this badge"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:60
+msgid "Badge Application Form"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:62
+msgid "Url to the work you are submitting"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:70
+msgid "Submit and move to the next badge application"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:75
+msgid "Move on to next task"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:83
+msgid "Did you know that you can apply for these badges in this task?"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:92
+msgid "Received!"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:95
+msgid "Apply"
+msgstr ""
+
+#: templates/content/_toggle_completion.html:98
+msgid "Submitted"
+msgstr ""
+
+#: templates/content/base_page_form.html:20
+#: templates/replies/comment_page.html:59
+#: templates/signups/answer_sign_up.html:28
+msgid "[Preview]"
+msgstr ""
+
+#: templates/content/base_page_form.html:33
+#: templates/courses/content_form_snip.html:17
+#: templates/learn/add_course.html:23
+#: templates/projects/project_create_overview.html:91
+#: templates/projects/project_edit_summary.html:23
+msgid "Title"
+msgstr ""
+
+#: templates/content/base_page_form.html:34
+msgid "A good title is short and descriptive."
+msgstr ""
+
+#: templates/content/base_page_form.html:41
+#: templates/projects/project_edit_summary.html:35
+msgid "One sentence description"
+msgstr ""
+
+#: templates/content/base_page_form.html:42
+msgid "This description will be used as sub header below the task title."
+msgstr ""
+
+#: templates/content/base_page_form.html:53
+msgid "Collaborative work (editable by all the participants)."
+msgstr ""
+
+#: templates/content/base_page_form.html:59
+#: templates/courses/content_form_snip.html:11
+#: templates/replies/comment_page.html:105
+#: templates/signups/answer_sign_up.html:103
+msgid "Preview"
+msgstr ""
+
+#: templates/content/confirm_delete_page.html:11
+#: templates/content/create_page.html:11 templates/content/edit_page.html:11
+#: templates/content/history_page.html:11
+#: templates/content/restore_version.html:10
+#: templates/content/version_page.html:12
+#: templates/projects/project_task_list.html:9
+msgid "Task List"
+msgstr ""
+
+#: templates/content/confirm_delete_page.html:24
+msgid "Are you sure you want to delete this task?"
+msgstr ""
+
+#: templates/content/create_page.html:5 templates/content/create_page.html:15
+msgid "Create Task"
+msgstr ""
+
+#: templates/content/create_page.html:19 templates/content/edit_page.html:27
+msgid ""
+"Constructing a good task is crucial to the peer learning process. Tasks "
+"should have a clear goal in mind and should be sequential throughout the "
+"learning process. A task can be as big or as small and last as long as you "
+"like - it can be a planned discussion for one day, a piece of writing "
+"constructed over a week, a project that lasts for a few weeks, or a month-"
+"long endeavour that everyone works on."
+msgstr ""
+
+#: templates/content/edit_page.html:18 templates/content/page.html:19
+#: templates/courses/content_form_snip.html:10
+#: templates/projects/project_create_tasks.html:59
+#: templates/projects/project_edit.html:8
+#: templates/projects/project_edit_links.html:35
+#: templates/projects/sidebar.html:117
+#: templates/replies/_comment_threads.html:29
+#: templates/replies/_comment_threads.html:64
+#: templates/replies/_comment_threads.html:87
+#: templates/replies/_comment_threads.html:128
+#: templates/signups/sign_up.html:64
+#: templates/users/profile_edit_links.html:72
+msgid "Edit"
+msgstr ""
+
+#: templates/content/edit_page.html:33
+#: templates/content/restore_version.html:30
+msgid "Minor update (not posted to the wall)."
+msgstr ""
+
+#: templates/content/history_page.html:15
+#: templates/content/history_page.html:21
+#: templates/content/restore_version.html:14
+#: templates/content/version_page.html:16
+msgid "History"
+msgstr ""
+
+#: templates/content/history_page.html:25
+#: templates/content/history_page.html:33
+msgid "deleted"
+msgstr ""
+
+#: templates/content/history_page.html:27
+msgid "(current)"
+msgstr ""
+
+#: templates/content/page.html:22
+msgid "View History"
+msgstr ""
+
+#: templates/content/page.html:31
+msgid "Task Navigation"
+msgstr ""
+
+#: templates/content/page.html:62
+msgid "Post Comment"
+msgstr ""
+
+#: templates/content/page.html:64
+msgid "Task Discussion"
+msgstr ""
+
+#: templates/content/emails/content_update.txt:2
+msgid " was updated."
+msgstr ""
+
+#: templates/content/emails/content_update.txt:4
+msgid " contributed with a new task: "
+msgstr ""
+
+#: templates/content/emails/content_update.txt:4
+#: templates/content/emails/content_update_subject.txt:2
+#: templates/replies/emails/post_comment_subject.txt:2
+#: templates/signups/emails/new_signup_answer.txt:2
+msgid "."
+msgstr ""
+
+#: templates/content/emails/content_update.txt:9
+msgid "Check out their update and respond at:"
+msgstr ""
+
+#: templates/content/emails/content_update.txt:11
+msgid "Booyah,"
+msgstr ""
+
+#: templates/content/emails/content_update.txt:12
+#: templates/drumbeatmail/emails/direct_message.txt:9
+#: templates/relationships/emails/new_follower.txt:12
+#: templates/replies/emails/post_comment.txt:13
+#: templates/signups/emails/new_signup_answer.txt:22
+#: templates/statuses/emails/wall_updated.txt:18
+#: templates/users/emails/forgot_password.txt:11
+#: templates/users/emails/registration_confirm.txt:13
+msgid "The P2PU Team"
+msgstr ""
+
+#: templates/content/emails/content_update_subject.txt:2
+msgid " made a new task for "
+msgstr ""
+
+#: templates/courses/content.html:25 templates/courses/course.html:22
+msgid "edit"
+msgstr ""
+
+#: templates/courses/content_form_snip.html:22
+#: templates/courses/course_base.html:43
+msgid "Content"
+msgstr ""
+
+#: templates/courses/content_form_snip.html:26
+msgid ""
+"You can use markdown for your content. For some help on using markdown, look "
+"<a href=\"http://daringfireball.net/projects/markdown/basics\" target="
+"\"_blank\">here</a>"
+msgstr ""
+
+#: templates/courses/course.html:12
+msgid "You can add some information here by editing this page!</a>"
+msgstr ""
+
+#: templates/courses/course_admin_content.html:21
+msgid "remove"
+msgstr ""
+
+#: templates/courses/course_admin_content.html:32
+msgid "Add more content"
+msgstr ""
+
+#: templates/courses/course_admin_content.html:36
+msgid "This course doesn't have any content yet. "
+msgstr ""
+
+#: templates/courses/course_base.html:53
+msgid "Organize and add content"
+msgstr ""
+
+#: templates/courses/course_base.html:60
+msgid "Discussion"
+msgstr ""
+
+#: templates/courses/course_base.html:67
+msgid "Settings"
+msgstr ""
+
+#: templates/courses/course_comment_snip.html:8
+#: templates/courses/discussion_snip.html:10
+#, python-format
+msgid "%(reply_count)s replies"
+msgstr ""
+
+#: templates/courses/course_comment_snip.html:19
+msgid "Reply to comment"
+msgstr ""
+
+#: templates/courses/course_comment_snip.html:25
+#: templates/courses/course_comment_snip.html:37
+#: templates/courses/discussion_snip.html:16
+#: templates/courses/discussion_snip.html:24
+msgid "Post comment"
+msgstr ""
+
+#: templates/courses/course_comment_snip.html:32
+msgid "Post new comment"
+msgstr ""
+
+#: templates/courses/course_discussion.html:9
+msgid ""
+"This page is for general discussion of the course. Feel free to post "
+"questions, comments, ideas."
+msgstr ""
+
+#: templates/courses/course_people.html:9
+msgid "Learners"
+msgstr ""
+
+#: templates/courses/course_people.html:19
+#: templates/projects/_user_list.html:38 templates/projects/sidebar.html:185
+#: templates/schools/school_edit_statistics.html:18
+msgid "Organizers"
+msgstr ""
+
+#: templates/courses/course_people.html:33
+msgid "Add user"
+msgstr ""
+
+#: templates/courses/course_settings.html:10
+msgid ""
+"This course is currently archived. Before you can make changes you need to "
+"change the course to published or draft."
+msgstr ""
+
+#: templates/courses/course_settings.html:13
+#: templates/courses/course_settings.html:64
+msgid "Course status"
+msgstr ""
+
+#: templates/courses/course_settings.html:23
+#: templates/schools/school_edit_featured.html:17
+msgid "Course Title"
+msgstr ""
+
+#: templates/courses/course_settings.html:34
+msgid "Hashtag"
+msgstr ""
+
+#: templates/courses/course_settings.html:47
+msgid "Upload new image"
+msgstr ""
+
+#: templates/courses/course_settings.html:55
+#: templates/courses/course_sidebar.html:96
+#: templates/projects/project_create_overview.html:107
+#: templates/projects/project_create_overview.html:137
+#: templates/projects/project_edit_summary.html:51
+#: templates/projects/project_edit_summary.html:90
+#: templates/schools/school_edit_summary.html:22
+msgid "Description"
+msgstr ""
+
+#: templates/courses/course_settings.html:57
+msgid "Update description"
+msgstr ""
+
+#: templates/courses/course_settings.html:72
+msgid "Users can join this course at any time."
+msgstr ""
+
+#: templates/courses/course_settings.html:74
+#, python-format
+msgid ""
+"\n"
+"          <p>This course runs from %(start_date)s to %(end_date)s.</p>\n"
+"        "
+msgstr ""
+
+#: templates/courses/course_settings.html:80
+msgid "Set dates"
+msgstr ""
+
+#: templates/courses/course_settings.html:83
+msgid "Start date"
+msgstr ""
+
+#: templates/courses/course_settings.html:84
+msgid "End date"
+msgstr ""
+
+#: templates/courses/course_settings.html:89
+#: templates/users/_openid_providers.html:19
+#: templates/users/register_openid.html:9 templates/users/signin.html:10
+msgid "or"
+msgstr ""
+
+#: templates/courses/course_settings.html:93
+msgid "Switch to rolling term"
+msgstr ""
+
+#: templates/courses/course_settings.html:102
+msgid "Singup is open to anyone."
+msgstr ""
+
+#: templates/courses/course_settings.html:105
+msgid ""
+"Singup is moderated. To sign up for this course you should contact one of "
+"the course organizer."
+msgstr ""
+
+#: templates/courses/course_settings.html:108
+msgid "Singup is closed. Only organizers can add more people."
+msgstr ""
+
+#: templates/courses/course_settings.html:133
+msgid "Course languge"
+msgstr ""
+
+#: templates/courses/course_settings.html:135
+msgid "Update language"
+msgstr ""
+
+#: templates/courses/course_sidebar.html:20
+msgid "Featured in:"
+msgstr ""
+
+#: templates/courses/course_sidebar.html:31
+msgid "Navigation"
+msgstr ""
+
+#: templates/courses/course_sidebar.html:55
+#, python-format
+msgid "I'm learning &quot;%(title)s&quot; @P2PU - check it: "
+msgstr ""
+
+#: templates/courses/course_sidebar.html:55
+msgid "Tweet me"
+msgstr ""
+
+#: templates/courses/course_sidebar.html:76
+msgid "Start Course"
+msgstr ""
+
+#: templates/courses/course_sidebar.html:82
+msgid "Leave Course"
+msgstr ""
+
+#: templates/courses/course_user_snip.html:12
+msgid "Remove user"
+msgstr ""
+
+#: templates/courses/course_user_snip.html:17
+msgid "Make organizer"
+msgstr ""
+
+#: templates/courses/create_course.html:16
+msgid "Create a new course"
+msgstr ""
+
+#: templates/courses/create_course.html:25
+msgid ""
+"\n"
+"        <h2>Ready to create a course?</h2>\n"
+"        <p>First, give your course a title--we recommend something zippy, "
+"snappy and attention-grabby.</p>\n"
+"        <p>Next, create a \"hashtag\" or handle for your course.</p>\n"
+"        <p>Give a few more details in the \"description\" field, hit the "
+"button and voilà! You've created a P2PU course!</p>\n"
+"        <p>Need further guidance on how to make a stellar experience? Check "
+"out the <a href=\"https://p2pu.org/en/groups/make-a-course/\">\"Create a "
+"Course\"</a> materials!</p>\n"
+"        <p>Be sure to have a look at our <a href=\"/groups/list/community/"
+"\">featured</a> courses for good examples.</p>\n"
+"        <p>If you'd like help or feedback on your course, drop a line to the "
+"P2PU Community <a href=\"http://groups.google.com/group/p2pu-community\" "
+"target=\"_blank\">mailing list</a> and say 'Hi'.</p>\n"
+"      "
+msgstr ""
+
+#: templates/courses/create_course.html:40
+msgid "Course Title:"
+msgstr ""
+
+#: templates/courses/create_course.html:42
+msgid "A catchy title for the course, ex. 'Get CC Savvy'"
+msgstr ""
+
+#: templates/courses/create_course.html:46
+msgid "Hashtag:"
+msgstr ""
+
+#: templates/courses/create_course.html:46
+msgid ""
+"Specify a short hashtag of up to 20 characters that should be used when "
+"sending out notifications and tweets about the course."
+msgstr ""
+
+#: templates/courses/create_course.html:49
+msgid "A short handle for the course, ex. 'ccsavvy'"
+msgstr ""
+
+#: templates/courses/create_course.html:53
+msgid "Description:"
+msgstr ""
+
+#: templates/courses/create_course.html:53
+msgid "This description is used in places where your course will be listed."
+msgstr ""
+
+#: templates/courses/create_course.html:55
+msgid ""
+"A brief description of what the course is about, ex. 'Learn when, where and "
+"how to use a CC license'"
+msgstr ""
+
+#: templates/courses/create_course.html:58
+msgid ""
+"This is the language that your course will use. It will help people "
+"searching for courses in a particular language."
+msgstr ""
+
+#: templates/courses/create_course.html:61
+msgid "Create my course!"
+msgstr ""
+
+#: templates/courses/emails/course_join.txt:4
+msgid "Howdy course organizer!"
+msgstr ""
+
+#: templates/courses/emails/course_join.txt:6
+#, python-format
+msgid "%(new_user)s signed up for %(course_title)s!"
+msgstr ""
+
+#: templates/courses/emails/course_join.txt:8
+msgid ""
+"Regards\n"
+"The P2PU team"
+msgstr ""
+
+#: templates/courses/emails/course_join_subject.txt:3
+#, python-format
+msgid "[%(course_hash)s] %(username)s has signed up for %(course_title)s!"
+msgstr ""
+
+#: templates/dashboard/_join_p2pu.html:9
+msgid "Join the Community"
+msgstr ""
+
+#: templates/dashboard/_join_p2pu.html:9
+msgid "It's free!"
+msgstr ""
+
+#: templates/dashboard/_join_p2pu.html:12
+msgid "Learn anything, with your peers."
+msgstr ""
+
+#: templates/dashboard/_join_p2pu.html:15 templates/learn/learn.html:65
+msgid ""
+"At P2PU, people work together to learn a particular topic by completing "
+"tasks, assessing individual and group work, and providing constructive "
+"feedback."
+msgstr ""
+
+#: templates/dashboard/dashboard.html:9
+msgid "Your Dashboard"
+msgstr ""
+
+#: templates/dashboard/dashboard.html:12
+msgid "Activity from your profile"
+msgstr ""
+
+#: templates/dashboard/dashboard.html:13
+msgid "Activity from your dashboard"
+msgstr ""
+
+#: templates/dashboard/dashboard.html:32
+#: templates/users/emails/registration_confirm.txt:3
+msgid "Welcome to P2PU!"
+msgstr ""
+
+#: templates/dashboard/dashboard.html:35
+msgid "To get started, you should "
+msgstr ""
+
+#: templates/dashboard/dashboard.html:35
+msgid ""
+"update your profile</a>. This is a great way to tell people a bit more about "
+"yourself. Then find "
+msgstr ""
+
+#: templates/dashboard/dashboard.html:35
+msgid "people</a> and "
+msgstr ""
+
+#: templates/dashboard/dashboard.html:35
+msgid "groups</a> that interest you and start following them! You can also "
+msgstr ""
+
+#: templates/dashboard/dashboard.html:35
+msgid "create new groups</a> and update how often P2PU "
+msgstr ""
+
+#: templates/dashboard/dashboard.html:35
+msgid "contacts you</a>."
+msgstr ""
+
+#: templates/dashboard/dashboard.html:55
+msgid "Post a message..."
+msgstr ""
+
+#: templates/dashboard/dashboard.html:64 templates/projects/_wall.html:15
+msgid ""
+"Important message (participants can not turn off notifications for important "
+"messages)."
+msgstr ""
+
+#: templates/dashboard/dashboard.html:76 templates/projects/_wall.html:22
+msgid "Post Message"
+msgstr ""
+
+#: templates/dashboard/setup_profile.html:5
+#: templates/dashboard/setup_profile.html:7
+msgid "Create Profile"
+msgstr ""
+
+#: templates/dashboard/sidebar.html:25
+#: templates/relationships/emails/new_follower.txt:6
+#: templates/signups/answer_sign_up.html:32 templates/signups/sign_up.html:80
+#: templates/signups/emails/new_signup_answer.txt:6
+msgid "Location:"
+msgstr ""
+
+#: templates/dashboard/sidebar.html:33
+msgid "Interests"
+msgstr ""
+
+#: templates/dashboard/sidebar.html:39 templates/users/_profile_info.html:94
+msgid "View more interested in "
+msgstr ""
+
+#: templates/dashboard/sidebar.html:51
+msgid "Wants To Learn About"
+msgstr ""
+
+#: templates/dashboard/sidebar.html:56 templates/users/_profile_info.html:106
+msgid "View more interested in learning more about "
+msgstr ""
+
+#: templates/dashboard/sidebar.html:72 templates/learn/_course_card.html:33
+#: templates/projects/_project_card.html:33
+#: templates/projects/_user_list.html:104 templates/projects/sidebar.html:193
+#: templates/schools/school_edit_statistics.html:20
+#: templates/users/_profile_info.html:10 templates/users/_user_card.html:17
+msgid "Followers"
+msgstr ""
+
+#: templates/dashboard/sidebar.html:85 templates/users/_user_card.html:21
+msgid "Following"
+msgstr ""
+
+#: templates/dashboard/sidebar.html:100
+msgid "Learning"
+msgstr ""
+
+#: templates/dashboard/sidebar.html:129 templates/users/sidebar.html:67
+msgid "(UP)"
+msgstr ""
+
+#: templates/dashboard/sidebar.html:132 templates/users/sidebar.html:70
+msgid "(DOWN)"
+msgstr ""
+
+#: templates/dashboard/splash.html:7
+msgid "Learning for everyone, by everyone, about almost anything"
+msgstr ""
+
+#: templates/dashboard/splash.html:22
+msgid "LEARN"
+msgstr ""
+
+#: templates/dashboard/splash.html:22
+msgid " ANYTHING"
+msgstr ""
+
+#: templates/dashboard/splash.html:23
+msgid "WITH YOUR "
+msgstr ""
+
+#: templates/dashboard/splash.html:23
+msgid "PEERS"
+msgstr ""
+
+#: templates/dashboard/splash.html:24
+msgid "IT'S "
+msgstr ""
+
+#: templates/dashboard/splash.html:24
+msgid "ONLINE"
+msgstr ""
+
+#: templates/dashboard/splash.html:24
+msgid " AND TOTALLY "
+msgstr ""
+
+#: templates/dashboard/splash.html:24
+msgid "FREE."
+msgstr ""
+
+#: templates/dashboard/splash.html:25
+msgid "At "
+msgstr ""
+
+#: templates/dashboard/splash.html:25
+msgid ", people work together to learn a particular topic by completing"
+msgstr ""
+
+#: templates/dashboard/splash.html:26
+msgid "tasks, assessing individual and group work, and providing constructive"
+msgstr ""
+
+#: templates/dashboard/splash.html:27
+msgid "feedback."
+msgstr ""
+
+#: templates/dashboard/splash.html:32
+msgid "Find Course"
+msgstr ""
+
+#: templates/dashboard/splash.html:33
+msgid "OR"
+msgstr ""
+
+#: templates/dashboard/splash.html:34 templates/projects/project_clone.html:34
+#: templates/projects/project_create_overview.html:33
+#: templates/projects/project_create_review.html:32
+#: templates/projects/project_create_tasks.html:32
+#: templates/projects/project_import.html:34
+msgid "Create Course"
+msgstr ""
+
+#: templates/dashboard/splash.html:35
+msgid " "
+msgstr ""
+
+#: templates/dashboard/splash.html:44
+msgid "Featured Courses"
+msgstr ""
+
+#: templates/dashboard/splash.html:45
+msgid "These are staff picked courses currently running."
+msgstr ""
+
+#: templates/dashboard/splash.html:71
+msgid "P2PU Blog"
+msgstr ""
+
+#: templates/dashboard/splash.html:75
+msgid "Subscribe to the Peer 2 Peer University blog"
+msgstr ""
+
+#: templates/dashboard/splash.html:75
+msgid "feed"
+msgstr ""
+
+#: templates/drumbeat/abuse_reason.html:6
+#: templates/drumbeat/report_abuse.html:5
+#: templates/drumbeat/report_received.html:5
+msgid "Abuse Report Received"
+msgstr ""
+
+#: templates/drumbeat/abuse_reason.html:17
+msgid "Why are you reporting this?"
+msgstr ""
+
+#: templates/drumbeat/abuse_reason.html:21
+msgid "Reason if you selected other."
+msgstr ""
+
+#: templates/drumbeat/abuse_reason.html:25
+#: templates/drumbeat/report_abuse.html:17
+msgid "Report"
+msgstr ""
+
+#: templates/drumbeat/report_abuse.html:14
+msgid ""
+"Would you like to report this content as objectionable? This can be anything "
+"from suspected spam to offensive content."
+msgstr ""
+
+#: templates/drumbeat/report_received.html:12
+msgid "Thank You,"
+msgstr ""
+
+#: templates/drumbeat/report_received.html:13
+msgid "We have received your report and will investigate further."
+msgstr ""
+
+#: templates/drumbeat/emails/abuse_report.txt:3
+#, python-format
+msgid "%(user)s has reported %(url)s as %(reason)s.'"
+msgstr ""
+
+#: templates/drumbeat/emails/abuse_report.txt:4
+#, python-format
+msgid "More info: %(other)s"
+msgstr ""
+
+#: templates/drumbeat/emails/abuse_report_subject.txt:2
+msgid "Abuse Report"
+msgstr ""
+
+#: templates/drumbeatmail/base.html:13
+msgid "To"
+msgstr ""
+
+#: templates/drumbeatmail/base.html:23
+#: templates/projects/contact_organizers.html:17
+msgid "Message"
+msgstr ""
+
+#: templates/drumbeatmail/base.html:36
+#: templates/projects/contact_organizers.html:29
+#: templates/users/profile_form_base.html:51
+msgid ""
+"Welcome Robots, ReCaptcha has been disabled for your convenience. Spam at "
+"will."
+msgstr ""
+
+#: templates/drumbeatmail/base.html:42 templates/messages/compose.html:8
+#: templates/projects/contact_organizers.html:36
+#: templates/users/forgot_password.html:18
+msgid "Send"
+msgstr ""
+
+#: templates/drumbeatmail/compose.html:4
+msgid "Compose Message"
+msgstr ""
+
+#: templates/drumbeatmail/compose.html:6
+msgid "New Private Message"
+msgstr ""
+
+#: templates/drumbeatmail/inbox.html:14
+msgid "New Private Discussion"
+msgstr ""
+
+#: templates/drumbeatmail/inbox.html:26
+msgid "You have no messages"
+msgstr ""
+
+#: templates/drumbeatmail/inbox.html:109
+msgid "More"
+msgstr ""
+
+#: templates/drumbeatmail/inbox.html:121
+msgid "All Messages"
+msgstr ""
+
+#: templates/drumbeatmail/inbox.html:122
+msgid "Sent"
+msgstr ""
+
+#: templates/drumbeatmail/emails/direct_message.txt:2
+msgid "You have received a new direct message from"
+msgstr ""
+
+#: templates/drumbeatmail/emails/direct_message.txt:6
+msgid "Reply:"
+msgstr ""
+
+#: templates/drumbeatmail/emails/direct_message.txt:8
+#: templates/relationships/emails/new_follower.txt:11
+#: templates/replies/emails/post_comment.txt:12
+#: templates/signups/emails/new_signup_answer.txt:21
+msgid "Sincerely,"
+msgstr ""
+
+#: templates/drumbeatmail/emails/direct_message.txt:11
+#: templates/relationships/emails/new_follower.txt:14
+msgid "Manage your subscriptions:"
+msgstr ""
+
+#: templates/drumbeatmail/emails/direct_message_subject.txt:2
+msgid "New Message from"
+msgstr ""
+
+#: templates/learn/_course_card.html:20
+#: templates/projects/_project_card.html:20
+msgid "Time to Finish"
+msgstr ""
+
+#: templates/learn/_course_card.html:21
+#: templates/projects/_project_card.html:21 templates/projects/sidebar.html:62
+msgid "hrs"
+msgstr ""
+
+#: templates/learn/_course_card.html:25
+#: templates/projects/_project_card.html:25
+msgid "Peers"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:6 templates/users/_profile_info.html:26
+#: templates/users/_profile_info.html:62
+msgid "View All"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:10 templates/schools/home.html:72
+#: templates/schools/school_edit.html:23
+#: templates/schools/school_edit_featured.html:8
+#: templates/users/user_list.html:55
+msgid "Featured"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:14
+msgid "Community Picks"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:17
+msgid "Staff Favorites"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:21
+msgid "Fresh Additions"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:25 templates/schools/menu.html:4
+msgid "Schools"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:56
+msgid "More Tags"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:69
+msgid "Browse All Tags"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:77
+msgid "CLEAR TAGS"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:81
+#: templates/projects/project_create_overview.html:113
+#: templates/projects/project_edit_summary.html:61
+msgid "Language"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:97
+msgid "Community Reviewed"
+msgstr ""
+
+#: templates/learn/_learn_filters.html:101
+msgid "Filter"
+msgstr ""
+
+#: templates/learn/_learn_header.html:4
+msgid "Featured - Community Picks"
+msgstr ""
+
+#: templates/learn/_learn_header.html:6
+msgid "Featured - Showcase"
+msgstr ""
+
+#: templates/learn/_learn_header.html:8
+msgid "Featured - Fresh Additions"
+msgstr ""
+
+#: templates/learn/_learn_header.html:14
+msgid "Tags - "
+msgstr ""
+
+#: templates/learn/_learn_header.html:16
+msgid "All"
+msgstr ""
+
+#: templates/learn/_learn_projects.html:33
+msgid ""
+"\n"
+"        Seems like we don't have any courses to show you. Try looking for "
+"courses in all languages or search for a course by keyword using the search "
+"box at the top of the page.\n"
+"      "
+msgstr ""
+
+#: templates/learn/add_course.html:7 templates/learn/add_course.html.py:10
+msgid "Add course"
+msgstr ""
+
+#: templates/learn/add_course.html:26
+#: templates/projects/project_edit_links.html:15
+#: templates/users/profile_edit_links.html:51
+msgid "URL"
+msgstr ""
+
+#: templates/learn/add_course.html:27
+msgid ""
+"URL for the course, ex. 'http://mechanicalmooc.org/gentle-introduction-to-"
+"python'"
+msgstr ""
+
+#: templates/learn/add_course.html:29
+msgid "Image URL"
+msgstr ""
+
+#: templates/learn/add_course.html:30
+msgid "URL for the course image, ex. 'http://so.me/url/image.png'"
+msgstr ""
+
+#: templates/learn/add_course.html:32
+#: templates/projects/project_edit_links.html:7
+#: templates/projects/project_edit_next_steps.html:17
+#: templates/projects/project_edit_participants.html:28
+#: templates/schools/school_edit_featured.html:22
+#: templates/schools/school_edit_membership.html:17
+#: templates/schools/school_edit_organizers.html:19
+#: templates/users/profile_edit_links.html:41
+msgid "Add"
+msgstr ""
+
+#: templates/learn/learn.html:30
+msgid ""
+"Browse great courses available on P2PU by exploring featured ones, schools, "
+"and tags."
+msgstr ""
+
+#: templates/learn/learn.html:39
+msgid "Show More Results"
+msgstr ""
+
+#: templates/learn/learn.html:44
+msgid "Didn't find yours? How about creating one?"
+msgstr ""
+
+#: templates/learn/learn.html:47
+msgid "Create a Course"
+msgstr ""
+
+#: templates/messages/compose.html:4 templates/messages/inbox.html:40
+msgid "New Message"
+msgstr ""
+
+#: templates/messages/inbox.html:4
+msgid "Your Messages"
+msgstr ""
+
+#: templates/messages/inbox.html:6
+msgid "You have no messages in your inbox"
+msgstr ""
+
+#: templates/messages/inbox.html:11
+msgid "From"
+msgstr ""
+
+#: templates/messages/inbox.html:14
+msgid "Action"
+msgstr ""
+
+#: templates/messages/inbox.html:29
+msgid "DATETIME_FORMAT"
+msgstr ""
+
+#: templates/messages/inbox.html:32
+msgid "delete"
+msgstr ""
+
+#: templates/notifications/emails/response_bounce.txt:1
+msgid ""
+"We love your enthusiasm for learning & for P2PU. Keep it up!\n"
+"\n"
+"But sometimes speedy responses are a sign that someone has an auto-responder "
+"on. And you wouldn't a gazillion of those in your inbox :)\n"
+"\n"
+"Sorry - we're going to ask you to send your message again. Just in case."
+msgstr ""
+
+#: templates/notifications/emails/response_bounce.txt:7
+msgid "This was the message that we received:"
+msgstr ""
+
+#: templates/notifications/emails/response_bounce.txt:10
+msgid ""
+"Cheerio,\n"
+"P2PU team"
+msgstr ""
+
+#: templates/notifications/emails/response_bounce_subject.txt:1
+msgid "P2PU calling. Are we getting your machine?"
+msgstr ""
+
+#: templates/oauthprovider/authorize.html:5
+msgid "Authorize"
+msgstr ""
+
+#: templates/oauthprovider/authorize.html:10
+#, python-format
+msgid "We're going to connect you with %(client_description)s. Ok with you?"
+msgstr ""
+
+#: templates/oauthprovider/authorize.html:14
+msgid "Yes"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:14
+#: templates/pages/get_involved_page.html:20
+msgid "Get Involved."
+msgstr ""
+
+#: templates/pages/get_involved_page.html:24
+msgid ""
+"Welcome to the P2PU Community. We are a respectful and dynamic group who are "
+"excited by the idea of finding new ways to learn online. There are several "
+"different ways you can get involved in the P2PU Community."
+msgstr ""
+
+#: templates/pages/get_involved_page.html:27
+msgid "Ways to get involved"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:29
+#: templates/pages/get_involved_page.html:40
+msgid "Create a course or study group"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:30
+#: templates/pages/get_involved_page.html:45
+msgid "Stay up-to-date with P2PU"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:31
+#: templates/pages/get_involved_page.html:50
+msgid "Join community discussions"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:32
+#: templates/pages/get_involved_page.html:55
+msgid "Help us improve P2PU"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:33
+#: templates/pages/get_involved_page.html:60
+msgid "Donate to P2PU"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:34
+#: templates/pages/get_involved_page.html:65
+msgid "Join or start a Meetup"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:41
+msgid ""
+"P2PU is dedicated to helping people design great peer to peer courses. Don't "
+"see a group studying a topic you'd like to learn? Start your own group! Find "
+"all the help you need to get started on <a href=\"http://help.p2pu.org\" "
+"target=\"_blank\">help.p2pu.org</a>."
+msgstr ""
+
+#: templates/pages/get_involved_page.html:42
+#: templates/pages/get_involved_page.html:47
+#: templates/pages/get_involved_page.html:52
+#: templates/pages/get_involved_page.html:57
+#: templates/pages/get_involved_page.html:62
+#: templates/pages/get_involved_page.html:67
+msgid "Start today &#187;"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:46
+msgid ""
+"You can sign up for our announcements list. This is a very low-traffic "
+"mailing list, which will keep you up-to-date with important P2PU news, like "
+"when new courses are starting."
+msgstr ""
+
+#: templates/pages/get_involved_page.html:51
+msgid ""
+"The main P2PU discussions happen on the p2pu-community mailing list. It’s a "
+"good forum for meeting the P2PU community and ask any questions you may have."
+msgstr ""
+
+#: templates/pages/get_involved_page.html:56
+msgid ""
+"Join the developer mailing list, sign up for the bug/task tracker, join the "
+"Introduction to Contributing to Lernanta study group, or view the developer "
+"documentation on github."
+msgstr ""
+
+#: templates/pages/get_involved_page.html:61
+msgid ""
+"You can donate to P2PU through our partner, The Mozilla Foundation. All "
+"donations go directly to P2PU and help us continue our mission to enable "
+"high-quality low-cost education opportunities!"
+msgstr ""
+
+#: templates/pages/get_involved_page.html:66
+msgid ""
+"There are P2PU Meetups happening all over the world, come and join us or "
+"organize one of your own."
+msgstr ""
+
+#: templates/pages/jobs_page.html:17
+msgid ""
+"P2PU <span class=\"highlight4\">is hiring.</span> <span class="
+"\"highlight3\">Learn anything,</span> <span class=\"highlight2\">while you "
+"work.</span>"
+msgstr ""
+
+#: templates/pages/jobs_page.html:20
+msgid "Open Positions"
+msgstr ""
+
+#: templates/pages/jobs_page.html:22
+msgid "Staff"
+msgstr ""
+
+#: templates/pages/jobs_page.html:25 templates/pages/jobs_page.html.py:30
+msgid "Django Developer"
+msgstr ""
+
+#: templates/pages/jobs_page.html:27 templates/pages/jobs_page.html.py:32
+#: templates/pages/jobs_page.html:42 templates/pages/jobs_page.html.py:52
+msgid "GO!"
+msgstr ""
+
+#: templates/pages/jobs_page.html:37
+msgid "Intern"
+msgstr ""
+
+#: templates/pages/jobs_page.html:40
+msgid "Marketing Intern"
+msgstr ""
+
+#: templates/pages/jobs_page.html:47
+msgid "Volunteer"
+msgstr ""
+
+#: templates/pages/jobs_page.html:50
+msgid "Graphic Designer"
+msgstr ""
+
+#: templates/pages/jobs_page.html:58
+msgid "Why work at p2pu?"
+msgstr ""
+
+#: templates/pages/jobs_page.html:62
+msgid "Benefits and Percks"
+msgstr ""
+
+#: templates/pages/jobs_page.html:67
+msgid "You can work from anywhere, P2PU is global"
+msgstr ""
+
+#: templates/pages/jobs_page.html:68
+msgid "Meet our Team"
+msgstr ""
+
+#: templates/pagination/pagination_links.html:3
+msgid "previous"
+msgstr ""
+
+#: templates/pagination/pagination_links.html:4
+msgid "next"
+msgstr ""
+
+#: templates/projects/_project_edit_image.html:1
+#: templates/projects/project_create_overview.html:143
+msgid "Cover Image"
+msgstr ""
+
+#: templates/projects/_project_edit_image.html:3
+msgid ""
+"Upload an image file from your computer. This image is shown in search "
+"results and on the listing page."
+msgstr ""
+
+#: templates/projects/_project_edit_image.html:17
+msgid ""
+"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
+"243x150 pixels"
+msgstr ""
+
+#: templates/projects/_task_list.html:6
+#: templates/projects/_tasks_list_wall.html:9
+#: templates/projects/sidebar.html:230
+msgid "Tasks"
+msgstr ""
+
+#: templates/projects/_task_list.html:22
+msgid "new"
+msgstr ""
+
+#: templates/projects/_task_list.html:25
+msgid "comment"
+msgid_plural "comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/projects/_task_list.html:36
+msgid "View and Discuss"
+msgstr ""
+
+#: templates/projects/_task_list.html:39
+#: templates/projects/project_edit.html:35
+msgid "View"
+msgstr ""
+
+#: templates/projects/_task_list.html:45 templates/projects/sidebar.html:253
+msgid "No tasks have been added."
+msgstr ""
+
+#: templates/projects/_task_list.html:49
+msgid "Displaying"
+msgstr ""
+
+#: templates/projects/_task_list.html:49
+msgid "of"
+msgstr ""
+
+#: templates/projects/_task_list.html:49
+msgid "total tasks"
+msgstr ""
+
+#: templates/projects/_task_list.html:50
+msgid "See All Tasks"
+msgstr ""
+
+#: templates/projects/_tasks_completed_msg.html:3
+msgid "Congratulations!"
+msgstr ""
+
+#: templates/projects/_tasks_completed_msg.html:4
+msgid "Good job completing all the tasks."
+msgstr ""
+
+#: templates/projects/_tasks_completed_msg.html:8
+msgid "Badges Awarded"
+msgstr ""
+
+#: templates/projects/_tasks_completed_msg.html:26
+msgid "Earn More Badges"
+msgstr ""
+
+#: templates/projects/_tasks_completed_msg.html:35
+msgid "Next Challenges"
+msgstr ""
+
+#: templates/projects/_tasks_completed_msg.html:47
+msgid "Help Others with this Challenge"
+msgstr ""
+
+#: templates/projects/_tasks_completed_msg.html:50
+msgid "Adopt this Challenge"
+msgstr ""
+
+#: templates/projects/_tasks_list_wall.html:10
+msgid "Discussions"
+msgstr ""
+
+#: templates/projects/_tasks_list_wall.html:15
+msgid "Completed"
+msgstr ""
+
+#: templates/projects/_tasks_list_wall.html:22
+msgid "Badges you can earn in this challenge:"
+msgstr ""
+
+#: templates/projects/_user_list.html:6
+msgid "See All"
+msgstr ""
+
+#: templates/projects/_user_list.html:24
+msgid "Peers who have offered their help"
+msgstr ""
+
+#: templates/projects/_user_list.html:58
+msgid "Peers taking this challenge"
+msgstr ""
+
+#: templates/projects/_user_list.html:71
+#: templates/projects/project_edit.html:43
+#: templates/projects/project_edit_participants.html:7
+#: templates/projects/sidebar.html:189
+#: templates/schools/_projectset_card.html:35
+#: templates/schools/projectset_home.html:24
+#: templates/schools/school_edit_statistics.html:19
+msgid "Participants"
+msgstr ""
+
+#: templates/projects/_user_list.html:91
+msgid "Peers who have completed this challenge"
+msgstr ""
+
+#: templates/projects/_user_list.html:123
+msgid "View all"
+msgstr ""
+
+#: templates/projects/_wall.html:11
+msgid "Post a message"
+msgstr ""
+
+#: templates/projects/contact_organizers.html:6
+msgid "Contact Organizers of "
+msgstr ""
+
+#: templates/projects/detailed_description_initial_content.html:4
+#, python-format
+msgid "Please fill out the  %(kind)s's full description."
+msgstr ""
+
+#: templates/projects/detailed_description_initial_content.html:4
+msgid "In this page you could:"
+msgstr ""
+
+#: templates/projects/detailed_description_initial_content.html:7
+#, python-format
+msgid ""
+"Describe the purpose of the %(kind)s and the learning goals for the tasks "
+"within."
+msgstr ""
+
+#: templates/projects/detailed_description_initial_content.html:8
+#, python-format
+msgid ""
+"Describe your role in this  %(kind)s. What made you interested in this "
+"topic? What do you hope to achieve by organizing this  %(kind)s? Are you an "
+"expert, enthusiastic or a novice?"
+msgstr ""
+
+#: templates/projects/detailed_description_initial_content.html:9
+#, python-format
+msgid ""
+"Include any prerequisite knowledge or skills needed to participate in the  "
+"%(kind)s, the intended start date, estimated pace, commitment, amount of "
+"work, and the length of time the participants can expect to work together (a "
+"few days, a few weeks, or forever)."
+msgstr ""
+
+#: templates/projects/detailed_description_initial_content.html:10
+#, python-format
+msgid ""
+"Provided any other information that could be useful for people interested in "
+"joining the  %(kind)s. In what ways can participants expect to contribute to "
+"the creation of tasks and assessing each others\\' contributions? What will "
+"the final task comprise?"
+msgstr ""
+
+#: templates/projects/imported_detailed_description.html:3
+#: templates/projects/project_edit.html:39
+#: templates/schools/school_edit.html:16
+msgid "Summary"
+msgstr ""
+
+#: templates/projects/imported_detailed_description.html:9
+msgid "Learning Objectives"
+msgstr ""
+
+#: templates/projects/project.html:21 templates/projects/sidebar.html:258
+msgid "New Task"
+msgstr ""
+
+#: templates/projects/project.html:22 templates/projects/project_edit.html:34
+msgid "Admin"
+msgstr ""
+
+#: templates/projects/project.html:44
+msgid "Activity Wall"
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:12
+msgid "Organizer Quick View"
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:14
+msgid "export data"
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:16
+msgid "This table shows the overview of participant data. "
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:17
+msgid ""
+"To see follower data or non-loggedin user data, use export for a <acronym "
+"title=\"Comma Separated Values\">CSV</acronym> file."
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:23
+#: templates/projects/project_admin_metrics.html:34
+msgid "Participant"
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:24
+#: templates/projects/project_admin_metrics.html:35
+msgid "Last Active Date"
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:26
+#: templates/projects/project_admin_metrics.html:37
+msgid "Task Edits"
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:27
+#: templates/projects/project_admin_metrics.html:38
+msgid "Time on Course Pages"
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:45
+msgid ""
+"The information about course page visits is not available on the same day."
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:46
+msgid "Last date the user visited a course page."
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:47
+msgid "Total includes comments on wall and task pages."
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:48
+msgid "Total includes edits to the full description and task pages."
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:49
+msgid ""
+"Total time (in minutes) spent on this course's pages. The estimates are "
+"based on the timestamps of consecutive page views in the same session and "
+"default to one minute when the user does not access another page in an "
+"interval of one hour."
+msgstr ""
+
+#: templates/projects/project_admin_metrics.html:50
+msgid ""
+"The data in the csv file is more detailed and does not add the one minute "
+"estimates to the time on page so you can choose another constant to give "
+"weight to these page visits."
+msgstr ""
+
+#: templates/projects/project_clone.html:39
+#: templates/projects/project_create_overview.html:38
+#: templates/projects/project_create_review.html:36
+#: templates/projects/project_create_tasks.html:37
+#: templates/projects/project_import.html:39
+msgid "Step 1: Create Course"
+msgstr ""
+
+#: templates/projects/project_clone.html:44
+#: templates/projects/project_clone.html:61
+#: templates/projects/project_create_overview.html:46
+#: templates/projects/project_import.html:44
+msgid "Clone Existing"
+msgstr ""
+
+#: templates/projects/project_clone.html:48
+#: templates/projects/project_create_overview.html:50
+#: templates/projects/project_import.html:47
+msgid "Import from old site"
+msgstr ""
+
+#: templates/projects/project_clone.html:52
+#: templates/projects/project_import.html:51
+msgid "Step 2: Update Tasks"
+msgstr ""
+
+#: templates/projects/project_clone.html:55
+#: templates/projects/project_create_overview.html:58
+#: templates/projects/project_create_overview.html:65
+#: templates/projects/project_create_review.html:42
+#: templates/projects/project_create_tasks.html:44
+#: templates/projects/project_import.html:54
+msgid "Step 3: Review and Publish"
+msgstr ""
+
+#: templates/projects/project_clone.html:62
+msgid ""
+"Create a new study group, course ... based on an existing one. Note that if "
+"you start typing the matching suggestions will be displayed."
+msgstr ""
+
+#: templates/projects/project_clone.html:67
+#: templates/projects/project_edit_next_steps.html:12
+#: templates/schools/school_edit_summary.html:16
+msgid "Short Name"
+msgstr ""
+
+#: templates/projects/project_clone.html:74
+msgid "Clone"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:55
+#: templates/projects/project_create_overview.html:62
+#: templates/projects/project_create_review.html:39
+#: templates/projects/project_create_tasks.html:40
+msgid "Step 2: Add Tasks"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:79
+#, python-format
+msgid ""
+"Looking for advice on great course design? We have a <a href="
+"\"%(challenge_url)s\" target=\"_blank\">course</a> that can help you with "
+"the process and articles on our <a href=\"http://help.p2pu.org/kb\" >help "
+"desk</a>."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:85
+msgid "Just doing a test run? Check here to create a test course."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:87
+#: templates/projects/project_edit_summary.html:18
+msgid ""
+"Please check this if you are just testing. Your course will not generate "
+"updates or notification emails for other users."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:96
+#: templates/projects/project_edit_summary.html:33
+msgid "Tagline"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:102
+msgid "How many hours will this course take to complete?"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:126
+msgid "Course style"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:127
+#: templates/projects/project_edit_summary.html:80
+msgid "What kind of learning environment do you want to create?"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:131
+#: templates/projects/project_edit_summary.html:84
+msgid "Or make up your own term."
+msgstr ""
+
+#: templates/projects/project_create_overview.html:133
+#: templates/projects/project_edit_summary.html:86
+msgid "Term"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:148
+msgid ""
+"Your cover image is the public face of your course - choose it wisely! "
+"Select and upload an image.<br/>We only support JPG, GIF and PNG images<br/"
+">The image should measure 243x150 pixels<br/>The maximum size is 700k"
+msgstr ""
+
+#: templates/projects/project_create_overview.html:156
+msgid "Go to step 2"
+msgstr ""
+
+#: templates/projects/project_create_review.html:48
+msgid "Review your course"
+msgstr ""
+
+#: templates/projects/project_create_review.html:50
+msgid ""
+"This is what your project will look like to the world when it is published. "
+"Take a second to double check your course name, tagline, image and tags."
+msgstr ""
+
+#: templates/projects/project_create_review.html:55
+msgid ""
+"Join the <a href=\"https://p2pu.org/groups/make-a-course/\">P2PU Course "
+"Design Group</a> to get feedback on your course!"
+msgstr ""
+
+#: templates/projects/project_create_review.html:57
+msgid ""
+"You may also wish to add a badge to your challenge! For more information on "
+"badges and how to add them to your challenge, see <a href=\"https://p2pu.org/"
+"groups/how-do-i-make-a-badge/\">this</a> course!"
+msgstr ""
+
+#: templates/projects/project_create_review.html:59
+msgid ""
+"Once you hit the 'Finish' button, you will be taken to your course. You can "
+"still make changes to your course and add and update the tasks associated "
+"with your course."
+msgstr ""
+
+#: templates/projects/project_create_review.html:61
+msgid ""
+"Your course will remain a draft until you uncheck the 'Under Development' "
+"checkbox in the admin interface of your course."
+msgstr ""
+
+#: templates/projects/project_create_review.html:63
+msgid "Finish"
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:8
+#: templates/projects/project_create_tasks.html:52
+msgid "Create tasks"
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:61
+msgid "Up"
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:62
+msgid "Down"
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:72
+msgid "Add Task"
+msgstr ""
+
+#: templates/projects/project_create_tasks.html:73
+msgid "Go to step 3"
+msgstr ""
+
+#: templates/projects/project_edit.html:40
+msgid "Image"
+msgstr ""
+
+#: templates/projects/project_edit.html:41
+#: templates/projects/project_edit_status.html:10
+msgid "Status &amp; Duration"
+msgstr ""
+
+#: templates/projects/project_edit.html:41
+#: templates/projects/project_edit_status.html:12
+msgid "Status &amp; Dates"
+msgstr ""
+
+#: templates/projects/project_edit.html:42 templates/projects/sidebar.html:173
+msgid "Signup"
+msgstr ""
+
+#: templates/projects/project_edit.html:44
+#: templates/projects/project_edit_next_steps.html:7
+msgid "Associated Courses"
+msgstr ""
+
+#: templates/projects/project_edit.html:45
+#: templates/projects/project_edit_links_base.html:7
+#: templates/users/profile_edit.html:29
+#: templates/users/profile_edit_links.html:11
+#: templates/users/profile_edit_links_edit.html:8
+msgid "Links"
+msgstr ""
+
+#: templates/projects/project_edit.html:46
+msgid "Metrics"
+msgstr ""
+
+#: templates/projects/project_edit_image.html:13
+#: templates/schools/school_edit_background.html:24
+#: templates/schools/school_edit_groups_icon.html:24
+#: templates/schools/school_edit_logo.html:24
+#: templates/schools/school_edit_site_logo.html:24
+#: templates/users/profile_edit_main.html:15
+msgid "Upload"
+msgstr ""
+
+#: templates/projects/project_edit_links.html:5
+msgid "Add links to websites associated with this "
+msgstr ""
+
+#: templates/projects/project_edit_links.html:5
+#: templates/projects/project_edit_links_edit.html:5
+msgid " such as a blog, homepage, twitter profile, github repository etc."
+msgstr ""
+
+#: templates/projects/project_edit_links.html:16
+#: templates/users/profile_edit_links.html:52
+msgid "Subscribed"
+msgstr ""
+
+#: templates/projects/project_edit_links.html:17
+#: templates/projects/project_edit_next_steps.html:27
+#: templates/projects/project_edit_participants.html:39
+#: templates/schools/school_edit_featured.html:32
+#: templates/schools/school_edit_membership.html:26
+#: templates/users/profile_edit_links.html:53
+#: templates/users/profile_edit_openids.html:26
+msgid "Actions"
+msgstr ""
+
+#: templates/projects/project_edit_links.html:27
+#: templates/users/profile_edit_links.html:63
+msgid "Subscribed."
+msgstr ""
+
+#: templates/projects/project_edit_links.html:27
+#: templates/projects/project_edit_participants.html:48
+#: templates/projects/project_edit_participants.html:56
+#: templates/schools/school_edit_organizers.html:36
+#: templates/users/profile_edit_links.html:63
+msgid "yes"
+msgstr ""
+
+#: templates/projects/project_edit_links.html:28
+#: templates/users/profile_edit_links.html:64
+msgid "Error saving subscription."
+msgstr ""
+
+#: templates/projects/project_edit_links.html:28
+#: templates/users/profile_edit_links.html:64
+msgid "error"
+msgstr ""
+
+#: templates/projects/project_edit_links.html:31
+#: templates/users/profile_edit_links.html:67
+msgid "Not subscribed."
+msgstr ""
+
+#: templates/projects/project_edit_links.html:31
+#: templates/projects/project_edit_participants.html:50
+#: templates/projects/project_edit_participants.html:58
+#: templates/users/profile_edit_links.html:67
+msgid "no"
+msgstr ""
+
+#: templates/projects/project_edit_links_base.html:18
+#: templates/users/profile_edit_links.html:25
+#: templates/users/profile_edit_links_edit.html:18
+msgid "Url"
+msgstr ""
+
+#: templates/projects/project_edit_links_base.html:23
+#: templates/users/profile_edit_links.html:32
+#: templates/users/profile_edit_links_edit.html:23
+msgid "Subscribe"
+msgstr ""
+
+#: templates/projects/project_edit_links_edit.html:5
+msgid "Edit links to websites associated with this "
+msgstr ""
+
+#: templates/projects/project_edit_links_edit.html:7
+#: templates/users/forgot_password_confirm.html:26
+#: templates/users/profile_edit_links_edit.html:27
+msgid "Update"
+msgstr ""
+
+#: templates/projects/project_edit_next_steps.html:8
+msgid ""
+"View, add and remove associated study groups and courses that a learner "
+"might want to visit after completing the challenge."
+msgstr ""
+
+#: templates/projects/project_edit_next_steps.html:26
+#: templates/projects/sidebar.html:169
+msgid "Kind"
+msgstr ""
+
+#: templates/projects/project_edit_next_steps.html:38
+#: templates/projects/project_edit_participants.html:72
+msgid "Remove"
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:10
+msgid "View and add participants."
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:12
+msgid "View, add and remove participants."
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:18
+#: templates/schools/school_edit_organizers.html:13
+#: templates/users/profile_form_base.html:19
+msgid "Username"
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:23
+#: templates/projects/project_edit_participants.html:37
+msgid "Organizer"
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:38
+msgid "Adopter"
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:48
+msgid "Organizing."
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:50
+msgid "Not Organizing."
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:56
+msgid "Adopter."
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:58
+msgid "Participant."
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:66
+#: templates/signups/sign_up.html:102
+msgid "Add Organizer"
+msgstr ""
+
+#: templates/projects/project_edit_participants.html:78
+msgid "Remove organizer"
+msgstr ""
+
+#: templates/projects/project_edit_status.html:17
+#, python-format
+msgid ""
+"Configure your %(kind)s's status so that it appears in the appropriate lists."
+msgstr ""
+
+#: templates/projects/project_edit_status.html:21
+msgid "Under Development."
+msgstr ""
+
+#: templates/projects/project_edit_status.html:28
+msgid "Not Listed."
+msgstr ""
+
+#: templates/projects/project_edit_status.html:35
+msgid "Archived."
+msgstr ""
+
+#: templates/projects/project_edit_status.html:44
+#: templates/projects/project_edit_summary.html:44
+msgid "How many hours will this challenge take to complete?"
+msgstr ""
+
+#: templates/projects/project_edit_status.html:51
+#, python-format
+msgid ""
+"Optionally, provide the period of time in which you expect the %(kind)s to "
+"be active. These dates are optional and will be displayed on the home page."
+msgstr ""
+
+#: templates/projects/project_edit_status.html:54
+msgid "Active from"
+msgstr ""
+
+#: templates/projects/project_edit_summary.html:16
+msgid "This is a test course"
+msgstr ""
+
+#: templates/projects/project_edit_summary.html:26
+msgid "Short and descriptive works best."
+msgstr ""
+
+#: templates/projects/project_edit_summary.html:36
+msgid "Used in search results and listings."
+msgstr ""
+
+#: templates/projects/project_edit_summary.html:53
+msgid "One paragraph description"
+msgstr ""
+
+#: templates/projects/project_edit_summary.html:54
+msgid ""
+"What's this about? What will I learn? Tell me more, but keep it to the point."
+msgstr ""
+
+#: templates/projects/project_edit_summary.html:68
+msgid "Skills"
+msgstr ""
+
+#: templates/projects/project_edit_summary.html:71
+msgid "Comma-separated list of keywords."
+msgstr ""
+
+#: templates/projects/project_edit_summary.html:79
+msgid "Type"
+msgstr ""
+
+#: templates/projects/project_import.html:60
+msgid "Import from Old Site"
+msgstr ""
+
+#: templates/projects/project_import.html:61
+msgid ""
+"Import a course from the old p2pu site. Note that if you start typing the "
+"matching suggestions will be displayed."
+msgstr ""
+
+#: templates/projects/project_import.html:66
+msgid "Course"
+msgstr ""
+
+#: templates/projects/project_import.html:73
+msgid "Import"
+msgstr ""
+
+#: templates/projects/sidebar.html:30 templates/users/sidebar.html:40
+msgid "Unfollow"
+msgstr ""
+
+#: templates/projects/sidebar.html:35 templates/users/sidebar.html:46
+msgid "Follow"
+msgstr ""
+
+#: templates/projects/sidebar.html:40
+msgid "Participate"
+msgstr ""
+
+#: templates/projects/sidebar.html:62
+msgid "Time it should take to complete:"
+msgstr ""
+
+#: templates/projects/sidebar.html:62
+msgid "min"
+msgstr ""
+
+#: templates/projects/sidebar.html:71 templates/projects/sidebar.html.py:74
+msgid "Start Challenge"
+msgstr ""
+
+#: templates/projects/sidebar.html:78 templates/projects/sidebar.html.py:86
+msgid "View Tasks"
+msgstr ""
+
+#: templates/projects/sidebar.html:80
+msgid "View Discussions"
+msgstr ""
+
+#: templates/projects/sidebar.html:84
+msgid "Request a Mentor"
+msgstr ""
+
+#: templates/projects/sidebar.html:88
+msgid "Discuss Challenge"
+msgstr ""
+
+#: templates/projects/sidebar.html:93
+msgid "Leave Challenge"
+msgstr ""
+
+#: templates/projects/sidebar.html:105
+msgid "View more tagged with "
+msgstr ""
+
+#: templates/projects/sidebar.html:114
+msgid "View Full Description"
+msgstr ""
+
+#: templates/projects/sidebar.html:145
+msgid "Under Development"
+msgstr ""
+
+#: templates/projects/sidebar.html:148
+msgid "Not Listed"
+msgstr ""
+
+#: templates/projects/sidebar.html:150
+msgid "DATE_FORMAT"
+msgstr ""
+
+#: templates/projects/sidebar.html:152
+msgid "Runs"
+msgstr ""
+
+#: templates/projects/sidebar.html:158 templates/projects/sidebar.html:164
+msgid "Based on"
+msgstr ""
+
+#: templates/projects/sidebar.html:181 templates/users/_user_card.html:25
+msgid "Updates"
+msgstr ""
+
+#: templates/projects/sidebar.html:198
+msgid "Pending Applicants"
+msgstr ""
+
+#: templates/projects/sidebar.html:217
+msgid "Edit Participants"
+msgstr ""
+
+#: templates/projects/sidebar.html:220
+msgid "Contact Organizer(s)"
+msgstr ""
+
+#: templates/projects/sidebar.html:223
+msgid "Contact Organizer"
+msgstr ""
+
+#: templates/projects/sidebar.html:264
+msgid "External Links"
+msgstr ""
+
+#: templates/projects/sidebar.html:282
+msgid "No external links have been added."
+msgstr ""
+
+#: templates/projects/sidebar.html:287
+msgid "Edit Links"
+msgstr ""
+
+#: templates/projects/sidebar.html:298
+msgid "Help your peers"
+msgstr ""
+
+#: templates/projects/sidebar.html:299
+msgid ""
+"Would you be interested in becoming a Mentor? Your peers are going to run "
+"into road blocks and they could really use your help."
+msgstr ""
+
+#: templates/projects/sidebar.html:300
+msgid "Become a Mentor"
+msgstr ""
+
+#: templates/projects/sidebar.html:325
+#, python-format
+msgid "%(counter)s peer needs your review!"
+msgid_plural "%(counter)s peers need your review!"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/projects/sidebar.html:325
+#: templates/users/_openid_providers.html:26
+msgid "Go"
+msgstr ""
+
+#: templates/projects/emails/admin_project_created_subject.txt:2
+msgid "New "
+msgstr ""
+
+#: templates/projects/emails/contact_organizer.txt:4
+msgid "Howdy Organizer. Someone's contacted you."
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:4
+#, python-format
+msgid " We're excited to see you've created %(project_name|safe)s. "
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:6
+msgid "We\\'re here to help you design, promote and run a stellar course."
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:8
+msgid ""
+"Check out these ways to connect with the community, get feedback and promote "
+"the heck out it."
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:10
+msgid ""
+"1. We have a help desk where you can bring all your questions to our staff:"
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:11
+msgid "2. We have a group just for course designers on the site:"
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:12
+msgid ""
+"3. We have a totally sweet P2PU community mailing list where you can pitch "
+"your course:"
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:13
+msgid ""
+"4. To give you course more marketing TLC, get it featured in the showcase. "
+"Send us a note at help@p2pu.org."
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:15
+msgid "When your course is ready, uncheck \\"
+msgstr ""
+
+#: templates/projects/emails/project_created.txt:18
+msgid "Yay! The learnings!"
+msgstr ""
+
+#: templates/projects/emails/project_created_subject.txt:3
+#, python-format
+msgid " Take %(project_name)s to the next level."
+msgstr ""
+
+#: templates/relationships/emails/new_follower.txt:2
+msgid "is now following "
+msgstr ""
+
+#: templates/relationships/emails/new_follower.txt:2
+#: templates/relationships/emails/new_follower_subject.txt:1
+msgid "you"
+msgstr ""
+
+#: templates/relationships/emails/new_follower.txt:2
+#: templates/relationships/emails/new_follower_subject.txt:1
+msgid "on P2PU!"
+msgstr ""
+
+#: templates/relationships/emails/new_follower.txt:4
+#: templates/signups/answer_sign_up.html:31 templates/signups/sign_up.html:79
+#: templates/signups/emails/new_signup_answer.txt:4
+msgid "Bio:"
+msgstr ""
+
+#: templates/relationships/emails/new_follower.txt:8
+msgid "You can see their profile here:"
+msgstr ""
+
+#: templates/relationships/emails/new_follower_subject.txt:1
+msgid "is following "
+msgstr ""
+
+#: templates/replies/_comment_threads.html:43
+#: templates/replies/_comment_threads.html:101
+#: templates/replies/comment_page.html:39
+#: templates/replies/comment_page.html:59
+msgid " said:"
+msgstr ""
+
+#: templates/replies/_comment_threads.html:54
+#: templates/replies/_comment_threads.html:116
+#: templates/replies/comment_page.html:45
+#: templates/replies/comment_page.html:65
+msgid "on "
+msgstr ""
+
+#: templates/replies/_comment_threads.html:105
+msgid "In Reply To:"
+msgstr ""
+
+#: templates/replies/_comment_threads.html:117
+#: templates/replies/comment_page.html:46
+#: templates/replies/comment_page.html:66
+msgid "in reply to "
+msgstr ""
+
+#: templates/replies/comment_page.html:25
+msgid "Edit Comment"
+msgstr ""
+
+#: templates/replies/comment_page.html:27
+msgid "Reply Comment"
+msgstr ""
+
+#: templates/replies/comment_page.html:29
+msgid "New Comment"
+msgstr ""
+
+#: templates/replies/comment_page.html:103
+#: templates/signups/answer_sign_up.html:99
+msgid "Post"
+msgstr ""
+
+#: templates/replies/delete_restore_comment.html:16
+msgid "Restore Comment:"
+msgstr ""
+
+#: templates/replies/delete_restore_comment.html:16
+msgid "Delete Comment:"
+msgstr ""
+
+#: templates/replies/delete_restore_comment.html:27
+msgid "Are you sure you want to restore this comment?"
+msgstr ""
+
+#: templates/replies/delete_restore_comment.html:29
+msgid "Are you sure you want to delete this comment?"
+msgstr ""
+
+#: templates/replies/emails/post_comment.txt:6
+#, python-format
+msgid "This comment was posted at %(scope)s."
+msgstr ""
+
+#: templates/replies/emails/post_comment.txt:8
+msgid "You can view this comment online at:"
+msgstr ""
+
+#: templates/replies/emails/post_comment.txt:10
+msgid "To reply to this comment by email, simply type your reply at the top!"
+msgstr ""
+
+#: templates/replies/emails/post_comment_subject.txt:2
+msgid " posted a new comment at "
+msgstr ""
+
+#: templates/replies/emails/post_comment_subject.txt:2
+msgid " in "
+msgstr ""
+
+#: templates/reviews/_project_review_action.html:3
+#: templates/reviews/_projects_reviews_list_item.html:3
+#: templates/reviews/review_project.html:7
+msgid "Review"
+msgstr ""
+
+#: templates/reviews/_projects_reviews_list_item.html:5
+msgid "Feedback Comments:"
+msgstr ""
+
+#: templates/reviews/projects_reviews_list.html:11
+msgid "New Courses"
+msgstr ""
+
+#: templates/reviews/projects_reviews_list.html:12
+msgid "Reviewed"
+msgstr ""
+
+#: templates/reviews/review_project.html:13
+msgid "Feedback"
+msgstr ""
+
+#: templates/reviews/review_project.html:20
+msgid "Mark as Reviewed"
+msgstr ""
+
+#: templates/reviews/review_project.html:28
+msgid "Feature as Community Pick"
+msgstr ""
+
+#: templates/reviews/review_project.html:37
+msgid "Mark as Deleted (Spam)"
+msgstr ""
+
+#: templates/reviews/show_project_reviews.html:16
+msgid "Review from"
+msgstr ""
+
+#: templates/reviews/show_project_reviews.html:18
+msgid "Community Reviewed!"
+msgstr ""
+
+#: templates/reviews/show_project_reviews.html:19
+msgid "Deleted (Spam)!"
+msgstr ""
+
+#: templates/reviews/show_project_reviews.html:20
+msgid "Featured as Community Pick!"
+msgstr ""
+
+#: templates/reviews/show_project_reviews.html:21
+msgid "Feedback:"
+msgstr ""
+
+#: templates/reviews/show_project_reviews.html:28
+msgid "Post New Review"
+msgstr ""
+
+#: templates/reviews/emails/review_submitted.txt:1
+#, python-format
+msgid ""
+"Hi there!\n"
+"\n"
+"%(reviewer)s had a look at %(course)s and here is what they had to say:"
+msgstr ""
+
+#: templates/reviews/emails/review_submitted.txt:7
+#, python-format
+msgid ""
+"You can also have a look at their feedback here: https://%(domain)s"
+"%(review_url)s\n"
+"\n"
+"Cheerio\n"
+"The P2PU team"
+msgstr ""
+
+#: templates/reviews/emails/review_submitted_subject.txt:3
+#, python-format
+msgid "%(user)s had a look at %(course_name)s!"
+msgstr ""
+
+#: templates/richtext/_external_link.html:2
+msgid "Work on this Task"
+msgstr ""
+
+#: templates/richtext/browse.html:9
+msgid "Select the file you want, then click 'Attach File' to continue..."
+msgstr ""
+
+#: templates/richtext/browse.html:14
+msgid "Files"
+msgstr ""
+
+#: templates/richtext/browse.html:21
+msgid "Attach File"
+msgstr ""
+
+#: templates/richtext/browse.html:25
+msgid ""
+"No files found. Upload files using the 'Link Button' dialog's 'Upload' tab."
+msgstr ""
+
+#: templates/schools/_projectset_card.html:25
+msgid "View Challenges"
+msgstr ""
+
+#: templates/schools/_projectset_card.html:31
+#: templates/schools/projectset_home.html:23
+#: templates/schools/projectset_home.html:37
+msgid "Challenges"
+msgstr ""
+
+#: templates/schools/_projectset_card.html:39
+#: templates/schools/projectset_home.html:25
+msgid "Adopters"
+msgstr ""
+
+#: templates/schools/_projectset_card.html:53
+msgid "Get started with the first Challenge now"
+msgstr ""
+
+#: templates/schools/_projectset_card.html:71
+msgid "View All Challenges"
+msgstr ""
+
+#: templates/schools/footer.html:4
+msgid "P2PU Schools:"
+msgstr ""
+
+#: templates/schools/home.html:11 templates/schools/school_edit.html:4
+#: templates/schools/school_edit.html:11
+msgid "Edit School"
+msgstr ""
+
+#: templates/schools/home.html:16
+msgid "Browse"
+msgstr ""
+
+#: templates/schools/home.html:35 templates/schools/school_edit.html:22
+#: templates/schools/school_edit_organizers.html:7
+msgid "School Organizers"
+msgstr ""
+
+#: templates/schools/home.html:46
+msgid "Challenge Sets"
+msgstr ""
+
+#: templates/schools/projectset_home.html:29
+msgid "Start first Challenge"
+msgstr ""
+
+#: templates/schools/school_edit.html:12
+msgid "View School"
+msgstr ""
+
+#: templates/schools/school_edit.html:17
+msgid "Appearance"
+msgstr ""
+
+#: templates/schools/school_edit.html:18
+msgid "Logo"
+msgstr ""
+
+#: templates/schools/school_edit.html:19
+msgid "Small Logo"
+msgstr ""
+
+#: templates/schools/school_edit.html:20
+msgid "Background"
+msgstr ""
+
+#: templates/schools/school_edit.html:21
+msgid "Site Logo"
+msgstr ""
+
+#: templates/schools/school_edit.html:24
+#: templates/schools/school_edit_membership.html:7
+msgid "Membership"
+msgstr ""
+
+#: templates/schools/school_edit.html:25
+#: templates/schools/school_edit_mentorship.html:7
+msgid "Mentorship"
+msgstr ""
+
+#: templates/schools/school_edit.html:26
+#: templates/schools/school_edit_statistics.html:7
+msgid "Statistics"
+msgstr ""
+
+#: templates/schools/school_edit_background.html:12
+msgid "Replace School Background Image"
+msgstr ""
+
+#: templates/schools/school_edit_background.html:14
+msgid "Upload a School Background Image"
+msgstr ""
+
+#: templates/schools/school_edit_background.html:16
+#: templates/schools/school_edit_groups_icon.html:16
+#: templates/schools/school_edit_logo.html:16
+#: templates/schools/school_edit_site_logo.html:16
+msgid "Upload an image file from your computer:"
+msgstr ""
+
+#: templates/schools/school_edit_background.html:19
+msgid ""
+"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 20x60 "
+"pixels"
+msgstr ""
+
+#: templates/schools/school_edit_featured.html:9
+msgid "View, add and remove courses featured by this school."
+msgstr ""
+
+#: templates/schools/school_edit_groups_icon.html:12
+msgid "Replace School Small Logo"
+msgstr ""
+
+#: templates/schools/school_edit_groups_icon.html:14
+msgid "Upload a School Small Logo"
+msgstr ""
+
+#: templates/schools/school_edit_groups_icon.html:19
+msgid ""
+"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 41x50 "
+"pixels"
+msgstr ""
+
+#: templates/schools/school_edit_logo.html:12
+msgid "Replace School Logo"
+msgstr ""
+
+#: templates/schools/school_edit_logo.html:14
+msgid "Upload a School Logo"
+msgstr ""
+
+#: templates/schools/school_edit_logo.html:19
+msgid ""
+"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
+"Variable"
+msgstr ""
+
+#: templates/schools/school_edit_membership.html:8
+msgid "View, add and remove courses to this school."
+msgstr ""
+
+#: templates/schools/school_edit_membership.html:13
+msgid "Course title"
+msgstr ""
+
+#: templates/schools/school_edit_mentorship.html:8
+msgid ""
+"Schools that have a mentorship program can provide urls to the forms they "
+"use to signup people as mentors or mentees. Schools will be responsible for "
+"pairing up mentors with mentees and send the introduction emails."
+msgstr ""
+
+#: templates/schools/school_edit_mentorship.html:12
+msgid "Mentor Form Url"
+msgstr ""
+
+#: templates/schools/school_edit_mentorship.html:13
+msgid "Provide url for users to signup as mentors."
+msgstr ""
+
+#: templates/schools/school_edit_mentorship.html:18
+msgid "Mentee Form Url"
+msgstr ""
+
+#: templates/schools/school_edit_mentorship.html:19
+msgid "Provide url for users to signup as mentees."
+msgstr ""
+
+#: templates/schools/school_edit_organizers.html:8
+msgid "View, add and remove organizers of your school."
+msgstr ""
+
+#: templates/schools/school_edit_organizers.html:28
+msgid "School Organizer"
+msgstr ""
+
+#: templates/schools/school_edit_organizers.html:36
+msgid "Organizing this school."
+msgstr ""
+
+#: templates/schools/school_edit_site_logo.html:12
+msgid "Replace School Site Logo"
+msgstr ""
+
+#: templates/schools/school_edit_site_logo.html:14
+msgid "Upload a School Site Logo"
+msgstr ""
+
+#: templates/schools/school_edit_site_logo.html:19
+msgid ""
+"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
+"141x44 pixels"
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:8
+msgid "Statistics for this school"
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:9
+msgid "Groups"
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:25
+msgid "Page Comments"
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:26
+msgid "Wall Messages"
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:27
+msgid "Activity Replies"
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:28
+msgid "Page Edits"
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:29
+msgid "Sign-Up Answers"
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:30
+msgid "Sign-Up Comments"
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:34
+msgid "The numbers on this page do not include data from the old p2pu site."
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:35
+msgid "Comments at the full description and task pages."
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:36
+msgid "Messages posted to the wall by organizers and participants."
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:37
+msgid "Comments in the discusion threads of wall activities."
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:38
+msgid ""
+"Edits to the full description and task pages. Does not include minor updates."
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:39
+msgid "Includes both accepted and non-accepted answers."
+msgstr ""
+
+#: templates/schools/school_edit_statistics.html:40
+msgid ""
+"Comments at the sign-up pages. It includes automatic \"wellcome to the group"
+"\" replies."
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:9
+msgid "Sidebar"
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:13
+msgid "Show School Organizers."
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:15
+msgid ""
+"Hide the list of school organizers if you don't want it to appear on the "
+"school home page sidebar."
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:19
+msgid "Width"
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:20
+msgid ""
+"Update this value so the school logo fits nicelly on the school home page "
+"sidebar."
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:24
+msgid "Colors"
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:27
+msgid "Headers Color"
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:28
+msgid ""
+"This color will be used for the headers of pages associated with this school."
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:34
+msgid "Lighter Headers Color"
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:35
+msgid "Lighter variant of the headers color."
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:41
+msgid "Background Color"
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:42
+msgid ""
+"This color will be used as background for the non-striped sections of the "
+"pages associated with this school."
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:48
+msgid "Menus Color"
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:49
+msgid ""
+"This color will be used as background for the menus of the pages associated "
+"with this school."
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:55
+msgid "Lighter Menus Color"
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:56
+msgid "Lighter variant of the menus color."
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:62
+msgid "Custom Styles (Advanced)"
+msgstr ""
+
+#: templates/schools/school_edit_styles.html:63
+msgid "Customize CSS styles for the school home page and groups."
+msgstr ""
+
+#: templates/schools/school_edit_summary.html:11
+msgid ""
+"A good name is short and descriptive. People should know what your school is "
+"about without reading the description."
+msgstr ""
+
+#: templates/schools/school_edit_summary.html:17
+msgid ""
+"Shorter name displayed close to the school small icon on sidebars and "
+"footers."
+msgstr ""
+
+#: templates/schools/school_edit_summary.html:23
+msgid "This description is shown on the school page."
+msgstr ""
+
+#: templates/schools/school_edit_summary.html:28
+msgid "More details"
+msgstr ""
+
+#: templates/schools/school_edit_summary.html:29
+msgid "Extra details are shown at the bottom of the school page."
+msgstr ""
+
+#: templates/search/search.html:4 templates/search/search.html.py:10
+msgid "Search"
+msgstr ""
+
+#: templates/search/search.html:15
+msgid "Loading"
+msgstr ""
+
+#: templates/signups/accept_sign_up_comment.html:2
+msgid "Welcome aboard! You are an organizer now."
+msgstr ""
+
+#: templates/signups/accept_sign_up_comment.html:4
+msgid "Welcome aboard! You are a participant now."
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:17
+msgid "New Answer"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:19
+msgid "Edit answer"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:33 templates/signups/sign_up.html:81
+#: templates/signups/emails/new_signup_answer.txt:8
+msgid "Standard Set Answer:"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:36 templates/signups/sign_up.html:84
+#: templates/signups/emails/new_signup_answer.txt:11
+msgid "Public Set Answer:"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:40 templates/signups/sign_up.html:89
+#: templates/signups/emails/new_signup_answer.txt:15
+msgid "Between Participants Set Answer:"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:57
+msgid "Profile"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:58
+msgid ""
+"Your profile information is displayed with your signup answer. If you need, "
+"you can update the information of your profile bellow."
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:62
+msgid "Signup Questions"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:63
+msgid ""
+"Please answer the following set(s) of questions if you want to become a "
+"participant or organizer."
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:64 templates/signups/sign_up.html:22
+msgid "Standard Set"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:65 templates/signups/sign_up.html:23
+msgid ""
+"This set of signup questions is common to all study groups, courses, ... in "
+"P2PU. The answers to these questions will be public once you get accepted."
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:73
+#: templates/signups/edit_signup.html:19 templates/signups/sign_up.html:28
+msgid "Public Custom Set"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:74
+#: templates/signups/edit_signup.html:20 templates/signups/sign_up.html:29
+#, python-format
+msgid ""
+"This set of signup questions is particular to this %(kind)s. The answers to "
+"these questions will be public once you get accepted."
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:82
+#: templates/signups/edit_signup.html:25 templates/signups/sign_up.html:35
+msgid "Between Participants Custom Set"
+msgstr ""
+
+#: templates/signups/answer_sign_up.html:83
+#: templates/signups/edit_signup.html:26 templates/signups/sign_up.html:36
+#, python-format
+msgid ""
+"This set of signup questions is particular to this %(kind)s. The answers to "
+"these questions will be visible to all participants once you get accepted."
+msgstr ""
+
+#: templates/signups/base.html:4 templates/signups/base.html.py:10
+#: templates/signups/sign_up.html:19
+msgid "Sign-Up"
+msgstr ""
+
+#: templates/signups/delete_restore_answer.html:13
+msgid "Restore Answer:"
+msgstr ""
+
+#: templates/signups/delete_restore_answer.html:13
+msgid "Delete Answer:"
+msgstr ""
+
+#: templates/signups/delete_restore_answer.html:24
+msgid "Are you sure you want to restore this answer?"
+msgstr ""
+
+#: templates/signups/delete_restore_answer.html:26
+msgid "Are you sure you want to delete this answer?"
+msgstr ""
+
+#: templates/signups/edit_signup.html:13
+msgid "Sign-up Status"
+msgstr ""
+
+#: templates/signups/edit_signup.html:14
+#, python-format
+msgid ""
+"To allow peers to signup to the %(kind)s change the signup status to either "
+"moderated of non-moderated signup."
+msgstr ""
+
+#: templates/signups/sign_up.html:12
+msgid "Post Answer"
+msgstr ""
+
+#: templates/signups/sign_up.html:21
+msgid "Anyone can follow a"
+msgstr ""
+
+#: templates/signups/sign_up.html:21
+msgid ""
+"on P2PU. Participating is the next level of engagement. The sign-up is a "
+"space where interested individuals can express their interest and background "
+"in the topic and commit to working with the rest of the participants. Please "
+"answer the following set(s) of questions if you want to become a participant "
+"or organizer."
+msgstr ""
+
+#: templates/signups/sign_up.html:42
+msgid "Answers"
+msgstr ""
+
+#: templates/signups/sign_up.html:43
+msgid "Pending Answers:"
+msgstr ""
+
+#: templates/signups/sign_up.html:98
+msgid "Add Participant"
+msgstr ""
+
+#: templates/signups/sign_up_initial_content.html:4
+msgid "What made you interested in this topic?"
+msgstr ""
+
+#: templates/signups/sign_up_initial_content.html:5
+msgid "What do you hope to achieve by participating?"
+msgstr ""
+
+#: templates/signups/sign_up_initial_content.html:6
+#, python-format
+msgid "Are you interested in helping with the %(kind)s organization?"
+msgstr ""
+
+#: templates/signups/emails/new_signup_answer.txt:2
+msgid " submitted a new answer at the sign-up page of "
+msgstr ""
+
+#: templates/signups/emails/new_signup_answer.txt:19
+msgid "See answer at:"
+msgstr ""
+
+#: templates/signups/emails/new_signup_answer_subject.txt:2
+msgid " submitted a new answer at the sign-up page."
+msgstr ""
+
+#: templates/statuses/emails/wall_updated.txt:3
+msgid " update."
+msgstr ""
+
+#: templates/statuses/emails/wall_updated.txt:6
+#, python-format
+msgid " Update from the flight deck: %(username)s posted an urgent message:"
+msgstr ""
+
+#: templates/statuses/emails/wall_updated.txt:8
+#, python-format
+msgid " Update from the flight deck: %(username)s made an update:"
+msgstr ""
+
+#: templates/statuses/emails/wall_updated.txt:13
+msgid "See what they said at:"
+msgstr ""
+
+#: templates/statuses/emails/wall_updated.txt:15
+msgid ""
+"You can reply to this comment by email! Just type your reply at the top."
+msgstr ""
+
+#: templates/statuses/emails/wall_updated.txt:21
+msgid ""
+"This message was marked as important by an organizer. Participants can not "
+"turn off notifications for important updates."
+msgstr ""
+
+#: templates/statuses/emails/wall_updated_subject.txt:2
+msgid " made a comment in your course."
+msgstr ""
+
+#: templates/tracker/scoreboard.html:4 templates/tracker/scoreboard.html:16
+#: templates/tracker/scoreboard.html:21
+msgid "Scoreboard"
+msgstr ""
+
+#: templates/tracker/scoreboard.html:50
+msgid "Users Registered this Month"
+msgstr ""
+
+#: templates/tracker/scoreboard.html:54
+msgid "User"
+msgstr ""
+
+#: templates/tracker/scoreboard.html:56 templates/tracker/scoreboard.html:78
+#: templates/tracker/scoreboard.html:90
+msgid "Joins"
+msgstr ""
+
+#: templates/tracker/scoreboard.html:62
+msgid "Comments Posted at Groups this Month"
+msgstr ""
+
+#: templates/tracker/scoreboard.html:66 templates/tracker/scoreboard.html:77
+#: templates/tracker/scoreboard.html:88
+msgid "Group"
+msgstr ""
+
+#: templates/tracker/scoreboard.html:73
+msgid "Joins to Groups this Month"
+msgstr ""
+
+#: templates/tracker/scoreboard.html:84
+msgid "Groups Created this Month"
+msgstr ""
+
+#: templates/users/_openid_providers.html:12
+msgid "Sign In with your Google account"
+msgstr ""
+
+#: templates/users/_openid_providers.html:13
+msgid "Sign In with your Yahoo! account"
+msgstr ""
+
+#: templates/users/_openid_providers.html:14
+msgid "Sign In with your myOpenID account"
+msgstr ""
+
+#: templates/users/_openid_providers.html:24
+msgid "enter any OpenID URL"
+msgstr ""
+
+#: templates/users/_profile_edit.html:2
+#: templates/users/profile_form_base.html:13
+msgid "Display Name"
+msgstr ""
+
+#: templates/users/_profile_edit.html:9
+msgid "Location"
+msgstr ""
+
+#: templates/users/_profile_edit.html:16
+#: templates/users/profile_form_base.html:38
+msgid "Preferred Language"
+msgstr ""
+
+#: templates/users/_profile_edit.html:23
+msgid "About Me"
+msgstr ""
+
+#: templates/users/_profile_edit.html:30
+msgid ""
+"Please describe your skills, interest, and the things you will want to "
+"learn, by providing a comma-separated list of tags."
+msgstr ""
+
+#: templates/users/_profile_edit.html:35
+msgid "Skilled in"
+msgstr ""
+
+#: templates/users/_profile_edit.html:42
+msgid "Interested in"
+msgstr ""
+
+#: templates/users/_profile_edit.html:49
+msgid "Want to learn more about"
+msgstr ""
+
+#: templates/users/_profile_edit_image.html:6
+msgid "Current Profile Image"
+msgstr ""
+
+#: templates/users/_profile_edit_image.html:11
+msgid ""
+"Upload an image file from your computer to replace your current profile "
+"image:"
+msgstr ""
+
+#: templates/users/_profile_edit_image.html:13
+msgid ""
+"Personalize your profile image by uploading an image file from your computer:"
+msgstr ""
+
+#: templates/users/_profile_edit_image.html:28
+msgid ""
+"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
+"240x240 pixels"
+msgstr ""
+
+#: templates/users/_profile_info.html:13
+msgid "Followings"
+msgstr ""
+
+#: templates/users/_profile_info.html:16
+msgid "Courses"
+msgstr ""
+
+#: templates/users/_profile_info.html:26
+msgid "Latest Courses"
+msgstr ""
+
+#: templates/users/_profile_info.html:60
+msgid "Latest Badges"
+msgstr ""
+
+#: templates/users/_profile_info.html:61
+msgid "Share your badges"
+msgstr ""
+
+#: templates/users/_profile_info.html:78
+msgid "My Skills"
+msgstr ""
+
+#: templates/users/_profile_info.html:82
+msgid "View more with skills in "
+msgstr ""
+
+#: templates/users/_profile_info.html:90
+msgid "My Interests"
+msgstr ""
+
+#: templates/users/_profile_info.html:102
+msgid "What I want to learn more about"
+msgstr ""
+
+#: templates/users/forgot_password.html:3
+msgid "Forgot Your Password?"
+msgstr ""
+
+#: templates/users/forgot_password.html:8 templates/users/signin.html:20
+msgid "Forgot your password?"
+msgstr ""
+
+#: templates/users/forgot_password.html:13 templates/users/signin.html:15
+msgid "Username or Email"
+msgstr ""
+
+#: templates/users/forgot_password.html:22 templates/users/login_openid.html:5
+#: templates/users/signin.html:5 templates/users/signin.html.py:10
+#: templates/users/signin.html:32
+msgid "Sign In"
+msgstr ""
+
+#: templates/users/forgot_password_complete.html:4
+msgid "Password Updated"
+msgstr ""
+
+#: templates/users/forgot_password_complete.html:9
+#: templates/users/forgot_password_confirm.html:5
+#: templates/users/forgot_password_confirm.html:10
+msgid "Reset Password"
+msgstr ""
+
+#: templates/users/forgot_password_complete.html:12
+msgid "Thank you! Your password has been updated."
+msgstr ""
+
+#: templates/users/forgot_password_complete.html:13
+msgid "You may now sign in."
+msgstr ""
+
+#: templates/users/forgot_password_confirm.html:16
+msgid "New Password"
+msgstr ""
+
+#: templates/users/forgot_password_confirm.html:21
+msgid "Confirm Password"
+msgstr ""
+
+#: templates/users/forgot_password_confirm.html:31
+msgid "Hmm, that does not appear to be a correct link."
+msgstr ""
+
+#: templates/users/forgot_password_done.html:3
+#: templates/users/forgot_password_done.html:8
+#: templates/users/emails/forgot_password.txt:2
+msgid "Password Reset"
+msgstr ""
+
+#: templates/users/forgot_password_done.html:10
+msgid ""
+"Instructions for resetting your password were sent to your email address."
+msgstr ""
+
+#: templates/users/login_openid.html:11
+msgid "Sign In with OpenID"
+msgstr ""
+
+#: templates/users/login_openid.html:11 templates/users/signin.html:10
+msgid "create an account"
+msgstr ""
+
+#: templates/users/profile.html:12
+msgid "Activity from user's profile"
+msgstr ""
+
+#: templates/users/profile.html:13
+msgid "Activity from user's dashboard"
+msgstr ""
+
+#: templates/users/profile.html:27 templates/users/profile_edit.html:5
+#: templates/users/profile_edit.html:19
+msgid "Edit Profile"
+msgstr ""
+
+#: templates/users/profile_edit.html:20
+msgid "View Profile"
+msgstr ""
+
+#: templates/users/profile_edit.html:28
+#: templates/users/profile_edit_main.html:9
+msgid "Basic Information"
+msgstr ""
+
+#: templates/users/profile_edit.html:30
+msgid "Notifications"
+msgstr ""
+
+#: templates/users/profile_edit.html:31 templates/users/settings_email.html:6
+#: templates/users/settings_email.html:12
+msgid "Update Email"
+msgstr ""
+
+#: templates/users/profile_edit.html:32
+msgid "Update Password"
+msgstr ""
+
+#: templates/users/profile_edit.html:33
+#: templates/users/profile_edit_openids.html:11
+msgid "OpenIDs"
+msgstr ""
+
+#: templates/users/profile_edit.html:35
+msgid "Delete Account"
+msgstr ""
+
+#: templates/users/profile_edit_links.html:13
+msgid ""
+"Add links to your blog, homepage, twitter profile, github repository etc. "
+"These links will appear on your profile."
+msgstr ""
+
+#: templates/users/profile_edit_links_edit.html:9
+msgid ""
+"Edit links to your blog, homepage, twitter profile, github repository etc. "
+"These links will appear on your profile."
+msgstr ""
+
+#: templates/users/profile_edit_openids.html:13
+msgid ""
+"Add openid urls to login to your account. If you do not have any openids you "
+"can access your account with username and password."
+msgstr ""
+
+#: templates/users/profile_edit_openids.html:25
+#: templates/users/register.html:13 templates/users/signin.html:36
+msgid "OpenID"
+msgstr ""
+
+#: templates/users/profile_form_base.html:16
+msgid "A name that will identify you to other users. This is optional."
+msgstr ""
+
+#: templates/users/profile_form_base.html:22
+msgid "Your public profile:"
+msgstr ""
+
+#: templates/users/profile_form_base.html:22
+msgid "username"
+msgstr ""
+
+#: templates/users/profile_form_base.html:27
+#: templates/users/settings_email.html:22
+msgid "Email Address"
+msgstr ""
+
+#: templates/users/profile_form_base.html:30
+msgid "Required to send you notifications about your P2PU account."
+msgstr ""
+
+#: templates/users/profile_form_base.html:33
+#: templates/users/settings_email.html:29
+msgid "Re-enter Email Address"
+msgstr ""
+
+#: templates/users/profile_form_base.html:55
+msgid "By creating an account on"
+msgstr ""
+
+#: templates/users/profile_form_base.html:55
+msgid ", you accept our"
+msgstr ""
+
+#: templates/users/profile_form_base.html:55
+msgid "privacy guidelines"
+msgstr ""
+
+#: templates/users/profile_form_base.html:55
+msgid "license provisions"
+msgstr ""
+
+#: templates/users/profile_form_base.html:55
+msgid "and"
+msgstr ""
+
+#: templates/users/profile_form_base.html:55
+msgid "terms of use"
+msgstr ""
+
+#: templates/users/profile_form_base.html:55
+msgid "By default all content you create on this site is publicly viewable."
+msgstr ""
+
+#: templates/users/register.html:5 templates/users/register_openid.html:3
+msgid "Sign Up"
+msgstr ""
+
+#: templates/users/register.html:7 templates/users/register_openid.html:9
+msgid "Create a New Account"
+msgstr ""
+
+#: templates/users/register.html:9
+msgid "Create Account"
+msgstr ""
+
+#: templates/users/register.html:12
+msgid "or sign up using"
+msgstr ""
+
+#: templates/users/register.html:18 templates/users/settings_password.html:6
+#: templates/users/settings_password.html:12
+#: templates/users/settings_password.html:20 templates/users/signin.html:20
+msgid "Password"
+msgstr ""
+
+#: templates/users/register.html:22 templates/users/settings_password.html:27
+msgid "Confirm password"
+msgstr ""
+
+#: templates/users/register.html:27 templates/users/settings_password.html:14
+msgid ""
+"Passwords must be at least 8 characters and contain numbers and letters."
+msgstr ""
+
+#: templates/users/register_openid.html:9
+msgid "sign in"
+msgstr ""
+
+#: templates/users/settings_delete.html:6
+#: templates/users/settings_delete.html:12
+msgid "Delete Your Account"
+msgstr ""
+
+#: templates/users/settings_delete.html:13
+msgid ""
+"Are you sure you would like to delete your account? Be aware that you will "
+"not be able to login again to this account after you delete it."
+msgstr ""
+
+#: templates/users/settings_delete.html:15
+msgid ""
+"You are currently the only organizer of the following non-archived study "
+"groups, courses ..."
+msgstr ""
+
+#: templates/users/settings_email.html:15
+msgid "Please confirm your email address"
+msgstr ""
+
+#: templates/users/settings_notifications.html:6
+msgid "Notification Settings"
+msgstr ""
+
+#: templates/users/settings_notifications.html:9
+msgid "Send me an email when..."
+msgstr ""
+
+#: templates/users/settings_notifications.html:14
+msgid "A user messages me on"
+msgstr ""
+
+#: templates/users/settings_notifications.html:18
+msgid "Someone starts following me."
+msgstr ""
+
+#: templates/users/settings_notifications.html:22
+msgid ""
+"Someone starts following one of the study groups, courses, ... that I am "
+"organizing."
+msgstr ""
+
+#: templates/users/settings_notifications.html:28
+msgid ""
+"Someone posts a submission for the badges of one of the challenges I adopted."
+msgstr ""
+
+#: templates/users/settings_notifications.html:32
+msgid "An organizer posts or replies to a message on the wall of:"
+msgstr ""
+
+#: templates/users/settings_notifications.html:40
+msgid "A participant posts or replies to a message on the wall of:"
+msgstr ""
+
+#: templates/users/settings_notifications.html:47
+msgid ""
+"An organizer creates, edits, or posts new comments on a task or page of:"
+msgstr ""
+
+#: templates/users/settings_notifications.html:54
+msgid ""
+"A participant creates, edits, or posts new comments on a task or page of:"
+msgstr ""
+
+#: templates/users/settings_notifications.html:63
+msgid ""
+"Does not include important updates for which notifications can not be turned "
+"off."
+msgstr ""
+
+#: templates/users/sidebar.html:23
+msgid "Lives in"
+msgstr ""
+
+#: templates/users/sidebar.html:41 templates/users/sidebar.html.py:47
+msgid "Private Message"
+msgstr ""
+
+#: templates/users/signin.html:28
+msgid "Remember Me"
+msgstr ""
+
+#: templates/users/signin.html:35
+msgid "or use"
+msgstr ""
+
+#: templates/users/user_list.html:15
+msgid "Browse "
+msgstr ""
+
+#: templates/users/user_list.html:20
+msgid "in"
+msgstr ""
+
+#: templates/users/user_list.html:90
+msgid "Active this Week"
+msgstr ""
+
+#: templates/users/user_list.html:125
+msgid "New People"
+msgstr ""
+
+#: templates/users/emails/forgot_password.txt:4
+msgid "We're here to help reset your password."
+msgstr ""
+
+#: templates/users/emails/forgot_password.txt:4
+msgid ""
+"To get a new password, go ahead and click on the link below, or paste it "
+"into your browser:"
+msgstr ""
+
+#: templates/users/emails/forgot_password.txt:8
+msgid "If you didn't request a new password, no worries. You're all set."
+msgstr ""
+
+#: templates/users/emails/forgot_password.txt:10
+msgid "Happy learning."
+msgstr ""
+
+#: templates/users/emails/registration_confirm.txt:6
+msgid "We're so happy you're here. Confirm your email below to get started:"
+msgstr ""
+
+#: templates/users/emails/registration_confirm.txt:10
+msgid "Go forth and learn stuff!"
+msgstr ""
+
+#: templates/users/emails/registration_confirm.txt:12
+msgid "Cheerio,"
+msgstr ""
+
+#: templates/users/emails/registration_confirm_subject.txt:2
+msgid "Ready to get learning?!"
+msgstr ""
+
+#: templates/users/emails/registration_confirm_subject.txt:2
+msgid "Greetings from P2PU. Your email address was changed."
+msgstr ""

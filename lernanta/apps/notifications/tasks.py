@@ -34,7 +34,6 @@ class SendNotifications(Task):
 
     def run(self, profiles, subject, text_body, html_body=None, sender=None, **kwargs):
         log = self.get_logger(**kwargs)
-        log.debug('SendNotifications.run()')
 
         for profile in profiles:
             if profile.deleted:
@@ -45,7 +44,7 @@ class SendNotifications(Task):
                 [profile.user.email]
             )
             if html_body:
-               email.attach_alternative(html_body, "text/html")
+                email.attach_alternative(html_body, "text/html")
             email.send()
 
 

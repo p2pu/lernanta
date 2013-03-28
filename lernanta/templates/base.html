@@ -15,7 +15,7 @@
 
   <title>P2PU | {% block title %}{% endblock %}</title>
   <meta name="description" content="{% block description %}{{ _('Learning for everyone, by everyone, about almost anything.') }}{% endblock %}">
-  <meta name="author" content="mozilla">
+  <meta name="author" content="p2pu">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico">
@@ -39,7 +39,7 @@
   <script src="{{ STATIC_URL }}ckeditor/ckeditor/ckeditor.js"></script>
   {% block links %}{% endblock %}
 </head>
-<body id="{% block bodyid %}body{% endblock %}" class="{% block bodyclasses %}.body{% endblock %}">
+<body id="{% block bodyid %}body{% endblock %}" class="{% block bodyclasses %}.body{% endblock %}" {% block body_meta %}itemscope itemtype="http://schema.org/WebPage"{% endblock %}>
 
 {% block header %}
 

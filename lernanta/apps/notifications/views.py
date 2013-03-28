@@ -8,7 +8,6 @@ from notifications.models import send_notifications
 from notifications.models import post_notification_response
 from notifications.db import ResponseToken
 from users.models import UserProfile
-from tracker import statsd
 
 import simplejson as json
 import logging
@@ -107,7 +106,6 @@ def notifications_create(request):
 
     if user and subject and text:
         send_notifications([user], subject, text, html, callback_url, sender)
-        statsd.Statsd.increment('api-notifications')
         return http.HttpResponse(status=200)
 
     raise http.Http404

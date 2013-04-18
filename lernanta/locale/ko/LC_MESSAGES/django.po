@@ -1,18 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Localization in Korean
+# Public Domain. 2013. No warranties.
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Soohyun Pae <soohyun@creativecommons.org>, Seokjun Kim <colus001@me.com>, Diane Jung <daye.jung@gmail.com>, Stella HaYoung Shin <stella0593@gmail.com>, Daewoong Gideon An, 2013
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-15 16:37+0200\n"
+"POT-Creation-Date: 2013-04-18 13:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Last-Translator: Soohyun Pae <soohyun@creativecommons.org>\n"
+"Language-Team: CC Korea <creative@cckorea.org>\n"
+"Language: Korean\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,188 +20,189 @@ msgstr ""
 #: apps/activity/feeds.py:70
 #, python-format
 msgid "Activity feed from %s"
-msgstr ""
+msgstr "%s 의 활동 피드"
 
 #: apps/activity/feeds.py:114
 #, python-format
 msgid "Activity feed from %s's dashboard"
-msgstr ""
+msgstr "%s 의 대시보드 활동 피드"
 
 #: apps/activity/models.py:99
 msgid "activities"
-msgstr ""
+msgstr "활동"
 
 #: apps/activity/models.py:106
 #, python-format
 msgid "%(actor)s %(verb)s %(target)s"
-msgstr ""
+msgstr "%(actor)s %(target)s %(verb)s"
 
 #: apps/activity/models.py:124
 #, python-format
 msgid "wall activity from %s"
-msgstr ""
+msgstr "%s 의 활동 기록"
 
 #: apps/activity/schema.py:22
 msgid "started following"
-msgstr ""
+msgstr "팔로잉을 시작했습니다"
 
 #: apps/activity/schema.py:23
 msgid "joined"
-msgstr ""
+msgstr "참여했습니다"
 
 #: apps/activity/schema.py:24
 msgid "posted"
-msgstr ""
+msgstr "포스트했습니다"
 
 #: apps/activity/schema.py:25
 msgid "updated"
-msgstr ""
+msgstr "업데이트했습니다"
 
 #: apps/activity/schema.py:26
 msgid "shared"
-msgstr ""
+msgstr "공유했습니다"
 
 #: apps/activity/schema.py:27
 msgid "received"
-msgstr ""
+msgstr "받았습니다"
 
 #: apps/activity/views.py:38
 msgid "This activity was deleted."
-msgstr ""
+msgstr "이 활동은 삭제되었습니다."
 
 #: apps/activity/views.py:56
 msgid "You can't edit this activity"
-msgstr ""
+msgstr "이 활동은 수정할 수 없습니다"
 
 #: apps/activity/views.py:61
 msgid "Activity deleted!"
-msgstr ""
+msgstr "활동이 삭제되었습니다!"
 
 #: apps/activity/views.py:63
 msgid "Activity restored!"
-msgstr ""
+msgstr "활동이 복원되었습니다!"
 
 #: apps/badges/forms.py:52
 msgid "You cannot give a badge to yourself."
-msgstr ""
+msgstr "뱃지는 자신에게 줄수 없습니다."
 
 #: apps/badges/forms.py:57 apps/projects/forms.py:120 apps/schools/forms.py:96
 msgid "That user account was deleted."
-msgstr ""
+msgstr "삭제된 유저의 계정입니다."
 
 #: apps/badges/forms.py:60 apps/projects/forms.py:123 apps/schools/forms.py:99
 #, python-format
 msgid "There is no user with username: %s."
-msgstr ""
+msgstr "%s (이)라는 이름의 사용자가 없습니다"
 
 #: apps/badges/forms.py:63
 #, python-format
 msgid "User %s needs to be your peer."
-msgstr ""
+msgstr "%s 사용자는 당신의 동료가 되어야 합니다."
 
 #: apps/badges/forms.py:66
 #, python-format
 msgid "User %s has not received all the prerequisite badges."
-msgstr ""
+msgstr "%s 사용자는 아직 사전에 필요한 모든 뱃지를 받지 않았습니다"
 
 #: apps/badges/models.py:64
 msgid "Regulates how the badge is awarded to users."
-msgstr ""
+msgstr "사용자에 뱃지를 부여할 규칙을 세우세요."
 
 #: apps/badges/models.py:73 templates/badges/_submissions_list_item.html:11
 msgid "Badge"
-msgstr ""
+msgstr "뱃지"
 
 #: apps/badges/models.py:262
 msgid "Minimum number of votes."
-msgstr ""
+msgstr "최소 투표 수"
 
 #: apps/badges/models.py:265
 msgid "Minimum average rating."
-msgstr ""
+msgstr "최소 평균 평점"
 
 #: apps/badges/models.py:268
 msgid "If the badge can only be awarded to the user once."
-msgstr ""
+msgstr "뱃지를 한번에 한 유저에게만 줄 수 있다면"
 
 #: apps/badges/models.py:274
 msgid "Submission Required"
-msgstr ""
+msgstr "필수 제출"
 
 #: apps/badges/models.py:275
 msgid "Submission Optional"
-msgstr ""
+msgstr "선택 제출"
 
 #: apps/badges/models.py:276
 msgid "No submissions"
-msgstr ""
+msgstr "제출 불필요"
 
 #: apps/badges/models.py:299
 #, python-format
 msgid "%(author)s's application for %(badge)s"
-msgstr ""
+msgstr "%(author)s 의 %(badge)s 신청"
 
 #: apps/badges/models.py:325
 msgid "Allows to give more or less weight to the assessor's vote."
-msgstr ""
+msgstr "평가자에게 더 많거나 더 적은 가중치를 줄 수 있도록 하게합니다."
 
 #: apps/badges/models.py:336
 msgid ""
 "If submission is blank, this is a peer awarded assessment or superuser "
 "granted"
 msgstr ""
+"제출 내역이 비어있는 경우에는, 다른 사용자 혹은 관리자가 수여한 뱃지입니다."
 
 #: apps/badges/models.py:339
 msgid "If all rubric ratings were provided."
-msgstr ""
+msgstr "모든 표제 평가가 완료되었다면."
 
 #: apps/badges/models.py:342
 #, python-format
 msgid "%(assessor)s for %(assessed)s for %(badge)s"
-msgstr ""
+msgstr "%(assessor)s for %(assessed)s for %(badge)s"
 
 #: apps/badges/models.py:405
 msgid "Never"
-msgstr ""
+msgstr "절대"
 
 #: apps/badges/models.py:406
 msgid "Sometimes"
-msgstr ""
+msgstr "간혹"
 
 #: apps/badges/models.py:407
 msgid "Most of the time"
-msgstr ""
+msgstr "대부분"
 
 #: apps/badges/models.py:408
 msgid "Always"
-msgstr ""
+msgstr "항상"
 
 #: apps/badges/models.py:416
 #, python-format
 msgid "%(score)s for %(rubric)s"
-msgstr ""
+msgstr "%(rubric)s 은 %(score)s 점"
 
 #: apps/badges/models.py:435
 #, python-format
 msgid "%(user)s - %(badge)s"
-msgstr ""
+msgstr "%(user)s - %(badge)s"
 
 #: apps/badges/views.py:86 apps/projects/views.py:86
 #, python-format
 msgid "The %s has been created."
-msgstr ""
+msgstr "%s 이 생성되었습니다"
 
 #: apps/badges/views.py:91
 msgid "Problem creating the badge."
-msgstr ""
+msgstr "뱃지를 생성하는데 문제점이 발생하였습니다."
 
 #: apps/badges/views.py:105
 msgid "You can not apply for this badge."
-msgstr ""
+msgstr "이 뱃지를 신청할 수 없습니다."
 
 #: apps/badges/views.py:119
 msgid "Submission created and out for review!"
-msgstr ""
+msgstr "제출이 완료되어 리뷰를 기다리고 있습니다!"
 
 #: apps/badges/views.py:122 apps/badges/views.py:257 apps/badges/views.py:314
 #: apps/content/views.py:117 apps/content/views.py:168
@@ -211,74 +211,74 @@ msgstr ""
 #: apps/reviews/views.py:80 apps/signups/views.py:149
 #: apps/signups/views.py:189
 msgid "Please correct errors below."
-msgstr ""
+msgstr "아래의 오류를 정정해주세요."
 
 #: apps/badges/views.py:219
 msgid "You cannot assess your own work."
-msgstr ""
+msgstr "자기가 만든 것은 평가할 수 없습니다"
 
 #: apps/badges/views.py:223
 msgid "You have already assessed this submission."
-msgstr ""
+msgstr "이미 이 제출을 평가하였습니다."
 
 #: apps/badges/views.py:254
 msgid "Assessment saved. Thank you for your feedback!"
-msgstr ""
+msgstr "평가를 저장하였습니다. 피드백에 감사드립니다!"
 
 #: apps/badges/views.py:296
 msgid "You can not give this badge to a peer."
-msgstr ""
+msgstr "이 뱃지는 다른사람에게 줄 수 없습니다."
 
 #: apps/badges/views.py:311
 msgid "Thank you for giving a badge to your peer!"
-msgstr ""
+msgstr "뱃지를 친구에게 주신것에 감사드립니다."
 
 #: apps/content/forms.py:54
 msgid "Post a link to your work."
-msgstr ""
+msgstr "링크를 추가하세요."
 
 #: apps/content/models.py:65
 msgid "added"
-msgstr ""
+msgstr "추가됨"
 
 #: apps/content/models.py:170
 msgid "today"
-msgstr ""
+msgstr "오늘"
 
 #: apps/content/models.py:185
 msgid "this week"
-msgstr ""
+msgstr "이번주"
 
 #: apps/content/models.py:189
 msgid "this month"
-msgstr ""
+msgstr "이번달"
 
 #: apps/content/views.py:34 apps/projects/decorators.py:87
 #, python-format
 msgid "This page is not accesible on a %s."
-msgstr ""
+msgstr "이 페이지는 %s가 접근할 수 없습니다."
 
 #: apps/content/views.py:38
 msgid "This task was deleted."
-msgstr ""
+msgstr "이 작업은 삭제되었습니다."
 
 #: apps/content/views.py:90 apps/content/views.py:97 apps/content/views.py:262
 msgid "You can't edit this page"
-msgstr ""
+msgstr "이 페이지를 편집할 수 없습니다"
 
 #: apps/content/views.py:109 apps/projects/views.py:117
 #: apps/projects/views.py:351 apps/projects/views.py:696
 #, python-format
 msgid "%s updated!"
-msgstr ""
+msgstr "%s 가 업데이트되었습니다."
 
 #: apps/content/views.py:146
 msgid "You can not create a new task!"
-msgstr ""
+msgstr "새로운 작업물을 생성할 수 없습니다."
 
 #: apps/content/views.py:160
 msgid "Task created!"
-msgstr ""
+msgstr "작업이 생성되었습니다!"
 
 #: apps/content/views.py:193 apps/content/views.py:195
 msgid "You can't delete this page"
@@ -287,202 +287,227 @@ msgstr ""
 #: apps/content/views.py:206
 #, python-format
 msgid "%s deleted!"
-msgstr ""
+msgstr "%s 가 삭제되었습니다!"
 
 #: apps/content/views.py:255
 msgid "You can't restore this page"
-msgstr ""
+msgstr "이 페이지를 복원할 수 없습니다"
 
 #: apps/content/views.py:276
 #, python-format
 msgid "%s restored!"
-msgstr ""
+msgstr "%s 가 복원되었습니다!"
 
 #: apps/content/views.py:311 apps/content/views.py:364
 msgid "You can not change tasks order."
-msgstr ""
+msgstr "작업의 순서를 변경할 수 없습니다."
 
 #: apps/courses/decorators.py:19
 msgid "You need to be a course organizer."
-msgstr ""
+msgstr "코스 관리자가 되어야 합니다."
 
 #: apps/courses/forms.py:13
 msgid ""
 "The hashtag must start with letter and contain only letters, digits, _ and -"
 msgstr ""
+"해쉬태그는 반드시 문자로 시작해야 하고 문자, 숫자 _(밑줄)과 -(하이픈)만 입력"
+"가능합니다."
 
 #: apps/courses/forms.py:45
 msgid "Draft"
-msgstr ""
+msgstr "임시글"
 
 #: apps/courses/forms.py:46
 msgid "Published"
-msgstr ""
+msgstr "공개됨"
 
 #: apps/courses/forms.py:47 templates/projects/sidebar.html:142
 msgid "Archived"
-msgstr ""
+msgstr "저장됨"
 
 #: apps/courses/forms.py:54
 msgid "Open"
-msgstr ""
+msgstr "열기"
 
 #: apps/courses/forms.py:55
 msgid "Moderated"
-msgstr ""
+msgstr "개정됨"
 
 #: apps/courses/forms.py:56
 msgid "Closed"
-msgstr ""
+msgstr "닫힘"
 
-#: apps/courses/models.py:134 templates/_footer.html:74 templates/base.html:85
-#: templates/base.html.py:117 templates/courses/course_base.html:40
+#: apps/courses/models.py:136 templates/_footer.html:74 templates/base.html:85
+#: templates/base.html.py:117 templates/courses/course_base.html:61
 #: templates/courses/course_sidebar.html:34
 msgid "About"
-msgstr ""
+msgstr "개요"
 
-#: apps/courses/models.py:539
+#: apps/courses/models.py:541
 msgid "No such user in cohort"
-msgstr ""
+msgstr "해당 사용자가 모둠에 없습니다"
 
-#: apps/courses/models.py:547
+#: apps/courses/models.py:549
 msgid "Cannot remove last organizer"
-msgstr ""
+msgstr "마지막 관리를 삭제할 수 없습니다"
 
-#: apps/courses/views.py:261
+#: apps/courses/views.py:280
 msgid "Could not upload image"
-msgstr ""
+msgstr "이미지를 업로드할 수 없습니다"
 
-#: apps/courses/views.py:273
+#: apps/courses/views.py:292
 msgid "You are now signed up for this course."
-msgstr ""
-
-#: apps/courses/views.py:275
-msgid "This course isn't open for signup."
-msgstr ""
-
-#: apps/courses/views.py:288
-msgid "Please select a user to add."
-msgstr ""
+msgstr "이 코스를 시작하였습니다."
 
 #: apps/courses/views.py:294
+msgid "This course isn't open for signup."
+msgstr "이 코스는 공개되어있지 않습니다."
+
+#: apps/courses/views.py:307
+msgid "Please select a user to add."
+msgstr "추가할 사용자를 선택하세요."
+
+#: apps/courses/views.py:313
 msgid "User added."
-msgstr ""
+msgstr "사용자가 추가되었습니다."
 
-#: apps/courses/views.py:296
+#: apps/courses/views.py:315
 msgid "User does not exist."
-msgstr ""
+msgstr "사용자가 존재하지 않습니다."
 
-#: apps/courses/views.py:309
+#: apps/courses/views.py:328
 msgid "Could not remove user"
-msgstr ""
+msgstr "사용자를 삭제할 수 없습니다."
 
-#: apps/courses/views.py:335
+#: apps/courses/views.py:354
 msgid "Only other organizers can add a new organizer"
-msgstr ""
+msgstr "다른 관리자들만이 새로운 관리자를 추가할 수 있습니다"
 
-#: apps/courses/views.py:361
+#: apps/courses/views.py:380
 msgid "Course status updated."
-msgstr ""
+msgstr "코스 상태가 업데이트되었습니다."
 
-#: apps/courses/views.py:377
+#: apps/courses/views.py:396
 msgid "Could not change cohort signup"
-msgstr ""
+msgstr "모둠 가입을 수정할 수 없습니다"
 
-#: apps/courses/views.py:379
+#: apps/courses/views.py:398
 msgid "Invalid choice for signup"
-msgstr ""
+msgstr "알 수 없는 선택지입니다"
 
-#: apps/courses/views.py:399
+#: apps/courses/views.py:418
 msgid "Could not update fixed term dates"
-msgstr ""
+msgstr "고정된 일정은 업데이트할 수 없습니다"
 
-#: apps/courses/views.py:416
+#: apps/courses/views.py:435
 msgid "Could not update {0}."
-msgstr ""
+msgstr "{0} 을 업데이트할 수 없습니다."
 
-#: apps/courses/views.py:433
+#: apps/courses/views.py:452
 msgid "Course tags successfully updated"
-msgstr ""
+msgstr "코스 태그 업데이트에 성공하였습니다"
 
-#: apps/courses/views.py:566
+#: apps/courses/views.py:609
 msgid "Could not move content up!"
-msgstr ""
+msgstr "컨텐츠 위치를 올릴 수 없습니다!"
 
-#: apps/courses/views.py:578
+#: apps/courses/views.py:621
 msgid "Could not move content down!"
-msgstr ""
+msgstr "컨텐츠 위치를 내릴 수 없습니다!"
 
 #: apps/dashboard/views.py:76
 msgid "Please fill out your profile to finish registration."
-msgstr ""
+msgstr "프로필을 기입하여 회원가입을 완료하세요."
 
 #: apps/drumbeat/views.py:86
 msgid "Thank you for filing an abuse report!"
-msgstr ""
+msgstr "부정 사용을 신고해주셔서 감사합니다!"
 
 #: apps/drumbeat/views.py:113
 msgid "Export selected objects as csv file"
-msgstr ""
+msgstr "선택된 항목을 csv 파일로 내보냅니다"
 
 #: apps/drumbeat/templatetags/time_since.py:16
 msgid " ago"
-msgstr ""
+msgstr " 전"
 
 #: apps/drumbeatmail/fields.py:22
 msgid "No such user with that username or email."
-msgstr ""
+msgstr "해당 이름이나 이메일을 가진 유저가 없습니다."
 
 #: apps/drumbeatmail/views.py:174
 msgid "Can't send email"
-msgstr ""
+msgstr "이메일을 보낼 수 없습니다"
 
 #: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
 #: apps/projects/views.py:943
 msgid "Message successfully sent."
-msgstr ""
+msgstr "메시지가 성공적으로 전송되었습니다."
 
 #: apps/drumbeatmail/views.py:183 apps/drumbeatmail/views.py:213
 msgid "There was an error sending your message. Please try again."
-msgstr ""
+msgstr "메시지를 보내는 중 오류가 발생하였습니다. 다시 시도해주세요."
 
 #: apps/links/views.py:27 apps/links/views.py:53
 msgid "You can not change links order."
+msgstr "링크 순서는 변경할 수 없습니다."
+
+#: apps/lrmi/forms.py:31
+msgid "Alignment Type"
 msgstr ""
+
+#: apps/lrmi/forms.py:33
+msgid "Educational Framework"
+msgstr ""
+
+#: apps/lrmi/forms.py:35
+#, fuzzy
+msgid "Target Description"
+msgstr "설명`"
+
+#: apps/lrmi/forms.py:37
+#, fuzzy
+msgid "Target Name"
+msgstr "짧은 이름"
+
+#: apps/lrmi/forms.py:39
+#, fuzzy
+msgid "Target URL"
+msgstr "이미지 URL"
 
 #: apps/preferences/forms.py:23
 msgid "That email address is register under a different username."
-msgstr ""
+msgstr "해당 이메일 주소는 다른 사용자가 등록하였습니다."
 
 #: apps/preferences/forms.py:31 apps/users/forms.py:111
 #: apps/users/forms.py:177
 msgid "Email addresses do not match."
-msgstr ""
+msgstr "이메일 주소가 일치하지 않습니다."
 
 #: apps/preferences/forms.py:36 apps/users/forms.py:37
 msgid "Password must be at least 8 characters long "
-msgstr ""
+msgstr "비밀번호는 최소 8글자 이상 입력해야 하고 "
 
 #: apps/preferences/forms.py:37 apps/users/forms.py:38
 msgid "and contain both numbers and letters."
-msgstr ""
+msgstr "글자와 숫자를 반드시 포함해야 합니다."
 
 #: apps/preferences/forms.py:42 apps/users/forms.py:43
 msgid "That password is too common. Please choose another."
-msgstr ""
+msgstr "비밀번호가 너무 쉽습니다. 다른 것을 입력하세요."
 
 #: apps/preferences/forms.py:73 apps/users/forms.py:173
 msgid "Passwords do not match."
-msgstr ""
+msgstr "패스워드가 일치하지 않습니다."
 
 #: apps/preferences/views.py:50
 msgid "Thank you, your settings have been saved."
-msgstr ""
+msgstr "설정된 내용이 저장되었습니다. 감사합니다."
 
 #: apps/preferences/views.py:86 apps/users/views.py:386
 #, python-format
 msgid "A link to confirm your email address was sent to %s."
-msgstr ""
+msgstr "이메일 주소를 확인하기 위한 링크가 %s 로 보내졌습니다."
 
 #: apps/preferences/views.py:95
 #, python-format
@@ -491,15 +516,18 @@ msgid ""
 "did not mark it as \"junk mail\" or \"spam\". If you need to, you can have "
 "us <a href=\"%s\">resend the confirmation message</a> to your email address."
 msgstr ""
+"확인 메일을 받지 못하였을 경우에는, 해당 이메일 서비스에서 저희가 보낸 이메일"
+"을 \"스팸\"이나 \"정크메일\"로 처리하였을 가능성이 있습니다. 필요한 경우 링크"
+"를 클릭하여 <a href=\"%s\">확인 메시지 재전송</a>을 요창해주세요."
 
 #: apps/preferences/views.py:120
 msgid "Password updated"
-msgstr ""
+msgstr "비밀번호가 수정됨"
 
 #: apps/preferences/views.py:124 apps/users/views.py:294
 #: apps/users/views.py:440
 msgid "There are errors in this form. Please correct them and resubmit."
-msgstr ""
+msgstr "오류가 발생하였습니다. 내용을 정정하여 다시 제춣해주세요."
 
 #: apps/preferences/views.py:143
 #, python-format
@@ -507,518 +535,529 @@ msgid ""
 "You are the organizer of %s active courses. You need to archive these "
 "courses or remove yourself as organizer before you can delete your profile."
 msgstr ""
+"당신은 하나 이상의 활성화된 코스 %s 의 관리자입니다. 해당하는 코스를 보관하거"
+"나 관리자 권한을 삭제해야 프로필을 삭제할 수 있습니다."
 
 #: apps/projects/decorators.py:22
 #, python-format
 msgid "You are not organizing this %s."
-msgstr ""
+msgstr "이 %s 을 관리하고 있지 않습니다."
 
 #: apps/projects/decorators.py:38
 #, python-format
 msgid "You are not participating in this %s."
-msgstr ""
+msgstr "이 %s 에 참여하고 있지 않습니다."
 
 #: apps/projects/decorators.py:55
 msgid "You are not authorized to view the detailed statistics."
-msgstr ""
+msgstr "상세 통계를 볼 권한이 없습니다."
 
 #: apps/projects/decorators.py:73
 msgid "You aren't authorized to view the statistics' overview."
-msgstr ""
+msgstr "통계 개요를 볼 권한이 없습니다."
 
 #: apps/projects/decorators.py:105
 #, python-format
 msgid "This %s was deleted."
-msgstr ""
+msgstr "이 %s 는 삭제되었습니다."
 
 #: apps/projects/forms.py:39
 msgid "Write a catchy title, keep it short and sweet."
-msgstr ""
+msgstr "남의 이목을 끌 수 있는 제목을 작성하되, 짧고 간결하게 하세요."
 
 #: apps/projects/forms.py:41
 msgid "e.g. Learn to write HTML by hand, literally."
-msgstr ""
+msgstr "예) 글 처럼 쓰는 HTML 배우기."
 
 #: apps/projects/forms.py:43
 msgid ""
 "Who is the challenge for? <br>What are they going to be doing? <br>How are "
 "they going to be doing it? <br>Why are they doing it?"
 msgstr ""
+"누구를 위한 도전과제인가요? <br>무엇을 하게 될까요? <br>어떻게 과제를 수행하"
+"게 되나요? 이것을 왜 수행해야 하나요?"
 
 #: apps/projects/forms.py:48
 msgid ""
 "Tag your course so folks can find it. What will your audience be looking "
 "for? Separate with commas."
 msgstr ""
+"다른 사람들이 찾을 수 있도록 태그를 추가하세요. 대상이 되는 사용자들이 무엇으"
+"로 검색할까요?콤마(,)로 구분하여 입력하세요."
 
 #: apps/projects/forms.py:87 apps/schools/forms.py:36 apps/schools/forms.py:50
 #: apps/schools/forms.py:64 apps/schools/forms.py:78 apps/users/forms.py:260
 #, python-format
 msgid "Image exceeds max image size: %(max)dk"
-msgstr ""
+msgstr "이미지가 제한 용량을 초과하였습니다. %(max)dk"
 
 #: apps/projects/forms.py:128
 #, python-format
 msgid "User %s is already an organizer."
-msgstr ""
+msgstr "%s 사용자는 이미 관리자입니다."
 
 #: apps/projects/forms.py:133
 #, python-format
 msgid "User %s is already a participant."
-msgstr ""
+msgstr "%s 사용자는 이미 참여하고 있습니다."
 
 #: apps/projects/forms.py:147
 #, python-format
 msgid "A %s can not be its own next step."
-msgstr ""
+msgstr "%s 은 자신의 다음 단계가 될 수 없습니다."
 
 #: apps/projects/forms.py:149
 #, python-format
 msgid "There is no challenge, study group, ... with short name: %s."
-msgstr ""
+msgstr "%s 와 일치하는 도전과제, 스터디그룹 ... 등이 없습니다."
 
 #: apps/projects/forms.py:155
 #, python-format
 msgid "The %(slug)s %(kind)s is already a next step."
-msgstr ""
+msgstr "%(slug)s %(kind)s 는 이미 다음단계로 등록되어 있습니다."
 
 #: apps/projects/forms.py:167 templates/drumbeatmail/base.html:18
 #: templates/messages/inbox.html:12
 #: templates/projects/contact_organizers.html:12
 msgid "Subject"
-msgstr ""
+msgstr "제목"
 
 #: apps/projects/forms.py:169
 msgid "Body"
-msgstr ""
+msgstr "내용"
 
 #: apps/projects/forms.py:179
 msgid "That study group, course, ... does not exist."
-msgstr ""
+msgstr "스터디 그룹, 코스, ... 등은 존재하지 않습니다."
 
 #: apps/projects/forms.py:199
 #, python-format
 msgid "There is no study group, course, ... with short name: %s."
-msgstr ""
+msgstr "%s 와 일치하는 도전과제, 스터디그룹 ... 등이 없습니다."
 
 #: apps/projects/forms.py:215
 msgid "There is no course with this short name on the archive."
-msgstr ""
+msgstr "해당 단축명을 가진 코스가 보관함에 없습니다."
 
 #: apps/projects/models.py:56
 msgid ""
 "Study Group -- group of people working collaboratively to acquire and share "
 "knowledge."
 msgstr ""
+"스터디 그룹 -- 지식을 함께 공유하고 습득할 사람들이 함께 모이는 그룹입니다."
 
 #: apps/projects/models.py:58
 msgid ""
 "Course -- led by one or more organizers with skills on a field who direct "
 "and help participants during their learning."
 msgstr ""
+"코스 -- 해당 지식을 가지고 있는 한명 혹은 다수의 관리자가 참여자들을 이끌어가"
+"고 도와주기 위한필드 입니다."
 
 #: apps/projects/models.py:61
 msgid "Challenge -- series of tasks peers can engage in to develop skills."
-msgstr ""
+msgstr "도전과제 -- 스킬을 계발하기 위해 필요한 일련의 과제."
 
 #: apps/projects/models.py:123
 msgid "group"
-msgstr ""
+msgstr "그룹"
 
 #: apps/projects/models.py:126
 #, python-format
 msgid "%(name)s %(kind)s"
-msgstr ""
+msgstr "%(name)s %(kind)s"
 
 #: apps/projects/models.py:137
 msgid "created"
-msgstr ""
+msgstr "생성됨"
 
 #: apps/projects/views.py:75 apps/projects/views.py:215
 #: apps/projects/views.py:297
 msgid "Full Description"
-msgstr ""
+msgstr "전체 설명"
 
 #: apps/projects/views.py:90
 msgid "Problem creating the course"
-msgstr ""
+msgstr "코스 생성중에 오류가 발생하였습니다"
 
 #: apps/projects/views.py:240
 #, python-format
 msgid "The %s has been cloned."
-msgstr ""
+msgstr "%s 가 복제되었습니다."
 
 #: apps/projects/views.py:246
 msgid "There was a problem cloning the study group, course, ..."
-msgstr ""
+msgstr "스터디 그룹, 코스, ... 등을 복제하는 중 문제가 발생하였습니다."
 
 #: apps/projects/views.py:315
 #, python-format
 msgid "The %s has been imported."
-msgstr ""
+msgstr "%s 를 가져왔습니다."
 
 #: apps/projects/views.py:320
 msgid "Problem importing the study group, course, ..."
-msgstr ""
+msgstr "스터디 그룹, 코스, ... 등을 가져오는 중 문제가 발생하였습니다."
 
 #: apps/projects/views.py:396 apps/schools/views.py:147
 #: apps/schools/views.py:189 apps/schools/views.py:231
 #: apps/schools/views.py:273
 msgid "Image updated"
-msgstr ""
+msgstr "이미지 업데이트됨"
 
 #: apps/projects/views.py:403 apps/schools/views.py:153
 #: apps/schools/views.py:195 apps/schools/views.py:237
 #: apps/schools/views.py:279
 msgid "There was an error uploading your image"
-msgstr ""
+msgstr "이미지를 업로드하는 중 오류가 발생하였습니다"
 
 #: apps/projects/views.py:430
 msgid "Link added."
-msgstr ""
+msgstr "링크 추가됨."
 
 #: apps/projects/views.py:434
 msgid "There was an error adding your link."
-msgstr ""
+msgstr "링크를 추가하는 중 오류가 발생하였습니다."
 
 #: apps/projects/views.py:457 apps/projects/views.py:491
 #: apps/users/views.py:659
 msgid "You can't edit this link"
-msgstr ""
+msgstr "이 링크를 수정할 수 없습니다"
 
 #: apps/projects/views.py:468
 msgid "Link updated."
-msgstr ""
+msgstr "링크 업데이트됨."
 
 #: apps/projects/views.py:493
 msgid "The link was deleted"
-msgstr ""
+msgstr "링크가 삭제되었습니다."
 
 #: apps/projects/views.py:516
 msgid "Participant added."
-msgstr ""
+msgstr "참여자가 추가되었습니다."
 
 #: apps/projects/views.py:522
 msgid "There was an error adding the participant."
-msgstr ""
+msgstr "참여자를 추가하는 중 오류가 발생하였습니다."
 
 #: apps/projects/views.py:560
 msgid "You can't make that person an organizer"
-msgstr ""
+msgstr "해당 사용자를 관리자로 만들 수 없습니다"
 
 #: apps/projects/views.py:566
 msgid "The participant is now an organizer."
-msgstr ""
+msgstr "해당 참여자는 이제 관리자 입니다."
 
 #: apps/projects/views.py:582
 msgid "You cannot delete the only organizer"
-msgstr ""
+msgstr "관리자가 한명일때는 삭제할 수 없습니다."
 
 #: apps/projects/views.py:590
 msgid "The organizer in now only a participant."
-msgstr ""
+msgstr "관리자가 참여자입니다."
 
 #: apps/projects/views.py:604
 #, python-format
 msgid "The participant %s has been removed."
-msgstr ""
+msgstr "%s 참여자가 삭제되었습니다."
 
 #: apps/projects/views.py:623
 msgid "Next step added."
-msgstr ""
+msgstr "다음 단계 추가됨."
 
 #: apps/projects/views.py:629
 msgid "There was an error adding that next step."
-msgstr ""
+msgstr "다음 단계를 추가하는 중 오류가 발생했습니다."
 
 #: apps/projects/views.py:675
 #, python-format
 msgid "The %(name)s %(kind)s is not a next step anymore."
-msgstr ""
+msgstr "%(name)s %(kind)s 은 더이상 다음단계가 아닙니다."
 
 #: apps/projects/views.py:701
 #, python-format
 msgid "There was a problem saving the %s's status."
-msgstr ""
+msgstr "%s 의 상태를 저장하는 중 오류가 발생했습니다."
 
 #: apps/projects/views.py:721
 msgid ""
 "Congratulations, you sucessfully published your {0}!        It will now show "
 "up on the learning page!"
 msgstr ""
+"축하합니다. {0} 이 성공적으로 공개되었습니다. 이제 해당 코스는 배우기 페이지"
+"에서 나타날 것입니다."
 
 #: apps/relationships/models.py:59
 msgid "Cannot create self referencing relationship."
-msgstr ""
+msgstr "자기 자신을 참조하는 관계를 생성할 수 없습니다."
 
 #: apps/relationships/views.py:55
 msgid "You can't unfollow"
-msgstr ""
+msgstr "언팔로우 할 수 없습니다"
 
 #: apps/replies/models.py:53
 #, python-format
 msgid "comment at %s"
-msgstr ""
+msgstr "%s 에 댓글"
 
 #: apps/replies/views.py:25 templates/replies/_comment_threads.html:12
 msgid "This comment was deleted."
-msgstr ""
+msgstr "이 댓글은 삭제되었습니다."
 
 #: apps/replies/views.py:47
 msgid ""
 "You can not reply to this comment. Please ensure that you have confirmed "
 "your email address."
-msgstr ""
+msgstr "이 댓글에 답변할 수 없습니다. 이메일 주소를 확인했는지 체크하세요."
 
 #: apps/replies/views.py:63 apps/replies/views.py:131
 msgid "Comment posted!"
-msgstr ""
+msgstr "댓글이 등뢱되었습니다!"
 
 #: apps/replies/views.py:101
 #, python-format
 msgid "You can not post a comment at %s."
-msgstr ""
+msgstr "%s 에 댓글을 등록할 수 없습니다."
 
 #: apps/replies/views.py:203
 msgid "You can not edit this comment."
-msgstr ""
+msgstr "이 댓글은 수정할 수 없습니다."
 
 #: apps/replies/views.py:211
 msgid "Comment updated!"
-msgstr ""
+msgstr "댓글 등록됨!"
 
 #: apps/replies/views.py:233
 msgid "You can not restore this comment."
-msgstr ""
+msgstr "이 댓글을 복원할 수 없습니다."
 
 #: apps/replies/views.py:235
 msgid "You can not delete this comment."
-msgstr ""
+msgstr "이 댓글은 삭제할 수 없습니다."
 
 #: apps/replies/views.py:242
 msgid "Comment deleted!"
-msgstr ""
+msgstr "댓글이 삭제되었습니다!"
 
 #: apps/replies/views.py:244
 msgid "Comment restored!"
-msgstr ""
+msgstr "댓글이 복원되었습니다!"
 
 #: apps/reviews/decorators.py:14
 msgid "You need to be a reviewer."
-msgstr ""
+msgstr "평가자가 되어야 합니다."
 
 #: apps/reviews/views.py:77
 msgid "Review posted!"
-msgstr ""
+msgstr "평가가 등록되었습니다!"
 
 #: apps/richtext/views.py:131
 #, python-format
 msgid "Extension %(ext)s is not allowed. "
-msgstr ""
+msgstr "%(ext)s 익스텐션은 허가되지 않습니다."
 
 #: apps/richtext/views.py:132
 #, python-format
 msgid "Only %(allowed)s are allowed."
-msgstr ""
+msgstr "%(allowed)s 만이 허가됩니다."
 
 #: apps/schools/decorators.py:20
 msgid "You are not school organizer"
-msgstr ""
+msgstr "학교 관리자가 아닙니다."
 
 #: apps/schools/forms.py:102
 #, python-format
 msgid "User %s is organizing the school."
-msgstr ""
+msgstr "%s 사용자는 이제 학교를 관리합니다."
 
 #: apps/schools/views.py:87
 msgid "School updated!"
-msgstr ""
+msgstr "학교가 업데이트되었습니다!"
 
 #: apps/schools/views.py:108
 msgid "School styles updated!"
-msgstr ""
+msgstr "학교 스타일이 업데이트되었습니다!"
 
 #: apps/schools/views.py:299
 msgid "School organizer added."
-msgstr ""
+msgstr "학교 관리자가 추가됨."
 
 #: apps/schools/views.py:304
 msgid "There was an error adding the school organizer."
-msgstr ""
+msgstr "학교 관리자를 추가하는 중 오류가 발생하였습니다."
 
 #: apps/schools/views.py:340
 msgid "The course is now featured for this school."
-msgstr ""
+msgstr "해당 코스는 이 학교의 추천 코스가 되었습니다."
 
 #: apps/schools/views.py:346
 msgid "There was an error marking the course as featured."
-msgstr ""
+msgstr "해당 코스를 추천 코스로 설정하는 중 오류가 발생하였습니다."
 
 #: apps/schools/views.py:368
 msgid "The course stopped being featured for this school."
-msgstr ""
+msgstr "해당 코스는 더이상 추천 코스가 아닙니다."
 
 #: apps/schools/views.py:371
 msgid "Could not remove course from featured list"
-msgstr ""
+msgstr "추천 리스트로부터 해당 코스를 삭제할 수 없습니다."
 
 #: apps/schools/views.py:388
 msgid "The course was added to this school."
-msgstr ""
+msgstr "해당 코스가 이 학교에 추가되었습니다."
 
 #: apps/schools/views.py:395
 #, python-format
 msgid "There was an error adding %s to this school."
-msgstr ""
+msgstr "%s 를 이 학교에 추가하는 중 오류가 발생하였습니다."
 
 #: apps/schools/views.py:415
 msgid "The course is no longer part of this school."
-msgstr ""
+msgstr "해당 코스는 더이상 이 학교에 속하지 않습니다."
 
 #: apps/schools/views.py:417
 msgid "Could not remove course from school"
-msgstr ""
+msgstr "해당 코스를 학교에서 삭제할 수 없습니다"
 
 #: apps/schools/views.py:487
 msgid "School mentorship details updated!"
-msgstr ""
+msgstr "학교 멘토쉽 정보가 업데이트 되었습니다!"
 
 #: apps/signups/models.py:30
 msgid "Closed signup"
-msgstr ""
+msgstr "닫힌 회원가입"
 
 #: apps/signups/models.py:31
 msgid "Moderated signup"
-msgstr ""
+msgstr "개정된 회원가입"
 
 #: apps/signups/models.py:32
 msgid "Non-moderated signup"
-msgstr ""
+msgstr "개정되지 않은 회원가입"
 
 #: apps/signups/models.py:38
 #, python-format
 msgid "%s signup"
-msgstr ""
+msgstr "%s 회원가입"
 
 #: apps/signups/models.py:107
 #, python-format
 msgid "the signup answer of %(author)s at %(project)s"
-msgstr ""
+msgstr "%(author)s 의 %(project)s 에 대한 회원가입 답변"
 
 #: apps/signups/views.py:38
 msgid "Signup updated!"
-msgstr ""
+msgstr "회원가입이 업데이트됨!"
 
 #: apps/signups/views.py:89 templates/signups/sign_up.html:51
 msgid "This answer was deleted."
-msgstr ""
+msgstr "이 답변은 삭제되었습니다."
 
 #: apps/signups/views.py:111
 #, python-format
 msgid "You already joined this %s."
-msgstr ""
+msgstr "이미 %s 에 참여하고 있습니다."
 
 #: apps/signups/views.py:114
 #, python-format
 msgid "Sign-up is currently closed. You can clone the %s if it is full."
-msgstr ""
+msgstr "회원가입은 현재 닫혀있습니다. 꽉찬 경우 %s 을 복제만 할수 있습니다."
 
 #: apps/signups/views.py:123
 msgid "You already posted an answer to the signup questions."
-msgstr ""
+msgstr "회원가입 질문에 대한 답변을 이미 등록하였습니다."
 
 #: apps/signups/views.py:144
 msgid "You are now a participant!"
-msgstr ""
+msgstr "이제 참여자입니다!"
 
 #: apps/signups/views.py:146
 msgid "Answer submitted!"
-msgstr ""
+msgstr "답변이 제출됨!"
 
 #: apps/signups/views.py:174
 msgid "You can't edit this answer"
-msgstr ""
+msgstr "이 답변을 수정할 수 있습니다."
 
 #: apps/signups/views.py:186
 msgid "Answer updated!"
-msgstr ""
+msgstr "답변 업데이트됨!"
 
 #: apps/signups/views.py:221
 msgid "Organizer added!"
-msgstr ""
+msgstr "관리자 추가됨!"
 
 #: apps/signups/views.py:223
 msgid "Participant added!"
-msgstr ""
+msgstr "참여자 추가됨!"
 
 #: apps/signups/views.py:235
 msgid "You can not restore this answer."
-msgstr ""
+msgstr "이 답변을 복원할 수 없습니다."
 
 #: apps/signups/views.py:237
 msgid "You can not delete this answer."
-msgstr ""
+msgstr "이 답변을 삭제할 수 없습니다."
 
 #: apps/signups/views.py:244
 msgid "Answer deleted!"
-msgstr ""
+msgstr "답변 삭제됨!"
 
 #: apps/signups/views.py:246
 msgid "Answer restored!"
-msgstr ""
+msgstr "답변 복원됨!"
 
 #: apps/signups/views.py:270
 msgid "Organizers can't use this page to leave their group."
-msgstr ""
+msgstr "관리자는 그룹을 떠나기 위해 이 페이지를 사용할 수 없습니다."
 
 #: apps/signups/views.py:273 apps/signups/views.py:301
 msgid "This page can not be accessed with a GET request."
-msgstr ""
+msgstr "이 페이지는 GET 요청으로 접근할 수 없습니다."
 
 #: apps/signups/views.py:306
 msgid "You need to be active in this challenge to become an adopter."
-msgstr ""
+msgstr "어돕터가 되기 위해서는 이 도전과제를 활성화해야 합니다."
 
 #: apps/signups/views.py:309
 msgid "Organizers do not need to adopt the challenges."
-msgstr ""
+msgstr "관리자는 도전과제를 달성할 필요가 없습니다."
 
 #: apps/signups/views.py:317
 msgid "You need to complete all of the tasks before becoming an adopter."
-msgstr ""
+msgstr "어돕터가 되기전에 모든 과제를 완료해야 합니다."
 
 #: apps/signups/views.py:320
 msgid "You already adopted this challenge."
-msgstr ""
+msgstr "이 도전과제를 이미 달성하였습니다."
 
 #: apps/signups/views.py:323
 msgid "Thanks! "
-msgstr ""
+msgstr "감사합니다! "
 
 #: apps/signups/views.py:324
 msgid "You are now listed among the peers who offered their help."
-msgstr ""
+msgstr "도움을 요청한 사람들 리스트에 등록되었습니다."
 
 #: apps/statuses/models.py:33
 msgid "statuses"
-msgstr ""
+msgstr "상태"
 
 #: apps/statuses/models.py:36
 #, python-format
 msgid "message: %s"
-msgstr ""
+msgstr "메시지: %s"
 
 #: apps/statuses/views.py:19
 msgid "Posting a update to your dashboard is no longer supported"
-msgstr ""
+msgstr "대시보드에 상태를 업데이트하는 것은 더이상 지원되지 않습니다."
 
 #: apps/statuses/views.py:60
 msgid "There was an error posting your status update"
-msgstr ""
+msgstr "상태 업데이트를 등록하는 중 에러가 발생하였습니다."
 
 #: apps/tags/models.py:9
 msgid "Tag"
-msgstr ""
+msgstr "태그"
 
 #: apps/tags/models.py:10 templates/courses/course_settings.html:123
 #: templates/learn/_learn_filters.html:35 templates/learn/learn_tags.html:11
@@ -1026,113 +1065,115 @@ msgstr ""
 #: templates/projects/project_edit_summary.html:70
 #: templates/projects/sidebar.html:101
 msgid "Tags"
-msgstr ""
+msgstr "태그"
 
 #: apps/tags/models.py:19
 msgid "Tagged Item"
-msgstr ""
+msgstr "태그된 아이템"
 
 #: apps/tags/models.py:20
 msgid "Tagged Items"
-msgstr ""
+msgstr "태그된 아이템"
 
 #: apps/users/decorators.py:24
 msgid "You are already logged into an account."
-msgstr ""
+msgstr "이미 로그인 중 입니다."
 
 #: apps/users/fields.py:20 apps/users/fields.py:24
 msgid "Please choose another username."
-msgstr ""
+msgstr "다른 이름을 선택하세요."
 
 #: apps/users/forms.py:67
 msgid "This Google OpenID is not supported. "
-msgstr ""
+msgstr "이 Google OpenID 는 지원되지 않습니다."
 
 #: apps/users/forms.py:68
 msgid "Please use your Google profile OpenID."
-msgstr ""
+msgstr "Google 프로필을 OpenID 로 사용하세요."
 
 #: apps/users/forms.py:76
 msgid "Your account was migrated from the old P2PU website."
-msgstr ""
+msgstr "당신의 계정은 기존 P2PU 웹사이트에서 이동 되었습니다."
 
 #: apps/users/forms.py:154
 msgid "User profile with this Username already exists."
-msgstr ""
+msgstr "해당 회원명의 유저 프로필은 이미 존재합니다."
 
 #: apps/users/forms.py:160
 msgid "This field is required."
-msgstr ""
+msgstr "이 필드는 필수 항목입니다."
 
 #: apps/users/forms.py:163
 msgid "User profile with this Email already exists."
-msgstr ""
+msgstr "해당 이메일을 가진 사용자가 이미 존재합니다."
 
 #: apps/users/forms.py:295
 msgid "That e-mail address isn't associated to a user account. "
-msgstr ""
+msgstr "해당 이메일 주소는 사용자 계정과 연결되어 있지 않습니다. "
 
 #: apps/users/forms.py:296
 msgid "You didn't finish registering the last time. "
-msgstr ""
+msgstr "최종 시간을 등록 완료하지 않았습니다. "
 
 #: apps/users/forms.py:297
 msgid "Please register a new account."
-msgstr ""
+msgstr "새로운 계정을 등록하세요."
 
 #: apps/users/forms.py:300
 msgid "Username not found. "
-msgstr ""
+msgstr "회원이름이 없습니다."
 
 #: apps/users/forms.py:301
 msgid "Are you sure you've registered?"
-msgstr ""
+msgstr "가입한 것이 확실합니까?"
 
 #: apps/users/models.py:127
 msgid "Anonym"
-msgstr ""
+msgstr "익명"
 
 #: apps/users/models.py:188
 msgid "(adopted)"
-msgstr ""
+msgstr "(어돕티드)"
 
 #: apps/users/models.py:190 apps/users/models.py:203
 msgid "(organizing)"
-msgstr ""
+msgstr "(관리중)"
 
 #: apps/users/models.py:193 apps/users/models.py:206
 msgid "(participating)"
-msgstr ""
+msgstr "(참가중)"
 
 #: apps/users/models.py:196
 msgid "(following)"
-msgstr ""
+msgstr "(팔로잉중)"
 
 #: apps/users/views.py:193
 msgid "Incorrect username, email or password."
-msgstr ""
+msgstr "잘못된 회원이름, 이메일 혹은 비밀번호입니다."
 
 #: apps/users/views.py:278
 msgid "Congratulations! Your user account was successfully created."
-msgstr ""
+msgstr "축하합니다! 회원 계정이 성공적으로 생성되었습니다."
 
 #: apps/users/views.py:286
 msgid ""
 "Thanks! We have sent an email to {0} with instructions for completing your "
 "registration."
 msgstr ""
+"감사합니다! 회원가입을 완료하기 위해 {0} 으로 설명과 함께 이메일을 전송하였습"
+"니다."
 
 #: apps/users/views.py:364
 msgid "Hmm, that doesn't look like the correct confirmation code"
-msgstr ""
+msgstr "정상적인 확인 코드가 아닌 것 같습니다. 다시한번 확인하세요."
 
 #: apps/users/views.py:371
 msgid "Success! You have verified your email address."
-msgstr ""
+msgstr "이메일 주소가 정상적으로 확인되었습니다."
 
 #: apps/users/views.py:395
 msgid "This user account was deleted."
-msgstr ""
+msgstr "해당 회원 계정은 삭제되었습니다."
 
 #: apps/users/views.py:433
 #, python-format
@@ -1140,91 +1181,96 @@ msgid ""
 "Thanks! We have sent an email to %s with instructions for completing your "
 "registration."
 msgstr ""
+"감사합니다! 회원가입을 완료하기 위해 %s 으로 설명과 함께 이메일을 전송하였습"
+"니다."
 
 #: apps/users/views.py:457
 msgid "Profile updated"
-msgstr ""
+msgstr "프로필 업데이트됨"
 
 #: apps/users/views.py:463
 msgid ""
 "There were problems updating your profile. Please correct the problems and "
 "submit again."
 msgstr ""
+"프로필을 업데이트하는 중 오류가 발생하였습니다. 문제를 수정하고 다시 시도하세"
+"요."
 
 #: apps/users/views.py:500
 #, python-format
 msgid "The identity %s has already been claimed by you."
-msgstr ""
+msgstr "%s 아이디는 당신이 이미 사용하고 있습니다."
 
 #: apps/users/views.py:501
 #, python-format
 msgid "The identity %s has already been claimed by another user."
-msgstr ""
+msgstr "%s 아이디는 다른 사용자가 이미 사용하고 있습니다."
 
 #: apps/users/views.py:514
 #, python-format
 msgid "The identity %s has been saved."
-msgstr ""
+msgstr "%s 아이디가 저장되었습니다."
 
 #: apps/users/views.py:521
 #, python-format
 msgid "OpenID authentication failed: %s"
-msgstr ""
+msgstr "OpenID 인증 실패: %s"
 
 #: apps/users/views.py:524
 msgid "Authentication cancelled."
-msgstr ""
+msgstr "인증 취소됨."
 
 #: apps/users/views.py:527
 #, python-format
 msgid "Unknown OpenID response type: %r"
-msgstr ""
+msgstr "알수없는 OpenID 응답: %r"
 
 #: apps/users/views.py:529
 msgid "This is an OpenID relying party endpoint."
-msgstr ""
+msgstr "이것은 파티 엔드포인트와 관계된 OpenID 입니다."
 
 #: apps/users/views.py:538
 msgid "You can't edit this openid"
-msgstr ""
+msgstr "이 OpenID 는 수정할 수 없습니다"
 
 #: apps/users/views.py:540
 msgid "The openid was deleted."
-msgstr ""
+msgstr "이 OpenID 는 삭제되었습니다."
 
 #: apps/users/views.py:570
 msgid "Profile image updated"
-msgstr ""
+msgstr "프로필 이미지가 업데이트됨"
 
 #: apps/users/views.py:575
 msgid "There was an error uploading your image."
-msgstr ""
+msgstr "이미지를 업로드하는 중 오류가 발생하였습니다."
 
 #: apps/users/views.py:605
 msgid "Profile link added."
-msgstr ""
+msgstr "프로필 링크가 추가됨."
 
 #: apps/users/views.py:614
 msgid "There was an error saving your link."
-msgstr ""
+msgstr "링크를 저장하는 중 오류가 발생하였습니다."
 
 #: apps/users/views.py:638
 msgid "Profile link updated"
-msgstr ""
+msgstr "프로필 링크가 업데이트됨"
 
 #: apps/users/views.py:661
 msgid "The link was deleted."
-msgstr ""
+msgstr "링크가 삭제되었습니다."
 
 #: templates/404.html:6
 msgid "Page not found"
-msgstr ""
+msgstr "페이지가 없습니다"
 
 #: templates/404.html:8
 msgid ""
 "Oops. That links doesn't seem to work. Maybe the page you are looking for is "
 "on the old p2pu site? Try "
 msgstr ""
+"정상적인 링크가 아닙니다. 기존 P2PU 의 링크일 수 있습니다. 다시 시도하세요."
 
 #: templates/404.html:9
 msgid ""
@@ -1232,10 +1278,13 @@ msgid ""
 "lighthouseapp.com/projects/71002\" target=\"_blank\">filling a bug report</"
 "a>."
 msgstr ""
+"이것을 에러라고 생각하시면 <a href=\"http://p2pu.lighthouseapp.com/"
+"projects/71002\"target=\"_blank\">이곳에서 버그 레포트</a>를 등록해주시길 바"
+"랍니다."
 
 #: templates/500.html:6
 msgid "Internal server error"
-msgstr ""
+msgstr "내부 서버 오류"
 
 #: templates/500.html:8
 msgid ""
@@ -1243,20 +1292,25 @@ msgid ""
 "problem by <a href=\"http://help.p2pu.org\">filing a bug report</a>, and "
 "telling us what you were doing when the problem occurred."
 msgstr ""
+"작동해야 하는 기능이 동작하지 않습니다. <a href=\"http://p2pu.lighthouseapp."
+"com/projects/71002\"target=\"_blank\">이곳에서 버그 레포트</a> 통해 어떠한 문"
+"제점이 발생했는지알려주세요."
 
 #: templates/503.html:5
 msgid "Down for maintenance, come back soon"
-msgstr ""
+msgstr "현재 사이트 점검중입니다. 이용에 불편을 드려 죄송합니다."
 
 #: templates/503.html:7
 msgid ""
 "We are probably in the process of upgrading the site. We apologize for any "
 "inconvenience, and hope that you will like the new features."
 msgstr ""
+"사이트 업데이트중입니다.보다 나은 서비스를 만들기 위해 열심히 노력하고 있습니"
+"다. 이용에 불편을 드려 죄송합니다."
 
 #: templates/_footer.html:16
 msgid "What is P2PU?"
-msgstr ""
+msgstr "P2PU란 무엇인가요?"
 
 #: templates/_footer.html:17
 msgid ""
@@ -1267,87 +1321,92 @@ msgid ""
 "internet and educational materials openly available online, P2PU enables "
 "high-quality low-cost education opportunities."
 msgstr ""
+"Peer 2 Peer University 는 제도권 교육의 벽을 허물어 교육을 활성화하고 학습자"
+"들에게 스스로의 공부 성과를 평가할 수 있도록 기회를 주는 오픈 교육 프로젝트입"
+"니다. P2PU 는 전통적인 고등 교육과 함께 평생 학습을 위한 모델을 창조합니다. "
+"온라인으로 인터넷과 교육 자료들을 활성화하여 고품질, 저비용의 교육기회를 만들"
+"수 있게 합니다."
 
 #: templates/_footer.html:20
 msgid "Connect With Us"
-msgstr ""
+msgstr "문의하기"
 
 #: templates/_footer.html:23
 msgid "Facebook"
-msgstr ""
+msgstr "페이스북"
 
 #: templates/_footer.html:25
 msgid "Twitter"
-msgstr ""
+msgstr "트위터"
 
 #: templates/_footer.html:27 templates/pages/get_involved_page.html:7
 msgid "Get Involved"
-msgstr ""
+msgstr "함께하기"
 
 #: templates/_footer.html:29 templates/base.html:86 templates/base.html.py:118
 #: templates/dashboard/splash.html:71
 msgid "Blog"
-msgstr ""
+msgstr "블로그"
 
 #: templates/_footer.html:31
 msgid "Send us an email"
-msgstr ""
+msgstr "이메일 보내기"
 
 #: templates/_footer.html:35
 msgid "Some of Our Supporters"
-msgstr ""
+msgstr "도와주시는 분들 요약 보기"
 
 #: templates/_footer.html:38
 msgid "View all of our supporters"
-msgstr ""
+msgstr "도와주시는 분들 전체 보기"
 
 #: templates/_footer.html:62
 msgid "(more)"
-msgstr ""
+msgstr "(더보기)"
 
 #: templates/_footer.html:73 templates/base.html:87 templates/base.html.py:119
 msgid "Help"
-msgstr ""
+msgstr "도움말"
 
 #: templates/_footer.html:75
 msgid "Announcements"
-msgstr ""
+msgstr "알림"
 
 #: templates/_footer.html:76
 msgid "Wiki"
-msgstr ""
+msgstr "위키"
 
 #: templates/_footer.html:77
 msgid "Found a Bug?"
-msgstr ""
+msgstr "버그 리포트"
 
 #: templates/_footer.html:80
 msgid "Creative Commons"
-msgstr ""
+msgstr "크리에이티브 커먼즈"
 
 #: templates/_footer.html:81
 msgid "Share-Alike"
-msgstr ""
+msgstr "동일조건변경허락"
 
 #: templates/_footer.html:82
 msgid "Privacy Guidelines"
-msgstr ""
+msgstr "프라이버시 가이드라인"
 
 #: templates/_footer.html:83
 msgid "Terms of Use"
-msgstr ""
+msgstr "이용약관"
 
 #: templates/base.html:17
 msgid "Learning for everyone, by everyone, about almost anything."
-msgstr ""
+msgstr "모두를 위한, 모두에 의한, 거의 모든것에 대한 교육"
 
 #: templates/base.html:65
 msgid "Find"
-msgstr ""
+msgstr "찾기"
 
 #: templates/base.html:66
 msgid "Great Courses"
-msgstr ""
+msgstr "훌륭한 코스"
 
 #: templates/base.html:70 templates/badges/badge_edit_summary.html:39
 #: templates/content/create_page.html:34
@@ -1359,42 +1418,42 @@ msgstr ""
 #: templates/projects/project_import.html:8
 #: templates/projects/project_import.html:73 templates/schools/home.html:14
 msgid "Create"
-msgstr ""
+msgstr "만들기"
 
 #: templates/base.html:71
 msgid "a Course"
-msgstr ""
+msgstr "코스"
 
 #: templates/base.html:100 templates/dashboard/dashboard.html:18
 #: templates/drumbeatmail/inbox.html:9
 msgid "Dashboard"
-msgstr ""
+msgstr "대시보드"
 
 #: templates/base.html:101
 msgid "My Profile"
-msgstr ""
+msgstr "내 프로필"
 
 #: templates/base.html:102
 msgid "My Settings"
-msgstr ""
+msgstr "내 설정"
 
 #: templates/base.html:103 templates/chat/chat.html:4
 #: templates/chat/chat.html.py:10 templates/projects/sidebar.html:177
 msgid "Chat"
-msgstr ""
+msgstr "대화하기"
 
 #: templates/base.html:104 templates/drumbeatmail/inbox.html:4
 #: templates/drumbeatmail/inbox.html:11 templates/drumbeatmail/inbox.html:117
 msgid "Inbox"
-msgstr ""
+msgstr "받은 쪽지함"
 
 #: templates/base.html:105
 msgid "Logout"
-msgstr ""
+msgstr "로그아웃"
 
 #: templates/base.html:121
 msgid "Login"
-msgstr ""
+msgstr "로그인"
 
 #: templates/base.html:136 templates/base.html.py:250
 #: templates/courses/course_sidebar.html:55
@@ -1402,19 +1461,19 @@ msgstr ""
 #: templates/projects/contact_organizers.html:49
 #: templates/search/search.html:30 templates/users/profile_form_base.html:73
 msgid "en"
-msgstr ""
+msgstr "영어"
 
 #: templates/base.html:156
 msgid "Home"
-msgstr ""
+msgstr "홈"
 
 #: templates/base.html:205
 msgid "jquery.ui.datepicker-en.js"
-msgstr ""
+msgstr "jquery.ui.datepicker-en.js"
 
 #: templates/base.html:207
 msgid "js/script-en.js"
-msgstr ""
+msgstr "js/script-en.js"
 
 #: templates/activity/_activity_resource.html:19
 #: templates/content/page.html:41 templates/drumbeat/abuse_reason.html:11
@@ -1426,7 +1485,7 @@ msgstr ""
 #: templates/replies/_comment_threads.html:90
 #: templates/signups/sign_up.html:66 templates/users/sidebar.html:32
 msgid "Report Abuse"
-msgstr ""
+msgstr "신고하기"
 
 #: templates/activity/_activity_resource.html:26
 #: templates/activity/delete_restore.html:32
@@ -1448,15 +1507,15 @@ msgstr ""
 #: templates/users/profile_edit_openids.html:36
 #: templates/users/settings_delete.html:30
 msgid "Delete"
-msgstr ""
+msgstr "삭제"
 
 #: templates/activity/_activity_resource.html:35
 msgid "at"
-msgstr ""
+msgstr "에서"
 
 #: templates/activity/_activity_resource.html:45
 msgid "via"
-msgstr ""
+msgstr "통하여"
 
 #: templates/activity/_activity_resource.html:54
 #, python-format
@@ -1469,12 +1528,18 @@ msgid_plural ""
 "              %(counter)s Comments\n"
 "            "
 msgstr[0] ""
+"\n"
+"              댓글 %(counter)s개\n"
+"            "
 msgstr[1] ""
+"\n"
+"              댓글 %(counter)s개\n"
+"            "
 
 #: templates/activity/base.html:5
 #: templates/schools/school_edit_statistics.html:23
 msgid "Activity"
-msgstr ""
+msgstr "활동"
 
 #: templates/activity/base.html:18 templates/learn/learn.html:5
 #: templates/learn/learn.html.py:17 templates/learn/learn_tags.html:9
@@ -1485,9 +1550,9 @@ msgstr ""
 #: templates/projects/project_edit.html:25
 #: templates/projects/project_import.html:28
 msgid "Learn"
-msgstr ""
+msgstr "배우기"
 
-#: templates/activity/base.html:22 templates/courses/course_base.html:63
+#: templates/activity/base.html:22 templates/courses/course_base.html:84
 #: templates/projects/_user_list.html:8
 #: templates/projects/project_user_list.html:7
 #: templates/projects/project_user_list.html:12
@@ -1496,23 +1561,23 @@ msgstr ""
 #: templates/users/user_list.html:5 templates/users/user_list.html.py:9
 #: templates/users/user_list.html:15
 msgid "People"
-msgstr ""
+msgstr "사용자"
 
 #: templates/activity/delete_restore.html:8
 msgid "Restore Activity"
-msgstr ""
+msgstr "활동 복원하기"
 
 #: templates/activity/delete_restore.html:10
 msgid "Delete Activity"
-msgstr ""
+msgstr "활동 삭제하기"
 
 #: templates/activity/delete_restore.html:21
 msgid "Are you sure you want to restore this activity?"
-msgstr ""
+msgstr "이 활동을 복구하시겠습니까?"
 
 #: templates/activity/delete_restore.html:23
 msgid "Are you sure you want to delete this activity?"
-msgstr ""
+msgstr "이 활동을 삭제하시겠습니까?"
 
 #: templates/activity/delete_restore.html:27
 #: templates/badges/badge_edit_summary.html:35
@@ -1556,7 +1621,7 @@ msgstr ""
 #: templates/users/settings_notifications.html:70
 #: templates/users/settings_password.html:36 templates/users/signin.html:33
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 #: templates/activity/delete_restore.html:30
 #: templates/content/restore_version.html:21
@@ -1567,7 +1632,7 @@ msgstr ""
 #: templates/signups/delete_restore_answer.html:33
 #: templates/signups/sign_up.html:53
 msgid "Restore"
-msgstr ""
+msgstr "복구"
 
 #: templates/activity/index.html:20 templates/courses/content.html:32
 #: templates/projects/project_admin_metrics.html:25
@@ -1575,7 +1640,7 @@ msgstr ""
 #: templates/tracker/scoreboard.html:55 templates/tracker/scoreboard.html:67
 #: templates/tracker/scoreboard.html:89
 msgid "Comments"
-msgstr ""
+msgstr "댓글"
 
 #: templates/activity/reply_action_link.html:3
 #: templates/drumbeatmail/inbox.html:35 templates/drumbeatmail/inbox.html:88
@@ -1586,40 +1651,40 @@ msgstr ""
 #: templates/replies/_comment_threads.html:121
 #: templates/signups/sign_up.html:61
 msgid "Reply"
-msgstr ""
+msgstr "답글"
 
 #: templates/badges/_assessment_body.html:4
 msgid "Assessment from"
-msgstr ""
+msgstr "평가자"
 
 #: templates/badges/_assessment_body.html:4
 #: templates/badges/_assessment_item.html:11
 #: templates/reviews/show_project_reviews.html:16
 msgid "on"
-msgstr ""
+msgstr "에 대한"
 
 #: templates/badges/_assessment_body.html:14
 #: templates/badges/_assessment_body.html:30
 msgid "out of 4"
-msgstr ""
+msgstr "4개 중"
 
 #: templates/badges/_assessment_body.html:40
 msgid "Comment:"
-msgstr ""
+msgstr "댓글"
 
 #: templates/badges/_assessment_item.html:11
 msgid "Gave"
-msgstr ""
+msgstr "주었습니다."
 
 #: templates/badges/_assessment_item.html:11
 #: templates/projects/project_edit_status.html:59
 #: templates/projects/sidebar.html:153
 msgid "to"
-msgstr ""
+msgstr "에게"
 
 #: templates/badges/_give_badge_action.html:4
 msgid "Give Badge"
-msgstr ""
+msgstr "뱃지 달아주기"
 
 #: templates/badges/_give_badge_action.html:5
 #: templates/badges/badges_list.html:7 templates/badges/badges_list.html:11
@@ -1629,19 +1694,19 @@ msgstr ""
 #: templates/schools/projectset_home.html:26
 #: templates/users/_profile_info.html:18
 msgid "Badges"
-msgstr ""
+msgstr "뱃지"
 
 #: templates/badges/_review_submission_action.html:4
 #: templates/badges/submission_show.html:47
 msgid "Review This Submission"
-msgstr ""
+msgstr "이 신청 평가해주기"
 
 #: templates/badges/_submission_item.html:11
 msgid "Submitted work on "
-msgstr ""
+msgstr "신청 대상"
 
 #: templates/badges/_submission_item.html:16
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "\n"
 "            %(counter)s Review\n"
@@ -1651,71 +1716,79 @@ msgid_plural ""
 "            %(counter)s Reviews\n"
 "          "
 msgstr[0] ""
+"\n"
+"              댓글 %(counter)s개\n"
+"            "
 msgstr[1] ""
+"\n"
+"              댓글 %(counter)s개\n"
+"            "
 
 #: templates/badges/_submissions_list.html:6
 msgid "WOW!"
-msgstr ""
+msgstr "와우!"
 
 #: templates/badges/_submissions_list.html:6
 msgid "Check out all these submissions!"
-msgstr ""
+msgstr "모든 뱃지 신청을 여기서 다 보실 수 있어요!"
 
 #: templates/badges/_submissions_list.html:8
 msgid "Please take a few minutes and help a fellow peer."
-msgstr ""
+msgstr "잠시만 시간을 내어 다른 사용자를 도와주세요."
 
 #: templates/badges/_submissions_list.html:10
 #: templates/projects/_tasks_completed_msg.html:17
 msgid "Awaiting Review"
-msgstr ""
+msgstr "평가 대기 중"
 
 #: templates/badges/_submissions_list.html:11
 msgid "Previously Awarded"
-msgstr ""
+msgstr "평가 완료"
 
 #: templates/badges/_submissions_list.html:12
 msgid "My Submissions"
-msgstr ""
+msgstr "내 신청 목록"
 
 #: templates/badges/_submissions_list_item.html:29
 msgid "read more"
-msgstr ""
+msgstr "더 보기"
 
 #: templates/badges/_submissions_list_item.html:37
 msgid "submitted"
-msgstr ""
+msgstr "이 뱃지는"
 
 #: templates/badges/_submissions_list_item.html:37
 msgid "ago"
-msgstr ""
+msgstr "전에 신청되었습니다."
 
 #: templates/badges/assessment_edit.html:19
 msgid "Review this submission:"
-msgstr ""
+msgstr "신청 평가하기"
 
 #: templates/badges/assessment_edit.html:28
 #: templates/badges/submission_show.html:31
 msgid "Link to work submitted"
-msgstr ""
+msgstr "신청자의 완성작 보기"
 
 #: templates/badges/assessment_edit.html:34
 msgid "How well was this peer able to:"
-msgstr ""
+msgstr "다음에 대해 점수를 매겨주세요."
 
 #: templates/badges/assessment_edit.html:56
 msgid "Please explain your ratings."
-msgstr ""
+msgstr "점수에 대한 이유를 설명해주세요."
 
 #: templates/badges/assessment_edit.html:57
 msgid "What did this peer do well? What advice or suggestions would you give?"
-msgstr ""
+msgstr "어떤 점이 돋보였나요? 조언이 있으시면 남겨주세요."
 
 #: templates/badges/assessment_edit.html:59
 #: templates/badges/peer_assessment.html:40
 msgid ""
 "Why do you feel this person deserves this badge? Any additional comments?"
 msgstr ""
+"이 사용자가 뱃지를 받을 자격이 있다고 생각하시는 이유는? 덧붙일 의견이 있으시"
+"면 말씀해주세요."
 
 #: templates/badges/assessment_edit.html:66
 #: templates/badges/peer_assessment.html:46
@@ -1724,62 +1797,62 @@ msgstr ""
 #: templates/content/_toggle_completion.html:70
 #: templates/reviews/review_project.html:43
 msgid "Submit"
-msgstr ""
+msgstr "신청"
 
 #: templates/badges/badge.html:16
 msgid "View your Submissions"
-msgstr ""
+msgstr "내 신청 보기"
 
 #: templates/badges/badge.html:19
 msgid "View Submissions"
-msgstr ""
+msgstr "모든 신청 보기"
 
 #: templates/badges/badge.html:24
 msgid "Apply for Badge"
-msgstr ""
+msgstr "뱃지 신청하기"
 
 #: templates/badges/badge.html:27
 msgid "Award Badge to Peer"
-msgstr ""
+msgstr "다른 사용자에게 뱃지 달아주기"
 
 #: templates/badges/badge.html:34 templates/badges/peer_assessment.html:24
 #: templates/badges/show_user_awards.html:20
 #: templates/badges/submission_edit.html:26
 #: templates/content/_toggle_completion.html:56
 msgid "Requirements:"
-msgstr ""
+msgstr "요건"
 
 #: templates/badges/badge.html:39
 msgid "You need to have these badges:"
-msgstr ""
+msgstr "다음의 뱃지가 필요합니다."
 
 #: templates/badges/badge.html:54
 msgid "Other badges you can apply for:"
-msgstr ""
+msgstr "신청하실 수 있는 다른 뱃지:"
 
 #: templates/badges/badge.html:66
 msgid "Peers that have received this badge:"
-msgstr ""
+msgstr "이 뱃지를 받은 다른 사용자"
 
 #: templates/badges/badge.html:78
 msgid "This badge can be earned at these Challenges:"
-msgstr ""
+msgstr "이 뱃지는 다음의 도전과제를 달성하시면 받을 수 있습니다."
 
 #: templates/badges/badge.html:88
 msgid "Peers that are applying for this badge:"
-msgstr ""
+msgstr "이 뱃지를 신청한 사용자"
 
 #: templates/badges/badge.html:90 templates/projects/sidebar.html:314
 msgid "Awarded"
-msgstr ""
+msgstr "수여 완료"
 
 #: templates/badges/badge.html:90 templates/projects/sidebar.html:318
 msgid "Pending"
-msgstr ""
+msgstr "대기 중"
 
 #: templates/badges/badge_edit.html:4 templates/badges/badge_edit.html:10
 msgid "Edit Badge"
-msgstr ""
+msgstr "뱃지 수정"
 
 #: templates/badges/badge_edit_summary.html:10
 #: templates/projects/project_edit_links.html:14
@@ -1795,34 +1868,36 @@ msgstr ""
 #: templates/users/profile_edit_links.html:50
 #: templates/users/profile_edit_links_edit.html:13
 msgid "Name"
-msgstr ""
+msgstr "이름"
 
 #: templates/badges/badge_edit_summary.html:15
 msgid "Brief description"
-msgstr ""
+msgstr "개요"
 
 #: templates/badges/badge_edit_summary.html:16
 msgid ""
 "This is used both on P2PU and within the Open Badges Infrastructure (OBI)"
 msgstr ""
+"이 뱃지는 P2PU와 Mozilla의 Open Badges Infrastructure (OBI) 에서 모두 사용됩"
+"니다."
 
 #: templates/badges/badge_edit_summary.html:21
 msgid "Requirements to get badge"
-msgstr ""
+msgstr "뱃지 요건"
 
 #: templates/badges/badge_edit_summary.html:22
 msgid ""
 "Description of any requirements that must be satisfied to award the badge."
-msgstr ""
+msgstr "벳지를 획득하기 위해 충족해야하는 요건"
 
 #: templates/badges/badge_edit_summary.html:27
 msgid "Badge Type"
-msgstr ""
+msgstr "뱃지 종류"
 
 #: templates/badges/badge_edit_summary.html:28
 msgid ""
 "The logic behind badge awarding will change depending on the badge type."
-msgstr ""
+msgstr "뱃지 획득 시스템은 뱃지 종류에 따라 달라집니다."
 
 #: templates/badges/badge_edit_summary.html:36
 #: templates/content/edit_page.html:43
@@ -1848,21 +1923,21 @@ msgstr ""
 #: templates/users/settings_notifications.html:71
 #: templates/users/settings_password.html:37
 msgid "Save"
-msgstr ""
+msgstr "저장하기"
 
 #: templates/badges/peer_assessment.html:20
 msgid "Give this badge to your peer."
-msgstr ""
+msgstr "이 뱃지를 다른 사용자에게 달아주기"
 
 #: templates/badges/peer_assessment.html:34
 msgid "Peer Username:"
-msgstr ""
+msgstr "사용자 이름"
 
 #: templates/badges/profile_badges_manage.html:7
 #: templates/badges/profile_badges_manage.html:13
 #: templates/users/profile_edit.html:34
 msgid "Share Badges"
-msgstr ""
+msgstr "뱃지 공유하기"
 
 #: templates/badges/profile_badges_manage.html:15
 #, python-format
@@ -1871,6 +1946,9 @@ msgid ""
 "\"_blank\">badges</a> with other sites and communities, P2PU has plugged "
 "into the Mozilla Open Badge Infrastructure (OBI)."
 msgstr ""
+"다른 사이트나 커뮤니티와 <a href=\"%(badges_help_url)s\" target=\"_blank\">뱃"
+"지</a>를 공유하실 수 있도록 P2PU는 Mozilla Open Badge Infrastructure(OBI)에연"
+"결되어 있습니다."
 
 #: templates/badges/profile_badges_manage.html:18
 #, python-format
@@ -1878,103 +1956,106 @@ msgid ""
 "Start by sending your badges to the <a href=\"%(obi_url)s\" target=\"_blank"
 "\">Mozilla Open Badge Backpack</a> as %(email)s."
 msgstr ""
+"앞으로 획득한 뱃지를 %(email)s 계정으로 <a href=\"%(obi_url)s\" target="
+"\"_blank\">Mozilla Open Badge Backpack</a>에 보냅니다."
 
 #: templates/badges/profile_badges_manage.html:23
 msgid "You don't have any badges."
-msgstr ""
+msgstr "보유하신 뱃지가 없습니다."
 
 #: templates/badges/profile_badges_manage.html:24
 #, python-format
 msgid ""
 "Check out the <a href=\"%(badges_url)s\">existing badges</a> you can earn!"
 msgstr ""
+"<a href=\"%(badges_url)s\">현재 획득하실 수 있는 뱃지</a>를 확인해보세요."
 
 #: templates/badges/show_assessment.html:6
 msgid "Award Justification for"
-msgstr ""
+msgstr "다음의 뱃지 수여에 대한 이유"
 
 #: templates/badges/show_assessment.html:30
 #: templates/badges/submission_show.html:37 templates/messages/inbox.html:13
 msgid "Received"
-msgstr ""
+msgstr "받은 갯수"
 
 #: templates/badges/show_assessment.html:39
 msgid "Award Justification"
-msgstr ""
+msgstr "뱃지 수여 이유"
 
 #: templates/badges/show_user_awards.html:11
 msgid "'s Awards to"
-msgstr ""
+msgstr "사용자가 다음 사용자에게 수여한 뱃지"
 
 #: templates/badges/show_user_awards.html:30
 #: templates/projects/imported_detailed_description.html:15
 msgid "Prerequisites"
-msgstr ""
+msgstr "요건"
 
 #: templates/badges/show_user_awards.html:40
 msgid "Awarded At"
-msgstr ""
+msgstr "다음에서 수여"
 
 #: templates/badges/show_user_awards.html:51
 msgid "Evidence"
-msgstr ""
+msgstr "근거"
 
 #: templates/badges/submission_edit.html:22
 msgid "Apply for this badge."
-msgstr ""
+msgstr "이 뱃지 신청하기"
 
 #: templates/badges/submission_edit.html:36
 msgid "URL to the work you are submitting:"
-msgstr ""
+msgstr "완성물의 URL"
 
 #: templates/badges/submission_edit.html:41
 #: templates/content/_toggle_completion.html:66
 msgid "What did you learn? Why do you feel you deserve this badge?"
-msgstr ""
+msgstr "어떤 점을 배우셨나요? 왜 이 뱃지를 받을 자격이 있다고 생각하세요?"
 
 #: templates/badges/submission_show.html:6
 msgid "Submission for"
-msgstr ""
+msgstr "신청"
 
 #: templates/badges/submission_show.html:20
 msgid "Submission"
-msgstr ""
+msgstr "신청"
 
 #: templates/badges/submission_show.html:34
 msgid "Progress:"
-msgstr ""
+msgstr "상태"
 
 #: templates/badges/submission_show.html:37
 msgid " reviews of the"
-msgstr ""
+msgstr "필요한 평가 갯수는"
 
 #: templates/badges/submission_show.html:37
 msgid "reviews needed."
-msgstr ""
+msgstr "입니다."
 
 #: templates/badges/submission_show.html:40
 msgid "The posted reviews give this work submission a total average score of"
-msgstr ""
+msgstr "이 신청에 대한 사용자들의 평가의 평균 점수"
 
 #: templates/badges/submission_show.html:40
 msgid "(needs to be at least"
-msgstr ""
+msgstr "뱃지를 받기 위해서는 최소한"
 
 #: templates/badges/submission_show.html:40
 msgid "for the badge to be awarded)."
-msgstr ""
+msgstr "개가 필요합니다."
 
 #: templates/badges/submission_show.html:57 templates/reviews/base.html:4
 #: templates/reviews/base.html.py:10
 #: templates/reviews/show_project_reviews.html:6
 #: templates/reviews/show_project_reviews.html:12
 msgid "Reviews"
-msgstr ""
+msgstr "평가"
 
 #: templates/badges/submissions_list.html:7
 #: templates/badges/submissions_list.html:11
 msgid "Submissions"
-msgstr ""
+msgstr "신청"
 
 #: templates/badges/success_msg.html:3
 #, python-format
@@ -1983,108 +2064,75 @@ msgid ""
 "\"%(obi_url)s\" target=\"_blank\">%(obi_url)s</a>. Be sure to log in using "
 "the email <strong>%(email)s</strong>."
 msgstr ""
-
-#: templates/badges/emails/new_submission.txt:2
-msgid "Howdy!"
-msgstr ""
-
-#: templates/badges/emails/new_submission.txt:4
-msgid "Someone has just submitted work for the"
-msgstr ""
-
-#: templates/badges/emails/new_submission.txt:4
-msgid "Go ahead and take a look at their work here:"
-msgstr ""
-
-#: templates/badges/emails/new_submission.txt:4
-msgid "They will love you!"
-msgstr ""
-
-#: templates/badges/emails/new_submission.txt:6
-#: templates/statuses/emails/wall_updated.txt:17
-msgid "Go get 'em,"
-msgstr ""
-
-#: templates/badges/emails/new_submission.txt:8
-msgid "The P2PU team"
-msgstr ""
-
-#: templates/badges/emails/new_submission.txt:10
-#: templates/content/emails/content_update.txt:14
-#: templates/replies/emails/post_comment.txt:15
-#: templates/statuses/emails/wall_updated.txt:23
-msgid "Manage how often you get these delightful messages at:"
-msgstr ""
-
-#: templates/badges/emails/new_submission_subject.txt:2
-msgid "Make someone's day. Review a badge for "
-msgstr ""
+"뱃지가 성공적으로 전송되었습니다. 이제 <a href=\"%(obi_url)s\" target="
+"\"_blank\">%(obi_url)s</a>에서 뱃지를 보실 수 있습니다. <strong>%(email)s</"
+"strong>로 로그인 하세요."
 
 #: templates/content/_post_link_comment.html:2
 msgid "This is a link to my work:"
-msgstr ""
+msgstr "제 완성물의 링크입니다."
 
 #: templates/content/_toggle_completion.html:8
 msgid "You've marked this task as completed."
-msgstr ""
+msgstr "이 과제를 완료함으로 표기하였습니다."
 
 #: templates/content/_toggle_completion.html:13
 msgid "Are you done with this task?"
-msgstr ""
+msgstr "이 과제를 완료하셨나요?"
 
 #: templates/content/_toggle_completion.html:14
 msgid "Yes, I'm done"
-msgstr ""
+msgstr "예, 완료했습니다."
 
 #: templates/content/_toggle_completion.html:30
 msgid "Post to Discussion Wall"
-msgstr ""
+msgstr "토론장에 글 남기기"
 
 #: templates/content/_toggle_completion.html:36
 msgid "Submit this link to apply for the badges below"
-msgstr ""
+msgstr "아래의 뱃지를 신청하기 위해 이 링크를 제출합니다."
 
 #: templates/content/_toggle_completion.html:51
 msgid "Apply for this badge"
-msgstr ""
+msgstr "이 뱃지에 신청"
 
 #: templates/content/_toggle_completion.html:60
 msgid "Badge Application Form"
-msgstr ""
+msgstr "뱃지 신청서"
 
 #: templates/content/_toggle_completion.html:62
 msgid "Url to the work you are submitting"
-msgstr ""
+msgstr "제출하려고 하시는 완성물의 URL"
 
 #: templates/content/_toggle_completion.html:70
 msgid "Submit and move to the next badge application"
-msgstr ""
+msgstr "제출하고 다음 뱃지 신청으로 넘어가기"
 
 #: templates/content/_toggle_completion.html:75
 msgid "Move on to next task"
-msgstr ""
+msgstr "다음 과제로 넘어가기"
 
 #: templates/content/_toggle_completion.html:83
 msgid "Did you know that you can apply for these badges in this task?"
-msgstr ""
+msgstr "이 과제에서 다음의 뱃지를 신청하실 수 있습니다."
 
 #: templates/content/_toggle_completion.html:92
 msgid "Received!"
-msgstr ""
+msgstr "받았습니다!"
 
 #: templates/content/_toggle_completion.html:95
 msgid "Apply"
-msgstr ""
+msgstr "신청"
 
 #: templates/content/_toggle_completion.html:98
 msgid "Submitted"
-msgstr ""
+msgstr "제출"
 
 #: templates/content/base_page_form.html:20
 #: templates/replies/comment_page.html:59
 #: templates/signups/answer_sign_up.html:28
 msgid "[Preview]"
-msgstr ""
+msgstr "[미리보기]"
 
 #: templates/content/base_page_form.html:33
 #: templates/courses/content_form_snip.html:17
@@ -2092,31 +2140,31 @@ msgstr ""
 #: templates/projects/project_create_overview.html:91
 #: templates/projects/project_edit_summary.html:23
 msgid "Title"
-msgstr ""
+msgstr "제목"
 
 #: templates/content/base_page_form.html:34
 msgid "A good title is short and descriptive."
-msgstr ""
+msgstr "짧고 설명적인 제목이 좋습니다."
 
 #: templates/content/base_page_form.html:41
 #: templates/projects/project_edit_summary.html:35
 msgid "One sentence description"
-msgstr ""
+msgstr "한 문장으로 설명하기"
 
 #: templates/content/base_page_form.html:42
 msgid "This description will be used as sub header below the task title."
-msgstr ""
+msgstr "이 설명은 과제 제목 아래에 부제목으로 쓰입니다."
 
 #: templates/content/base_page_form.html:53
 msgid "Collaborative work (editable by all the participants)."
-msgstr ""
+msgstr "공동 작업물 (모든 참여자가 수정 가능)"
 
 #: templates/content/base_page_form.html:59
 #: templates/courses/content_form_snip.html:11
 #: templates/replies/comment_page.html:105
 #: templates/signups/answer_sign_up.html:103
 msgid "Preview"
-msgstr ""
+msgstr "미리보기"
 
 #: templates/content/confirm_delete_page.html:11
 #: templates/content/create_page.html:11 templates/content/edit_page.html:11
@@ -2125,15 +2173,15 @@ msgstr ""
 #: templates/content/version_page.html:12
 #: templates/projects/project_task_list.html:9
 msgid "Task List"
-msgstr ""
+msgstr "과제 목록"
 
 #: templates/content/confirm_delete_page.html:24
 msgid "Are you sure you want to delete this task?"
-msgstr ""
+msgstr "이 과제를 삭제하시겠습니까?"
 
 #: templates/content/create_page.html:5 templates/content/create_page.html:15
 msgid "Create Task"
-msgstr ""
+msgstr "과제 만들기"
 
 #: templates/content/create_page.html:19 templates/content/edit_page.html:27
 msgid ""
@@ -2144,6 +2192,12 @@ msgid ""
 "constructed over a week, a project that lasts for a few weeks, or a month-"
 "long endeavour that everyone works on."
 msgstr ""
+"유익한 과제를 만드는 것은 협동 학습 과정에 매우 중요합니다. 과제는명확한 목표"
+"를 가져야하며 학습 과정 전체가 일정 순서를 따라 이루어져야합니다.과제는 원하"
+"는 만큼 크거나 작게 만들 수 있고 기간도 원하는 만큼으로 설정할 수있습니다. 하"
+"루짜리 토론 과정으로 기획할 수도 있고, 일주일에 걸쳐 쓴 글이 될수도 있으며, "
+"몇 주 동안 진행되는 프로젝트나 모든 사람들이 참여하는 한달짜리프로젝트가 될 "
+"수도 있습니다."
 
 #: templates/content/edit_page.html:18 templates/content/page.html:19
 #: templates/courses/content_form_snip.html:10
@@ -2158,91 +2212,53 @@ msgstr ""
 #: templates/signups/sign_up.html:64
 #: templates/users/profile_edit_links.html:72
 msgid "Edit"
-msgstr ""
+msgstr "수정"
 
 #: templates/content/edit_page.html:33
 #: templates/content/restore_version.html:30
 msgid "Minor update (not posted to the wall)."
-msgstr ""
+msgstr "사소한 변경 (활동 기록에는 올라가지 않음)."
 
 #: templates/content/history_page.html:15
 #: templates/content/history_page.html:21
 #: templates/content/restore_version.html:14
 #: templates/content/version_page.html:16
 msgid "History"
-msgstr ""
+msgstr "기록"
 
 #: templates/content/history_page.html:25
 #: templates/content/history_page.html:33
 msgid "deleted"
-msgstr ""
+msgstr "삭제됨"
 
 #: templates/content/history_page.html:27
 msgid "(current)"
-msgstr ""
+msgstr "(현재)"
 
 #: templates/content/page.html:22
 msgid "View History"
-msgstr ""
+msgstr "기록 보기"
 
 #: templates/content/page.html:31
 msgid "Task Navigation"
-msgstr ""
+msgstr "과제 보기"
 
 #: templates/content/page.html:62
 msgid "Post Comment"
-msgstr ""
+msgstr "댓글 달기"
 
 #: templates/content/page.html:64
 msgid "Task Discussion"
-msgstr ""
-
-#: templates/content/emails/content_update.txt:2
-msgid " was updated."
-msgstr ""
-
-#: templates/content/emails/content_update.txt:4
-msgid " contributed with a new task: "
-msgstr ""
-
-#: templates/content/emails/content_update.txt:4
-#: templates/content/emails/content_update_subject.txt:2
-#: templates/replies/emails/post_comment_subject.txt:2
-#: templates/signups/emails/new_signup_answer.txt:2
-msgid "."
-msgstr ""
-
-#: templates/content/emails/content_update.txt:9
-msgid "Check out their update and respond at:"
-msgstr ""
-
-#: templates/content/emails/content_update.txt:11
-msgid "Booyah,"
-msgstr ""
-
-#: templates/content/emails/content_update.txt:12
-#: templates/drumbeatmail/emails/direct_message.txt:9
-#: templates/relationships/emails/new_follower.txt:12
-#: templates/replies/emails/post_comment.txt:13
-#: templates/signups/emails/new_signup_answer.txt:22
-#: templates/statuses/emails/wall_updated.txt:18
-#: templates/users/emails/forgot_password.txt:11
-#: templates/users/emails/registration_confirm.txt:13
-msgid "The P2PU Team"
-msgstr ""
-
-#: templates/content/emails/content_update_subject.txt:2
-msgid " made a new task for "
-msgstr ""
+msgstr "과제 토론"
 
 #: templates/courses/content.html:25 templates/courses/course.html:22
 msgid "edit"
-msgstr ""
+msgstr "수정하기"
 
 #: templates/courses/content_form_snip.html:22
-#: templates/courses/course_base.html:43
+#: templates/courses/course_base.html:64
 msgid "Content"
-msgstr ""
+msgstr "콘텐츠"
 
 #: templates/courses/content_form_snip.html:26
 msgid ""
@@ -2253,96 +2269,100 @@ msgstr ""
 
 #: templates/courses/course.html:12
 msgid "You can add some information here by editing this page!</a>"
-msgstr ""
+msgstr "이 페이지를 수정해 정보를 추가하실 수 있습니다."
 
 #: templates/courses/course_admin_content.html:21
 msgid "remove"
-msgstr ""
+msgstr "삭제"
 
 #: templates/courses/course_admin_content.html:32
 msgid "Add more content"
-msgstr ""
+msgstr "콘텐츠 추가"
 
 #: templates/courses/course_admin_content.html:36
 msgid "This course doesn't have any content yet. "
-msgstr ""
+msgstr "이 코스는 아직 콘텐츠가 없습니다."
 
-#: templates/courses/course_base.html:53
+#: templates/courses/course_base.html:74
 msgid "Organize and add content"
-msgstr ""
+msgstr "콘텐츠 관리 및 추가"
 
-#: templates/courses/course_base.html:60
+#: templates/courses/course_base.html:81
 msgid "Discussion"
-msgstr ""
+msgstr "토론"
 
-#: templates/courses/course_base.html:67
+#: templates/courses/course_base.html:88
 msgid "Settings"
-msgstr ""
+msgstr "설정"
 
 #: templates/courses/course_comment_snip.html:8
 #: templates/courses/discussion_snip.html:10
 #, python-format
 msgid "%(reply_count)s replies"
-msgstr ""
+msgstr "답글 %(reply_count)s 개"
 
 #: templates/courses/course_comment_snip.html:19
 msgid "Reply to comment"
-msgstr ""
+msgstr "댓글에 답글달기"
 
 #: templates/courses/course_comment_snip.html:25
 #: templates/courses/course_comment_snip.html:37
 #: templates/courses/discussion_snip.html:16
 #: templates/courses/discussion_snip.html:24
 msgid "Post comment"
-msgstr ""
+msgstr "댓글 달기"
 
 #: templates/courses/course_comment_snip.html:32
 msgid "Post new comment"
-msgstr ""
+msgstr "새 댓글 쓰기"
 
 #: templates/courses/course_discussion.html:9
 msgid ""
 "This page is for general discussion of the course. Feel free to post "
 "questions, comments, ideas."
 msgstr ""
+"코스에 대한 일반적인 토론을 위한 페이지입니다.질문이나 댓글, 의견을 자유롭게 "
+"나눠주세요."
 
 #: templates/courses/course_people.html:9
 msgid "Learners"
-msgstr ""
+msgstr "학습자"
 
 #: templates/courses/course_people.html:19
 #: templates/projects/_user_list.html:38 templates/projects/sidebar.html:185
 #: templates/schools/school_edit_statistics.html:18
 msgid "Organizers"
-msgstr ""
+msgstr "관리자"
 
 #: templates/courses/course_people.html:33
 msgid "Add user"
-msgstr ""
+msgstr "사용자 추가"
 
 #: templates/courses/course_settings.html:10
 msgid ""
 "This course is currently archived. Before you can make changes you need to "
 "change the course to published or draft."
 msgstr ""
+"이 코스는 현재 아카이브에 저장되어 있습니다. 변경하시려면코스를 공개 또는 임"
+"시로 변경해주세요."
 
 #: templates/courses/course_settings.html:13
 #: templates/courses/course_settings.html:64
 msgid "Course status"
-msgstr ""
+msgstr "코스 상태"
 
 #: templates/courses/course_settings.html:23
 #: templates/schools/school_edit_featured.html:17
 msgid "Course Title"
-msgstr ""
+msgstr "코스 제목"
 
 #: templates/courses/course_settings.html:34
 msgid "Hashtag"
-msgstr ""
+msgstr "해시태그"
 
 #: templates/courses/course_settings.html:47
 msgid "Upload new image"
-msgstr ""
+msgstr "새로운 이미지 업로드"
 
 #: templates/courses/course_settings.html:55
 #: templates/courses/course_sidebar.html:96
@@ -2352,15 +2372,15 @@ msgstr ""
 #: templates/projects/project_edit_summary.html:90
 #: templates/schools/school_edit_summary.html:22
 msgid "Description"
-msgstr ""
+msgstr "설명`"
 
 #: templates/courses/course_settings.html:57
 msgid "Update description"
-msgstr ""
+msgstr "설명 업데이트"
 
 #: templates/courses/course_settings.html:72
 msgid "Users can join this course at any time."
-msgstr ""
+msgstr "사용자는 언제든 이 코스에 참여할 수 있습니다."
 
 #: templates/courses/course_settings.html:74
 #, python-format
@@ -2369,87 +2389,143 @@ msgid ""
 "          <p>This course runs from %(start_date)s to %(end_date)s.</p>\n"
 "        "
 msgstr ""
+"\n"
+"          <p>이 코스의 기간은 %(start_date)s 에서 %(end_date)s까지입니다.</"
+"p>\n"
+"        "
 
 #: templates/courses/course_settings.html:80
 msgid "Set dates"
-msgstr ""
+msgstr "기간 설정"
 
 #: templates/courses/course_settings.html:83
 msgid "Start date"
-msgstr ""
+msgstr "시작 날짜"
 
 #: templates/courses/course_settings.html:84
 msgid "End date"
-msgstr ""
+msgstr "종료 날짜"
 
 #: templates/courses/course_settings.html:89
 #: templates/users/_openid_providers.html:19
 #: templates/users/register_openid.html:9 templates/users/signin.html:10
 msgid "or"
-msgstr ""
+msgstr "또는"
 
 #: templates/courses/course_settings.html:93
 msgid "Switch to rolling term"
-msgstr ""
+msgstr "단계별 과정으로 전환"
 
 #: templates/courses/course_settings.html:102
 msgid "Singup is open to anyone."
-msgstr ""
+msgstr "누구든 가입할 수 있습니다."
 
 #: templates/courses/course_settings.html:105
 msgid ""
 "Singup is moderated. To sign up for this course you should contact one of "
 "the course organizer."
-msgstr ""
+msgstr "가입이 비공개된 코스입니다. 가입하시려면 코스 운영자에게 문의해주세요."
 
 #: templates/courses/course_settings.html:108
 msgid "Singup is closed. Only organizers can add more people."
-msgstr ""
+msgstr "가입이 제한되어 있습니다. 운영자가 추가한 사용자만 가입할 수 있습니다."
 
 #: templates/courses/course_settings.html:133
 msgid "Course languge"
-msgstr ""
+msgstr "코스 언어"
 
 #: templates/courses/course_settings.html:135
 msgid "Update language"
+msgstr "언어 업데이트"
+
+#: templates/courses/course_settings.html:141
+#, fuzzy
+msgid "Meta data"
+msgstr "데이터를 다른 곳으로 내보내기"
+
+#: templates/courses/course_settings.html:142
+msgid ""
+"For more information about the supported meta data, see <a href=\"http://www."
+"lrmi.net/the-specification\">lrmi.net</a>"
+msgstr ""
+
+#: templates/courses/course_settings.html:147
+#, fuzzy
+msgid "About (subject)"
+msgstr "내 소개"
+
+#: templates/courses/course_settings.html:151
+msgid ""
+"Time Required (In <a href=\"http://en.wikipedia.org/wiki/ISO_8601#Durations"
+"\">ISO 8601</a> duration format)"
+msgstr ""
+
+#: templates/courses/course_settings.html:155
+msgid "Typical Age Range"
+msgstr ""
+
+#: templates/courses/course_settings.html:159
+#, fuzzy
+msgid "Is Based on URL"
+msgstr "기본으로 하여"
+
+#: templates/courses/course_settings.html:163
+msgid "Educational Role (target audience)"
+msgstr ""
+
+#: templates/courses/course_settings.html:167
+msgid "Educational Use"
+msgstr ""
+
+#: templates/courses/course_settings.html:171
+msgid "Interactivity Type"
+msgstr ""
+
+#: templates/courses/course_settings.html:176
+msgid "Educational Alignment"
+msgstr ""
+
+#: templates/courses/course_settings.html:184
+msgid "Save metadata"
 msgstr ""
 
 #: templates/courses/course_sidebar.html:20
 msgid "Featured in:"
-msgstr ""
+msgstr "소속"
 
 #: templates/courses/course_sidebar.html:31
 msgid "Navigation"
-msgstr ""
+msgstr "탐색"
 
 #: templates/courses/course_sidebar.html:55
 #, python-format
 msgid "I'm learning &quot;%(title)s&quot; @P2PU - check it: "
 msgstr ""
+"저는 P2PU의 &quot;%(title)s&quot; 에서 공부하고 있습니다. 여길 봐주세요."
 
 #: templates/courses/course_sidebar.html:55
 msgid "Tweet me"
-msgstr ""
+msgstr "트윗하기"
 
 #: templates/courses/course_sidebar.html:76
 msgid "Start Course"
-msgstr ""
+msgstr "코스 시작하기"
 
 #: templates/courses/course_sidebar.html:82
 msgid "Leave Course"
-msgstr ""
+msgstr "코스 끝내기"
 
 #: templates/courses/course_user_snip.html:12
 msgid "Remove user"
-msgstr ""
+msgstr "사용자 삭제"
 
 #: templates/courses/course_user_snip.html:17
 msgid "Make organizer"
-msgstr ""
+msgstr "운영자로 설정"
 
 #: templates/courses/create_course.html:16
 msgid "Create a new course"
-msgstr ""
+msgstr "새 코스 만들기"
 
 #: templates/courses/create_course.html:25
 msgid ""
@@ -2470,84 +2546,86 @@ msgid ""
 "target=\"_blank\">mailing list</a> and say 'Hi'.</p>\n"
 "      "
 msgstr ""
+"\n"
+"        <h2>코스를 만들 준비가 되셨나요?</h2>\n"
+"        <p>먼저 코스 제목을 정해주세요. 짧고 산뜻한, 시선을 끄는 제목이면 좋"
+"습니다.</p>\n"
+"        <p>그리고 \"해시태그\"를 만들어주세요.</p>\n"
+"        <p>\"설명\"란에 좀 더 자세한 내용을 넣고버튼을 누르시면 코스가 생성됩"
+"니다.</p>\n"
+"        <p>어떻게 멋진 경험을 만들어낼 지에 대해 좀더 안내가 필요하신가요?<a "
+"href=\"https://p2pu.org/en/groups/make-a-course/\">\"코스 만들기\"</a> 자료"
+"를 살펴보세요!</p>\n"
+"        <p><a href=\"/groups/list/community/\">추천</a> 코스에서 좋은 사례도 "
+"확인하실 수 있습니다.</p>\n"
+"        <p>자신이 만든 코스에 대해 도움이나 의견을 얻고 싶으시면P2PU 커뮤니"
+"티 <a href=\"http://groups.google.com/group/p2pu-community\" target=\"_blank"
+"\">메일링리스트</a>에 글을 남기고 인사해주세요.</p>\n"
+"      "
 
 #: templates/courses/create_course.html:40
 msgid "Course Title:"
-msgstr ""
+msgstr "코스 제목"
 
 #: templates/courses/create_course.html:42
 msgid "A catchy title for the course, ex. 'Get CC Savvy'"
-msgstr ""
+msgstr "예를 들어 'CC 전문가 되기' 같은 시선을 끄는 제목"
 
 #: templates/courses/create_course.html:46
 msgid "Hashtag:"
-msgstr ""
+msgstr "해시태그"
 
 #: templates/courses/create_course.html:46
 msgid ""
 "Specify a short hashtag of up to 20 characters that should be used when "
 "sending out notifications and tweets about the course."
 msgstr ""
+"코스에 대해 공지나 트윗을 보낼 때 사용될 짧은 해시태그를 넣어주세요.최대 20자"
+"까지 가능합니다."
 
 #: templates/courses/create_course.html:49
 msgid "A short handle for the course, ex. 'ccsavvy'"
-msgstr ""
+msgstr "'ccsavvy'처럼 코스를 구분할 짧은 문구"
 
 #: templates/courses/create_course.html:53
 msgid "Description:"
-msgstr ""
+msgstr "설명"
 
 #: templates/courses/create_course.html:53
 msgid "This description is used in places where your course will be listed."
-msgstr ""
+msgstr "코스가 목록에 보여질 때 쓰일 설명입니다."
 
 #: templates/courses/create_course.html:55
 msgid ""
 "A brief description of what the course is about, ex. 'Learn when, where and "
 "how to use a CC license'"
 msgstr ""
+"코스에 대한 짧은 설명입니다. 예를 들어 'CC 라이선스를 언제, 어디서, 어떻게사"
+"용할 수 있는지' 등을 넣을 넣을 수 있습니다."
 
 #: templates/courses/create_course.html:58
 msgid ""
 "This is the language that your course will use. It will help people "
 "searching for courses in a particular language."
 msgstr ""
+"코스 사용 언어입니다. 언어를 설정하시면 사람들이 특정 언어 코스를검색할 수 있"
+"어 유용합니다."
 
 #: templates/courses/create_course.html:61
 msgid "Create my course!"
-msgstr ""
-
-#: templates/courses/emails/course_join.txt:4
-msgid "Howdy course organizer!"
-msgstr ""
-
-#: templates/courses/emails/course_join.txt:6
-#, python-format
-msgid "%(new_user)s signed up for %(course_title)s!"
-msgstr ""
-
-#: templates/courses/emails/course_join.txt:8
-msgid ""
-"Regards\n"
-"The P2PU team"
-msgstr ""
-
-#: templates/courses/emails/course_join_subject.txt:3
-#, python-format
-msgid "[%(course_hash)s] %(username)s has signed up for %(course_title)s!"
-msgstr ""
+msgstr "내 코스 만들기!"
 
 #: templates/dashboard/_join_p2pu.html:9
 msgid "Join the Community"
-msgstr ""
+msgstr "커뮤니티에 가입"
 
 #: templates/dashboard/_join_p2pu.html:9
 msgid "It's free!"
-msgstr ""
+msgstr "무료예요!"
 
 #: templates/dashboard/_join_p2pu.html:12
 msgid "Learn anything, with your peers."
-msgstr ""
+msgstr "다른 사람들과 무엇이든 배워보세요."
 
 #: templates/dashboard/_join_p2pu.html:15 templates/learn/learn.html:65
 msgid ""
@@ -2555,91 +2633,92 @@ msgid ""
 "tasks, assessing individual and group work, and providing constructive "
 "feedback."
 msgstr ""
+"P2PU에서는 특정 주제를 과제를 완료하고 개인 및 그룹 작업을평가하고 건설적인 "
+"피드백을 나누면서다른 사람들과 함께 공부합니다."
 
 #: templates/dashboard/dashboard.html:9
 msgid "Your Dashboard"
-msgstr ""
+msgstr "대시보드"
 
 #: templates/dashboard/dashboard.html:12
 msgid "Activity from your profile"
-msgstr ""
+msgstr "프로필 활동"
 
 #: templates/dashboard/dashboard.html:13
 msgid "Activity from your dashboard"
-msgstr ""
+msgstr "대시보드 활동"
 
 #: templates/dashboard/dashboard.html:32
-#: templates/users/emails/registration_confirm.txt:3
 msgid "Welcome to P2PU!"
-msgstr ""
+msgstr "P2PU에 오신 걸 환영합니다!"
 
 #: templates/dashboard/dashboard.html:35
 msgid "To get started, you should "
-msgstr ""
+msgstr "시작하시려면"
 
 #: templates/dashboard/dashboard.html:35
 msgid ""
 "update your profile</a>. This is a great way to tell people a bit more about "
 "yourself. Then find "
 msgstr ""
+"프로필을 업데이트하세요.</a> 다른 사람들에게 자신에 대해 좀 더 알려줄 수 있는"
+"좋은 방법입니다. 그리고"
 
 #: templates/dashboard/dashboard.html:35
 msgid "people</a> and "
-msgstr ""
+msgstr "관심있는 사람들과 그룹을</a>"
 
 #: templates/dashboard/dashboard.html:35
 msgid "groups</a> that interest you and start following them! You can also "
-msgstr ""
+msgstr "찾아 팔로우하세요! 또"
 
 #: templates/dashboard/dashboard.html:35
 msgid "create new groups</a> and update how often P2PU "
-msgstr ""
+msgstr "새 그룹을 만들고</a> P2PU 소식을"
 
 #: templates/dashboard/dashboard.html:35
 msgid "contacts you</a>."
-msgstr ""
+msgstr "받는 주기를 설정해주세요."
 
 #: templates/dashboard/dashboard.html:55
 msgid "Post a message..."
-msgstr ""
+msgstr "메시지 올리기"
 
 #: templates/dashboard/dashboard.html:64 templates/projects/_wall.html:15
 msgid ""
 "Important message (participants can not turn off notifications for important "
 "messages)."
-msgstr ""
+msgstr "중요한 메시지 (참가자는 중요한 메시지에 대한 알림은 끌 수 없습니다)."
 
 #: templates/dashboard/dashboard.html:76 templates/projects/_wall.html:22
 msgid "Post Message"
-msgstr ""
+msgstr "메시지 올리기"
 
 #: templates/dashboard/setup_profile.html:5
 #: templates/dashboard/setup_profile.html:7
 msgid "Create Profile"
-msgstr ""
+msgstr "프로필 생성하기"
 
 #: templates/dashboard/sidebar.html:25
-#: templates/relationships/emails/new_follower.txt:6
 #: templates/signups/answer_sign_up.html:32 templates/signups/sign_up.html:80
-#: templates/signups/emails/new_signup_answer.txt:6
 msgid "Location:"
-msgstr ""
+msgstr "장소"
 
 #: templates/dashboard/sidebar.html:33
 msgid "Interests"
-msgstr ""
+msgstr "관심사"
 
 #: templates/dashboard/sidebar.html:39 templates/users/_profile_info.html:94
 msgid "View more interested in "
-msgstr ""
+msgstr "다음에 관심있는 사람 더 보기"
 
 #: templates/dashboard/sidebar.html:51
 msgid "Wants To Learn About"
-msgstr ""
+msgstr "다음에 대해 알고 싶습니다."
 
 #: templates/dashboard/sidebar.html:56 templates/users/_profile_info.html:106
 msgid "View more interested in learning more about "
-msgstr ""
+msgstr "다음에 대해 더 알고 싶은 사람 더 보기"
 
 #: templates/dashboard/sidebar.html:72 templates/learn/_course_card.html:33
 #: templates/projects/_project_card.html:33
@@ -2647,83 +2726,83 @@ msgstr ""
 #: templates/schools/school_edit_statistics.html:20
 #: templates/users/_profile_info.html:10 templates/users/_user_card.html:17
 msgid "Followers"
-msgstr ""
+msgstr "팔로워"
 
 #: templates/dashboard/sidebar.html:85 templates/users/_user_card.html:21
 msgid "Following"
-msgstr ""
+msgstr "팔로우합니다"
 
 #: templates/dashboard/sidebar.html:100
 msgid "Learning"
-msgstr ""
+msgstr "배우고 있습니다"
 
 #: templates/dashboard/sidebar.html:129 templates/users/sidebar.html:67
 msgid "(UP)"
-msgstr ""
+msgstr "위"
 
 #: templates/dashboard/sidebar.html:132 templates/users/sidebar.html:70
 msgid "(DOWN)"
-msgstr ""
+msgstr "아래"
 
 #: templates/dashboard/splash.html:7
 msgid "Learning for everyone, by everyone, about almost anything"
-msgstr ""
+msgstr "거의 모든 것에 대해 모두를 위해, 모두에 의해 배우기"
 
 #: templates/dashboard/splash.html:22
 msgid "LEARN"
-msgstr ""
+msgstr "무엇이든"
 
 #: templates/dashboard/splash.html:22
 msgid " ANYTHING"
-msgstr ""
+msgstr "다른 사람들과"
 
 #: templates/dashboard/splash.html:23
 msgid "WITH YOUR "
-msgstr ""
+msgstr "함께"
 
 #: templates/dashboard/splash.html:23
 msgid "PEERS"
-msgstr ""
+msgstr "배우기"
 
 #: templates/dashboard/splash.html:24
 msgid "IT'S "
-msgstr ""
+msgstr "이것은"
 
 #: templates/dashboard/splash.html:24
 msgid "ONLINE"
-msgstr ""
+msgstr "온라인이며"
 
 #: templates/dashboard/splash.html:24
 msgid " AND TOTALLY "
-msgstr ""
+msgstr "완전히"
 
 #: templates/dashboard/splash.html:24
 msgid "FREE."
-msgstr ""
+msgstr "무료입니다."
 
 #: templates/dashboard/splash.html:25
 msgid "At "
-msgstr ""
+msgstr "여기에서는요"
 
 #: templates/dashboard/splash.html:25
 msgid ", people work together to learn a particular topic by completing"
-msgstr ""
+msgstr "사람들이 특정 주제에 대해"
 
 #: templates/dashboard/splash.html:26
 msgid "tasks, assessing individual and group work, and providing constructive"
-msgstr ""
+msgstr "과제를 완료하고 개인 및 그룹 활동을 평가하고 건설적인"
 
 #: templates/dashboard/splash.html:27
 msgid "feedback."
-msgstr ""
+msgstr "피드백을 주고 받으면서 함께 공부합니다."
 
 #: templates/dashboard/splash.html:32
 msgid "Find Course"
-msgstr ""
+msgstr "코스 찾기"
 
 #: templates/dashboard/splash.html:33
 msgid "OR"
-msgstr ""
+msgstr "또는"
 
 #: templates/dashboard/splash.html:34 templates/projects/project_clone.html:34
 #: templates/projects/project_create_overview.html:33
@@ -2731,7 +2810,7 @@ msgstr ""
 #: templates/projects/project_create_tasks.html:32
 #: templates/projects/project_import.html:34
 msgid "Create Course"
-msgstr ""
+msgstr "코스 만들기"
 
 #: templates/dashboard/splash.html:35
 msgid " "
@@ -2739,79 +2818,67 @@ msgstr ""
 
 #: templates/dashboard/splash.html:44
 msgid "Featured Courses"
-msgstr ""
+msgstr "추천 코스"
 
 #: templates/dashboard/splash.html:45
 msgid "These are staff picked courses currently running."
-msgstr ""
+msgstr "다음은 현재 운영중인 P2PU 추천 코스입니다."
 
 #: templates/dashboard/splash.html:71
 msgid "P2PU Blog"
-msgstr ""
+msgstr "P2PU 블로그"
 
 #: templates/dashboard/splash.html:75
 msgid "Subscribe to the Peer 2 Peer University blog"
-msgstr ""
+msgstr "P2PU 블로그를 받아봅니다."
 
 #: templates/dashboard/splash.html:75
 msgid "feed"
-msgstr ""
+msgstr "피드"
 
 #: templates/drumbeat/abuse_reason.html:6
 #: templates/drumbeat/report_abuse.html:5
 #: templates/drumbeat/report_received.html:5
 msgid "Abuse Report Received"
-msgstr ""
+msgstr "콘텐츠 신고 접수"
 
 #: templates/drumbeat/abuse_reason.html:17
 msgid "Why are you reporting this?"
-msgstr ""
+msgstr "신고 이유"
 
 #: templates/drumbeat/abuse_reason.html:21
 msgid "Reason if you selected other."
-msgstr ""
+msgstr "기타를 선택한 경우 이유"
 
 #: templates/drumbeat/abuse_reason.html:25
 #: templates/drumbeat/report_abuse.html:17
 msgid "Report"
-msgstr ""
+msgstr "신고"
 
 #: templates/drumbeat/report_abuse.html:14
 msgid ""
 "Would you like to report this content as objectionable? This can be anything "
 "from suspected spam to offensive content."
 msgstr ""
+"이 콘텐츠를 불쾌한 콘텐츠로 신고하시겠습니까? 스팸 의심 콘텐츠에서부터모욕적"
+"인 콘텐츠까지 무엇이든 될 수 있습니다."
 
 #: templates/drumbeat/report_received.html:12
 msgid "Thank You,"
-msgstr ""
+msgstr "감사합니다."
 
 #: templates/drumbeat/report_received.html:13
 msgid "We have received your report and will investigate further."
-msgstr ""
-
-#: templates/drumbeat/emails/abuse_report.txt:3
-#, python-format
-msgid "%(user)s has reported %(url)s as %(reason)s.'"
-msgstr ""
-
-#: templates/drumbeat/emails/abuse_report.txt:4
-#, python-format
-msgid "More info: %(other)s"
-msgstr ""
-
-#: templates/drumbeat/emails/abuse_report_subject.txt:2
-msgid "Abuse Report"
-msgstr ""
+msgstr "신고가 잘 접수되었습니다. 좀더 조사해보겠습니다."
 
 #: templates/drumbeatmail/base.html:13
 msgid "To"
-msgstr ""
+msgstr "대상"
 
 #: templates/drumbeatmail/base.html:23
 #: templates/projects/contact_organizers.html:17
 msgid "Message"
-msgstr ""
+msgstr "메시지"
 
 #: templates/drumbeatmail/base.html:36
 #: templates/projects/contact_organizers.html:29
@@ -2819,154 +2886,130 @@ msgstr ""
 msgid ""
 "Welcome Robots, ReCaptcha has been disabled for your convenience. Spam at "
 "will."
-msgstr ""
+msgstr "봇이시군요! 저희가 대신 기능을 꺼드렸습니다. 스팸은여기서 해주세요."
 
 #: templates/drumbeatmail/base.html:42 templates/messages/compose.html:8
 #: templates/projects/contact_organizers.html:36
 #: templates/users/forgot_password.html:18
 msgid "Send"
-msgstr ""
+msgstr "보내기"
 
 #: templates/drumbeatmail/compose.html:4
 msgid "Compose Message"
-msgstr ""
+msgstr "메시지 작성"
 
 #: templates/drumbeatmail/compose.html:6
 msgid "New Private Message"
-msgstr ""
+msgstr "새 개인 메시지"
 
 #: templates/drumbeatmail/inbox.html:14
 msgid "New Private Discussion"
-msgstr ""
+msgstr "새 개인 토론"
 
 #: templates/drumbeatmail/inbox.html:26
 msgid "You have no messages"
-msgstr ""
+msgstr "메시지가 없습니다."
 
 #: templates/drumbeatmail/inbox.html:109
 msgid "More"
-msgstr ""
+msgstr "더 보기"
 
 #: templates/drumbeatmail/inbox.html:121
 msgid "All Messages"
-msgstr ""
+msgstr "모든 메시지"
 
 #: templates/drumbeatmail/inbox.html:122
 msgid "Sent"
-msgstr ""
-
-#: templates/drumbeatmail/emails/direct_message.txt:2
-msgid "You have received a new direct message from"
-msgstr ""
-
-#: templates/drumbeatmail/emails/direct_message.txt:6
-msgid "Reply:"
-msgstr ""
-
-#: templates/drumbeatmail/emails/direct_message.txt:8
-#: templates/relationships/emails/new_follower.txt:11
-#: templates/replies/emails/post_comment.txt:12
-#: templates/signups/emails/new_signup_answer.txt:21
-msgid "Sincerely,"
-msgstr ""
-
-#: templates/drumbeatmail/emails/direct_message.txt:11
-#: templates/relationships/emails/new_follower.txt:14
-msgid "Manage your subscriptions:"
-msgstr ""
-
-#: templates/drumbeatmail/emails/direct_message_subject.txt:2
-msgid "New Message from"
-msgstr ""
+msgstr "보낸 메시지"
 
 #: templates/learn/_course_card.html:20
 #: templates/projects/_project_card.html:20
 msgid "Time to Finish"
-msgstr ""
+msgstr "완료까지 남은 기간"
 
 #: templates/learn/_course_card.html:21
 #: templates/projects/_project_card.html:21 templates/projects/sidebar.html:62
 msgid "hrs"
-msgstr ""
+msgstr "hrs"
 
 #: templates/learn/_course_card.html:25
 #: templates/projects/_project_card.html:25
 msgid "Peers"
-msgstr ""
+msgstr "다른 사용자들"
 
 #: templates/learn/_learn_filters.html:6 templates/users/_profile_info.html:26
 #: templates/users/_profile_info.html:62
 msgid "View All"
-msgstr ""
+msgstr "모두 보기"
 
 #: templates/learn/_learn_filters.html:10 templates/schools/home.html:72
 #: templates/schools/school_edit.html:23
 #: templates/schools/school_edit_featured.html:8
 #: templates/users/user_list.html:55
 msgid "Featured"
-msgstr ""
+msgstr "추천"
 
 #: templates/learn/_learn_filters.html:14
 msgid "Community Picks"
-msgstr ""
+msgstr "커뮤니티 인기"
 
 #: templates/learn/_learn_filters.html:17
 msgid "Staff Favorites"
-msgstr ""
+msgstr "P2PU 팀 추천"
 
 #: templates/learn/_learn_filters.html:21
 msgid "Fresh Additions"
-msgstr ""
+msgstr "신규 추가"
 
 #: templates/learn/_learn_filters.html:25 templates/schools/menu.html:4
 msgid "Schools"
-msgstr ""
+msgstr "학교"
 
 #: templates/learn/_learn_filters.html:56
 msgid "More Tags"
-msgstr ""
+msgstr "더 많은 태그보기"
 
 #: templates/learn/_learn_filters.html:69
 msgid "Browse All Tags"
-msgstr ""
+msgstr "모든 태그 보기"
 
 #: templates/learn/_learn_filters.html:77
 msgid "CLEAR TAGS"
-msgstr ""
+msgstr "태그 삭제"
 
 #: templates/learn/_learn_filters.html:81
 #: templates/projects/project_create_overview.html:113
 #: templates/projects/project_edit_summary.html:61
 msgid "Language"
-msgstr ""
+msgstr "언어"
 
 #: templates/learn/_learn_filters.html:97
 msgid "Community Reviewed"
-msgstr ""
+msgstr "리뷰한 커뮤니티"
 
 #: templates/learn/_learn_filters.html:101
 msgid "Filter"
-msgstr ""
+msgstr "필터"
 
 #: templates/learn/_learn_header.html:4
 msgid "Featured - Community Picks"
-msgstr ""
+msgstr "추천 - 커뮤니티 인기"
 
 #: templates/learn/_learn_header.html:6
 msgid "Featured - Showcase"
-msgstr ""
+msgstr "추천 - 쇼케이스"
 
 #: templates/learn/_learn_header.html:8
 msgid "Featured - Fresh Additions"
-msgstr ""
+msgstr "추천 - 신규 추가"
 
 #: templates/learn/_learn_header.html:14
 msgid "Tags - "
-msgstr ""
+msgstr "태그 - "
 
 #: templates/learn/_learn_header.html:16
 msgid "All"
-msgstr ""
+msgstr "모두"
 
 #: templates/learn/_learn_projects.html:33
 msgid ""
@@ -2976,30 +3019,35 @@ msgid ""
 "box at the top of the page.\n"
 "      "
 msgstr ""
+"\n"
+"        코스가 더이상 없습니다. 모든 언어에서 찾거나페이지 상단의 검색상자에"
+"서 키워드로코스를 검색해보세요.\n"
+"      "
 
 #: templates/learn/add_course.html:7 templates/learn/add_course.html.py:10
 msgid "Add course"
-msgstr ""
+msgstr "코스 추가하기"
 
 #: templates/learn/add_course.html:26
 #: templates/projects/project_edit_links.html:15
 #: templates/users/profile_edit_links.html:51
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: templates/learn/add_course.html:27
 msgid ""
 "URL for the course, ex. 'http://mechanicalmooc.org/gentle-introduction-to-"
 "python'"
 msgstr ""
+"코스의 URL - 예) http://mechanicalmooc.org/gentle-introduction-to-python'"
 
 #: templates/learn/add_course.html:29
 msgid "Image URL"
-msgstr ""
+msgstr "이미지 URL"
 
 #: templates/learn/add_course.html:30
 msgid "URL for the course image, ex. 'http://so.me/url/image.png'"
-msgstr ""
+msgstr "코스 이미지 URL - 예) http://so.me/url/image.png"
 
 #: templates/learn/add_course.html:32
 #: templates/projects/project_edit_links.html:7
@@ -3010,95 +3058,71 @@ msgstr ""
 #: templates/schools/school_edit_organizers.html:19
 #: templates/users/profile_edit_links.html:41
 msgid "Add"
-msgstr ""
+msgstr "추가"
 
 #: templates/learn/learn.html:30
 msgid ""
 "Browse great courses available on P2PU by exploring featured ones, schools, "
 "and tags."
-msgstr ""
+msgstr "추천 콘텐츠, 학교, 태그 등을 이용해 P2PU의 다른 강좌를 찾아보세요"
 
 #: templates/learn/learn.html:39
 msgid "Show More Results"
-msgstr ""
+msgstr "결과 더 보기"
 
 #: templates/learn/learn.html:44
 msgid "Didn't find yours? How about creating one?"
-msgstr ""
+msgstr "원하는 강좌가 없나요? 새로 만들어보세요"
 
 #: templates/learn/learn.html:47
 msgid "Create a Course"
-msgstr ""
+msgstr "강좌 만들기"
 
 #: templates/messages/compose.html:4 templates/messages/inbox.html:40
 msgid "New Message"
-msgstr ""
+msgstr "새 메세지"
 
 #: templates/messages/inbox.html:4
 msgid "Your Messages"
-msgstr ""
+msgstr "메세지"
 
 #: templates/messages/inbox.html:6
 msgid "You have no messages in your inbox"
-msgstr ""
+msgstr "받은 메세지가 없습니다."
 
 #: templates/messages/inbox.html:11
 msgid "From"
-msgstr ""
+msgstr "From"
 
 #: templates/messages/inbox.html:14
 msgid "Action"
-msgstr ""
+msgstr "실행"
 
 #: templates/messages/inbox.html:29
 msgid "DATETIME_FORMAT"
-msgstr ""
+msgstr "DATETIME_FORMAT"
 
 #: templates/messages/inbox.html:32
 msgid "delete"
-msgstr ""
-
-#: templates/notifications/emails/response_bounce.txt:1
-msgid ""
-"We love your enthusiasm for learning & for P2PU. Keep it up!\n"
-"\n"
-"But sometimes speedy responses are a sign that someone has an auto-responder "
-"on. And you wouldn't a gazillion of those in your inbox :)\n"
-"\n"
-"Sorry - we're going to ask you to send your message again. Just in case."
-msgstr ""
-
-#: templates/notifications/emails/response_bounce.txt:7
-msgid "This was the message that we received:"
-msgstr ""
-
-#: templates/notifications/emails/response_bounce.txt:10
-msgid ""
-"Cheerio,\n"
-"P2PU team"
-msgstr ""
-
-#: templates/notifications/emails/response_bounce_subject.txt:1
-msgid "P2PU calling. Are we getting your machine?"
-msgstr ""
+msgstr "삭제"
 
 #: templates/oauthprovider/authorize.html:5
 msgid "Authorize"
-msgstr ""
+msgstr "권한 주기"
 
 #: templates/oauthprovider/authorize.html:10
 #, python-format
 msgid "We're going to connect you with %(client_description)s. Ok with you?"
-msgstr ""
+msgstr "%(client_description)s 와 연결할까요?"
 
 #: templates/oauthprovider/authorize.html:14
 msgid "Yes"
-msgstr ""
+msgstr "예"
 
 #: templates/pages/get_involved_page.html:14
 #: templates/pages/get_involved_page.html:20
 msgid "Get Involved."
-msgstr ""
+msgstr "참여해보세요"
 
 #: templates/pages/get_involved_page.html:24
 msgid ""
@@ -3106,40 +3130,43 @@ msgid ""
 "excited by the idea of finding new ways to learn online. There are several "
 "different ways you can get involved in the P2PU Community."
 msgstr ""
+"P2PU 커뮤니티에 오신 것을 환영합니다! P2PU 커뮤니티는 온라인에서 학습하는 다"
+"양한 방법을 탐구하는 팀입니다. P2PU 커뮤니티에 참여하시는 방법에는 이런 것이 "
+"있어요."
 
 #: templates/pages/get_involved_page.html:27
 msgid "Ways to get involved"
-msgstr ""
+msgstr "참여 방법"
 
 #: templates/pages/get_involved_page.html:29
 #: templates/pages/get_involved_page.html:40
 msgid "Create a course or study group"
-msgstr ""
+msgstr "강좌나 스터디그룹 만들기"
 
 #: templates/pages/get_involved_page.html:30
 #: templates/pages/get_involved_page.html:45
 msgid "Stay up-to-date with P2PU"
-msgstr ""
+msgstr "P2PU 업데이트 받아보기"
 
 #: templates/pages/get_involved_page.html:31
 #: templates/pages/get_involved_page.html:50
 msgid "Join community discussions"
-msgstr ""
+msgstr "커뮤니티 토론에 참여하기"
 
 #: templates/pages/get_involved_page.html:32
 #: templates/pages/get_involved_page.html:55
 msgid "Help us improve P2PU"
-msgstr ""
+msgstr "P2PU 개선에 도움 주기"
 
 #: templates/pages/get_involved_page.html:33
 #: templates/pages/get_involved_page.html:60
 msgid "Donate to P2PU"
-msgstr ""
+msgstr "P2PU에 기부하기"
 
 #: templates/pages/get_involved_page.html:34
 #: templates/pages/get_involved_page.html:65
 msgid "Join or start a Meetup"
-msgstr ""
+msgstr "번개에 참여하거나 새로 만들기"
 
 #: templates/pages/get_involved_page.html:41
 msgid ""
@@ -3148,6 +3175,10 @@ msgid ""
 "all the help you need to get started on <a href=\"http://help.p2pu.org\" "
 "target=\"_blank\">help.p2pu.org</a>."
 msgstr ""
+"P2PU는 개인들이 서로 쉽게 강좌를 개설하고 배워볼 수 있게 만들어져 있습니다. "
+"원하는 그룹스터디 주제가 없으면 새로운 그룹을 만들어보는 건 어때요? 도움이 필"
+"요하시면 <a href=\"http://help.p2pu.org\" target=\"_blank\">help.p2pu.org</a>"
+"를 참고하세요."
 
 #: templates/pages/get_involved_page.html:42
 #: templates/pages/get_involved_page.html:47
@@ -3156,20 +3187,23 @@ msgstr ""
 #: templates/pages/get_involved_page.html:62
 #: templates/pages/get_involved_page.html:67
 msgid "Start today &#187;"
-msgstr ""
+msgstr "지금 시작하기 &#187;"
 
 #: templates/pages/get_involved_page.html:46
 msgid ""
 "You can sign up for our announcements list. This is a very low-traffic "
 "mailing list, which will keep you up-to-date with important P2PU news, like "
 "when new courses are starting."
-msgstr ""
+msgstr "P2PU의 공지를 받아보세요.강좌 시작 날짜 같은 중요한 소식을 알려드려요."
 
 #: templates/pages/get_involved_page.html:51
 msgid ""
 "The main P2PU discussions happen on the p2pu-community mailing list. It’s a "
 "good forum for meeting the P2PU community and ask any questions you may have."
 msgstr ""
+"P2PU 커뮤니티는 대부분의 토론을 P2PU 커뮤니티 메일링 리스트 이메일에서 나눕니"
+"다. 이메일 리스트에 가입하시면 P2PU 커뮤니티 멤버들과 대화할 수 있어요. 궁금"
+"한 게 있으면 물어보세요!"
 
 #: templates/pages/get_involved_page.html:56
 msgid ""
@@ -3177,6 +3211,9 @@ msgid ""
 "Introduction to Contributing to Lernanta study group, or view the developer "
 "documentation on github."
 msgstr ""
+"개발자메일링 리스트 이메일을 받아보세요. 버그/태스크 트랙커 활동에 참여하거"
+"나 Introduction to Contributing to Lernanta 스터디 그룹에 가입해보세요. "
+"github에서 개발자 문서를 확인해 보세요."
 
 #: templates/pages/get_involved_page.html:61
 msgid ""
@@ -3184,12 +3221,17 @@ msgid ""
 "donations go directly to P2PU and help us continue our mission to enable "
 "high-quality low-cost education opportunities!"
 msgstr ""
+"P2PU의 파트너인 모질라 재단(Mozilla Foundation)을 통해 P2PU에 기부해주세요. "
+"모든 기부금은 P2PU에게 바로 전달되며 P2PU가 온라인 교육 미션을 지속적으로 펼"
+"쳐나갈 수 있게 도와줍니다!"
 
 #: templates/pages/get_involved_page.html:66
 msgid ""
 "There are P2PU Meetups happening all over the world, come and join us or "
 "organize one of your own."
 msgstr ""
+"전세계에서 일어나고 있는 P2PU 번개 모임입니다. 여러분도 모임에 참여하거나 직"
+"접 모임을 만들어보세요. "
 
 #: templates/pages/jobs_page.html:17
 msgid ""
@@ -3197,177 +3239,184 @@ msgid ""
 "\"highlight3\">Learn anything,</span> <span class=\"highlight2\">while you "
 "work.</span>"
 msgstr ""
+"P2PU <span class=\"highlight4\">에서는 함께 일할 사람을 찾습니다. </span> "
+"<span class=\"highlight3\">일하면서 </span> <span class=\"highlight2\">동시"
+"에 배울 기회. </span>"
 
 #: templates/pages/jobs_page.html:20
 msgid "Open Positions"
-msgstr ""
+msgstr "구인 자리"
 
 #: templates/pages/jobs_page.html:22
 msgid "Staff"
-msgstr ""
+msgstr "스태프"
 
 #: templates/pages/jobs_page.html:25 templates/pages/jobs_page.html.py:30
 msgid "Django Developer"
-msgstr ""
+msgstr "Django 개발자"
 
 #: templates/pages/jobs_page.html:27 templates/pages/jobs_page.html.py:32
 #: templates/pages/jobs_page.html:42 templates/pages/jobs_page.html.py:52
 msgid "GO!"
-msgstr ""
+msgstr "GO!"
 
 #: templates/pages/jobs_page.html:37
 msgid "Intern"
-msgstr ""
+msgstr "인턴"
 
 #: templates/pages/jobs_page.html:40
 msgid "Marketing Intern"
-msgstr ""
+msgstr "마케팅 인턴"
 
 #: templates/pages/jobs_page.html:47
 msgid "Volunteer"
-msgstr ""
+msgstr "자원봉사자"
 
 #: templates/pages/jobs_page.html:50
 msgid "Graphic Designer"
-msgstr ""
+msgstr "그래픽 디자이너"
 
 #: templates/pages/jobs_page.html:58
 msgid "Why work at p2pu?"
-msgstr ""
+msgstr "P2PU에서 일하면 좋은 점은?"
 
 #: templates/pages/jobs_page.html:62
 msgid "Benefits and Percks"
-msgstr ""
+msgstr "각종 복리후생"
 
 #: templates/pages/jobs_page.html:67
 msgid "You can work from anywhere, P2PU is global"
-msgstr ""
+msgstr "P2PU는 글로벌해요. 세계 어디에서나 일할 수 있습니다."
 
 #: templates/pages/jobs_page.html:68
 msgid "Meet our Team"
-msgstr ""
+msgstr "P2PU 팀"
 
 #: templates/pagination/pagination_links.html:3
 msgid "previous"
-msgstr ""
+msgstr "앞으로"
 
 #: templates/pagination/pagination_links.html:4
 msgid "next"
-msgstr ""
+msgstr "다음으로"
 
 #: templates/projects/_project_edit_image.html:1
 #: templates/projects/project_create_overview.html:143
 msgid "Cover Image"
-msgstr ""
+msgstr "Cover Image"
 
 #: templates/projects/_project_edit_image.html:3
 msgid ""
 "Upload an image file from your computer. This image is shown in search "
 "results and on the listing page."
 msgstr ""
+"컴퓨터에서 이미지 파일을 업로드하세요. 업로드한 이미지는 검색 리스트 페이지에"
+"서 결과로 보여집니다."
 
 #: templates/projects/_project_edit_image.html:17
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
 "243x150 pixels"
 msgstr ""
+"파일 포맷: JPG, GIF, PNG 만 가능<br/> 파일 최대 사이즈: 700k <br/> 이미지 사"
+"이즈: 243x150 픽셀"
 
 #: templates/projects/_task_list.html:6
 #: templates/projects/_tasks_list_wall.html:9
 #: templates/projects/sidebar.html:230
 msgid "Tasks"
-msgstr ""
+msgstr "과제"
 
 #: templates/projects/_task_list.html:22
 msgid "new"
-msgstr ""
+msgstr "새 과제"
 
 #: templates/projects/_task_list.html:25
 msgid "comment"
 msgid_plural "comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "댓글"
+msgstr[1] "댓글"
 
 #: templates/projects/_task_list.html:36
 msgid "View and Discuss"
-msgstr ""
+msgstr "보기/토론하기"
 
 #: templates/projects/_task_list.html:39
 #: templates/projects/project_edit.html:35
 msgid "View"
-msgstr ""
+msgstr "보기"
 
 #: templates/projects/_task_list.html:45 templates/projects/sidebar.html:253
 msgid "No tasks have been added."
-msgstr ""
+msgstr "추가된 과제가 없습니다."
 
 #: templates/projects/_task_list.html:49
 msgid "Displaying"
-msgstr ""
+msgstr "디스플레잉"
 
 #: templates/projects/_task_list.html:49
 msgid "of"
-msgstr ""
+msgstr "오브"
 
 #: templates/projects/_task_list.html:49
 msgid "total tasks"
-msgstr ""
+msgstr "모든 과제"
 
 #: templates/projects/_task_list.html:50
 msgid "See All Tasks"
-msgstr ""
+msgstr "과제 모두 보기"
 
 #: templates/projects/_tasks_completed_msg.html:3
 msgid "Congratulations!"
-msgstr ""
+msgstr "축하합니다!"
 
 #: templates/projects/_tasks_completed_msg.html:4
 msgid "Good job completing all the tasks."
-msgstr ""
+msgstr "모든 과제를 완료했습니다. 수고하셨습니다!"
 
 #: templates/projects/_tasks_completed_msg.html:8
 msgid "Badges Awarded"
-msgstr ""
+msgstr "받은 뱃지"
 
 #: templates/projects/_tasks_completed_msg.html:26
 msgid "Earn More Badges"
-msgstr ""
+msgstr "뱃지 더 받기"
 
 #: templates/projects/_tasks_completed_msg.html:35
 msgid "Next Challenges"
-msgstr ""
+msgstr "다음 도전 과제"
 
 #: templates/projects/_tasks_completed_msg.html:47
 msgid "Help Others with this Challenge"
-msgstr ""
+msgstr "이 과제에 도전하는 다른 사람들 도와주기"
 
 #: templates/projects/_tasks_completed_msg.html:50
 msgid "Adopt this Challenge"
-msgstr ""
+msgstr "이 도전과제 어돕트하기"
 
 #: templates/projects/_tasks_list_wall.html:10
 msgid "Discussions"
-msgstr ""
+msgstr "토론"
 
 #: templates/projects/_tasks_list_wall.html:15
 msgid "Completed"
-msgstr ""
+msgstr "완료"
 
 #: templates/projects/_tasks_list_wall.html:22
 msgid "Badges you can earn in this challenge:"
-msgstr ""
+msgstr "이 도전 과제에서 받을 수 있는 뱃지"
 
 #: templates/projects/_user_list.html:6
 msgid "See All"
-msgstr ""
+msgstr "모두 보기"
 
 #: templates/projects/_user_list.html:24
 msgid "Peers who have offered their help"
-msgstr ""
+msgstr "우리가 도와줄게요"
 
 #: templates/projects/_user_list.html:58
 msgid "Peers taking this challenge"
-msgstr ""
+msgstr "이 과제에 도전 중인 사람들"
 
 #: templates/projects/_user_list.html:71
 #: templates/projects/project_edit.html:43
@@ -3377,39 +3426,39 @@ msgstr ""
 #: templates/schools/projectset_home.html:24
 #: templates/schools/school_edit_statistics.html:19
 msgid "Participants"
-msgstr ""
+msgstr "참여자"
 
 #: templates/projects/_user_list.html:91
 msgid "Peers who have completed this challenge"
-msgstr ""
+msgstr "이 과제를 완료한 사람들"
 
 #: templates/projects/_user_list.html:123
 msgid "View all"
-msgstr ""
+msgstr "모두 보기"
 
 #: templates/projects/_wall.html:11
 msgid "Post a message"
-msgstr ""
+msgstr "메세지 쓰기"
 
 #: templates/projects/contact_organizers.html:6
 msgid "Contact Organizers of "
-msgstr ""
+msgstr "운영자에게 연락하기"
 
 #: templates/projects/detailed_description_initial_content.html:4
 #, python-format
 msgid "Please fill out the  %(kind)s's full description."
-msgstr ""
+msgstr "여기에 %(kind)s의 설명을 적으세요."
 
 #: templates/projects/detailed_description_initial_content.html:4
 msgid "In this page you could:"
-msgstr ""
+msgstr "이 페이지에서: "
 
 #: templates/projects/detailed_description_initial_content.html:7
 #, python-format
 msgid ""
 "Describe the purpose of the %(kind)s and the learning goals for the tasks "
 "within."
-msgstr ""
+msgstr "%(kind)s의 목적과 과제의 학습 목표를 설명하세요. "
 
 #: templates/projects/detailed_description_initial_content.html:8
 #, python-format
@@ -3418,6 +3467,9 @@ msgid ""
 "topic? What do you hope to achieve by organizing this  %(kind)s? Are you an "
 "expert, enthusiastic or a novice?"
 msgstr ""
+"%(kind)s에서 당신의 역할을 설명하세요. 이 주제에 관심 있는 이유는 무엇인가"
+"요? 이 %(kind)s를 관리하면서 얻고자 하는 것은 무엇인가요? 당신의 실력은 초"
+"급, 중급, 고급 중 어떤 것인가요?"
 
 #: templates/projects/detailed_description_initial_content.html:9
 #, python-format
@@ -3427,6 +3479,9 @@ msgid ""
 "work, and the length of time the participants can expect to work together (a "
 "few days, a few weeks, or forever)."
 msgstr ""
+"%(kind)s를 시작하기 전에 선행되어야 하는 지식이나 스킬을 쓰세요. 시작 목표 날"
+"짜, 대략적인 진행 속도, 중간 제출 기한, 과제량, 걸리는 시간 등을 쓰세요. (며"
+"칠, 몇주, 기한 없음 등)"
 
 #: templates/projects/detailed_description_initial_content.html:10
 #, python-format
@@ -3436,83 +3491,88 @@ msgid ""
 "the creation of tasks and assessing each others\\' contributions? What will "
 "the final task comprise?"
 msgstr ""
+"다른 사람들이 %(kind)s에 참여할 때 필요할만한 다른 정보를 입력하세요. 참여자"
+"들이 과제를 만들고 서로의\\' 기여를 평가할 수 있는 방법엔 무엇이 있을까요? 마"
+"지막 과제가 해결할 수 있는 것에는 무엇이 있을까요?"
 
 #: templates/projects/imported_detailed_description.html:3
 #: templates/projects/project_edit.html:39
 #: templates/schools/school_edit.html:16
 msgid "Summary"
-msgstr ""
+msgstr "요약"
 
 #: templates/projects/imported_detailed_description.html:9
 msgid "Learning Objectives"
-msgstr ""
+msgstr "배우고 있는 것"
 
 #: templates/projects/project.html:21 templates/projects/sidebar.html:258
 msgid "New Task"
-msgstr ""
+msgstr "새 과제"
 
 #: templates/projects/project.html:22 templates/projects/project_edit.html:34
 msgid "Admin"
-msgstr ""
+msgstr "운영자"
 
 #: templates/projects/project.html:44
 msgid "Activity Wall"
-msgstr ""
+msgstr "활동 담벼락"
 
 #: templates/projects/project_admin_metrics.html:12
 msgid "Organizer Quick View"
-msgstr ""
+msgstr "간략한 관리자 소개 보기"
 
 #: templates/projects/project_admin_metrics.html:14
 msgid "export data"
-msgstr ""
+msgstr "데이터를 다른 곳으로 내보내기"
 
 #: templates/projects/project_admin_metrics.html:16
 msgid "This table shows the overview of participant data. "
-msgstr ""
+msgstr "이 표는 참여자 데이터 개요를 보여줍니다. "
 
 #: templates/projects/project_admin_metrics.html:17
 msgid ""
 "To see follower data or non-loggedin user data, use export for a <acronym "
 "title=\"Comma Separated Values\">CSV</acronym> file."
 msgstr ""
+"팔로워 데이터 혹은 비로그인 사용자 데이터를 보시려면, <acronym title=\"Comma "
+"Separated Values\">CSV</acronym> 파일을 내보내기 해보세요."
 
 #: templates/projects/project_admin_metrics.html:23
 #: templates/projects/project_admin_metrics.html:34
 msgid "Participant"
-msgstr ""
+msgstr "참여자"
 
 #: templates/projects/project_admin_metrics.html:24
 #: templates/projects/project_admin_metrics.html:35
 msgid "Last Active Date"
-msgstr ""
+msgstr "지난 번 활동 날짜"
 
 #: templates/projects/project_admin_metrics.html:26
 #: templates/projects/project_admin_metrics.html:37
 msgid "Task Edits"
-msgstr ""
+msgstr "과제 편집"
 
 #: templates/projects/project_admin_metrics.html:27
 #: templates/projects/project_admin_metrics.html:38
 msgid "Time on Course Pages"
-msgstr ""
+msgstr "강좌 페이지 시간"
 
 #: templates/projects/project_admin_metrics.html:45
 msgid ""
 "The information about course page visits is not available on the same day."
-msgstr ""
+msgstr "강좌 페이지 방문 정보는 당일날은 반영되지 않습니다."
 
 #: templates/projects/project_admin_metrics.html:46
 msgid "Last date the user visited a course page."
-msgstr ""
+msgstr "지난 번 이 사용자가 강좌 페이지를 방문한 날"
 
 #: templates/projects/project_admin_metrics.html:47
 msgid "Total includes comments on wall and task pages."
-msgstr ""
+msgstr "담벼락과 과제 페이지 댓글 모두 보기"
 
 #: templates/projects/project_admin_metrics.html:48
 msgid "Total includes edits to the full description and task pages."
-msgstr ""
+msgstr "전체 설명과 과제 페이지 편집 모두 보기"
 
 #: templates/projects/project_admin_metrics.html:49
 msgid ""
@@ -3521,13 +3581,16 @@ msgid ""
 "default to one minute when the user does not access another page in an "
 "interval of one hour."
 msgstr ""
+"이 강좌의 페이지에서 보낸 전체 시간 (분). 대략적인 시간은 동일 세션에서 본 연"
+"속 페이지의 타임스탬프를 바탕으로 계산 되었습니다. 사용자가 한 시간 안에 다"
+"른 페이지에 접속하지 않았을 때는 기본으로 1분으로 계산합니다. "
 
 #: templates/projects/project_admin_metrics.html:50
 msgid ""
 "The data in the csv file is more detailed and does not add the one minute "
 "estimates to the time on page so you can choose another constant to give "
 "weight to these page visits."
-msgstr ""
+msgstr "csv 파일의 데이터가 기본 1분을 계산하지 않아 더 자세합니다. "
 
 #: templates/projects/project_clone.html:39
 #: templates/projects/project_create_overview.html:38
@@ -3535,25 +3598,25 @@ msgstr ""
 #: templates/projects/project_create_tasks.html:37
 #: templates/projects/project_import.html:39
 msgid "Step 1: Create Course"
-msgstr ""
+msgstr "Step 1: 강좌 만들기"
 
 #: templates/projects/project_clone.html:44
 #: templates/projects/project_clone.html:61
 #: templates/projects/project_create_overview.html:46
 #: templates/projects/project_import.html:44
 msgid "Clone Existing"
-msgstr ""
+msgstr "존재하는 복제본"
 
 #: templates/projects/project_clone.html:48
 #: templates/projects/project_create_overview.html:50
 #: templates/projects/project_import.html:47
 msgid "Import from old site"
-msgstr ""
+msgstr "옛날 사이트에서 가져오기"
 
 #: templates/projects/project_clone.html:52
 #: templates/projects/project_import.html:51
 msgid "Step 2: Update Tasks"
-msgstr ""
+msgstr "Step 2: 과제 업데이트하기"
 
 #: templates/projects/project_clone.html:55
 #: templates/projects/project_create_overview.html:58
@@ -3562,30 +3625,32 @@ msgstr ""
 #: templates/projects/project_create_tasks.html:44
 #: templates/projects/project_import.html:54
 msgid "Step 3: Review and Publish"
-msgstr ""
+msgstr "Step 3: 리뷰하고 펴내기"
 
 #: templates/projects/project_clone.html:62
 msgid ""
 "Create a new study group, course ... based on an existing one. Note that if "
 "you start typing the matching suggestions will be displayed."
 msgstr ""
+"현재 있는 스터디그룹이나 강좌 활용해서 새 스터디그룹이나 강좌 만들기. 활용 콘"
+"텐츠는 관련 추천에 표시 됩니다. "
 
 #: templates/projects/project_clone.html:67
 #: templates/projects/project_edit_next_steps.html:12
 #: templates/schools/school_edit_summary.html:16
 msgid "Short Name"
-msgstr ""
+msgstr "짧은 이름"
 
 #: templates/projects/project_clone.html:74
 msgid "Clone"
-msgstr ""
+msgstr "복제"
 
 #: templates/projects/project_create_overview.html:55
 #: templates/projects/project_create_overview.html:62
 #: templates/projects/project_create_review.html:39
 #: templates/projects/project_create_tasks.html:40
 msgid "Step 2: Add Tasks"
-msgstr ""
+msgstr "Step 2: 과제 추가하기"
 
 #: templates/projects/project_create_overview.html:79
 #, python-format
@@ -3595,10 +3660,13 @@ msgid ""
 "the process and articles on our <a href=\"http://help.p2pu.org/kb\" >help "
 "desk</a>."
 msgstr ""
+"강좌 디자인에 도움이 필요하세요? <a href=\"%(challenge_url)s\" target="
+"\"_blank\">이 강좌</a>와 <a href=\"http://help.p2pu.org/kb\" >사용자 지원팀</"
+"a>에서 도움을 받으세요."
 
 #: templates/projects/project_create_overview.html:85
 msgid "Just doing a test run? Check here to create a test course."
-msgstr ""
+msgstr "임시로 테스트 중이세요? 여기에서 테스트 강좌를 만들어보세요."
 
 #: templates/projects/project_create_overview.html:87
 #: templates/projects/project_edit_summary.html:18
@@ -3607,33 +3675,34 @@ msgid ""
 "updates or notification emails for other users."
 msgstr ""
 
+# 다이앤2
 #: templates/projects/project_create_overview.html:96
 #: templates/projects/project_edit_summary.html:33
 msgid "Tagline"
-msgstr ""
+msgstr "소제목"
 
 #: templates/projects/project_create_overview.html:102
 msgid "How many hours will this course take to complete?"
-msgstr ""
+msgstr "이 강좌를 완료하는 데 걸리는 시간은?"
 
 #: templates/projects/project_create_overview.html:126
 msgid "Course style"
-msgstr ""
+msgstr "강좌 스타일"
 
 #: templates/projects/project_create_overview.html:127
 #: templates/projects/project_edit_summary.html:80
 msgid "What kind of learning environment do you want to create?"
-msgstr ""
+msgstr "어떤 종류의 학습 환경을 만들고 싶으세요?"
 
 #: templates/projects/project_create_overview.html:131
 #: templates/projects/project_edit_summary.html:84
 msgid "Or make up your own term."
-msgstr ""
+msgstr "방침을 직접 만들어보세요."
 
 #: templates/projects/project_create_overview.html:133
 #: templates/projects/project_edit_summary.html:86
 msgid "Term"
-msgstr ""
+msgstr "방침"
 
 #: templates/projects/project_create_overview.html:148
 msgid ""
@@ -3641,26 +3710,33 @@ msgid ""
 "Select and upload an image.<br/>We only support JPG, GIF and PNG images<br/"
 ">The image should measure 243x150 pixels<br/>The maximum size is 700k"
 msgstr ""
+"커버 이미지는 강좌의 책표지나 마찬가지입니다. 현명하게 골라주세요 :) 이미지"
+"를 선택하고 올려보세요.<br/>JPG, GIF, PNG 형식을 지원합니다.<br/>이미지 사이"
+"즈는 243x150 픽셀, <br/>파일 사이즈는 최대 700k 까지 가능합니다. "
 
 #: templates/projects/project_create_overview.html:156
 msgid "Go to step 2"
-msgstr ""
+msgstr "Step 2로 이동"
 
 #: templates/projects/project_create_review.html:48
 msgid "Review your course"
-msgstr ""
+msgstr "강좌 다시 보기"
 
 #: templates/projects/project_create_review.html:50
 msgid ""
 "This is what your project will look like to the world when it is published. "
 "Take a second to double check your course name, tagline, image and tags."
 msgstr ""
+"강좌 미리보기입니다. 출판 후에는 이렇게 보일 거예요.강좌명, 소제목, 이미지, "
+"태그를 다시 한 번 확인해보세요."
 
 #: templates/projects/project_create_review.html:55
 msgid ""
 "Join the <a href=\"https://p2pu.org/groups/make-a-course/\">P2PU Course "
 "Design Group</a> to get feedback on your course!"
 msgstr ""
+"<a href=\"https://p2pu.org/groups/make-a-course/\">P2PU 강좌 디자인 그룹</a>"
+"에 참여해보세요. 강좌에 대한 피드백을 받을 수 있어요. "
 
 #: templates/projects/project_create_review.html:57
 msgid ""
@@ -3668,6 +3744,8 @@ msgid ""
 "badges and how to add them to your challenge, see <a href=\"https://p2pu.org/"
 "groups/how-do-i-make-a-badge/\">this</a> course!"
 msgstr ""
+"강좌에서 수여하는 뱃지를 추가하고 싶나요? 뱃지에 대한 정보는 <a href="
+"\"https://p2pu.org/groups/how-do-i-make-a-badge/\">여기를</a> 확인하세요."
 
 #: templates/projects/project_create_review.html:59
 msgid ""
@@ -3676,59 +3754,62 @@ msgid ""
 "with your course."
 msgstr ""
 
+# 다이앤3
 #: templates/projects/project_create_review.html:61
 msgid ""
 "Your course will remain a draft until you uncheck the 'Under Development' "
 "checkbox in the admin interface of your course."
 msgstr ""
+"강좌는 관리 인터페이스의 '개설 중' 체크박스를 해제하기 전까지는 드래프트 상태"
+"로 존재합니다. "
 
 #: templates/projects/project_create_review.html:63
 msgid "Finish"
-msgstr ""
+msgstr "완료"
 
 #: templates/projects/project_create_tasks.html:8
 #: templates/projects/project_create_tasks.html:52
 msgid "Create tasks"
-msgstr ""
+msgstr "과제 만들기"
 
 #: templates/projects/project_create_tasks.html:61
 msgid "Up"
-msgstr ""
+msgstr "Up"
 
 #: templates/projects/project_create_tasks.html:62
 msgid "Down"
-msgstr ""
+msgstr "Down"
 
 #: templates/projects/project_create_tasks.html:72
 msgid "Add Task"
-msgstr ""
+msgstr "과제 추가하기"
 
 #: templates/projects/project_create_tasks.html:73
 msgid "Go to step 3"
-msgstr ""
+msgstr "Step3로 이동"
 
 #: templates/projects/project_edit.html:40
 msgid "Image"
-msgstr ""
+msgstr "이미지"
 
 #: templates/projects/project_edit.html:41
 #: templates/projects/project_edit_status.html:10
 msgid "Status &amp; Duration"
-msgstr ""
+msgstr "상태 &amp; 시간"
 
 #: templates/projects/project_edit.html:41
 #: templates/projects/project_edit_status.html:12
 msgid "Status &amp; Dates"
-msgstr ""
+msgstr "상태 &amp; 날짜"
 
 #: templates/projects/project_edit.html:42 templates/projects/sidebar.html:173
 msgid "Signup"
-msgstr ""
+msgstr "회원가입"
 
 #: templates/projects/project_edit.html:44
 #: templates/projects/project_edit_next_steps.html:7
 msgid "Associated Courses"
-msgstr ""
+msgstr "관련 강좌"
 
 #: templates/projects/project_edit.html:45
 #: templates/projects/project_edit_links_base.html:7
@@ -3736,11 +3817,11 @@ msgstr ""
 #: templates/users/profile_edit_links.html:11
 #: templates/users/profile_edit_links_edit.html:8
 msgid "Links"
-msgstr ""
+msgstr "링크"
 
 #: templates/projects/project_edit.html:46
 msgid "Metrics"
-msgstr ""
+msgstr "Metrics"
 
 #: templates/projects/project_edit_image.html:13
 #: templates/schools/school_edit_background.html:24
@@ -3749,21 +3830,21 @@ msgstr ""
 #: templates/schools/school_edit_site_logo.html:24
 #: templates/users/profile_edit_main.html:15
 msgid "Upload"
-msgstr ""
+msgstr "업로드"
 
 #: templates/projects/project_edit_links.html:5
 msgid "Add links to websites associated with this "
-msgstr ""
+msgstr "관련된 웹사이드 링크 추가"
 
 #: templates/projects/project_edit_links.html:5
 #: templates/projects/project_edit_links_edit.html:5
 msgid " such as a blog, homepage, twitter profile, github repository etc."
-msgstr ""
+msgstr "블로그, 홈페이지, 트위터 프로필, 깃허브 리파지토리 등"
 
 #: templates/projects/project_edit_links.html:16
 #: templates/users/profile_edit_links.html:52
 msgid "Subscribed"
-msgstr ""
+msgstr "구독 중"
 
 #: templates/projects/project_edit_links.html:17
 #: templates/projects/project_edit_next_steps.html:27
@@ -3773,12 +3854,12 @@ msgstr ""
 #: templates/users/profile_edit_links.html:53
 #: templates/users/profile_edit_openids.html:26
 msgid "Actions"
-msgstr ""
+msgstr "활동"
 
 #: templates/projects/project_edit_links.html:27
 #: templates/users/profile_edit_links.html:63
 msgid "Subscribed."
-msgstr ""
+msgstr "구독 중."
 
 #: templates/projects/project_edit_links.html:27
 #: templates/projects/project_edit_participants.html:48
@@ -3786,138 +3867,140 @@ msgstr ""
 #: templates/schools/school_edit_organizers.html:36
 #: templates/users/profile_edit_links.html:63
 msgid "yes"
-msgstr ""
+msgstr "예"
 
 #: templates/projects/project_edit_links.html:28
 #: templates/users/profile_edit_links.html:64
 msgid "Error saving subscription."
-msgstr ""
+msgstr "에러 저장 구독"
 
 #: templates/projects/project_edit_links.html:28
 #: templates/users/profile_edit_links.html:64
 msgid "error"
-msgstr ""
+msgstr "에러"
 
 #: templates/projects/project_edit_links.html:31
 #: templates/users/profile_edit_links.html:67
 msgid "Not subscribed."
-msgstr ""
+msgstr "구독 안 함"
 
 #: templates/projects/project_edit_links.html:31
 #: templates/projects/project_edit_participants.html:50
 #: templates/projects/project_edit_participants.html:58
 #: templates/users/profile_edit_links.html:67
 msgid "no"
-msgstr ""
+msgstr "아니오"
 
 #: templates/projects/project_edit_links_base.html:18
 #: templates/users/profile_edit_links.html:25
 #: templates/users/profile_edit_links_edit.html:18
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: templates/projects/project_edit_links_base.html:23
 #: templates/users/profile_edit_links.html:32
 #: templates/users/profile_edit_links_edit.html:23
 msgid "Subscribe"
-msgstr ""
+msgstr "구독"
 
 #: templates/projects/project_edit_links_edit.html:5
 msgid "Edit links to websites associated with this "
-msgstr ""
+msgstr "관련된 웹사이트 링크 편집"
 
 #: templates/projects/project_edit_links_edit.html:7
 #: templates/users/forgot_password_confirm.html:26
 #: templates/users/profile_edit_links_edit.html:27
 msgid "Update"
-msgstr ""
+msgstr "업데이트"
 
 #: templates/projects/project_edit_next_steps.html:8
 msgid ""
 "View, add and remove associated study groups and courses that a learner "
 "might want to visit after completing the challenge."
 msgstr ""
+"사용자가 이 강좌를 마치고 나서 방문하면 좋을 관련 스터디 그룹이나 강좌를 보"
+"고, 추가하고 제거해보세요."
 
 #: templates/projects/project_edit_next_steps.html:26
 #: templates/projects/sidebar.html:169
 msgid "Kind"
-msgstr ""
+msgstr "종류"
 
 #: templates/projects/project_edit_next_steps.html:38
 #: templates/projects/project_edit_participants.html:72
 msgid "Remove"
-msgstr ""
+msgstr "제거"
 
 #: templates/projects/project_edit_participants.html:10
 msgid "View and add participants."
-msgstr ""
+msgstr "참여자 보기/추가하기"
 
 #: templates/projects/project_edit_participants.html:12
 msgid "View, add and remove participants."
-msgstr ""
+msgstr "참여자 보기/추가하기/제거하기"
 
 #: templates/projects/project_edit_participants.html:18
 #: templates/schools/school_edit_organizers.html:13
 #: templates/users/profile_form_base.html:19
 msgid "Username"
-msgstr ""
+msgstr "사용자이름"
 
 #: templates/projects/project_edit_participants.html:23
 #: templates/projects/project_edit_participants.html:37
 msgid "Organizer"
-msgstr ""
+msgstr "Organizer"
 
 #: templates/projects/project_edit_participants.html:38
 msgid "Adopter"
-msgstr ""
+msgstr "Adopter"
 
 #: templates/projects/project_edit_participants.html:48
 msgid "Organizing."
-msgstr ""
+msgstr "Organizing."
 
 #: templates/projects/project_edit_participants.html:50
 msgid "Not Organizing."
-msgstr ""
+msgstr "Not Organizing."
 
 #: templates/projects/project_edit_participants.html:56
 msgid "Adopter."
-msgstr ""
+msgstr "Adopter."
 
 #: templates/projects/project_edit_participants.html:58
 msgid "Participant."
-msgstr ""
+msgstr "참여자."
 
 #: templates/projects/project_edit_participants.html:66
 #: templates/signups/sign_up.html:102
 msgid "Add Organizer"
-msgstr ""
+msgstr "Organizer 추가"
 
 #: templates/projects/project_edit_participants.html:78
 msgid "Remove organizer"
-msgstr ""
+msgstr "organizer 제거"
 
 #: templates/projects/project_edit_status.html:17
 #, python-format
 msgid ""
 "Configure your %(kind)s's status so that it appears in the appropriate lists."
-msgstr ""
+msgstr "%(kind)s가 올바른 리스트에서 보일 수 있게 상태를 설정하세요."
 
 #: templates/projects/project_edit_status.html:21
 msgid "Under Development."
-msgstr ""
+msgstr "개설 중."
 
 #: templates/projects/project_edit_status.html:28
 msgid "Not Listed."
-msgstr ""
+msgstr "리스트에 보이지 않음."
 
 #: templates/projects/project_edit_status.html:35
 msgid "Archived."
-msgstr ""
+msgstr "Archived."
 
 #: templates/projects/project_edit_status.html:44
 #: templates/projects/project_edit_summary.html:44
 msgid "How many hours will this challenge take to complete?"
-msgstr ""
+msgstr "이 강좌를 완료하는 데 걸리는 시간은?"
 
 #: templates/projects/project_edit_status.html:51
 #, python-format
@@ -3925,605 +4008,491 @@ msgid ""
 "Optionally, provide the period of time in which you expect the %(kind)s to "
 "be active. These dates are optional and will be displayed on the home page."
 msgstr ""
+"(선택사항)%(kind)s(이)가 활성화일 기간을 입력하세요. 이 날짜는 홈페이지에 표시"
+"될 거예요."
 
 #: templates/projects/project_edit_status.html:54
 msgid "Active from"
-msgstr ""
+msgstr "이 날부터 활성화"
 
 #: templates/projects/project_edit_summary.html:16
 msgid "This is a test course"
-msgstr ""
+msgstr "테스트 강좌입니다"
 
 #: templates/projects/project_edit_summary.html:26
 msgid "Short and descriptive works best."
-msgstr ""
+msgstr "짧고 간결한 설명이 제일 좋아요."
 
 #: templates/projects/project_edit_summary.html:36
 msgid "Used in search results and listings."
-msgstr ""
+msgstr "Used in search results and listings."
 
 #: templates/projects/project_edit_summary.html:53
 msgid "One paragraph description"
-msgstr ""
+msgstr "한 문단으로 설명"
 
 #: templates/projects/project_edit_summary.html:54
 msgid ""
 "What's this about? What will I learn? Tell me more, but keep it to the point."
 msgstr ""
+"주제가 뭔가요? 이걸 통해 무얼 배울 수 있나요? 주제에 맞게 좀 더 설명해주세요."
 
 #: templates/projects/project_edit_summary.html:68
 msgid "Skills"
-msgstr ""
+msgstr "기술"
 
 #: templates/projects/project_edit_summary.html:71
 msgid "Comma-separated list of keywords."
-msgstr ""
+msgstr "키워드 (쉼표로 구분하세요) 리스트"
 
 #: templates/projects/project_edit_summary.html:79
 msgid "Type"
-msgstr ""
+msgstr "타입"
 
 #: templates/projects/project_import.html:60
 msgid "Import from Old Site"
-msgstr ""
+msgstr "옛날 사이트에서 가져오기"
 
 #: templates/projects/project_import.html:61
 msgid ""
 "Import a course from the old p2pu site. Note that if you start typing the "
 "matching suggestions will be displayed."
 msgstr ""
+"이전 P2PU 사이트에서 코스를 가져옵니다. 글자를 입력하기 시작하면연관있는 추천"
+"어가 나타납니다."
 
 #: templates/projects/project_import.html:66
 msgid "Course"
-msgstr ""
+msgstr "코스"
 
 #: templates/projects/project_import.html:73
 msgid "Import"
-msgstr ""
+msgstr "가져오기"
 
 #: templates/projects/sidebar.html:30 templates/users/sidebar.html:40
 msgid "Unfollow"
-msgstr ""
+msgstr "팔로우 해제하기"
 
 #: templates/projects/sidebar.html:35 templates/users/sidebar.html:46
 msgid "Follow"
-msgstr ""
+msgstr "팔로우하기"
 
 #: templates/projects/sidebar.html:40
 msgid "Participate"
-msgstr ""
+msgstr "참여하기"
 
 #: templates/projects/sidebar.html:62
 msgid "Time it should take to complete:"
-msgstr ""
+msgstr "완료에 걸리는 시간"
 
 #: templates/projects/sidebar.html:62
 msgid "min"
-msgstr ""
+msgstr "분"
 
 #: templates/projects/sidebar.html:71 templates/projects/sidebar.html.py:74
 msgid "Start Challenge"
-msgstr ""
+msgstr "도전 시작입니다"
 
 #: templates/projects/sidebar.html:78 templates/projects/sidebar.html.py:86
 msgid "View Tasks"
-msgstr ""
+msgstr "과제 보기입니다"
 
 #: templates/projects/sidebar.html:80
 msgid "View Discussions"
-msgstr ""
+msgstr "토론 보기입니다"
 
 #: templates/projects/sidebar.html:84
 msgid "Request a Mentor"
-msgstr ""
+msgstr "조언자를 요청합니다"
 
 #: templates/projects/sidebar.html:88
 msgid "Discuss Challenge"
-msgstr ""
+msgstr "토론 도전하기"
 
 #: templates/projects/sidebar.html:93
 msgid "Leave Challenge"
-msgstr ""
+msgstr "도전 나가기입니다"
 
 #: templates/projects/sidebar.html:105
 msgid "View more tagged with "
-msgstr ""
+msgstr "좀 더 많은 태그를 봅니다"
 
 #: templates/projects/sidebar.html:114
 msgid "View Full Description"
-msgstr ""
+msgstr "저체 설명을 봅니다"
 
 #: templates/projects/sidebar.html:145
 msgid "Under Development"
-msgstr ""
+msgstr "개발중입니다"
 
 #: templates/projects/sidebar.html:148
 msgid "Not Listed"
-msgstr ""
+msgstr "등재되지 않았습니다"
 
 #: templates/projects/sidebar.html:150
 msgid "DATE_FORMAT"
-msgstr ""
+msgstr "날짜 방식"
 
 #: templates/projects/sidebar.html:152
 msgid "Runs"
-msgstr ""
+msgstr "실행하기"
 
 #: templates/projects/sidebar.html:158 templates/projects/sidebar.html:164
 msgid "Based on"
-msgstr ""
+msgstr "기본으로 하여"
 
 #: templates/projects/sidebar.html:181 templates/users/_user_card.html:25
 msgid "Updates"
-msgstr ""
+msgstr "업데이트"
 
 #: templates/projects/sidebar.html:198
 msgid "Pending Applicants"
-msgstr ""
+msgstr "계류중인 지원자들"
 
 #: templates/projects/sidebar.html:217
 msgid "Edit Participants"
-msgstr ""
+msgstr "참여자 편집하기"
 
 #: templates/projects/sidebar.html:220
 msgid "Contact Organizer(s)"
-msgstr ""
+msgstr "주최자에게 연락하기"
 
 #: templates/projects/sidebar.html:223
 msgid "Contact Organizer"
-msgstr ""
+msgstr "주최자에게 연락하기"
 
 #: templates/projects/sidebar.html:264
 msgid "External Links"
-msgstr ""
+msgstr "외부 링크"
 
 #: templates/projects/sidebar.html:282
 msgid "No external links have been added."
-msgstr ""
+msgstr "외부 링크가 추가되어있지 않습니다"
 
 #: templates/projects/sidebar.html:287
 msgid "Edit Links"
-msgstr ""
+msgstr "링크 수정하기"
 
 #: templates/projects/sidebar.html:298
 msgid "Help your peers"
-msgstr ""
+msgstr "친구들 도와주기"
 
 #: templates/projects/sidebar.html:299
 msgid ""
 "Would you be interested in becoming a Mentor? Your peers are going to run "
 "into road blocks and they could really use your help."
 msgstr ""
+"멘토가 되고 싶으십니까?  친구들이  어려움에 닥쳤을 때 당신의도움을 필요로 할 "
+"것입니다."
 
 #: templates/projects/sidebar.html:300
 msgid "Become a Mentor"
-msgstr ""
+msgstr "멘토 되기"
 
 #: templates/projects/sidebar.html:325
 #, python-format
 msgid "%(counter)s peer needs your review!"
 msgid_plural "%(counter)s peers need your review!"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "친구들이 당신의 리뷰를 필요로 합니다!"
+msgstr[1] "%(counter)s 동료가 당신의 리뷰를 필요로 합니다!"
 
 #: templates/projects/sidebar.html:325
 #: templates/users/_openid_providers.html:26
 msgid "Go"
-msgstr ""
-
-#: templates/projects/emails/admin_project_created_subject.txt:2
-msgid "New "
-msgstr ""
-
-#: templates/projects/emails/contact_organizer.txt:4
-msgid "Howdy Organizer. Someone's contacted you."
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:4
-#, python-format
-msgid " We're excited to see you've created %(project_name|safe)s. "
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:6
-msgid "We\\'re here to help you design, promote and run a stellar course."
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:8
-msgid ""
-"Check out these ways to connect with the community, get feedback and promote "
-"the heck out it."
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:10
-msgid ""
-"1. We have a help desk where you can bring all your questions to our staff:"
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:11
-msgid "2. We have a group just for course designers on the site:"
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:12
-msgid ""
-"3. We have a totally sweet P2PU community mailing list where you can pitch "
-"your course:"
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:13
-msgid ""
-"4. To give you course more marketing TLC, get it featured in the showcase. "
-"Send us a note at help@p2pu.org."
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:15
-msgid "When your course is ready, uncheck \\"
-msgstr ""
-
-#: templates/projects/emails/project_created.txt:18
-msgid "Yay! The learnings!"
-msgstr ""
-
-#: templates/projects/emails/project_created_subject.txt:3
-#, python-format
-msgid " Take %(project_name)s to the next level."
-msgstr ""
-
-#: templates/relationships/emails/new_follower.txt:2
-msgid "is now following "
-msgstr ""
-
-#: templates/relationships/emails/new_follower.txt:2
-#: templates/relationships/emails/new_follower_subject.txt:1
-msgid "you"
-msgstr ""
-
-#: templates/relationships/emails/new_follower.txt:2
-#: templates/relationships/emails/new_follower_subject.txt:1
-msgid "on P2PU!"
-msgstr ""
-
-#: templates/relationships/emails/new_follower.txt:4
-#: templates/signups/answer_sign_up.html:31 templates/signups/sign_up.html:79
-#: templates/signups/emails/new_signup_answer.txt:4
-msgid "Bio:"
-msgstr ""
-
-#: templates/relationships/emails/new_follower.txt:8
-msgid "You can see their profile here:"
-msgstr ""
-
-#: templates/relationships/emails/new_follower_subject.txt:1
-msgid "is following "
-msgstr ""
+msgstr "시작"
 
 #: templates/replies/_comment_threads.html:43
 #: templates/replies/_comment_threads.html:101
 #: templates/replies/comment_page.html:39
 #: templates/replies/comment_page.html:59
 msgid " said:"
-msgstr ""
+msgstr "말하다:"
 
 #: templates/replies/_comment_threads.html:54
 #: templates/replies/_comment_threads.html:116
 #: templates/replies/comment_page.html:45
 #: templates/replies/comment_page.html:65
 msgid "on "
-msgstr ""
+msgstr "위에"
 
 #: templates/replies/_comment_threads.html:105
 msgid "In Reply To:"
-msgstr ""
+msgstr "답변하기:"
 
 #: templates/replies/_comment_threads.html:117
 #: templates/replies/comment_page.html:46
 #: templates/replies/comment_page.html:66
 msgid "in reply to "
-msgstr ""
+msgstr "답변하기:"
 
 #: templates/replies/comment_page.html:25
 msgid "Edit Comment"
-msgstr ""
+msgstr "댓글 수정하기"
 
 #: templates/replies/comment_page.html:27
 msgid "Reply Comment"
-msgstr ""
+msgstr "댓글 답변하기"
 
 #: templates/replies/comment_page.html:29
 msgid "New Comment"
-msgstr ""
+msgstr "새로운 댓글"
 
 #: templates/replies/comment_page.html:103
 #: templates/signups/answer_sign_up.html:99
 msgid "Post"
-msgstr ""
+msgstr "올리기"
 
 #: templates/replies/delete_restore_comment.html:16
 msgid "Restore Comment:"
-msgstr ""
+msgstr "댓글 복구하기:"
 
 #: templates/replies/delete_restore_comment.html:16
 msgid "Delete Comment:"
-msgstr ""
+msgstr "댓글 지우기"
 
 #: templates/replies/delete_restore_comment.html:27
 msgid "Are you sure you want to restore this comment?"
-msgstr ""
+msgstr "정말로 이 댓글을 복구하시겠습니까?"
 
 #: templates/replies/delete_restore_comment.html:29
 msgid "Are you sure you want to delete this comment?"
-msgstr ""
-
-#: templates/replies/emails/post_comment.txt:6
-#, python-format
-msgid "This comment was posted at %(scope)s."
-msgstr ""
-
-#: templates/replies/emails/post_comment.txt:8
-msgid "You can view this comment online at:"
-msgstr ""
-
-#: templates/replies/emails/post_comment.txt:10
-msgid "To reply to this comment by email, simply type your reply at the top!"
-msgstr ""
-
-#: templates/replies/emails/post_comment_subject.txt:2
-msgid " posted a new comment at "
-msgstr ""
-
-#: templates/replies/emails/post_comment_subject.txt:2
-msgid " in "
-msgstr ""
+msgstr "정말로 이 댓글을 지우시겠습니까?"
 
 #: templates/reviews/_project_review_action.html:3
 #: templates/reviews/_projects_reviews_list_item.html:3
 #: templates/reviews/review_project.html:7
 msgid "Review"
-msgstr ""
+msgstr "검토하기"
 
 #: templates/reviews/_projects_reviews_list_item.html:5
 msgid "Feedback Comments:"
-msgstr ""
+msgstr "댓글 의견 남기기:"
 
 #: templates/reviews/projects_reviews_list.html:11
 msgid "New Courses"
-msgstr ""
+msgstr "새로운 강좌들"
 
 #: templates/reviews/projects_reviews_list.html:12
 msgid "Reviewed"
-msgstr ""
+msgstr "검토되었음"
 
 #: templates/reviews/review_project.html:13
 msgid "Feedback"
-msgstr ""
+msgstr "의견 남기기"
 
 #: templates/reviews/review_project.html:20
 msgid "Mark as Reviewed"
-msgstr ""
+msgstr "검토됨으로 표시하기"
 
 #: templates/reviews/review_project.html:28
 msgid "Feature as Community Pick"
-msgstr ""
+msgstr "커뮤니티 인기 아이템"
 
 #: templates/reviews/review_project.html:37
 msgid "Mark as Deleted (Spam)"
-msgstr ""
+msgstr "삭제됨으로 표시"
 
 #: templates/reviews/show_project_reviews.html:16
 msgid "Review from"
-msgstr ""
+msgstr " ()에게 검토됨"
 
 #: templates/reviews/show_project_reviews.html:18
 msgid "Community Reviewed!"
-msgstr ""
+msgstr "커뮤니티에게 검토됨"
 
 #: templates/reviews/show_project_reviews.html:19
 msgid "Deleted (Spam)!"
-msgstr ""
+msgstr "(스팸) 삭제됨"
 
 #: templates/reviews/show_project_reviews.html:20
 msgid "Featured as Community Pick!"
-msgstr ""
+msgstr "커뮤니티 인기 아이템"
 
 #: templates/reviews/show_project_reviews.html:21
 msgid "Feedback:"
-msgstr ""
+msgstr "의견 남기기"
 
 #: templates/reviews/show_project_reviews.html:28
 msgid "Post New Review"
-msgstr ""
-
-#: templates/reviews/emails/review_submitted.txt:1
-#, python-format
-msgid ""
-"Hi there!\n"
-"\n"
-"%(reviewer)s had a look at %(course)s and here is what they had to say:"
-msgstr ""
-
-#: templates/reviews/emails/review_submitted.txt:7
-#, python-format
-msgid ""
-"You can also have a look at their feedback here: https://%(domain)s"
-"%(review_url)s\n"
-"\n"
-"Cheerio\n"
-"The P2PU team"
-msgstr ""
-
-#: templates/reviews/emails/review_submitted_subject.txt:3
-#, python-format
-msgid "%(user)s had a look at %(course_name)s!"
-msgstr ""
+msgstr "새 검토 남기기"
 
 #: templates/richtext/_external_link.html:2
 msgid "Work on this Task"
-msgstr ""
+msgstr "이 과제 작업하기"
 
 #: templates/richtext/browse.html:9
 msgid "Select the file you want, then click 'Attach File' to continue..."
-msgstr ""
+msgstr "원하시는 파일을 선택하고, '첨부파일'을 클릭해 주세요 "
 
 #: templates/richtext/browse.html:14
 msgid "Files"
-msgstr ""
+msgstr "파일들"
 
 #: templates/richtext/browse.html:21
 msgid "Attach File"
-msgstr ""
+msgstr "첨부파일"
 
 #: templates/richtext/browse.html:25
 msgid ""
 "No files found. Upload files using the 'Link Button' dialog's 'Upload' tab."
 msgstr ""
+"파일이 발견되지 않았습니다. 대화의 '올리기' 탭의 '링크 버튼'으로 파일을 올려"
+"주세요"
 
 #: templates/schools/_projectset_card.html:25
 msgid "View Challenges"
-msgstr ""
+msgstr "도전 보기"
 
 #: templates/schools/_projectset_card.html:31
 #: templates/schools/projectset_home.html:23
 #: templates/schools/projectset_home.html:37
 msgid "Challenges"
-msgstr ""
+msgstr "도전"
 
 #: templates/schools/_projectset_card.html:39
 #: templates/schools/projectset_home.html:25
 msgid "Adopters"
-msgstr ""
+msgstr "어돕터"
 
 #: templates/schools/_projectset_card.html:53
 msgid "Get started with the first Challenge now"
-msgstr ""
+msgstr "처음 도전로 시작하기"
 
 #: templates/schools/_projectset_card.html:71
 msgid "View All Challenges"
-msgstr ""
+msgstr "모든 도전과제 확인하기"
 
 #: templates/schools/footer.html:4
 msgid "P2PU Schools:"
-msgstr ""
+msgstr "P2PU 학교:"
 
 #: templates/schools/home.html:11 templates/schools/school_edit.html:4
 #: templates/schools/school_edit.html:11
 msgid "Edit School"
-msgstr ""
+msgstr "학교 수정하기"
 
 #: templates/schools/home.html:16
 msgid "Browse"
-msgstr ""
+msgstr "둘러보기"
 
 #: templates/schools/home.html:35 templates/schools/school_edit.html:22
 #: templates/schools/school_edit_organizers.html:7
 msgid "School Organizers"
-msgstr ""
+msgstr "학교 개최자"
 
 #: templates/schools/home.html:46
 msgid "Challenge Sets"
-msgstr ""
+msgstr "도전과제 모음"
 
 #: templates/schools/projectset_home.html:29
 msgid "Start first Challenge"
-msgstr ""
+msgstr "첫번째 도전과제 시작"
 
 #: templates/schools/school_edit.html:12
 msgid "View School"
-msgstr ""
+msgstr "학교 보기"
 
 #: templates/schools/school_edit.html:17
 msgid "Appearance"
-msgstr ""
+msgstr "외관"
 
 #: templates/schools/school_edit.html:18
 msgid "Logo"
-msgstr ""
+msgstr "로고"
 
 #: templates/schools/school_edit.html:19
 msgid "Small Logo"
-msgstr ""
+msgstr "작은 로고"
 
 #: templates/schools/school_edit.html:20
 msgid "Background"
-msgstr ""
+msgstr "배경"
 
 #: templates/schools/school_edit.html:21
 msgid "Site Logo"
-msgstr ""
+msgstr "사이트 로고"
 
 #: templates/schools/school_edit.html:24
 #: templates/schools/school_edit_membership.html:7
 msgid "Membership"
-msgstr ""
+msgstr "회원"
 
 #: templates/schools/school_edit.html:25
 #: templates/schools/school_edit_mentorship.html:7
 msgid "Mentorship"
-msgstr ""
+msgstr "회원"
 
 #: templates/schools/school_edit.html:26
 #: templates/schools/school_edit_statistics.html:7
 msgid "Statistics"
-msgstr ""
+msgstr "통계"
 
 #: templates/schools/school_edit_background.html:12
 msgid "Replace School Background Image"
-msgstr ""
+msgstr "학교 배경 그림 바꾸기 "
 
 #: templates/schools/school_edit_background.html:14
 msgid "Upload a School Background Image"
-msgstr ""
+msgstr "학교 배경 그림 올리기"
 
 #: templates/schools/school_edit_background.html:16
 #: templates/schools/school_edit_groups_icon.html:16
 #: templates/schools/school_edit_logo.html:16
 #: templates/schools/school_edit_site_logo.html:16
 msgid "Upload an image file from your computer:"
-msgstr ""
+msgstr "컴퓨터에서 그림 파일 올리기"
 
 #: templates/schools/school_edit_background.html:19
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 20x60 "
 "pixels"
 msgstr ""
+"파일 유형: JPG, GIF, PNG 만 가능<br/> 최대 사이즈: 700k <br/> 이미지 크기: "
+"20x60 픽셀"
 
 #: templates/schools/school_edit_featured.html:9
 msgid "View, add and remove courses featured by this school."
-msgstr ""
+msgstr "이 학교에 포함된 코스를 보거나 추가하거나 삭제하기"
 
 #: templates/schools/school_edit_groups_icon.html:12
 msgid "Replace School Small Logo"
-msgstr ""
+msgstr "학교 로고 바꾸기 (작은 아이콘)"
 
 #: templates/schools/school_edit_groups_icon.html:14
 msgid "Upload a School Small Logo"
-msgstr ""
+msgstr "학교 로고 업로드하기 (작은 아이콘)"
 
 #: templates/schools/school_edit_groups_icon.html:19
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 41x50 "
 "pixels"
 msgstr ""
+"파일유형: JPG, GIF, PNG 만 가능<br/> 최대 사이즈: 700k <br/> 사진 크기: "
+"41x50 픽셀"
 
 #: templates/schools/school_edit_logo.html:12
 msgid "Replace School Logo"
-msgstr ""
+msgstr "학교 로고 바꾸기"
 
 #: templates/schools/school_edit_logo.html:14
 msgid "Upload a School Logo"
-msgstr ""
+msgstr "학교 로고 업로드하기"
 
 #: templates/schools/school_edit_logo.html:19
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
 "Variable"
 msgstr ""
+"파일유형: JPG, GIF, PNG 만 가능<br/> 최대 사이즈: 700k <br/> 사진 크기: 변경"
+"가능"
 
 #: templates/schools/school_edit_membership.html:8
 msgid "View, add and remove courses to this school."
-msgstr ""
+msgstr "이 학교의 강좌를 보기, 수정하기, 삭제하기"
 
 #: templates/schools/school_edit_membership.html:13
 msgid "Course title"
-msgstr ""
+msgstr "강좌 제목"
 
 #: templates/schools/school_edit_mentorship.html:8
 msgid ""
@@ -4531,290 +4500,306 @@ msgid ""
 "use to signup people as mentors or mentees. Schools will be responsible for "
 "pairing up mentors with mentees and send the introduction emails."
 msgstr ""
+"멘토링 프로그램이 있는 학교는 멘토와 멘티들이 등록할 수 있는url을 제공합니"
+"다. 학교들은 멘토와 멘티들이 짝을 이루도록 해 주고멘토링을 위한 안내 메일을 "
+"발송해야 합니다"
 
 #: templates/schools/school_edit_mentorship.html:12
 msgid "Mentor Form Url"
-msgstr ""
+msgstr "멘토 양식 Url"
 
 #: templates/schools/school_edit_mentorship.html:13
 msgid "Provide url for users to signup as mentors."
-msgstr ""
+msgstr "사용자 멘토 등록용 url을 제공합니다."
 
 #: templates/schools/school_edit_mentorship.html:18
 msgid "Mentee Form Url"
-msgstr ""
+msgstr "멘티 양식 Url"
 
 #: templates/schools/school_edit_mentorship.html:19
 msgid "Provide url for users to signup as mentees."
-msgstr ""
+msgstr "사용자 멘티 등록용 url을 제공합니다"
 
 #: templates/schools/school_edit_organizers.html:8
 msgid "View, add and remove organizers of your school."
-msgstr ""
+msgstr "내 학교 관리자 보기, 추가하기, 삭제하기"
 
 #: templates/schools/school_edit_organizers.html:28
 msgid "School Organizer"
-msgstr ""
+msgstr "학교 관리자"
 
 #: templates/schools/school_edit_organizers.html:36
 msgid "Organizing this school."
-msgstr ""
+msgstr "이 학교 관리하기"
 
 #: templates/schools/school_edit_site_logo.html:12
 msgid "Replace School Site Logo"
-msgstr ""
+msgstr "학교 사이트 로고 변경하기"
 
 #: templates/schools/school_edit_site_logo.html:14
 msgid "Upload a School Site Logo"
-msgstr ""
+msgstr "학교 사이트 로고 업로드하기"
 
 #: templates/schools/school_edit_site_logo.html:19
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
 "141x44 pixels"
 msgstr ""
+"파일 유형: JPG, GIF, PNG만 가능<br/> 최대 사이즈: 700k <br/> 사진 크기: "
+"141x44 pixels"
 
 #: templates/schools/school_edit_statistics.html:8
 msgid "Statistics for this school"
-msgstr ""
+msgstr "이 학교의 통계보기"
 
 #: templates/schools/school_edit_statistics.html:9
 msgid "Groups"
-msgstr ""
+msgstr "그룹"
 
 #: templates/schools/school_edit_statistics.html:25
 msgid "Page Comments"
-msgstr ""
+msgstr "페이지 댓글"
 
 #: templates/schools/school_edit_statistics.html:26
 msgid "Wall Messages"
-msgstr ""
+msgstr "담벼락 메시지"
 
 #: templates/schools/school_edit_statistics.html:27
 msgid "Activity Replies"
-msgstr ""
+msgstr "활동 후기"
 
 #: templates/schools/school_edit_statistics.html:28
 msgid "Page Edits"
-msgstr ""
+msgstr "페이지 편집"
 
 #: templates/schools/school_edit_statistics.html:29
 msgid "Sign-Up Answers"
-msgstr ""
+msgstr "응답 등록하기"
 
 #: templates/schools/school_edit_statistics.html:30
 msgid "Sign-Up Comments"
-msgstr ""
+msgstr "댓글 등록하기"
 
 #: templates/schools/school_edit_statistics.html:34
 msgid "The numbers on this page do not include data from the old p2pu site."
-msgstr ""
+msgstr "이 페이지의 숫자에는 이전 p2pu 사이트의 데이터를 포함하지 않습니다."
 
 #: templates/schools/school_edit_statistics.html:35
 msgid "Comments at the full description and task pages."
-msgstr ""
+msgstr "상세 설명과 과제 페이지에 댓글남기기"
 
 #: templates/schools/school_edit_statistics.html:36
 msgid "Messages posted to the wall by organizers and participants."
-msgstr ""
+msgstr "관리자와 참여자가 담벼락에 남긴 메시지 보기"
 
 #: templates/schools/school_edit_statistics.html:37
 msgid "Comments in the discusion threads of wall activities."
-msgstr ""
+msgstr "담벼락 활동 토론글타래에 댓글 남기기"
 
 #: templates/schools/school_edit_statistics.html:38
 msgid ""
 "Edits to the full description and task pages. Does not include minor updates."
-msgstr ""
+msgstr "상세 설명과 과제 페이지 편집하기. 부차적인 업데이트는 제외됩니다."
 
 #: templates/schools/school_edit_statistics.html:39
 msgid "Includes both accepted and non-accepted answers."
-msgstr ""
+msgstr "승인되거나 승인되지 않은 응답을 모두 포함합니다."
 
 #: templates/schools/school_edit_statistics.html:40
 msgid ""
 "Comments at the sign-up pages. It includes automatic \"wellcome to the group"
 "\" replies."
 msgstr ""
+"등록 페이지에 댓글 남기기. 댓글은 자동으로 \"그룹에 오신 것을 환영합니다\" 답"
+"장하기"
 
 #: templates/schools/school_edit_styles.html:9
 msgid "Sidebar"
-msgstr ""
+msgstr "사이드바"
 
 #: templates/schools/school_edit_styles.html:13
 msgid "Show School Organizers."
-msgstr ""
+msgstr "학교 관리자 보이기"
 
 #: templates/schools/school_edit_styles.html:15
 msgid ""
 "Hide the list of school organizers if you don't want it to appear on the "
 "school home page sidebar."
-msgstr ""
+msgstr "학교 관리자를 보지 않으려면 학교 홈페이지 사이드바에서 숨기기"
 
 #: templates/schools/school_edit_styles.html:19
 msgid "Width"
-msgstr ""
+msgstr "넓이"
 
 #: templates/schools/school_edit_styles.html:20
 msgid ""
 "Update this value so the school logo fits nicelly on the school home page "
 "sidebar."
-msgstr ""
+msgstr "학교 홈페이지에 알맞도록 학교 로고의 속성 업데이드하기 사이드바."
 
 #: templates/schools/school_edit_styles.html:24
 msgid "Colors"
-msgstr ""
+msgstr "색상"
 
 #: templates/schools/school_edit_styles.html:27
 msgid "Headers Color"
-msgstr ""
+msgstr "제목줄 색상"
 
 #: templates/schools/school_edit_styles.html:28
 msgid ""
 "This color will be used for the headers of pages associated with this school."
-msgstr ""
+msgstr "이 색상은 이 학교에 연동된 페이지의 머릿줄에 사용됩니다. "
 
 #: templates/schools/school_edit_styles.html:34
 msgid "Lighter Headers Color"
-msgstr ""
+msgstr "제목줄 색상 밝게하기"
 
 #: templates/schools/school_edit_styles.html:35
 msgid "Lighter variant of the headers color."
-msgstr ""
+msgstr "제목줄 색상구성 더 밝게하기"
 
 #: templates/schools/school_edit_styles.html:41
 msgid "Background Color"
-msgstr ""
+msgstr "배경 색상"
 
 #: templates/schools/school_edit_styles.html:42
 msgid ""
 "This color will be used as background for the non-striped sections of the "
 "pages associated with this school."
 msgstr ""
+"이 학교와 연동된 페이지에 무늬없는 배경을 선택할 경우이 색상이 적용됩니다."
 
 #: templates/schools/school_edit_styles.html:48
 msgid "Menus Color"
-msgstr ""
+msgstr "메뉴 색상"
 
 #: templates/schools/school_edit_styles.html:49
 msgid ""
 "This color will be used as background for the menus of the pages associated "
 "with this school."
-msgstr ""
+msgstr "이 학교와 연동된 페이지의 메뉴 배경 색상에이 색상이 적용됩니다."
 
 #: templates/schools/school_edit_styles.html:55
 msgid "Lighter Menus Color"
-msgstr ""
+msgstr "메뉴 색상을 밝게하기"
 
 #: templates/schools/school_edit_styles.html:56
 msgid "Lighter variant of the menus color."
-msgstr ""
+msgstr "메뉴 색상 구성안을 더 밝게하기"
 
 #: templates/schools/school_edit_styles.html:62
 msgid "Custom Styles (Advanced)"
-msgstr ""
+msgstr "나만의 스타일 설정(고급)"
 
 #: templates/schools/school_edit_styles.html:63
 msgid "Customize CSS styles for the school home page and groups."
-msgstr ""
+msgstr "학교 홈페이지와 그룹에 나만의 CSS 스타일을 적용하기 "
 
 #: templates/schools/school_edit_summary.html:11
 msgid ""
 "A good name is short and descriptive. People should know what your school is "
 "about without reading the description."
 msgstr ""
+"좋은 명칭은 짧고 알기쉬워야 합니다. 다른 사용자가 별도의 설명을 보지 않고도"
+"이 학교에 대해 파악할 수 있어야 합니다."
 
 #: templates/schools/school_edit_summary.html:17
 msgid ""
 "Shorter name displayed close to the school small icon on sidebars and "
 "footers."
 msgstr ""
+"짧은 이름은 사이드바와 바닥글에 엤는 학교의 작은 아이콘 가까이에 나타납니다."
 
 #: templates/schools/school_edit_summary.html:23
 msgid "This description is shown on the school page."
-msgstr ""
+msgstr "이 설명은 학교 페이지에 나타납니다."
 
 #: templates/schools/school_edit_summary.html:28
 msgid "More details"
-msgstr ""
+msgstr "더 자세히"
 
 #: templates/schools/school_edit_summary.html:29
 msgid "Extra details are shown at the bottom of the school page."
-msgstr ""
+msgstr "더 자세한 설명은 학교 페이지 하단에 나타납니다."
 
 #: templates/search/search.html:4 templates/search/search.html.py:10
 msgid "Search"
-msgstr ""
+msgstr "찾기"
 
 #: templates/search/search.html:15
 msgid "Loading"
-msgstr ""
+msgstr "로딩중"
 
 #: templates/signups/accept_sign_up_comment.html:2
 msgid "Welcome aboard! You are an organizer now."
-msgstr ""
+msgstr "환영합니다! 이제 관리자가 되셨습니다."
 
 #: templates/signups/accept_sign_up_comment.html:4
 msgid "Welcome aboard! You are a participant now."
-msgstr ""
+msgstr "환영합니다! 이제 참여자가 되셨습니다."
 
 #: templates/signups/answer_sign_up.html:17
 msgid "New Answer"
-msgstr ""
+msgstr "새로운 응답"
 
 #: templates/signups/answer_sign_up.html:19
 msgid "Edit answer"
-msgstr ""
+msgstr "응답 편집하기"
+
+#: templates/signups/answer_sign_up.html:31 templates/signups/sign_up.html:79
+msgid "Bio:"
+msgstr "생애:"
 
 #: templates/signups/answer_sign_up.html:33 templates/signups/sign_up.html:81
-#: templates/signups/emails/new_signup_answer.txt:8
 msgid "Standard Set Answer:"
-msgstr ""
+msgstr "표준화된 응답:"
 
 #: templates/signups/answer_sign_up.html:36 templates/signups/sign_up.html:84
-#: templates/signups/emails/new_signup_answer.txt:11
 msgid "Public Set Answer:"
-msgstr ""
+msgstr "공유 설정된 응답:"
 
 #: templates/signups/answer_sign_up.html:40 templates/signups/sign_up.html:89
-#: templates/signups/emails/new_signup_answer.txt:15
 msgid "Between Participants Set Answer:"
-msgstr ""
+msgstr "참여자 간 착발신용 응답"
 
 #: templates/signups/answer_sign_up.html:57
 msgid "Profile"
-msgstr ""
+msgstr "소개"
 
 #: templates/signups/answer_sign_up.html:58
 msgid ""
 "Your profile information is displayed with your signup answer. If you need, "
 "you can update the information of your profile bellow."
 msgstr ""
+"내 소개 정보는 로그인 질문에 나타납니다. 필요시에는 아래의 프로필의 정보를 업"
+"데이트할 수 있습니다."
 
 #: templates/signups/answer_sign_up.html:62
 msgid "Signup Questions"
-msgstr ""
+msgstr "로그인 질문"
 
 #: templates/signups/answer_sign_up.html:63
 msgid ""
 "Please answer the following set(s) of questions if you want to become a "
 "participant or organizer."
-msgstr ""
+msgstr "참여자나 관리자가 되려면 다음의 질문에 대답해 주십시오. "
 
 #: templates/signups/answer_sign_up.html:64 templates/signups/sign_up.html:22
 msgid "Standard Set"
-msgstr ""
+msgstr "표준화시키기"
 
 #: templates/signups/answer_sign_up.html:65 templates/signups/sign_up.html:23
 msgid ""
 "This set of signup questions is common to all study groups, courses, ... in "
 "P2PU. The answers to these questions will be public once you get accepted."
 msgstr ""
+"로그인 질문 묶음은 P2PU의 모든 스터디 그룹, 강좌에 적용됩니다.이 질문들은 사"
+"용자가 승인되면 공개됩니다."
 
 #: templates/signups/answer_sign_up.html:73
 #: templates/signups/edit_signup.html:19 templates/signups/sign_up.html:28
 msgid "Public Custom Set"
-msgstr ""
+msgstr "공개 맞춤 설정"
 
 #: templates/signups/answer_sign_up.html:74
 #: templates/signups/edit_signup.html:20 templates/signups/sign_up.html:29
@@ -4823,11 +4808,13 @@ msgid ""
 "This set of signup questions is particular to this %(kind)s. The answers to "
 "these questions will be public once you get accepted."
 msgstr ""
+"이 로그인 질문 묶음은 %(kind)s에만 적용됩니다.이 질문들은 사용자가 승인되면 "
+"공개됩니다."
 
 #: templates/signups/answer_sign_up.html:82
 #: templates/signups/edit_signup.html:25 templates/signups/sign_up.html:35
 msgid "Between Participants Custom Set"
-msgstr ""
+msgstr "참여자 간 착발신 맞춤 설정"
 
 #: templates/signups/answer_sign_up.html:83
 #: templates/signups/edit_signup.html:26 templates/signups/sign_up.html:36
@@ -4836,31 +4823,33 @@ msgid ""
 "This set of signup questions is particular to this %(kind)s. The answers to "
 "these questions will be visible to all participants once you get accepted."
 msgstr ""
+"%(kind)s. 로그인 질문 묶음은 P2PU의 모든 스터디 그룹, 강좌에 적용됩니다.이 질문들은 사"
+"용자가 승인되면 공개됩니다."
 
 #: templates/signups/base.html:4 templates/signups/base.html.py:10
 #: templates/signups/sign_up.html:19
 msgid "Sign-Up"
-msgstr ""
+msgstr "로그인"
 
 #: templates/signups/delete_restore_answer.html:13
 msgid "Restore Answer:"
-msgstr ""
+msgstr "응답 저장하기"
 
 #: templates/signups/delete_restore_answer.html:13
 msgid "Delete Answer:"
-msgstr ""
+msgstr "응답 삭제하기"
 
 #: templates/signups/delete_restore_answer.html:24
 msgid "Are you sure you want to restore this answer?"
-msgstr ""
+msgstr "정말 이 응답을 저장하시겠습니까?"
 
 #: templates/signups/delete_restore_answer.html:26
 msgid "Are you sure you want to delete this answer?"
-msgstr ""
+msgstr "정말 이 응답을 삭제하시겠습니까?"
 
 #: templates/signups/edit_signup.html:13
 msgid "Sign-up Status"
-msgstr ""
+msgstr "회원가입 상태"
 
 #: templates/signups/edit_signup.html:14
 #, python-format
@@ -4868,14 +4857,16 @@ msgid ""
 "To allow peers to signup to the %(kind)s change the signup status to either "
 "moderated of non-moderated signup."
 msgstr ""
+"다른 사용자가 직접 혹은 간접 회원가입을 모두 포함해서%(kind)s 에 가입하고, 가"
+"입 정보를 변경할 수 있도록 허용합니다."
 
 #: templates/signups/sign_up.html:12
 msgid "Post Answer"
-msgstr ""
+msgstr "응답 게시하기"
 
 #: templates/signups/sign_up.html:21
 msgid "Anyone can follow a"
-msgstr ""
+msgstr "누구나 구독할 수 있습니다"
 
 #: templates/signups/sign_up.html:21
 msgid ""
@@ -4885,337 +4876,303 @@ msgid ""
 "answer the following set(s) of questions if you want to become a participant "
 "or organizer."
 msgstr ""
+"P2PU에서 참여란, 단순한 관계맺기보다 한단계 나아가는 것을 의미합니다. 회원가"
+"입은 관심있는 개인이 주제에 관한 각자의 관심사와 배경을 표현할 수 있는 공간입"
+"니다. space where interested individuals can express their interest and "
+"background 또한 개인들은 P2PU의 다른 참여자들과 함께 주제에 관해 작업하는 것"
+"에 참여하는 것이 가능합니다. 참여자나 관리자가 되고싶다면 다음의 질문(들)에 "
+"대답해 주세요."
 
 #: templates/signups/sign_up.html:42
 msgid "Answers"
-msgstr ""
+msgstr "응답"
 
 #: templates/signups/sign_up.html:43
 msgid "Pending Answers:"
-msgstr ""
+msgstr "대기중인 응답"
 
 #: templates/signups/sign_up.html:98
 msgid "Add Participant"
-msgstr ""
+msgstr "참여자 추가하기"
 
 #: templates/signups/sign_up_initial_content.html:4
 msgid "What made you interested in this topic?"
-msgstr ""
+msgstr "이 주제에 어떻게 관심을 갖게 되셨나요?"
 
 #: templates/signups/sign_up_initial_content.html:5
 msgid "What do you hope to achieve by participating?"
-msgstr ""
+msgstr "이 참여를 통해 무엇을 이루고 싶으신가요?"
 
 #: templates/signups/sign_up_initial_content.html:6
 #, python-format
 msgid "Are you interested in helping with the %(kind)s organization?"
-msgstr ""
-
-#: templates/signups/emails/new_signup_answer.txt:2
-msgid " submitted a new answer at the sign-up page of "
-msgstr ""
-
-#: templates/signups/emails/new_signup_answer.txt:19
-msgid "See answer at:"
-msgstr ""
-
-#: templates/signups/emails/new_signup_answer_subject.txt:2
-msgid " submitted a new answer at the sign-up page."
-msgstr ""
-
-#: templates/statuses/emails/wall_updated.txt:3
-msgid " update."
-msgstr ""
-
-#: templates/statuses/emails/wall_updated.txt:6
-#, python-format
-msgid " Update from the flight deck: %(username)s posted an urgent message:"
-msgstr ""
-
-#: templates/statuses/emails/wall_updated.txt:8
-#, python-format
-msgid " Update from the flight deck: %(username)s made an update:"
-msgstr ""
-
-#: templates/statuses/emails/wall_updated.txt:13
-msgid "See what they said at:"
-msgstr ""
-
-#: templates/statuses/emails/wall_updated.txt:15
-msgid ""
-"You can reply to this comment by email! Just type your reply at the top."
-msgstr ""
-
-#: templates/statuses/emails/wall_updated.txt:21
-msgid ""
-"This message was marked as important by an organizer. Participants can not "
-"turn off notifications for important updates."
-msgstr ""
-
-#: templates/statuses/emails/wall_updated_subject.txt:2
-msgid " made a comment in your course."
-msgstr ""
+msgstr "%(kind)s 관리를 돕는 데 관심이 있으신가요?"
 
 #: templates/tracker/scoreboard.html:4 templates/tracker/scoreboard.html:16
 #: templates/tracker/scoreboard.html:21
 msgid "Scoreboard"
-msgstr ""
+msgstr "성적게시판"
 
 #: templates/tracker/scoreboard.html:50
 msgid "Users Registered this Month"
-msgstr ""
+msgstr "이번달 등록한 사용자"
 
 #: templates/tracker/scoreboard.html:54
 msgid "User"
-msgstr ""
+msgstr "사용자"
 
 #: templates/tracker/scoreboard.html:56 templates/tracker/scoreboard.html:78
 #: templates/tracker/scoreboard.html:90
 msgid "Joins"
-msgstr ""
+msgstr "참가하기"
 
 #: templates/tracker/scoreboard.html:62
 msgid "Comments Posted at Groups this Month"
-msgstr ""
+msgstr "이번달에 그룹에 게시된 댓글"
 
 #: templates/tracker/scoreboard.html:66 templates/tracker/scoreboard.html:77
 #: templates/tracker/scoreboard.html:88
 msgid "Group"
-msgstr ""
+msgstr "그룹"
 
 #: templates/tracker/scoreboard.html:73
 msgid "Joins to Groups this Month"
-msgstr ""
+msgstr "이번달에 그룹 참가 수"
 
 #: templates/tracker/scoreboard.html:84
 msgid "Groups Created this Month"
-msgstr ""
+msgstr "이번달에 만들어진 그룹 수"
 
 #: templates/users/_openid_providers.html:12
 msgid "Sign In with your Google account"
-msgstr ""
+msgstr "구글 계정으로 로그인하기"
 
 #: templates/users/_openid_providers.html:13
 msgid "Sign In with your Yahoo! account"
-msgstr ""
+msgstr "야후! 계정으로 로그인하기"
 
 #: templates/users/_openid_providers.html:14
 msgid "Sign In with your myOpenID account"
-msgstr ""
+msgstr "오프ID 계정으로 로그인하기"
 
 #: templates/users/_openid_providers.html:24
 msgid "enter any OpenID URL"
-msgstr ""
+msgstr "오픈ID URL을 입력해주세요"
 
 #: templates/users/_profile_edit.html:2
 #: templates/users/profile_form_base.html:13
 msgid "Display Name"
-msgstr ""
+msgstr "이름이 나타납니다"
 
 #: templates/users/_profile_edit.html:9
 msgid "Location"
-msgstr ""
+msgstr "위치"
 
 #: templates/users/_profile_edit.html:16
 #: templates/users/profile_form_base.html:38
 msgid "Preferred Language"
-msgstr ""
+msgstr "사용 언어"
 
 #: templates/users/_profile_edit.html:23
 msgid "About Me"
-msgstr ""
+msgstr "내 소개"
 
 #: templates/users/_profile_edit.html:30
 msgid ""
 "Please describe your skills, interest, and the things you will want to "
 "learn, by providing a comma-separated list of tags."
 msgstr ""
+"내가 잘하는 것, 관심있는 것, 배우고 싶은 것을 표현해주세요-태그목록은 쉽표(,)"
+"로 구분됩니다"
 
 #: templates/users/_profile_edit.html:35
 msgid "Skilled in"
-msgstr ""
+msgstr "잘하는 것"
 
 #: templates/users/_profile_edit.html:42
 msgid "Interested in"
-msgstr ""
+msgstr "관심있는 것"
 
 #: templates/users/_profile_edit.html:49
 msgid "Want to learn more about"
-msgstr ""
+msgstr "더 배우고 싶은 것"
 
 #: templates/users/_profile_edit_image.html:6
 msgid "Current Profile Image"
-msgstr ""
+msgstr "현재 프로필 이미지"
 
 #: templates/users/_profile_edit_image.html:11
 msgid ""
 "Upload an image file from your computer to replace your current profile "
 "image:"
-msgstr ""
+msgstr "내 컴퓨터에서 현재 프로필 이미지를 대신할 이미지 파일을 업로드하기"
 
 #: templates/users/_profile_edit_image.html:13
 msgid ""
 "Personalize your profile image by uploading an image file from your computer:"
-msgstr ""
+msgstr "내 컴퓨터에서 이미지파일을 업로드해서 나만의 프로필 이미지 만들기"
 
 #: templates/users/_profile_edit_image.html:28
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
 "240x240 pixels"
 msgstr ""
+"파일유형: JPG, GIF, PNG 형태만 가능<br/> 최대 용량: 700k <br/> 크기: 240x240 "
+"pixels"
 
 #: templates/users/_profile_info.html:13
 msgid "Followings"
-msgstr ""
+msgstr "내 팔로잉"
 
 #: templates/users/_profile_info.html:16
 msgid "Courses"
-msgstr ""
+msgstr "강좌"
 
 #: templates/users/_profile_info.html:26
 msgid "Latest Courses"
-msgstr ""
+msgstr "최신 강좌"
 
 #: templates/users/_profile_info.html:60
 msgid "Latest Badges"
-msgstr ""
+msgstr "최신 배지"
 
 #: templates/users/_profile_info.html:61
 msgid "Share your badges"
-msgstr ""
+msgstr "내 배지 공유하기"
 
 #: templates/users/_profile_info.html:78
 msgid "My Skills"
-msgstr ""
+msgstr "내가 잘하는 것"
 
 #: templates/users/_profile_info.html:82
 msgid "View more with skills in "
-msgstr ""
+msgstr "잘하는 것 더 보기"
 
 #: templates/users/_profile_info.html:90
 msgid "My Interests"
-msgstr ""
+msgstr "내가 관심있는 것"
 
 #: templates/users/_profile_info.html:102
 msgid "What I want to learn more about"
-msgstr ""
+msgstr "내가 더 배우고 싶은 것"
 
 #: templates/users/forgot_password.html:3
 msgid "Forgot Your Password?"
-msgstr ""
+msgstr "비밀번호를 잊으셨나요?"
 
 #: templates/users/forgot_password.html:8 templates/users/signin.html:20
 msgid "Forgot your password?"
-msgstr ""
+msgstr "비밀번호를 잊으셨나요?"
 
 #: templates/users/forgot_password.html:13 templates/users/signin.html:15
 msgid "Username or Email"
-msgstr ""
+msgstr "사용자명/ 이메일"
 
 #: templates/users/forgot_password.html:22 templates/users/login_openid.html:5
 #: templates/users/signin.html:5 templates/users/signin.html.py:10
 #: templates/users/signin.html:32
 msgid "Sign In"
-msgstr ""
+msgstr "로그인하기"
 
 #: templates/users/forgot_password_complete.html:4
 msgid "Password Updated"
-msgstr ""
+msgstr "비밀번호 업데이트"
 
 #: templates/users/forgot_password_complete.html:9
 #: templates/users/forgot_password_confirm.html:5
 #: templates/users/forgot_password_confirm.html:10
 msgid "Reset Password"
-msgstr ""
+msgstr "비밀번호 초기화"
 
 #: templates/users/forgot_password_complete.html:12
 msgid "Thank you! Your password has been updated."
-msgstr ""
+msgstr "감사합니다! 비밀번호가 변경되었습니다"
 
 #: templates/users/forgot_password_complete.html:13
 msgid "You may now sign in."
-msgstr ""
+msgstr "이제 로그인할 수 있습니다"
 
 #: templates/users/forgot_password_confirm.html:16
 msgid "New Password"
-msgstr ""
+msgstr "새 비밀번호"
 
 #: templates/users/forgot_password_confirm.html:21
 msgid "Confirm Password"
-msgstr ""
+msgstr "비밀번호 확인"
 
 #: templates/users/forgot_password_confirm.html:31
 msgid "Hmm, that does not appear to be a correct link."
-msgstr ""
+msgstr "입력하신 링크가 확인되지 않습니다"
 
 #: templates/users/forgot_password_done.html:3
 #: templates/users/forgot_password_done.html:8
-#: templates/users/emails/forgot_password.txt:2
 msgid "Password Reset"
-msgstr ""
+msgstr "비밀번호가 초기화되었습니다."
 
 #: templates/users/forgot_password_done.html:10
 msgid ""
 "Instructions for resetting your password were sent to your email address."
-msgstr ""
+msgstr "비밀번호 초기화를 위한 안내가 이메일로 발송되었습니다."
 
 #: templates/users/login_openid.html:11
 msgid "Sign In with OpenID"
-msgstr ""
+msgstr "오픈ID로 로그인하기"
 
 #: templates/users/login_openid.html:11 templates/users/signin.html:10
 msgid "create an account"
-msgstr ""
+msgstr "계정 만들기"
 
 #: templates/users/profile.html:12
 msgid "Activity from user's profile"
-msgstr ""
+msgstr "사용자 프로필 활동보기"
 
 #: templates/users/profile.html:13
 msgid "Activity from user's dashboard"
-msgstr ""
+msgstr "사용자 게시판 활동보기"
 
 #: templates/users/profile.html:27 templates/users/profile_edit.html:5
 #: templates/users/profile_edit.html:19
 msgid "Edit Profile"
-msgstr ""
+msgstr "프로필 편집하기"
 
 #: templates/users/profile_edit.html:20
 msgid "View Profile"
-msgstr ""
+msgstr "프로필 보기"
 
 #: templates/users/profile_edit.html:28
 #: templates/users/profile_edit_main.html:9
 msgid "Basic Information"
-msgstr ""
+msgstr "기본 정보"
 
 #: templates/users/profile_edit.html:30
 msgid "Notifications"
-msgstr ""
+msgstr "알림사항"
 
 #: templates/users/profile_edit.html:31 templates/users/settings_email.html:6
 #: templates/users/settings_email.html:12
 msgid "Update Email"
-msgstr ""
+msgstr "이메일 업데이트하기"
 
 #: templates/users/profile_edit.html:32
 msgid "Update Password"
-msgstr ""
+msgstr "비밀번호 업데이트"
 
 #: templates/users/profile_edit.html:33
 #: templates/users/profile_edit_openids.html:11
 msgid "OpenIDs"
-msgstr ""
+msgstr "오픈ID"
 
 #: templates/users/profile_edit.html:35
 msgid "Delete Account"
-msgstr ""
+msgstr "계정 삭제하기"
 
 #: templates/users/profile_edit_links.html:13
 msgid ""
 "Add links to your blog, homepage, twitter profile, github repository etc. "
 "These links will appear on your profile."
 msgstr ""
+"당신의 블로그, 홈페이지, 트위터, 프로필, 깃허브 저장소 등의 링크를 추가하세요"
+"입력하신 링크는 프로필 페이지에 나타납니다"
 
 #: templates/users/profile_edit_links_edit.html:9
 msgid ""
@@ -5228,239 +5185,500 @@ msgid ""
 "Add openid urls to login to your account. If you do not have any openids you "
 "can access your account with username and password."
 msgstr ""
+"계정에 로그인하려면 오픈ID URL을 추가하세요. 오픈ID가 없으시다면사용자명과 비"
+"밀번호로 계정에 접근할 수 있습니다"
 
 #: templates/users/profile_edit_openids.html:25
 #: templates/users/register.html:13 templates/users/signin.html:36
 msgid "OpenID"
-msgstr ""
+msgstr "오픈ID"
 
 #: templates/users/profile_form_base.html:16
 msgid "A name that will identify you to other users. This is optional."
-msgstr ""
+msgstr "본인 식별용 이름을 입력해주세요. 선택사항입니다."
 
 #: templates/users/profile_form_base.html:22
 msgid "Your public profile:"
-msgstr ""
+msgstr "사용자 공개 프로필"
 
 #: templates/users/profile_form_base.html:22
 msgid "username"
-msgstr ""
+msgstr "사용자명"
 
 #: templates/users/profile_form_base.html:27
 #: templates/users/settings_email.html:22
 msgid "Email Address"
-msgstr ""
+msgstr "이메일 주소"
 
 #: templates/users/profile_form_base.html:30
 msgid "Required to send you notifications about your P2PU account."
-msgstr ""
+msgstr "사용자 PUPU 계정 관련 알림사항 보내기는 필수사항입니다."
 
 #: templates/users/profile_form_base.html:33
 #: templates/users/settings_email.html:29
 msgid "Re-enter Email Address"
-msgstr ""
+msgstr "이메일 주소를 다시 입력해주세요"
 
 #: templates/users/profile_form_base.html:55
 msgid "By creating an account on"
-msgstr ""
+msgstr "계정 만들기"
 
 #: templates/users/profile_form_base.html:55
 msgid ", you accept our"
-msgstr ""
+msgstr "사용자가 다음의"
 
 #: templates/users/profile_form_base.html:55
 msgid "privacy guidelines"
-msgstr ""
+msgstr "프라이버시 방침과"
 
 #: templates/users/profile_form_base.html:55
 msgid "license provisions"
-msgstr ""
+msgstr "라이선스 제공"
 
 #: templates/users/profile_form_base.html:55
 msgid "and"
-msgstr ""
+msgstr "과"
 
 #: templates/users/profile_form_base.html:55
 msgid "terms of use"
-msgstr ""
+msgstr "이용권리규약"
 
 #: templates/users/profile_form_base.html:55
 msgid "By default all content you create on this site is publicly viewable."
-msgstr ""
+msgstr "기본적으로 이 사이트에서 사용자가 생성하는 모든 컨텐츠는 공개됩니다"
 
 #: templates/users/register.html:5 templates/users/register_openid.html:3
 msgid "Sign Up"
-msgstr ""
+msgstr "회원가입하기"
 
 #: templates/users/register.html:7 templates/users/register_openid.html:9
 msgid "Create a New Account"
-msgstr ""
+msgstr "새로운 계정 만들기"
 
 #: templates/users/register.html:9
 msgid "Create Account"
-msgstr ""
+msgstr "계정 만들기"
 
 #: templates/users/register.html:12
 msgid "or sign up using"
-msgstr ""
+msgstr "혹은 회원가입하기"
 
 #: templates/users/register.html:18 templates/users/settings_password.html:6
 #: templates/users/settings_password.html:12
 #: templates/users/settings_password.html:20 templates/users/signin.html:20
 msgid "Password"
-msgstr ""
+msgstr "비밀번호"
 
 #: templates/users/register.html:22 templates/users/settings_password.html:27
 msgid "Confirm password"
-msgstr ""
+msgstr "비밀번호 확인"
 
 #: templates/users/register.html:27 templates/users/settings_password.html:14
 msgid ""
 "Passwords must be at least 8 characters and contain numbers and letters."
-msgstr ""
+msgstr "비밀번호는 8자 이상, 숫자와 글자를 포함해야 합니다"
 
 #: templates/users/register_openid.html:9
 msgid "sign in"
-msgstr ""
+msgstr "로그인하기"
 
 #: templates/users/settings_delete.html:6
 #: templates/users/settings_delete.html:12
 msgid "Delete Your Account"
-msgstr ""
+msgstr "계정 삭제하기"
 
 #: templates/users/settings_delete.html:13
 msgid ""
 "Are you sure you would like to delete your account? Be aware that you will "
 "not be able to login again to this account after you delete it."
 msgstr ""
+"정말로 계정을 삭제하시겠습니까? 한번 계정을 삭제하고나면이 계정으로 로그인하"
+"실 수 없습니다"
 
 #: templates/users/settings_delete.html:15
 msgid ""
 "You are currently the only organizer of the following non-archived study "
 "groups, courses ..."
 msgstr ""
+"당신은 다음의 저장되지 않은 스터디 그룹, 강좌 등에서 유일한 관리자입니다 "
 
 #: templates/users/settings_email.html:15
 msgid "Please confirm your email address"
-msgstr ""
+msgstr "이메일 주소를 확인해주세요"
 
 #: templates/users/settings_notifications.html:6
 msgid "Notification Settings"
-msgstr ""
+msgstr "알림 설정하기"
 
 #: templates/users/settings_notifications.html:9
 msgid "Send me an email when..."
-msgstr ""
+msgstr "다음의 상황에 이메일 발송"
 
 #: templates/users/settings_notifications.html:14
 msgid "A user messages me on"
-msgstr ""
+msgstr "다른 사용자가 나를 팔로잉하기"
 
 #: templates/users/settings_notifications.html:18
 msgid "Someone starts following me."
-msgstr ""
+msgstr "시작했을 경우 발송"
 
 #: templates/users/settings_notifications.html:22
 msgid ""
 "Someone starts following one of the study groups, courses, ... that I am "
 "organizing."
 msgstr ""
+"다른 사용자가 내가 관리하는 스터디 그룹, 강좌 등을 팔로잉하기 시작했습니다"
 
 #: templates/users/settings_notifications.html:28
 msgid ""
 "Someone posts a submission for the badges of one of the challenges I adopted."
-msgstr ""
+msgstr "다른 사용자가 내가 어돕트한 과제 중 하나의 배지 제출을 게시하였습니다"
 
 #: templates/users/settings_notifications.html:32
 msgid "An organizer posts or replies to a message on the wall of:"
-msgstr ""
+msgstr "관리자가 게시판에 글을 올리거나 메시지에 답장을 했습니다 "
 
 #: templates/users/settings_notifications.html:40
 msgid "A participant posts or replies to a message on the wall of:"
-msgstr ""
+msgstr "참여자가 게시판에 글을 올리거나 메시지에 답장을 했습니다"
 
 #: templates/users/settings_notifications.html:47
 msgid ""
 "An organizer creates, edits, or posts new comments on a task or page of:"
-msgstr ""
+msgstr "관리자가 과제나 페이지를 생성, 편집하거나 새로운 댓글을 게시하였습니다"
 
 #: templates/users/settings_notifications.html:54
 msgid ""
 "A participant creates, edits, or posts new comments on a task or page of:"
-msgstr ""
+msgstr "참여자가 과제나 페이지를 생성, 편집하거나 새로운 댓글을 게시하였습니다"
 
 #: templates/users/settings_notifications.html:63
 msgid ""
 "Does not include important updates for which notifications can not be turned "
 "off."
-msgstr ""
+msgstr "알림설정 해제가 불가능한 중요 업데이트를 포함하지 않습니다"
 
 #: templates/users/sidebar.html:23
 msgid "Lives in"
-msgstr ""
+msgstr "활성화됨"
 
 #: templates/users/sidebar.html:41 templates/users/sidebar.html.py:47
 msgid "Private Message"
-msgstr ""
+msgstr "보호된 메시지"
 
 #: templates/users/signin.html:28
 msgid "Remember Me"
-msgstr ""
+msgstr "로그인 정보 기억하기"
 
 #: templates/users/signin.html:35
 msgid "or use"
-msgstr ""
+msgstr "사용하기"
 
 #: templates/users/user_list.html:15
 msgid "Browse "
-msgstr ""
+msgstr "검색하기"
 
 #: templates/users/user_list.html:20
 msgid "in"
-msgstr ""
+msgstr "범위 내에서"
 
 #: templates/users/user_list.html:90
 msgid "Active this Week"
-msgstr ""
+msgstr "이 주간에 활동한"
 
 #: templates/users/user_list.html:125
 msgid "New People"
-msgstr ""
+msgstr "새 사용자들"
 
-#: templates/users/emails/forgot_password.txt:4
-msgid "We're here to help reset your password."
-msgstr ""
+#~ msgid "Howdy!"
+#~ msgstr "안녕하세요!"
 
-#: templates/users/emails/forgot_password.txt:4
-msgid ""
-"To get a new password, go ahead and click on the link below, or paste it "
-"into your browser:"
-msgstr ""
+#~ msgid "Someone has just submitted work for the"
+#~ msgstr "누군가 방금 다음의 뱃지를 신청했습니다."
 
-#: templates/users/emails/forgot_password.txt:8
-msgid "If you didn't request a new password, no worries. You're all set."
-msgstr ""
+#~ msgid "Go ahead and take a look at their work here:"
+#~ msgstr "다음에서 신청자의 완성물을 보세요."
 
-#: templates/users/emails/forgot_password.txt:10
-msgid "Happy learning."
-msgstr ""
+#~ msgid "They will love you!"
+#~ msgstr "큰 도움이 될 거에요!"
 
-#: templates/users/emails/registration_confirm.txt:6
-msgid "We're so happy you're here. Confirm your email below to get started:"
-msgstr ""
+#~ msgid "Go get 'em,"
+#~ msgstr "한번 시도해보세요."
 
-#: templates/users/emails/registration_confirm.txt:10
-msgid "Go forth and learn stuff!"
-msgstr ""
+#~ msgid "The P2PU team"
+#~ msgstr "P2PU 운영팀"
 
-#: templates/users/emails/registration_confirm.txt:12
-msgid "Cheerio,"
-msgstr ""
+#~ msgid "Manage how often you get these delightful messages at:"
+#~ msgstr "메시지 받기 주기는 다음에서 변경하실 수 있습니다."
 
-#: templates/users/emails/registration_confirm_subject.txt:2
-msgid "Ready to get learning?!"
-msgstr ""
+#~ msgid "Make someone's day. Review a badge for "
+#~ msgstr ""
+#~ "다른 사람에게 도움이 되어 주실 수 있습니다. 다음의 사용자를 위한 뱃지를 평"
+#~ "가해주세요."
 
-#: templates/users/emails/registration_confirm_subject.txt:2
-msgid "Greetings from P2PU. Your email address was changed."
-msgstr ""
+#~ msgid " was updated."
+#~ msgstr "변경되었습니다."
+
+#~ msgid " contributed with a new task: "
+#~ msgstr "다음의 새 과제를 추가하였습니다"
+
+#~ msgid "."
+#~ msgstr "."
+
+#~ msgid "Check out their update and respond at:"
+#~ msgstr "변경내용을 확인하고 다음에서 피드백을 주세요."
+
+#~ msgid "Booyah,"
+#~ msgstr "감사합니다!"
+
+#~ msgid "The P2PU Team"
+#~ msgstr "P2PU 운영팀"
+
+#~ msgid " made a new task for "
+#~ msgstr " 다음을 위한 새로운 과제를 만들었습니다."
+
+#~ msgid "Howdy course organizer!"
+#~ msgstr "안녕하세요 코스 운영자님!"
+
+#~ msgid "%(new_user)s signed up for %(course_title)s!"
+#~ msgstr "%(new_user)s 사용자가 %(course_title)s에 가입하였습니다!"
+
+#~ msgid ""
+#~ "Regards\n"
+#~ "The P2PU team"
+#~ msgstr ""
+#~ "감사합니다.\n"
+#~ "P2PU 팀"
+
+#~ msgid "[%(course_hash)s] %(username)s has signed up for %(course_title)s!"
+#~ msgstr ""
+#~ "[%(course_hash)s] %(username)s 사용자가 %(course_title)s에 가입하였습니다!"
+
+#~ msgid "%(user)s has reported %(url)s as %(reason)s.'"
+#~ msgstr ""
+#~ "%(user)s 사용자가 %(url)s 콘텐츠를 %(reason)s 이유로 신고하였습니다."
+
+#~ msgid "More info: %(other)s"
+#~ msgstr "추가 정보: %(other)s"
+
+#~ msgid "Abuse Report"
+#~ msgstr "콘텐츠 신고"
+
+#~ msgid "You have received a new direct message from"
+#~ msgstr "다음의 사용자로부터 새 직접 메시지를 받았습니다."
+
+#~ msgid "Reply:"
+#~ msgstr "답장"
+
+#~ msgid "Sincerely,"
+#~ msgstr "정말,"
+
+#~ msgid "Manage your subscriptions:"
+#~ msgstr "구독리스트 관리하기"
+
+#~ msgid "New Message from"
+#~ msgstr "다음으로부터 받은 새로운 메시지"
+
+#~ msgid ""
+#~ "We love your enthusiasm for learning & for P2PU. Keep it up!\n"
+#~ "\n"
+#~ "But sometimes speedy responses are a sign that someone has an auto-"
+#~ "responder on. And you wouldn't a gazillion of those in your inbox :)\n"
+#~ "\n"
+#~ "Sorry - we're going to ask you to send your message again. Just in case."
+#~ msgstr ""
+#~ "열심히 배우고자 하는 당신이 멋져요! 화이팅!\n"
+#~ "\n"
+#~ "답변이 너무 빨리 올 때는 자동 답변을 의심해보세요.메세지함이 차고 넘치는 "
+#~ "것을 방지할 수 있습니다 :)\n"
+#~ "\n"
+#~ "죄송합니다. 메세지 전송이 잘 안 된 것 같아요. 다시 한 번 발송해주세요."
+
+#~ msgid "This was the message that we received:"
+#~ msgstr "이런 메세지가 왔었어요:"
+
+#~ msgid ""
+#~ "Cheerio,\n"
+#~ "P2PU team"
+#~ msgstr "P2PU 팀으로부터"
+
+#~ msgid "P2PU calling. Are we getting your machine?"
+#~ msgstr "P2PU 입니다. 하려고 했던 게 이게 맞나요?"
+
+#~ msgid "New "
+#~ msgstr "새로운"
+
+#~ msgid "Howdy Organizer. Someone's contacted you."
+#~ msgstr "안녕하세요 관리자님. 연락이 왔습니다"
+
+#~ msgid " We're excited to see you've created %(project_name|safe)s. "
+#~ msgstr "%(project_name|safe)s 제작을 보게 흥미진진 합니다."
+
+#~ msgid "We\\'re here to help you design, promote and run a stellar course."
+#~ msgstr ""
+#~ "우리는 당신의 훌륭한 수업의 디자인, 홍보, 그리고 진행을 돕기위해 있습니다."
+
+#~ msgid ""
+#~ "Check out these ways to connect with the community, get feedback and "
+#~ "promote the heck out it."
+#~ msgstr ""
+#~ "커뮤니티와 연결하고, 의견을 공유하고 홍보를 위해서 이 방법들을 확인해 보세"
+#~ "요."
+
+#~ msgid ""
+#~ "1. We have a help desk where you can bring all your questions to our "
+#~ "staff:"
+#~ msgstr ""
+#~ "1. 직원들에게 언제든지 질문할 수 있는 사용자 지원팀을 가지고 있습니다."
+
+#~ msgid "2. We have a group just for course designers on the site:"
+#~ msgstr "2. 이 사이트의 수업 디자이너를 위한 모임이 있습니다."
+
+#~ msgid ""
+#~ "3. We have a totally sweet P2PU community mailing list where you can "
+#~ "pitch your course:"
+#~ msgstr ""
+#~ "3. 여러분의 강좌를 알릴 수 있는 훌륭한 P2PU 공동체 메일링 리스트를 가지고 "
+#~ "있습니다:"
+
+#~ msgid ""
+#~ "4. To give you course more marketing TLC, get it featured in the "
+#~ "showcase. Send us a note at help@p2pu.org."
+#~ msgstr ""
+#~ "4. 여러분의 강좌를 더 홍보하기 위해서 진열대에 등장 시켜보세요. help@p2pu."
+#~ "org로 쪽지를 날려주세요."
+
+#~ msgid "When your course is ready, uncheck \\"
+#~ msgstr "여러분의 강좌가 준비 되었으면, 체크를 해제하세요"
+
+#~ msgid "Yay! The learnings!"
+#~ msgstr "이제는 학습입니다!"
+
+#~ msgid " Take %(project_name)s to the next level."
+#~ msgstr " %(project_name)s 을 다음단계로 이끌어 보세요"
+
+#~ msgid "is now following "
+#~ msgstr "이제 팔로윙 합니다"
+
+#~ msgid "you"
+#~ msgstr "당신을"
+
+#~ msgid "on P2PU!"
+#~ msgstr "P2PU로"
+
+#~ msgid "You can see their profile here:"
+#~ msgstr "프로필을 여기서 확인할 수 있습니다:"
+
+#~ msgid "is following "
+#~ msgstr "팔로윙 합니다"
+
+#~ msgid "This comment was posted at %(scope)s."
+#~ msgstr "이 댓글은 %(scope)s 등록되었습니다."
+
+#~ msgid "You can view this comment online at:"
+#~ msgstr "이 댓글을 at: 에서 확인할 수 있습니다"
+
+#~ msgid ""
+#~ "To reply to this comment by email, simply type your reply at the top!"
+#~ msgstr "이 댓글을 이메일로 답변하려면 위쪽에 답변을 남기세요!"
+
+#~ msgid " posted a new comment at "
+#~ msgstr "새로운 댓글을 at에 등록하세요"
+
+#~ msgid " in "
+#~ msgstr "안으로"
+
+#~ msgid ""
+#~ "Hi there!\n"
+#~ "\n"
+#~ "%(reviewer)s had a look at %(course)s and here is what they had to say:"
+#~ msgstr ""
+#~ "안녕하세요!\n"
+#~ "\n"
+#~ "%(reviewer)s 가 확인하고 %(course)s 에 대해 얘기한 내용입니다:"
+
+#~ msgid ""
+#~ "You can also have a look at their feedback here: https://%(domain)s"
+#~ "%(review_url)s\n"
+#~ "\n"
+#~ "Cheerio\n"
+#~ "The P2PU team"
+#~ msgstr ""
+#~ "여기서 그들의 의견을 확인할 수 있습니다: https://%(domain)s"
+#~ "%(review_url)s\n"
+#~ "\n"
+#~ "Cheerio\n"
+#~ "The P2PU team"
+
+#~ msgid "%(user)s had a look at %(course_name)s!"
+#~ msgstr "%(user)s 가 %(course_name)s 를 확인했습니다!"
+
+#~ msgid " submitted a new answer at the sign-up page of "
+#~ msgstr "회원가입 페이지에 새로운 응답을 등록합니다. "
+
+#~ msgid "See answer at:"
+#~ msgstr "다음에서 응답보기: "
+
+#~ msgid " submitted a new answer at the sign-up page."
+#~ msgstr "회원가입 페이지에 새로운 응답을 등록합니다. "
+
+#~ msgid " update."
+#~ msgstr "업데이트"
+
+#~ msgid " Update from the flight deck: %(username)s posted an urgent message:"
+#~ msgstr ""
+#~ "시스템 조정실 업데이트 사항: %(username)s님이 긴급 메시지를 게시하였습니"
+#~ "다. "
+
+#~ msgid " Update from the flight deck: %(username)s made an update:"
+#~ msgstr ""
+#~ "시스템 조정실 업데이트 사항: %(username)s님이 업데이트를 작성하셨습니다."
+
+#~ msgid "See what they said at:"
+#~ msgstr "작성된 사항은 다음과 같습니다:"
+
+#~ msgid ""
+#~ "You can reply to this comment by email! Just type your reply at the top."
+#~ msgstr "이메일로 댓글을 보낼 수 있습니다! 윗줄에 답글을 입력해 주세요."
+
+#~ msgid ""
+#~ "This message was marked as important by an organizer. Participants can "
+#~ "not turn off notifications for important updates."
+#~ msgstr ""
+#~ "이 메시지는 관리자에 의해 중요 표시되었습니다. 참여자는 중요 업데이트에 대"
+#~ "한 알림설정을 끌 수 없습니다."
+
+#~ msgid " made a comment in your course."
+#~ msgstr "나의 강좌에 댓글 남기기"
+
+#~ msgid "We're here to help reset your password."
+#~ msgstr "비밀번호 초기화를 위한 안내사항입니다"
+
+#~ msgid ""
+#~ "To get a new password, go ahead and click on the link below, or paste it "
+#~ "into your browser:"
+#~ msgstr ""
+#~ "새 비밀번호를 얻으려면, 아래의 링크를 누르시고 인터넷 브라우저 창에붙여넣"
+#~ "기 하세요"
+
+#~ msgid "If you didn't request a new password, no worries. You're all set."
+#~ msgstr ""
+#~ "새 비밀번호 요청을 하지않았더라도 걱정마세요. 모든 정보가 초기화되었습니다"
+
+#~ msgid "Happy learning."
+#~ msgstr "즐거운 배움의 시간 되세요"
+
+#~ msgid "We're so happy you're here. Confirm your email below to get started:"
+#~ msgstr "함께하게 되어 기쁩니다. 활동 시작을 위해 이메일을 재확인해 주세요"
+
+#~ msgid "Go forth and learn stuff!"
+#~ msgstr "이제 가능성 가득한 배움을 시작해 보세요!"
+
+#~ msgid "Cheerio,"
+#~ msgstr "안녕히 가세요"
+
+#~ msgid "Ready to get learning?!"
+#~ msgstr "함께 배우실 준비는 되셨나요?"
+
+#~ msgid "Greetings from P2PU. Your email address was changed."
+#~ msgstr "P2PU는 당신을 환영합니다. 이메일주소가 변경되었습니다"

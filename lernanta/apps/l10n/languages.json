@@ -13,6 +13,13 @@
         "dictionary":"en",
         "native":"English"
     },
+    "he":{
+        "English":"Hebrew",
+        "internal":"he",
+        "external":"he",
+        "dictionary":"he",
+        "native":"עברית"
+    },
     "nl":{
         "English":"Dutch",
         "internal":"nl",
@@ -33,5 +40,12 @@
         "external":"zh-CN",
         "dictionary":"zh-cn",
         "native":"中国"
+    },
+    "ko":{
+        "English":"Korean",
+        "internal":"ko",
+        "external":"ko",
+        "dictionary":"ko",
+        "native":"한국의"
     }
 }

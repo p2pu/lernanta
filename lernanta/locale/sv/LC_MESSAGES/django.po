@@ -1,20 +1,24 @@
-# Localization in Swedish
-# Public Domain. 2011. No warranties.
-# Leo Larsson <friutbildning@gmail.com>, 2011
+# Localization from the happy Swedish team.
+# Public Domain. 2011, 2013.
 # Stefan Pålsson <stefan@hyperfinder.net>, 2011
+# Leo Larsson <friutbildning@gmail.com>, 2011, 2013
+# Håkan Wester <kontakt@hakanwester.se>, 2013
+# Jonas Bäckelin <edutoolkit@gmail.com>, 2013
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: LERNANTA 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-19 09:39+0200\n"
-"PO-Revision-Date: 2012-03-07 19:54+0100\n"
-"Last-Translator: Leo Larsson <friutbildning@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2013-04-10 23:53+0100\n"
+"Last-Translator: Lars Larsson <lars.larsson@interaktiv.se>\n"
+"Language-Team: SWEDEN <edutoolkit@gmail.com>\n"
 "Language: Swedish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: apps/activity/feeds.py:70
 #, python-format
@@ -84,11 +88,15 @@ msgstr "Aktivitet återställd!"
 msgid "You cannot give a badge to yourself."
 msgstr "Du kan inte ge en medalj till dig själv."
 
-#: apps/badges/forms.py:57 apps/projects/forms.py:120 apps/schools/forms.py:96
+#: apps/badges/forms.py:57
+#: apps/projects/forms.py:120
+#: apps/schools/forms.py:96
 msgid "That user account was deleted."
 msgstr "Användarkontot har tagits bort."
 
-#: apps/badges/forms.py:60 apps/projects/forms.py:123 apps/schools/forms.py:99
+#: apps/badges/forms.py:60
+#: apps/projects/forms.py:123
+#: apps/schools/forms.py:99
 #, python-format
 msgid "There is no user with username: %s."
 msgstr "Det finns ingen med användarnamn: %s."
@@ -107,7 +115,8 @@ msgstr "Användare %s har inte fått alla nödvändiga medaljer."
 msgid "Regulates how the badge is awarded to users."
 msgstr "Bestämmer hur medaljen ges till användare."
 
-#: apps/badges/models.py:73 templates/badges/_submissions_list_item.html:11
+#: apps/badges/models.py:73
+#: templates/badges/_submissions_list_item.html:11
 msgid "Badge"
 msgstr "Medalj"
 
@@ -145,12 +154,8 @@ msgid "Allows to give more or less weight to the assessor's vote."
 msgstr "Ger mer eller mindre tyngd för en bedömares röst."
 
 #: apps/badges/models.py:336
-msgid ""
-"If submission is blank, this is a peer awarded assessment or superuser "
-"granted"
-msgstr ""
-"Om meddelandet är tomt är det tilldelat från en deltagare eller en "
-"superanvändare"
+msgid "If submission is blank, this is a peer awarded assessment or superuser granted"
+msgstr "Om meddelandet är tomt är det tilldelat från en deltagare eller en superanvändare"
 
 #: apps/badges/models.py:339
 msgid "If all rubric ratings were provided."
@@ -187,7 +192,8 @@ msgstr "%(score)s för %(rubric)s"
 msgid "%(user)s - %(badge)s"
 msgstr "%(user)s - %(badge)s"
 
-#: apps/badges/views.py:86 apps/projects/views.py:86
+#: apps/badges/views.py:86
+#: apps/projects/views.py:86
 #, python-format
 msgid "The %s has been created."
 msgstr "%s har skapats."
@@ -204,11 +210,17 @@ msgstr "Du kan inte ansöka om den här medaljen."
 msgid "Submission created and out for review!"
 msgstr "Inlämning skapades och är öppen för utvärdering!"
 
-#: apps/badges/views.py:122 apps/badges/views.py:257 apps/badges/views.py:314
-#: apps/content/views.py:117 apps/content/views.py:168
-#: apps/content/views.py:282 apps/replies/views.py:66
-#: apps/replies/views.py:134 apps/replies/views.py:214
-#: apps/reviews/views.py:80 apps/signups/views.py:149
+#: apps/badges/views.py:122
+#: apps/badges/views.py:257
+#: apps/badges/views.py:314
+#: apps/content/views.py:117
+#: apps/content/views.py:168
+#: apps/content/views.py:282
+#: apps/replies/views.py:66
+#: apps/replies/views.py:134
+#: apps/replies/views.py:214
+#: apps/reviews/views.py:80
+#: apps/signups/views.py:149
 #: apps/signups/views.py:189
 msgid "Please correct errors below."
 msgstr "Rätta felen nedan."
@@ -253,7 +265,8 @@ msgstr "denna vecka"
 msgid "this month"
 msgstr "denna månad"
 
-#: apps/content/views.py:34 apps/projects/decorators.py:87
+#: apps/content/views.py:34
+#: apps/projects/decorators.py:87
 #, python-format
 msgid "This page is not accesible on a %s."
 msgstr "Sidan är inte åtkomlig på en %s."
@@ -262,12 +275,16 @@ msgstr "Sidan är inte åtkomlig på en %s."
 msgid "This task was deleted."
 msgstr "Uppgiften togs bort."
 
-#: apps/content/views.py:90 apps/content/views.py:97 apps/content/views.py:262
+#: apps/content/views.py:90
+#: apps/content/views.py:97
+#: apps/content/views.py:262
 msgid "You can't edit this page"
 msgstr "Du kan inte redigera denna sida"
 
-#: apps/content/views.py:109 apps/projects/views.py:117
-#: apps/projects/views.py:351 apps/projects/views.py:696
+#: apps/content/views.py:109
+#: apps/projects/views.py:117
+#: apps/projects/views.py:351
+#: apps/projects/views.py:696
 #, python-format
 msgid "%s updated!"
 msgstr "%s uppdaterad!"
@@ -280,7 +297,8 @@ msgstr "Du kan inte skapa en ny uppgift!"
 msgid "Task created!"
 msgstr "Uppgift skapad!"
 
-#: apps/content/views.py:193 apps/content/views.py:195
+#: apps/content/views.py:193
+#: apps/content/views.py:195
 msgid "You can't delete this page"
 msgstr "Du kan inte ta bort den här sidan"
 
@@ -298,140 +316,132 @@ msgstr "Du kan inte återställa denna sida"
 msgid "%s restored!"
 msgstr "%s återställd!"
 
-#: apps/content/views.py:311 apps/content/views.py:364
+#: apps/content/views.py:311
+#: apps/content/views.py:364
 msgid "You can not change tasks order."
 msgstr "Du kan inte ändra ordning på uppgifter."
 
 #: apps/courses/decorators.py:19
-#, fuzzy
 msgid "You need to be a course organizer."
-msgstr "Du måste vara en bedömare."
+msgstr "Du måste vara en organisatör av kursen."
 
 #: apps/courses/forms.py:13
-msgid ""
-"The hashtag must start with letter and contain only letters, digits, _ and -"
-msgstr ""
+msgid "The hashtag must start with letter and contain only letters, digits, _ and -"
+msgstr "Hashtaggen ska börja med en bokstav och endast bestå av bokstäver, siffror, _ och -"
 
 #: apps/courses/forms.py:45
 msgid "Draft"
-msgstr ""
+msgstr "Utkast"
 
 #: apps/courses/forms.py:46
 msgid "Published"
-msgstr ""
+msgstr "Publicerad"
 
-#: apps/courses/forms.py:47 templates/projects/sidebar.html:142
+#: apps/courses/forms.py:47
+#: templates/projects/sidebar.html:142
 msgid "Archived"
 msgstr "Arkiverad"
 
 #: apps/courses/forms.py:54
-#, fuzzy
 msgid "Open"
-msgstr "OpenID"
+msgstr "Öppna"
 
 #: apps/courses/forms.py:55
-#, fuzzy
 msgid "Moderated"
-msgstr "Modererad registrering"
+msgstr "Modererad"
 
 #: apps/courses/forms.py:56
-#, fuzzy
 msgid "Closed"
-msgstr "Registrering stängd"
+msgstr "Stängd"
 
-#: apps/courses/models.py:134 templates/_footer.html:74 templates/base.html:85
-#: templates/base.html.py:117 templates/courses/course_base.html:40
+#: apps/courses/models.py:134
+#: templates/_footer.html:74
+#: templates/base.html:85
+#: templates/base.html.py:117
+#: templates/courses/course_base.html:40
 #: templates/courses/course_sidebar.html:34
-#, fuzzy
 msgid "About"
 msgstr "Om mig"
 
 #: apps/courses/models.py:539
 msgid "No such user in cohort"
-msgstr ""
+msgstr "Användaren finns inte i studiegruppen"
 
 #: apps/courses/models.py:547
-#, fuzzy
 msgid "Cannot remove last organizer"
-msgstr "Organisatör"
+msgstr "Kan inte ta bort sista organisatören"
 
 #: apps/courses/views.py:261
 msgid "Could not upload image"
-msgstr ""
+msgstr "Bilden kunde inte skickas"
 
 #: apps/courses/views.py:273
-#, fuzzy
 msgid "You are now signed up for this course."
-msgstr "Du är redan med i denna %s."
+msgstr "Du är nu registrerad till denna kurs."
 
 #: apps/courses/views.py:275
 msgid "This course isn't open for signup."
-msgstr ""
+msgstr "Kursen är inte öppen för registrering."
 
 #: apps/courses/views.py:288
-#, fuzzy
 msgid "Please select a user to add."
-msgstr "Välj ett annat användarnamn."
+msgstr "Välj en användare som ska läggas till."
 
 #: apps/courses/views.py:294
-#, fuzzy
 msgid "User added."
-msgstr "Nästa steg tillagd."
+msgstr "Användare tillagd."
 
 #: apps/courses/views.py:296
 msgid "User does not exist."
-msgstr ""
+msgstr "Användaren finns inte."
 
 #: apps/courses/views.py:309
 msgid "Could not remove user"
-msgstr ""
+msgstr "Det gick inte att ta bort användaren"
 
 #: apps/courses/views.py:335
 msgid "Only other organizers can add a new organizer"
-msgstr ""
+msgstr "Endast andra organisatörer kan lägga till en ny organisatör"
 
 #: apps/courses/views.py:361
-#, fuzzy
 msgid "Course status updated."
-msgstr " har uppdaterats."
+msgstr "Kursens status har uppdaterats."
 
 #: apps/courses/views.py:377
 msgid "Could not change cohort signup"
-msgstr ""
+msgstr "Kunde inte ändra registreringen till studiegruppen"
 
 #: apps/courses/views.py:379
 msgid "Invalid choice for signup"
-msgstr ""
+msgstr "Ogiltigt val för registrering"
 
 #: apps/courses/views.py:399
 msgid "Could not update fixed term dates"
-msgstr ""
+msgstr "Kunde inte uppdatera fasta terminsdatum"
 
 #: apps/courses/views.py:416
 msgid "Could not update {0}."
-msgstr ""
+msgstr "Kunde inte uppdatera {0}."
 
 #: apps/courses/views.py:433
-#, fuzzy
 msgid "Course tags successfully updated"
-msgstr "Meddelandet har skickats."
+msgstr "Kursens etiketter uppdaterades"
 
 #: apps/courses/views.py:566
 msgid "Could not move content up!"
-msgstr ""
+msgstr "Innehållet kunde inte flyttas upp!"
 
 #: apps/courses/views.py:578
 msgid "Could not move content down!"
-msgstr ""
+msgstr "Innehållet kunde inte flyttas ned!"
 
 #: apps/dashboard/views.py:76
 msgid "Please fill out your profile to finish registration."
-msgstr "Fyll i din profil för att avsluta registreringen."
+msgstr "Fyll i din profil för att slutföra registreringen."
 
 #: apps/drumbeat/views.py:86
-#, fuzzy
 msgid "Thank you for filing an abuse report!"
-msgstr "Tack för att du gav en medalj till din vän!"
+msgstr "Tack för anmälan om missbruk!"
 
 #: apps/drumbeat/views.py:113
 msgid "Export selected objects as csv file"
@@ -449,16 +459,19 @@ msgstr "Ingen användare med det användarnamnet eller e-post."
 msgid "Can't send email"
 msgstr "Kan inte skicka e-post"
 
-#: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
+#: apps/drumbeatmail/views.py:180
+#: apps/drumbeatmail/views.py:210
 #: apps/projects/views.py:943
 msgid "Message successfully sent."
 msgstr "Meddelandet har skickats."
 
-#: apps/drumbeatmail/views.py:183 apps/drumbeatmail/views.py:213
+#: apps/drumbeatmail/views.py:183
+#: apps/drumbeatmail/views.py:213
 msgid "There was an error sending your message. Please try again."
 msgstr "Ett fel uppstod när meddelandet skickades. Försök igen."
 
-#: apps/links/views.py:27 apps/links/views.py:53
+#: apps/links/views.py:27
+#: apps/links/views.py:53
 msgid "You can not change links order."
 msgstr "Du kan inte ändra ordningen på länkar."
 
@@ -466,25 +479,29 @@ msgstr "Du kan inte ändra ordningen på länkar."
 msgid "That email address is register under a different username."
 msgstr "E-postadressen är redan registrerad med ett annat användarnamn."
 
-#: apps/preferences/forms.py:31 apps/users/forms.py:111
+#: apps/preferences/forms.py:31
+#: apps/users/forms.py:111
 #: apps/users/forms.py:177
-#, fuzzy
 msgid "Email addresses do not match."
-msgstr "Lösenorden matchar inte."
+msgstr "Epostadress matchar inte."
 
-#: apps/preferences/forms.py:36 apps/users/forms.py:37
+#: apps/preferences/forms.py:36
+#: apps/users/forms.py:37
 msgid "Password must be at least 8 characters long "
 msgstr "Lösenord måste vara minst 8 tecken långt "
 
-#: apps/preferences/forms.py:37 apps/users/forms.py:38
+#: apps/preferences/forms.py:37
+#: apps/users/forms.py:38
 msgid "and contain both numbers and letters."
 msgstr "och innehålla både siffror och bokstäver."
 
-#: apps/preferences/forms.py:42 apps/users/forms.py:43
+#: apps/preferences/forms.py:42
+#: apps/users/forms.py:43
 msgid "That password is too common. Please choose another."
 msgstr "Lösenordet är alltför vanligt. Välj en annan."
 
-#: apps/preferences/forms.py:73 apps/users/forms.py:173
+#: apps/preferences/forms.py:73
+#: apps/users/forms.py:173
 msgid "Passwords do not match."
 msgstr "Lösenorden matchar inte."
 
@@ -492,38 +509,31 @@ msgstr "Lösenorden matchar inte."
 msgid "Thank you, your settings have been saved."
 msgstr "Tack. Dina inställningar har sparats."
 
-#: apps/preferences/views.py:86 apps/users/views.py:386
+#: apps/preferences/views.py:86
+#: apps/users/views.py:386
 #, python-format
 msgid "A link to confirm your email address was sent to %s."
-msgstr ""
+msgstr "En länk för att bekräfta din e-postadress skickades till %s."
 
 #: apps/preferences/views.py:95
-#, fuzzy, python-format
-msgid ""
-"If you did not receive the confirmation email, make sure your email service "
-"did not mark it as \"junk mail\" or \"spam\". If you need to, you can have "
-"us <a href=\"%s\">resend the confirmation message</a> to your email address."
-msgstr ""
-"Om du inte har fått bekräftelsemejlet, kontrollera att din e-"
-"postleverantörinte markerat den som \"skräppost \" eller \"spam\". Om du "
-"behöver kan du <a href=\"%s\">skicka bekräftelsemejl igen</ a> till din e-"
-"postadress ovan."
+#, python-format
+msgid "If you did not receive the confirmation email, make sure your email service did not mark it as \"junk mail\" or \"spam\". If you need to, you can have us <a href=\"%s\">resend the confirmation message</a> to your email address."
+msgstr "Om du inte har fått bekräftelsemejlet, kontrollera att din e-postleverantörinte markerat den som \"skräppost \" eller \"spam\". Om du behöver kan du <a href=\"%s\">skicka bekräftelsemejl igen</ a> till din e-postadress ovan."
 
 #: apps/preferences/views.py:120
 msgid "Password updated"
 msgstr "Lösenord uppdaterat"
 
-#: apps/preferences/views.py:124 apps/users/views.py:294
+#: apps/preferences/views.py:124
+#: apps/users/views.py:294
 #: apps/users/views.py:440
 msgid "There are errors in this form. Please correct them and resubmit."
 msgstr "Det finns fel i formuläret. Ändra och skicka igen."
 
 #: apps/preferences/views.py:143
 #, python-format
-msgid ""
-"You are the organizer of %s active courses. You need to archive these "
-"courses or remove yourself as organizer before you can delete your profile."
-msgstr ""
+msgid "You are the organizer of %s active courses. You need to archive these courses or remove yourself as organizer before you can delete your profile."
+msgstr "Du organierar %s aktiva kurser. Du måste arkivera dessa kurser eller ta bort dig själv som organisatör innan du kan ta bort din profil."
 
 #: apps/projects/decorators.py:22
 #, python-format
@@ -550,26 +560,26 @@ msgstr "Denna %s togs bort."
 
 #: apps/projects/forms.py:39
 msgid "Write a catchy title, keep it short and sweet."
-msgstr ""
+msgstr "Skriv en inspirerande titel, försök hålla den kort och trevlig."
 
 #: apps/projects/forms.py:41
 msgid "e.g. Learn to write HTML by hand, literally."
-msgstr ""
+msgstr "t.ex. Lär dig att skriva HTML för hand, bokstavligen."
 
 #: apps/projects/forms.py:43
-msgid ""
-"Who is the challenge for? <br>What are they going to be doing? <br>How are "
-"they going to be doing it? <br>Why are they doing it?"
-msgstr ""
+msgid "Who is the challenge for? <br>What are they going to be doing? <br>How are they going to be doing it? <br>Why are they doing it?"
+msgstr "Vem är utmaningen för? <br> Vad ska de göra? <br> Hur kommer de att göra det? <br> Varför gör de det?"
 
 #: apps/projects/forms.py:48
-msgid ""
-"Tag your course so folks can find it. What will your audience be looking "
-"for? Separate with commas."
-msgstr ""
+msgid "Tag your course so folks can find it. What will your audience be looking for? Separate with commas."
+msgstr "Skapa etiketter till din kurs så att den blir lättare att hitta. Vad kommer din målgrupp leta efter? Separera dem med kommatecken."
 
-#: apps/projects/forms.py:87 apps/schools/forms.py:36 apps/schools/forms.py:50
-#: apps/schools/forms.py:64 apps/schools/forms.py:78 apps/users/forms.py:260
+#: apps/projects/forms.py:87
+#: apps/schools/forms.py:36
+#: apps/schools/forms.py:50
+#: apps/schools/forms.py:64
+#: apps/schools/forms.py:78
+#: apps/users/forms.py:260
 #, python-format
 msgid "Image exceeds max image size: %(max)dk"
 msgstr "Bild överskrider maximal bildstorlek: %(max)dk"
@@ -599,7 +609,8 @@ msgstr "Det finns ingen utmaning, studiegrupp, ... med kortnamn: %s."
 msgid "The %(slug)s %(kind)s is already a next step."
 msgstr "Denna %(slug)s %(kind)s är redan ett nästa steg."
 
-#: apps/projects/forms.py:167 templates/drumbeatmail/base.html:18
+#: apps/projects/forms.py:167
+#: templates/drumbeatmail/base.html:18
 #: templates/messages/inbox.html:12
 #: templates/projects/contact_organizers.html:12
 msgid "Subject"
@@ -623,20 +634,12 @@ msgid "There is no course with this short name on the archive."
 msgstr "Det finns ingen kurs med detta kortnamn i arkivet."
 
 #: apps/projects/models.py:56
-msgid ""
-"Study Group -- group of people working collaboratively to acquire and share "
-"knowledge."
-msgstr ""
-"Studiegrupp -- grupp deltagare som arbetar tillsammans för att hitta och "
-"dela kunskap."
+msgid "Study Group -- group of people working collaboratively to acquire and share knowledge."
+msgstr "Studiegrupp -- grupp deltagare som arbetar tillsammans för att hitta och dela kunskap."
 
 #: apps/projects/models.py:58
-msgid ""
-"Course -- led by one or more organizers with skills on a field who direct "
-"and help participants during their learning."
-msgstr ""
-"Kurs -- av en eller flera organisatörer med förmågor inom ett område som "
-"vägleder och hjälper deltagarna under deras lärande."
+msgid "Course -- led by one or more organizers with skills on a field who direct and help participants during their learning."
+msgstr "Kurs -- av en eller flera organisatörer med förmågor inom ett område som vägleder och hjälper deltagarna under deras lärande."
 
 #: apps/projects/models.py:61
 msgid "Challenge -- series of tasks peers can engage in to develop skills."
@@ -655,15 +658,15 @@ msgstr "%(name)s %(kind)s"
 msgid "created"
 msgstr "skapad"
 
-#: apps/projects/views.py:75 apps/projects/views.py:215
+#: apps/projects/views.py:75
+#: apps/projects/views.py:215
 #: apps/projects/views.py:297
 msgid "Full Description"
 msgstr "Fullständig beskrivning"
 
 #: apps/projects/views.py:90
-#, fuzzy
 msgid "Problem creating the course"
-msgstr "Problem att skapa medalj."
+msgstr "Problem med att skapa kursen"
 
 #: apps/projects/views.py:240
 #, python-format
@@ -683,14 +686,18 @@ msgstr "%s har importerats."
 msgid "Problem importing the study group, course, ..."
 msgstr "Problem med att importera studiegruppen, kursen, ..."
 
-#: apps/projects/views.py:396 apps/schools/views.py:147
-#: apps/schools/views.py:189 apps/schools/views.py:231
+#: apps/projects/views.py:396
+#: apps/schools/views.py:147
+#: apps/schools/views.py:189
+#: apps/schools/views.py:231
 #: apps/schools/views.py:273
 msgid "Image updated"
 msgstr "Bild uppdaterad"
 
-#: apps/projects/views.py:403 apps/schools/views.py:153
-#: apps/schools/views.py:195 apps/schools/views.py:237
+#: apps/projects/views.py:403
+#: apps/schools/views.py:153
+#: apps/schools/views.py:195
+#: apps/schools/views.py:237
 #: apps/schools/views.py:279
 msgid "There was an error uploading your image"
 msgstr "Ett fel uppstod när din bild laddades upp"
@@ -703,7 +710,8 @@ msgstr "Länk lades till."
 msgid "There was an error adding your link."
 msgstr "Ett fel uppstod när din länk lades till."
 
-#: apps/projects/views.py:457 apps/projects/views.py:491
+#: apps/projects/views.py:457
+#: apps/projects/views.py:491
 #: apps/users/views.py:659
 msgid "You can't edit this link"
 msgstr "Du kan inte ändra den här länken"
@@ -733,14 +741,12 @@ msgid "The participant is now an organizer."
 msgstr "Deltagaren är nu en arrangör."
 
 #: apps/projects/views.py:582
-#, fuzzy
 msgid "You cannot delete the only organizer"
-msgstr "Du kan inte ta bort detta svar."
+msgstr "Du kan inte ta bort den sista organisatören"
 
 #: apps/projects/views.py:590
-#, fuzzy
 msgid "The organizer in now only a participant."
-msgstr "Du är nu en deltagare!"
+msgstr "Organisatören är nu en vanlig deltagare"
 
 #: apps/projects/views.py:604
 #, python-format
@@ -766,10 +772,8 @@ msgid "There was a problem saving the %s's status."
 msgstr "Ett problem uppstod när %s's status sparades."
 
 #: apps/projects/views.py:721
-msgid ""
-"Congratulations, you sucessfully published your {0}!        It will now show "
-"up on the learning page!"
-msgstr ""
+msgid "Congratulations, you sucessfully published your {0}!        It will now show up on the learning page!"
+msgstr "Grattis, din {0} skapades framgångsrikt!        Den visas nu på sidan för kurserna!"
 
 #: apps/relationships/models.py:59
 msgid "Cannot create self referencing relationship."
@@ -784,17 +788,17 @@ msgstr "Du kan inte sluta följa"
 msgid "comment at %s"
 msgstr "kommentar i %s"
 
-#: apps/replies/views.py:25 templates/replies/_comment_threads.html:12
+#: apps/replies/views.py:25
+#: templates/replies/_comment_threads.html:12
 msgid "This comment was deleted."
 msgstr "Kommentaren togs bort."
 
 #: apps/replies/views.py:47
-msgid ""
-"You can not reply to this comment. Please ensure that you have confirmed "
-"your email address."
-msgstr ""
+msgid "You can not reply to this comment. Please ensure that you have confirmed your email address."
+msgstr "Du kan inte svara på denna kommentar. Se till att du har bekräftat din e-postadress."
 
-#: apps/replies/views.py:63 apps/replies/views.py:131
+#: apps/replies/views.py:63
+#: apps/replies/views.py:131
 msgid "Comment posted!"
 msgstr "Kommentar sparades!"
 
@@ -871,42 +875,37 @@ msgid "There was an error adding the school organizer."
 msgstr "Ett fel uppstod när skolledare lades till."
 
 #: apps/schools/views.py:340
-#, fuzzy
 msgid "The course is now featured for this school."
-msgstr "Denna %s visas nu som utvald för skolan."
+msgstr "Denna kurs visas nu som utvald för skolan."
 
 #: apps/schools/views.py:346
-#, fuzzy
 msgid "There was an error marking the course as featured."
-msgstr "Ett fel uppstod när %s markerades som utvald."
+msgstr "Ett fel uppstod när kursen markerades som utvald."
 
 #: apps/schools/views.py:368
-#, fuzzy
 msgid "The course stopped being featured for this school."
-msgstr "%s slutade vara utvald för denna skola."
+msgstr "Kursen är nte längre utvald för denna skola."
 
 #: apps/schools/views.py:371
 msgid "Could not remove course from featured list"
-msgstr ""
+msgstr "Det gick inte att ta bort kursen från listan över rekommenderade kurser"
 
 #: apps/schools/views.py:388
-#, fuzzy
 msgid "The course was added to this school."
-msgstr "%s lades till denna skola."
+msgstr "Kursen lades till denna skola."
 
 #: apps/schools/views.py:395
-#, fuzzy, python-format
+#, python-format
 msgid "There was an error adding %s to this school."
-msgstr "%s lades till den här skolan."
+msgstr "Ett fel uppstod när %s tilldelades den här skolan."
 
 #: apps/schools/views.py:415
-#, fuzzy
 msgid "The course is no longer part of this school."
-msgstr "%s är inte längre en del av denna skola."
+msgstr "Kursen är inte längre en del av denna skola."
 
 #: apps/schools/views.py:417
 msgid "Could not remove course from school"
-msgstr ""
+msgstr "Det gick inte att ta bort kursen från skolan"
 
 #: apps/schools/views.py:487
 msgid "School mentorship details updated!"
@@ -925,9 +924,9 @@ msgid "Non-moderated signup"
 msgstr "Icke-modererad registrering"
 
 #: apps/signups/models.py:38
-#, fuzzy, python-format
+#, python-format
 msgid "%s signup"
-msgstr "Registrering stängd"
+msgstr "% registrering"
 
 #: apps/signups/models.py:107
 #, python-format
@@ -938,7 +937,8 @@ msgstr "registreringsvar från %(author)s i %(project)s"
 msgid "Signup updated!"
 msgstr "Registrering uppdaterad!"
 
-#: apps/signups/views.py:89 templates/signups/sign_up.html:51
+#: apps/signups/views.py:89
+#: templates/signups/sign_up.html:51
 msgid "This answer was deleted."
 msgstr "Detta svar togs bort."
 
@@ -948,7 +948,7 @@ msgid "You already joined this %s."
 msgstr "Du är redan med i denna %s."
 
 #: apps/signups/views.py:114
-#, fuzzy, python-format
+#, python-format
 msgid "Sign-up is currently closed. You can clone the %s if it is full."
 msgstr "Registrering är för närvarande stängd. Du kan klona %s om den är full."
 
@@ -1000,10 +1000,10 @@ msgstr "Svar återställd!"
 msgid "Organizers can't use this page to leave their group."
 msgstr "Organisatörer kan inte använda den här sidan för att lämna sin grupp."
 
-#: apps/signups/views.py:273 apps/signups/views.py:301
-#, fuzzy
+#: apps/signups/views.py:273
+#: apps/signups/views.py:301
 msgid "This page can not be accessed with a GET request."
-msgstr "Den här sidan kan inte kommas åt med ett get anrop."
+msgstr "Den här sidan kan inte kommas åt med ett GET anrop."
 
 #: apps/signups/views.py:306
 msgid "You need to be active in this challenge to become an adopter."
@@ -1014,7 +1014,6 @@ msgid "Organizers do not need to adopt the challenges."
 msgstr "Organisatörer behöver inte anta utmaningar."
 
 #: apps/signups/views.py:317
-#, fuzzy
 msgid "You need to complete all of the tasks before becoming an adopter."
 msgstr "Du måste vara färdig med alla uppgifter innan du antar en utmaning."
 
@@ -1041,7 +1040,7 @@ msgstr "meddelande: %s"
 
 #: apps/statuses/views.py:19
 msgid "Posting a update to your dashboard is no longer supported"
-msgstr ""
+msgstr "Det fungerar inte längre att skicka en uppdatering till kontrollpanelen"
 
 #: apps/statuses/views.py:60
 msgid "There was an error posting your status update"
@@ -1049,39 +1048,40 @@ msgstr "Ett fel uppstod när din statusuppdatering publicerades"
 
 #: apps/tags/models.py:9
 msgid "Tag"
-msgstr "Tagg"
+msgstr "Etikett"
 
-#: apps/tags/models.py:10 templates/courses/course_settings.html:123
-#: templates/learn/_learn_filters.html:35 templates/learn/learn_tags.html:11
+#: apps/tags/models.py:10
+#: templates/courses/course_settings.html:123
+#: templates/learn/_learn_filters.html:35
+#: templates/learn/learn_tags.html:11
 #: templates/projects/project_create_overview.html:119
 #: templates/projects/project_edit_summary.html:70
 #: templates/projects/sidebar.html:101
 msgid "Tags"
-msgstr "Taggar"
+msgstr "Etiketter"
 
 #: apps/tags/models.py:19
 msgid "Tagged Item"
-msgstr "Taggat Objekt"
+msgstr "Märkt Objekt"
 
 #: apps/tags/models.py:20
 msgid "Tagged Items"
-msgstr "Taggade Objekt"
+msgstr "Märkt Objekt"
 
 #: apps/users/decorators.py:24
 msgid "You are already logged into an account."
 msgstr "Du är redan inloggad på ett konto."
 
-#: apps/users/fields.py:20 apps/users/fields.py:24
+#: apps/users/fields.py:20
+#: apps/users/fields.py:24
 msgid "Please choose another username."
 msgstr "Välj ett annat användarnamn."
 
 #: apps/users/forms.py:67
-#, fuzzy
 msgid "This Google OpenID is not supported. "
 msgstr "Detta Google OpenID stöds inte."
 
 #: apps/users/forms.py:68
-#, fuzzy
 msgid "Please use your Google profile OpenID."
 msgstr "Använd din Google OpenID profil."
 
@@ -1107,7 +1107,7 @@ msgstr "E-postadressen finns inte i något användarkonto."
 
 #: apps/users/forms.py:296
 msgid "You didn't finish registering the last time. "
-msgstr "Du avslutade inte registreringen förra gången."
+msgstr "Du slutförde inte registreringen förra gången."
 
 #: apps/users/forms.py:297
 msgid "Please register a new account."
@@ -1129,11 +1129,13 @@ msgstr "Anonym"
 msgid "(adopted)"
 msgstr "(antog)"
 
-#: apps/users/models.py:190 apps/users/models.py:203
+#: apps/users/models.py:190
+#: apps/users/models.py:203
 msgid "(organizing)"
 msgstr "(organiserar)"
 
-#: apps/users/models.py:193 apps/users/models.py:206
+#: apps/users/models.py:193
+#: apps/users/models.py:206
 msgid "(participating)"
 msgstr "(deltar)"
 
@@ -1150,46 +1152,33 @@ msgid "Congratulations! Your user account was successfully created."
 msgstr "Grattis! Ditt användarkonto har skapats."
 
 #: apps/users/views.py:286
-msgid ""
-"Thanks! We have sent an email to {0} with instructions for completing your "
-"registration."
-msgstr ""
-"Tack! Vi har skickat ett mail till {0} med instruktioner om hur du slutför "
-"din registrering."
+msgid "Thanks! We have sent an email to {0} with instructions for completing your registration."
+msgstr "Tack! Vi har skickat ett mail till {0} med instruktioner om hur du slutför din registrering."
 
 #: apps/users/views.py:364
 msgid "Hmm, that doesn't look like the correct confirmation code"
 msgstr "Hmm, det ser inte ut som rätt bekräftelsekod"
 
 #: apps/users/views.py:371
-#, fuzzy
 msgid "Success! You have verified your email address."
-msgstr "Verifiering av kontot lyckades! Du kan nu logga in."
+msgstr "Verifiering av kontot lyckades!"
 
 #: apps/users/views.py:395
 msgid "This user account was deleted."
 msgstr "Användarkontot har raderats."
 
 #: apps/users/views.py:433
-#, fuzzy, python-format
-msgid ""
-"Thanks! We have sent an email to %s with instructions for completing your "
-"registration."
-msgstr ""
-"Tack! Vi har skickat ett mail till {0} med instruktioner om hur du slutför "
-"din registrering."
+#, python-format
+msgid "Thanks! We have sent an email to %s with instructions for completing your registration."
+msgstr "Tack! Vi har skickat ett mail till %s med instruktioner om hur du slutför din registrering."
 
 #: apps/users/views.py:457
 msgid "Profile updated"
 msgstr "Profil uppdaterad"
 
 #: apps/users/views.py:463
-msgid ""
-"There were problems updating your profile. Please correct the problems and "
-"submit again."
-msgstr ""
-"Ett fel uppstod när din profil uppdaterades. Vänligen korrigera fel och "
-"spara igen."
+msgid "There were problems updating your profile. Please correct the problems and submit again."
+msgstr "Ett fel uppstod när din profil uppdaterades. Vänligen korrigera fel och spara igen."
 
 #: apps/users/views.py:500
 #, python-format
@@ -1261,88 +1250,57 @@ msgid "Page not found"
 msgstr "Sidan kan inte hittas"
 
 #: templates/404.html:8
-msgid ""
-"Oops. That links doesn't seem to work. Maybe the page you are looking for is "
-"on the old p2pu site? Try "
-msgstr ""
-"Hoppsan. Länken verkar inte fungera. Kanske finns den sida du söker på den "
-"gamla P2PU webbplatsen? Kolla in "
+msgid "Oops. That links doesn't seem to work. Maybe the page you are looking for is on the old p2pu site? Try "
+msgstr "Hoppsan. Länken verkar inte fungera. Kanske finns den sida du söker på den gamla P2PU webbplatsen? Kolla in "
 
 #: templates/404.html:9
-msgid ""
-"If you think this is an error, please let us know by <a href=\"http://p2pu."
-"lighthouseapp.com/projects/71002\" target=\"_blank\">filling a bug report</"
-"a>."
-msgstr ""
-"Om du tror att detta är ett fel kan du meddela oss genom att <a href="
-"\"http://p2pu.lighthouseapp.com/projects/71002\" target=\"_blank\">lämna in "
-"en felrapport</a>."
+msgid "If you think this is an error, please let us know by <a href=\"http://p2pu.lighthouseapp.com/projects/71002\" target=\"_blank\">filling a bug report</a>."
+msgstr "Om du tror att detta är ett fel kan du meddela oss genom att <a href=\"http://p2pu.lighthouseapp.com/projects/71002\" target=\"_blank\">lämna in en felrapport</a>."
 
 #: templates/500.html:6
 msgid "Internal server error"
 msgstr "Internt serverfel"
 
 #: templates/500.html:8
-#, fuzzy
-msgid ""
-"Clearly what was supposed to happen, didn't. You can help us to solve this "
-"problem by <a href=\"http://help.p2pu.org\">filing a bug report</a>, and "
-"telling us what you were doing when the problem occurred."
-msgstr ""
-"Tydligen hände inte det som borde hända. Du kan hjälpa oss lösa problemet "
-"genom att <a href=\"http://p2pu.lighthouseapp.com/projects/71002\">lämna in "
-"en felrapport</a> och berätta vad du gjorde när problemet uppstod."
+msgid "Clearly what was supposed to happen, didn't. You can help us to solve this problem by <a href=\"http://help.p2pu.org\">filing a bug report</a>, and telling us what you were doing when the problem occurred."
+msgstr "Tydligen hände inte det som borde hända. Du kan hjälpa oss lösa problemet genom att <a href=\"http://help.p2pu.org\">lämna in en felrapport</a> och berätta vad du gjorde när problemet uppstod."
 
 #: templates/503.html:5
 msgid "Down for maintenance, come back soon"
 msgstr "Stängd för underhåll, kom tillbaka om en stund"
 
 #: templates/503.html:7
-msgid ""
-"We are probably in the process of upgrading the site. We apologize for any "
-"inconvenience, and hope that you will like the new features."
-msgstr ""
-"Vi håller förmodligen på att uppgradera sajten. Vi ber om ursäkt för "
-"olägenheten och hoppas att du kommer att gilla de nya funktionerna."
+msgid "We are probably in the process of upgrading the site. We apologize for any inconvenience, and hope that you will like the new features."
+msgstr "Vi håller förmodligen på att uppgradera sajten. Vi ber om ursäkt för olägenheten och hoppas att du kommer att gilla de nya funktionerna."
 
 #: templates/_footer.html:16
 msgid "What is P2PU?"
 msgstr "Vad är P2PU?"
 
 #: templates/_footer.html:17
-msgid ""
-"The Peer 2 Peer University is a grassroots open education project that "
-"organizes learning outside of institutional walls and gives learners "
-"recognition for their achievements. P2PU creates a model for lifelong "
-"learning alongside traditional formal higher education. Leveraging the "
-"internet and educational materials openly available online, P2PU enables "
-"high-quality low-cost education opportunities."
-msgstr ""
-"Peer 2 Peer Universitet är ett öppet utbildningsprojekt på gräsrotsnivå som "
-"organiserar lärande utanför institutionernas väggar och ger elever "
-"erkännande för sina prestationer. P2PU skapar en modell för livslångt "
-"lärande vid sidan av traditionell formell högskoleutbildning. Med internet "
-"och utbildningsmaterial fritt tillgängliga på nätet, gör P2PU det möjligt "
-"att utbilda med hög kvalitet till låg kostnad."
+msgid "The Peer 2 Peer University is a grassroots open education project that organizes learning outside of institutional walls and gives learners recognition for their achievements. P2PU creates a model for lifelong learning alongside traditional formal higher education. Leveraging the internet and educational materials openly available online, P2PU enables high-quality low-cost education opportunities."
+msgstr "Peer 2 Peer Universitet är ett öppet utbildningsprojekt på gräsrotsnivå som organiserar lärande utanför institutionernas väggar och ger elever erkännande för sina prestationer. P2PU skapar en modell för livslångt lärande vid sidan av traditionell formell högskoleutbildning. Med internet och utbildningsmaterial fritt tillgängliga på nätet, gör P2PU det möjligt att utbilda med hög kvalitet till låg kostnad."
 
 #: templates/_footer.html:20
-#, fuzzy
 msgid "Connect With Us"
 msgstr "Kontakta oss"
 
 #: templates/_footer.html:23
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: templates/_footer.html:25
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
-#: templates/_footer.html:27 templates/pages/get_involved_page.html:7
+#: templates/_footer.html:27
+#: templates/pages/get_involved_page.html:7
 msgid "Get Involved"
 msgstr "Engagera dig"
 
-#: templates/_footer.html:29 templates/base.html:86 templates/base.html.py:118
+#: templates/_footer.html:29
+#: templates/base.html:86
+#: templates/base.html.py:118
 #: templates/dashboard/splash.html:71
 msgid "Blog"
 msgstr "Blogg"
@@ -1352,7 +1310,6 @@ msgid "Send us an email"
 msgstr "Skicka ett mejl till oss"
 
 #: templates/_footer.html:35
-#, fuzzy
 msgid "Some of Our Supporters"
 msgstr "Några av våra supportrar"
 
@@ -1364,7 +1321,9 @@ msgstr "Visa alla våra supportrar"
 msgid "(more)"
 msgstr "(mer)"
 
-#: templates/_footer.html:73 templates/base.html:87 templates/base.html.py:119
+#: templates/_footer.html:73
+#: templates/base.html:87
+#: templates/base.html.py:119
 msgid "Help"
 msgstr "Hjälp"
 
@@ -1381,13 +1340,12 @@ msgid "Found a Bug?"
 msgstr "Hittat en bugg?"
 
 #: templates/_footer.html:80
-#, fuzzy
 msgid "Creative Commons"
-msgstr "Creative Commons-Dela Lika"
+msgstr "Creative Commons"
 
 #: templates/_footer.html:81
 msgid "Share-Alike"
-msgstr ""
+msgstr "DelaLika"
 
 #: templates/_footer.html:82
 msgid "Privacy Guidelines"
@@ -1403,14 +1361,14 @@ msgstr "Lärande för alla, av alla, om nästan vad som helst."
 
 #: templates/base.html:65
 msgid "Find"
-msgstr ""
+msgstr "Hitta"
 
 #: templates/base.html:66
-#, fuzzy
 msgid "Great Courses"
-msgstr "De senaste kurserna"
+msgstr "Utmärkta kurser"
 
-#: templates/base.html:70 templates/badges/badge_edit_summary.html:39
+#: templates/base.html:70
+#: templates/badges/badge_edit_summary.html:39
 #: templates/content/create_page.html:34
 #: templates/projects/project_clone.html:8
 #: templates/projects/project_create_overview.html:9
@@ -1418,16 +1376,17 @@ msgstr "De senaste kurserna"
 #: templates/projects/project_create_review.html:8
 #: templates/projects/project_edit_summary.html:109
 #: templates/projects/project_import.html:8
-#: templates/projects/project_import.html:73 templates/schools/home.html:14
+#: templates/projects/project_import.html:73
+#: templates/schools/home.html:14
 msgid "Create"
 msgstr "Skapa"
 
 #: templates/base.html:71
-#, fuzzy
 msgid "a Course"
-msgstr "Kurs"
+msgstr "en kurs"
 
-#: templates/base.html:100 templates/dashboard/dashboard.html:18
+#: templates/base.html:100
+#: templates/dashboard/dashboard.html:18
 #: templates/drumbeatmail/inbox.html:9
 msgid "Dashboard"
 msgstr "Kontrollpanel"
@@ -1440,13 +1399,17 @@ msgstr "Min Profil"
 msgid "My Settings"
 msgstr "Mina Inställningar"
 
-#: templates/base.html:103 templates/chat/chat.html:4
-#: templates/chat/chat.html.py:10 templates/projects/sidebar.html:177
+#: templates/base.html:103
+#: templates/chat/chat.html:4
+#: templates/chat/chat.html.py:10
+#: templates/projects/sidebar.html:177
 msgid "Chat"
 msgstr "Chatt"
 
-#: templates/base.html:104 templates/drumbeatmail/inbox.html:4
-#: templates/drumbeatmail/inbox.html:11 templates/drumbeatmail/inbox.html:117
+#: templates/base.html:104
+#: templates/drumbeatmail/inbox.html:4
+#: templates/drumbeatmail/inbox.html:11
+#: templates/drumbeatmail/inbox.html:117
 msgid "Inbox"
 msgstr "Inkorg"
 
@@ -1458,11 +1421,13 @@ msgstr "Logga ut"
 msgid "Login"
 msgstr "Logga in"
 
-#: templates/base.html:136 templates/base.html.py:250
+#: templates/base.html:136
+#: templates/base.html.py:250
 #: templates/courses/course_sidebar.html:55
 #: templates/drumbeatmail/base.html:55
 #: templates/projects/contact_organizers.html:49
-#: templates/search/search.html:30 templates/users/profile_form_base.html:73
+#: templates/search/search.html:30
+#: templates/users/profile_form_base.html:73
 msgid "en"
 msgstr "sv"
 
@@ -1479,14 +1444,17 @@ msgid "js/script-en.js"
 msgstr "js/script-sv.js"
 
 #: templates/activity/_activity_resource.html:19
-#: templates/content/page.html:41 templates/drumbeat/abuse_reason.html:11
+#: templates/content/page.html:41
+#: templates/drumbeat/abuse_reason.html:11
 #: templates/drumbeat/report_abuse.html:10
 #: templates/drumbeat/report_received.html:10
-#: templates/drumbeatmail/inbox.html:36 templates/drumbeatmail/inbox.html:89
+#: templates/drumbeatmail/inbox.html:36
+#: templates/drumbeatmail/inbox.html:89
 #: templates/projects/sidebar.html:124
 #: templates/replies/_comment_threads.html:32
 #: templates/replies/_comment_threads.html:90
-#: templates/signups/sign_up.html:66 templates/users/sidebar.html:32
+#: templates/signups/sign_up.html:66
+#: templates/users/sidebar.html:32
 msgid "Report Abuse"
 msgstr "Rapportera Missbruk"
 
@@ -1544,8 +1512,10 @@ msgstr[1] ""
 msgid "Activity"
 msgstr "Aktivitet"
 
-#: templates/activity/base.html:18 templates/learn/learn.html:5
-#: templates/learn/learn.html.py:17 templates/learn/learn_tags.html:9
+#: templates/activity/base.html:18
+#: templates/learn/learn.html:5
+#: templates/learn/learn.html.py:17
+#: templates/learn/learn_tags.html:9
 #: templates/projects/project_clone.html:28
 #: templates/projects/project_create_overview.html:27
 #: templates/projects/project_create_review.html:26
@@ -1555,13 +1525,16 @@ msgstr "Aktivitet"
 msgid "Learn"
 msgstr "Lära"
 
-#: templates/activity/base.html:22 templates/courses/course_base.html:63
+#: templates/activity/base.html:22
+#: templates/courses/course_base.html:63
 #: templates/projects/_user_list.html:8
 #: templates/projects/project_user_list.html:7
 #: templates/projects/project_user_list.html:12
 #: templates/schools/school_edit_statistics.html:16
-#: templates/users/profile.html:21 templates/users/profile_edit.html:11
-#: templates/users/user_list.html:5 templates/users/user_list.html.py:9
+#: templates/users/profile.html:21
+#: templates/users/profile_edit.html:11
+#: templates/users/user_list.html:5
+#: templates/users/user_list.html.py:9
 #: templates/users/user_list.html:15
 msgid "People"
 msgstr "Medlemmar"
@@ -1588,14 +1561,16 @@ msgstr "Är du säker på att du vill ta bort denna aktivitet?"
 #: templates/content/_toggle_completion.html:9
 #: templates/content/confirm_delete_page.html:29
 #: templates/content/confirm_delete_page.html:31
-#: templates/content/create_page.html:32 templates/content/edit_page.html:41
+#: templates/content/create_page.html:32
+#: templates/content/edit_page.html:41
 #: templates/content/restore_version.html:34
 #: templates/courses/content_form_buttons_snip.html:6
 #: templates/courses/content_form_buttons_snip.html:9
 #: templates/courses/content_form_buttons_snip.html:11
 #: templates/dashboard/dashboard.html:75
 #: templates/drumbeat/abuse_reason.html:26
-#: templates/drumbeat/report_abuse.html:16 templates/drumbeatmail/base.html:41
+#: templates/drumbeat/report_abuse.html:16
+#: templates/drumbeatmail/base.html:41
 #: templates/projects/_wall.html:21
 #: templates/projects/contact_organizers.html:34
 #: templates/projects/project_clone.html:73
@@ -1622,7 +1597,8 @@ msgstr "Är du säker på att du vill ta bort denna aktivitet?"
 #: templates/users/settings_delete.html:29
 #: templates/users/settings_email.html:38
 #: templates/users/settings_notifications.html:70
-#: templates/users/settings_password.html:36 templates/users/signin.html:33
+#: templates/users/settings_password.html:36
+#: templates/users/signin.html:33
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -1637,17 +1613,21 @@ msgstr "Avbryt"
 msgid "Restore"
 msgstr "Återställ"
 
-#: templates/activity/index.html:20 templates/courses/content.html:32
+#: templates/activity/index.html:20
+#: templates/courses/content.html:32
 #: templates/projects/project_admin_metrics.html:25
 #: templates/projects/project_admin_metrics.html:36
-#: templates/tracker/scoreboard.html:55 templates/tracker/scoreboard.html:67
+#: templates/tracker/scoreboard.html:55
+#: templates/tracker/scoreboard.html:67
 #: templates/tracker/scoreboard.html:89
 msgid "Comments"
 msgstr "Kommentarer"
 
 #: templates/activity/reply_action_link.html:3
-#: templates/drumbeatmail/inbox.html:35 templates/drumbeatmail/inbox.html:88
-#: templates/drumbeatmail/reply.html:4 templates/drumbeatmail/reply.html:6
+#: templates/drumbeatmail/inbox.html:35
+#: templates/drumbeatmail/inbox.html:88
+#: templates/drumbeatmail/reply.html:4
+#: templates/drumbeatmail/reply.html:6
 #: templates/replies/_comment_threads.html:24
 #: templates/replies/_comment_threads.html:58
 #: templates/replies/_comment_threads.html:82
@@ -1690,8 +1670,10 @@ msgid "Give Badge"
 msgstr "Ge medalj"
 
 #: templates/badges/_give_badge_action.html:5
-#: templates/badges/badges_list.html:7 templates/badges/badges_list.html:11
-#: templates/badges/base.html:15 templates/learn/_course_card.html:30
+#: templates/badges/badges_list.html:7
+#: templates/badges/badges_list.html:11
+#: templates/badges/base.html:15
+#: templates/learn/_course_card.html:30
 #: templates/projects/_project_card.html:30
 #: templates/schools/_projectset_card.html:43
 #: templates/schools/projectset_home.html:26
@@ -1774,7 +1756,6 @@ msgid "Link to work submitted"
 msgstr "Länk till inlämnat arbete"
 
 #: templates/badges/assessment_edit.html:34
-#, fuzzy
 msgid "How well was this peer able to:"
 msgstr "Hur bra denna deltagare klarade av:"
 
@@ -1788,8 +1769,7 @@ msgstr "Vad gjorde den här deltagaren bra? Vilka råd eller förslag vill du ge
 
 #: templates/badges/assessment_edit.html:59
 #: templates/badges/peer_assessment.html:40
-msgid ""
-"Why do you feel this person deserves this badge? Any additional comments?"
+msgid "Why do you feel this person deserves this badge? Any additional comments?"
 msgstr "Varför tycker du personen förtjänar den här medaljen?"
 
 #: templates/badges/assessment_edit.html:66
@@ -1806,9 +1786,8 @@ msgid "View your Submissions"
 msgstr "Se dina inlämnade uppgifter."
 
 #: templates/badges/badge.html:19
-#, fuzzy
 msgid "View Submissions"
-msgstr "Se dina inlämnade uppgifter."
+msgstr "Se inlämnade uppgifter."
 
 #: templates/badges/badge.html:24
 msgid "Apply for Badge"
@@ -1818,7 +1797,8 @@ msgstr "Ansök om medalj"
 msgid "Award Badge to Peer"
 msgstr "Ge medalj till deltagare"
 
-#: templates/badges/badge.html:34 templates/badges/peer_assessment.html:24
+#: templates/badges/badge.html:34
+#: templates/badges/peer_assessment.html:24
 #: templates/badges/show_user_awards.html:20
 #: templates/badges/submission_edit.html:26
 #: templates/content/_toggle_completion.html:56
@@ -1845,15 +1825,18 @@ msgstr "Denna medalj kan fås från dessa Utmaningar:"
 msgid "Peers that are applying for this badge:"
 msgstr "Deltagare som ansöker om denna medalj:"
 
-#: templates/badges/badge.html:90 templates/projects/sidebar.html:314
+#: templates/badges/badge.html:90
+#: templates/projects/sidebar.html:314
 msgid "Awarded"
 msgstr "Fått"
 
-#: templates/badges/badge.html:90 templates/projects/sidebar.html:318
+#: templates/badges/badge.html:90
+#: templates/projects/sidebar.html:318
 msgid "Pending"
 msgstr "Väntar"
 
-#: templates/badges/badge_edit.html:4 templates/badges/badge_edit.html:10
+#: templates/badges/badge_edit.html:4
+#: templates/badges/badge_edit.html:10
 msgid "Edit Badge"
 msgstr "Redigera medalj"
 
@@ -1878,28 +1861,23 @@ msgid "Brief description"
 msgstr "Kort beskrivning"
 
 #: templates/badges/badge_edit_summary.html:16
-msgid ""
-"This is used both on P2PU and within the Open Badges Infrastructure (OBI)"
-msgstr ""
-"Detta används både för P2PU och för Öppen Medalj Infrastrustruktur (OBI)"
+msgid "This is used both on P2PU and within the Open Badges Infrastructure (OBI)"
+msgstr "Detta används både för P2PU och för Öppen Medalj Infrastrustruktur (OBI)"
 
 #: templates/badges/badge_edit_summary.html:21
 msgid "Requirements to get badge"
 msgstr "Kriterier för att få medalj"
 
 #: templates/badges/badge_edit_summary.html:22
-msgid ""
-"Description of any requirements that must be satisfied to award the badge."
-msgstr ""
-"Beskrivning av vilka krav som måste uppfyllas för att tilldelas medaljen."
+msgid "Description of any requirements that must be satisfied to award the badge."
+msgstr "Beskrivning av vilka krav som måste uppfyllas för att tilldelas medaljen."
 
 #: templates/badges/badge_edit_summary.html:27
 msgid "Badge Type"
 msgstr "Typ av medalj"
 
 #: templates/badges/badge_edit_summary.html:28
-msgid ""
-"The logic behind badge awarding will change depending on the badge type."
+msgid "The logic behind badge awarding will change depending on the badge type."
 msgstr "Regelsamling för tilldelning av medalj ändras efter typ av medalj."
 
 #: templates/badges/badge_edit_summary.html:36
@@ -1939,28 +1917,18 @@ msgstr "Deltagarens användarnamn:"
 #: templates/badges/profile_badges_manage.html:7
 #: templates/badges/profile_badges_manage.html:13
 #: templates/users/profile_edit.html:34
-#, fuzzy
 msgid "Share Badges"
-msgstr "Hantera medaljer"
+msgstr "Dela medaljer"
 
 #: templates/badges/profile_badges_manage.html:15
 #, python-format
-msgid ""
-"In order to allow you to share your <a href=\"%(badges_help_url)s\" target="
-"\"_blank\">badges</a> with other sites and communities, P2PU has plugged "
-"into the Mozilla Open Badge Infrastructure (OBI)."
-msgstr ""
+msgid "In order to allow you to share your <a href=\"%(badges_help_url)s\" target=\"_blank\">badges</a> with other sites and communities, P2PU has plugged into the Mozilla Open Badge Infrastructure (OBI)."
+msgstr "För att du ska kunna dela dina <a href=\"%(badges_help_url)s\" target=\"_blank\"> medaljer</a> med andra webbplatser och nätgemenskaper, har P2PU anslutit sig till Mozilla Open Badge Infrastructure (OBI)."
 
 #: templates/badges/profile_badges_manage.html:18
-#, fuzzy, python-format
-msgid ""
-"Start by sending your badges to the <a href=\"%(obi_url)s\" target=\"_blank"
-"\">Mozilla Open Badge Backpack</a> as %(email)s."
-msgstr ""
-"Skicka din e-postadress och medaljer till <a href=\"%(obi_url)s\" target ="
-"\"_blank\">Öppen Medalj Infrastruktur (OBI)</a>. Besök <a href ="
-"\"%(badges_help_url)s\" target =\"_blank\">sidan för bedömningar och "
-"medaljer</a> för mer information."
+#, python-format
+msgid "Start by sending your badges to the <a href=\"%(obi_url)s\" target=\"_blank\">Mozilla Open Badge Backpack</a> as %(email)s."
+msgstr "Skicka dina medaljer till <a href=\"%(obi_url)s\" target =\"_blank\">Mozilla Open Badge Backpack</a> som  %(email)s."
 
 #: templates/badges/profile_badges_manage.html:23
 msgid "You don't have any badges."
@@ -1968,16 +1936,16 @@ msgstr "Du saknar medaljer."
 
 #: templates/badges/profile_badges_manage.html:24
 #, python-format
-msgid ""
-"Check out the <a href=\"%(badges_url)s\">existing badges</a> you can earn!"
-msgstr ""
+msgid "Check out the <a href=\"%(badges_url)s\">existing badges</a> you can earn!"
+msgstr "Kolla in vilka <a href=\"%(badges_url)s\"> medaljer </ a> du kan få!"
 
 #: templates/badges/show_assessment.html:6
 msgid "Award Justification for"
 msgstr "Motivering för utmärkelsen"
 
 #: templates/badges/show_assessment.html:30
-#: templates/badges/submission_show.html:37 templates/messages/inbox.html:13
+#: templates/badges/submission_show.html:37
+#: templates/messages/inbox.html:13
 msgid "Received"
 msgstr "Mottaget"
 
@@ -2047,7 +2015,8 @@ msgstr "(måste vara minst"
 msgid "for the badge to be awarded)."
 msgstr "för medalj som ska ges bort)."
 
-#: templates/badges/submission_show.html:57 templates/reviews/base.html:4
+#: templates/badges/submission_show.html:57
+#: templates/reviews/base.html:4
 #: templates/reviews/base.html.py:10
 #: templates/reviews/show_project_reviews.html:6
 #: templates/reviews/show_project_reviews.html:12
@@ -2061,27 +2030,20 @@ msgstr "Inlämningar"
 
 #: templates/badges/success_msg.html:3
 #, python-format
-msgid ""
-"The badges were send succesfully! You can now see your badges at <a href="
-"\"%(obi_url)s\" target=\"_blank\">%(obi_url)s</a>. Be sure to log in using "
-"the email <strong>%(email)s</strong>."
-msgstr ""
-"Medaljer skickades! Nu kan du se dina medaljer på <a href =\"%(obi_url)s"
-"\"target=\"_blank\">%(obi_url)s</a>. Var noga med att logga in med e-post "
-"<strong> %(email)s</ strong>."
+msgid "The badges were send succesfully! You can now see your badges at <a href=\"%(obi_url)s\" target=\"_blank\">%(obi_url)s</a>. Be sure to log in using the email <strong>%(email)s</strong>."
+msgstr "Medaljer skickades! Nu kan du se dina medaljer på <a href =\"%(obi_url)s\"target=\"_blank\">%(obi_url)s</a>. Var noga med att logga in med e-post <strong> %(email)s</ strong>."
 
 #: templates/badges/emails/new_submission.txt:2
 msgid "Howdy!"
-msgstr ""
+msgstr "Hejsan!"
 
 #: templates/badges/emails/new_submission.txt:4
 msgid "Someone has just submitted work for the"
-msgstr ""
+msgstr "Någon har precis lämnat in uppgiften för"
 
 #: templates/badges/emails/new_submission.txt:4
-#, fuzzy
 msgid "Go ahead and take a look at their work here:"
-msgstr "Gå vidare och titta på deras arbete här"
+msgstr "Gå vidare och titta på deras arbete här:"
 
 #: templates/badges/emails/new_submission.txt:4
 msgid "They will love you!"
@@ -2090,7 +2052,7 @@ msgstr "Dom kommer älska dig!"
 #: templates/badges/emails/new_submission.txt:6
 #: templates/statuses/emails/wall_updated.txt:17
 msgid "Go get 'em,"
-msgstr ""
+msgstr "Gå och hämta dem,"
 
 #: templates/badges/emails/new_submission.txt:8
 msgid "The P2PU team"
@@ -2101,11 +2063,11 @@ msgstr "P2PU-teamet"
 #: templates/replies/emails/post_comment.txt:15
 #: templates/statuses/emails/wall_updated.txt:23
 msgid "Manage how often you get these delightful messages at:"
-msgstr ""
+msgstr "Hantera hur ofta du får dessa underbara meddelanden på:"
 
 #: templates/badges/emails/new_submission_subject.txt:2
 msgid "Make someone's day. Review a badge for "
-msgstr ""
+msgstr "Gör någon lycklig. Granska en medalj för"
 
 #: templates/content/_post_link_comment.html:2
 msgid "This is a link to my work:"
@@ -2192,9 +2154,7 @@ msgstr "Beskrivning i en mening"
 
 #: templates/content/base_page_form.html:42
 msgid "This description will be used as sub header below the task title."
-msgstr ""
-"Den här beskrivningen kommer att användas som underrubrik under uppgiftens "
-"titel."
+msgstr "Den här beskrivningen kommer att användas som underrubrik under uppgiftens titel."
 
 #: templates/content/base_page_form.html:53
 msgid "Collaborative work (editable by all the participants)."
@@ -2208,7 +2168,8 @@ msgid "Preview"
 msgstr "Förhandsgranska"
 
 #: templates/content/confirm_delete_page.html:11
-#: templates/content/create_page.html:11 templates/content/edit_page.html:11
+#: templates/content/create_page.html:11
+#: templates/content/edit_page.html:11
 #: templates/content/history_page.html:11
 #: templates/content/restore_version.html:10
 #: templates/content/version_page.html:12
@@ -2220,27 +2181,18 @@ msgstr "Lista på uppgifter"
 msgid "Are you sure you want to delete this task?"
 msgstr "Är du säker på att du vill ta bort denna uppgift?"
 
-#: templates/content/create_page.html:5 templates/content/create_page.html:15
+#: templates/content/create_page.html:5
+#: templates/content/create_page.html:15
 msgid "Create Task"
 msgstr "Skapa uppgift"
 
-#: templates/content/create_page.html:19 templates/content/edit_page.html:27
-msgid ""
-"Constructing a good task is crucial to the peer learning process. Tasks "
-"should have a clear goal in mind and should be sequential throughout the "
-"learning process. A task can be as big or as small and last as long as you "
-"like - it can be a planned discussion for one day, a piece of writing "
-"constructed over a week, a project that lasts for a few weeks, or a month-"
-"long endeavour that everyone works on."
-msgstr ""
-"Att konstruera en bra uppgift är avgörande för deltagares lärandeprocess. "
-"Uppgifter bör ha ett tydligt mål i åtanke och vara konsekvent genom hela "
-"lärprocessen. En uppgift kan vara så stor eller liten och pågå så länge som "
-"du vill - det kan vara en planerad diskussion för en dag, en skrivuppgift "
-"sammanställd över en vecka, ett projekt som varar några veckor, eller ett "
-"månadslångt äventyr som alla arbetar med."
+#: templates/content/create_page.html:19
+#: templates/content/edit_page.html:27
+msgid "Constructing a good task is crucial to the peer learning process. Tasks should have a clear goal in mind and should be sequential throughout the learning process. A task can be as big or as small and last as long as you like - it can be a planned discussion for one day, a piece of writing constructed over a week, a project that lasts for a few weeks, or a month-long endeavour that everyone works on."
+msgstr "Att konstruera en bra uppgift är avgörande för deltagares lärandeprocess. Uppgifter bör ha ett tydligt mål i åtanke och vara konsekvent genom hela lärprocessen. En uppgift kan vara så stor eller liten och pågå så länge som du vill - det kan vara en planerad diskussion för en dag, en skrivuppgift sammanställd över en vecka, ett projekt som varar några veckor, eller ett månadslångt äventyr som alla arbetar med."
 
-#: templates/content/edit_page.html:18 templates/content/page.html:19
+#: templates/content/edit_page.html:18
+#: templates/content/page.html:19
 #: templates/courses/content_form_snip.html:10
 #: templates/projects/project_create_tasks.html:59
 #: templates/projects/project_edit.html:8
@@ -2297,7 +2249,6 @@ msgid " was updated."
 msgstr " har uppdaterats."
 
 #: templates/content/emails/content_update.txt:4
-#, fuzzy
 msgid " contributed with a new task: "
 msgstr " skapade en ny uppgift: "
 
@@ -2310,11 +2261,11 @@ msgstr "."
 
 #: templates/content/emails/content_update.txt:9
 msgid "Check out their update and respond at:"
-msgstr ""
+msgstr "Kolla in deras uppdatering och svara på:"
 
 #: templates/content/emails/content_update.txt:11
 msgid "Booyah,"
-msgstr ""
+msgstr "Utmärkt,"
 
 #: templates/content/emails/content_update.txt:12
 #: templates/drumbeatmail/emails/direct_message.txt:9
@@ -2328,130 +2279,112 @@ msgid "The P2PU Team"
 msgstr "P2PU-teamet"
 
 #: templates/content/emails/content_update_subject.txt:2
-#, fuzzy
 msgid " made a new task for "
-msgstr " skapade en ny uppgift: "
+msgstr " skapade en ny uppgift för "
 
-#: templates/courses/content.html:25 templates/courses/course.html:22
+#: templates/courses/content.html:25
+#: templates/courses/course.html:22
 msgid "edit"
-msgstr ""
+msgstr "redigera"
 
 #: templates/courses/content_form_snip.html:22
 #: templates/courses/course_base.html:43
 msgid "Content"
-msgstr ""
+msgstr "Innehåll"
 
 #: templates/courses/content_form_snip.html:26
-msgid ""
-"You can use markdown for your content. For some help on using markdown, look "
-"<a href=\"http://daringfireball.net/projects/markdown/basics\" target="
-"\"_blank\">here</a>"
-msgstr ""
+msgid "You can use markdown for your content. For some help on using markdown, look <a href=\"http://daringfireball.net/projects/markdown/basics\" target=\"_blank\">here</a>"
+msgstr "Du kan använda förenklad kodning (eng. markdown) för ditt innehåll. För mer hjälp om hur du använder förenklad kodning, titta <a href=\"http://daringfireball.net/projects/markdown/basics\" target=\"_blank\"> här </a>"
 
 #: templates/courses/course.html:12
 msgid "You can add some information here by editing this page!</a>"
-msgstr ""
+msgstr "Du kan lägga till information här genom att redigera den här sidan!</a>"
 
 #: templates/courses/course_admin_content.html:21
-#, fuzzy
 msgid "remove"
-msgstr "Ta bort"
+msgstr "ta bort"
 
 #: templates/courses/course_admin_content.html:32
 msgid "Add more content"
-msgstr ""
+msgstr "Lägg till mer innehåll"
 
 #: templates/courses/course_admin_content.html:36
 msgid "This course doesn't have any content yet. "
-msgstr ""
+msgstr "Kursen har inte något innehåll än."
 
 #: templates/courses/course_base.html:53
-#, fuzzy
 msgid "Organize and add content"
-msgstr "Organisatör lades till!"
+msgstr "Organisera och lägg till innehåll"
 
 #: templates/courses/course_base.html:60
-#, fuzzy
 msgid "Discussion"
-msgstr "Diskussioner"
+msgstr "Diskussion"
 
 #: templates/courses/course_base.html:67
-#, fuzzy
 msgid "Settings"
-msgstr "Mina Inställningar"
+msgstr "Inställningar"
 
 #: templates/courses/course_comment_snip.html:8
 #: templates/courses/discussion_snip.html:10
 #, python-format
 msgid "%(reply_count)s replies"
-msgstr ""
+msgstr "%(reply_count)s svar"
 
 #: templates/courses/course_comment_snip.html:19
-#, fuzzy
 msgid "Reply to comment"
-msgstr "Svara på kommentaren"
+msgstr "Svara på kommentar"
 
 #: templates/courses/course_comment_snip.html:25
 #: templates/courses/course_comment_snip.html:37
 #: templates/courses/discussion_snip.html:16
 #: templates/courses/discussion_snip.html:24
-#, fuzzy
 msgid "Post comment"
 msgstr "Lämna kommentar"
 
 #: templates/courses/course_comment_snip.html:32
-#, fuzzy
 msgid "Post new comment"
-msgstr "Lämna kommentar"
+msgstr "Lämna ny kommentar"
 
 #: templates/courses/course_discussion.html:9
-msgid ""
-"This page is for general discussion of the course. Feel free to post "
-"questions, comments, ideas."
-msgstr ""
+msgid "This page is for general discussion of the course. Feel free to post questions, comments, ideas."
+msgstr "Denna sida är för allmän diskussion kring kursen. Lämna gärna frågor, kommentarer, idéer."
 
 #: templates/courses/course_people.html:9
-#, fuzzy
 msgid "Learners"
-msgstr "Lära"
+msgstr "Elever"
 
 #: templates/courses/course_people.html:19
-#: templates/projects/_user_list.html:38 templates/projects/sidebar.html:185
+#: templates/projects/_user_list.html:38
+#: templates/projects/sidebar.html:185
 #: templates/schools/school_edit_statistics.html:18
 msgid "Organizers"
 msgstr "Organisatörer"
 
 #: templates/courses/course_people.html:33
-#, fuzzy
 msgid "Add user"
-msgstr "Visa uppgifter"
+msgstr "Lägg till användare"
 
 #: templates/courses/course_settings.html:10
-msgid ""
-"This course is currently archived. Before you can make changes you need to "
-"change the course to published or draft."
-msgstr ""
+msgid "This course is currently archived. Before you can make changes you need to change the course to published or draft."
+msgstr "Denna kurs är för närvarande arkiverad. Innan du kan göra ändringar måste du ändra kursen till publicerad eller utkast."
 
 #: templates/courses/course_settings.html:13
 #: templates/courses/course_settings.html:64
-#, fuzzy
 msgid "Course status"
-msgstr "Kurser"
+msgstr "Kurs status"
 
 #: templates/courses/course_settings.html:23
 #: templates/schools/school_edit_featured.html:15
-#, fuzzy
 msgid "Course Title"
-msgstr "Kurser"
+msgstr "Kurs titel"
 
 #: templates/courses/course_settings.html:34
 msgid "Hashtag"
-msgstr ""
+msgstr "Hashtagg"
 
 #: templates/courses/course_settings.html:47
-#, fuzzy
 msgid "Upload new image"
-msgstr "Ladda upp en bild"
+msgstr "Ladda upp ny bild"
 
 #: templates/courses/course_settings.html:55
 #: templates/courses/course_sidebar.html:96
@@ -2464,13 +2397,12 @@ msgid "Description"
 msgstr "Beskrivning"
 
 #: templates/courses/course_settings.html:57
-#, fuzzy
 msgid "Update description"
-msgstr "Kort beskrivning"
+msgstr "Uppdatera beskrivning"
 
 #: templates/courses/course_settings.html:72
 msgid "Users can join this course at any time."
-msgstr ""
+msgstr "Användare kan ansluta sig till denna kurs när som helst."
 
 #: templates/courses/course_settings.html:74
 #, python-format
@@ -2479,193 +2411,173 @@ msgid ""
 "          <p>This course runs from %(start_date)s to %(end_date)s.</p>\n"
 "        "
 msgstr ""
+"\n"
+"          <p>Kursen pågår från %(start_date)s till %(end_date)s.</p>\n"
+"        "
 
 #: templates/courses/course_settings.html:80
-#, fuzzy
 msgid "Set dates"
-msgstr "Uppdateringar"
+msgstr "Ange datum"
 
 #: templates/courses/course_settings.html:83
-#, fuzzy
 msgid "Start date"
-msgstr "Starta utmaning"
+msgstr "Startdatum"
 
 #: templates/courses/course_settings.html:84
-#, fuzzy
 msgid "End date"
-msgstr "uppdaterat"
+msgstr "Slutdatum"
 
 #: templates/courses/course_settings.html:89
 #: templates/users/_openid_providers.html:19
-#: templates/users/register_openid.html:9 templates/users/signin.html:10
+#: templates/users/register_openid.html:9
+#: templates/users/signin.html:10
 msgid "or"
 msgstr "eller"
 
 #: templates/courses/course_settings.html:93
 msgid "Switch to rolling term"
-msgstr ""
+msgstr "Byt till rullande schema"
 
 #: templates/courses/course_settings.html:102
 msgid "Singup is open to anyone."
-msgstr ""
+msgstr "Registrering är öppen för alla."
 
 #: templates/courses/course_settings.html:105
-msgid ""
-"Singup is moderated. To sign up for this course you should contact one of "
-"the course organizer."
-msgstr ""
+msgid "Singup is moderated. To sign up for this course you should contact one of the course organizer."
+msgstr "Registrering är begränsad. För att anmäla dig till denna kurs bör du kontakta en av kursens organisatörer."
 
 #: templates/courses/course_settings.html:108
 msgid "Singup is closed. Only organizers can add more people."
-msgstr ""
+msgstr "Registreringen är stängd. Endast organisatörer kan lägga till fler deltagare."
 
 #: templates/courses/course_settings.html:133
-#, fuzzy
 msgid "Course languge"
-msgstr "Kurser"
+msgstr "Kursspråk"
 
 #: templates/courses/course_settings.html:135
-#, fuzzy
 msgid "Update language"
-msgstr "Språk"
+msgstr "Uppdatera språk"
 
 #: templates/courses/course_sidebar.html:20
-#, fuzzy
 msgid "Featured in"
-msgstr "Utvalda"
+msgstr "Utvald i"
 
 #: templates/courses/course_sidebar.html:31
-#, fuzzy
 msgid "Navigation"
-msgstr "Uppgifter"
+msgstr "Navigering"
 
 #: templates/courses/course_sidebar.html:55
 #, python-format
 msgid "I'm learning &quot;%(title)s&quot; @P2PU - check it: "
-msgstr ""
+msgstr "Jag lär mig om &quot;%(title)s&quot; @P2PU - kolla här: "
 
 #: templates/courses/course_sidebar.html:55
 msgid "Tweet me"
-msgstr ""
+msgstr "Twittra mig"
 
 #: templates/courses/course_sidebar.html:76
-#, fuzzy
 msgid "Start Course"
-msgstr "De senaste kurserna"
+msgstr "Starta kurs"
 
 #: templates/courses/course_sidebar.html:82
-#, fuzzy
 msgid "Leave Course"
-msgstr "De senaste kurserna"
+msgstr "Lämna kurs"
 
 #: templates/courses/course_user_snip.html:12
-#, fuzzy
 msgid "Remove user"
-msgstr "Ta bort"
+msgstr "Ta bort användare"
 
 #: templates/courses/course_user_snip.html:17
-#, fuzzy
 msgid "Make organizer"
-msgstr "Organisatör"
+msgstr "Gör till organisatör"
 
 #: templates/courses/create_course.html:16
-#, fuzzy
 msgid "Create a new course"
-msgstr "Skapa ett nytt konto"
+msgstr "Skapa en ny kurs"
 
 #: templates/courses/create_course.html:25
 msgid ""
 "\n"
 "        <h2>Ready to create a course?</h2>\n"
-"        <p>First, give your course a title--we recommend something zippy, "
-"snappy and attention-grabby.</p>\n"
+"        <p>First, give your course a title--we recommend something zippy, snappy and attention-grabby.</p>\n"
 "        <p>Next, create a \"hashtag\" or handle for your course.</p>\n"
-"        <p>Give a few more details in the \"description\" field, hit the "
-"button and voilà! You've created a P2PU course!</p>\n"
-"        <p>Need further guidance on how to make a stellar experience? Check "
-"out the <a href=\"https://p2pu.org/en/groups/make-a-course/\">\"Create a "
-"Course\"</a> materials!</p>\n"
-"        <p>Be sure to have a look at our <a href=\"/groups/list/community/"
-"\">featured</a> courses for good examples.</p>\n"
-"        <p>If you'd like help or feedback on your course, drop a line to the "
-"P2PU Community <a href=\"http://groups.google.com/group/p2pu-community\" "
-"target=\"_blank\">mailing list</a> and say 'Hi'.</p>\n"
+"        <p>Give a few more details in the \"description\" field, hit the button and voilà! You've created a P2PU course!</p>\n"
+"        <p>Need further guidance on how to make a stellar experience? Check out the <a href=\"https://p2pu.org/en/groups/make-a-course/\">\"Create a Course\"</a> materials!</p>\n"
+"        <p>Be sure to have a look at our <a href=\"/groups/list/community/\">featured</a> courses for good examples.</p>\n"
+"        <p>If you'd like help or feedback on your course, drop a line to the P2PU Community <a href=\"http://groups.google.com/group/p2pu-community\" target=\"_blank\">mailing list</a> and say 'Hi'.</p>\n"
 "      "
 msgstr ""
+"\n"
+"        <h2>Redo att skapa en kurs?</h2>\n"
+"        <p>Starta med att ange kursens tiel--vi rekommenderar något kort och intressant som fångar uppmärksamheten.</p>\n"
+"        <p>Skapa sedan en \"hashtagg\" eller benämning för din kurs.</p>\n"
+"        <p>Fyll i lite mer detaljer i \"beskrivning\" fältet, klika på knappen och voilà! Du skapade en P2PU kurs!</p>\n"
+"        <p>Behöver mer hjälp i hur en exceptionell upplevelse skapas? Kolla in <a href=\"https://p2pu.org/en/groups/make-a-course/\">\"Create a Course\"</a> materialet!</p>\n"
+"        <p>Kom ihåg att titta på våra <a href=\"/groups/list/community/\">utvalda</a> kurser för bra exempel.</p>\n"
+"        <p>Vill du ha hjälp eller återkoppling om din kurs kan du skriva en rad till P2PU Community <a href=\"http://groups.google.com/group/p2pu-community\" target=\"_blank\">e-postlistan</a> och säg 'Hej'.</p>\n"
+"      "
 
 #: templates/courses/create_course.html:40
-#, fuzzy
 msgid "Course Title:"
-msgstr "Kurser"
+msgstr "Kurs titel:"
 
 #: templates/courses/create_course.html:42
 msgid "A catchy title for the course, ex. 'Get CC Savvy'"
-msgstr ""
+msgstr "En fångande titel på kursen, t.ex. 'Bli en fena på Creative Commons'"
 
 #: templates/courses/create_course.html:46
 msgid "Hashtag:"
-msgstr ""
+msgstr "Hashtagg:"
 
 #: templates/courses/create_course.html:46
-msgid ""
-"Specify a short hashtag of up to 20 characters that should be used when "
-"sending out notifications and tweets about the course."
-msgstr ""
+msgid "Specify a short hashtag of up to 20 characters that should be used when sending out notifications and tweets about the course."
+msgstr "Skapa en kort hashtagg på upp till 20 tecken som bör användas när du skickar ut meddelanden och twittrar om kursen."
 
 #: templates/courses/create_course.html:49
 msgid "A short handle for the course, ex. 'ccsavvy'"
-msgstr ""
+msgstr "En kort benämning för kursen, t.ex. 'ccfena'"
 
 #: templates/courses/create_course.html:53
-#, fuzzy
 msgid "Description:"
-msgstr "Beskrivning"
+msgstr "Beskrivning:"
 
 #: templates/courses/create_course.html:53
-#, fuzzy
 msgid "This description is used in places where your course will be listed."
-msgstr ""
-"Den här beskrivningen kommer att användas som underrubrik under uppgiftens "
-"titel."
+msgstr "Den här beskrivningen används där kursen listas."
 
 #: templates/courses/create_course.html:55
-msgid ""
-"A brief description of what the course is about, ex. 'Learn when, where and "
-"how to use a CC license'"
-msgstr ""
+msgid "A brief description of what the course is about, ex. 'Learn when, where and how to use a CC license'"
+msgstr "En kort beskrivning av vad kursen handlar om, t.ex. 'Lär dig när, var och hur du använder en Creative Commons'"
 
 #: templates/courses/create_course.html:58
-msgid ""
-"This is the language that your course will use. It will help people "
-"searching for courses in a particular language."
-msgstr ""
+msgid "This is the language that your course will use. It will help people searching for courses in a particular language."
+msgstr "Detta språk används i din kurs. Det hjälper andra att hitta kurser på ett visst språk."
 
 #: templates/courses/create_course.html:61
-#, fuzzy
 msgid "Create my course!"
-msgstr "De senaste kurserna"
+msgstr "Skapa min kurs!"
 
 #: templates/courses/emails/course_join.txt:4
-#, fuzzy
 msgid "Howdy course organizer!"
-msgstr "Organisatör"
+msgstr "Hej kursorganisatör!"
 
 #: templates/courses/emails/course_join.txt:6
 #, python-format
 msgid "%(new_user)s signed up for %(course_title)s!"
-msgstr ""
+msgstr "%(new_user)s registrerade sig på %(course_title)s!"
 
 #: templates/courses/emails/course_join.txt:8
-#, fuzzy
 msgid ""
 "Regards\n"
 "The P2PU team"
-msgstr "P2PU-teamet"
+msgstr ""
+"Hälsningar\n"
+"P2PU-teamet"
 
 #: templates/courses/emails/course_join_subject.txt:3
 #, python-format
 msgid "[%(course_hash)s] %(username)s has signed up for %(course_title)s!"
-msgstr ""
+msgstr "[%(course_hash)s] %(username)s har registrerat sig på %(course_title)s!"
 
 #: templates/dashboard/_join_p2pu.html:9
 msgid "Join the Community"
@@ -2679,15 +2591,10 @@ msgstr "Det är gratis!"
 msgid "Learn anything, with your peers."
 msgstr "Lär dig vad som helst med dina vänner."
 
-#: templates/dashboard/_join_p2pu.html:15 templates/learn/learn.html:65
-msgid ""
-"At P2PU, people work together to learn a particular topic by completing "
-"tasks, assessing individual and group work, and providing constructive "
-"feedback."
-msgstr ""
-"På P2PU arbetar vi tillsammans för att lära oss ett visst ämne genom att "
-"göra uppgifter, bedöma individuella arbeten och grupparbeten, och ge "
-"konstruktiv återkoppling."
+#: templates/dashboard/_join_p2pu.html:15
+#: templates/learn/learn.html:65
+msgid "At P2PU, people work together to learn a particular topic by completing tasks, assessing individual and group work, and providing constructive feedback."
+msgstr "På P2PU arbetar vi tillsammans för att lära oss ett visst ämne genom att göra uppgifter, bedöma individuella arbeten och grupparbeten, och ge konstruktiv återkoppling."
 
 #: templates/dashboard/dashboard.html:9
 msgid "Your Dashboard"
@@ -2711,12 +2618,8 @@ msgid "To get started, you should "
 msgstr "För att komma igång bör du "
 
 #: templates/dashboard/dashboard.html:35
-msgid ""
-"update your profile</a>. This is a great way to tell people a bit more about "
-"yourself. Then find "
-msgstr ""
-"uppdatera din profil</a>. Det är ett bra sätt att berätta lite mer om dig "
-"själv. Hitta sen "
+msgid "update your profile</a>. This is a great way to tell people a bit more about yourself. Then find "
+msgstr "uppdatera din profil</a>. Det är ett bra sätt att berätta lite mer om dig själv. Hitta sen "
 
 #: templates/dashboard/dashboard.html:35
 msgid "people</a> and "
@@ -2735,17 +2638,16 @@ msgid "contacts you</a>."
 msgstr "kontaktar dig</a>."
 
 #: templates/dashboard/dashboard.html:55
-#, fuzzy
 msgid "Post a message..."
-msgstr "Skicka ett meddelande"
+msgstr "Skicka ett meddelande..."
 
-#: templates/dashboard/dashboard.html:64 templates/projects/_wall.html:15
-msgid ""
-"Important message (participants can not turn off notifications for important "
-"messages)."
+#: templates/dashboard/dashboard.html:64
+#: templates/projects/_wall.html:15
+msgid "Important message (participants can not turn off notifications for important messages)."
 msgstr "Viktigt meddelande (deltagare kan inte stänga av viktiga meddelanden)."
 
-#: templates/dashboard/dashboard.html:76 templates/projects/_wall.html:22
+#: templates/dashboard/dashboard.html:76
+#: templates/projects/_wall.html:22
 msgid "Post Message"
 msgstr "Skicka ett meddelande"
 
@@ -2756,7 +2658,8 @@ msgstr "Skapa profil"
 
 #: templates/dashboard/sidebar.html:25
 #: templates/relationships/emails/new_follower.txt:6
-#: templates/signups/answer_sign_up.html:32 templates/signups/sign_up.html:80
+#: templates/signups/answer_sign_up.html:32
+#: templates/signups/sign_up.html:80
 #: templates/signups/emails/new_signup_answer.txt:6
 msgid "Location:"
 msgstr "Plats:"
@@ -2765,28 +2668,33 @@ msgstr "Plats:"
 msgid "Interests"
 msgstr "Intressen"
 
-#: templates/dashboard/sidebar.html:39 templates/users/_profile_info.html:94
+#: templates/dashboard/sidebar.html:39
+#: templates/users/_profile_info.html:94
 msgid "View more interested in "
 msgstr "Visa fler intresserade av "
 
 #: templates/dashboard/sidebar.html:51
-#, fuzzy
 msgid "Wants To Learn About"
-msgstr "Vill lära mig mer om"
+msgstr "Vill lära mer om"
 
-#: templates/dashboard/sidebar.html:56 templates/users/_profile_info.html:106
+#: templates/dashboard/sidebar.html:56
+#: templates/users/_profile_info.html:106
 msgid "View more interested in learning more about "
 msgstr "Visa fler intresserade av att lära mer om "
 
-#: templates/dashboard/sidebar.html:72 templates/learn/_course_card.html:33
+#: templates/dashboard/sidebar.html:72
+#: templates/learn/_course_card.html:33
 #: templates/projects/_project_card.html:33
-#: templates/projects/_user_list.html:104 templates/projects/sidebar.html:193
+#: templates/projects/_user_list.html:104
+#: templates/projects/sidebar.html:193
 #: templates/schools/school_edit_statistics.html:20
-#: templates/users/_profile_info.html:10 templates/users/_user_card.html:17
+#: templates/users/_profile_info.html:10
+#: templates/users/_user_card.html:17
 msgid "Followers"
 msgstr "Följare"
 
-#: templates/dashboard/sidebar.html:85 templates/users/_user_card.html:21
+#: templates/dashboard/sidebar.html:85
+#: templates/users/_user_card.html:21
 msgid "Following"
 msgstr "Följer"
 
@@ -2794,11 +2702,13 @@ msgstr "Följer"
 msgid "Learning"
 msgstr "Lärande"
 
-#: templates/dashboard/sidebar.html:129 templates/users/sidebar.html:67
+#: templates/dashboard/sidebar.html:129
+#: templates/users/sidebar.html:67
 msgid "(UP)"
 msgstr "(UPP)"
 
-#: templates/dashboard/sidebar.html:132 templates/users/sidebar.html:70
+#: templates/dashboard/sidebar.html:132
+#: templates/users/sidebar.html:70
 msgid "(DOWN)"
 msgstr "(NED)"
 
@@ -2808,88 +2718,80 @@ msgstr "Lärande för alla, av alla, om nästan vad som helst"
 
 #: templates/dashboard/splash.html:22
 msgid "LEARN"
-msgstr ""
+msgstr "LÄR DIG"
 
 #: templates/dashboard/splash.html:22
 msgid " ANYTHING"
-msgstr ""
+msgstr " VAD SOM HELST"
 
 #: templates/dashboard/splash.html:23
 msgid "WITH YOUR "
-msgstr ""
+msgstr "MER DINA "
 
 #: templates/dashboard/splash.html:23
 msgid "PEERS"
-msgstr ""
+msgstr "VÄNNER"
 
 #: templates/dashboard/splash.html:24
 msgid "IT'S "
-msgstr ""
+msgstr "DET ÄR "
 
 #: templates/dashboard/splash.html:24
 msgid "ONLINE"
-msgstr ""
+msgstr "NÄTBASERAT"
 
 #: templates/dashboard/splash.html:24
 msgid " AND TOTALLY "
-msgstr ""
+msgstr " OCH HELT "
 
 #: templates/dashboard/splash.html:24
 msgid "FREE."
-msgstr ""
+msgstr "KOSTANDSFRITT."
 
 #: templates/dashboard/splash.html:25
-#, fuzzy
 msgid "At "
 msgstr "I"
 
 #: templates/dashboard/splash.html:25
 msgid ", people work together to learn a particular topic by completing"
-msgstr ""
+msgstr ", deltagare arbetar tillsammans för att lära sig ett visst ämne genom"
 
 #: templates/dashboard/splash.html:26
-#, fuzzy
 msgid "tasks, assessing individual and group work, and providing constructive"
-msgstr ""
-"arbetar vi tillsammans för att lära oss ett specifikt ämne genom "
-"arbetsuppgifter, bedömning av individuella arbeten och grupparbeten, samt ge "
-"konstruktiv återkoppling."
+msgstr "arbetsuppgifter, bedömning av individuella arbeten och grupparbeten, samt ge konstruktiv"
 
 #: templates/dashboard/splash.html:27
-#, fuzzy
 msgid "feedback."
-msgstr "Återkoppling"
+msgstr "återkoppling."
 
 #: templates/dashboard/splash.html:32
-#, fuzzy
 msgid "Find Course"
-msgstr "Kurs"
+msgstr "Hitta kurs"
 
 #: templates/dashboard/splash.html:33
 msgid "OR"
-msgstr ""
+msgstr "ELLER"
 
-#: templates/dashboard/splash.html:34 templates/projects/project_clone.html:34
+#: templates/dashboard/splash.html:34
+#: templates/projects/project_clone.html:34
 #: templates/projects/project_create_overview.html:33
 #: templates/projects/project_create_review.html:32
 #: templates/projects/project_create_tasks.html:32
 #: templates/projects/project_import.html:34
-#, fuzzy
 msgid "Create Course"
-msgstr "De senaste kurserna"
+msgstr "Skapa kurs"
 
 #: templates/dashboard/splash.html:35
 msgid " "
-msgstr ""
+msgstr " "
 
 #: templates/dashboard/splash.html:44
-#, fuzzy
 msgid "Featured Courses"
-msgstr "De senaste kurserna"
+msgstr "Utvalda kurser"
 
 #: templates/dashboard/splash.html:45
 msgid "These are staff picked courses currently running."
-msgstr ""
+msgstr "Dessa aktiva kurser är utvalda av personalen."
 
 #: templates/dashboard/splash.html:71
 msgid "P2PU Blog"
@@ -2910,13 +2812,12 @@ msgid "Abuse Report Received"
 msgstr "Anmälan om missbruk mottagen"
 
 #: templates/drumbeat/abuse_reason.html:17
-#, fuzzy
 msgid "Why are you reporting this?"
-msgstr "Vad fick dig intresserad av detta ämne?"
+msgstr "Vad är anledning till att du rapporterar detta?"
 
 #: templates/drumbeat/abuse_reason.html:21
 msgid "Reason if you selected other."
-msgstr ""
+msgstr "Anledningen om du valt annat."
 
 #: templates/drumbeat/abuse_reason.html:25
 #: templates/drumbeat/report_abuse.html:17
@@ -2924,12 +2825,8 @@ msgid "Report"
 msgstr "Anmäl"
 
 #: templates/drumbeat/report_abuse.html:14
-msgid ""
-"Would you like to report this content as objectionable? This can be anything "
-"from suspected spam to offensive content."
-msgstr ""
-"Vill du anmäla detta innehåll som tveksamt? Det kan vara vad som helst från "
-"misstänkt skräppost till stötande innehåll."
+msgid "Would you like to report this content as objectionable? This can be anything from suspected spam to offensive content."
+msgstr "Vill du anmäla detta innehåll som tveksamt? Det kan vara vad som helst från misstänkt skräppost till stötande innehåll."
 
 #: templates/drumbeat/report_received.html:12
 msgid "Thank You,"
@@ -2942,12 +2839,12 @@ msgstr "Vi har mottagit din anmälan och kommer att undersöka saken."
 #: templates/drumbeat/emails/abuse_report.txt:3
 #, python-format
 msgid "%(user)s has reported %(url)s as %(reason)s.'"
-msgstr ""
+msgstr "%(user)s har anmält %(url)s för %(reason)s.'"
 
 #: templates/drumbeat/emails/abuse_report.txt:4
 #, python-format
 msgid "More info: %(other)s"
-msgstr ""
+msgstr "Mer information: %(other)s"
 
 #: templates/drumbeat/emails/abuse_report_subject.txt:2
 msgid "Abuse Report"
@@ -2965,12 +2862,11 @@ msgstr "Meddelande"
 #: templates/drumbeatmail/base.html:36
 #: templates/projects/contact_organizers.html:29
 #: templates/users/profile_form_base.html:51
-msgid ""
-"Welcome Robots, ReCaptcha has been disabled for your convenience. Spam at "
-"will."
+msgid "Welcome Robots, ReCaptcha has been disabled for your convenience. Spam at will."
 msgstr "Hej Robotar! ReCaptcha är inaktiverad för er skull. Spamma på bara."
 
-#: templates/drumbeatmail/base.html:42 templates/messages/compose.html:8
+#: templates/drumbeatmail/base.html:42
+#: templates/messages/compose.html:8
 #: templates/projects/contact_organizers.html:36
 #: templates/users/forgot_password.html:18
 msgid "Send"
@@ -3031,24 +2927,27 @@ msgstr "Ett nytt meddelande från"
 #: templates/learn/_course_card.html:20
 #: templates/projects/_project_card.html:20
 msgid "Time to Finish"
-msgstr ""
+msgstr "Dags att slutföra"
 
 #: templates/learn/_course_card.html:21
-#: templates/projects/_project_card.html:21 templates/projects/sidebar.html:62
+#: templates/projects/_project_card.html:21
+#: templates/projects/sidebar.html:62
 msgid "hrs"
 msgstr "tim"
 
 #: templates/learn/_course_card.html:25
 #: templates/projects/_project_card.html:25
 msgid "Peers"
-msgstr ""
+msgstr "Deltagare"
 
-#: templates/learn/_learn_filters.html:6 templates/users/_profile_info.html:26
+#: templates/learn/_learn_filters.html:6
+#: templates/users/_profile_info.html:26
 #: templates/users/_profile_info.html:62
 msgid "View All"
 msgstr "Visa alla"
 
-#: templates/learn/_learn_filters.html:10 templates/schools/home.html:72
+#: templates/learn/_learn_filters.html:10
+#: templates/schools/home.html:72
 #: templates/schools/school_edit.html:23
 #: templates/schools/school_edit_featured.html:8
 #: templates/users/user_list.html:55
@@ -3056,35 +2955,33 @@ msgid "Featured"
 msgstr "Utvalda"
 
 #: templates/learn/_learn_filters.html:14
-#, fuzzy
 msgid "Community Picks"
-msgstr "Kommentarer"
+msgstr "Medlemmars urval"
 
 #: templates/learn/_learn_filters.html:17
 msgid "Staff Favorites"
-msgstr ""
+msgstr "Personalens favoriter"
 
 #: templates/learn/_learn_filters.html:21
 msgid "Fresh Additions"
-msgstr ""
+msgstr "Nytillskott"
 
-#: templates/learn/_learn_filters.html:25 templates/schools/menu.html:4
+#: templates/learn/_learn_filters.html:25
+#: templates/schools/menu.html:4
 msgid "Schools"
 msgstr "Skolor"
 
 #: templates/learn/_learn_filters.html:56
-#, fuzzy
 msgid "More Tags"
-msgstr "Mer än "
+msgstr "Fler etiketter"
 
 #: templates/learn/_learn_filters.html:69
-#, fuzzy
 msgid "Browse All Tags"
-msgstr "Få fler medaljer"
+msgstr "Bläddra bland alla ettiketter"
 
 #: templates/learn/_learn_filters.html:77
 msgid "CLEAR TAGS"
-msgstr ""
+msgstr "TA BORT ETIKETTER"
 
 #: templates/learn/_learn_filters.html:81
 #: templates/projects/project_create_overview.html:113
@@ -3093,30 +2990,28 @@ msgid "Language"
 msgstr "Språk"
 
 #: templates/learn/_learn_filters.html:97
-#, fuzzy
 msgid "Community Reviewed"
-msgstr "Kommentar borttagen!"
+msgstr "Granskad av medlemmarna"
 
 #: templates/learn/_learn_filters.html:101
 msgid "Filter"
-msgstr ""
+msgstr "Sortera"
 
 #: templates/learn/_learn_header.html:4
 msgid "Featured - Community Picks"
-msgstr ""
+msgstr "Utvalda - Medlemsvalda"
 
 #: templates/learn/_learn_header.html:6
 msgid "Featured - Showcase"
-msgstr ""
+msgstr "Utvalda - Särskilt utvalda"
 
 #: templates/learn/_learn_header.html:8
 msgid "Featured - Fresh Additions"
-msgstr ""
+msgstr "Utvalda - Nytillskott"
 
 #: templates/learn/_learn_header.html:12
-#, fuzzy
 msgid "Tags - "
-msgstr "Taggar"
+msgstr "Etiketter - "
 
 #: templates/learn/_learn_header.html:14
 msgid "All"
@@ -3125,16 +3020,17 @@ msgstr "Alla"
 #: templates/learn/_learn_projects.html:33
 msgid ""
 "\n"
-"        Seems like we don't have any courses to show you. Try looking for "
-"courses in all languages or search for a course by keyword using the search "
-"box at the top of the page.\n"
+"        Seems like we don't have any courses to show you. Try looking for courses in all languages or search for a course by keyword using the search box at the top of the page.\n"
 "      "
 msgstr ""
+"\n"
+"         Det verkar som om vi inte har några kurser som passar dig. Prova att leta efter kurser utan att begränsa språk eller sök efter en kurs med nyckelord genom att använda sökrutan högst upp på sidan.\n"
+"      "
 
-#: templates/learn/add_course.html:7 templates/learn/add_course.html.py:10
-#, fuzzy
+#: templates/learn/add_course.html:7
+#: templates/learn/add_course.html.py:10
 msgid "Add course"
-msgstr "Kurs"
+msgstr "Lägg till kurs"
 
 #: templates/learn/add_course.html:26
 #: templates/projects/project_edit_links.html:15
@@ -3143,19 +3039,16 @@ msgid "URL"
 msgstr "URL"
 
 #: templates/learn/add_course.html:27
-msgid ""
-"URL for the course, ex. 'http://mechanicalmooc.org/gentle-introduction-to-"
-"python'"
-msgstr ""
+msgid "URL for the course, ex. 'http://mechanicalmooc.org/gentle-introduction-to-python'"
+msgstr "URL till kursen, t.ex. 'http://mechanicalmooc.org/gentle-introduction-to-python'"
 
 #: templates/learn/add_course.html:29
-#, fuzzy
 msgid "Image URL"
-msgstr "Bild"
+msgstr "Bild URL"
 
 #: templates/learn/add_course.html:30
 msgid "URL for the course image, ex. 'http://so.me/url/image.png'"
-msgstr ""
+msgstr "URL till kursens bild, t.ex. 'http://so.me/url/image.png'"
 
 #: templates/learn/add_course.html:32
 #: templates/projects/project_edit_links.html:7
@@ -3169,25 +3062,23 @@ msgid "Add"
 msgstr "Lägg till"
 
 #: templates/learn/learn.html:30
-msgid ""
-"Browse great courses available on P2PU by exploring featured ones, schools, "
-"and tags."
-msgstr ""
+msgid "Browse great courses available on P2PU by exploring featured ones, schools, and tags."
+msgstr "Gå igenom tillgängliga kurser på P2PU genom att utforska de som rekommenderas, skolor och etiketter."
 
 #: templates/learn/learn.html:39
 msgid "Show More Results"
-msgstr ""
+msgstr "Visa fler resultat"
 
 #: templates/learn/learn.html:44
 msgid "Didn't find yours? How about creating one?"
-msgstr ""
+msgstr "Hittade du inte kursen? Varför inte skapa en?"
 
 #: templates/learn/learn.html:47
-#, fuzzy
 msgid "Create a Course"
-msgstr "De senaste kurserna"
+msgstr "Skapa en kurs"
 
-#: templates/messages/compose.html:4 templates/messages/inbox.html:40
+#: templates/messages/compose.html:4
+#: templates/messages/inbox.html:40
 msgid "New Message"
 msgstr "Nytt meddelande"
 
@@ -3219,18 +3110,21 @@ msgstr "ta bort"
 msgid ""
 "We love your enthusiasm for learning & for P2PU. Keep it up!\n"
 "\n"
-"But sometimes speedy responses are a sign that someone has an auto-responder "
-"on. And you wouldn't a gazillion of those in your inbox :)\n"
+"But sometimes speedy responses are a sign that someone has an auto-responder on. And you wouldn't a gazillion of those in your inbox :)\n"
 "\n"
 "Sorry - we're going to ask you to send your message again. Just in case."
 msgstr ""
+"Vi älskar din entusiasm för lärande & för P2PU. Hoppas du fortsätter! \n"
+"\n"
+"Men ibland är snabba svar ett tecken på att någon har aktiverat autosvar. Och du vill inte ha massor av dom i din inbox :)\n"
+"\n"
+"Vi ber om ursäkt - men vi ber dig skicka meddelandet igen. Bara utifall."
 
 #: templates/notifications/emails/response_bounce.txt:7
 msgid "This was the message that we received:"
-msgstr ""
+msgstr "Detta var meddelandet vi fick:"
 
 #: templates/notifications/emails/response_bounce.txt:10
-#, fuzzy
 msgid ""
 "Cheerio,\n"
 "P2PU team"
@@ -3238,64 +3132,54 @@ msgstr "P2PU-teamet"
 
 #: templates/notifications/emails/response_bounce_subject.txt:1
 msgid "P2PU calling. Are we getting your machine?"
-msgstr ""
+msgstr "P2PU anropar. Får vi kontakt?"
 
 #: templates/pages/get_involved_page.html:14
 #: templates/pages/get_involved_page.html:20
-#, fuzzy
 msgid "Get Involved."
-msgstr "Engagera dig"
+msgstr "Engagera dig."
 
 #: templates/pages/get_involved_page.html:24
-msgid ""
-"Welcome to the P2PU Community. We are a respectful and dynamic group who are "
-"excited by the idea of finding new ways to learn online. There are several "
-"different ways you can get involved in the P2PU Community."
-msgstr ""
+msgid "Welcome to the P2PU Community. We are a respectful and dynamic group who are excited by the idea of finding new ways to learn online. There are several different ways you can get involved in the P2PU Community."
+msgstr "Välkommen till P2PU gemenskapen. Vi är en respektfult och dynamisk grupp som inspireras av tanken på att hitta nya sätt att lära på nätet. Det finns flera olika sätt du kan engagera dig i P2PU gemenskapen."
 
 #: templates/pages/get_involved_page.html:27
-#, fuzzy
 msgid "Ways to get involved"
-msgstr "Engagera dig"
+msgstr "Hur du kan engagera dig"
 
 #: templates/pages/get_involved_page.html:29
 #: templates/pages/get_involved_page.html:40
 msgid "Create a course or study group"
-msgstr ""
+msgstr "Skapa en kurs eller studiecirkel"
 
 #: templates/pages/get_involved_page.html:30
 #: templates/pages/get_involved_page.html:45
 msgid "Stay up-to-date with P2PU"
-msgstr ""
+msgstr "Håll dig uppdaterad kring P2PU"
 
 #: templates/pages/get_involved_page.html:31
 #: templates/pages/get_involved_page.html:50
 msgid "Join community discussions"
-msgstr ""
+msgstr "Delta i gemenskapens diskussioner"
 
 #: templates/pages/get_involved_page.html:32
 #: templates/pages/get_involved_page.html:55
 msgid "Help us improve P2PU"
-msgstr ""
+msgstr "Hjälp oss förbättra P2PU"
 
 #: templates/pages/get_involved_page.html:33
 #: templates/pages/get_involved_page.html:60
-#, fuzzy
 msgid "Donate to P2PU"
-msgstr "Välkommen till P2PU!"
+msgstr "Donera till P2PU"
 
 #: templates/pages/get_involved_page.html:34
 #: templates/pages/get_involved_page.html:65
 msgid "Join or start a Meetup"
-msgstr ""
+msgstr "Gå med i eller starta en Meetup"
 
 #: templates/pages/get_involved_page.html:41
-msgid ""
-"P2PU is dedicated to helping people design great peer to peer courses. Don't "
-"see a group studying a topic you'd like to learn? Start your own group! Find "
-"all the help you need to get started on <a href=\"http://help.p2pu.org\" "
-"target=\"_blank\">help.p2pu.org</a>."
-msgstr ""
+msgid "P2PU is dedicated to helping people design great peer to peer courses. Don't see a group studying a topic you'd like to learn? Start your own group! Find all the help you need to get started on <a href=\"http://help.p2pu.org\" target=\"_blank\">help.p2pu.org</a>."
+msgstr "P2PU är dedikerad i att hjälpa människor utforma strålande Peer 2 Peer kurser. Saknar du en grupp för det ämne du vill lära dig? Starta din egen grupp! Hitta den hjälp du behöver för att komma igång på <a href=\"http://help.p2pu.org\" target=\"_blank\">help.p2pu.org</a>."
 
 #: templates/pages/get_involved_page.html:42
 #: templates/pages/get_involved_page.html:47
@@ -3304,98 +3188,83 @@ msgstr ""
 #: templates/pages/get_involved_page.html:62
 #: templates/pages/get_involved_page.html:67
 msgid "Start today &#187;"
-msgstr ""
+msgstr "Börja idag &#187;"
 
 #: templates/pages/get_involved_page.html:46
-msgid ""
-"You can sign up for our announcements list. This is a very low-traffic "
-"mailing list, which will keep you up-to-date with important P2PU news, like "
-"when new courses are starting."
-msgstr ""
+msgid "You can sign up for our announcements list. This is a very low-traffic mailing list, which will keep you up-to-date with important P2PU news, like when new courses are starting."
+msgstr "Du kan registrera dig för vårt nyhetsbrev. Utskicken tar bara upp viktiga P2PU nyheter, du håller dig uppdaterad och får reda på när nya kurser börjar."
 
 #: templates/pages/get_involved_page.html:51
-msgid ""
-"The main P2PU discussions happen on the p2pu-community mailing list. It’s a "
-"good forum for meeting the P2PU community and ask any questions you may have."
-msgstr ""
+msgid "The main P2PU discussions happen on the p2pu-community mailing list. It’s a good forum for meeting the P2PU community and ask any questions you may have."
+msgstr "De viktigaste P2PU diskussionerna sker på forumet för P2PU gemenskapen. Det är ett bra sätt att komma i kontakt med andra delatagare i P2PU och ställa de frågor du kan tänkas ha."
 
 #: templates/pages/get_involved_page.html:56
-msgid ""
-"Join the developer mailing list, sign up for the bug/task tracker, join the "
-"Introduction to Contributing to Lernanta study group, or view the developer "
-"documentation on github."
-msgstr ""
+msgid "Join the developer mailing list, sign up for the bug/task tracker, join the Introduction to Contributing to Lernanta study group, or view the developer documentation on github."
+msgstr "Anslut dig till nyhetsbrevet för utvecklare, anmäl dig att spåra buggar/fel, delta i studiecirkeln 'Introduction to Contributing to Lernanta' eller gå igenom utvecklingsdokumentationen på vår github."
 
 #: templates/pages/get_involved_page.html:61
-msgid ""
-"You can donate to P2PU through our partner, The Mozilla Foundation. All "
-"donations go directly to P2PU and help us continue our mission to enable "
-"high-quality low-cost education opportunities!"
-msgstr ""
+msgid "You can donate to P2PU through our partner, The Mozilla Foundation. All donations go directly to P2PU and help us continue our mission to enable high-quality low-cost education opportunities!"
+msgstr "Du kan donera till P2PU via vår partner, Mozilla Foundation. Alla donationer går direkt till P2PU och hjälper oss att fortsätta vårt uppdrag att ge utbildningsmöjligheter med hög kvalitet till låg kostnad !"
 
 #: templates/pages/get_involved_page.html:66
-msgid ""
-"There are P2PU Meetups happening all over the world, come and join us or "
-"organize one of your own."
-msgstr ""
+msgid "There are P2PU Meetups happening all over the world, come and join us or organize one of your own."
+msgstr "Det arrangeras P2PU träffar över hela världen, kom och anslut dig till oss eller organisera en egen."
 
 #: templates/pages/jobs_page.html:17
-msgid ""
-"P2PU <span class=\"highlight4\">is hiring.</span> <span class="
-"\"highlight3\">Learn anything,</span> <span class=\"highlight2\">while you "
-"work.</span>"
-msgstr ""
+msgid "P2PU <span class=\"highlight4\">is hiring.</span> <span class=\"highlight3\">Learn anything,</span> <span class=\"highlight2\">while you work.</span>"
+msgstr "P2PU <span class=\"highlight4\">anställer.</span> <span class=\"highlight3\">Lär dig vad som helst </span> <span class=\"highlight2\">medans du arbetar.</span>"
 
 #: templates/pages/jobs_page.html:20
 msgid "Open Positions"
-msgstr ""
+msgstr "Lediga tjänster"
 
 #: templates/pages/jobs_page.html:22
 msgid "Staff"
-msgstr ""
+msgstr "Personal"
 
-#: templates/pages/jobs_page.html:25 templates/pages/jobs_page.html.py:30
-#, fuzzy
+#: templates/pages/jobs_page.html:25
+#: templates/pages/jobs_page.html.py:30
 msgid "Django Developer"
-msgstr "Under utveckling"
+msgstr "Django utvecklare"
 
-#: templates/pages/jobs_page.html:27 templates/pages/jobs_page.html.py:32
-#: templates/pages/jobs_page.html:42 templates/pages/jobs_page.html.py:52
+#: templates/pages/jobs_page.html:27
+#: templates/pages/jobs_page.html.py:32
+#: templates/pages/jobs_page.html:42
+#: templates/pages/jobs_page.html.py:52
 msgid "GO!"
-msgstr ""
+msgstr "STARTA!"
 
 #: templates/pages/jobs_page.html:37
-#, fuzzy
 msgid "Intern"
-msgstr "Intressen"
+msgstr "Praktikant"
 
 #: templates/pages/jobs_page.html:40
 msgid "Marketing Intern"
-msgstr ""
+msgstr "Praktikant inom marknadsföring "
 
 #: templates/pages/jobs_page.html:47
 msgid "Volunteer"
-msgstr ""
+msgstr "Volontär"
 
 #: templates/pages/jobs_page.html:50
 msgid "Graphic Designer"
-msgstr ""
+msgstr "Formgivare"
 
 #: templates/pages/jobs_page.html:58
 msgid "Why work at p2pu?"
-msgstr ""
+msgstr "Varför jobba på p2pu?"
 
 #: templates/pages/jobs_page.html:62
 msgid "Benefits and Percks"
-msgstr ""
+msgstr "Fördelar och förmåner"
 
 #: templates/pages/jobs_page.html:67
 msgid "You can work from anywhere, P2PU is global"
-msgstr ""
+msgstr "Du kan arbeta från var som helst, P2PU finns globalt"
 
 #: templates/pages/jobs_page.html:68
 msgid "Meet our Team"
-msgstr ""
+msgstr "Träffa vår personal"
 
 #: templates/pagination/pagination_links.html:3
 msgid "previous"
@@ -3407,24 +3276,16 @@ msgstr "nästa"
 
 #: templates/projects/_project_edit_image.html:1
 #: templates/projects/project_create_overview.html:143
-#, fuzzy
 msgid "Cover Image"
-msgstr "Bild"
+msgstr "Omslagsbild"
 
 #: templates/projects/_project_edit_image.html:3
-#, fuzzy
-msgid ""
-"Upload an image file from your computer. This image is shown in search "
-"results and on the listing page."
-msgstr "Bilden visas i sökresultat och på registersidan."
+msgid "Upload an image file from your computer. This image is shown in search results and on the listing page."
+msgstr "Ladda upp en bild från din dator. Bilden visas i sökresultat och på registersidan."
 
 #: templates/projects/_project_edit_image.html:17
-msgid ""
-"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
-"243x150 pixels"
-msgstr ""
-"Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k<br/>Mått: "
-"243x150 pixlar"
+msgid "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 243x150 pixels"
+msgstr "Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k<br/>Mått: 243x150 pixlar"
 
 #: templates/projects/_task_list.html:6
 #: templates/projects/_tasks_list_wall.html:9
@@ -3451,7 +3312,8 @@ msgstr "Visa och diskutera"
 msgid "View"
 msgstr "Visa"
 
-#: templates/projects/_task_list.html:45 templates/projects/sidebar.html:253
+#: templates/projects/_task_list.html:45
+#: templates/projects/sidebar.html:253
 msgid "No tasks have been added."
 msgstr "Inga uppgifter har lagts till."
 
@@ -3560,48 +3422,23 @@ msgstr "På denna sida kan du:"
 
 #: templates/projects/detailed_description_initial_content.html:7
 #, python-format
-msgid ""
-"Describe the purpose of the %(kind)s and the learning goals for the tasks "
-"within."
-msgstr ""
-"Beskriv syftet med %(kind)s och inlärningsmål för de uppgifter som finns."
+msgid "Describe the purpose of the %(kind)s and the learning goals for the tasks within."
+msgstr "Beskriv syftet med %(kind)s och inlärningsmål för de uppgifter som finns."
 
 #: templates/projects/detailed_description_initial_content.html:8
 #, python-format
-msgid ""
-"Describe your role in this  %(kind)s. What made you interested in this "
-"topic? What do you hope to achieve by organizing this  %(kind)s? Are you an "
-"expert, enthusiastic or a novice?"
-msgstr ""
-"Beskriv din roll i denna %(kind)s. Vad fick dig intresserad av det här "
-"ämnet? Vad hoppas du uppnå genom att organisera denna %(kind)s? Är du en "
-"expert, entusiast eller nybörjare?"
+msgid "Describe your role in this  %(kind)s. What made you interested in this topic? What do you hope to achieve by organizing this  %(kind)s? Are you an expert, enthusiastic or a novice?"
+msgstr "Beskriv din roll i denna %(kind)s. Vad fick dig intresserad av det här ämnet? Vad hoppas du uppnå genom att organisera denna %(kind)s? Är du en expert, entusiast eller nybörjare?"
 
 #: templates/projects/detailed_description_initial_content.html:9
 #, python-format
-msgid ""
-"Include any prerequisite knowledge or skills needed to participate in the  "
-"%(kind)s, the intended start date, estimated pace, commitment, amount of "
-"work, and the length of time the participants can expect to work together (a "
-"few days, a few weeks, or forever)."
-msgstr ""
-"Ange förkunskaper och förmågor som behövs för att delta i %(kind)s, avsett "
-"startdatum, uppskattat tempo, engagemang, mängden arbete, och hur länge "
-"deltagarna kan förvänta sig att arbeta tillsammans (ett par dagar, några "
-"veckor, eller för alltid)."
+msgid "Include any prerequisite knowledge or skills needed to participate in the  %(kind)s, the intended start date, estimated pace, commitment, amount of work, and the length of time the participants can expect to work together (a few days, a few weeks, or forever)."
+msgstr "Ange förkunskaper och förmågor som behövs för att delta i %(kind)s, avsett startdatum, uppskattat tempo, engagemang, mängden arbete, och hur länge deltagarna kan förvänta sig att arbeta tillsammans (ett par dagar, några veckor, eller för alltid)."
 
 #: templates/projects/detailed_description_initial_content.html:10
 #, python-format
-msgid ""
-"Provided any other information that could be useful for people interested in "
-"joining the  %(kind)s. In what ways can participants expect to contribute to "
-"the creation of tasks and assessing each others\\' contributions? What will "
-"the final task comprise?"
-msgstr ""
-"Ange övrig information som kan vara användbar för medlemmar som är "
-"intresserade av att gå med i %(kind)s. På vilka sätt kan deltagarna förvänta "
-"sig att bidra till skapande av uppgifter och bedöma varandras\\' bidrag? Vad "
-"kommer slutuppgiften bestå av?"
+msgid "Provided any other information that could be useful for people interested in joining the  %(kind)s. In what ways can participants expect to contribute to the creation of tasks and assessing each others\\' contributions? What will the final task comprise?"
+msgstr "Ange övrig information som kan vara användbar för medlemmar som är intresserade av att gå med i %(kind)s. På vilka sätt kan deltagarna förvänta sig att bidra till skapande av uppgifter och bedöma varandras\\' bidrag? Vad kommer slutuppgiften bestå av?"
 
 #: templates/projects/imported_detailed_description.html:3
 #: templates/projects/project_edit.html:39
@@ -3613,11 +3450,13 @@ msgstr "Sammanfattning"
 msgid "Learning Objectives"
 msgstr "Lärandemål"
 
-#: templates/projects/project.html:21 templates/projects/sidebar.html:258
+#: templates/projects/project.html:21
+#: templates/projects/sidebar.html:258
 msgid "New Task"
 msgstr "Ny uppgift"
 
-#: templates/projects/project.html:22 templates/projects/project_edit.html:34
+#: templates/projects/project.html:22
+#: templates/projects/project_edit.html:34
 msgid "Admin"
 msgstr "Admin"
 
@@ -3638,12 +3477,8 @@ msgid "This table shows the overview of participant data. "
 msgstr "Denna tabell visar en översikt av deltagares data."
 
 #: templates/projects/project_admin_metrics.html:17
-msgid ""
-"To see follower data or non-loggedin user data, use export for a <acronym "
-"title=\"Comma Separated Values\">CSV</acronym> file."
-msgstr ""
-"För att se följares data eller icke-inloggade användardata, använd export "
-"för en <acronym title=\"Kommaseparerade Värden\">CSV</akronym> fil."
+msgid "To see follower data or non-loggedin user data, use export for a <acronym title=\"Comma Separated Values\">CSV</acronym> file."
+msgstr "För att se följares data eller icke-inloggade användardata, använd export för en <acronym title=\"Kommaseparerade Värden\">CSV</akronym> fil."
 
 #: templates/projects/project_admin_metrics.html:23
 #: templates/projects/project_admin_metrics.html:34
@@ -3666,8 +3501,7 @@ msgid "Time on Course Pages"
 msgstr "Tid på kurssidor"
 
 #: templates/projects/project_admin_metrics.html:45
-msgid ""
-"The information about course page visits is not available on the same day."
+msgid "The information about course page visits is not available on the same day."
 msgstr "Information om besök på kurssidan är inte tillgänglig samma dag."
 
 #: templates/projects/project_admin_metrics.html:46
@@ -3680,31 +3514,15 @@ msgstr "Totalt inkluderar kommentarer på logg och sidor för uppgifter."
 
 #: templates/projects/project_admin_metrics.html:48
 msgid "Total includes edits to the full description and task pages."
-msgstr ""
-"Totalt inkluderar ändringar av fullständig beskrivning och sidor för "
-"uppgifter."
+msgstr "Totalt inkluderar ändringar av fullständig beskrivning och sidor för uppgifter."
 
 #: templates/projects/project_admin_metrics.html:49
-msgid ""
-"Total time (in minutes) spent on this course's pages. The estimates are "
-"based on the timestamps of consecutive page views in the same session and "
-"default to one minute when the user does not access another page in an "
-"interval of one hour."
-msgstr ""
-"Total tid (i minuter) spenderad på kursens sidor. Uppskattningarna baseras "
-"på tidsstämplar för efterföljande sidvisningar i samma session och sätts som "
-"standard till en minut när användaren inte besökt en annan sida inom en "
-"timme."
+msgid "Total time (in minutes) spent on this course's pages. The estimates are based on the timestamps of consecutive page views in the same session and default to one minute when the user does not access another page in an interval of one hour."
+msgstr "Total tid (i minuter) spenderad på kursens sidor. Uppskattningarna baseras på tidsstämplar för efterföljande sidvisningar i samma session och sätts som standard till en minut när användaren inte besökt en annan sida inom en timme."
 
 #: templates/projects/project_admin_metrics.html:50
-msgid ""
-"The data in the csv file is more detailed and does not add the one minute "
-"estimates to the time on page so you can choose another constant to give "
-"weight to these page visits."
-msgstr ""
-"Data i csv-filen är mer detaljerad och lägger inte till den uppskattade "
-"tiden på en minut för sidan så att du kan välja en annan konstant som ger "
-"vikt åt dessa sidbesök."
+msgid "The data in the csv file is more detailed and does not add the one minute estimates to the time on page so you can choose another constant to give weight to these page visits."
+msgstr "Data i csv-filen är mer detaljerad och lägger inte till den uppskattade tiden på en minut för sidan så att du kan välja en annan konstant som ger vikt åt dessa sidbesök."
 
 #: templates/projects/project_clone.html:39
 #: templates/projects/project_create_overview.html:38
@@ -3712,7 +3530,7 @@ msgstr ""
 #: templates/projects/project_create_tasks.html:37
 #: templates/projects/project_import.html:39
 msgid "Step 1: Create Course"
-msgstr ""
+msgstr "Steg 1: Skapa kurs"
 
 #: templates/projects/project_clone.html:44
 #: templates/projects/project_clone.html:61
@@ -3724,14 +3542,13 @@ msgstr "Klona befintlig"
 #: templates/projects/project_clone.html:48
 #: templates/projects/project_create_overview.html:50
 #: templates/projects/project_import.html:47
-#, fuzzy
 msgid "Import from old site"
 msgstr "Importera från gammal sajt"
 
 #: templates/projects/project_clone.html:52
 #: templates/projects/project_import.html:51
 msgid "Step 2: Update Tasks"
-msgstr ""
+msgstr "Steg 2: Uppdatera uppgifter"
 
 #: templates/projects/project_clone.html:55
 #: templates/projects/project_create_overview.html:58
@@ -3740,15 +3557,11 @@ msgstr ""
 #: templates/projects/project_create_tasks.html:44
 #: templates/projects/project_import.html:54
 msgid "Step 3: Review and Publish"
-msgstr ""
+msgstr "Steg 3: Utvärdera och publicera"
 
 #: templates/projects/project_clone.html:62
-msgid ""
-"Create a new study group, course ... based on an existing one. Note that if "
-"you start typing the matching suggestions will be displayed."
-msgstr ""
-"Skapa en ny studiegrupp, kurs ... som bygger på en befintlig. Börja skriva "
-"något i fältet så kommer matchande förslag visas."
+msgid "Create a new study group, course ... based on an existing one. Note that if you start typing the matching suggestions will be displayed."
+msgstr "Skapa en ny studiegrupp, kurs ... som bygger på en befintlig. Börja skriva något i fältet så kommer matchande förslag visas."
 
 #: templates/projects/project_clone.html:67
 #: templates/projects/project_edit_next_steps.html:12
@@ -3764,43 +3577,35 @@ msgstr "Klona"
 #: templates/projects/project_create_overview.html:62
 #: templates/projects/project_create_review.html:39
 #: templates/projects/project_create_tasks.html:40
-#, fuzzy
 msgid "Step 2: Add Tasks"
-msgstr "Se alla uppgifter"
+msgstr "Step 2: Lägg till uppgifter"
 
 #: templates/projects/project_create_overview.html:79
 #, python-format
-msgid ""
-"Looking for advice on great course design? We have a <a href="
-"\"%(challenge_url)s\" target=\"_blank\">course</a> that can help you with "
-"the process and articles on our <a href=\"http://help.p2pu.org/kb\" >help "
-"desk</a>."
-msgstr ""
+msgid "Looking for advice on great course design? We have a <a href=\"%(challenge_url)s\" target=\"_blank\">course</a> that can help you with the process and articles on our <a href=\"http://help.p2pu.org/kb\" >help desk</a>."
+msgstr "Behöver du hjälp att skapa en kurs? Vi erbjuder en <a href=\"%(challenge_url)s\" target=\"_blank\">kurs</a> som går igenom tillvägagångssättet och informationsmaterial för vår <a href=\"http://help.p2pu.org/kb\" >helpdesk</a>."
 
 #: templates/projects/project_create_overview.html:85
 msgid "Just doing a test run? Check here to create a test course."
-msgstr ""
+msgstr "Gör du ett testförsök? Markera här för att skapa en testkurs."
 
 #: templates/projects/project_create_overview.html:87
 #: templates/projects/project_edit_summary.html:18
-msgid ""
-"Please check this if you are just testing. Your course will not generate "
-"updates or notification emails for other users."
-msgstr ""
+msgid "Please check this if you are just testing. Your course will not generate updates or notification emails for other users."
+msgstr "Markera här om du bara testar. Din kurs kommer inte skicka uppdateringar eller e-post för andra användare."
 
 #: templates/projects/project_create_overview.html:96
 #: templates/projects/project_edit_summary.html:33
 msgid "Tagline"
-msgstr ""
+msgstr "Slogan"
 
 #: templates/projects/project_create_overview.html:102
 msgid "How many hours will this course take to complete?"
-msgstr ""
+msgstr "Hur många timmar tar denna kurs att slutföra?"
 
 #: templates/projects/project_create_overview.html:126
-#, fuzzy
 msgid "Course style"
-msgstr "Kurser"
+msgstr "Kursstil"
 
 #: templates/projects/project_create_overview.html:127
 #: templates/projects/project_edit_summary.html:80
@@ -3818,79 +3623,61 @@ msgid "Term"
 msgstr "Term"
 
 #: templates/projects/project_create_overview.html:148
-msgid ""
-"Your cover image is the public face of your course - choose it wisely! "
-"Select and upload an image.<br/>We only support JPG, GIF and PNG images<br/"
-">The image should measure 243x150 pixels<br/>The maximum size is 700k"
-msgstr ""
+msgid "Your cover image is the public face of your course - choose it wisely! Select and upload an image.<br/>We only support JPG, GIF and PNG images<br/>The image should measure 243x150 pixels<br/>The maximum size is 700k"
+msgstr "Din omslagsbild visar upp din kurs publikt - välj den klokt! Välj och ladda upp en bild. <br/> Systemet stöder JPG, GIF och PNG-bilder <br/>Bilden ska vara 243x150 bildpunkter<br/> Den maximala storleken är 700kb"
 
 #: templates/projects/project_create_overview.html:156
 msgid "Go to step 2"
-msgstr ""
+msgstr "Gå till steg 2"
 
 #: templates/projects/project_create_review.html:48
-#, fuzzy
 msgid "Review your course"
-msgstr "En bedömning är skickad."
+msgstr "Utvärdera din kurs"
 
 #: templates/projects/project_create_review.html:50
-msgid ""
-"This is what your project will look like to the world when it is published. "
-"Take a second to double check your course name, tagline, image and tags."
-msgstr ""
+msgid "This is what your project will look like to the world when it is published. Take a second to double check your course name, tagline, image and tags."
+msgstr "Detta är hur ditt projekt kommer att se ut när det publiceras. Ta en stund för att dubbelkolla kursens namn, slogan, bild och etiketter."
 
 #: templates/projects/project_create_review.html:55
-msgid ""
-"Join the <a href=\"https://p2pu.org/groups/make-a-course/\">P2PU Course "
-"Design Group</a> to get feedback on your course!"
-msgstr ""
+msgid "Join the <a href=\"https://p2pu.org/groups/make-a-course/\">P2PU Course Design Group</a> to get feedback on your course!"
+msgstr "Gå med i <a href=\"https://p2pu.org/groups/make-a-course/\">P2PU Course Design Group </a> för att få feedback på din kurs!"
 
 #: templates/projects/project_create_review.html:57
-msgid ""
-"You may also wish to add a badge to your challenge! For more information on "
-"badges and how to add them to your challenge, see <a href=\"https://p2pu.org/"
-"groups/how-do-i-make-a-badge/\">this</a> course!"
-msgstr ""
+msgid "You may also wish to add a badge to your challenge! For more information on badges and how to add them to your challenge, see <a href=\"https://p2pu.org/groups/how-do-i-make-a-badge/\">this</a> course!"
+msgstr "Du kanske även vill lägga till en medalj till din utmaning! För mer information om medaljer och hur du lägger till dem i din utmaning, se <a href=\"https://p2pu.org/groups/how-do-i-make-a-badge/\">den här</ a > kursen!"
 
 #: templates/projects/project_create_review.html:59
-msgid ""
-"Once you hit the 'Finish' button, you will be taken to your course. You can "
-"still make changes to your course and add and update the tasks associated "
-"with your course."
-msgstr ""
+msgid "Once you hit the 'Finish' button, you will be taken to your course. You can still make changes to your course and add and update the tasks associated with your course."
+msgstr "När du trycker på 'Slutför', kommer du att tas till din kurs. Du kan fortfarande göra ändringar i din kurs eller lägga till och uppdatera uppgifter som hör till kursen."
 
 #: templates/projects/project_create_review.html:61
-msgid ""
-"Your course will remain a draft until you uncheck the 'Under Development' "
-"checkbox in the admin interface of your course."
-msgstr ""
+msgid "Your course will remain a draft until you uncheck the 'Under Development' checkbox in the admin interface of your course."
+msgstr "Din kurs kommer att visas som utkast tills du avmarkerar 'rutan Under utveckling' i kontrollpanelen för din kurs."
 
 #: templates/projects/project_create_review.html:63
 msgid "Finish"
-msgstr ""
+msgstr "Slutför"
 
 #: templates/projects/project_create_tasks.html:8
 #: templates/projects/project_create_tasks.html:52
-#, fuzzy
 msgid "Create tasks"
-msgstr "Skapa uppgift"
+msgstr "Skapa uppgifter"
 
 #: templates/projects/project_create_tasks.html:61
 msgid "Up"
-msgstr ""
+msgstr "Upp"
 
 #: templates/projects/project_create_tasks.html:62
 msgid "Down"
-msgstr ""
+msgstr "Ner"
 
 #: templates/projects/project_create_tasks.html:72
-#, fuzzy
 msgid "Add Task"
-msgstr "Visa uppgifter"
+msgstr "Lägg till uppgift"
 
 #: templates/projects/project_create_tasks.html:73
 msgid "Go to step 3"
-msgstr ""
+msgstr "Gå till steg 3"
 
 #: templates/projects/project_edit.html:40
 msgid "Image"
@@ -3906,7 +3693,8 @@ msgstr "Status &amp; Tidsperiod"
 msgid "Status &amp; Dates"
 msgstr "Status &amp; Datum"
 
-#: templates/projects/project_edit.html:42 templates/projects/sidebar.html:173
+#: templates/projects/project_edit.html:42
+#: templates/projects/sidebar.html:173
 msgid "Signup"
 msgstr "Registrering"
 
@@ -4018,12 +3806,8 @@ msgid "Update"
 msgstr "Uppdatera"
 
 #: templates/projects/project_edit_next_steps.html:8
-msgid ""
-"View, add and remove associated study groups and courses that a learner "
-"might want to visit after completing the challenge."
-msgstr ""
-"Visa, lägg till och ta bort relaterade utmaningar, studiegrupper och kurser "
-"som användaren kanske vill ta en titt på när utmaningen är avklarad."
+msgid "View, add and remove associated study groups and courses that a learner might want to visit after completing the challenge."
+msgstr "Visa, lägg till och ta bort relaterade utmaningar, studiegrupper och kurser som eleven kanske vill ta en titt på när utmaningen är avklarad."
 
 #: templates/projects/project_edit_next_steps.html:26
 #: templates/projects/sidebar.html:169
@@ -4080,14 +3864,12 @@ msgid "Add Organizer"
 msgstr "Lägg till en organisatör"
 
 #: templates/projects/project_edit_participants.html:78
-#, fuzzy
 msgid "Remove organizer"
-msgstr "Organisatör"
+msgstr "Ta bort organisatör"
 
 #: templates/projects/project_edit_status.html:17
 #, python-format
-msgid ""
-"Configure your %(kind)s's status so that it appears in the appropriate lists."
+msgid "Configure your %(kind)s's status so that it appears in the appropriate lists."
 msgstr "Konfigurera din %(kind)s status, så att den visas i lämpliga listor."
 
 #: templates/projects/project_edit_status.html:21
@@ -4105,25 +3887,20 @@ msgstr "Arkiverad."
 #: templates/projects/project_edit_status.html:44
 #: templates/projects/project_edit_summary.html:44
 msgid "How many hours will this challenge take to complete?"
-msgstr ""
+msgstr "Hur många timmar tar utmaningen att slutföra?"
 
 #: templates/projects/project_edit_status.html:51
 #, python-format
-msgid ""
-"Optionally, provide the period of time in which you expect the %(kind)s to "
-"be active. These dates are optional and will be displayed on the home page."
-msgstr ""
-"Valfritt, ange tid som du förväntar dig att %(kind)s ska vara aktiv. Dessa "
-"datum är frivilliga och visas på startsidan."
+msgid "Optionally, provide the period of time in which you expect the %(kind)s to be active. These dates are optional and will be displayed on the home page."
+msgstr "Valfritt, ange tid som du förväntar dig att %(kind)s ska vara aktiv. Dessa datum är frivilliga och visas på startsidan."
 
 #: templates/projects/project_edit_status.html:54
 msgid "Active from"
 msgstr "Aktiv från"
 
 #: templates/projects/project_edit_summary.html:16
-#, fuzzy
 msgid "This is a test course"
-msgstr "De senaste kurserna"
+msgstr "Det här är en testkurs"
 
 #: templates/projects/project_edit_summary.html:26
 msgid "Short and descriptive works best."
@@ -4138,18 +3915,16 @@ msgid "One paragraph description"
 msgstr "Beskrivning i en paragraf"
 
 #: templates/projects/project_edit_summary.html:54
-msgid ""
-"What's this about? What will I learn? Tell me more, but keep it to the point."
+msgid "What's this about? What will I learn? Tell me more, but keep it to the point."
 msgstr "Vad handlar det om? Vad kommer jag lära? Berätta mer för mig om ämnet."
 
 #: templates/projects/project_edit_summary.html:68
-#, fuzzy
 msgid "Skills"
-msgstr "Mina färdigheter"
+msgstr "Färdigheter"
 
 #: templates/projects/project_edit_summary.html:71
 msgid "Comma-separated list of keywords."
-msgstr "Komma-separerad lista med taggar."
+msgstr "Komma-separerad lista med nyckelord."
 
 #: templates/projects/project_edit_summary.html:79
 msgid "Type"
@@ -4160,12 +3935,8 @@ msgid "Import from Old Site"
 msgstr "Importera från gammal sajt"
 
 #: templates/projects/project_import.html:61
-msgid ""
-"Import a course from the old p2pu site. Note that if you start typing the "
-"matching suggestions will be displayed."
-msgstr ""
-"Importera en kurs från den gamla p2pu sajten. Observera att om du börjar "
-"skriva kommer matchande förslag visas."
+msgid "Import a course from the old p2pu site. Note that if you start typing the matching suggestions will be displayed."
+msgstr "Importera en kurs från den gamla p2pu sajten. Observera att om du börjar skriva kommer matchande förslag visas."
 
 #: templates/projects/project_import.html:66
 msgid "Course"
@@ -4175,11 +3946,13 @@ msgstr "Kurs"
 msgid "Import"
 msgstr "Importera"
 
-#: templates/projects/sidebar.html:30 templates/users/sidebar.html:40
+#: templates/projects/sidebar.html:30
+#: templates/users/sidebar.html:40
 msgid "Unfollow"
 msgstr "Sluta följa"
 
-#: templates/projects/sidebar.html:35 templates/users/sidebar.html:46
+#: templates/projects/sidebar.html:35
+#: templates/users/sidebar.html:46
 msgid "Follow"
 msgstr "Följ"
 
@@ -4195,11 +3968,13 @@ msgstr "Uppskattad tid för att slutföra:"
 msgid "min"
 msgstr "min"
 
-#: templates/projects/sidebar.html:71 templates/projects/sidebar.html.py:74
+#: templates/projects/sidebar.html:71
+#: templates/projects/sidebar.html.py:74
 msgid "Start Challenge"
 msgstr "Starta utmaning"
 
-#: templates/projects/sidebar.html:78 templates/projects/sidebar.html.py:86
+#: templates/projects/sidebar.html:78
+#: templates/projects/sidebar.html.py:86
 msgid "View Tasks"
 msgstr "Visa uppgifter"
 
@@ -4221,7 +3996,7 @@ msgstr "Lämna utmaning"
 
 #: templates/projects/sidebar.html:105
 msgid "View more tagged with "
-msgstr "Visa fler taggade med"
+msgstr "Visa fler märkta med"
 
 #: templates/projects/sidebar.html:114
 msgid "View Full Description"
@@ -4243,11 +4018,13 @@ msgstr "j F Y"
 msgid "Runs"
 msgstr "Körs"
 
-#: templates/projects/sidebar.html:158 templates/projects/sidebar.html:164
+#: templates/projects/sidebar.html:158
+#: templates/projects/sidebar.html:164
 msgid "Based on"
 msgstr "Baserat på"
 
-#: templates/projects/sidebar.html:181 templates/users/_user_card.html:25
+#: templates/projects/sidebar.html:181
+#: templates/users/_user_card.html:25
 msgid "Updates"
 msgstr "Uppdateringar"
 
@@ -4284,12 +4061,8 @@ msgid "Help your peers"
 msgstr "Hjälp dina vänner"
 
 #: templates/projects/sidebar.html:299
-msgid ""
-"Would you be interested in becoming a Mentor? Your peers are going to run "
-"into road blocks and they could really use your help."
-msgstr ""
-"Skulle du vara intresserad av att bli Mentor? Deltagare kommer att stöta på "
-"hinder och de kan verkligen behöva din hjälp."
+msgid "Would you be interested in becoming a Mentor? Your peers are going to run into road blocks and they could really use your help."
+msgstr "Skulle du vara intresserad av att bli Mentor? Deltagare kommer att stöta på hinder och de kan verkligen behöva din hjälp."
 
 #: templates/projects/sidebar.html:300
 msgid "Become a Mentor"
@@ -4308,62 +4081,54 @@ msgid "Go"
 msgstr "Kör"
 
 #: templates/projects/emails/admin_project_created_subject.txt:2
-#, fuzzy
 msgid "New "
-msgstr "Ny uppgift"
+msgstr "Ny"
 
 #: templates/projects/emails/contact_organizer.txt:4
 msgid "Howdy Organizer. Someone's contacted you."
-msgstr ""
+msgstr "Hej organisatör. Någon har kontaktat dig."
 
 #: templates/projects/emails/project_created.txt:4
 #, python-format
 msgid " We're excited to see you've created %(project_name|safe)s. "
-msgstr ""
+msgstr "Vi är glada över att du har skapat %(project_name|safe)s."
 
 #: templates/projects/emails/project_created.txt:6
 msgid "We\\'re here to help you design, promote and run a stellar course."
-msgstr ""
+msgstr "Vi\\ är här för att hjälpa dig att designa, marknadsföra och driva en fantastiskt kurs."
 
 #: templates/projects/emails/project_created.txt:8
-msgid ""
-"Check out these ways to connect with the community, get feedback and promote "
-"the heck out it."
-msgstr ""
+msgid "Check out these ways to connect with the community, get feedback and promote the heck out it."
+msgstr "Kolla in hur du kommer i kontakt med gemenskapen, får återkoppling och marknadsföring."
 
 #: templates/projects/emails/project_created.txt:10
-msgid ""
-"1. We have a help desk where you can bring all your questions to our staff:"
-msgstr ""
+msgid "1. We have a help desk where you can bring all your questions to our staff:"
+msgstr "1. Vi har en helpdesk där du kan ställa dina frågor till vår personal:"
 
 #: templates/projects/emails/project_created.txt:11
 msgid "2. We have a group just for course designers on the site:"
-msgstr ""
+msgstr "2. Vi har en egen grupp för kursformgivare:"
 
 #: templates/projects/emails/project_created.txt:12
-msgid ""
-"3. We have a totally sweet P2PU community mailing list where you can pitch "
-"your course:"
-msgstr ""
+msgid "3. We have a totally sweet P2PU community mailing list where you can pitch your course:"
+msgstr "3. Vi har en riktigt skön P2PU gemenskap, där du kan pitha dina kurser:"
 
 #: templates/projects/emails/project_created.txt:13
-msgid ""
-"4. To give you course more marketing TLC, get it featured in the showcase. "
-"Send us a note at help@p2pu.org."
-msgstr ""
+msgid "4. To give you course more marketing TLC, get it featured in the showcase. Send us a note at help@p2pu.org."
+msgstr "4. Ansök om att hamna under utvalda kurser för bättre marknadsföring av din kurs. Skicka meddelande till oss på help@p2pu.org."
 
 #: templates/projects/emails/project_created.txt:15
 msgid "When your course is ready, uncheck \\"
-msgstr ""
+msgstr "När kursen är klar, avmarkera \\"
 
 #: templates/projects/emails/project_created.txt:18
 msgid "Yay! The learnings!"
-msgstr ""
+msgstr "Jippi! Kunskaper!"
 
 #: templates/projects/emails/project_created_subject.txt:3
 #, python-format
 msgid " Take %(project_name)s to the next level."
-msgstr ""
+msgstr "Ta %(project_name)s till nästa nivå."
 
 #: templates/relationships/emails/new_follower.txt:2
 msgid "is now following "
@@ -4380,7 +4145,8 @@ msgid "on P2PU!"
 msgstr "på P2PU!"
 
 #: templates/relationships/emails/new_follower.txt:4
-#: templates/signups/answer_sign_up.html:31 templates/signups/sign_up.html:79
+#: templates/signups/answer_sign_up.html:31
+#: templates/signups/sign_up.html:79
 #: templates/signups/emails/new_signup_answer.txt:4
 msgid "Bio:"
 msgstr "Biografi:"
@@ -4451,18 +4217,17 @@ msgid "Are you sure you want to delete this comment?"
 msgstr "Är du säker på att du vill ta bort denna kommentar?"
 
 #: templates/replies/emails/post_comment.txt:6
-#, fuzzy, python-format
+#, python-format
 msgid "This comment was posted at %(scope)s."
-msgstr "Kommentaren togs bort."
+msgstr "Kommentaren lades till vid %(scope)s."
 
 #: templates/replies/emails/post_comment.txt:8
-#, fuzzy
 msgid "You can view this comment online at:"
-msgstr "Du kan inte redigera den här kommentaren."
+msgstr "Du kan se kommentaren här:"
 
 #: templates/replies/emails/post_comment.txt:10
 msgid "To reply to this comment by email, simply type your reply at the top!"
-msgstr ""
+msgstr "För att svara på den här kommentaren med e-post. Skriv ditt svar högst upp!"
 
 #: templates/replies/emails/post_comment_subject.txt:2
 msgid " posted a new comment at "
@@ -4470,7 +4235,7 @@ msgstr " skrev en ny kommentar i "
 
 #: templates/replies/emails/post_comment_subject.txt:2
 msgid " in "
-msgstr ""
+msgstr "i"
 
 #: templates/reviews/_project_review_action.html:3
 #: templates/reviews/_projects_reviews_list_item.html:3
@@ -4479,63 +4244,56 @@ msgid "Review"
 msgstr "Bedöm"
 
 #: templates/reviews/_projects_reviews_list_item.html:5
-#, fuzzy
 msgid "Feedback Comments:"
-msgstr "Ta bort kommentaren:"
+msgstr "Återkoppling kommentarer:"
 
 #: templates/reviews/projects_reviews_list.html:11
-#, fuzzy
 msgid "New Courses"
-msgstr "Kurser"
+msgstr "Nya kurser"
 
 #: templates/reviews/projects_reviews_list.html:12
-#, fuzzy
 msgid "Reviewed"
-msgstr "Bedöm"
+msgstr "Utvärderad"
 
 #: templates/reviews/review_project.html:13
 msgid "Feedback"
 msgstr "Återkoppling"
 
 #: templates/reviews/review_project.html:20
-#, fuzzy
 msgid "Mark as Reviewed"
-msgstr "Markera som godkänd"
+msgstr "Markera som utvärderad"
 
 #: templates/reviews/review_project.html:28
 msgid "Feature as Community Pick"
-msgstr ""
+msgstr "Välj ut som communityns bästa!"
 
 #: templates/reviews/review_project.html:37
-#, fuzzy
 msgid "Mark as Deleted (Spam)"
-msgstr "Markera som godkänd"
+msgstr "Markera som raderad (spam)"
 
 #: templates/reviews/show_project_reviews.html:16
 msgid "Review from"
 msgstr "Utvärdering av"
 
 #: templates/reviews/show_project_reviews.html:18
-#, fuzzy
 msgid "Community Reviewed!"
-msgstr "Kommentar borttagen!"
+msgstr "Utvärderad av medlemmar!"
 
 #: templates/reviews/show_project_reviews.html:19
 msgid "Deleted (Spam)!"
-msgstr ""
+msgstr "Raderad (Spam)!"
 
 #: templates/reviews/show_project_reviews.html:20
 msgid "Featured as Community Pick!"
-msgstr ""
+msgstr "Utvalda av communityn!"
 
 #: templates/reviews/show_project_reviews.html:21
 msgid "Feedback:"
 msgstr "Återkoppling:"
 
 #: templates/reviews/show_project_reviews.html:28
-#, fuzzy
 msgid "Post New Review"
-msgstr "Skicka bedömning"
+msgstr "Skicka ny utvärdering"
 
 #: templates/reviews/emails/review_submitted.txt:1
 #, python-format
@@ -4544,21 +4302,27 @@ msgid ""
 "\n"
 "%(reviewer)s had a look at %(course)s and here is what they had to say:"
 msgstr ""
+"Hej! \n"
+"\n"
+"%(reviewer)s granskade %(course)s och detta är vad de hade att säga:"
 
 #: templates/reviews/emails/review_submitted.txt:7
 #, python-format
 msgid ""
-"You can also have a look at their feedback here: https://%(domain)s"
-"%(review_url)s\n"
+"You can also have a look at their feedback here: https://%(domain)s%(review_url)s\n"
 "\n"
 "Cheerio\n"
 "The P2PU team"
 msgstr ""
+"Du kan också titta på deras återkoppling här: https://%(domain)s%(review_url)s\n"
+"\n"
+"Cheerio\n"
+"  P2PU gruppen "
 
 #: templates/reviews/emails/review_submitted_subject.txt:3
 #, python-format
 msgid "%(user)s had a look at %(course_name)s!"
-msgstr ""
+msgstr "%(user)s tog sig en titt på %(course_name)s!"
 
 #: templates/richtext/_external_link.html:2
 msgid "Work on this Task"
@@ -4577,11 +4341,8 @@ msgid "Attach File"
 msgstr "Bifoga Fil"
 
 #: templates/richtext/browse.html:25
-msgid ""
-"No files found. Upload files using the 'Link Button' dialog's 'Upload' tab."
-msgstr ""
-"Inga filer hittades. Ladda upp filer genom fliken 'ladda upp' i 'länk-"
-"knappens' dialogruta."
+msgid "No files found. Upload files using the 'Link Button' dialog's 'Upload' tab."
+msgstr "Inga filer hittades. Ladda upp filer genom fliken 'ladda upp' i 'länk-knappens' dialogruta."
 
 #: templates/schools/_projectset_card.html:25
 msgid "View Challenges"
@@ -4610,7 +4371,8 @@ msgstr "Se alla utmaningar"
 msgid "P2PU Schools:"
 msgstr "P2PU Skolor:"
 
-#: templates/schools/home.html:11 templates/schools/school_edit.html:4
+#: templates/schools/home.html:11
+#: templates/schools/school_edit.html:4
 #: templates/schools/school_edit.html:11
 msgid "Edit School"
 msgstr "Redigera skolan"
@@ -4619,7 +4381,8 @@ msgstr "Redigera skolan"
 msgid "Browse"
 msgstr "Bläddra"
 
-#: templates/schools/home.html:35 templates/schools/school_edit.html:22
+#: templates/schools/home.html:35
+#: templates/schools/school_edit.html:22
 #: templates/schools/school_edit_organizers.html:7
 msgid "School Organizers"
 msgstr "Skolledare"
@@ -4687,19 +4450,12 @@ msgid "Upload an image file from your computer:"
 msgstr "Ladda upp en bild från din dator:"
 
 #: templates/schools/school_edit_background.html:19
-msgid ""
-"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 20x60 "
-"pixels"
-msgstr ""
-"Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k<br/>Mått: "
-"20x60 pixlar"
+msgid "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 20x60 pixels"
+msgstr "Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k<br/>Mått: 20x60 pixlar"
 
 #: templates/schools/school_edit_featured.html:9
-#, fuzzy
 msgid "View, add and remove featured courses to this school."
-msgstr ""
-"Visa, lägga till och ta bort utvalda studiegrupper, kurser, ... för den här "
-"skolan."
+msgstr "Visa, lägga till och ta bort utvalda kurser för den här skolan."
 
 #: templates/schools/school_edit_groups_icon.html:12
 msgid "Replace School Small Logo"
@@ -4710,12 +4466,8 @@ msgid "Upload a School Small Logo"
 msgstr "Ladda upp en liten logga för skolan"
 
 #: templates/schools/school_edit_groups_icon.html:19
-msgid ""
-"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 41x50 "
-"pixels"
-msgstr ""
-"Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k<br/>Mått: "
-"41x50 pixlar"
+msgid "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 41x50 pixels"
+msgstr "Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k<br/>Mått: 41x50 pixlar"
 
 #: templates/schools/school_edit_logo.html:12
 msgid "Replace School Logo"
@@ -4726,32 +4478,20 @@ msgid "Upload a School Logo"
 msgstr "Ladda upp en logga för skolan"
 
 #: templates/schools/school_edit_logo.html:19
-msgid ""
-"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
-"Variable"
-msgstr ""
-"Filtyper: JPG, GIF eller PNG bara <br/> Maximal storlek: 700k <br/> "
-"Dimensioner:Variabel"
+msgid "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: Variable"
+msgstr "Filtyper: JPG, GIF eller PNG bara <br/> Maximal storlek: 700k <br/> Dimensioner:Variabel"
 
 #: templates/schools/school_edit_membership.html:8
 msgid "View, add and remove study groups, courses, ... to this school."
-msgstr ""
-"Visa, lägga till och ta bort studiegrupper, kurser, ... för den här skolan."
+msgstr "Visa, lägga till och ta bort studiegrupper, kurser, ... för den här skolan."
 
 #: templates/schools/school_edit_membership.html:13
-#, fuzzy
 msgid "Course title"
-msgstr "Kurser"
+msgstr "Kurstitel"
 
 #: templates/schools/school_edit_mentorship.html:8
-msgid ""
-"Schools that have a mentorship program can provide urls to the forms they "
-"use to signup people as mentors or mentees. Schools will be responsible for "
-"pairing up mentors with mentees and send the introduction emails."
-msgstr ""
-"Skolor med ett mentorskapsprogram kan ange en url till det formulär som "
-"används för att registrera mentorer eller adepter. Skolor ansvarar själva "
-"för att mentorer och adepter hittar varandra och får introduktionsmejlen."
+msgid "Schools that have a mentorship program can provide urls to the forms they use to signup people as mentors or mentees. Schools will be responsible for pairing up mentors with mentees and send the introduction emails."
+msgstr "Skolor med ett mentorskapsprogram kan ange en url till det formulär som används för att registrera mentorer eller adepter. Skolor ansvarar själva för att mentorer och adepter hittar varandra och får introduktionsmejlen."
 
 #: templates/schools/school_edit_mentorship.html:12
 msgid "Mentor Form Url"
@@ -4790,12 +4530,8 @@ msgid "Upload a School Site Logo"
 msgstr "Ladda upp en sajtlogga för skolan"
 
 #: templates/schools/school_edit_site_logo.html:19
-msgid ""
-"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
-"141x44 pixels"
-msgstr ""
-"Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k<br/>Mått: "
-"141x44 pixlar"
+msgid "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 141x44 pixels"
+msgstr "Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k<br/>Mått: 141x44 pixlar"
 
 #: templates/schools/school_edit_statistics.html:8
 msgid "Statistics for this school"
@@ -4831,8 +4567,7 @@ msgstr "Kommentarer till registreringen"
 
 #: templates/schools/school_edit_statistics.html:34
 msgid "The numbers on this page do not include data from the old p2pu site."
-msgstr ""
-"Siffrorna på denna sida innehåller inte data från den gamla p2pu webbplatsen."
+msgstr "Siffrorna på denna sida innehåller inte data från den gamla p2pu webbplatsen."
 
 #: templates/schools/school_edit_statistics.html:35
 msgid "Comments at the full description and task pages."
@@ -4847,23 +4582,16 @@ msgid "Comments in the discusion threads of wall activities."
 msgstr "Kommentarer i diskussionstrådar till loggaktiviteter."
 
 #: templates/schools/school_edit_statistics.html:38
-msgid ""
-"Edits to the full description and task pages. Does not include minor updates."
-msgstr ""
-"Ändrar i fullständig beskrivning och sidor för uppgiften. Inkluderar inte "
-"mindre uppdateringar."
+msgid "Edits to the full description and task pages. Does not include minor updates."
+msgstr "Ändrar i fullständig beskrivning och sidor för uppgiften. Inkluderar inte mindre uppdateringar."
 
 #: templates/schools/school_edit_statistics.html:39
 msgid "Includes both accepted and non-accepted answers."
 msgstr "Inkluderar både accepterade och ej accepterade svar."
 
 #: templates/schools/school_edit_statistics.html:40
-msgid ""
-"Comments at the sign-up pages. It includes automatic \"wellcome to the group"
-"\" replies."
-msgstr ""
-"Kommentarer på registreringssidor. Inkluderar automatiska \"välkommen till "
-"gruppen\" svar."
+msgid "Comments at the sign-up pages. It includes automatic \"wellcome to the group\" replies."
+msgstr "Kommentarer på registreringssidor. Inkluderar automatiska \"välkommen till gruppen\" svar."
 
 #: templates/schools/school_edit_styles.html:9
 msgid "Sidebar"
@@ -4874,24 +4602,16 @@ msgid "Show School Organizers."
 msgstr "Visa skolledare."
 
 #: templates/schools/school_edit_styles.html:15
-msgid ""
-"Hide the list of school organizers if you don't want it to appear on the "
-"school home page sidebar."
-msgstr ""
-"Dölj listan med skolledare om du inte vill att den ska visas i sidpanelen på "
-"skolans hemsida."
+msgid "Hide the list of school organizers if you don't want it to appear on the school home page sidebar."
+msgstr "Dölj listan med skolledare om du inte vill att den ska visas i sidpanelen på skolans hemsida."
 
 #: templates/schools/school_edit_styles.html:19
 msgid "Width"
 msgstr "Bredd"
 
 #: templates/schools/school_edit_styles.html:20
-msgid ""
-"Update this value so the school logo fits nicelly on the school home page "
-"sidebar."
-msgstr ""
-"Uppdatera det här värdet så att skolans logga passar bra i sidopanelen på "
-"skolans hemsida."
+msgid "Update this value so the school logo fits nicelly on the school home page sidebar."
+msgstr "Uppdatera det här värdet så att skolans logga passar bra i sidopanelen på skolans hemsida."
 
 #: templates/schools/school_edit_styles.html:24
 msgid "Colors"
@@ -4902,8 +4622,7 @@ msgid "Headers Color"
 msgstr "Färg på sidhuvudet"
 
 #: templates/schools/school_edit_styles.html:28
-msgid ""
-"This color will be used for the headers of pages associated with this school."
+msgid "This color will be used for the headers of pages associated with this school."
 msgstr "Färgen kommer visas i sidhuvud på sidor från denna skola."
 
 #: templates/schools/school_edit_styles.html:34
@@ -4919,21 +4638,15 @@ msgid "Background Color"
 msgstr "Bakgrundsfärg"
 
 #: templates/schools/school_edit_styles.html:42
-msgid ""
-"This color will be used as background for the non-striped sections of the "
-"pages associated with this school."
-msgstr ""
-"Färgen kommer visas som bakgrund för icke-randiga delar i sidor från denna "
-"skola."
+msgid "This color will be used as background for the non-striped sections of the pages associated with this school."
+msgstr "Färgen kommer visas som bakgrund för icke-randiga delar i sidor från denna skola."
 
 #: templates/schools/school_edit_styles.html:48
 msgid "Menus Color"
 msgstr "Menyfärg"
 
 #: templates/schools/school_edit_styles.html:49
-msgid ""
-"This color will be used as background for the menus of the pages associated "
-"with this school."
+msgid "This color will be used as background for the menus of the pages associated with this school."
 msgstr "Färgen kommer visas som bakgrund för menyer i sidor från denna skola."
 
 #: templates/schools/school_edit_styles.html:55
@@ -4953,35 +4666,27 @@ msgid "Customize CSS styles for the school home page and groups."
 msgstr "Anpassa CSS-mall för skolans hemsida och grupper."
 
 #: templates/schools/school_edit_summary.html:11
-msgid ""
-"A good name is short and descriptive. People should know what your school is "
-"about without reading the description."
-msgstr ""
-"Ett bra namn är kort och beskrivande. Medlemmar bör veta vad din skola "
-"handlar om utan att läsa beskrivningen."
+msgid "A good name is short and descriptive. People should know what your school is about without reading the description."
+msgstr "Ett bra namn är kort och beskrivande. Medlemmar bör veta vad din skola handlar om utan att läsa beskrivningen."
 
 #: templates/schools/school_edit_summary.html:17
-msgid ""
-"Shorter name displayed close to the school small icon on sidebars and "
-"footers."
-msgstr ""
-"Kortare namn som visas vid skolans lilla ikon i sidopanelen och i sidfot."
+msgid "Shorter name displayed close to the school small icon on sidebars and footers."
+msgstr "Kortare namn som visas vid skolans lilla ikon i sidopanelen och i sidfot."
 
 #: templates/schools/school_edit_summary.html:23
 msgid "This description is shown on the school page."
 msgstr "Beskrivning som visas på skolans sida."
 
 #: templates/schools/school_edit_summary.html:28
-#, fuzzy
 msgid "More details"
-msgstr "Mer än "
+msgstr "Mer information"
 
 #: templates/schools/school_edit_summary.html:29
-#, fuzzy
 msgid "Extra details are shown at the bottom of the school page."
-msgstr "Beskrivning som visas på skolans sida."
+msgstr "Extra information visas nederst på skolsidan."
 
-#: templates/search/search.html:4 templates/search/search.html.py:10
+#: templates/search/search.html:4
+#: templates/search/search.html.py:10
 msgid "Search"
 msgstr "Sök"
 
@@ -5005,17 +4710,20 @@ msgstr "Nytt svar"
 msgid "Edit answer"
 msgstr "Redigera svar"
 
-#: templates/signups/answer_sign_up.html:33 templates/signups/sign_up.html:81
+#: templates/signups/answer_sign_up.html:33
+#: templates/signups/sign_up.html:81
 #: templates/signups/emails/new_signup_answer.txt:8
 msgid "Standard Set Answer:"
 msgstr "Standardsvar:"
 
-#: templates/signups/answer_sign_up.html:36 templates/signups/sign_up.html:84
+#: templates/signups/answer_sign_up.html:36
+#: templates/signups/sign_up.html:84
 #: templates/signups/emails/new_signup_answer.txt:11
 msgid "Public Set Answer:"
 msgstr "Offentlig svar:"
 
-#: templates/signups/answer_sign_up.html:40 templates/signups/sign_up.html:89
+#: templates/signups/answer_sign_up.html:40
+#: templates/signups/sign_up.html:89
 #: templates/signups/emails/new_signup_answer.txt:15
 msgid "Between Participants Set Answer:"
 msgstr "Svar mellan deltagare:"
@@ -5025,67 +4733,55 @@ msgid "Profile"
 msgstr "Profil"
 
 #: templates/signups/answer_sign_up.html:58
-msgid ""
-"Your profile information is displayed with your signup answer. If you need, "
-"you can update the information of your profile bellow."
-msgstr ""
-"Din profilinformation visas tillsammans med ditt registreringssvar. Om du "
-"vill kan du uppdatera informationen i din profil nedan."
+msgid "Your profile information is displayed with your signup answer. If you need, you can update the information of your profile bellow."
+msgstr "Din profilinformation visas tillsammans med ditt registreringssvar. Om du vill kan du uppdatera informationen i din profil nedan."
 
 #: templates/signups/answer_sign_up.html:62
 msgid "Signup Questions"
 msgstr "Registreringsfrågor"
 
 #: templates/signups/answer_sign_up.html:63
-msgid ""
-"Please answer the following set(s) of questions if you want to become a "
-"participant or organizer."
-msgstr ""
-"Svara på följande frågor om du vill bli en deltagare eller organisatör."
+msgid "Please answer the following set(s) of questions if you want to become a participant or organizer."
+msgstr "Svara på följande frågor om du vill bli en deltagare eller organisatör."
 
-#: templates/signups/answer_sign_up.html:64 templates/signups/sign_up.html:22
+#: templates/signups/answer_sign_up.html:64
+#: templates/signups/sign_up.html:22
 msgid "Standard Set"
 msgstr "Standard"
 
-#: templates/signups/answer_sign_up.html:65 templates/signups/sign_up.html:23
-msgid ""
-"This set of signup questions is common to all study groups, courses, ... in "
-"P2PU. The answers to these questions will be public once you get accepted."
-msgstr ""
-"Dessa registreringsfrågor är generella för alla studiegrupper, kurser, ... i "
-"P2PU. Svaren på frågorna visas offentligt när du accepteras."
+#: templates/signups/answer_sign_up.html:65
+#: templates/signups/sign_up.html:23
+msgid "This set of signup questions is common to all study groups, courses, ... in P2PU. The answers to these questions will be public once you get accepted."
+msgstr "Dessa registreringsfrågor är generella för alla studiegrupper, kurser, ... i P2PU. Svaren på frågorna visas offentligt när du accepteras."
 
 #: templates/signups/answer_sign_up.html:73
-#: templates/signups/edit_signup.html:19 templates/signups/sign_up.html:28
+#: templates/signups/edit_signup.html:19
+#: templates/signups/sign_up.html:28
 msgid "Public Custom Set"
 msgstr "Offentliga svar"
 
 #: templates/signups/answer_sign_up.html:74
-#: templates/signups/edit_signup.html:20 templates/signups/sign_up.html:29
+#: templates/signups/edit_signup.html:20
+#: templates/signups/sign_up.html:29
 #, python-format
-msgid ""
-"This set of signup questions is particular to this %(kind)s. The answers to "
-"these questions will be public once you get accepted."
-msgstr ""
-"Dessa registreringsfrågor är speciellt för denna %(kind)s. Svaren på "
-"frågorna kommer visas offentligt du har accepterats."
+msgid "This set of signup questions is particular to this %(kind)s. The answers to these questions will be public once you get accepted."
+msgstr "Dessa registreringsfrågor är speciellt för denna %(kind)s. Svaren på frågorna kommer visas offentligt du har accepterats."
 
 #: templates/signups/answer_sign_up.html:82
-#: templates/signups/edit_signup.html:25 templates/signups/sign_up.html:35
+#: templates/signups/edit_signup.html:25
+#: templates/signups/sign_up.html:35
 msgid "Between Participants Custom Set"
 msgstr "Standardsvar mellan deltagare"
 
 #: templates/signups/answer_sign_up.html:83
-#: templates/signups/edit_signup.html:26 templates/signups/sign_up.html:36
+#: templates/signups/edit_signup.html:26
+#: templates/signups/sign_up.html:36
 #, python-format
-msgid ""
-"This set of signup questions is particular to this %(kind)s. The answers to "
-"these questions will be visible to all participants once you get accepted."
-msgstr ""
-"Dessa registreringsfrågor är speciellt för denna %(kind)s. Svaren på "
-"frågorna kommer visas för alla deltagare när du har accepterats."
+msgid "This set of signup questions is particular to this %(kind)s. The answers to these questions will be visible to all participants once you get accepted."
+msgstr "Dessa registreringsfrågor är speciellt för denna %(kind)s. Svaren på frågorna kommer visas för alla deltagare när du har accepterats."
 
-#: templates/signups/base.html:4 templates/signups/base.html.py:10
+#: templates/signups/base.html:4
+#: templates/signups/base.html.py:10
 #: templates/signups/sign_up.html:19
 msgid "Sign-Up"
 msgstr "Registrera"
@@ -5112,12 +4808,8 @@ msgstr "Status för registreringen"
 
 #: templates/signups/edit_signup.html:14
 #, python-format
-msgid ""
-"To allow peers to signup to the %(kind)s change the signup status to either "
-"moderated of non-moderated signup."
-msgstr ""
-"Ändra status till modererad eller icke-modererad registrering för att "
-"tillåta medlemmar att registrera sig till %(kind)s."
+msgid "To allow peers to signup to the %(kind)s change the signup status to either moderated of non-moderated signup."
+msgstr "Ändra status till modererad eller icke-modererad registrering för att tillåta medlemmar att registrera sig till %(kind)s."
 
 #: templates/signups/sign_up.html:12
 msgid "Post Answer"
@@ -5128,17 +4820,8 @@ msgid "Anyone can follow a"
 msgstr "Vem som helst kan följa en"
 
 #: templates/signups/sign_up.html:21
-msgid ""
-"on P2PU. Participating is the next level of engagement. The sign-up is a "
-"space where interested individuals can express their interest and background "
-"in the topic and commit to working with the rest of the participants. Please "
-"answer the following set(s) of questions if you want to become a participant "
-"or organizer."
-msgstr ""
-"på P2PU. Deltagande är nästa nivå av engagemang. Den som registrerar sig "
-"beskriver sitt intresse för ämnet och förbinder sig att arbeta med resten av "
-"deltagarna. Svara på följande frågor om du vill bli en deltagare eller "
-"organisatör."
+msgid "on P2PU. Participating is the next level of engagement. The sign-up is a space where interested individuals can express their interest and background in the topic and commit to working with the rest of the participants. Please answer the following set(s) of questions if you want to become a participant or organizer."
+msgstr "på P2PU. Deltagande är nästa nivå av engagemang. Den som registrerar sig beskriver sitt intresse för ämnet och förbinder sig att arbeta med resten av deltagarna. Svara på följande frågor om du vill bli en deltagare eller organisatör."
 
 #: templates/signups/sign_up.html:42
 msgid "Answers"
@@ -5178,77 +4861,72 @@ msgid " submitted a new answer at the sign-up page."
 msgstr " lämnade in ett nytt svar på registreringssidan."
 
 #: templates/statuses/emails/wall_updated.txt:3
-#, fuzzy
 msgid " update."
-msgstr "uppdaterat"
+msgstr " uppdatera."
 
 #: templates/statuses/emails/wall_updated.txt:6
 #, python-format
 msgid " Update from the flight deck: %(username)s posted an urgent message:"
-msgstr ""
+msgstr "Uppdatering från flygdäcket: %(username) skickade ett viktigt meddelande:"
 
 #: templates/statuses/emails/wall_updated.txt:8
 #, python-format
 msgid " Update from the flight deck: %(username)s made an update:"
-msgstr ""
+msgstr "Uppdatering från flygdäcket: %(username)s gjorde en uppdatering"
 
 #: templates/statuses/emails/wall_updated.txt:13
 msgid "See what they said at:"
-msgstr ""
+msgstr "Se vad de sa vid:"
 
 #: templates/statuses/emails/wall_updated.txt:15
-msgid ""
-"You can reply to this comment by email! Just type your reply at the top."
-msgstr ""
+msgid "You can reply to this comment by email! Just type your reply at the top."
+msgstr "Du kan svara på den här kommentaren med e-post! Skriv bara ditt svar högst upp."
 
 #: templates/statuses/emails/wall_updated.txt:21
-msgid ""
-"This message was marked as important by an organizer. Participants can not "
-"turn off notifications for important updates."
-msgstr ""
-"Det här meddelandet har markerats som viktigt av en organisatör. Deltagare "
-"kan inte stänga av meddelanden om viktiga uppdateringar."
+msgid "This message was marked as important by an organizer. Participants can not turn off notifications for important updates."
+msgstr "Det här meddelandet har markerats som viktigt av en organisatör. Deltagare kan inte stänga av meddelanden om viktiga uppdateringar."
 
 #: templates/statuses/emails/wall_updated_subject.txt:2
 msgid " made a comment in your course."
-msgstr ""
+msgstr "gjorde en kommentar i din kurs."
 
-#: templates/tracker/scoreboard.html:4 templates/tracker/scoreboard.html:16
+#: templates/tracker/scoreboard.html:4
+#: templates/tracker/scoreboard.html:16
 #: templates/tracker/scoreboard.html:21
 msgid "Scoreboard"
 msgstr "Resultatlista"
 
 #: templates/tracker/scoreboard.html:50
 msgid "Users Registered this Month"
-msgstr ""
+msgstr "Användare registrerade den här månaden"
 
 #: templates/tracker/scoreboard.html:54
-#, fuzzy
 msgid "User"
-msgstr "Användarnamn"
+msgstr "Användare"
 
-#: templates/tracker/scoreboard.html:56 templates/tracker/scoreboard.html:78
+#: templates/tracker/scoreboard.html:56
+#: templates/tracker/scoreboard.html:78
 #: templates/tracker/scoreboard.html:90
 msgid "Joins"
-msgstr ""
+msgstr "Nya medlemmar"
 
 #: templates/tracker/scoreboard.html:62
 msgid "Comments Posted at Groups this Month"
-msgstr ""
+msgstr "Kommentarer skickade till grupper den här månaden."
 
-#: templates/tracker/scoreboard.html:66 templates/tracker/scoreboard.html:77
+#: templates/tracker/scoreboard.html:66
+#: templates/tracker/scoreboard.html:77
 #: templates/tracker/scoreboard.html:88
-#, fuzzy
 msgid "Group"
-msgstr "Grupper"
+msgstr "Grupp"
 
 #: templates/tracker/scoreboard.html:73
 msgid "Joins to Groups this Month"
-msgstr ""
+msgstr "Nya medlemmar i grupper den här månaden."
 
 #: templates/tracker/scoreboard.html:84
 msgid "Groups Created this Month"
-msgstr ""
+msgstr "Grupper skapade den här månaden."
 
 #: templates/users/_openid_providers.html:12
 msgid "Sign In with your Google account"
@@ -5285,12 +4963,8 @@ msgid "About Me"
 msgstr "Om mig"
 
 #: templates/users/_profile_edit.html:30
-msgid ""
-"Please describe your skills, interest, and the things you will want to "
-"learn, by providing a comma-separated list of tags."
-msgstr ""
-"Beskriv vad du kan, är intresserad av och vad du vill lära dig mer om i en "
-"kommaseparerad lista med taggar."
+msgid "Please describe your skills, interest, and the things you will want to learn, by providing a comma-separated list of tags."
+msgstr "Beskriv vad du kan, är intresserad av och vad du vill lära dig mer om i en kommaseparerad lista med etiketter."
 
 #: templates/users/_profile_edit.html:35
 msgid "Skilled in"
@@ -5309,25 +4983,16 @@ msgid "Current Profile Image"
 msgstr "Aktuell profilbild"
 
 #: templates/users/_profile_edit_image.html:11
-msgid ""
-"Upload an image file from your computer to replace your current profile "
-"image:"
-msgstr ""
-"Ladda upp en bild från din dator som ska ersätta din nuvarande profilbild:"
+msgid "Upload an image file from your computer to replace your current profile image:"
+msgstr "Ladda upp en bild från din dator som ska ersätta din nuvarande profilbild:"
 
 #: templates/users/_profile_edit_image.html:13
-msgid ""
-"Personalize your profile image by uploading an image file from your computer:"
-msgstr ""
-"Gör din profilbild personlig genom att ladda upp en bild från din dator:"
+msgid "Personalize your profile image by uploading an image file from your computer:"
+msgstr "Gör din profilbild personlig genom att ladda upp en bild från din dator:"
 
 #: templates/users/_profile_edit_image.html:28
-msgid ""
-"File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
-"240x240 pixels"
-msgstr ""
-"Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k <br/>Mått: "
-"240x240 pixlar"
+msgid "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 240x240 pixels"
+msgstr "Filtyper: endast JPG, GIF eller PNG<br/>Maximal storlek: 700k <br/>Mått: 240x240 pixlar"
 
 #: templates/users/_profile_info.html:13
 msgid "Followings"
@@ -5346,9 +5011,8 @@ msgid "Latest Badges"
 msgstr "De senaste medaljerna"
 
 #: templates/users/_profile_info.html:61
-#, fuzzy
 msgid "Share your badges"
-msgstr "Få fler medaljer"
+msgstr "Dela dina medaljer"
 
 #: templates/users/_profile_info.html:78
 msgid "My Skills"
@@ -5370,16 +5034,20 @@ msgstr "Detta vill jag lära mig mer om"
 msgid "Forgot Your Password?"
 msgstr "Har du glömt ditt lösenord?"
 
-#: templates/users/forgot_password.html:8 templates/users/signin.html:20
+#: templates/users/forgot_password.html:8
+#: templates/users/signin.html:20
 msgid "Forgot your password?"
 msgstr "Har du glömt ditt lösenord?"
 
-#: templates/users/forgot_password.html:13 templates/users/signin.html:15
+#: templates/users/forgot_password.html:13
+#: templates/users/signin.html:15
 msgid "Username or Email"
 msgstr "Användarnamn eller e-postadress"
 
-#: templates/users/forgot_password.html:22 templates/users/login_openid.html:5
-#: templates/users/signin.html:5 templates/users/signin.html.py:10
+#: templates/users/forgot_password.html:22
+#: templates/users/login_openid.html:5
+#: templates/users/signin.html:5
+#: templates/users/signin.html.py:10
 #: templates/users/signin.html:32
 msgid "Sign In"
 msgstr "Logga In"
@@ -5421,17 +5089,15 @@ msgid "Password Reset"
 msgstr "Återställ lösenord"
 
 #: templates/users/forgot_password_done.html:10
-msgid ""
-"Instructions for resetting your password were sent to your email address."
-msgstr ""
-"Instruktioner för att återställa ditt lösenord har skickats till din e-"
-"postadress."
+msgid "Instructions for resetting your password were sent to your email address."
+msgstr "Instruktioner för att återställa ditt lösenord har skickats till din e-postadress."
 
 #: templates/users/login_openid.html:11
 msgid "Sign In with OpenID"
 msgstr "Logga in med OpenID"
 
-#: templates/users/login_openid.html:11 templates/users/signin.html:10
+#: templates/users/login_openid.html:11
+#: templates/users/signin.html:10
 msgid "create an account"
 msgstr "skapa ett konto"
 
@@ -5443,7 +5109,8 @@ msgstr "Aktivitet från användares profil"
 msgid "Activity from user's dashboard"
 msgstr "Aktivitet från användares kontrollpanel"
 
-#: templates/users/profile.html:27 templates/users/profile_edit.html:5
+#: templates/users/profile.html:27
+#: templates/users/profile_edit.html:5
 #: templates/users/profile_edit.html:19
 msgid "Edit Profile"
 msgstr "Redigera profilen"
@@ -5461,7 +5128,8 @@ msgstr "Allmän information"
 msgid "Notifications"
 msgstr "Meddelanden"
 
-#: templates/users/profile_edit.html:31 templates/users/settings_email.html:6
+#: templates/users/profile_edit.html:31
+#: templates/users/settings_email.html:6
 #: templates/users/settings_email.html:12
 msgid "Update Email"
 msgstr "Uppdatera e-postadressen"
@@ -5480,38 +5148,26 @@ msgid "Delete Account"
 msgstr "Radera kontot"
 
 #: templates/users/profile_edit_links.html:13
-msgid ""
-"Add links to your blog, homepage, twitter profile, github repository etc. "
-"These links will appear on your profile."
-msgstr ""
-"Lägg till länkar till din blogg, hemsida, Twitter-profil, github arkiv etc. "
-"Länkarna visas sedan i din profil."
+msgid "Add links to your blog, homepage, twitter profile, github repository etc. These links will appear on your profile."
+msgstr "Lägg till länkar till din blogg, hemsida, Twitter-profil, github arkiv etc. Länkarna visas sedan i din profil."
 
 #: templates/users/profile_edit_links_edit.html:9
-msgid ""
-"Edit links to your blog, homepage, twitter profile, github repository etc. "
-"These links will appear on your profile."
-msgstr ""
-"Redigera länkar till din blogg, hemsida, Twitter-profil, github arkiv etc. "
-"Länkarna visas sedan i din profil."
+msgid "Edit links to your blog, homepage, twitter profile, github repository etc. These links will appear on your profile."
+msgstr "Redigera länkar till din blogg, hemsida, Twitter-profil, github arkiv etc. Länkarna visas sedan i din profil."
 
 #: templates/users/profile_edit_openids.html:13
-msgid ""
-"Add openid urls to login to your account. If you do not have any openids you "
-"can access your account with username and password."
-msgstr ""
-"Lägg till OpenID url'er för att logga in på ditt konto. Om du inte har någon "
-"OpenID kan du komma åt ditt konto med användarnamn och lösenord."
+msgid "Add openid urls to login to your account. If you do not have any openids you can access your account with username and password."
+msgstr "Lägg till OpenID url'er för att logga in på ditt konto. Om du inte har någon OpenID kan du komma åt ditt konto med användarnamn och lösenord."
 
 #: templates/users/profile_edit_openids.html:25
-#: templates/users/register.html:13 templates/users/signin.html:36
+#: templates/users/register.html:13
+#: templates/users/signin.html:36
 msgid "OpenID"
 msgstr "OpenID"
 
 #: templates/users/profile_form_base.html:16
 msgid "A name that will identify you to other users. This is optional."
-msgstr ""
-"Ett namn som identifierar dig för andra användare. Detta är frivilligt."
+msgstr "Ett namn som identifierar dig för andra användare. Detta är frivilligt."
 
 #: templates/users/profile_form_base.html:22
 msgid "Your public profile:"
@@ -5532,9 +5188,8 @@ msgstr "Krävs för att skicka meddelanden om ditt P2PU-konto."
 
 #: templates/users/profile_form_base.html:33
 #: templates/users/settings_email.html:29
-#, fuzzy
 msgid "Re-enter Email Address"
-msgstr "E-postadress"
+msgstr "E-postadress igen"
 
 #: templates/users/profile_form_base.html:55
 msgid "By creating an account on"
@@ -5562,15 +5217,15 @@ msgstr "användarvillkor"
 
 #: templates/users/profile_form_base.html:55
 msgid "By default all content you create on this site is publicly viewable."
-msgstr ""
-"Som standard är allt innehåll som du skapar på denna webbplats offentligt "
-"tillgänglig."
+msgstr "Som standard är allt innehåll som du skapar på denna webbplats offentligt tillgänglig."
 
-#: templates/users/register.html:5 templates/users/register_openid.html:3
+#: templates/users/register.html:5
+#: templates/users/register_openid.html:3
 msgid "Sign Up"
 msgstr "Registrera"
 
-#: templates/users/register.html:7 templates/users/register_openid.html:9
+#: templates/users/register.html:7
+#: templates/users/register_openid.html:9
 msgid "Create a New Account"
 msgstr "Skapa ett nytt konto"
 
@@ -5582,21 +5237,23 @@ msgstr "Skapa ett konto"
 msgid "or sign up using"
 msgstr "eller registrera dig genom"
 
-#: templates/users/register.html:18 templates/users/settings_password.html:6
+#: templates/users/register.html:18
+#: templates/users/settings_password.html:6
 #: templates/users/settings_password.html:12
-#: templates/users/settings_password.html:20 templates/users/signin.html:20
+#: templates/users/settings_password.html:20
+#: templates/users/signin.html:20
 msgid "Password"
 msgstr "Lösenord"
 
-#: templates/users/register.html:22 templates/users/settings_password.html:27
+#: templates/users/register.html:22
+#: templates/users/settings_password.html:27
 msgid "Confirm password"
 msgstr "Bekräfta lösenord"
 
-#: templates/users/register.html:27 templates/users/settings_password.html:14
-msgid ""
-"Passwords must be at least 8 characters and contain numbers and letters."
-msgstr ""
-"Lösenord måste vara minst 8 tecken och innehålla både siffror och bokstäver."
+#: templates/users/register.html:27
+#: templates/users/settings_password.html:14
+msgid "Passwords must be at least 8 characters and contain numbers and letters."
+msgstr "Lösenord måste vara minst 8 tecken och innehålla både siffror och bokstäver."
 
 #: templates/users/register_openid.html:9
 msgid "sign in"
@@ -5608,24 +5265,16 @@ msgid "Delete Your Account"
 msgstr "Radera ditt konto"
 
 #: templates/users/settings_delete.html:13
-msgid ""
-"Are you sure you would like to delete your account? Be aware that you will "
-"not be able to login again to this account after you delete it."
-msgstr ""
-"Är du säker på att du vill radera ditt konto? Observera att du inte kan "
-"logga in igen med detta konto efter att du har tagit bort det."
+msgid "Are you sure you would like to delete your account? Be aware that you will not be able to login again to this account after you delete it."
+msgstr "Är du säker på att du vill radera ditt konto? Observera att du inte kan logga in igen med detta konto efter att du har tagit bort det."
 
 #: templates/users/settings_delete.html:15
-msgid ""
-"You are currently the only organizer of the following non-archived study "
-"groups, courses ..."
-msgstr ""
-"Du är för närvarande den enda arrangören av följande icke-arkiverade "
-"studiegrupper, kurser ..."
+msgid "You are currently the only organizer of the following non-archived study groups, courses ..."
+msgstr "Du är för närvarande den enda arrangören av följande icke-arkiverade studiegrupper, kurser ..."
 
 #: templates/users/settings_email.html:15
 msgid "Please confirm your email address"
-msgstr ""
+msgstr "Var vänlig bekräfta att det är din e-postadress."
 
 #: templates/users/settings_notifications.html:6
 msgid "Notification Settings"
@@ -5644,17 +5293,12 @@ msgid "Someone starts following me."
 msgstr "Någon börjar följa mig."
 
 #: templates/users/settings_notifications.html:22
-msgid ""
-"Someone starts following one of the study groups, courses, ... that I am "
-"organizing."
+msgid "Someone starts following one of the study groups, courses, ... that I am organizing."
 msgstr "Någon har börjat följa en studiegrupp, kurs, ... som jag organiserar."
 
 #: templates/users/settings_notifications.html:28
-msgid ""
-"Someone posts a submission for the badges of one of the challenges I adopted."
-msgstr ""
-"Någon skickar en inlämning för att få medaljer från en utmaning jag har "
-"antagit."
+msgid "Someone posts a submission for the badges of one of the challenges I adopted."
+msgstr "Någon skickar en inlämning för att få medaljer från en utmaning jag har antagit."
 
 #: templates/users/settings_notifications.html:32
 msgid "An organizer posts or replies to a message on the wall of:"
@@ -5665,33 +5309,23 @@ msgid "A participant posts or replies to a message on the wall of:"
 msgstr "En deltagare gör inlägg eller svarar på ett meddelande i loggen:"
 
 #: templates/users/settings_notifications.html:47
-msgid ""
-"An organizer creates, edits, or posts new comments on a task or page of:"
-msgstr ""
-"En organisatör skapar, redigerar, eller gör nya kommentarer till en uppgift "
-"eller sida i:"
+msgid "An organizer creates, edits, or posts new comments on a task or page of:"
+msgstr "En organisatör skapar, redigerar, eller gör nya kommentarer till en uppgift eller sida i:"
 
 #: templates/users/settings_notifications.html:54
-msgid ""
-"A participant creates, edits, or posts new comments on a task or page of:"
-msgstr ""
-"En deltagare skapar, redigerar, eller gör nya kommentarer till en uppgift "
-"eller sida i:"
+msgid "A participant creates, edits, or posts new comments on a task or page of:"
+msgstr "En deltagare skapar, redigerar, eller gör nya kommentarer till en uppgift eller sida i:"
 
 #: templates/users/settings_notifications.html:63
-#, fuzzy
-msgid ""
-"Does not include important updates for which notifications can not be turned "
-"off."
-msgstr ""
-"Inkluderar inte viktiga uppdateringar för vilka meddelanden inte kan stängas "
-"av."
+msgid "Does not include important updates for which notifications can not be turned off."
+msgstr "Inkluderar inte viktiga uppdateringar för vilka meddelanden inte kan stängas av."
 
 #: templates/users/sidebar.html:23
 msgid "Lives in"
 msgstr "Bor i:"
 
-#: templates/users/sidebar.html:41 templates/users/sidebar.html.py:47
+#: templates/users/sidebar.html:41
+#: templates/users/sidebar.html.py:47
 msgid "Private Message"
 msgstr "Privat meddelande"
 
@@ -5704,7 +5338,6 @@ msgid "or use"
 msgstr "eller använd"
 
 #: templates/users/user_list.html:15
-#, fuzzy
 msgid "Browse "
 msgstr "Bläddra"
 
@@ -5722,45 +5355,39 @@ msgstr "Nya medlemmar"
 
 #: templates/users/emails/forgot_password.txt:4
 msgid "We're here to help reset your password."
-msgstr ""
+msgstr "Vi är här för attn hjälpa dig skapa ett nytt lösenord."
 
 #: templates/users/emails/forgot_password.txt:4
-#, fuzzy
-msgid ""
-"To get a new password, go ahead and click on the link below, or paste it "
-"into your browser:"
-msgstr ""
-"Klicka på följande länk för att ändra detta lösenord eller klistra in länken "
-"i webbläsarens adressfält:"
+msgid "To get a new password, go ahead and click on the link below, or paste it into your browser:"
+msgstr "Klicka på nedan länk för att få ett nytt lösenord, eller klistra in länken i webbläsarens adressfält:"
 
 #: templates/users/emails/forgot_password.txt:8
 msgid "If you didn't request a new password, no worries. You're all set."
-msgstr ""
+msgstr "Om du inte bad om ett nytt lösenord har du inget att oroa dig för. Allt är i sin ordning."
 
 #: templates/users/emails/forgot_password.txt:10
-#, fuzzy
 msgid "Happy learning."
-msgstr "Lärande"
+msgstr "Ha så kul."
 
 #: templates/users/emails/registration_confirm.txt:6
 msgid "We're so happy you're here. Confirm your email below to get started:"
-msgstr ""
+msgstr "Vi är så glada att du är här. Bekräfta din e-postadress nedan för att börja:"
 
 #: templates/users/emails/registration_confirm.txt:10
 msgid "Go forth and learn stuff!"
-msgstr ""
+msgstr "Gå vidare och lär dig saker!"
 
 #: templates/users/emails/registration_confirm.txt:12
 msgid "Cheerio,"
-msgstr ""
+msgstr "Tjena,"
 
 #: templates/users/emails/registration_confirm_subject.txt:2
 msgid "Ready to get learning?!"
-msgstr ""
+msgstr "Beredd att börja lära dig?!"
 
 #: templates/users/emails/registration_confirm_subject.txt:2
 msgid "Greetings from P2PU. Your email address was changed."
-msgstr ""
+msgstr "Hälsningar från P2PU. Din e-post har ändrats."
 
 #~ msgid "You are the only organizer of %s active "
 #~ msgstr "Du är den enda organisatören av %s aktiva "

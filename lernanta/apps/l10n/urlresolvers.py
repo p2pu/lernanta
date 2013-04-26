@@ -77,10 +77,14 @@ class Prefixer(object):
         user's Accept-Language header to determine which is best. This
         mostly follows the RFCs but read bug 439568 for details.
         """
+
         if 'lang' in self.request.GET:
             lang = self.request.GET['lang'].lower()
             if lang in l10n.locales.LANGUAGE_URL_MAP:
                 return l10n.locales.LANGUAGE_URL_MAP[lang]
+        
+        # TODO: this is a hack to default to English
+        return 'en'
 
         if self.request.META.get('HTTP_ACCEPT_LANGUAGE'):
             ranked_languages = parse_accept_lang_header(

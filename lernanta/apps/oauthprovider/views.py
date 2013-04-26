@@ -25,6 +25,7 @@ def whoami(request):
     return authenticator.response({
         "user": user.username,
         "url": user.get_profile().get_absolute_url(),
+        "email": user.email,
         "image_url": user.get_profile().image_or_default()
     })
 

@@ -1,16 +1,16 @@
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-#  谢昱 (Emilia Xie) <emiliaxie@qq.com>, 2011
+# Localization in Hebrew
+# Public Domain. 2012. No warranties.
+# Inkbug, 2012
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: LERNANTA 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-26 15:25+0200\n"
-"PO-Revision-Date: 2012-02-27 11:34+0800\n"
-"Last-Translator: 谢昱 <emiliaxie@qq.com>\n"
-"Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
-"Language: \n"
+"PO-Revision-Date: 2011-04-11 8:23-0500\n"
+"Last-Translator: Inkbug\n"
+"Language-Team: LANGUAGE <HE>\n"
+"Language: Hebrew\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,189 +18,198 @@ msgstr ""
 #: apps/activity/feeds.py:70
 #, python-format
 msgid "Activity feed from %s"
-msgstr "%s的活动汇总"
+msgstr ""
 
 #: apps/activity/feeds.py:114
 #, python-format
 msgid "Activity feed from %s's dashboard"
-msgstr "%s的主页活动汇总"
+msgstr ""
 
 #: apps/activity/models.py:99
 msgid "activities"
-msgstr "活动"
+msgstr "פעילויות"
 
 #: apps/activity/models.py:106
 #, python-format
 msgid "%(actor)s %(verb)s %(target)s"
-msgstr "%(actor)s%(verb)s%(target)s"
+msgstr "%(actor)s %(verb)s %(target)s"
 
 #: apps/activity/models.py:124
 #, python-format
 msgid "wall activity from %s"
-msgstr "%s的涂鸦墙的活动"
+msgstr "פעילות בקיר של %s"
 
 #: apps/activity/schema.py:22
 msgid "started following"
-msgstr "开始关注"
+msgstr "החל לעקוב אחר"
 
 #: apps/activity/schema.py:23
 msgid "joined"
-msgstr "加入"
+msgstr "הצטרף"
 
 #: apps/activity/schema.py:24
 msgid "posted"
-msgstr "发布"
+msgstr "פירסם"
 
 #: apps/activity/schema.py:25
 msgid "updated"
-msgstr "更新"
+msgstr "עידכן"
 
 #: apps/activity/schema.py:26
 msgid "shared"
-msgstr "分享"
+msgstr "שיתף"
 
 #: apps/activity/schema.py:27
 msgid "received"
-msgstr "接受"
+msgstr "קיבל"
 
 #: apps/activity/views.py:38
 msgid "This activity was deleted."
-msgstr "此活动已删除。"
+msgstr "פעילות זו נמחקה."
 
 #: apps/activity/views.py:56
 msgid "You can't edit this activity"
-msgstr "你无法编辑此活动"
+msgstr "אתה לא יכול לערוך את הפעילות הזו"
 
 #: apps/activity/views.py:61
 msgid "Activity deleted!"
-msgstr "活动已删除!"
+msgstr "הפעילות נמחקה!"
 
 #: apps/activity/views.py:63
 msgid "Activity restored!"
-msgstr "活动恢复了!"
+msgstr "הפעילות שוחזרה!"
 
 #: apps/badges/forms.py:52
+#, fuzzy
 msgid "You cannot give a badge to yourself."
-msgstr "你不可以为自己颁布勋章。"
+msgstr "אינך יכול לתת badge לעצמך."
 
 #: apps/badges/forms.py:57 apps/projects/forms.py:120 apps/schools/forms.py:96
 msgid "That user account was deleted."
-msgstr "该用户账号已被删除。"
+msgstr "חשבון המשתמש ההוא נמחק."
 
 #: apps/badges/forms.py:60 apps/projects/forms.py:123 apps/schools/forms.py:99
 #, python-format
 msgid "There is no user with username: %s."
-msgstr "该用户名无人使用：%s"
+msgstr "אין משתמש עם השם: %s."
 
 #: apps/badges/forms.py:63
 #, python-format
 msgid "User %s needs to be your peer."
-msgstr "用户%s需要是你的同伴。"
+msgstr "המשתמש %s צריך להיות עמית שלך."
 
 #: apps/badges/forms.py:66
-#, python-format
+#, fuzzy, python-format
 msgid "User %s has not received all the prerequisite badges."
-msgstr "用户%s没有受到所有基本勋章。"
+msgstr "המשתמש %s לא קיבל את כל הbadgeים הנצרכים קודם."
 
 #: apps/badges/models.py:64
+#, fuzzy
 msgid "Regulates how the badge is awarded to users."
-msgstr "管理勋章怎么被颁布给用户。"
+msgstr "מסדיר איך הbadge מוענק למשתמשים."
 
 #: apps/badges/models.py:73 templates/badges/_submissions_list_item.html:11
 msgid "Badge"
-msgstr "勋章"
+msgstr ""
 
 #: apps/badges/models.py:262
 msgid "Minimum number of votes."
-msgstr "最低数量的选票。"
+msgstr "מספר הצבעות מינימלי."
 
 #: apps/badges/models.py:265
 msgid "Minimum average rating."
-msgstr "最小平均评级。"
+msgstr "דירוג ממוצע מינימלי."
 
 #: apps/badges/models.py:268
+#, fuzzy
 msgid "If the badge can only be awarded to the user once."
-msgstr "如果勋章仅可授予一个用户一次。"
+msgstr "אם אפשר להעניק את הbadge למשתמש רק פעם אחת."
 
 #: apps/badges/models.py:274
+#, fuzzy
 msgid "Submission Required"
-msgstr "需要提交"
+msgstr "הבקשה חובה"
 
 #: apps/badges/models.py:275
 #, fuzzy
 msgid "Submission Optional"
-msgstr "提交随意"
+msgstr "הבקשה אופציונלית"
 
 #: apps/badges/models.py:276
+#, fuzzy
 msgid "No submissions"
-msgstr "不要提交"
+msgstr "אין בקשות"
 
 #: apps/badges/models.py:299
 #, python-format
 msgid "%(author)s's application for %(badge)s"
-msgstr "%(author)s对%(badge)s的申请书"
+msgstr "הבקשה של %(author)s בשביל %(badge)s"
 
 #: apps/badges/models.py:325
 msgid "Allows to give more or less weight to the assessor's vote."
-msgstr "允许对评价者的评级加权。"
+msgstr ""
 
 #: apps/badges/models.py:336
+#, fuzzy
 msgid ""
 "If submission is blank, this is a peer awarded assessment or superuser "
 "granted"
-msgstr "如果提交的是空白，这是一个被同辈评估或被超级用户授予的。"
+msgstr "אם הבקשה ריקה, זאת היא הערכה שהוענקה בידי עמית או superuser"
 
 #: apps/badges/models.py:339
 msgid "If all rubric ratings were provided."
-msgstr "如果所有的分级专栏评级被提交。"
+msgstr ""
 
 #: apps/badges/models.py:342
-#, python-format
+#, fuzzy, python-format
 msgid "%(assessor)s for %(assessed)s for %(badge)s"
-msgstr "%(assessor)s为%(assessed)s授予%(badge)s"
+msgstr "%(assessor)s בשביל %(assessed)s בשביל %(badge)s"
 
 #: apps/badges/models.py:405
 msgid "Never"
-msgstr "从不"
+msgstr "אף פעם"
 
 #: apps/badges/models.py:406
 msgid "Sometimes"
-msgstr "偶尔"
+msgstr "לפעמים"
 
 #: apps/badges/models.py:407
 msgid "Most of the time"
-msgstr "大部分时间"
+msgstr "רוב הזמן"
 
 #: apps/badges/models.py:408
 msgid "Always"
-msgstr "总是"
+msgstr "תמיד"
 
 #: apps/badges/models.py:416
 #, python-format
 msgid "%(score)s for %(rubric)s"
-msgstr "%(score)s的%(rubric)s"
+msgstr "%(score)s בשביל %(rubric)s"
 
 #: apps/badges/models.py:435
-#, python-format
+#, fuzzy, python-format
 msgid "%(user)s - %(badge)s"
 msgstr "%(user)s - %(badge)s"
 
 #: apps/badges/views.py:86 apps/projects/views.py:86
 #, python-format
 msgid "The %s has been created."
-msgstr "%s已经被创造。"
+msgstr "ה%s נוצר."
 
 #: apps/badges/views.py:91
+#, fuzzy
 msgid "Problem creating the badge."
-msgstr "创建勋章出问题了。"
+msgstr "תקלה ביצירת הbadge."
 
 #: apps/badges/views.py:105
+#, fuzzy
 msgid "You can not apply for this badge."
-msgstr "你不能申请这个勋章。"
+msgstr "אינך יכול לבקש את הbadge הזה."
 
 #: apps/badges/views.py:119
+#, fuzzy
 msgid "Submission created and out for review!"
-msgstr "已提交，审查中！"
+msgstr "הבקשה נוצרה ומחכה להערכה!"
 
 #: apps/badges/views.py:122 apps/badges/views.py:257 apps/badges/views.py:314
 #: apps/content/views.py:117 apps/content/views.py:168
@@ -209,101 +218,104 @@ msgstr "已提交，审查中！"
 #: apps/reviews/views.py:80 apps/signups/views.py:149
 #: apps/signups/views.py:189
 msgid "Please correct errors below."
-msgstr "请修改一下下面的错误。"
+msgstr "בבקשה תקן את השגיאות להלן."
 
 #: apps/badges/views.py:219
 msgid "You cannot assess your own work."
-msgstr "你不能评估自己的作业。"
+msgstr "אינך יכול להעריך את העבודה שלך."
 
 #: apps/badges/views.py:223
+#, fuzzy
 msgid "You have already assessed this submission."
-msgstr "你已经评估此提交。"
+msgstr "כבר הערכת את הבקשה הזאת."
 
 #: apps/badges/views.py:254
 msgid "Assessment saved. Thank you for your feedback!"
-msgstr "评估已保存。谢谢你的反馈！"
+msgstr "ההערכה נשמרה. תודה על המשוב!"
 
 #: apps/badges/views.py:296
+#, fuzzy
 msgid "You can not give this badge to a peer."
-msgstr "你不可以把这个勋章颁布给同辈。"
+msgstr "אינך יכול לתת את הbadge הזה לעמית."
 
 #: apps/badges/views.py:311
+#, fuzzy
 msgid "Thank you for giving a badge to your peer!"
-msgstr "感谢你为你的同伴颁布勋章。"
+msgstr "תודה שנתת badge לעמית שלך!"
 
 #: apps/content/forms.py:54
 msgid "Post a link to your work."
-msgstr "请贴一个你的工作的链接。"
+msgstr "פרסם קישור לעבודה שלך."
 
 #: apps/content/models.py:65
 msgid "added"
-msgstr "增加了"
+msgstr "נוסף"
 
 #: apps/content/models.py:170
 msgid "today"
-msgstr "今天"
+msgstr "היום"
 
 #: apps/content/models.py:185
 msgid "this week"
-msgstr "本周"
+msgstr "השבוע"
 
 #: apps/content/models.py:189
 msgid "this month"
-msgstr "本月"
+msgstr "החודש"
 
 #: apps/content/views.py:34 apps/projects/decorators.py:87
 #, python-format
 msgid "This page is not accesible on a %s."
-msgstr "此页不可在%s进入。"
+msgstr "הדף הזה לא נגיש בתוך %s."
 
 #: apps/content/views.py:38
 msgid "This task was deleted."
-msgstr "任务已删除。"
+msgstr "המשימה הזאת נמחקה."
 
 #: apps/content/views.py:90 apps/content/views.py:97 apps/content/views.py:262
 msgid "You can't edit this page"
-msgstr "你无法编辑此页。"
+msgstr "אינך יכול לערוך את הדף הזה"
 
 #: apps/content/views.py:109 apps/projects/views.py:117
 #: apps/projects/views.py:351 apps/projects/views.py:696
 #, python-format
 msgid "%s updated!"
-msgstr "%s被更新了！"
+msgstr "%s עודכן!"
 
 #: apps/content/views.py:146
 msgid "You can not create a new task!"
-msgstr "你无法创建新任务！"
+msgstr "אינך יכול ליצור משימה חדשה!"
 
 #: apps/content/views.py:160
 msgid "Task created!"
-msgstr "任务已创建！"
+msgstr "המשימה נוצרה!"
 
 #: apps/content/views.py:193 apps/content/views.py:195
 msgid "You can't delete this page"
-msgstr "你无法删除此页。"
+msgstr "אינך יכול למחוק את הדף הזה"
 
 #: apps/content/views.py:206
 #, python-format
 msgid "%s deleted!"
-msgstr "%s已被删除了！"
+msgstr "%s נמחק!"
 
 #: apps/content/views.py:255
 msgid "You can't restore this page"
-msgstr "你无法恢复此页"
+msgstr "אינך יכול לשחזר את הדף הזה"
 
 #: apps/content/views.py:276
 #, python-format
 msgid "%s restored!"
-msgstr "%s已恢复！"
+msgstr "%s שוחזר!"
 
 #: apps/content/views.py:311 apps/content/views.py:364
 msgid "You can not change tasks order."
-msgstr "你不能改变任务顺序。"
+msgstr "אינך יכול לשנות את סדר המשימות."
 
 #: apps/courses/decorators.py:19
 #, fuzzy
 msgid "You need to be a course organizer."
-msgstr "你需要是评价者。"
+msgstr "הינך צריך להיות reviewer."
 
 #: apps/courses/forms.py:13
 msgid ""
@@ -320,28 +332,29 @@ msgstr ""
 
 #: apps/courses/forms.py:47 templates/projects/sidebar.html:142
 msgid "Archived"
-msgstr ""
+msgstr "Archivado"
 
 #: apps/courses/forms.py:54
+#, fuzzy
 msgid "Open"
-msgstr ""
+msgstr "OpenID"
 
 #: apps/courses/forms.py:55
 #, fuzzy
 msgid "Moderated"
-msgstr "限制注册"
+msgstr "הרשמה מונחית"
 
 #: apps/courses/forms.py:56
 #, fuzzy
 msgid "Closed"
-msgstr "注册已关闭"
+msgstr "הרשמה סגורה"
 
 #: apps/courses/models.py:136 templates/_footer.html:78 templates/base.html:85
 #: templates/base.html.py:117 templates/courses/course_base.html:61
 #: templates/courses/course_sidebar.html:34
 #, fuzzy
 msgid "About"
-msgstr "关于我"
+msgstr "Acerca de Mi"
 
 #: apps/courses/models.py:541
 msgid "No such user in cohort"
@@ -350,7 +363,7 @@ msgstr ""
 #: apps/courses/models.py:549
 #, fuzzy
 msgid "Cannot remove last organizer"
-msgstr "你无法删除此答案。"
+msgstr "הסרת מארגן"
 
 #: apps/courses/views.py:280
 msgid "Could not upload image"
@@ -359,7 +372,7 @@ msgstr ""
 #: apps/courses/views.py:292
 #, fuzzy
 msgid "You are now signed up for this course."
-msgstr "你已经参与这个%s。"
+msgstr "כבר הצטרפת ל%s הזה."
 
 #: apps/courses/views.py:294
 msgid "This course isn't open for signup."
@@ -368,12 +381,12 @@ msgstr ""
 #: apps/courses/views.py:307
 #, fuzzy
 msgid "Please select a user to add."
-msgstr "请选择另一个用户名。"
+msgstr "בבקשה בחר שם משתמש אחר."
 
 #: apps/courses/views.py:313
 #, fuzzy
 msgid "User added."
-msgstr "添加下一步。"
+msgstr "השלב הבא הוסף."
 
 #: apps/courses/views.py:315
 msgid "User does not exist."
@@ -390,7 +403,7 @@ msgstr ""
 #: apps/courses/views.py:380
 #, fuzzy
 msgid "Course status updated."
-msgstr "%s 更新"
+msgstr " עודכן."
 
 #: apps/courses/views.py:396
 msgid "Could not change cohort signup"
@@ -411,12 +424,12 @@ msgstr ""
 #: apps/courses/views.py:452
 #, fuzzy
 msgid "Course tags successfully updated"
-msgstr "信息发出成功。"
+msgstr "ההודעה נשלחה בהצלחה."
 
 #: apps/courses/views.py:494
 #, fuzzy
 msgid "The announcement has been sent!"
-msgstr "身份%s已保存。"
+msgstr "הזהות %s נשמרה."
 
 #: apps/courses/views.py:632
 msgid "Could not move content up!"
@@ -428,46 +441,45 @@ msgstr ""
 
 #: apps/dashboard/views.py:76
 msgid "Please fill out your profile to finish registration."
-msgstr "请填写你的个人信息，完成登记。"
+msgstr "בבקשה מלא את הפרופיל שלך כדי לגמור את ההרשמה."
 
 #: apps/drumbeat/views.py:86
 #, fuzzy
 msgid "Thank you for filing an abuse report!"
-msgstr "感谢你为你的同伴颁布勋章。"
+msgstr "תודה שנתת badge לעמית שלך!"
 
 #: apps/drumbeat/views.py:113
 msgid "Export selected objects as csv file"
-msgstr "选定对象导出为csv文件"
+msgstr ""
 
 #: apps/drumbeat/templatetags/time_since.py:16
 msgid " ago"
-msgstr "前"
+msgstr ""
 
 #: apps/drumbeatmail/fields.py:22
 msgid "No such user with that username or email."
-msgstr "没有使用该用户名或邮箱的用户。"
+msgstr "אין משתמש עם השם או כתובת הדוא\"ל הזאת."
 
 #: apps/drumbeatmail/views.py:174
 msgid "Can't send email"
-msgstr "不能发邮件"
+msgstr "אי אפשר לשלוח את הדוא\"ל"
 
 #: apps/drumbeatmail/views.py:180 apps/drumbeatmail/views.py:210
 #: apps/projects/views.py:943
 msgid "Message successfully sent."
-msgstr "信息发出成功。"
+msgstr "ההודעה נשלחה בהצלחה."
 
 #: apps/drumbeatmail/views.py:183 apps/drumbeatmail/views.py:213
 msgid "There was an error sending your message. Please try again."
-msgstr "信息发送有误，请重试。"
+msgstr "אירעה תקלה בשליחת ההודעה. בבקשה נסה שוב."
 
 #: apps/links/views.py:27 apps/links/views.py:53
 msgid "You can not change links order."
-msgstr "你不能更改链接顺序。"
+msgstr "אינך יכול לשנות את סדר הקישורים."
 
 #: apps/lrmi/forms.py:31
-#, fuzzy
 msgid "Alignment Type"
-msgstr "评估种类"
+msgstr ""
 
 #: apps/lrmi/forms.py:33
 msgid "Educational Framework"
@@ -476,11 +488,12 @@ msgstr ""
 #: apps/lrmi/forms.py:35
 #, fuzzy
 msgid "Target Description"
-msgstr "简略描述"
+msgstr "תיאור"
 
 #: apps/lrmi/forms.py:37
+#, fuzzy
 msgid "Target Name"
-msgstr ""
+msgstr "שם קצר"
 
 #: apps/lrmi/forms.py:39
 msgid "Target URL"
@@ -488,57 +501,57 @@ msgstr ""
 
 #: apps/preferences/forms.py:23
 msgid "That email address is register under a different username."
-msgstr "该邮箱已被另外一个用户名注册。"
+msgstr "כתובת הדוא\"ל רשומה תחת שם משתמש אחר."
 
 #: apps/preferences/forms.py:31 apps/users/forms.py:111
 #: apps/users/forms.py:177
-#, fuzzy
 msgid "Email addresses do not match."
-msgstr "密码错误。"
+msgstr "כתובות הדוא\"ל אינן תואמות."
 
 #: apps/preferences/forms.py:36 apps/users/forms.py:37
 msgid "Password must be at least 8 characters long "
-msgstr "密码至少8位数 "
+msgstr "הסיסמה חייבת להיות באורך של לפחות 8 תווים "
 
 #: apps/preferences/forms.py:37 apps/users/forms.py:38
 msgid "and contain both numbers and letters."
-msgstr "而必须包含数字和字母。"
+msgstr "ולהכיל מספרים ואותיות."
 
 #: apps/preferences/forms.py:42 apps/users/forms.py:43
 msgid "That password is too common. Please choose another."
-msgstr "密码过于简单，请重新设置。"
+msgstr "הסיסמה ההיא יותר מדי נפוצה. בבקשה בחר סיסמה אחרת."
 
 #: apps/preferences/forms.py:73 apps/users/forms.py:173
 msgid "Passwords do not match."
-msgstr "密码错误。"
+msgstr "הסיסמאות אינן תואמות."
 
 #: apps/preferences/views.py:50
 msgid "Thank you, your settings have been saved."
-msgstr "你的设置已保存，谢谢！"
+msgstr "תודה, ההגדרות שלך נשמרו."
 
 #: apps/preferences/views.py:86 apps/users/views.py:386
 #, python-format
 msgid "A link to confirm your email address was sent to %s."
-msgstr ""
+msgstr "קישור לוודא את כתובת הדוא\"ל שלך נשלח ל%s."
 
 #: apps/preferences/views.py:95
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If you did not receive the confirmation email, make sure your email service "
 "did not mark it as \"junk mail\" or \"spam\". If you need to, you can have "
 "us <a href=\"%s\">resend the confirmation message</a> to your email address."
 msgstr ""
-"如果你没有收到确认信，请确保你的邮箱未将此邮件设为\"垃圾邮件\"。如果需要，你"
-"可以让我们&lt;a href=\"%s\"&gt;重新发送确认信&gt;到您邮箱。"
+"אם לא קיבלת את הודעת הווידוא, בבקשה בדוק ששירות הדוא\"ל שלך לא סימן אותו כ"
+"\"דואר זבל\" או \"ספאם\". במקרה הצורך, אנו יכולים <a href=\"%s\">לשלוח שוב "
+"את הודעת הווידוא</a> לכתובת הדוא\"ל שלך."
 
 #: apps/preferences/views.py:120
 msgid "Password updated"
-msgstr "更新密码"
+msgstr "הסיסמה עודכנה"
 
 #: apps/preferences/views.py:124 apps/users/views.py:294
 #: apps/users/views.py:440
 msgid "There are errors in this form. Please correct them and resubmit."
-msgstr "表格有误，请改正并重新提交。"
+msgstr "ישנם שגיאות בטופס הזה. בבקשה תקן אותם ושלח שוב."
 
 #: apps/preferences/views.py:143
 #, python-format
@@ -550,29 +563,29 @@ msgstr ""
 #: apps/projects/decorators.py:22
 #, python-format
 msgid "You are not organizing this %s."
-msgstr "你不组织这个%s"
+msgstr "אינך מארגן את ה%s הזה."
 
 #: apps/projects/decorators.py:38
 #, python-format
 msgid "You are not participating in this %s."
-msgstr "你不参加这个%s"
+msgstr "אתה לא משתתף ב%s הזה."
 
 #: apps/projects/decorators.py:55
 msgid "You are not authorized to view the detailed statistics."
-msgstr "你未被授权查看详细数据。"
+msgstr "אינך מורשה לצפות בסטטיסטיקות המפורטות."
 
 #: apps/projects/decorators.py:73
 msgid "You aren't authorized to view the statistics' overview."
-msgstr "你未被授权查看数据概况。"
+msgstr "אינך מורשה לצפות בסקירת הסטטיסטיקות."
 
 #: apps/projects/decorators.py:105
 #, python-format
 msgid "This %s was deleted."
-msgstr "此%s已被删除。"
+msgstr "ה%s נמחק."
 
 #: apps/projects/forms.py:39
 msgid "Write a catchy title, keep it short and sweet."
-msgstr ""
+msgstr "כתוב כותרת קצרה וקליטה."
 
 #: apps/projects/forms.py:41
 msgid "e.g. Learn to write HTML by hand, literally."
@@ -589,199 +602,202 @@ msgid ""
 "Tag your course so folks can find it. What will your audience be looking "
 "for? Separate with commas."
 msgstr ""
+"בחר מילות מפתח לקורס שלך כדי שאנשים יוכלו למצוא אותו. מה קהל היעד שלך מחפש? "
+"הפרד עם פסיקים."
 
 #: apps/projects/forms.py:87 apps/schools/forms.py:36 apps/schools/forms.py:50
 #: apps/schools/forms.py:64 apps/schools/forms.py:78 apps/users/forms.py:260
 #, python-format
 msgid "Image exceeds max image size: %(max)dk"
-msgstr "图片超过最大范围：%(max)dk"
+msgstr "התמונה עברה את הגודל המקסימלי: %(max)dk"
 
 #: apps/projects/forms.py:128
 #, python-format
 msgid "User %s is already an organizer."
-msgstr "用户%s已经是组织者。"
+msgstr "המשתמש %s הינו מארגן כבר."
 
 #: apps/projects/forms.py:133
 #, python-format
 msgid "User %s is already a participant."
-msgstr "用户%s已经是参与者。"
+msgstr "המשתמש %s הינו משתתף כבר."
 
 #: apps/projects/forms.py:147
 #, python-format
 msgid "A %s can not be its own next step."
-msgstr "一个%s不能够成为自己的下一步。"
+msgstr "%s אינו יכול להיות השלב הבא של עצמו."
 
 #: apps/projects/forms.py:149
 #, python-format
 msgid "There is no challenge, study group, ... with short name: %s."
-msgstr "没有短名%s的挑战、学习小组。"
+msgstr "אין אתגר, קבוצת לימוד, ... עם השם הקצר: %s."
 
 #: apps/projects/forms.py:155
 #, python-format
 msgid "The %(slug)s %(kind)s is already a next step."
-msgstr "该%(slug)s的%(kind)s已是是一个下一步。"
+msgstr ""
 
 #: apps/projects/forms.py:167 templates/drumbeatmail/base.html:18
 #: templates/messages/inbox.html:12
 #: templates/projects/contact_organizers.html:12
 msgid "Subject"
-msgstr "科目"
+msgstr "נושא"
 
 #: apps/projects/forms.py:169
 msgid "Body"
-msgstr "主体"
+msgstr "תוכן"
 
 #: apps/projects/forms.py:179
 msgid "That study group, course, ... does not exist."
-msgstr "没有该学习小组、课程。"
+msgstr "קבוצת הלימוד, הקורס, ... ההוא אינו קיים."
 
 #: apps/projects/forms.py:199
 #, python-format
 msgid "There is no study group, course, ... with short name: %s."
-msgstr "没有短名%s的学习小组、课程。"
+msgstr "אין קבוצת לימוד, קורס, ... עם השם הקצר: %s."
 
 #: apps/projects/forms.py:215
 msgid "There is no course with this short name on the archive."
-msgstr "存档里没有该短名的课程。"
+msgstr "אין קורס עם השם הקצר הזה בארכיון."
 
 #: apps/projects/models.py:56
 msgid ""
 "Study Group -- group of people working collaboratively to acquire and share "
 "knowledge."
-msgstr "学习小组--以小组为单位一起分享与获取知识的团队。"
+msgstr "קבוצת לימוד -- קבוצת אנשים העובדת ביחד כדי לרכוש ולשתף ידע."
 
 #: apps/projects/models.py:58
 msgid ""
 "Course -- led by one or more organizers with skills on a field who direct "
 "and help participants during their learning."
-msgstr "课程--由专业人士或组织引导和帮助参与者学习。"
+msgstr ""
+"קורס -- מונחה בידי מארגן אחד או יותר עם מיומנות בתחום אשר מכוונים ועוזרים "
+"למשתתפים במשך לימודם."
 
 #: apps/projects/models.py:61
 msgid "Challenge -- series of tasks peers can engage in to develop skills."
-msgstr "挑战--一系列的任务，参与者可通过完成任务而获得技能。"
+msgstr "אתגר -- סדרת משימות בהם עמיתים יכולים לעסוק כדי לפתח מיומנויות."
 
 #: apps/projects/models.py:123
 msgid "group"
-msgstr "小组"
+msgstr "קבוצה"
 
 #: apps/projects/models.py:126
 #, python-format
 msgid "%(name)s %(kind)s"
-msgstr "%(name)s %(kind)s"
+msgstr "%(kind)s %(name)s"
 
 #: apps/projects/models.py:137
 msgid "created"
-msgstr "已创造"
+msgstr "נוצר"
 
 #: apps/projects/views.py:75 apps/projects/views.py:215
 #: apps/projects/views.py:297
 msgid "Full Description"
-msgstr "具体描述"
+msgstr "תיאור מלא"
 
 #: apps/projects/views.py:90
 #, fuzzy
 msgid "Problem creating the course"
-msgstr "创建勋章出问题了。"
+msgstr "בעייה ביצירת הקורס"
 
 #: apps/projects/views.py:240
 #, python-format
 msgid "The %s has been cloned."
-msgstr "%s已被复制。"
+msgstr ""
 
 #: apps/projects/views.py:246
 msgid "There was a problem cloning the study group, course, ..."
-msgstr "复制学校小组，课程中遇到问题。"
+msgstr ""
 
 #: apps/projects/views.py:315
 #, python-format
 msgid "The %s has been imported."
-msgstr "%s已输入。"
+msgstr "ה%s יובא."
 
 #: apps/projects/views.py:320
 msgid "Problem importing the study group, course, ..."
-msgstr "在输入学习小组，课程⋯，遇到问题。"
+msgstr "בעיה בייבוא קבוצת הלימוד, קורס, ..."
 
 #: apps/projects/views.py:396 apps/schools/views.py:147
 #: apps/schools/views.py:189 apps/schools/views.py:231
 #: apps/schools/views.py:273
 msgid "Image updated"
-msgstr "图片更新。"
+msgstr "התמונה עודכנה"
 
 #: apps/projects/views.py:403 apps/schools/views.py:153
 #: apps/schools/views.py:195 apps/schools/views.py:237
 #: apps/schools/views.py:279
 msgid "There was an error uploading your image"
-msgstr "更新照片有误。"
+msgstr "אירעה תקלה בהעלאת התמונה שלך"
 
 #: apps/projects/views.py:430
 msgid "Link added."
-msgstr "添加链接。"
+msgstr "הקישור נוסף."
 
 #: apps/projects/views.py:434
 msgid "There was an error adding your link."
-msgstr "添加链接有误。"
+msgstr "אירעה תקלה בהוספת הקישור שלך."
 
 #: apps/projects/views.py:457 apps/projects/views.py:491
 #: apps/users/views.py:659
 msgid "You can't edit this link"
-msgstr "你无法编辑此链接。"
+msgstr "אינך יכול לערוך את הקישור הזה"
 
 #: apps/projects/views.py:468
 msgid "Link updated."
-msgstr "更新链接成功。"
+msgstr "הקישור עודכן."
 
 #: apps/projects/views.py:493
 msgid "The link was deleted"
-msgstr "链接已删除。"
+msgstr "הקישור נמחק"
 
 #: apps/projects/views.py:516
 msgid "Participant added."
-msgstr "增加参与者成功。"
+msgstr "המשתתף נוסף."
 
 #: apps/projects/views.py:522
 msgid "There was an error adding the participant."
-msgstr "添加参与者有误。"
+msgstr "אירעה תקלה בהוספת המשתתף הזה."
 
 #: apps/projects/views.py:560
 msgid "You can't make that person an organizer"
-msgstr "无法设定其为组织者。"
+msgstr "אינך יכול להפוך את האדם ההוא למארגן"
 
 #: apps/projects/views.py:566
 msgid "The participant is now an organizer."
-msgstr "此人已是组织者。"
+msgstr "המשתתף הינו מארגן עכשיו."
 
 #: apps/projects/views.py:582
-#, fuzzy
 msgid "You cannot delete the only organizer"
-msgstr "你无法删除此答案。"
+msgstr "אינך יכול למחוק את המארגן היחיד"
 
 #: apps/projects/views.py:590
 #, fuzzy
 msgid "The organizer in now only a participant."
-msgstr "你现在是参与者了！"
+msgstr "המארגן עכשיו הוא רק משתתף."
 
 #: apps/projects/views.py:604
 #, python-format
 msgid "The participant %s has been removed."
-msgstr "参与者%s已被踢除。"
+msgstr "המשתתף %s הוסר."
 
 #: apps/projects/views.py:623
 msgid "Next step added."
-msgstr "添加下一步。"
+msgstr "השלב הבא הוסף."
 
 #: apps/projects/views.py:629
 msgid "There was an error adding that next step."
-msgstr "添加下一步有误。"
+msgstr "אירעה תקלה בהוספת השלב הבא ההוא."
 
 #: apps/projects/views.py:675
 #, python-format
 msgid "The %(name)s %(kind)s is not a next step anymore."
-msgstr "该%(name)s%(kind)s不再是下一步。"
+msgstr "ה%(kind)s %(name)s כבר אינו השלב הבא."
 
 #: apps/projects/views.py:701
 #, python-format
 msgid "There was a problem saving the %s's status."
-msgstr "在保存%s的数据中遇到问题。"
+msgstr "אירעה תקלה בשמירת הסטטוס של ה%s."
 
 #: apps/projects/views.py:721
 msgid ""
@@ -791,20 +807,20 @@ msgstr ""
 
 #: apps/relationships/models.py:59
 msgid "Cannot create self referencing relationship."
-msgstr "无法创建自我参照的关系。"
+msgstr ""
 
 #: apps/relationships/views.py:55
 msgid "You can't unfollow"
-msgstr "你无法不关注"
+msgstr "אינך יכול להסיר את המעקב"
 
 #: apps/replies/models.py:53
 #, python-format
 msgid "comment at %s"
-msgstr "在%s进行评论"
+msgstr "תגובה ב%s"
 
 #: apps/replies/views.py:25 templates/replies/_comment_threads.html:12
 msgid "This comment was deleted."
-msgstr "该评论已被删除。"
+msgstr "התגובה הזאת נמחקה."
 
 #: apps/replies/views.py:47
 msgid ""
@@ -814,94 +830,101 @@ msgstr ""
 
 #: apps/replies/views.py:63 apps/replies/views.py:131
 msgid "Comment posted!"
-msgstr "评论已发布。"
+msgstr "התגובה פורסמה!"
 
 #: apps/replies/views.py:101
 #, python-format
 msgid "You can not post a comment at %s."
-msgstr "无法在%s发布评论。"
+msgstr "אינך יכול לכתוב תגובה ב%s."
 
 #: apps/replies/views.py:203
 msgid "You can not edit this comment."
-msgstr "无法编辑此评论。"
+msgstr "אינך יכול לערוך תגובה זו."
 
 #: apps/replies/views.py:211
 msgid "Comment updated!"
-msgstr "评论已更新！"
+msgstr "התגובה עודכנה!"
 
 #: apps/replies/views.py:233
 msgid "You can not restore this comment."
-msgstr "无法回复此评论。"
+msgstr "אינך יכול לשחזר את התגובה הזאת."
 
 #: apps/replies/views.py:235
 msgid "You can not delete this comment."
-msgstr "无法删除此评论。"
+msgstr "אינך יכול למחוק תגובה זאת."
 
 #: apps/replies/views.py:242
 msgid "Comment deleted!"
-msgstr "评论已删除!"
+msgstr "התגובה נמחקה!"
 
 #: apps/replies/views.py:244
 msgid "Comment restored!"
-msgstr "评论已恢复!"
+msgstr "התגובה שוחזרה!"
 
 #: apps/reviews/decorators.py:14
+#, fuzzy
 msgid "You need to be a reviewer."
-msgstr "你需要是评价者。"
+msgstr "הינך צריך להיות reviewer."
 
 #: apps/reviews/views.py:77
+#, fuzzy
 msgid "Review posted!"
-msgstr "评论已发表!"
+msgstr "הreview פורסם!"
 
 #: apps/richtext/views.py:131
 #, python-format
 msgid "Extension %(ext)s is not allowed. "
-msgstr "不允许名字为%(ext)s的扩展。"
+msgstr "ההוספה %(ext)s אינה מורשית."
 
 #: apps/richtext/views.py:132
 #, python-format
 msgid "Only %(allowed)s are allowed."
-msgstr "只允许%(allowed)s。"
+msgstr "רק %(allowed)s מורשים."
 
 #: apps/schools/decorators.py:20
+#, fuzzy
 msgid "You are not school organizer"
-msgstr "你不是学校组织者"
+msgstr "אינך מארגן בית ספר"
 
 #: apps/schools/forms.py:102
-#, python-format
+#, fuzzy, python-format
 msgid "User %s is organizing the school."
-msgstr "用户%s正在组织这所学校。"
+msgstr "המשתמש %s מארגן את הבית ספר."
 
 #: apps/schools/views.py:87
+#, fuzzy
 msgid "School updated!"
-msgstr "学校已更新！"
+msgstr "הבית ספר עודכן!"
 
 #: apps/schools/views.py:108
+#, fuzzy
 msgid "School styles updated!"
-msgstr "学校风格已更新！"
+msgstr "עיצוב הבית ספר עודכן!"
 
 #: apps/schools/views.py:299
+#, fuzzy
 msgid "School organizer added."
-msgstr "已添加学校组织者。"
+msgstr "מארגן בית ספר נוסף!"
 
 #: apps/schools/views.py:304
+#, fuzzy
 msgid "There was an error adding the school organizer."
-msgstr "添加学校组织者有误。"
+msgstr "אירעה תקלה בהוספת מארגן הבית ספר."
 
 #: apps/schools/views.py:340
 #, fuzzy
 msgid "The course is now featured for this school."
-msgstr "%s设立为学校特色项目。"
+msgstr "ה%s מומלץ עכשיו בשביל בית הספר הזה."
 
 #: apps/schools/views.py:346
 #, fuzzy
 msgid "There was an error marking the course as featured."
-msgstr "在设立%s为特色项目时出错。"
+msgstr "אירעה תקלה בסימון %s כמומלץ."
 
 #: apps/schools/views.py:368
 #, fuzzy
 msgid "The course stopped being featured for this school."
-msgstr "%s不再为学校设立为特色项目。"
+msgstr "ה%s הפסיק להיות מומלץ בשביל בית הספר הזה."
 
 #: apps/schools/views.py:371
 msgid "Could not remove course from featured list"
@@ -910,17 +933,17 @@ msgstr ""
 #: apps/schools/views.py:388
 #, fuzzy
 msgid "The course was added to this school."
-msgstr "%s增加进这所学校里。"
+msgstr "ה%s נוסף לבית ספר הזה."
 
 #: apps/schools/views.py:395
 #, fuzzy, python-format
 msgid "There was an error adding %s to this school."
-msgstr "在学校中增加%s。"
+msgstr "אירעה שגיאה בהוספת %s לבית הספר הזה."
 
 #: apps/schools/views.py:415
 #, fuzzy
 msgid "The course is no longer part of this school."
-msgstr "该%s不再是学校的一部分。"
+msgstr "ה%s כבר לא חלק מבית הספר הזה."
 
 #: apps/schools/views.py:417
 msgid "Could not remove course from school"
@@ -928,134 +951,135 @@ msgstr ""
 
 #: apps/schools/views.py:487
 msgid "School mentorship details updated!"
-msgstr "更新学校导师信息！"
+msgstr ""
 
 #: apps/signups/models.py:30
+#, fuzzy
 msgid "Closed signup"
-msgstr "注册已关闭"
+msgstr "הרשמה סגורה"
 
 #: apps/signups/models.py:31
+#, fuzzy
 msgid "Moderated signup"
-msgstr "限制注册"
+msgstr "הרשמה מונחית"
 
 #: apps/signups/models.py:32
+#, fuzzy
 msgid "Non-moderated signup"
-msgstr "不限制注册"
+msgstr "הרשמה בלתי-מונחית"
 
 #: apps/signups/models.py:38
 #, fuzzy, python-format
 msgid "%s signup"
-msgstr "注册已关闭"
+msgstr "הרשמה סגורה"
 
 #: apps/signups/models.py:107
 #, python-format
 msgid "the signup answer of %(author)s at %(project)s"
-msgstr "在%(author)s中%(project)s的注册答案"
+msgstr ""
 
 #: apps/signups/views.py:38
 msgid "Signup updated!"
-msgstr "更新注册！"
+msgstr "ההרשמה עודכנה!"
 
 #: apps/signups/views.py:89 templates/signups/sign_up.html:51
 msgid "This answer was deleted."
-msgstr "答案已被删除。"
+msgstr "התשובה הזאת נמחקה."
 
 #: apps/signups/views.py:111
 #, python-format
 msgid "You already joined this %s."
-msgstr "你已经参与这个%s。"
+msgstr "כבר הצטרפת ל%s הזה."
 
 #: apps/signups/views.py:114
-#, fuzzy, python-format
+#, python-format
 msgid "Sign-up is currently closed. You can clone the %s if it is full."
-msgstr "注册已关闭。如果这个%s已经满，你可以复制它。"
+msgstr "ההרשמה סגורה כרגע. You can clone the %s if it is full."
 
 #: apps/signups/views.py:123
 msgid "You already posted an answer to the signup questions."
-msgstr "你已经在注册问题中附上答案。"
+msgstr "כבר פרסמת תשובה לשאלות ההרשמה."
 
 #: apps/signups/views.py:144
 msgid "You are now a participant!"
-msgstr "你现在是参与者了！"
+msgstr "אתה משתתף עכשיו!"
 
 #: apps/signups/views.py:146
 msgid "Answer submitted!"
-msgstr "答案已提交！"
+msgstr "התשובה נשלחה!"
 
 #: apps/signups/views.py:174
 msgid "You can't edit this answer"
-msgstr "你无法编辑此答案"
+msgstr "אינך יכול לערוך את התשובה הזאת"
 
 #: apps/signups/views.py:186
 msgid "Answer updated!"
-msgstr "答案已更新！"
+msgstr "התשובה עודכנה!"
 
 #: apps/signups/views.py:221
 msgid "Organizer added!"
-msgstr "已增加组织者！"
+msgstr "מארגן נוסף!"
 
 #: apps/signups/views.py:223
 msgid "Participant added!"
-msgstr "已增加参与者！"
+msgstr "משתתף נוסף!"
 
 #: apps/signups/views.py:235
 msgid "You can not restore this answer."
-msgstr "你无法恢复此答案。"
+msgstr "אינך יכול לשחזר את התשובה הזאת."
 
 #: apps/signups/views.py:237
 msgid "You can not delete this answer."
-msgstr "你无法删除此答案。"
+msgstr "אינך יכול למחוק את התשובה הזאת."
 
 #: apps/signups/views.py:244
 msgid "Answer deleted!"
-msgstr "答案已删除！"
+msgstr "התשובה נמחקה!"
 
 #: apps/signups/views.py:246
 msgid "Answer restored!"
-msgstr "答案已恢复！"
+msgstr "התשובה שוחזרה!"
 
 #: apps/signups/views.py:270
 msgid "Organizers can't use this page to leave their group."
-msgstr "组织者无法通过这个页面离开小组。"
+msgstr "מארגנים אינם יכולים להשתמש בדף זה כדי לעזוב את הקבוצה שלהם."
 
 #: apps/signups/views.py:273 apps/signups/views.py:301
-#, fuzzy
 msgid "This page can not be accessed with a GET request."
-msgstr "页面无法经过get请求得道。"
+msgstr "הדף הזה אינו זמין עם בקשת GET."
 
 #: apps/signups/views.py:306
 msgid "You need to be active in this challenge to become an adopter."
-msgstr "你需要通过在挑战里积极，从而成为使用者。"
+msgstr "אתה צריך להיות פעיל באתגר הזה כדי להיות מאמץ."
 
 #: apps/signups/views.py:309
 msgid "Organizers do not need to adopt the challenges."
-msgstr "组织者不用使用挑战。"
+msgstr "מארגנים אינם צריכים לאמץ את האתגרים."
 
 #: apps/signups/views.py:317
-#, fuzzy
 msgid "You need to complete all of the tasks before becoming an adopter."
-msgstr "在成为使用者前，你必须完成所有任务。"
+msgstr "הינך צריך לגמור את כל המשימות לפני שתהיה מאמץ."
 
 #: apps/signups/views.py:320
 msgid "You already adopted this challenge."
-msgstr "你已经使用该挑战。"
+msgstr "כבר אימצת את האתגר הזה."
 
 #: apps/signups/views.py:323
 msgid "Thanks! "
-msgstr "谢谢！"
+msgstr "תודה!"
 
 #: apps/signups/views.py:324
 msgid "You are now listed among the peers who offered their help."
-msgstr "你已在互助伙伴名单里。"
+msgstr "הינך רשום עכשיו בקרב העמיתים אשר הציעו את עזרתם."
 
 #: apps/statuses/models.py:33
 msgid "statuses"
-msgstr "状态"
+msgstr "סטטוסים"
 
 #: apps/statuses/models.py:36
 #, python-format
 msgid "message: %s"
-msgstr "信息：%s"
+msgstr "הודעה: %s"
 
 #: apps/statuses/views.py:19
 msgid "Posting a update to your dashboard is no longer supported"
@@ -1063,233 +1087,239 @@ msgstr ""
 
 #: apps/statuses/views.py:60
 msgid "There was an error posting your status update"
-msgstr "状态更新时出错。"
+msgstr "אירעה שגיאה בעידכון הסטטוס שלך"
 
 #: apps/tags/models.py:9
+#, fuzzy
 msgid "Tag"
-msgstr "标签"
+msgstr "תג"
 
 #: apps/tags/models.py:10 templates/courses/course_settings.html:123
 #: templates/learn/_learn_filters.html:35 templates/learn/learn_tags.html:11
 #: templates/projects/project_create_overview.html:119
 #: templates/projects/project_edit_summary.html:70
 #: templates/projects/sidebar.html:101
+#, fuzzy
 msgid "Tags"
-msgstr "标签"
+msgstr "תגים"
 
 #: apps/tags/models.py:19
+#, fuzzy
 msgid "Tagged Item"
-msgstr "已标识项目"
+msgstr "פריטים מתוייגים"
 
 #: apps/tags/models.py:20
 msgid "Tagged Items"
-msgstr "已标识项目"
+msgstr "פריטים מתוייגים"
 
 #: apps/users/decorators.py:24
 msgid "You are already logged into an account."
-msgstr "你已登入账号。"
+msgstr "כבר נכנסת לחשבון."
 
 #: apps/users/fields.py:20 apps/users/fields.py:24
 msgid "Please choose another username."
-msgstr "请选择另一个用户名。"
+msgstr "בבקשה בחר שם משתמש אחר."
 
 #: apps/users/forms.py:67
-#, fuzzy
 msgid "This Google OpenID is not supported. "
-msgstr "不支持这个谷歌开放账号。"
+msgstr "הOpenID הזה של גוגל אינו נתמך. "
 
 #: apps/users/forms.py:68
-#, fuzzy
 msgid "Please use your Google profile OpenID."
-msgstr "请使用你的谷歌个人资料开放账号。"
+msgstr "בבקשה השתמש בOpenID של הגוגל פרופיל שלך."
 
 #: apps/users/forms.py:76
 msgid "Your account was migrated from the old P2PU website."
-msgstr "你的账号已从旧网址中转移过来。"
+msgstr "החשבון שלך הועבר מהאתר הישן של P2PU."
 
 #: apps/users/forms.py:154
 msgid "User profile with this Username already exists."
-msgstr "该用户名的用户一存在。"
+msgstr "פרופיל משתמש עם השם הזה כבר קיים."
 
 #: apps/users/forms.py:160
 msgid "This field is required."
-msgstr "该文本字段是必需的。"
+msgstr "שדה חובה."
 
 #: apps/users/forms.py:163
 msgid "User profile with this Email already exists."
-msgstr "使用该邮箱地址的用户已存在。"
+msgstr "פרופיל משתמש עם כתובת הדוא\"ל הזאת כבר קיים."
 
 #: apps/users/forms.py:295
 msgid "That e-mail address isn't associated to a user account. "
-msgstr "邮箱地址与账号不符。"
+msgstr "כתובת הדוא\"ל ההיא אינה קשורה לחשבון משתמש כלשהו. "
 
 #: apps/users/forms.py:296
 msgid "You didn't finish registering the last time. "
-msgstr "上一次你没有完成注册。"
+msgstr "לא גמרת להירשם בפעם שעברה. "
 
 #: apps/users/forms.py:297
 msgid "Please register a new account."
-msgstr "请重新注册一个账号。"
+msgstr "בבקשה פתח חשבון חדש."
 
 #: apps/users/forms.py:300
 msgid "Username not found. "
-msgstr "未找到该用户名。"
+msgstr "שם המשתמש לא נמצא. "
 
 #: apps/users/forms.py:301
 msgid "Are you sure you've registered?"
-msgstr "你确定你已注册？"
+msgstr "אתה בטוח שנרשמת?"
 
 #: apps/users/models.py:127
 msgid "Anonym"
-msgstr "匿名。"
+msgstr "אנונימי"
 
 #: apps/users/models.py:188
+#, fuzzy
 msgid "(adopted)"
-msgstr "（使用）"
+msgstr "(אימץ)"
 
 #: apps/users/models.py:190 apps/users/models.py:203
 msgid "(organizing)"
-msgstr "（组织）"
+msgstr "(מארגן)"
 
 #: apps/users/models.py:193 apps/users/models.py:206
 msgid "(participating)"
-msgstr "（参与）"
+msgstr "(משתתף)"
 
 #: apps/users/models.py:196
 msgid "(following)"
-msgstr "（关注）"
+msgstr "(עוקב)"
 
 #: apps/users/views.py:193
 msgid "Incorrect username, email or password."
-msgstr "用户名、邮箱或密码不正确。"
+msgstr "שם משתמש, כתובת דוא\"ל, או סיסמה שגוייה."
 
 #: apps/users/views.py:278
 msgid "Congratulations! Your user account was successfully created."
-msgstr "祝贺您！你的账号注册成功！"
+msgstr "כל הכבוד! חשבון המשתמש שלך נוצר בהצלחה."
 
 #: apps/users/views.py:286
 msgid ""
 "Thanks! We have sent an email to {0} with instructions for completing your "
 "registration."
-msgstr "谢谢！确认邮件已发出到{0} 。请根据邮件指示完成注册。"
+msgstr "תודה! שלחנו הודעה לכתובת  {0} עם הוראות כדי לגמור את ההרשמה שלך."
 
 #: apps/users/views.py:364
 msgid "Hmm, that doesn't look like the correct confirmation code"
-msgstr "确认密码不正确。"
+msgstr "הממ, זה לא נראה כמו קוד הווידוא הנכון"
 
 #: apps/users/views.py:371
-#, fuzzy
 msgid "Success! You have verified your email address."
-msgstr "注册成功！你已激活账号，立即登录吧！"
+msgstr "הצלחה! וידאת את כתובת הדוא\"ל שלך."
 
 #: apps/users/views.py:395
 msgid "This user account was deleted."
-msgstr "用户名已删除。"
+msgstr "חשבון המשתמש הזה נמחק."
 
 #: apps/users/views.py:433
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Thanks! We have sent an email to %s with instructions for completing your "
 "registration."
-msgstr "谢谢！确认邮件已发出到{0} 。请根据邮件指示完成注册。"
+msgstr "תודה! שלחנו הודעה לכתובת %s עם הוראות כדי לגמור את ההרשמה שלך."
 
 #: apps/users/views.py:457
 msgid "Profile updated"
-msgstr "文件更新了。"
+msgstr "Perfil actualizado"
 
 #: apps/users/views.py:463
 msgid ""
 "There were problems updating your profile. Please correct the problems and "
 "submit again."
-msgstr "更新文件中出现问题。请重新提交。"
+msgstr "היו שגיאות בעידכון הפרופיל שלך. בבקשה תקן אותם ושלח שוב."
 
 #: apps/users/views.py:500
 #, python-format
 msgid "The identity %s has already been claimed by you."
-msgstr "身份%s已被你声称。"
+msgstr "הזהות %s כבר נלקחה על ידך."
 
 #: apps/users/views.py:501
 #, python-format
 msgid "The identity %s has already been claimed by another user."
-msgstr "身份%s已被别人声称。"
+msgstr "הזהות %s כבר נלקחה בידי משתמש אחר."
 
 #: apps/users/views.py:514
 #, python-format
 msgid "The identity %s has been saved."
-msgstr "身份%s已保存。"
+msgstr "הזהות %s נשמרה."
 
 #: apps/users/views.py:521
 #, python-format
 msgid "OpenID authentication failed: %s"
-msgstr "开放身份认证失败：%s"
+msgstr "האימות על ידי OpenID נכשלה: %s"
 
 #: apps/users/views.py:524
 msgid "Authentication cancelled."
-msgstr "认证取消。"
+msgstr "האימות בוטל."
 
 #: apps/users/views.py:527
-#, python-format
+#, fuzzy, python-format
 msgid "Unknown OpenID response type: %r"
-msgstr "未知开放身份回答类型：%r"
+msgstr "סוג תשובה של OpenID לא ידועה: %r"
 
 #: apps/users/views.py:529
 msgid "This is an OpenID relying party endpoint."
-msgstr "该开放身份依赖于终端。"
+msgstr ""
 
 #: apps/users/views.py:538
+#, fuzzy
 msgid "You can't edit this openid"
-msgstr "你无法编辑该开放身份。"
+msgstr "אינך יכול לערוך את הOpenID הזה"
 
 #: apps/users/views.py:540
+#, fuzzy
 msgid "The openid was deleted."
-msgstr "该开放身份已删除。"
+msgstr "הOpenID נמחק."
 
 #: apps/users/views.py:570
 msgid "Profile image updated"
-msgstr "设定档图片已更新。"
+msgstr "תמונת הפרופיל עודכנה"
 
 #: apps/users/views.py:575
 msgid "There was an error uploading your image."
-msgstr "上传图片中出错。"
+msgstr "אירעה תקלה בהעלאת התמונה שלך."
 
 #: apps/users/views.py:605
 msgid "Profile link added."
-msgstr "设定档链接已添加。"
+msgstr "קישור הפרופיל הוסף."
 
 #: apps/users/views.py:614
 msgid "There was an error saving your link."
-msgstr "链接保存中存在错误。"
+msgstr "אירעה תקלה בשמירת הקישור שלך."
 
 #: apps/users/views.py:638
 msgid "Profile link updated"
-msgstr "设定档链接已更新。"
+msgstr "קישור הפרופיל עודכן"
 
 #: apps/users/views.py:661
 msgid "The link was deleted."
-msgstr "链接已删除。"
+msgstr "הקישור נמחק."
 
 #: templates/404.html:6
 msgid "Page not found"
-msgstr "页面无法找到。"
+msgstr "הדף לא נמצא"
 
 #: templates/404.html:8
 msgid ""
 "Oops. That links doesn't seem to work. Maybe the page you are looking for is "
 "on the old p2pu site? Try "
-msgstr "哎哟！链接暂时无法工作。也许你所找的页面在P2PU旧网站上？试试去吧！"
+msgstr ""
+"אופס! הקישור ההוא כנראה לא עובד. אולי הדף אותו אתה מחפש נמצא באתר הישן של "
+"P2PU? נסה "
 
 #: templates/404.html:9
+#, fuzzy
 msgid ""
 "If you think this is an error, please let us know by <a href=\"http://p2pu."
 "lighthouseapp.com/projects/71002\" target=\"_blank\">filling a bug report</"
 "a>."
 msgstr ""
-"如果你发现了网站错误，请及时&lt;a href=\"http://p2pu.lighthouseapp.com/"
-"projects/71002\" target=\"_blank\"&gt;写错误报告&lt;/a&gt;告知我们。"
+"אם אתה חושב שזוהי שגיאה, בבקשה הודיע לנו על ידי <a href=\"http://p2pu."
+"lighthouseapp.com/projects/71002\">דיווח על הבאג</a>."
 
 #: templates/500.html:6
 msgid "Internal server error"
-msgstr "内部服务器错误"
+msgstr "שגיאת שרת פנימית"
 
 #: templates/500.html:8
 #, fuzzy
@@ -1298,23 +1328,25 @@ msgid ""
 "problem by <a href=\"http://help.p2pu.org\">filing a bug report</a>, and "
 "telling us what you were doing when the problem occurred."
 msgstr ""
-"该发生的很明显没有发生。你可以通过&lt;a href=\"http://p2pu.lighthouseapp.com/"
-"projects/71002\"&gt;写错误报告&lt;/a&gt;,帮助我们解决这个问题，同时也可以告诉"
-"我们当问题出现时你在做什么。"
+"בבירור מה שהיה אמור לקרות לא קרה. אתה יכול לעזור לנו לפתור את הבעיה על ידי "
+"<a href=\"http://p2pu.lighthouseapp.com/projects/71002\">דיווח על הבאג</a>, "
+"וסיפור מה עשית כאשר התקלה אירעה."
 
 #: templates/503.html:5
 msgid "Down for maintenance, come back soon"
-msgstr "维护中，稍后回来"
+msgstr "האתר כרגע בתחזוקה, שוב עוד מעט"
 
 #: templates/503.html:7
 msgid ""
 "We are probably in the process of upgrading the site. We apologize for any "
 "inconvenience, and hope that you will like the new features."
-msgstr "网站更新中。我们对您造成的不便深表歉意，希望你对我们新网站满意。"
+msgstr ""
+"אנחנו כנראה בתהליך שידרוג האתר. אנו מצטערים על אי הנוחות, ומקווים שתאהבו את "
+"התכונות החדשות."
 
 #: templates/_footer.html:16
 msgid "What is P2PU?"
-msgstr "什么是P2PU?"
+msgstr "מה זה P2PU?"
 
 #: templates/_footer.html:17
 msgid ""
@@ -1325,14 +1357,15 @@ msgid ""
 "internet and educational materials openly available online, P2PU enables "
 "high-quality low-cost education opportunities."
 msgstr ""
-"P2PU是一个草根开放教育项目。它致力于学术之外的学习，并给予认证。P2PU将创建一"
-"个区别于传统高等教育的终身学习模式。P2PU公开提供在线利用互联网资料，为大家提"
-"供低成本高品质的教育机会。"
+"אוניברסיטת Peer 2 Peer (עמית לעמית) הינו פרויקט חינוך פתוח עממי, המארגן  "
+"לימוד חוץ-מוסדי ונותן ללומדים הכרה על הישיגיהם. P2PU יוצר מודל בשביל לימוד "
+"לאורך כל החיים, לצד חינוך פורמלי מסורתי. באמצעות שימוש באינטרנט ובחומרי "
+"הלימוד הזמינים בחינם בו, P2PU מאפשר הזדמנויות לימוד באיכות גבוהה ועלות נמוכה."
 
 #: templates/_footer.html:20
 #, fuzzy
 msgid "Connect With Us"
-msgstr "联系我们"
+msgstr "התחבר איתנו"
 
 #: templates/_footer.html:23
 msgid "Facebook"
@@ -1344,50 +1377,50 @@ msgstr ""
 
 #: templates/_footer.html:27 templates/pages/get_involved_page.html:7
 msgid "Get Involved"
-msgstr "参与"
+msgstr ""
 
 #: templates/_footer.html:29 templates/base.html:86 templates/base.html.py:118
 #: templates/dashboard/splash.html:71
 msgid "Blog"
-msgstr "博客"
+msgstr "בלוג"
 
 #: templates/_footer.html:31
 msgid "Send us an email"
-msgstr "给我们发邮件"
+msgstr "שלח לנו דוא\"ל"
 
 #: templates/_footer.html:35
 #, fuzzy
 msgid "Some of Our Supporters"
-msgstr "赞助者"
+msgstr "כמה מתומכינו"
 
 #: templates/_footer.html:38
 msgid "View all of our supporters"
-msgstr "浏览我们的赞助者"
+msgstr "הצג את כל התומכים שלנו"
 
 #: templates/_footer.html:66
 msgid "(more)"
-msgstr "（更多）"
+msgstr "(יותר)"
 
 #: templates/_footer.html:77 templates/base.html:87 templates/base.html.py:119
 msgid "Help"
-msgstr "帮助"
+msgstr "עזרה"
 
 #: templates/_footer.html:79 templates/courses/course_base.html:91
 msgid "Announcements"
-msgstr "注意事项"
+msgstr "הודעות"
 
 #: templates/_footer.html:80
 msgid "Wiki"
-msgstr "维基"
+msgstr "ויקי"
 
 #: templates/_footer.html:81
 msgid "Found a Bug?"
-msgstr "找到漏洞？"
+msgstr "מצאת באג?"
 
 #: templates/_footer.html:84
 #, fuzzy
 msgid "Creative Commons"
-msgstr "只是共享创用分享相似"
+msgstr "Creative Commons שיתוף זהה"
 
 #: templates/_footer.html:85
 msgid "Share-Alike"
@@ -1395,15 +1428,15 @@ msgstr ""
 
 #: templates/_footer.html:86
 msgid "Privacy Guidelines"
-msgstr "私人指导"
+msgstr "מדיניות פרטיות"
 
 #: templates/_footer.html:87
 msgid "Terms of Use"
-msgstr "使用条款"
+msgstr "תנאי שימוש"
 
 #: templates/base.html:17
 msgid "Learning for everyone, by everyone, about almost anything."
-msgstr "向所有人学习任何知识。"
+msgstr "לימוד לכולם, מאת כולם, אודות כמעט הכול."
 
 #: templates/base.html:65
 msgid "Find"
@@ -1412,7 +1445,7 @@ msgstr ""
 #: templates/base.html:66
 #, fuzzy
 msgid "Great Courses"
-msgstr "创建任务"
+msgstr "יצירת קורס"
 
 #: templates/base.html:70 templates/badges/badge_edit_summary.html:39
 #: templates/content/create_page.html:34
@@ -1424,43 +1457,43 @@ msgstr "创建任务"
 #: templates/projects/project_import.html:8
 #: templates/projects/project_import.html:73 templates/schools/home.html:14
 msgid "Create"
-msgstr "创建"
+msgstr "יצירה"
 
 #: templates/base.html:71
 #, fuzzy
 msgid "a Course"
-msgstr "创建任务"
+msgstr "קורס"
 
 #: templates/base.html:100 templates/dashboard/dashboard.html:18
 #: templates/drumbeatmail/inbox.html:9
 msgid "Dashboard"
-msgstr "仪表盘"
+msgstr ""
 
 #: templates/base.html:101
 msgid "My Profile"
-msgstr "我的个人资料"
+msgstr "הפרופיל שלי"
 
 #: templates/base.html:102
 msgid "My Settings"
-msgstr "我的设置"
+msgstr "ההגדרות שלי"
 
 #: templates/base.html:103 templates/chat/chat.html:4
 #: templates/chat/chat.html.py:10 templates/projects/sidebar.html:177
 msgid "Chat"
-msgstr "聊天"
+msgstr "צ'אט"
 
 #: templates/base.html:104 templates/drumbeatmail/inbox.html:4
 #: templates/drumbeatmail/inbox.html:11 templates/drumbeatmail/inbox.html:117
 msgid "Inbox"
-msgstr "收件箱"
+msgstr "דואר נכנס"
 
 #: templates/base.html:105
 msgid "Logout"
-msgstr "退出"
+msgstr "יציאה מהחשבון"
 
 #: templates/base.html:121
 msgid "Login"
-msgstr "登录"
+msgstr "כניסה לחשבון"
 
 #: templates/base.html:136 templates/base.html.py:250
 #: templates/courses/course_sidebar.html:55
@@ -1468,19 +1501,19 @@ msgstr "登录"
 #: templates/projects/contact_organizers.html:49
 #: templates/search/search.html:30 templates/users/profile_form_base.html:73
 msgid "en"
-msgstr "zn-CN"
+msgstr "he"
 
 #: templates/base.html:156
 msgid "Home"
-msgstr "主页"
+msgstr "בית"
 
 #: templates/base.html:205
 msgid "jquery.ui.datepicker-en.js"
-msgstr "jquery.ui.datepicker-zh-CN.js"
+msgstr "jquery.ui.datepicker-he.js"
 
 #: templates/base.html:207
 msgid "js/script-en.js"
-msgstr "js/script-zn-CN.js"
+msgstr "js/script-he.js"
 
 #: templates/activity/_activity_resource.html:19
 #: templates/content/page.html:41 templates/drumbeat/abuse_reason.html:11
@@ -1492,7 +1525,7 @@ msgstr "js/script-zn-CN.js"
 #: templates/replies/_comment_threads.html:90
 #: templates/signups/sign_up.html:66 templates/users/sidebar.html:32
 msgid "Report Abuse"
-msgstr "举报"
+msgstr "דווח על שימוש לרעה"
 
 #: templates/activity/_activity_resource.html:26
 #: templates/activity/delete_restore.html:32
@@ -1514,15 +1547,17 @@ msgstr "举报"
 #: templates/users/profile_edit_openids.html:36
 #: templates/users/settings_delete.html:30
 msgid "Delete"
-msgstr "删除"
+msgstr "מחק"
 
 #: templates/activity/_activity_resource.html:35
+#, fuzzy
 msgid "at"
-msgstr "在"
+msgstr "ב"
 
 #: templates/activity/_activity_resource.html:45
+#, fuzzy
 msgid "via"
-msgstr "通过"
+msgstr "דרך"
 
 #: templates/activity/_activity_resource.html:54
 #, python-format
@@ -1536,17 +1571,17 @@ msgid_plural ""
 "            "
 msgstr[0] ""
 "\n"
-"              %(counter)s评论\n"
+"              %(counter)s תגובה\n"
 "            "
 msgstr[1] ""
 "\n"
-"              %(counter)s评论\n"
+"              %(counter)s תגובות\n"
 "            "
 
 #: templates/activity/base.html:5
 #: templates/schools/school_edit_statistics.html:23
 msgid "Activity"
-msgstr "活动"
+msgstr "פעילות"
 
 #: templates/activity/base.html:18 templates/learn/learn.html:5
 #: templates/learn/learn.html.py:17 templates/learn/learn_tags.html:9
@@ -1557,7 +1592,7 @@ msgstr "活动"
 #: templates/projects/project_edit.html:25
 #: templates/projects/project_import.html:28
 msgid "Learn"
-msgstr "学习"
+msgstr "למד"
 
 #: templates/activity/base.html:22 templates/courses/course_base.html:84
 #: templates/projects/_user_list.html:8
@@ -1568,23 +1603,23 @@ msgstr "学习"
 #: templates/users/user_list.html:5 templates/users/user_list.html.py:9
 #: templates/users/user_list.html:15
 msgid "People"
-msgstr "人们"
+msgstr "אנשים"
 
 #: templates/activity/delete_restore.html:8
 msgid "Restore Activity"
-msgstr "还原活动"
+msgstr "שיחזור פעילות"
 
 #: templates/activity/delete_restore.html:10
 msgid "Delete Activity"
-msgstr "删除活动"
+msgstr "מחיקת פעילות"
 
 #: templates/activity/delete_restore.html:21
 msgid "Are you sure you want to restore this activity?"
-msgstr "你希望还原此活动吗？"
+msgstr "אתה בטוח שאתה רוצה לשחזר את הפעילות הזאת?"
 
 #: templates/activity/delete_restore.html:23
 msgid "Are you sure you want to delete this activity?"
-msgstr "你希望删除此活动吗？"
+msgstr "אתה בטוח שאתה רוצה למחוק את הפעילות הזאת?"
 
 #: templates/activity/delete_restore.html:27
 #: templates/badges/badge_edit_summary.html:35
@@ -1628,7 +1663,7 @@ msgstr "你希望删除此活动吗？"
 #: templates/users/settings_notifications.html:70
 #: templates/users/settings_password.html:36 templates/users/signin.html:33
 msgid "Cancel"
-msgstr "取消"
+msgstr "ביטול"
 
 #: templates/activity/delete_restore.html:30
 #: templates/content/restore_version.html:21
@@ -1639,7 +1674,7 @@ msgstr "取消"
 #: templates/signups/delete_restore_answer.html:33
 #: templates/signups/sign_up.html:53
 msgid "Restore"
-msgstr "还原"
+msgstr "שחזר"
 
 #: templates/activity/index.html:20 templates/courses/content.html:32
 #: templates/projects/project_admin_metrics.html:25
@@ -1647,7 +1682,7 @@ msgstr "还原"
 #: templates/tracker/scoreboard.html:55 templates/tracker/scoreboard.html:67
 #: templates/tracker/scoreboard.html:89
 msgid "Comments"
-msgstr "评论"
+msgstr "תגובות"
 
 #: templates/activity/reply_action_link.html:3
 #: templates/drumbeatmail/inbox.html:35 templates/drumbeatmail/inbox.html:88
@@ -1657,41 +1692,45 @@ msgstr "评论"
 #: templates/replies/_comment_threads.html:82
 #: templates/replies/_comment_threads.html:121
 #: templates/signups/sign_up.html:61
+#, fuzzy
 msgid "Reply"
-msgstr "回答"
+msgstr "השב"
 
 #: templates/badges/_assessment_body.html:4
 msgid "Assessment from"
-msgstr "评估"
+msgstr "הערכה מאת"
 
 #: templates/badges/_assessment_body.html:4
 #: templates/badges/_assessment_item.html:11
 #: templates/reviews/show_project_reviews.html:16
+#, fuzzy
 msgid "on"
-msgstr "开始"
+msgstr "בתאריך"
 
 #: templates/badges/_assessment_body.html:14
 #: templates/badges/_assessment_body.html:30
 msgid "out of 4"
-msgstr "之4"
+msgstr "מתוך 4"
 
 #: templates/badges/_assessment_body.html:40
 msgid "Comment:"
-msgstr "评论："
+msgstr "תגובה:"
 
 #: templates/badges/_assessment_item.html:11
 msgid "Gave"
-msgstr "给予"
+msgstr "נתן"
 
 #: templates/badges/_assessment_item.html:11
 #: templates/projects/project_edit_status.html:59
 #: templates/projects/sidebar.html:153
+#, fuzzy
 msgid "to"
-msgstr "给"
+msgstr "ל"
 
 #: templates/badges/_give_badge_action.html:4
+#, fuzzy
 msgid "Give Badge"
-msgstr "给与勋章"
+msgstr "תן Badge"
 
 #: templates/badges/_give_badge_action.html:5
 #: templates/badges/badges_list.html:7 templates/badges/badges_list.html:11
@@ -1701,17 +1740,17 @@ msgstr "给与勋章"
 #: templates/schools/projectset_home.html:26
 #: templates/users/_profile_info.html:18
 msgid "Badges"
-msgstr "勋章"
+msgstr ""
 
 #: templates/badges/_review_submission_action.html:4
 #: templates/badges/submission_show.html:47
 #, fuzzy
 msgid "Review This Submission"
-msgstr "审查这个提交"
+msgstr "הערך את הבקשה הזאת"
 
 #: templates/badges/_submission_item.html:11
 msgid "Submitted work on "
-msgstr ""
+msgstr "הגיש עבודה ב"
 
 #: templates/badges/_submission_item.html:16
 #, python-format
@@ -1728,71 +1767,73 @@ msgstr[1] ""
 
 #: templates/badges/_submissions_list.html:6
 msgid "WOW!"
-msgstr "哇！"
+msgstr "וואו!"
 
 #: templates/badges/_submissions_list.html:6
+#, fuzzy
 msgid "Check out all these submissions!"
-msgstr ""
+msgstr "בדוק את כל הבקשות האלו!"
 
 #: templates/badges/_submissions_list.html:8
 msgid "Please take a few minutes and help a fellow peer."
-msgstr ""
+msgstr "בבקשה השקיע כמה דקות ועזור לעמית שלך."
 
 #: templates/badges/_submissions_list.html:10
 #: templates/projects/_tasks_completed_msg.html:17
+#, fuzzy
 msgid "Awaiting Review"
-msgstr ""
+msgstr "מחכים להערכה"
 
 #: templates/badges/_submissions_list.html:11
 msgid "Previously Awarded"
-msgstr ""
+msgstr "הענקות קודמות"
 
 #: templates/badges/_submissions_list.html:12
 #, fuzzy
 msgid "My Submissions"
-msgstr "意见"
+msgstr "הבקשות שלי"
 
 #: templates/badges/_submissions_list_item.html:29
 msgid "read more"
-msgstr ""
+msgstr "קרא יותר"
 
 #: templates/badges/_submissions_list_item.html:37
 #, fuzzy
 msgid "submitted"
-msgstr "提交作业"
+msgstr "בוקש לפני"
 
 #: templates/badges/_submissions_list_item.html:37
-#, fuzzy
 msgid "ago"
-msgstr "前"
+msgstr ""
 
 #: templates/badges/assessment_edit.html:19
+#, fuzzy
 msgid "Review this submission:"
-msgstr ""
+msgstr "הערך את הבקשה הזאת:"
 
 #: templates/badges/assessment_edit.html:28
 #: templates/badges/submission_show.html:31
-#, fuzzy
 msgid "Link to work submitted"
-msgstr "链接你的作业"
+msgstr "קישור לעבודה המוגשת"
 
 #: templates/badges/assessment_edit.html:34
 msgid "How well was this peer able to:"
-msgstr ""
+msgstr "כמה טוב העמית הזה יכל ל:"
 
 #: templates/badges/assessment_edit.html:56
 msgid "Please explain your ratings."
-msgstr ""
+msgstr "בבקשה הסבר את הדירוג שלך."
 
 #: templates/badges/assessment_edit.html:57
 msgid "What did this peer do well? What advice or suggestions would you give?"
-msgstr ""
+msgstr "את מה העמית הזה עשה טוב? איזה עצות וטיפים היית נותן?"
 
 #: templates/badges/assessment_edit.html:59
 #: templates/badges/peer_assessment.html:40
+#, fuzzy
 msgid ""
 "Why do you feel this person deserves this badge? Any additional comments?"
-msgstr ""
+msgstr "מדוע אתה חושב שלאדם הזה מגיע badge? הערות נוספות?"
 
 #: templates/badges/assessment_edit.html:66
 #: templates/badges/peer_assessment.html:46
@@ -1801,67 +1842,72 @@ msgstr ""
 #: templates/content/_toggle_completion.html:70
 #: templates/reviews/review_project.html:43
 msgid "Submit"
-msgstr "提交"
+msgstr "שלח"
 
 #: templates/badges/badge.html:16
 #, fuzzy
 msgid "View your Submissions"
-msgstr "意见"
+msgstr "צפה בבקשות שלך"
 
 #: templates/badges/badge.html:19
 #, fuzzy
 msgid "View Submissions"
-msgstr "意见"
+msgstr "צפה בבקשות"
 
 #: templates/badges/badge.html:24
+#, fuzzy
 msgid "Apply for Badge"
-msgstr "申请徽章"
+msgstr "בקש את הbadge"
 
 #: templates/badges/badge.html:27
 #, fuzzy
 msgid "Award Badge to Peer"
-msgstr "给与你的同伴一个徽章"
+msgstr "הענק את הbadge לעמית"
 
 #: templates/badges/badge.html:34 templates/badges/peer_assessment.html:24
 #: templates/badges/show_user_awards.html:20
 #: templates/badges/submission_edit.html:26
 #: templates/content/_toggle_completion.html:56
 msgid "Requirements:"
-msgstr ""
+msgstr "דרישות:"
 
 #: templates/badges/badge.html:39
 #, fuzzy
 msgid "You need to have these badges:"
-msgstr "你没有任何徽章"
+msgstr "הינך צריך לקבל את הbadgeים האלו:"
 
 #: templates/badges/badge.html:54
+#, fuzzy
 msgid "Other badges you can apply for:"
-msgstr ""
+msgstr "badgeים אחרים אותם אתה יכול לבקש:"
 
 #: templates/badges/badge.html:66
 #, fuzzy
 msgid "Peers that have received this badge:"
-msgstr "用户 %s 没有受到所有基本勋章。"
+msgstr "עמיתים אשר קיבלו את הbadge הזה:"
 
 #: templates/badges/badge.html:78
+#, fuzzy
 msgid "This badge can be earned at these Challenges:"
-msgstr ""
+msgstr "אפשר להרוויח את הbadge הזה באתגרים הללו:"
 
 #: templates/badges/badge.html:88
+#, fuzzy
 msgid "Peers that are applying for this badge:"
-msgstr ""
+msgstr "עמיתים אשר ביקשו את הbadge הזה:"
 
 #: templates/badges/badge.html:90 templates/projects/sidebar.html:314
 msgid "Awarded"
-msgstr "授奖"
+msgstr "הוענקו"
 
 #: templates/badges/badge.html:90 templates/projects/sidebar.html:318
 msgid "Pending"
-msgstr "待定"
+msgstr "מחכים"
 
 #: templates/badges/badge_edit.html:4 templates/badges/badge_edit.html:10
+#, fuzzy
 msgid "Edit Badge"
-msgstr "编辑徽章"
+msgstr "עריכת Badge"
 
 #: templates/badges/badge_edit_summary.html:10
 #: templates/projects/project_edit_links.html:14
@@ -1877,36 +1923,38 @@ msgstr "编辑徽章"
 #: templates/users/profile_edit_links.html:50
 #: templates/users/profile_edit_links_edit.html:13
 msgid "Name"
-msgstr "名字"
+msgstr "שם"
 
 #: templates/badges/badge_edit_summary.html:15
 msgid "Brief description"
-msgstr "简略描述"
+msgstr "תיאור קצר"
 
 #: templates/badges/badge_edit_summary.html:16
 msgid ""
 "This is used both on P2PU and within the Open Badges Infrastructure (OBI)"
-msgstr "共用于P2PU和OBI"
+msgstr "משתמשים בזה גם בP2PU וגם בOpen Badges Infrastructure (OBI)"
 
 #: templates/badges/badge_edit_summary.html:21
 #, fuzzy
 msgid "Requirements to get badge"
-msgstr "获得徽章的标准"
+msgstr "דרישות לקבלת הbadge"
 
 #: templates/badges/badge_edit_summary.html:22
+#, fuzzy
 msgid ""
 "Description of any requirements that must be satisfied to award the badge."
-msgstr ""
+msgstr "תיאור הדרישות החייבות להתמלא על מנת להעניק את הbadge."
 
 #: templates/badges/badge_edit_summary.html:27
 #, fuzzy
 msgid "Badge Type"
-msgstr "徽章种类"
+msgstr "סוג הbadge"
 
 #: templates/badges/badge_edit_summary.html:28
+#, fuzzy
 msgid ""
 "The logic behind badge awarding will change depending on the badge type."
-msgstr ""
+msgstr "החישובים בנוגע להענקת הbadge ישתנו בהתאם לסוג הbadge."
 
 #: templates/badges/badge_edit_summary.html:36
 #: templates/content/edit_page.html:43
@@ -1932,32 +1980,34 @@ msgstr ""
 #: templates/users/settings_notifications.html:71
 #: templates/users/settings_password.html:37
 msgid "Save"
-msgstr "保存"
+msgstr "שמירה"
 
 #: templates/badges/peer_assessment.html:20
 #, fuzzy
 msgid "Give this badge to your peer."
-msgstr "给与你的同伴一个徽章"
+msgstr "תן את הbadge הזה לעמית שלך."
 
 #: templates/badges/peer_assessment.html:34
-#, fuzzy
 msgid "Peer Username:"
-msgstr "同伴的用户名"
+msgstr "שם העמית:"
 
 #: templates/badges/profile_badges_manage.html:7
 #: templates/badges/profile_badges_manage.html:13
 #: templates/users/profile_edit.html:34
 #, fuzzy
 msgid "Share Badges"
-msgstr "管理徽章"
+msgstr "שיתוף Badges"
 
 #: templates/badges/profile_badges_manage.html:15
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "In order to allow you to share your <a href=\"%(badges_help_url)s\" target="
 "\"_blank\">badges</a> with other sites and communities, P2PU has plugged "
 "into the Mozilla Open Badge Infrastructure (OBI)."
 msgstr ""
+"על מנת לאפשר לך לשתף את <a href=\"%(badges_help_url)s\" target=\"_blank"
+"\">הbadges</a> שלך עם אתרים וקהילות אחרות, P2PU התחבר לMozilla Open Badge "
+"Infrastructure (OBI)."
 
 #: templates/badges/profile_badges_manage.html:18
 #, fuzzy, python-format
@@ -1965,117 +2015,111 @@ msgid ""
 "Start by sending your badges to the <a href=\"%(obi_url)s\" target=\"_blank"
 "\">Mozilla Open Badge Backpack</a> as %(email)s."
 msgstr ""
-"发送你的邮箱地址和徽章到&lt;a href=\"%(obi_url)s\" target=\"_blank\"&gt;Open "
-"Badges Infrastructure (OBI)&lt;/a&gt;. Visit the &lt;a href="
-"\"%(badges_help_url)s\" target=\"_blank\"&gt;assessments and badges page&lt;/"
-"a&gt; 以获得更多的信息。"
+"התחל על ידי שליחת הbadges שלך ל<a href=\"%(obi_url)s\" target=\"_blank"
+"\">Mozilla Open Badge Backpack</a> כ%(email)s."
 
 #: templates/badges/profile_badges_manage.html:23
+#, fuzzy
 msgid "You don't have any badges."
-msgstr "你没有任何徽章"
+msgstr "אין לך badges."
 
 #: templates/badges/profile_badges_manage.html:24
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Check out the <a href=\"%(badges_url)s\">existing badges</a> you can earn!"
 msgstr ""
+"בדוק את כל <a href=\"%(badges_url)s\">הbadges הקיימים</a> שאתה יכול להרוויח!"
 
 #: templates/badges/show_assessment.html:6
-#, fuzzy
 msgid "Award Justification for"
-msgstr "关于  的评定"
+msgstr "צידוק ההענקה בשביל"
 
 #: templates/badges/show_assessment.html:30
 #: templates/badges/submission_show.html:37 templates/messages/inbox.html:13
 msgid "Received"
-msgstr "接手"
+msgstr ""
 
 #: templates/badges/show_assessment.html:39
-#, fuzzy
 msgid "Award Justification"
-msgstr "关于  的评定"
+msgstr "צידוק ההענקה"
 
 #: templates/badges/show_user_awards.html:11
 msgid "'s Awards to"
-msgstr "对   的授奖"
+msgstr " Otorgada a"
 
 #: templates/badges/show_user_awards.html:30
 #: templates/projects/imported_detailed_description.html:15
 msgid "Prerequisites"
-msgstr "预习"
+msgstr "דרישות מוקדמות"
 
 #: templates/badges/show_user_awards.html:40
 msgid "Awarded At"
-msgstr "对  的授奖"
+msgstr "הוענק ב"
 
 #: templates/badges/show_user_awards.html:51
 msgid "Evidence"
-msgstr ""
+msgstr "ראיות"
 
 #: templates/badges/submission_edit.html:22
 #, fuzzy
 msgid "Apply for this badge."
-msgstr "申请徽章"
+msgstr "בקש את הbadge הזה."
 
 #: templates/badges/submission_edit.html:36
-#, fuzzy
 msgid "URL to the work you are submitting:"
-msgstr "链接你的作业"
+msgstr "קישור לעבודה אותה אתה מגיש:"
 
 #: templates/badges/submission_edit.html:41
 #: templates/content/_toggle_completion.html:66
-#, fuzzy
 msgid "What did you learn? Why do you feel you deserve this badge?"
-msgstr "你从作业中获得什么？为什么认为你可以获得徽章？"
+msgstr "מה למדת? מדוע אתה חושב שאתה ראוי לקבל את הbadge הזה?"
 
 #: templates/badges/submission_show.html:6
 #, fuzzy
 msgid "Submission for"
-msgstr "意见"
+msgstr "בקשה בשביל"
 
 #: templates/badges/submission_show.html:20
 #, fuzzy
 msgid "Submission"
-msgstr "意见"
+msgstr "בקשה"
 
 #: templates/badges/submission_show.html:34
 msgid "Progress:"
-msgstr "进步"
+msgstr "התקדמות:"
 
 #: templates/badges/submission_show.html:37
-#, fuzzy
 msgid " reviews of the"
-msgstr "来自   的审阅"
+msgstr " הערכות מתוך"
 
 #: templates/badges/submission_show.html:37
 msgid "reviews needed."
-msgstr "需要审阅"
+msgstr "הערכות נצרכות."
 
 #: templates/badges/submission_show.html:40
-#, fuzzy
 msgid "The posted reviews give this work submission a total average score of"
-msgstr "给予这一份作业  分"
+msgstr "ההערכות שפורסמו נתנו לעבודה הזאת ציון ממוצע של"
 
 #: templates/badges/submission_show.html:40
 msgid "(needs to be at least"
-msgstr "最低要求"
+msgstr "(צריך להיות לפחות"
 
 #: templates/badges/submission_show.html:40
 msgid "for the badge to be awarded)."
-msgstr "获得徽章"
+msgstr "כדי שהbadge יוענק)."
 
 #: templates/badges/submission_show.html:57 templates/reviews/base.html:4
 #: templates/reviews/base.html.py:10
 #: templates/reviews/show_project_reviews.html:6
 #: templates/reviews/show_project_reviews.html:12
-#, fuzzy
 msgid "Reviews"
-msgstr "审阅"
+msgstr "הערכות"
 
 #: templates/badges/submissions_list.html:7
 #: templates/badges/submissions_list.html:11
+#, fuzzy
 msgid "Submissions"
-msgstr "意见"
+msgstr "בקשות"
 
 #: templates/badges/success_msg.html:3
 #, fuzzy, python-format
@@ -2084,83 +2128,81 @@ msgid ""
 "\"%(obi_url)s\" target=\"_blank\">%(obi_url)s</a>. Be sure to log in using "
 "the email <strong>%(email)s</strong>."
 msgstr ""
-"徽章发送成功。你先可以查看你的徽章了&lt;a href=\"%(obi_url)s\" target="
-"\"_blank\"&gt;%(obi_url)s&lt;/a&gt;. Be sure to log in using the email &lt;"
-"strong&gt;%(email)s&lt;/strong&gt;."
+"הbadges נשלחו בהצלחה! אתה יכול לצפות בbadges שלך אצל <a href=\"%(obi_url)s\" "
+"target=\"_blank\">%(obi_url)s</a>. אל תשכח להתחבר באמצעות הכתובת <strong>"
+"%(email)s</strong>."
 
 #: templates/content/_post_link_comment.html:2
-#, fuzzy
 msgid "This is a link to my work:"
-msgstr "作业链接"
+msgstr "זהו קישור לעבודה שלי:"
 
 #: templates/content/_toggle_completion.html:8
 msgid "You've marked this task as completed."
-msgstr "你已将任务标识为“已完成”。"
+msgstr "סימנת את המשימה הזאת כגמורה."
 
 #: templates/content/_toggle_completion.html:13
 msgid "Are you done with this task?"
-msgstr "完成任务了？"
+msgstr "האם סיימת את המשימה הזאת?"
 
 #: templates/content/_toggle_completion.html:14
 msgid "Yes, I'm done"
-msgstr "是的，已完成"
+msgstr "כן, גמרתי"
 
 #: templates/content/_toggle_completion.html:30
-#, fuzzy
 msgid "Post to Discussion Wall"
-msgstr "任务讨论"
+msgstr "פרסם בקיר הדיון"
 
 #: templates/content/_toggle_completion.html:36
+#, fuzzy
 msgid "Submit this link to apply for the badges below"
-msgstr ""
+msgstr "פרסם את הקישור הזה ובקש את הbadge להלן"
 
 #: templates/content/_toggle_completion.html:51
 #, fuzzy
 msgid "Apply for this badge"
-msgstr "申请徽章"
+msgstr "בקש את הbadge הזה"
 
 #: templates/content/_toggle_completion.html:60
 #, fuzzy
 msgid "Badge Application Form"
-msgstr "对  的申请"
+msgstr "טופס בקשת badge"
 
 #: templates/content/_toggle_completion.html:62
 #, fuzzy
 msgid "Url to the work you are submitting"
-msgstr "链接你的作业"
+msgstr "קישור לעבודה אותה אתה מגיש"
 
 #: templates/content/_toggle_completion.html:70
+#, fuzzy
 msgid "Submit and move to the next badge application"
-msgstr ""
+msgstr "פרסם ועבור לבקשת הbadge הבאה"
 
 #: templates/content/_toggle_completion.html:75
 msgid "Move on to next task"
-msgstr "下一个任务"
+msgstr "עבור למשימה הבאה"
 
 #: templates/content/_toggle_completion.html:83
+#, fuzzy
 msgid "Did you know that you can apply for these badges in this task?"
-msgstr ""
+msgstr "הידעת שאתה יכול לבקש את הbadges האלו במשימה הזאת?"
 
 #: templates/content/_toggle_completion.html:92
-#, fuzzy
 msgid "Received!"
-msgstr "接手"
+msgstr "התקבל!"
 
 #: templates/content/_toggle_completion.html:95
-#, fuzzy
 msgid "Apply"
-msgstr "申请"
+msgstr "בקש"
 
 #: templates/content/_toggle_completion.html:98
-#, fuzzy
 msgid "Submitted"
-msgstr "提交"
+msgstr "נשלח!"
 
 #: templates/content/base_page_form.html:20
 #: templates/replies/comment_page.html:59
 #: templates/signups/answer_sign_up.html:28
 msgid "[Preview]"
-msgstr "预览"
+msgstr "[תצוגה מקדימה]"
 
 #: templates/content/base_page_form.html:33
 #: templates/courses/content_form_snip.html:17
@@ -2168,32 +2210,31 @@ msgstr "预览"
 #: templates/projects/project_create_overview.html:91
 #: templates/projects/project_edit_summary.html:23
 msgid "Title"
-msgstr "标题"
+msgstr "כותרת"
 
 #: templates/content/base_page_form.html:34
 msgid "A good title is short and descriptive."
-msgstr "好的标题应该简洁而概括。"
+msgstr "כותרת טובה הינה קצרה ותיאורית."
 
 #: templates/content/base_page_form.html:41
 #: templates/projects/project_edit_summary.html:35
 msgid "One sentence description"
-msgstr "一句话描述"
+msgstr "תיאור במשפט אחד"
 
 #: templates/content/base_page_form.html:42
-#, fuzzy
 msgid "This description will be used as sub header below the task title."
-msgstr "该描述将作为副标题"
+msgstr "התיאור הזה ישמש ככותרת המשנה מתחת לכותרת המשימה."
 
 #: templates/content/base_page_form.html:53
 msgid "Collaborative work (editable by all the participants)."
-msgstr "协作作业（可由参与者编辑）"
+msgstr "עבודה שיתופית )(יכולה להיערך על ידי כל המשתתפים)."
 
 #: templates/content/base_page_form.html:59
 #: templates/courses/content_form_snip.html:11
 #: templates/replies/comment_page.html:105
 #: templates/signups/answer_sign_up.html:103
 msgid "Preview"
-msgstr "预览"
+msgstr "תצוגה מקדימה"
 
 #: templates/content/confirm_delete_page.html:11
 #: templates/content/create_page.html:11 templates/content/edit_page.html:11
@@ -2202,15 +2243,15 @@ msgstr "预览"
 #: templates/content/version_page.html:12
 #: templates/projects/project_task_list.html:9
 msgid "Task List"
-msgstr "任务列表"
+msgstr "רשימת המשימות"
 
 #: templates/content/confirm_delete_page.html:24
 msgid "Are you sure you want to delete this task?"
-msgstr "你确定要删除此任务吗？"
+msgstr "אתה בטוח שאתה רוצה למחוק את המשימה הזאת?"
 
 #: templates/content/create_page.html:5 templates/content/create_page.html:15
 msgid "Create Task"
-msgstr "创建任务"
+msgstr "יצירת משימה"
 
 #: templates/content/create_page.html:19 templates/content/edit_page.html:27
 msgid ""
@@ -2221,9 +2262,10 @@ msgid ""
 "constructed over a week, a project that lasts for a few weeks, or a month-"
 "long endeavour that everyone works on."
 msgstr ""
-"创建一个好的任务对于同伴的学习非常重要。任务需要有一个明确的目标，同时可以通"
-"过学习来实现目标。任务可大可小，它可以是一天的讨论，一周的写作，或数周甚至一"
-"个月的项目。"
+"יצירת משימה טובה הינה קריטית לתהליך הלימוד. למשימות צריך להיות מטרה ברורה, "
+"ומוטב שיהיו רציפות לאורך כל תהליך הלימוד. משימה יכולה להיות גדולה או קטנה "
+"ולהארך ככל שתרצה - הם יכולים להיות דיון ממוקד בשביל יום אחד, מטלת כתיבה "
+"לאורך שבוע, פרויקט שנמשך כמה שבועות, או מאמץ של חודש שכולם עובדים עליו."
 
 #: templates/content/edit_page.html:18 templates/content/page.html:19
 #: templates/courses/content_form_snip.html:10
@@ -2238,44 +2280,45 @@ msgstr ""
 #: templates/signups/sign_up.html:64
 #: templates/users/profile_edit_links.html:72
 msgid "Edit"
-msgstr "编辑"
+msgstr "עריכה"
 
 #: templates/content/edit_page.html:33
 #: templates/content/restore_version.html:30
 msgid "Minor update (not posted to the wall)."
-msgstr "辅修课目更新"
+msgstr "עידכון מינורי (לא מתפרסם בקיר)."
 
 #: templates/content/history_page.html:15
 #: templates/content/history_page.html:21
 #: templates/content/restore_version.html:14
 #: templates/content/version_page.html:16
 msgid "History"
-msgstr "背景"
+msgstr "היסטוריה"
 
 #: templates/content/history_page.html:25
 #: templates/content/history_page.html:33
 msgid "deleted"
-msgstr "已删除"
+msgstr "נמחק"
 
 #: templates/content/history_page.html:27
 msgid "(current)"
-msgstr "目前"
+msgstr "(נוכחית)"
 
 #: templates/content/page.html:22
 msgid "View History"
-msgstr "查看背景"
+msgstr "צפה בהיסטוריה"
 
 #: templates/content/page.html:31
+#, fuzzy
 msgid "Task Navigation"
-msgstr "任务协商"
+msgstr "ניווט משימות"
 
 #: templates/content/page.html:62
 msgid "Post Comment"
-msgstr "黏贴评论"
+msgstr "פרסם תגובה"
 
 #: templates/content/page.html:64
 msgid "Task Discussion"
-msgstr "任务讨论"
+msgstr "דיון אודות המשימה"
 
 #: templates/courses/content.html:25 templates/courses/course.html:22
 msgid "edit"
@@ -2298,8 +2341,9 @@ msgid "You can add some information here by editing this page!</a>"
 msgstr ""
 
 #: templates/courses/course_admin_content.html:21
+#, fuzzy
 msgid "remove"
-msgstr ""
+msgstr "הסרה"
 
 #: templates/courses/course_admin_content.html:32
 msgid "Add more content"
@@ -2319,7 +2363,7 @@ msgstr ""
 #: templates/courses/course_announcement.html:15
 #, fuzzy
 msgid "Subject: "
-msgstr "科目"
+msgstr "נושא"
 
 #: templates/courses/course_announcement.html:15
 #, python-format
@@ -2329,29 +2373,29 @@ msgstr ""
 #: templates/courses/course_announcement.html:16
 #, fuzzy
 msgid "Announcement text:"
-msgstr "注意事项"
+msgstr "הודעות"
 
 #: templates/courses/course_announcement.html:18
 #: templates/drumbeatmail/base.html:42 templates/messages/compose.html:8
 #: templates/projects/contact_organizers.html:36
 #: templates/users/forgot_password.html:18
 msgid "Send"
-msgstr "发送"
+msgstr "שלח"
 
 #: templates/courses/course_base.html:74
 #, fuzzy
 msgid "Organize and add content"
-msgstr "已增加组织者！"
+msgstr "מארגן נוסף!"
 
 #: templates/courses/course_base.html:81
 #, fuzzy
 msgid "Discussion"
-msgstr "任务讨论"
+msgstr "דיונים"
 
 #: templates/courses/course_base.html:88
 #, fuzzy
 msgid "Settings"
-msgstr "我的设置"
+msgstr "ההגדרות שלי"
 
 #: templates/courses/course_comment_snip.html:8
 #: templates/courses/discussion_snip.html:10
@@ -2362,7 +2406,7 @@ msgstr ""
 #: templates/courses/course_comment_snip.html:19
 #, fuzzy
 msgid "Reply to comment"
-msgstr "评论"
+msgstr "הגב לתגובה"
 
 #: templates/courses/course_comment_snip.html:25
 #: templates/courses/course_comment_snip.html:37
@@ -2370,12 +2414,12 @@ msgstr "评论"
 #: templates/courses/discussion_snip.html:24
 #, fuzzy
 msgid "Post comment"
-msgstr "黏贴评论"
+msgstr "פרסם תגובה"
 
 #: templates/courses/course_comment_snip.html:32
 #, fuzzy
 msgid "Post new comment"
-msgstr "黏贴评论"
+msgstr "פרסם תגובה"
 
 #: templates/courses/course_discussion.html:9
 msgid ""
@@ -2386,18 +2430,18 @@ msgstr ""
 #: templates/courses/course_people.html:9
 #, fuzzy
 msgid "Learners"
-msgstr "学习"
+msgstr "למד"
 
 #: templates/courses/course_people.html:19
 #: templates/projects/_user_list.html:38 templates/projects/sidebar.html:185
 #: templates/schools/school_edit_statistics.html:18
 msgid "Organizers"
-msgstr ""
+msgstr "מארגנים"
 
 #: templates/courses/course_people.html:33
 #, fuzzy
 msgid "Add user"
-msgstr "编辑徽章"
+msgstr "הוספת משימה"
 
 #: templates/courses/course_settings.html:10
 msgid ""
@@ -2407,13 +2451,15 @@ msgstr ""
 
 #: templates/courses/course_settings.html:13
 #: templates/courses/course_settings.html:64
+#, fuzzy
 msgid "Course status"
-msgstr ""
+msgstr "Cursos"
 
 #: templates/courses/course_settings.html:23
 #: templates/schools/school_edit_featured.html:17
+#, fuzzy
 msgid "Course Title"
-msgstr ""
+msgstr "קורס"
 
 #: templates/courses/course_settings.html:34
 msgid "Hashtag"
@@ -2431,12 +2477,12 @@ msgstr ""
 #: templates/projects/project_edit_summary.html:90
 #: templates/schools/school_edit_summary.html:22
 msgid "Description"
-msgstr ""
+msgstr "תיאור"
 
 #: templates/courses/course_settings.html:57
 #, fuzzy
 msgid "Update description"
-msgstr "简略描述"
+msgstr "תיאור קצר"
 
 #: templates/courses/course_settings.html:72
 msgid "Users can join this course at any time."
@@ -2453,22 +2499,22 @@ msgstr ""
 #: templates/courses/course_settings.html:80
 #, fuzzy
 msgid "Set dates"
-msgstr "更新公告"
+msgstr "עדכונים"
 
 #: templates/courses/course_settings.html:83
+#, fuzzy
 msgid "Start date"
-msgstr ""
+msgstr "Iniciar Reto"
 
 #: templates/courses/course_settings.html:84
-#, fuzzy
 msgid "End date"
-msgstr "更新"
+msgstr ""
 
 #: templates/courses/course_settings.html:89
 #: templates/users/_openid_providers.html:19
 #: templates/users/register_openid.html:9 templates/users/signin.html:10
 msgid "or"
-msgstr "或"
+msgstr "o"
 
 #: templates/courses/course_settings.html:93
 msgid "Switch to rolling term"
@@ -2489,18 +2535,18 @@ msgid "Singup is closed. Only organizers can add more people."
 msgstr ""
 
 #: templates/courses/course_settings.html:133
+#, fuzzy
 msgid "Course languge"
-msgstr ""
+msgstr "קורס"
 
 #: templates/courses/course_settings.html:135
 #, fuzzy
 msgid "Update language"
-msgstr "语言"
+msgstr "שפה"
 
 #: templates/courses/course_settings.html:141
-#, fuzzy
 msgid "Meta data"
-msgstr "更新公告"
+msgstr ""
 
 #: templates/courses/course_settings.html:142
 msgid ""
@@ -2511,7 +2557,7 @@ msgstr ""
 #: templates/courses/course_settings.html:147
 #, fuzzy
 msgid "About (subject)"
-msgstr "关于我"
+msgstr "Acerca de Mi"
 
 #: templates/courses/course_settings.html:151
 msgid ""
@@ -2524,8 +2570,9 @@ msgid "Typical Age Range"
 msgstr ""
 
 #: templates/courses/course_settings.html:159
+#, fuzzy
 msgid "Is Based on URL"
-msgstr ""
+msgstr "Basado en"
 
 #: templates/courses/course_settings.html:163
 msgid "Educational Role (target audience)"
@@ -2550,12 +2597,12 @@ msgstr ""
 #: templates/courses/course_sidebar.html:20
 #, fuzzy
 msgid "Featured in:"
-msgstr "创建任务"
+msgstr "מומלץ"
 
 #: templates/courses/course_sidebar.html:31
 #, fuzzy
 msgid "Navigation"
-msgstr "任务协商"
+msgstr "ניווט משימות"
 
 #: templates/courses/course_sidebar.html:55
 #, python-format
@@ -2569,25 +2616,27 @@ msgstr ""
 #: templates/courses/course_sidebar.html:76
 #, fuzzy
 msgid "Start Course"
-msgstr "创建任务"
+msgstr "יצירת קורס"
 
 #: templates/courses/course_sidebar.html:82
 #, fuzzy
 msgid "Leave Course"
-msgstr "创建任务"
+msgstr "יצירת קורס"
 
 #: templates/courses/course_user_snip.html:12
+#, fuzzy
 msgid "Remove user"
-msgstr ""
+msgstr "הסרה"
 
 #: templates/courses/course_user_snip.html:17
+#, fuzzy
 msgid "Make organizer"
-msgstr ""
+msgstr "הסרת מארגן"
 
 #: templates/courses/create_course.html:16
 #, fuzzy
 msgid "Create a new course"
-msgstr "创建新账号"
+msgstr "צור חשבון חדש"
 
 #: templates/courses/create_course.html:25
 msgid ""
@@ -2610,8 +2659,9 @@ msgid ""
 msgstr ""
 
 #: templates/courses/create_course.html:40
+#, fuzzy
 msgid "Course Title:"
-msgstr ""
+msgstr "קורס"
 
 #: templates/courses/create_course.html:42
 msgid "A catchy title for the course, ex. 'Get CC Savvy'"
@@ -2634,12 +2684,12 @@ msgstr ""
 #: templates/courses/create_course.html:53
 #, fuzzy
 msgid "Description:"
-msgstr "具体描述"
+msgstr "תיאור"
 
 #: templates/courses/create_course.html:53
 #, fuzzy
 msgid "This description is used in places where your course will be listed."
-msgstr "该描述将作为副标题"
+msgstr "התיאור הזה ישמש ככותרת המשנה מתחת לכותרת המשימה."
 
 #: templates/courses/create_course.html:55
 msgid ""
@@ -2656,20 +2706,19 @@ msgstr ""
 #: templates/courses/create_course.html:61
 #, fuzzy
 msgid "Create my course!"
-msgstr "创建任务"
+msgstr "יצירת קורס"
 
 #: templates/dashboard/_join_p2pu.html:9
-#, fuzzy
 msgid "Join the Community"
-msgstr "黏贴评论"
+msgstr "הצטרף לקהילה"
 
 #: templates/dashboard/_join_p2pu.html:9
 msgid "It's free!"
-msgstr ""
+msgstr "זה בחינם!"
 
 #: templates/dashboard/_join_p2pu.html:12
 msgid "Learn anything, with your peers."
-msgstr ""
+msgstr "למד הכל, עם העמיתים שלך."
 
 #: templates/dashboard/_join_p2pu.html:15 templates/learn/learn.html:65
 msgid ""
@@ -2677,94 +2726,95 @@ msgid ""
 "tasks, assessing individual and group work, and providing constructive "
 "feedback."
 msgstr ""
+"בP2PU, אנשים עובדים ביחד כדי ללמוד נושא מסוים, על ידי השלמת משימות, הערכת "
+"עבודות פרטיות וקבוצתיות, ונתינת ביקורת בונה."
 
 #: templates/dashboard/dashboard.html:9
 msgid "Your Dashboard"
-msgstr "你的仪表盘"
+msgstr ""
 
 #: templates/dashboard/dashboard.html:12
 msgid "Activity from your profile"
-msgstr "来自你文档中的活动"
+msgstr "פעילות מהפרופיל שלך"
 
 #: templates/dashboard/dashboard.html:13
 msgid "Activity from your dashboard"
-msgstr "来自仪表盘的活动"
+msgstr ""
 
 #: templates/dashboard/dashboard.html:32
 msgid "Welcome to P2PU!"
-msgstr "欢迎来到P2PU"
+msgstr "ברוכים הבאים לP2PU!"
 
 #: templates/dashboard/dashboard.html:35
 msgid "To get started, you should "
-msgstr "开始之前，你需要"
+msgstr "כדי להתחיל, כדאי "
 
 #: templates/dashboard/dashboard.html:35
-#, fuzzy
 msgid ""
 "update your profile</a>. This is a great way to tell people a bit more about "
 "yourself. Then find "
-msgstr "更新你的文档&lt;/a&gt；通过这个方式让大家更了解你。然后"
+msgstr ""
+"לעדכן את הפרופיל שלך</a>. זוהי דרך מצויינת כדי לספר לאנשים יותר על עצמך אחר "
+"תמצא "
 
 #: templates/dashboard/dashboard.html:35
-#, fuzzy
 msgid "people</a> and "
-msgstr "人们&lt;/a&gt; 和"
+msgstr "אנשים</a> ו"
 
 #: templates/dashboard/dashboard.html:35
-#, fuzzy
 msgid "groups</a> that interest you and start following them! You can also "
-msgstr "小组&lt;/a&gt;你可以寻找你所感兴趣的！同时你也可以"
+msgstr "קבוצות</a> שמעניינים אותך ותתחיל לעקוב אחריהם! אפשר גם "
 
 #: templates/dashboard/dashboard.html:35
-#, fuzzy
 msgid "create new groups</a> and update how often P2PU "
-msgstr "创建新的小组&lt;/a&gt; 更新P2PU"
+msgstr "ליצור קבוצות חדשות</a> ולעדכן את התדירות בה P2PU "
 
 #: templates/dashboard/dashboard.html:35
-#, fuzzy
 msgid "contacts you</a>."
-msgstr "联系你&lt;/a&gt;"
+msgstr "שולח לך הודעות</a>."
 
 #: templates/dashboard/dashboard.html:55
+#, fuzzy
 msgid "Post a message..."
-msgstr ""
+msgstr "פרסום הודעה"
 
 #: templates/dashboard/dashboard.html:64 templates/projects/_wall.html:15
 msgid ""
 "Important message (participants can not turn off notifications for important "
 "messages)."
 msgstr ""
+"הודעה חשובה (משתתפים אינם יכולים למנוע שליחת הודעות אודות הודעות חשובות)."
 
 #: templates/dashboard/dashboard.html:76 templates/projects/_wall.html:22
 msgid "Post Message"
-msgstr ""
+msgstr "פרסום הודעה"
 
 #: templates/dashboard/setup_profile.html:5
 #: templates/dashboard/setup_profile.html:7
 msgid "Create Profile"
-msgstr "创建文档"
+msgstr "יצירת פרופיל"
 
 #: templates/dashboard/sidebar.html:25
 #: templates/signups/answer_sign_up.html:32 templates/signups/sign_up.html:80
 msgid "Location:"
-msgstr ""
+msgstr "מיקום:"
 
 #: templates/dashboard/sidebar.html:33
 msgid "Interests"
-msgstr "兴趣"
+msgstr "תחומי עניין"
 
 #: templates/dashboard/sidebar.html:39 templates/users/_profile_info.html:94
 msgid "View more interested in "
-msgstr "查看更多感兴趣的"
+msgstr "צפייה באנשים המעוניינים ב"
 
 #: templates/dashboard/sidebar.html:51
 #, fuzzy
 msgid "Wants To Learn About"
-msgstr "希望学习"
+msgstr "רוצה ללמוד יותר על"
 
 #: templates/dashboard/sidebar.html:56 templates/users/_profile_info.html:106
 msgid "View more interested in learning more about "
-msgstr "查看更多感兴趣的"
+msgstr "צפייה באנשים המעוניינים ללמוד יותר על "
 
 #: templates/dashboard/sidebar.html:72 templates/learn/_course_card.html:33
 #: templates/projects/_project_card.html:33
@@ -2772,27 +2822,27 @@ msgstr "查看更多感兴趣的"
 #: templates/schools/school_edit_statistics.html:20
 #: templates/users/_profile_info.html:10 templates/users/_user_card.html:17
 msgid "Followers"
-msgstr ""
+msgstr "עוקבים"
 
 #: templates/dashboard/sidebar.html:85 templates/users/_user_card.html:21
 msgid "Following"
-msgstr "在关注"
+msgstr "עוקב אחרי"
 
 #: templates/dashboard/sidebar.html:100
 msgid "Learning"
-msgstr "正在学习"
+msgstr "לומד"
 
 #: templates/dashboard/sidebar.html:129 templates/users/sidebar.html:67
 msgid "(UP)"
-msgstr "（上）"
+msgstr "(למעלה)"
 
 #: templates/dashboard/sidebar.html:132 templates/users/sidebar.html:70
 msgid "(DOWN)"
-msgstr "（下载）"
+msgstr "(למטה)"
 
 #: templates/dashboard/splash.html:7
 msgid "Learning for everyone, by everyone, about almost anything"
-msgstr "向任何人学习任何知识"
+msgstr "לימוד לכולם, מאת כולם, אודות כמעט הכול"
 
 #: templates/dashboard/splash.html:22
 msgid "LEARN"
@@ -2829,23 +2879,28 @@ msgstr ""
 #: templates/dashboard/splash.html:25
 #, fuzzy
 msgid "At "
-msgstr "在"
+msgstr "אצל"
 
 #: templates/dashboard/splash.html:25
 msgid ", people work together to learn a particular topic by completing"
 msgstr ""
 
 #: templates/dashboard/splash.html:26
+#, fuzzy
 msgid "tasks, assessing individual and group work, and providing constructive"
 msgstr ""
+"אנשים עובדים ביחד כדי ללמוד נושא מסוים, על ידי השלמת משימות, הערכת עבודות "
+"פרטיות וקבוצתיות, ונתינת ביקורת בונה."
 
 #: templates/dashboard/splash.html:27
+#, fuzzy
 msgid "feedback."
-msgstr ""
+msgstr "Comentarios"
 
 #: templates/dashboard/splash.html:32
+#, fuzzy
 msgid "Find Course"
-msgstr ""
+msgstr "קורס"
 
 #: templates/dashboard/splash.html:33
 msgid "OR"
@@ -2856,9 +2911,8 @@ msgstr ""
 #: templates/projects/project_create_review.html:32
 #: templates/projects/project_create_tasks.html:32
 #: templates/projects/project_import.html:34
-#, fuzzy
 msgid "Create Course"
-msgstr "创建任务"
+msgstr "יצירת קורס"
 
 #: templates/dashboard/splash.html:35
 msgid " "
@@ -2867,7 +2921,7 @@ msgstr ""
 #: templates/dashboard/splash.html:44
 #, fuzzy
 msgid "Featured Courses"
-msgstr "创建任务"
+msgstr "יצירת קורס"
 
 #: templates/dashboard/splash.html:45
 msgid "These are staff picked courses currently running."
@@ -2875,7 +2929,7 @@ msgstr ""
 
 #: templates/dashboard/splash.html:71
 msgid "P2PU Blog"
-msgstr ""
+msgstr "הבלוג של P2PU"
 
 #: templates/dashboard/splash.html:75
 msgid "Subscribe to the Peer 2 Peer University blog"
@@ -2889,12 +2943,12 @@ msgstr ""
 #: templates/drumbeat/report_abuse.html:5
 #: templates/drumbeat/report_received.html:5
 msgid "Abuse Report Received"
-msgstr ""
+msgstr "הדיווח אודות שימוש לרעה התקבל"
 
 #: templates/drumbeat/abuse_reason.html:17
 #, fuzzy
 msgid "Why are you reporting this?"
-msgstr "你为什么对这个话题感兴趣？"
+msgstr "¿Qué lo hizo interesarse en este tema?"
 
 #: templates/drumbeat/abuse_reason.html:21
 msgid "Reason if you selected other."
@@ -2903,21 +2957,23 @@ msgstr ""
 #: templates/drumbeat/abuse_reason.html:25
 #: templates/drumbeat/report_abuse.html:17
 msgid "Report"
-msgstr ""
+msgstr "דיווח"
 
 #: templates/drumbeat/report_abuse.html:14
 msgid ""
 "Would you like to report this content as objectionable? This can be anything "
 "from suspected spam to offensive content."
 msgstr ""
+"הנך רוצה לדווח על התוכן הזה כבעייתי?  זה יכול להיות הכל מחשד לספאם ועד לתוכן "
+"פוגעני."
 
 #: templates/drumbeat/report_received.html:12
 msgid "Thank You,"
-msgstr ""
+msgstr "תודה רבה,"
 
 #: templates/drumbeat/report_received.html:13
 msgid "We have received your report and will investigate further."
-msgstr ""
+msgstr "קיבלנו את הדיווח שלך ונחקור את העניין."
 
 #: templates/drumbeatmail/base.html:13
 msgid "To"
@@ -2926,7 +2982,7 @@ msgstr ""
 #: templates/drumbeatmail/base.html:23
 #: templates/projects/contact_organizers.html:17
 msgid "Message"
-msgstr ""
+msgstr "הודעה"
 
 #: templates/drumbeatmail/base.html:36
 #: templates/projects/contact_organizers.html:29
@@ -2934,45 +2990,46 @@ msgstr ""
 msgid ""
 "Welcome Robots, ReCaptcha has been disabled for your convenience. Spam at "
 "will."
-msgstr ""
+msgstr "שלום רובוטים, ReCaptcha נוטרל לנוחיותכם. שלחו ספאם לרצונכם."
 
 #: templates/drumbeatmail/compose.html:4
 msgid "Compose Message"
-msgstr ""
+msgstr "חיבור הודעה"
 
 #: templates/drumbeatmail/compose.html:6
 msgid "New Private Message"
-msgstr ""
+msgstr "הודעה פרטית חדשה"
 
 #: templates/drumbeatmail/inbox.html:14
 msgid "New Private Discussion"
-msgstr ""
+msgstr "דיון פרטי חדש"
 
 #: templates/drumbeatmail/inbox.html:26
 msgid "You have no messages"
-msgstr ""
+msgstr "אין לך הודעות חדשות"
 
 #: templates/drumbeatmail/inbox.html:109
 msgid "More"
-msgstr ""
+msgstr "יותר"
 
 #: templates/drumbeatmail/inbox.html:121
 msgid "All Messages"
-msgstr ""
+msgstr "כל ההודעות"
 
 #: templates/drumbeatmail/inbox.html:122
 msgid "Sent"
-msgstr ""
+msgstr "נשלח"
 
 #: templates/learn/_course_card.html:20
 #: templates/projects/_project_card.html:20
+#, fuzzy
 msgid "Time to Finish"
-msgstr ""
+msgstr "גמור"
 
 #: templates/learn/_course_card.html:21
 #: templates/projects/_project_card.html:21 templates/projects/sidebar.html:62
 msgid "hrs"
-msgstr ""
+msgstr "h"
 
 #: templates/learn/_course_card.html:25
 #: templates/projects/_project_card.html:25
@@ -2982,19 +3039,18 @@ msgstr ""
 #: templates/learn/_learn_filters.html:6 templates/users/_profile_info.html:26
 #: templates/users/_profile_info.html:62
 msgid "View All"
-msgstr ""
+msgstr "צפייה בהכל"
 
 #: templates/learn/_learn_filters.html:10 templates/schools/home.html:72
 #: templates/schools/school_edit.html:23
 #: templates/schools/school_edit_featured.html:8
 #: templates/users/user_list.html:55
 msgid "Featured"
-msgstr ""
+msgstr "מומלץ"
 
 #: templates/learn/_learn_filters.html:14
-#, fuzzy
 msgid "Community Picks"
-msgstr "评论"
+msgstr "בחירות הקהילה"
 
 #: templates/learn/_learn_filters.html:17
 msgid "Staff Favorites"
@@ -3002,20 +3058,21 @@ msgstr ""
 
 #: templates/learn/_learn_filters.html:21
 msgid "Fresh Additions"
-msgstr ""
+msgstr "הוספות חדשות"
 
 #: templates/learn/_learn_filters.html:25 templates/schools/menu.html:4
 msgid "Schools"
-msgstr ""
+msgstr "בתי ספר"
 
 #: templates/learn/_learn_filters.html:56
 #, fuzzy
 msgid "More Tags"
-msgstr "标签"
+msgstr "דפדוף בתגים נוספים"
 
 #: templates/learn/_learn_filters.html:69
+#, fuzzy
 msgid "Browse All Tags"
-msgstr ""
+msgstr "דפדוף בתגים נוספים"
 
 #: templates/learn/_learn_filters.html:77
 msgid "CLEAR TAGS"
@@ -3024,22 +3081,20 @@ msgstr ""
 #: templates/learn/_learn_filters.html:81
 #: templates/projects/project_create_overview.html:113
 #: templates/projects/project_edit_summary.html:61
-#, fuzzy
 msgid "Language"
-msgstr "语言"
+msgstr "שפה"
 
 #: templates/learn/_learn_filters.html:97
-#, fuzzy
 msgid "Community Reviewed"
-msgstr "评论已删除!"
+msgstr ""
 
 #: templates/learn/_learn_filters.html:101
 msgid "Filter"
-msgstr ""
+msgstr "סינון"
 
 #: templates/learn/_learn_header.html:4
 msgid "Featured - Community Picks"
-msgstr ""
+msgstr "מומלץ - בחירות הקהילה"
 
 #: templates/learn/_learn_header.html:6
 msgid "Featured - Showcase"
@@ -3047,16 +3102,15 @@ msgstr ""
 
 #: templates/learn/_learn_header.html:8
 msgid "Featured - Fresh Additions"
-msgstr ""
+msgstr "מומלץ - הוספות חדשות"
 
 #: templates/learn/_learn_header.html:14
-#, fuzzy
 msgid "Tags - "
-msgstr "标签"
+msgstr "תגים - "
 
 #: templates/learn/_learn_header.html:16
 msgid "All"
-msgstr ""
+msgstr "הכל"
 
 #: templates/learn/_learn_projects.html:33
 msgid ""
@@ -3068,14 +3122,15 @@ msgid ""
 msgstr ""
 
 #: templates/learn/add_course.html:7 templates/learn/add_course.html.py:10
+#, fuzzy
 msgid "Add course"
-msgstr ""
+msgstr "קורס"
 
 #: templates/learn/add_course.html:26
 #: templates/projects/project_edit_links.html:15
 #: templates/users/profile_edit_links.html:51
 msgid "URL"
-msgstr "链接"
+msgstr "URL"
 
 #: templates/learn/add_course.html:27
 msgid ""
@@ -3084,8 +3139,9 @@ msgid ""
 msgstr ""
 
 #: templates/learn/add_course.html:29
+#, fuzzy
 msgid "Image URL"
-msgstr ""
+msgstr "תמונה"
 
 #: templates/learn/add_course.html:30
 msgid "URL for the course image, ex. 'http://so.me/url/image.png'"
@@ -3110,7 +3166,7 @@ msgstr ""
 
 #: templates/learn/learn.html:39
 msgid "Show More Results"
-msgstr ""
+msgstr "הראה תוצאות נוספות"
 
 #: templates/learn/learn.html:44
 msgid "Didn't find yours? How about creating one?"
@@ -3119,15 +3175,15 @@ msgstr ""
 #: templates/learn/learn.html:47
 #, fuzzy
 msgid "Create a Course"
-msgstr "创建任务"
+msgstr "יצירת קורס"
 
 #: templates/messages/compose.html:4 templates/messages/inbox.html:40
 msgid "New Message"
-msgstr ""
+msgstr "הודעה חדשה"
 
 #: templates/messages/inbox.html:4
 msgid "Your Messages"
-msgstr ""
+msgstr "ההודעות שלך"
 
 #: templates/messages/inbox.html:6
 msgid "You have no messages in your inbox"
@@ -3135,19 +3191,19 @@ msgstr ""
 
 #: templates/messages/inbox.html:11
 msgid "From"
-msgstr ""
+msgstr "מאת"
 
 #: templates/messages/inbox.html:14
 msgid "Action"
-msgstr ""
+msgstr "פעולה"
 
 #: templates/messages/inbox.html:29
 msgid "DATETIME_FORMAT"
-msgstr "N j, Y, P"
+msgstr ""
 
 #: templates/messages/inbox.html:32
 msgid "delete"
-msgstr ""
+msgstr "מחיקה"
 
 #: templates/oauthprovider/authorize.html:5
 msgid "Authorize"
@@ -3159,14 +3215,14 @@ msgid "We're going to connect you with %(client_description)s. Ok with you?"
 msgstr ""
 
 #: templates/oauthprovider/authorize.html:14
+#, fuzzy
 msgid "Yes"
-msgstr ""
+msgstr "כן"
 
 #: templates/pages/get_involved_page.html:14
 #: templates/pages/get_involved_page.html:20
-#, fuzzy
 msgid "Get Involved."
-msgstr "参与"
+msgstr ""
 
 #: templates/pages/get_involved_page.html:24
 msgid ""
@@ -3176,9 +3232,8 @@ msgid ""
 msgstr ""
 
 #: templates/pages/get_involved_page.html:27
-#, fuzzy
 msgid "Ways to get involved"
-msgstr "参与"
+msgstr ""
 
 #: templates/pages/get_involved_page.html:29
 #: templates/pages/get_involved_page.html:40
@@ -3202,9 +3257,8 @@ msgstr ""
 
 #: templates/pages/get_involved_page.html:33
 #: templates/pages/get_involved_page.html:60
-#, fuzzy
 msgid "Donate to P2PU"
-msgstr "欢迎来到P2PU"
+msgstr ""
 
 #: templates/pages/get_involved_page.html:34
 #: templates/pages/get_involved_page.html:65
@@ -3283,12 +3337,11 @@ msgstr ""
 #: templates/pages/jobs_page.html:27 templates/pages/jobs_page.html.py:32
 #: templates/pages/jobs_page.html:42 templates/pages/jobs_page.html.py:52
 msgid "GO!"
-msgstr ""
+msgstr "IR!"
 
 #: templates/pages/jobs_page.html:37
-#, fuzzy
 msgid "Intern"
-msgstr "兴趣"
+msgstr ""
 
 #: templates/pages/jobs_page.html:40
 msgid "Marketing Intern"
@@ -3320,91 +3373,88 @@ msgstr ""
 
 #: templates/pagination/pagination_links.html:3
 msgid "previous"
-msgstr ""
+msgstr "הקודם"
 
 #: templates/pagination/pagination_links.html:4
 msgid "next"
-msgstr ""
+msgstr "הבא"
 
 #: templates/projects/_project_edit_image.html:1
 #: templates/projects/project_create_overview.html:143
 msgid "Cover Image"
-msgstr ""
+msgstr "תמונה"
 
 #: templates/projects/_project_edit_image.html:3
-#, fuzzy
 msgid ""
 "Upload an image file from your computer. This image is shown in search "
 "results and on the listing page."
-msgstr "上传电脑中的图片以代替文档图片"
+msgstr ""
+"העלה קובץ תמונה מהמחשב שלך. התמונה הזאת מוצגת בתוצאות חיפוש ובדפי הרשימות."
 
 #: templates/projects/_project_edit_image.html:17
-#, fuzzy
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
 "243x150 pixels"
 msgstr ""
-"文件类型：JPG,GIF或者PNG&lt;br/&gt;。最大不超过700K &lt;br/&gt;,最小不小于"
-"57x57 像素"
+"סוגי קבצים: JPG, GIF או PNG בלבד<br/> גודל מקסימלי: 700k <br/> ממדים: "
+"243x150 פיקסלים"
 
 #: templates/projects/_task_list.html:6
 #: templates/projects/_tasks_list_wall.html:9
 #: templates/projects/sidebar.html:230
 msgid "Tasks"
-msgstr ""
+msgstr "משימות"
 
 #: templates/projects/_task_list.html:22
 msgid "new"
-msgstr ""
+msgstr "חדש"
 
 #: templates/projects/_task_list.html:25
-#, fuzzy
 msgid "comment"
 msgid_plural "comments"
-msgstr[0] "评论"
-msgstr[1] "评论"
+msgstr[0] "תגובה"
+msgstr[1] "תגובות"
 
 #: templates/projects/_task_list.html:36
 msgid "View and Discuss"
-msgstr ""
+msgstr "צפייה ודיון"
 
 #: templates/projects/_task_list.html:39
 #: templates/projects/project_edit.html:35
 msgid "View"
-msgstr ""
+msgstr "צפה"
 
 #: templates/projects/_task_list.html:45 templates/projects/sidebar.html:253
 msgid "No tasks have been added."
-msgstr ""
+msgstr "אף משימה לא נוספה."
 
 #: templates/projects/_task_list.html:49
 msgid "Displaying"
-msgstr ""
+msgstr "מציג"
 
 #: templates/projects/_task_list.html:49
 msgid "of"
-msgstr ""
+msgstr "מתוך"
 
 #: templates/projects/_task_list.html:49
 msgid "total tasks"
-msgstr ""
+msgstr "משימות"
 
 #: templates/projects/_task_list.html:50
 msgid "See All Tasks"
-msgstr ""
+msgstr "צפייה בכל המשימות"
 
 #: templates/projects/_tasks_completed_msg.html:3
 msgid "Congratulations!"
-msgstr ""
+msgstr "יישר כוח!"
 
 #: templates/projects/_tasks_completed_msg.html:4
 msgid "Good job completing all the tasks."
 msgstr ""
 
 #: templates/projects/_tasks_completed_msg.html:8
-#, fuzzy
 msgid "Badges Awarded"
-msgstr "授奖"
+msgstr ""
 
 #: templates/projects/_tasks_completed_msg.html:26
 msgid "Earn More Badges"
@@ -3412,40 +3462,39 @@ msgstr ""
 
 #: templates/projects/_tasks_completed_msg.html:35
 msgid "Next Challenges"
-msgstr ""
+msgstr "האתגרים הבאים"
 
 #: templates/projects/_tasks_completed_msg.html:47
 msgid "Help Others with this Challenge"
-msgstr ""
+msgstr "עזור לאחרים עם האתגר הזה"
 
 #: templates/projects/_tasks_completed_msg.html:50
 msgid "Adopt this Challenge"
-msgstr ""
+msgstr "אמץ את האתגר הזה"
 
 #: templates/projects/_tasks_list_wall.html:10
 msgid "Discussions"
-msgstr ""
+msgstr "דיונים"
 
 #: templates/projects/_tasks_list_wall.html:15
 msgid "Completed"
-msgstr ""
+msgstr "נשלם"
 
 #: templates/projects/_tasks_list_wall.html:22
-#, fuzzy
 msgid "Badges you can earn in this challenge:"
-msgstr "你已经使用该挑战。"
+msgstr ""
 
 #: templates/projects/_user_list.html:6
 msgid "See All"
-msgstr ""
+msgstr "צפייה בהכל"
 
 #: templates/projects/_user_list.html:24
 msgid "Peers who have offered their help"
-msgstr ""
+msgstr "עמיתים שהציעו את העזרה שלהם"
 
 #: templates/projects/_user_list.html:58
 msgid "Peers taking this challenge"
-msgstr ""
+msgstr "עמיתים המשתתפים באתגר"
 
 #: templates/projects/_user_list.html:71
 #: templates/projects/project_edit.html:43
@@ -3455,39 +3504,39 @@ msgstr ""
 #: templates/schools/projectset_home.html:24
 #: templates/schools/school_edit_statistics.html:19
 msgid "Participants"
-msgstr ""
+msgstr "משתתפים"
 
 #: templates/projects/_user_list.html:91
 msgid "Peers who have completed this challenge"
-msgstr ""
+msgstr "עמיתים שסיימו את האתגר"
 
 #: templates/projects/_user_list.html:123
 msgid "View all"
-msgstr ""
+msgstr "צפייה בהכל"
 
 #: templates/projects/_wall.html:11
 msgid "Post a message"
-msgstr ""
+msgstr "פרסום הודעה"
 
 #: templates/projects/contact_organizers.html:6
 msgid "Contact Organizers of "
-msgstr ""
+msgstr "יצירת קשר עם המארגנים של "
 
 #: templates/projects/detailed_description_initial_content.html:4
 #, python-format
 msgid "Please fill out the  %(kind)s's full description."
-msgstr ""
+msgstr "בבקשה מלא את התיאור המלא של %(kind)s."
 
 #: templates/projects/detailed_description_initial_content.html:4
 msgid "In this page you could:"
-msgstr ""
+msgstr "בדף הזה אתה יכול:"
 
 #: templates/projects/detailed_description_initial_content.html:7
 #, python-format
 msgid ""
 "Describe the purpose of the %(kind)s and the learning goals for the tasks "
 "within."
-msgstr ""
+msgstr "תאר את המטרה של ה%(kind)s ואת מטרות הלימוד של המשימות."
 
 #: templates/projects/detailed_description_initial_content.html:8
 #, python-format
@@ -3496,6 +3545,8 @@ msgid ""
 "topic? What do you hope to achieve by organizing this  %(kind)s? Are you an "
 "expert, enthusiastic or a novice?"
 msgstr ""
+"תאר את התפקיד של ב%(kind)s הזה. מה גרם לך להתעניין בנושא הזה? מה אתה מנסה "
+"לעשות על ידי ארגון ה%(kind)s הזה? האם אתה מומחה, נלהב, או טירון?"
 
 #: templates/projects/detailed_description_initial_content.html:9
 #, python-format
@@ -3519,23 +3570,23 @@ msgstr ""
 #: templates/projects/project_edit.html:39
 #: templates/schools/school_edit.html:16
 msgid "Summary"
-msgstr ""
+msgstr "סיכום"
 
 #: templates/projects/imported_detailed_description.html:9
 msgid "Learning Objectives"
-msgstr ""
+msgstr "מטרות לימוד"
 
 #: templates/projects/project.html:21 templates/projects/sidebar.html:258
 msgid "New Task"
-msgstr ""
+msgstr "משימה חדשה"
 
 #: templates/projects/project.html:22 templates/projects/project_edit.html:34
 msgid "Admin"
-msgstr ""
+msgstr "ניהול"
 
 #: templates/projects/project.html:44
 msgid "Activity Wall"
-msgstr ""
+msgstr "לוח פעילויות"
 
 #: templates/projects/project_admin_metrics.html:12
 msgid "Organizer Quick View"
@@ -3547,50 +3598,52 @@ msgstr ""
 
 #: templates/projects/project_admin_metrics.html:16
 msgid "This table shows the overview of participant data. "
-msgstr ""
+msgstr "הטבלה הזאת מראה סיכום של המידע על המשתתפים."
 
 #: templates/projects/project_admin_metrics.html:17
 msgid ""
 "To see follower data or non-loggedin user data, use export for a <acronym "
 "title=\"Comma Separated Values\">CSV</acronym> file."
 msgstr ""
+"כדי לראות את המידע על העוקבים או המשתמשים שלא נכנסו לחשבון, השתמשו בexport "
+"כדי לקבל קובץ <acronym title=\"Comma Separated Values\">CSV</acronym>."
 
 #: templates/projects/project_admin_metrics.html:23
 #: templates/projects/project_admin_metrics.html:34
 msgid "Participant"
-msgstr ""
+msgstr "משתתף"
 
 #: templates/projects/project_admin_metrics.html:24
 #: templates/projects/project_admin_metrics.html:35
 msgid "Last Active Date"
-msgstr ""
+msgstr "תאריך הפעילות האחרונה"
 
 #: templates/projects/project_admin_metrics.html:26
 #: templates/projects/project_admin_metrics.html:37
 msgid "Task Edits"
-msgstr ""
+msgstr "עריכות של משימות"
 
 #: templates/projects/project_admin_metrics.html:27
 #: templates/projects/project_admin_metrics.html:38
 msgid "Time on Course Pages"
-msgstr ""
+msgstr "זמן בדפי הקורס"
 
 #: templates/projects/project_admin_metrics.html:45
 msgid ""
 "The information about course page visits is not available on the same day."
-msgstr ""
+msgstr "המידע אודות ביקורים בדפי הקורס אינו זמין באותו היום."
 
 #: templates/projects/project_admin_metrics.html:46
 msgid "Last date the user visited a course page."
-msgstr ""
+msgstr "התאריך האחרון בו המשתמש ביקר בדף של הקורס."
 
 #: templates/projects/project_admin_metrics.html:47
 msgid "Total includes comments on wall and task pages."
-msgstr ""
+msgstr "הסכום כולל תגובות בקיר ובדפי המשימות."
 
 #: templates/projects/project_admin_metrics.html:48
 msgid "Total includes edits to the full description and task pages."
-msgstr ""
+msgstr "הסכום כולל עריכות לתיאור המלא ולדפי המשימות."
 
 #: templates/projects/project_admin_metrics.html:49
 msgid ""
@@ -3625,8 +3678,9 @@ msgstr ""
 #: templates/projects/project_clone.html:48
 #: templates/projects/project_create_overview.html:50
 #: templates/projects/project_import.html:47
+#, fuzzy
 msgid "Import from old site"
-msgstr ""
+msgstr "יבוא מהאתר הישן"
 
 #: templates/projects/project_clone.html:52
 #: templates/projects/project_import.html:51
@@ -3652,7 +3706,7 @@ msgstr ""
 #: templates/projects/project_edit_next_steps.html:12
 #: templates/schools/school_edit_summary.html:16
 msgid "Short Name"
-msgstr ""
+msgstr "שם קצר"
 
 #: templates/projects/project_clone.html:74
 msgid "Clone"
@@ -3662,8 +3716,9 @@ msgstr ""
 #: templates/projects/project_create_overview.html:62
 #: templates/projects/project_create_review.html:39
 #: templates/projects/project_create_tasks.html:40
+#, fuzzy
 msgid "Step 2: Add Tasks"
-msgstr ""
+msgstr "שלב 2: הוספת משימות"
 
 #: templates/projects/project_create_overview.html:79
 #, python-format
@@ -3701,12 +3756,12 @@ msgstr ""
 #: templates/projects/project_create_overview.html:127
 #: templates/projects/project_edit_summary.html:80
 msgid "What kind of learning environment do you want to create?"
-msgstr ""
+msgstr "איזה סוג סביבת לימוד אתה רוצה ליצור?"
 
 #: templates/projects/project_create_overview.html:131
 #: templates/projects/project_edit_summary.html:84
 msgid "Or make up your own term."
-msgstr ""
+msgstr "או המצא מונח משלך."
 
 #: templates/projects/project_create_overview.html:133
 #: templates/projects/project_edit_summary.html:86
@@ -3727,7 +3782,7 @@ msgstr ""
 #: templates/projects/project_create_review.html:48
 #, fuzzy
 msgid "Review your course"
-msgstr "评论已发表!"
+msgstr "בחון שוב את הקורס שלך"
 
 #: templates/projects/project_create_review.html:50
 msgid ""
@@ -3763,13 +3818,12 @@ msgstr ""
 
 #: templates/projects/project_create_review.html:63
 msgid "Finish"
-msgstr ""
+msgstr "גמור"
 
 #: templates/projects/project_create_tasks.html:8
 #: templates/projects/project_create_tasks.html:52
-#, fuzzy
 msgid "Create tasks"
-msgstr "创建任务"
+msgstr "יצירת משימות"
 
 #: templates/projects/project_create_tasks.html:61
 msgid "Up"
@@ -3780,9 +3834,8 @@ msgid "Down"
 msgstr ""
 
 #: templates/projects/project_create_tasks.html:72
-#, fuzzy
 msgid "Add Task"
-msgstr "编辑徽章"
+msgstr "הוספת משימה"
 
 #: templates/projects/project_create_tasks.html:73
 msgid "Go to step 3"
@@ -3790,26 +3843,26 @@ msgstr ""
 
 #: templates/projects/project_edit.html:40
 msgid "Image"
-msgstr ""
+msgstr "תמונה"
 
 #: templates/projects/project_edit.html:41
 #: templates/projects/project_edit_status.html:10
 msgid "Status &amp; Duration"
-msgstr ""
+msgstr "סטטוס וזמן נדרש"
 
 #: templates/projects/project_edit.html:41
 #: templates/projects/project_edit_status.html:12
 msgid "Status &amp; Dates"
-msgstr ""
+msgstr "סטטוס ותאריכים"
 
 #: templates/projects/project_edit.html:42 templates/projects/sidebar.html:173
 msgid "Signup"
-msgstr ""
+msgstr "הרשמה"
 
 #: templates/projects/project_edit.html:44
 #: templates/projects/project_edit_next_steps.html:7
 msgid "Associated Courses"
-msgstr ""
+msgstr "קורסים קשורים"
 
 #: templates/projects/project_edit.html:45
 #: templates/projects/project_edit_links_base.html:7
@@ -3817,11 +3870,11 @@ msgstr ""
 #: templates/users/profile_edit_links.html:11
 #: templates/users/profile_edit_links_edit.html:8
 msgid "Links"
-msgstr "链接"
+msgstr "קישורים"
 
 #: templates/projects/project_edit.html:46
 msgid "Metrics"
-msgstr ""
+msgstr "מדדים"
 
 #: templates/projects/project_edit_image.html:13
 #: templates/schools/school_edit_background.html:24
@@ -3834,12 +3887,12 @@ msgstr ""
 
 #: templates/projects/project_edit_links.html:5
 msgid "Add links to websites associated with this "
-msgstr ""
+msgstr "הוסף קישורים לאתרים הקשורים ל"
 
 #: templates/projects/project_edit_links.html:5
 #: templates/projects/project_edit_links_edit.html:5
 msgid " such as a blog, homepage, twitter profile, github repository etc."
-msgstr ""
+msgstr " הזה, כגון בלוג, דף בית, פרופיל טוויטר, או github repository וכדומה."
 
 #: templates/projects/project_edit_links.html:16
 #: templates/users/profile_edit_links.html:52
@@ -3854,7 +3907,7 @@ msgstr ""
 #: templates/users/profile_edit_links.html:53
 #: templates/users/profile_edit_openids.html:26
 msgid "Actions"
-msgstr ""
+msgstr "פעולות"
 
 #: templates/projects/project_edit_links.html:27
 #: templates/users/profile_edit_links.html:63
@@ -3867,7 +3920,7 @@ msgstr ""
 #: templates/schools/school_edit_organizers.html:36
 #: templates/users/profile_edit_links.html:63
 msgid "yes"
-msgstr ""
+msgstr "כן"
 
 #: templates/projects/project_edit_links.html:28
 #: templates/users/profile_edit_links.html:64
@@ -3877,7 +3930,7 @@ msgstr ""
 #: templates/projects/project_edit_links.html:28
 #: templates/users/profile_edit_links.html:64
 msgid "error"
-msgstr ""
+msgstr "שגיאה"
 
 #: templates/projects/project_edit_links.html:31
 #: templates/users/profile_edit_links.html:67
@@ -3889,13 +3942,13 @@ msgstr ""
 #: templates/projects/project_edit_participants.html:58
 #: templates/users/profile_edit_links.html:67
 msgid "no"
-msgstr ""
+msgstr "לא"
 
 #: templates/projects/project_edit_links_base.html:18
 #: templates/users/profile_edit_links.html:25
 #: templates/users/profile_edit_links_edit.html:18
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: templates/projects/project_edit_links_base.html:23
 #: templates/users/profile_edit_links.html:32
@@ -3905,13 +3958,13 @@ msgstr ""
 
 #: templates/projects/project_edit_links_edit.html:5
 msgid "Edit links to websites associated with this "
-msgstr ""
+msgstr "עריכת קישורים לאתרים הקשורים ל"
 
 #: templates/projects/project_edit_links_edit.html:7
 #: templates/users/forgot_password_confirm.html:26
 #: templates/users/profile_edit_links_edit.html:27
 msgid "Update"
-msgstr ""
+msgstr "עדכון"
 
 #: templates/projects/project_edit_next_steps.html:8
 msgid ""
@@ -3922,35 +3975,35 @@ msgstr ""
 #: templates/projects/project_edit_next_steps.html:26
 #: templates/projects/sidebar.html:169
 msgid "Kind"
-msgstr ""
+msgstr "סוג"
 
 #: templates/projects/project_edit_next_steps.html:38
 #: templates/projects/project_edit_participants.html:72
 msgid "Remove"
-msgstr ""
+msgstr "הסרה"
 
 #: templates/projects/project_edit_participants.html:10
 msgid "View and add participants."
-msgstr ""
+msgstr "צפייה והוספת משתתפים."
 
 #: templates/projects/project_edit_participants.html:12
 msgid "View, add and remove participants."
-msgstr ""
+msgstr "צפייה, הוספת, והסרת משתתפים."
 
 #: templates/projects/project_edit_participants.html:18
 #: templates/schools/school_edit_organizers.html:13
 #: templates/users/profile_form_base.html:19
 msgid "Username"
-msgstr ""
+msgstr "שם משתמש"
 
 #: templates/projects/project_edit_participants.html:23
 #: templates/projects/project_edit_participants.html:37
 msgid "Organizer"
-msgstr ""
+msgstr "מארגן"
 
 #: templates/projects/project_edit_participants.html:38
 msgid "Adopter"
-msgstr ""
+msgstr "מאמץ"
 
 #: templates/projects/project_edit_participants.html:48
 msgid "Organizing."
@@ -3971,29 +4024,29 @@ msgstr ""
 #: templates/projects/project_edit_participants.html:66
 #: templates/signups/sign_up.html:102
 msgid "Add Organizer"
-msgstr ""
+msgstr "הוספת מארגן"
 
 #: templates/projects/project_edit_participants.html:78
 msgid "Remove organizer"
-msgstr ""
+msgstr "הסרת מארגן"
 
 #: templates/projects/project_edit_status.html:17
 #, python-format
 msgid ""
 "Configure your %(kind)s's status so that it appears in the appropriate lists."
-msgstr ""
+msgstr "הגדר את הסטטוס של ה%(kind)s שלך, כדי שיופיע ברשימות הנכונות."
 
 #: templates/projects/project_edit_status.html:21
 msgid "Under Development."
-msgstr ""
+msgstr "בעבודה."
 
 #: templates/projects/project_edit_status.html:28
 msgid "Not Listed."
-msgstr ""
+msgstr "לא רשום."
 
 #: templates/projects/project_edit_status.html:35
 msgid "Archived."
-msgstr ""
+msgstr "מאורכב."
 
 #: templates/projects/project_edit_status.html:44
 #: templates/projects/project_edit_summary.html:44
@@ -4009,15 +4062,16 @@ msgstr ""
 
 #: templates/projects/project_edit_status.html:54
 msgid "Active from"
-msgstr ""
+msgstr "פעיל מ"
 
 #: templates/projects/project_edit_summary.html:16
+#, fuzzy
 msgid "This is a test course"
-msgstr ""
+msgstr "זהו קורס נסיוני"
 
 #: templates/projects/project_edit_summary.html:26
 msgid "Short and descriptive works best."
-msgstr ""
+msgstr "קצר ותיאורי עובד הכי טוב."
 
 #: templates/projects/project_edit_summary.html:36
 msgid "Used in search results and listings."
@@ -4025,21 +4079,20 @@ msgstr ""
 
 #: templates/projects/project_edit_summary.html:53
 msgid "One paragraph description"
-msgstr ""
+msgstr "תיאור בפסקה אחת"
 
 #: templates/projects/project_edit_summary.html:54
 msgid ""
 "What's this about? What will I learn? Tell me more, but keep it to the point."
-msgstr ""
+msgstr "על מה זה? מה אלמד? ספר לי יותר, אך שזה יהיה קצר."
 
 #: templates/projects/project_edit_summary.html:68
-#, fuzzy
 msgid "Skills"
-msgstr "技能"
+msgstr "מיומנויות"
 
 #: templates/projects/project_edit_summary.html:71
 msgid "Comma-separated list of keywords."
-msgstr ""
+msgstr "רשימת מילות מפתח המופרדות בפסיקים."
 
 #: templates/projects/project_edit_summary.html:79
 msgid "Type"
@@ -4047,7 +4100,7 @@ msgstr ""
 
 #: templates/projects/project_import.html:60
 msgid "Import from Old Site"
-msgstr ""
+msgstr "ייבוא מהאתר הישן"
 
 #: templates/projects/project_import.html:61
 msgid ""
@@ -4057,445 +4110,446 @@ msgstr ""
 
 #: templates/projects/project_import.html:66
 msgid "Course"
-msgstr ""
+msgstr "קורס"
 
 #: templates/projects/project_import.html:73
 msgid "Import"
-msgstr ""
+msgstr "ייבוא"
 
 #: templates/projects/sidebar.html:30 templates/users/sidebar.html:40
 msgid "Unfollow"
-msgstr ""
+msgstr "הפסק לעקוב"
 
 #: templates/projects/sidebar.html:35 templates/users/sidebar.html:46
 msgid "Follow"
-msgstr ""
+msgstr "עקוב"
 
 #: templates/projects/sidebar.html:40
 msgid "Participate"
-msgstr ""
+msgstr "השתתף"
 
+# #############################################################################
+# #############################################################################
+# ## Bookmark                                                                ##
+# #############################################################################
+# #############################################################################
 #: templates/projects/sidebar.html:62
 msgid "Time it should take to complete:"
-msgstr ""
+msgstr "Tiempo que debería tomar en completar:"
 
 #: templates/projects/sidebar.html:62
-#, fuzzy
 msgid "min"
-msgstr "在里面"
+msgstr "m"
 
 #: templates/projects/sidebar.html:71 templates/projects/sidebar.html.py:74
 msgid "Start Challenge"
-msgstr ""
+msgstr "Iniciar Reto"
 
 #: templates/projects/sidebar.html:78 templates/projects/sidebar.html.py:86
 msgid "View Tasks"
-msgstr ""
+msgstr "Ver Tareas"
 
 #: templates/projects/sidebar.html:80
 msgid "View Discussions"
-msgstr ""
+msgstr "Ver Discussiones"
 
 #: templates/projects/sidebar.html:84
 msgid "Request a Mentor"
-msgstr ""
+msgstr "Solicitar un Mentor"
 
 #: templates/projects/sidebar.html:88
 msgid "Discuss Challenge"
-msgstr ""
+msgstr "Discutir sobre el Reto"
 
 #: templates/projects/sidebar.html:93
 msgid "Leave Challenge"
-msgstr ""
+msgstr "Dejar Reto"
 
 #: templates/projects/sidebar.html:105
 msgid "View more tagged with "
-msgstr ""
+msgstr "Vea otros etiquetados como "
 
 #: templates/projects/sidebar.html:114
 msgid "View Full Description"
-msgstr ""
+msgstr "Ver Descripción Completa"
 
 #: templates/projects/sidebar.html:145
 msgid "Under Development"
-msgstr ""
+msgstr "En Desarrollo"
 
 #: templates/projects/sidebar.html:148
 msgid "Not Listed"
-msgstr ""
+msgstr "No Listado"
 
 #: templates/projects/sidebar.html:150
 msgid "DATE_FORMAT"
-msgstr "N j, Y"
+msgstr "j N Y"
 
 #: templates/projects/sidebar.html:152
 msgid "Runs"
-msgstr ""
+msgstr "Activo del"
 
 #: templates/projects/sidebar.html:158 templates/projects/sidebar.html:164
 msgid "Based on"
-msgstr ""
+msgstr "Basado en"
 
 #: templates/projects/sidebar.html:181 templates/users/_user_card.html:25
 msgid "Updates"
-msgstr ""
+msgstr "עדכונים"
 
 #: templates/projects/sidebar.html:198
 msgid "Pending Applicants"
-msgstr ""
+msgstr "Aspirantes Pendientes:"
 
 #: templates/projects/sidebar.html:217
 msgid "Edit Participants"
-msgstr ""
+msgstr "Editar Participantes"
 
 #: templates/projects/sidebar.html:220
 msgid "Contact Organizer(s)"
-msgstr ""
+msgstr "Contactar Organizador(es)"
 
 #: templates/projects/sidebar.html:223
 msgid "Contact Organizer"
-msgstr ""
+msgstr "Contactar Organizador"
 
 #: templates/projects/sidebar.html:264
 msgid "External Links"
-msgstr ""
+msgstr "Enlaces Externos"
 
 #: templates/projects/sidebar.html:282
 msgid "No external links have been added."
-msgstr ""
+msgstr "Ningún enlace externo ha sido añadido."
 
 #: templates/projects/sidebar.html:287
 msgid "Edit Links"
-msgstr ""
+msgstr "Editar Enlaces"
 
 #: templates/projects/sidebar.html:298
-#, fuzzy
 msgid "Help your peers"
-msgstr "你的同伴"
+msgstr "Ayude a sus colegas"
 
 #: templates/projects/sidebar.html:299
 msgid ""
 "Would you be interested in becoming a Mentor? Your peers are going to run "
 "into road blocks and they could really use your help."
 msgstr ""
+"¿Estaría interesado en convertirse en un mentor? Sus colegas van a encontrar "
+"dificultades y realmente podría necesitar su ayuda."
 
 #: templates/projects/sidebar.html:300
 msgid "Become a Mentor"
-msgstr ""
+msgstr "Conviértase en un Mentor"
 
 #: templates/projects/sidebar.html:325
 #, python-format
 msgid "%(counter)s peer needs your review!"
 msgid_plural "%(counter)s peers need your review!"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "¡%(counter)s respuesta de un colega necesita revisión!"
+msgstr[1] "¡%(counter)s respuestas de colegas necesitan revisión!"
 
 #: templates/projects/sidebar.html:325
 #: templates/users/_openid_providers.html:26
 msgid "Go"
-msgstr "继续"
+msgstr "Ir"
 
 #: templates/replies/_comment_threads.html:43
 #: templates/replies/_comment_threads.html:101
 #: templates/replies/comment_page.html:39
 #: templates/replies/comment_page.html:59
 msgid " said:"
-msgstr ""
+msgstr " dijo:"
 
 #: templates/replies/_comment_threads.html:54
 #: templates/replies/_comment_threads.html:116
 #: templates/replies/comment_page.html:45
 #: templates/replies/comment_page.html:65
 msgid "on "
-msgstr ""
+msgstr "en "
 
 #: templates/replies/_comment_threads.html:105
 msgid "In Reply To:"
-msgstr ""
+msgstr "En Respuesta A:"
 
 #: templates/replies/_comment_threads.html:117
 #: templates/replies/comment_page.html:46
 #: templates/replies/comment_page.html:66
 msgid "in reply to "
-msgstr ""
+msgstr "en Respuesta a "
 
 #: templates/replies/comment_page.html:25
 msgid "Edit Comment"
-msgstr ""
+msgstr "ערוך תגובה"
 
 #: templates/replies/comment_page.html:27
 msgid "Reply Comment"
-msgstr ""
+msgstr "הגב לתגובה"
 
 #: templates/replies/comment_page.html:29
 msgid "New Comment"
-msgstr ""
+msgstr "תגובה חדשה"
 
 #: templates/replies/comment_page.html:103
 #: templates/signups/answer_sign_up.html:99
 msgid "Post"
-msgstr ""
+msgstr "Publicar"
 
 #: templates/replies/delete_restore_comment.html:16
 msgid "Restore Comment:"
-msgstr ""
+msgstr "שחזר תגובה"
 
 #: templates/replies/delete_restore_comment.html:16
 msgid "Delete Comment:"
-msgstr ""
+msgstr "מחק תגובה"
 
 #: templates/replies/delete_restore_comment.html:27
 msgid "Are you sure you want to restore this comment?"
-msgstr ""
+msgstr "אתה בטוח שאתה רוצה לשחזר את התגובה הזאת?"
 
 #: templates/replies/delete_restore_comment.html:29
 msgid "Are you sure you want to delete this comment?"
-msgstr ""
+msgstr "אתה בטוח שאתה רוצה למחוק את התגובה הזאת?"
 
 #: templates/reviews/_project_review_action.html:3
 #: templates/reviews/_projects_reviews_list_item.html:3
 #: templates/reviews/review_project.html:7
 msgid "Review"
-msgstr "审阅"
+msgstr "Revisar"
 
 #: templates/reviews/_projects_reviews_list_item.html:5
-#, fuzzy
 msgid "Feedback Comments:"
-msgstr "评论"
+msgstr "Comentarios:"
 
 #: templates/reviews/projects_reviews_list.html:11
 msgid "New Courses"
-msgstr ""
+msgstr "קורסים חדשים"
 
 #: templates/reviews/projects_reviews_list.html:12
-#, fuzzy
 msgid "Reviewed"
-msgstr "审阅"
+msgstr "Revisados"
 
 #: templates/reviews/review_project.html:13
 msgid "Feedback"
-msgstr ""
+msgstr "Comentarios"
 
 #: templates/reviews/review_project.html:20
 msgid "Mark as Reviewed"
-msgstr ""
+msgstr "Marcar como Revisado."
 
 #: templates/reviews/review_project.html:28
 msgid "Feature as Community Pick"
-msgstr ""
+msgstr "Destacar como Selección de la Comunidad"
 
 #: templates/reviews/review_project.html:37
 msgid "Mark as Deleted (Spam)"
-msgstr ""
+msgstr "Marcar como Eliminado (Spam)."
 
 #: templates/reviews/show_project_reviews.html:16
-#, fuzzy
 msgid "Review from"
-msgstr "关于 的审阅"
+msgstr "Evaluación de"
 
 #: templates/reviews/show_project_reviews.html:18
-#, fuzzy
 msgid "Community Reviewed!"
-msgstr "评论已删除!"
+msgstr "¡Comentario eliminado!"
 
 #: templates/reviews/show_project_reviews.html:19
 msgid "Deleted (Spam)!"
-msgstr ""
+msgstr "¡Eliminado (Spam)!"
 
 #: templates/reviews/show_project_reviews.html:20
 msgid "Featured as Community Pick!"
-msgstr ""
+msgstr "¡Destacado como Selección de la Comunidad!"
 
 #: templates/reviews/show_project_reviews.html:21
 msgid "Feedback:"
-msgstr ""
+msgstr "Comentarios:"
 
 #: templates/reviews/show_project_reviews.html:28
-#, fuzzy
 msgid "Post New Review"
-msgstr "请检阅"
+msgstr "Publicar una Nueva Evaluación"
 
 #: templates/richtext/_external_link.html:2
-#, fuzzy
 msgid "Work on this Task"
-msgstr "来自  的  作业"
+msgstr "Trabajar en esta Tarea"
 
 #: templates/richtext/browse.html:9
 msgid "Select the file you want, then click 'Attach File' to continue..."
 msgstr ""
+"Seleccione el fichero que desee, y haga clic en 'Adjuntar Fichero' para "
+"continuar..."
 
 #: templates/richtext/browse.html:14
 msgid "Files"
-msgstr ""
+msgstr "Ficheros"
 
 #: templates/richtext/browse.html:21
 msgid "Attach File"
-msgstr ""
+msgstr "Adjuntar Fichero"
 
 #: templates/richtext/browse.html:25
 msgid ""
 "No files found. Upload files using the 'Link Button' dialog's 'Upload' tab."
 msgstr ""
+"No se encontro ningún fichero. Suba un fichero usando la pestaña 'Cargar' "
+"del dialogo 'Insertar Vínculo'."
 
 #: templates/schools/_projectset_card.html:25
 msgid "View Challenges"
-msgstr ""
+msgstr "Ver Retos"
 
 #: templates/schools/_projectset_card.html:31
 #: templates/schools/projectset_home.html:23
 #: templates/schools/projectset_home.html:37
 msgid "Challenges"
-msgstr ""
+msgstr "Retos"
 
 #: templates/schools/_projectset_card.html:39
 #: templates/schools/projectset_home.html:25
 msgid "Adopters"
-msgstr ""
+msgstr "Adoptaron"
 
 #: templates/schools/_projectset_card.html:53
 msgid "Get started with the first Challenge now"
-msgstr ""
+msgstr "Empiece con el primer Reto ahora"
 
 #: templates/schools/_projectset_card.html:71
 msgid "View All Challenges"
-msgstr ""
+msgstr "Ver Todos los Retos"
 
 #: templates/schools/footer.html:4
 msgid "P2PU Schools:"
-msgstr ""
+msgstr "Escuelas en P2PU:"
 
 #: templates/schools/home.html:11 templates/schools/school_edit.html:4
 #: templates/schools/school_edit.html:11
 msgid "Edit School"
-msgstr ""
+msgstr "Editar Escuela"
 
 #: templates/schools/home.html:16
 msgid "Browse"
-msgstr ""
+msgstr "Navegar"
 
 #: templates/schools/home.html:35 templates/schools/school_edit.html:22
 #: templates/schools/school_edit_organizers.html:7
 msgid "School Organizers"
-msgstr ""
+msgstr "Organizadores de Escuela"
 
 #: templates/schools/home.html:46
 msgid "Challenge Sets"
-msgstr ""
+msgstr "Conjuntos de Retos"
 
 #: templates/schools/projectset_home.html:29
 msgid "Start first Challenge"
-msgstr ""
+msgstr "Iniciar primer Reto"
 
 #: templates/schools/school_edit.html:12
 msgid "View School"
-msgstr ""
+msgstr "Ver Escuela"
 
 #: templates/schools/school_edit.html:17
 msgid "Appearance"
-msgstr ""
+msgstr "Apariencia"
 
 #: templates/schools/school_edit.html:18
 msgid "Logo"
-msgstr ""
+msgstr "Logo"
 
 #: templates/schools/school_edit.html:19
 msgid "Small Logo"
-msgstr ""
+msgstr "Logo Pequeño"
 
 #: templates/schools/school_edit.html:20
 msgid "Background"
-msgstr ""
+msgstr "Fondo"
 
 #: templates/schools/school_edit.html:21
 msgid "Site Logo"
-msgstr ""
+msgstr "Logo del Sitio"
 
 #: templates/schools/school_edit.html:24
 #: templates/schools/school_edit_membership.html:7
 msgid "Membership"
-msgstr ""
+msgstr "Membresía"
 
 #: templates/schools/school_edit.html:25
 #: templates/schools/school_edit_mentorship.html:7
 msgid "Mentorship"
-msgstr ""
+msgstr "Mentores"
 
 #: templates/schools/school_edit.html:26
 #: templates/schools/school_edit_statistics.html:7
 msgid "Statistics"
-msgstr ""
+msgstr "Estadísticas"
 
 #: templates/schools/school_edit_background.html:12
 msgid "Replace School Background Image"
-msgstr ""
+msgstr "Remplazar Imagen de Fondo de la Escuela"
 
 #: templates/schools/school_edit_background.html:14
 msgid "Upload a School Background Image"
-msgstr ""
+msgstr "Subir Imagen de Fondo de la Escuela"
 
 #: templates/schools/school_edit_background.html:16
 #: templates/schools/school_edit_groups_icon.html:16
 #: templates/schools/school_edit_logo.html:16
 #: templates/schools/school_edit_site_logo.html:16
 msgid "Upload an image file from your computer:"
-msgstr ""
+msgstr "Subir una imagen de su computador:"
 
 #: templates/schools/school_edit_background.html:19
-#, fuzzy
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 20x60 "
 "pixels"
 msgstr ""
-"文件类型：JPG,GIF或者PNG&lt;br/&gt;。最大不超过700K &lt;br/&gt;,最小不小于"
-"57x57 像素"
+"Tipos de archivos: JPG, GIF o PNG unicamente<br/> Tamaño máximo: 700k <br/> "
+"Dimensiones: 20x60 pixels"
 
 #: templates/schools/school_edit_featured.html:9
 #, fuzzy
 msgid "View, add and remove courses featured by this school."
-msgstr "%s设立为学校特色项目。"
+msgstr "Ver, añadir y retirar grupos de estudio, cursos, ... de esta escuela."
 
 #: templates/schools/school_edit_groups_icon.html:12
 msgid "Replace School Small Logo"
-msgstr ""
+msgstr "Remplazar Logo Pequeño de la Escuela"
 
 #: templates/schools/school_edit_groups_icon.html:14
 msgid "Upload a School Small Logo"
-msgstr ""
+msgstr "Subir un Logo Pequeño para la Escuela"
 
 #: templates/schools/school_edit_groups_icon.html:19
-#, fuzzy
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: 41x50 "
 "pixels"
 msgstr ""
-"文件类型：JPG,GIF或者PNG&lt;br/&gt;。最大不超过700K &lt;br/&gt;,最小不小于"
-"57x57 像素"
+"Tipos de Archivos: JPG, GIF o PNG unicamente<br/> Tamaño máximo: 700k <br/> "
+"Dimensiones: 41x50 pixels"
 
 #: templates/schools/school_edit_logo.html:12
 msgid "Replace School Logo"
-msgstr ""
+msgstr "Remplazar Logo de la Escuela"
 
 #: templates/schools/school_edit_logo.html:14
 msgid "Upload a School Logo"
-msgstr ""
+msgstr "Subir un Logo de la Escuela"
 
 #: templates/schools/school_edit_logo.html:19
-#, fuzzy
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
 "Variable"
 msgstr ""
-"文件类型：JPG,GIF或者PNG&lt;br/&gt;。最大不超过700K &lt;br/&gt;,最小不小于"
-"57x57 像素"
+"Tipos de archivos: JPG, GIF o PNG unicamente<br/> Tamaño máximo: 700k <br/> "
+"Dimensiones: Variable"
 
 #: templates/schools/school_edit_membership.html:8
 #, fuzzy
 msgid "View, add and remove courses to this school."
-msgstr "%s设立为学校特色项目。"
+msgstr "Ver, añadir y retirar grupos de estudio, cursos, ... de esta escuela."
 
 #: templates/schools/school_edit_membership.html:13
+#, fuzzy
 msgid "Course title"
-msgstr ""
+msgstr "קורס"
 
 #: templates/schools/school_edit_mentorship.html:8
 msgid ""
@@ -4503,294 +4557,325 @@ msgid ""
 "use to signup people as mentors or mentees. Schools will be responsible for "
 "pairing up mentors with mentees and send the introduction emails."
 msgstr ""
+"Las escuelas que tienen programas de mentores pueden proveer las urls a los "
+"formularios para inscribirse como mentores o tutoreados. Las escuelas serán "
+"responsables por asignar mentores a los tutoreados y enviar los mensajes de "
+"presentación."
 
 #: templates/schools/school_edit_mentorship.html:12
 msgid "Mentor Form Url"
-msgstr ""
+msgstr "Url para Mentores"
 
 #: templates/schools/school_edit_mentorship.html:13
 msgid "Provide url for users to signup as mentors."
-msgstr ""
+msgstr "Provea el enlace para que los usuarios se inscriban como mentores."
 
 #: templates/schools/school_edit_mentorship.html:18
 msgid "Mentee Form Url"
-msgstr ""
+msgstr "Url para Tutoreados"
 
 #: templates/schools/school_edit_mentorship.html:19
 msgid "Provide url for users to signup as mentees."
-msgstr ""
+msgstr "Provea el enlace para que los usuarios se inscriban como tutoreados."
 
 #: templates/schools/school_edit_organizers.html:8
 msgid "View, add and remove organizers of your school."
-msgstr ""
+msgstr "Ver, añadir y remover organizadores de su escuela."
 
 #: templates/schools/school_edit_organizers.html:28
 msgid "School Organizer"
-msgstr ""
+msgstr "Organizador de Escuela"
 
 #: templates/schools/school_edit_organizers.html:36
 msgid "Organizing this school."
-msgstr ""
+msgstr "Organizando esta escuela."
 
 #: templates/schools/school_edit_site_logo.html:12
 msgid "Replace School Site Logo"
-msgstr ""
+msgstr "Remplazar Logo del Sitio"
 
 #: templates/schools/school_edit_site_logo.html:14
 msgid "Upload a School Site Logo"
-msgstr ""
+msgstr "Subir Logo del Sitio"
 
 #: templates/schools/school_edit_site_logo.html:19
-#, fuzzy
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
 "141x44 pixels"
 msgstr ""
-"文件类型：JPG,GIF或者PNG&lt;br/&gt;。最大不超过700K &lt;br/&gt;,最小不小于"
-"57x57 像素"
+"Tipos de archivos: JPG, GIF o PNG unicamente<br/> Tamaño máximo: 700k <br/> "
+"Dimensiones: 141x44 pixels"
 
 #: templates/schools/school_edit_statistics.html:8
 msgid "Statistics for this school"
-msgstr ""
+msgstr "Estadisticas para esta escuela."
 
 #: templates/schools/school_edit_statistics.html:9
 msgid "Groups"
-msgstr ""
+msgstr "Grupos"
 
 #: templates/schools/school_edit_statistics.html:25
 msgid "Page Comments"
-msgstr ""
+msgstr "תגובות על העמוד"
 
 #: templates/schools/school_edit_statistics.html:26
 msgid "Wall Messages"
-msgstr ""
+msgstr "Mensajes en el Muro"
 
 #: templates/schools/school_edit_statistics.html:27
 msgid "Activity Replies"
-msgstr ""
+msgstr "Comentarios a Actividades del Muro"
 
 #: templates/schools/school_edit_statistics.html:28
 msgid "Page Edits"
-msgstr ""
+msgstr "Ediciones de Páginas"
 
 #: templates/schools/school_edit_statistics.html:29
 msgid "Sign-Up Answers"
-msgstr ""
+msgstr "Respuestas a las Tareas de Inscripción"
 
 #: templates/schools/school_edit_statistics.html:30
 msgid "Sign-Up Comments"
-msgstr ""
+msgstr "Comentarios en la Página de Inscripción"
 
 #: templates/schools/school_edit_statistics.html:34
 msgid "The numbers on this page do not include data from the old p2pu site."
 msgstr ""
+"Las estadísticas en esta página no incluyen datos del sitio antiguo de p2pu."
 
 #: templates/schools/school_edit_statistics.html:35
 msgid "Comments at the full description and task pages."
-msgstr ""
+msgstr "Comentarios en las páginas de descripción completa y tareas."
 
 #: templates/schools/school_edit_statistics.html:36
 msgid "Messages posted to the wall by organizers and participants."
-msgstr ""
+msgstr "Mensajes publicados en el muro por organizadores y participantes."
 
 #: templates/schools/school_edit_statistics.html:37
 msgid "Comments in the discusion threads of wall activities."
-msgstr ""
+msgstr "Comentarios en los hilos de discusión de las actividades del muro."
 
 #: templates/schools/school_edit_statistics.html:38
 msgid ""
 "Edits to the full description and task pages. Does not include minor updates."
 msgstr ""
+"Ediciones a las páginas de descripción completa y tareas. No incluye "
+"ediciones menores."
 
 #: templates/schools/school_edit_statistics.html:39
 msgid "Includes both accepted and non-accepted answers."
-msgstr ""
+msgstr "Incluye tanto respuestas aceptadas como no aceptadas."
 
 #: templates/schools/school_edit_statistics.html:40
 msgid ""
 "Comments at the sign-up pages. It includes automatic \"wellcome to the group"
 "\" replies."
 msgstr ""
+"Comentarios en las páginas de inscripción. Incluye los comentarios "
+"automáticos de bienvenida."
 
 #: templates/schools/school_edit_styles.html:9
 msgid "Sidebar"
-msgstr ""
+msgstr "Barra Lateral"
 
 #: templates/schools/school_edit_styles.html:13
 msgid "Show School Organizers."
-msgstr ""
+msgstr "Muestre los Organizadores de Escuela."
 
 #: templates/schools/school_edit_styles.html:15
 msgid ""
 "Hide the list of school organizers if you don't want it to appear on the "
 "school home page sidebar."
 msgstr ""
+"Oculte la lista de organizadores de la escuela si no desea que estos "
+"aparezcan en la barra lateral de la página principal de la escuela."
 
 #: templates/schools/school_edit_styles.html:19
 msgid "Width"
-msgstr ""
+msgstr "Ancho"
 
 #: templates/schools/school_edit_styles.html:20
 msgid ""
 "Update this value so the school logo fits nicelly on the school home page "
 "sidebar."
 msgstr ""
+"Actualize este valor para que el logo de la escuela se vea bien en la barra "
+"lateral de la página principal de la escuela."
 
 #: templates/schools/school_edit_styles.html:24
 msgid "Colors"
-msgstr ""
+msgstr "Colores"
 
 #: templates/schools/school_edit_styles.html:27
 msgid "Headers Color"
-msgstr ""
+msgstr "Color de las Cabeceras"
 
 #: templates/schools/school_edit_styles.html:28
 msgid ""
 "This color will be used for the headers of pages associated with this school."
 msgstr ""
+"Este color será usado para los encabezados de páginas asociadas con esta "
+"escuela."
 
 #: templates/schools/school_edit_styles.html:34
 msgid "Lighter Headers Color"
-msgstr ""
+msgstr "Color de las Cabeceras (Claro)"
 
 #: templates/schools/school_edit_styles.html:35
 msgid "Lighter variant of the headers color."
-msgstr ""
+msgstr "Variante más clara del color de las cabeceras."
 
 #: templates/schools/school_edit_styles.html:41
 msgid "Background Color"
-msgstr ""
+msgstr "Color de Fondo"
 
 #: templates/schools/school_edit_styles.html:42
 msgid ""
 "This color will be used as background for the non-striped sections of the "
 "pages associated with this school."
 msgstr ""
+"Este color será usado como fondo de las secciones no rayadas en las páginas "
+"asociadas con esta escuela."
 
 #: templates/schools/school_edit_styles.html:48
 msgid "Menus Color"
-msgstr ""
+msgstr "Color de los Menús"
 
 #: templates/schools/school_edit_styles.html:49
 msgid ""
 "This color will be used as background for the menus of the pages associated "
 "with this school."
 msgstr ""
+"Este color será usado como fondo de los menús en las páginas asociadas con "
+"esta escuela."
 
 #: templates/schools/school_edit_styles.html:55
 msgid "Lighter Menus Color"
-msgstr ""
+msgstr "Color de los Menús (Claro)"
 
 #: templates/schools/school_edit_styles.html:56
 msgid "Lighter variant of the menus color."
-msgstr ""
+msgstr "Variante más clara del color de los menús."
 
 #: templates/schools/school_edit_styles.html:62
 msgid "Custom Styles (Advanced)"
-msgstr ""
+msgstr "Estilos Personalizados (Avanzado)"
 
 #: templates/schools/school_edit_styles.html:63
 msgid "Customize CSS styles for the school home page and groups."
 msgstr ""
+"Personalize los estilos CSS para la página principal de la escuela y sus "
+"grupos."
 
 #: templates/schools/school_edit_summary.html:11
 msgid ""
 "A good name is short and descriptive. People should know what your school is "
 "about without reading the description."
 msgstr ""
+"Un buen nombre es corto y descriptivo. La gente debería saber sobre que es "
+"su escuela sin leer la descripción."
 
 #: templates/schools/school_edit_summary.html:17
 msgid ""
 "Shorter name displayed close to the school small icon on sidebars and "
 "footers."
 msgstr ""
+"Nombre corto mostrado cerca del logo pequeño de la escuela en barras "
+"laterales y pies de página."
 
 #: templates/schools/school_edit_summary.html:23
 msgid "This description is shown on the school page."
-msgstr ""
+msgstr "Esta descripción se usará en la página de la escuela."
 
 #: templates/schools/school_edit_summary.html:28
 msgid "More details"
-msgstr ""
+msgstr "Más detalles"
 
 #: templates/schools/school_edit_summary.html:29
 msgid "Extra details are shown at the bottom of the school page."
-msgstr ""
+msgstr "Esta descripción será mostrada al final de la página de la escuela."
 
 #: templates/search/search.html:4 templates/search/search.html.py:10
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: templates/search/search.html:15
 msgid "Loading"
-msgstr "正在下载"
+msgstr "טוען"
 
 #: templates/signups/accept_sign_up_comment.html:2
 msgid "Welcome aboard! You are an organizer now."
-msgstr ""
+msgstr "¡Bienvenido a bordo! Ahora usted es un organizador."
 
 #: templates/signups/accept_sign_up_comment.html:4
 msgid "Welcome aboard! You are a participant now."
-msgstr ""
+msgstr "¡Bienvenido a bordo! Ahora usted es un participante."
 
 #: templates/signups/answer_sign_up.html:17
 msgid "New Answer"
-msgstr ""
+msgstr "Nueva Respuesta"
 
 #: templates/signups/answer_sign_up.html:19
 msgid "Edit answer"
-msgstr ""
+msgstr "Editar respuesta"
 
 #: templates/signups/answer_sign_up.html:31 templates/signups/sign_up.html:79
 msgid "Bio:"
-msgstr ""
+msgstr "Biografía:"
 
 #: templates/signups/answer_sign_up.html:33 templates/signups/sign_up.html:81
 msgid "Standard Set Answer:"
-msgstr ""
+msgstr "Respuesta al Conjunto de Preguntas Estándar:"
 
 #: templates/signups/answer_sign_up.html:36 templates/signups/sign_up.html:84
 msgid "Public Set Answer:"
-msgstr ""
+msgstr "Conjunto de Preguntas Público:"
 
 #: templates/signups/answer_sign_up.html:40 templates/signups/sign_up.html:89
 msgid "Between Participants Set Answer:"
-msgstr ""
+msgstr "Conjunto de Preguntas entre Participantes:"
 
 #: templates/signups/answer_sign_up.html:57
 msgid "Profile"
-msgstr ""
+msgstr "Perfil"
 
 #: templates/signups/answer_sign_up.html:58
 msgid ""
 "Your profile information is displayed with your signup answer. If you need, "
 "you can update the information of your profile bellow."
 msgstr ""
+"La información de su perfil es mostrada junto a las respuestas. Si lo desea, "
+"puede actualizar a continuación la información de su perfil."
 
 #: templates/signups/answer_sign_up.html:62
 msgid "Signup Questions"
-msgstr ""
+msgstr "Preguntas de Inscripción"
 
 #: templates/signups/answer_sign_up.html:63
 msgid ""
 "Please answer the following set(s) of questions if you want to become a "
 "participant or organizer."
 msgstr ""
+"Por favor responda los siguientes conjuntos de preguntas si desea "
+"convertirse en participante o organizador."
 
 #: templates/signups/answer_sign_up.html:64 templates/signups/sign_up.html:22
 msgid "Standard Set"
-msgstr ""
+msgstr "Conjunto de Preguntas Estándar"
 
 #: templates/signups/answer_sign_up.html:65 templates/signups/sign_up.html:23
 msgid ""
 "This set of signup questions is common to all study groups, courses, ... in "
 "P2PU. The answers to these questions will be public once you get accepted."
 msgstr ""
+"Este conjunto de preguntas de inscripción es común a todos los grupos de "
+"estudio, cursos, ... en P2PU. Las respuestas a estas preguntas serán "
+"públicas en cuanto usted sea aceptado."
 
 #: templates/signups/answer_sign_up.html:73
 #: templates/signups/edit_signup.html:19 templates/signups/sign_up.html:28
 msgid "Public Custom Set"
-msgstr ""
+msgstr "Conjunto de Preguntas Público"
 
 #: templates/signups/answer_sign_up.html:74
 #: templates/signups/edit_signup.html:20 templates/signups/sign_up.html:29
@@ -4799,11 +4884,13 @@ msgid ""
 "This set of signup questions is particular to this %(kind)s. The answers to "
 "these questions will be public once you get accepted."
 msgstr ""
+"Este conjunto de preguntas de inscripción es particular a este %(kind)s. Las "
+"respuestas a estas preguntas serán públicas en cuanto usted sea aceptado."
 
 #: templates/signups/answer_sign_up.html:82
 #: templates/signups/edit_signup.html:25 templates/signups/sign_up.html:35
 msgid "Between Participants Custom Set"
-msgstr ""
+msgstr "Conjunto de Preguntas entre Participantes"
 
 #: templates/signups/answer_sign_up.html:83
 #: templates/signups/edit_signup.html:26 templates/signups/sign_up.html:36
@@ -4812,31 +4899,34 @@ msgid ""
 "This set of signup questions is particular to this %(kind)s. The answers to "
 "these questions will be visible to all participants once you get accepted."
 msgstr ""
+"Este conjunto de preguntas de inscripción es particular a este %(kind)s. Las "
+"respuestas a estas preguntas serán visibles a todos los participantes en "
+"cuanto usted sea aceptado."
 
 #: templates/signups/base.html:4 templates/signups/base.html.py:10
 #: templates/signups/sign_up.html:19
 msgid "Sign-Up"
-msgstr ""
+msgstr "Inscripción"
 
 #: templates/signups/delete_restore_answer.html:13
 msgid "Restore Answer:"
-msgstr ""
+msgstr "שיחזור תשובה"
 
 #: templates/signups/delete_restore_answer.html:13
 msgid "Delete Answer:"
-msgstr ""
+msgstr "מחיקת תשובה"
 
 #: templates/signups/delete_restore_answer.html:24
 msgid "Are you sure you want to restore this answer?"
-msgstr ""
+msgstr "אתה בטוח שאתה רוצה לשחזר את התשובה הזאת?"
 
 #: templates/signups/delete_restore_answer.html:26
 msgid "Are you sure you want to delete this answer?"
-msgstr ""
+msgstr "אתה בטוח שאתה רוצה למחוק את התשובה הזאת?"
 
 #: templates/signups/edit_signup.html:13
 msgid "Sign-up Status"
-msgstr ""
+msgstr "Estado de la Inscripción"
 
 #: templates/signups/edit_signup.html:14
 #, python-format
@@ -4844,14 +4934,16 @@ msgid ""
 "To allow peers to signup to the %(kind)s change the signup status to either "
 "moderated of non-moderated signup."
 msgstr ""
+"Para permitir a tus colegas inscribirse en el %(kind)s, cambie el estado de "
+"la inscripción a moderada o no moderada."
 
 #: templates/signups/sign_up.html:12
 msgid "Post Answer"
-msgstr ""
+msgstr "Publicar Respuesta"
 
 #: templates/signups/sign_up.html:21
 msgid "Anyone can follow a"
-msgstr ""
+msgstr "Cualquiera puede seguir un"
 
 #: templates/signups/sign_up.html:21
 msgid ""
@@ -4861,36 +4953,41 @@ msgid ""
 "answer the following set(s) of questions if you want to become a participant "
 "or organizer."
 msgstr ""
+"en P2PU. Participar es el siguiente nivel de compromiso.  La página de "
+"inscripción es un espacio donde los interesados(as) pueden expresar su "
+"interés y preparación previa en el tema, y comprometerse a trabajar con el "
+"resto de los participantes.  Por favor responda los siguientes conjuntos de "
+"respuestas si desea convertirse en participante o organizador."
 
 #: templates/signups/sign_up.html:42
 msgid "Answers"
-msgstr ""
+msgstr "Respuestas"
 
 #: templates/signups/sign_up.html:43
 msgid "Pending Answers:"
-msgstr ""
+msgstr "Respuesta Pendiente:"
 
 #: templates/signups/sign_up.html:98
 msgid "Add Participant"
-msgstr "增加参与者"
+msgstr "Añadir Participante"
 
 #: templates/signups/sign_up_initial_content.html:4
 msgid "What made you interested in this topic?"
-msgstr "你为什么对这个话题感兴趣？"
+msgstr "¿Qué lo hizo interesarse en este tema?"
 
 #: templates/signups/sign_up_initial_content.html:5
 msgid "What do you hope to achieve by participating?"
-msgstr "你希望获得什么？"
+msgstr "¿Qué espera lograr al participar?"
 
 #: templates/signups/sign_up_initial_content.html:6
 #, python-format
 msgid "Are you interested in helping with the %(kind)s organization?"
-msgstr "你是否有兴趣帮助这些 %(kind)s 组织？"
+msgstr "¿Está interesado(a) en ayudar con la organización del %(kind)s?"
 
 #: templates/tracker/scoreboard.html:4 templates/tracker/scoreboard.html:16
 #: templates/tracker/scoreboard.html:21
 msgid "Scoreboard"
-msgstr ""
+msgstr "Marcador"
 
 #: templates/tracker/scoreboard.html:50
 msgid "Users Registered this Month"
@@ -4911,9 +5008,8 @@ msgstr ""
 
 #: templates/tracker/scoreboard.html:66 templates/tracker/scoreboard.html:77
 #: templates/tracker/scoreboard.html:88
-#, fuzzy
 msgid "Group"
-msgstr "小组"
+msgstr ""
 
 #: templates/tracker/scoreboard.html:73
 msgid "Joins to Groups this Month"
@@ -4925,841 +5021,747 @@ msgstr ""
 
 #: templates/users/_openid_providers.html:12
 msgid "Sign In with your Google account"
-msgstr "通过谷歌账号登录"
+msgstr "Entrar con su cuenta de Google"
 
 #: templates/users/_openid_providers.html:13
 msgid "Sign In with your Yahoo! account"
-msgstr "通过雅虎账号登录"
+msgstr "Entrar con su cuenta de Yahoo!"
 
 #: templates/users/_openid_providers.html:14
 msgid "Sign In with your myOpenID account"
-msgstr "通过我的开放ID登录"
+msgstr "Entrar con su cuenta myOpenID"
 
 #: templates/users/_openid_providers.html:24
 msgid "enter any OpenID URL"
-msgstr "输入任何开放ID链接"
+msgstr "escriba una URL de OpenID"
 
 #: templates/users/_profile_edit.html:2
 #: templates/users/profile_form_base.html:13
 msgid "Display Name"
-msgstr "昵称"
+msgstr "Nombre"
 
 #: templates/users/_profile_edit.html:9
 msgid "Location"
-msgstr "地点"
+msgstr "Ubicación"
 
 #: templates/users/_profile_edit.html:16
 #: templates/users/profile_form_base.html:38
 msgid "Preferred Language"
-msgstr "语言"
+msgstr "Idioma Preferido"
 
 #: templates/users/_profile_edit.html:23
 msgid "About Me"
-msgstr "关于我"
+msgstr "Acerca de Mi"
 
 #: templates/users/_profile_edit.html:30
 msgid ""
 "Please describe your skills, interest, and the things you will want to "
 "learn, by providing a comma-separated list of tags."
-msgstr "请描述你的技能，兴趣，你希望学习的。"
+msgstr ""
+"Por favor, describa sus habilidades, intereses y las cosas que desea "
+"aprender, mediante una lista de etiquetas separadas por comas."
 
 #: templates/users/_profile_edit.html:35
 msgid "Skilled in"
-msgstr "关于  技能"
+msgstr "Hábil en"
 
 #: templates/users/_profile_edit.html:42
 msgid "Interested in"
-msgstr "对   感兴趣"
+msgstr "Interesado en"
 
 #: templates/users/_profile_edit.html:49
 msgid "Want to learn more about"
-msgstr "希望学习"
+msgstr "רוצה ללמוד יותר על"
 
 #: templates/users/_profile_edit_image.html:6
 msgid "Current Profile Image"
-msgstr "照片"
+msgstr "Imagen del Perfil Actual"
 
 #: templates/users/_profile_edit_image.html:11
 msgid ""
 "Upload an image file from your computer to replace your current profile "
 "image:"
-msgstr "上传电脑中的图片以代替文档图片"
+msgstr ""
+"Suba una imagen de su computador para remplazar la imagen actual de su "
+"perfil:"
 
 #: templates/users/_profile_edit_image.html:13
 msgid ""
 "Personalize your profile image by uploading an image file from your computer:"
-msgstr "通过上传电脑中的照片来创建个性头像"
+msgstr ""
+"Personalice la imagen de su perfil subiendo una imagen de su computador:"
 
 #: templates/users/_profile_edit_image.html:28
-#, fuzzy
 msgid ""
 "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
 "240x240 pixels"
 msgstr ""
-"文件类型：JPG,GIF或者PNG&lt;br/&gt;。最大不超过700K &lt;br/&gt;,最小不小于"
-"57x57 像素"
+"Tipos de archivos: JPG, GIF o PNG unicamente<br/> Tamaño máximo: 700k <br/> "
+"Dimensiones: 240x240 pixels"
 
 #: templates/users/_profile_info.html:13
-#, fuzzy
 msgid "Followings"
-msgstr "跟随"
+msgstr "Siguiendo"
 
 #: templates/users/_profile_info.html:16
 msgid "Courses"
-msgstr ""
+msgstr "Cursos"
 
 #: templates/users/_profile_info.html:26
 msgid "Latest Courses"
-msgstr ""
+msgstr "Cursos Recientes"
 
 #: templates/users/_profile_info.html:60
-#, fuzzy
 msgid "Latest Badges"
-msgstr "管理徽章"
+msgstr "Medallas Recientes"
 
 #: templates/users/_profile_info.html:61
 msgid "Share your badges"
 msgstr ""
 
 #: templates/users/_profile_info.html:78
-#, fuzzy
 msgid "My Skills"
-msgstr "技能"
+msgstr "Mis Habilidades"
 
 #: templates/users/_profile_info.html:82
 msgid "View more with skills in "
-msgstr ""
+msgstr "Ver más habilidades en "
 
 #: templates/users/_profile_info.html:90
-#, fuzzy
 msgid "My Interests"
-msgstr "兴趣"
+msgstr "Mis Intereses"
 
 #: templates/users/_profile_info.html:102
-#, fuzzy
 msgid "What I want to learn more about"
-msgstr "希望学习"
+msgstr "Quiero aprender más sobre"
 
 #: templates/users/forgot_password.html:3
 msgid "Forgot Your Password?"
-msgstr "忘记密码？"
+msgstr "שכחת את הסיסמה שלך?"
 
 #: templates/users/forgot_password.html:8 templates/users/signin.html:20
 msgid "Forgot your password?"
-msgstr "忘记密码？"
+msgstr "שכחת את הסיסמה שלך?"
 
 #: templates/users/forgot_password.html:13 templates/users/signin.html:15
 msgid "Username or Email"
-msgstr "用户名或邮箱"
+msgstr "Nombre de Usuario o Correo"
 
 #: templates/users/forgot_password.html:22 templates/users/login_openid.html:5
 #: templates/users/signin.html:5 templates/users/signin.html.py:10
 #: templates/users/signin.html:32
 msgid "Sign In"
-msgstr "登录"
+msgstr "Entrar"
 
 #: templates/users/forgot_password_complete.html:4
 msgid "Password Updated"
-msgstr "更新密码"
+msgstr "הסיסמה עודכנה"
 
 #: templates/users/forgot_password_complete.html:9
 #: templates/users/forgot_password_confirm.html:5
 #: templates/users/forgot_password_confirm.html:10
 msgid "Reset Password"
-msgstr "重设密码"
+msgstr "Restablecer Contraseña"
 
 #: templates/users/forgot_password_complete.html:12
 msgid "Thank you! Your password has been updated."
-msgstr "谢谢！你的密码已更新！"
+msgstr "תודה! הסיסמה שלך עודכנה."
 
 #: templates/users/forgot_password_complete.html:13
 msgid "You may now sign in."
-msgstr "你现在可以登录了"
+msgstr "Ahora puede entrar."
 
 #: templates/users/forgot_password_confirm.html:16
 msgid "New Password"
-msgstr "新的密码"
+msgstr "סיסמה חדשה"
 
 #: templates/users/forgot_password_confirm.html:21
 msgid "Confirm Password"
-msgstr "密码确认"
+msgstr "Confirmar Contraseña"
 
 #: templates/users/forgot_password_confirm.html:31
 msgid "Hmm, that does not appear to be a correct link."
-msgstr "这不是正确的链接"
+msgstr "Hmm, ese no parece ser un enlace correcto."
 
 #: templates/users/forgot_password_done.html:3
 #: templates/users/forgot_password_done.html:8
 msgid "Password Reset"
-msgstr "重设密码"
+msgstr "Restablecer Contraseña"
 
 #: templates/users/forgot_password_done.html:10
 msgid ""
 "Instructions for resetting your password were sent to your email address."
-msgstr "关于重设密码的方法已发送至你的邮箱"
+msgstr ""
+"Se enviaron instrucciones para restablecer su contraseña a su dirección de "
+"correo."
 
 #: templates/users/login_openid.html:11
 msgid "Sign In with OpenID"
-msgstr "通过开放ID登录"
+msgstr "Entrar con OpenID"
 
 #: templates/users/login_openid.html:11 templates/users/signin.html:10
 msgid "create an account"
-msgstr "创建账号"
+msgstr "crear una cuenta"
 
 #: templates/users/profile.html:12
 msgid "Activity from user's profile"
-msgstr "来自用户文档的活动"
+msgstr "Actividad del pérfil del usuario"
 
 #: templates/users/profile.html:13
 msgid "Activity from user's dashboard"
-msgstr "来自用户仪表盘的活动"
+msgstr "Actividad que el usuario está siguiendo"
 
 #: templates/users/profile.html:27 templates/users/profile_edit.html:5
 #: templates/users/profile_edit.html:19
 msgid "Edit Profile"
-msgstr "编辑文件"
+msgstr "Editar Perfil"
 
 #: templates/users/profile_edit.html:20
 msgid "View Profile"
-msgstr "查看详细资料"
+msgstr "Ver Perfil"
 
 #: templates/users/profile_edit.html:28
 #: templates/users/profile_edit_main.html:9
 msgid "Basic Information"
-msgstr "基本信息"
+msgstr "Información Básica"
 
 #: templates/users/profile_edit.html:30
 msgid "Notifications"
-msgstr "通知"
+msgstr "Notificaciones"
 
 #: templates/users/profile_edit.html:31 templates/users/settings_email.html:6
 #: templates/users/settings_email.html:12
 msgid "Update Email"
-msgstr ""
+msgstr "Actualizar Correo"
 
 #: templates/users/profile_edit.html:32
 msgid "Update Password"
-msgstr ""
+msgstr "עדכון סיסמה"
 
 #: templates/users/profile_edit.html:33
 #: templates/users/profile_edit_openids.html:11
 msgid "OpenIDs"
-msgstr ""
+msgstr "OpenIDs"
 
 #: templates/users/profile_edit.html:35
 msgid "Delete Account"
-msgstr ""
+msgstr "מחיקת חשבון"
 
 #: templates/users/profile_edit_links.html:13
 msgid ""
 "Add links to your blog, homepage, twitter profile, github repository etc. "
 "These links will appear on your profile."
 msgstr ""
+"Añada enlaces a su blog, página personal, perfil de twitter, repositorio en "
+"github etc. Estos enlaces aparecerán en su perfil."
 
 #: templates/users/profile_edit_links_edit.html:9
 msgid ""
 "Edit links to your blog, homepage, twitter profile, github repository etc. "
 "These links will appear on your profile."
 msgstr ""
+"Añada enlaces a su blog, página personal, perfil de twitter, repositorio en "
+"github etc. Estos enlaces aparecerán en su perfil."
 
 #: templates/users/profile_edit_openids.html:13
 msgid ""
 "Add openid urls to login to your account. If you do not have any openids you "
 "can access your account with username and password."
 msgstr ""
+"Adicione openids para entrar a su cuenta. Si usted no tiene ningun openid "
+"podrá entrar a su cuenta usando nombre de usuario y contraseña."
 
 #: templates/users/profile_edit_openids.html:25
 #: templates/users/register.html:13 templates/users/signin.html:36
 msgid "OpenID"
-msgstr ""
+msgstr "OpenID"
 
 #: templates/users/profile_form_base.html:16
 msgid "A name that will identify you to other users. This is optional."
-msgstr ""
+msgstr "Un nombre que lo identificará ante otros usuarios. Es opcional."
 
 #: templates/users/profile_form_base.html:22
 msgid "Your public profile:"
-msgstr ""
+msgstr "Su perfil público:"
 
 #: templates/users/profile_form_base.html:22
 msgid "username"
-msgstr ""
+msgstr "שם משתמש"
 
 #: templates/users/profile_form_base.html:27
 #: templates/users/settings_email.html:22
 msgid "Email Address"
-msgstr ""
+msgstr "כתובת דואר אלקטרוני"
 
 #: templates/users/profile_form_base.html:30
 msgid "Required to send you notifications about your P2PU account."
-msgstr ""
+msgstr "Es necesario para enviarle notificaciones sobre su cuenta en P2PU."
 
 #: templates/users/profile_form_base.html:33
 #: templates/users/settings_email.html:29
-#, fuzzy
 msgid "Re-enter Email Address"
-msgstr "邮箱地址"
+msgstr "Repita la Dirección de Correo"
 
 #: templates/users/profile_form_base.html:55
 msgid "By creating an account on"
-msgstr ""
+msgstr "Al crear una cuenta en"
 
 #: templates/users/profile_form_base.html:55
 msgid ", you accept our"
-msgstr ""
+msgstr ", usted acepta nuestras"
 
 #: templates/users/profile_form_base.html:55
 msgid "privacy guidelines"
-msgstr ""
+msgstr "políticas de privacidad"
 
 #: templates/users/profile_form_base.html:55
 msgid "license provisions"
-msgstr ""
+msgstr "disposiciones sobre licencias"
 
 #: templates/users/profile_form_base.html:55
 msgid "and"
-msgstr ""
+msgstr "ו"
 
 #: templates/users/profile_form_base.html:55
 msgid "terms of use"
-msgstr ""
+msgstr "תנאי שימוש"
 
 #: templates/users/profile_form_base.html:55
 msgid "By default all content you create on this site is publicly viewable."
 msgstr ""
+"Por defecto todo el contenido que usted cree en este sitio es visible "
+"publicamente."
 
 #: templates/users/register.html:5 templates/users/register_openid.html:3
 msgid "Sign Up"
-msgstr "注册"
+msgstr "הירשם"
 
 #: templates/users/register.html:7 templates/users/register_openid.html:9
 msgid "Create a New Account"
-msgstr "创建新账号"
+msgstr "צור חשבון חדש"
 
 #: templates/users/register.html:9
 msgid "Create Account"
-msgstr "创建账号"
+msgstr "צור חשבון"
 
 #: templates/users/register.html:12
 msgid "or sign up using"
-msgstr "或注册正在使用的"
+msgstr "או הרשם באמצעות"
 
 #: templates/users/register.html:18 templates/users/settings_password.html:6
 #: templates/users/settings_password.html:12
 #: templates/users/settings_password.html:20 templates/users/signin.html:20
 msgid "Password"
-msgstr "密码"
+msgstr "סיסמה"
 
 #: templates/users/register.html:22 templates/users/settings_password.html:27
 msgid "Confirm password"
-msgstr "密码确认"
+msgstr "וודא את הסיסמה"
 
 #: templates/users/register.html:27 templates/users/settings_password.html:14
 msgid ""
 "Passwords must be at least 8 characters and contain numbers and letters."
-msgstr "密码至少8位数，包括数字和字母"
+msgstr "סיסמאות חייבות להיות באורך של לפחות 8 תווים ולהכיל מספרים ואותיות."
 
 #: templates/users/register_openid.html:9
 msgid "sign in"
-msgstr ""
+msgstr "כניסה לחשבון"
 
 #: templates/users/settings_delete.html:6
 #: templates/users/settings_delete.html:12
 msgid "Delete Your Account"
-msgstr "删除你的账号"
+msgstr "מחיקת החשבון שלך"
 
 #: templates/users/settings_delete.html:13
 msgid ""
 "Are you sure you would like to delete your account? Be aware that you will "
 "not be able to login again to this account after you delete it."
 msgstr ""
+"¿Está seguro de que desea borrar su cuenta de usuario? Note que usted no "
+"podrá volver a entrar con esta cuenta luego de que sea borrada."
 
 #: templates/users/settings_delete.html:15
 msgid ""
 "You are currently the only organizer of the following non-archived study "
 "groups, courses ..."
 msgstr ""
+"Usted es actualmente el único organizador de los siguientes grupos de "
+"estudio, cursos, ... que no han sido archivados."
 
 #: templates/users/settings_email.html:15
 msgid "Please confirm your email address"
-msgstr ""
+msgstr "Por favor confirme su dirección de correo"
 
 #: templates/users/settings_notifications.html:6
 msgid "Notification Settings"
-msgstr "创建通知"
+msgstr "Notificaciones"
 
 #: templates/users/settings_notifications.html:9
 msgid "Send me an email when..."
-msgstr "邮件我当"
+msgstr "שלח לי דואר אלקטרוני כאשר..."
 
 #: templates/users/settings_notifications.html:14
 msgid "A user messages me on"
-msgstr "一个用户给我留言"
+msgstr "Un usuario me envíe un mensaje en"
 
 #: templates/users/settings_notifications.html:18
 msgid "Someone starts following me."
-msgstr "一些人开始跟随我"
+msgstr "מישהו מתחיל לעקוב אחרי."
 
 #: templates/users/settings_notifications.html:22
 msgid ""
 "Someone starts following one of the study groups, courses, ... that I am "
 "organizing."
 msgstr ""
+"Alguien comience a seguir uno de los grupos de estudio, cursos, ... que "
+"estoy organizando."
 
 #: templates/users/settings_notifications.html:28
 msgid ""
 "Someone posts a submission for the badges of one of the challenges I adopted."
 msgstr ""
+"Alguien publico una respuesta para una de las medallas de los retos que "
+"adopté."
 
 #: templates/users/settings_notifications.html:32
 msgid "An organizer posts or replies to a message on the wall of:"
-msgstr ""
+msgstr "Un organizador publique o responda un mensaje en el muro de:"
 
 #: templates/users/settings_notifications.html:40
 msgid "A participant posts or replies to a message on the wall of:"
-msgstr ""
+msgstr "Un participante publique o responda un mensaje en el muro de:"
 
 #: templates/users/settings_notifications.html:47
 msgid ""
 "An organizer creates, edits, or posts new comments on a task or page of:"
 msgstr ""
+"Un organizador cree, edite o publique nuevos comentarios en una tarea o "
+"página de:"
 
 #: templates/users/settings_notifications.html:54
 msgid ""
 "A participant creates, edits, or posts new comments on a task or page of:"
 msgstr ""
+"Un participante cree, edite o publique nuevos comentarios en una tarea o "
+"página de:"
 
 #: templates/users/settings_notifications.html:63
 msgid ""
 "Does not include important updates for which notifications can not be turned "
 "off."
 msgstr ""
+"No incluye actualizaciones importantes para las cuales las notificaciones no "
+"pueden desactivarse."
 
 #: templates/users/sidebar.html:23
 msgid "Lives in"
-msgstr ""
+msgstr "גר ב"
 
 #: templates/users/sidebar.html:41 templates/users/sidebar.html.py:47
 msgid "Private Message"
-msgstr "私人信息"
+msgstr "הודעה פרטית"
 
 #: templates/users/signin.html:28
 msgid "Remember Me"
-msgstr "记住我"
+msgstr "זכור אותי"
 
 #: templates/users/signin.html:35
 msgid "or use"
-msgstr "或使用"
+msgstr "או השתמש ב"
 
 #: templates/users/user_list.html:15
+#, fuzzy
 msgid "Browse "
-msgstr ""
+msgstr "Navegar"
 
 #: templates/users/user_list.html:20
 msgid "in"
-msgstr "在里面"
+msgstr "בתוך"
 
 #: templates/users/user_list.html:90
 msgid "Active this Week"
-msgstr "本周活跃"
+msgstr "פעילים השבוע"
 
 #: templates/users/user_list.html:125
 msgid "New People"
-msgstr "新人"
+msgstr "אנשים חדשים"
+
+#~ msgid "Please fill out the new task."
+#~ msgstr "בבקשה מלא את הפרטים של המשימה החדשה."
+
+#~ msgid "You are the only organizer of %s active "
+#~ msgstr "אתה המארגן הפעיל היחיד של %s "
+
+#~ msgid "study groups, courses, ..."
+#~ msgstr "קבוצות לימוד, קורסים, ..."
+
+#~ msgid "Popular"
+#~ msgstr "פופולרי"
+
+#~ msgid "Last Updated"
+#~ msgstr "עודכן לאחרונה"
+
+#~ msgid "You can not reply to this comment."
+#~ msgstr "אינך יכול להגיב לתגובה זו."
 
 #, fuzzy
-#~ msgid " was updated."
-#~ msgstr "%s 更新"
+#~ msgid "The %(slug)s %(kind)s is not part of this school."
+#~ msgstr "ה%(kind)s %(slug)s אינו חלק מהבית ספר הזה."
 
 #, fuzzy
+#~ msgid "The %(slug)s %(kind)s is already featured."
+#~ msgstr "ה%(kind)s %(slug)s כבר מומלץ."
+
+#, fuzzy
+#~ msgid "The %(slug)s %(kind)s is already part of this school."
+#~ msgstr "ה%(kind)s %(slug)s כבר חלק מהבית ספר הזה."
+
+#, fuzzy
+#~ msgid "The %(slug)s %(kind)s is part of: %(school)s."
+#~ msgstr "ה%(kind)s %(slug)s הינו חלק מ: %(school)s."
+
+#~ msgid "Join P2PU Today! It's free."
+#~ msgstr "הצטרף לP2PU היום! זה חינם."
+
+#~ msgid "Read our Blog"
+#~ msgstr "קרא את הבלוג שלנו"
+
+#~ msgid "Find us on Facebook"
+#~ msgstr "חפש אותנו בפייסבוק"
+
+#~ msgid "Follow us on Twitter"
+#~ msgstr "עקוב אחרינו בטוויטר"
+
+#~ msgid "CC BY SA"
+#~ msgstr "CC BY SA (ייחוס-שיתוף זהה)"
+
+#~ msgid "About P2PU"
+#~ msgstr "אודות P2PU"
+
+#~ msgid "css/style-en.css"
+#~ msgstr "css/style-he.css"
+
+#~ msgid "Contribute"
+#~ msgstr "תרום"
+
+#, fuzzy
+#~ msgid "This badge can be earned at all challenges."
+#~ msgstr "אפשר להרוויח את הbadge הזה בכל האתגרים."
+
+#~ msgid "Howdy!"
+#~ msgstr "מה נשמע?"
+
+#~ msgid "Someone has just submitted work for the"
+#~ msgstr "מישהו הגיש עבודה בשביל"
+
+#, fuzzy
+#~ msgid "Go ahead and take a look at their work here:"
+#~ msgstr "לך והסתכל בעבודה שלהם כאן:"
+
+#~ msgid "They will love you!"
+#~ msgstr "הם יאהבו אותך!"
+
+#~ msgid "The P2PU team"
+#~ msgstr "צוות P2PU"
+
+#~ msgid "Manage how often you get these delightful messages at:"
+#~ msgstr "סדר איך אתה מקבל את ההדעות המענגות האלו אצל:"
+
+#~ msgid "Make someone's day. Review a badge for "
+#~ msgstr "עשה את היום של מישהו. הערך בקשה של בשביל"
+
+#~ msgid "Delete?"
+#~ msgstr "מחק?"
+
+#~ msgid "Edit Tasks"
+#~ msgstr "עריכת המשימות"
+
+#~ msgid "Add Another Task"
+#~ msgstr "הוספת משימה חדשה"
+
+#~ msgid "Save Progress"
+#~ msgstr "שמור את ההתקדמות"
+
 #~ msgid " contributed with a new task: "
-#~ msgstr "你无法创建新任务！"
+#~ msgstr " תרם משימה חדשה: "
+
+#~ msgid "."
+#~ msgstr "."
+
+#~ msgid "Check out their update and respond at:"
+#~ msgstr "בדוק את העדכון שלהם והשב ב:"
+
+#~ msgid "Booyah,"
+#~ msgstr "להתראות,"
+
+#~ msgid "The P2PU Team"
+#~ msgstr "צוות P2PU"
 
 #, fuzzy
 #~ msgid " made a new task for "
-#~ msgstr "你无法创建新任务！"
-
-#, fuzzy
-#~ msgid "Reply:"
-#~ msgstr "重来"
-
-#, fuzzy
-#~ msgid "is now following "
-#~ msgstr "如下开始"
-
-#, fuzzy
-#~ msgid "on P2PU!"
-#~ msgstr "关于P2PU"
-
-#, fuzzy
-#~ msgid "is following "
-#~ msgstr "（跟随）"
-
-#, fuzzy
-#~ msgid "This comment was posted at %(scope)s."
-#~ msgstr "该评论已被删除。"
-
-#, fuzzy
-#~ msgid "You can view this comment online at:"
-#~ msgstr "无法编辑此评论。"
-
-#, fuzzy
-#~ msgid " posted a new comment at "
-#~ msgstr "无法在此发布发布评论。%s"
-
-#, fuzzy
-#~ msgid " submitted a new answer at the sign-up page of "
-#~ msgstr "你已经在注册问题中附上答案。"
-
-#, fuzzy
-#~ msgid " submitted a new answer at the sign-up page."
-#~ msgstr "你已经在注册问题中附上答案。"
-
-#, fuzzy
-#~ msgid " update."
-#~ msgstr "更新"
-
-#, fuzzy
-#~ msgid "Happy learning."
-#~ msgstr "正在学习"
-
-#~ msgid "You are the only organizer of %s active "
-#~ msgstr "你是%s的为一个积极的组织者 "
-
-#~ msgid "study groups, courses, ..."
-#~ msgstr "学习小组，课程，⋯"
-
-#~ msgid "You can not reply to this comment."
-#~ msgstr "你无法回复此评论。"
-
-#~ msgid "The %(slug)s %(kind)s is not part of this school."
-#~ msgstr "该%(slug)s%(kind)s不是学校的一部分。"
-
-#~ msgid "The %(slug)s %(kind)s is already featured."
-#~ msgstr "该%(slug)s%(kind)s已设立为特色项目。"
-
-#~ msgid "The %(slug)s %(kind)s is already part of this school."
-#~ msgstr "该%(slug)s%(kind)s已是学校的一部分。"
-
-#~ msgid "The %(slug)s %(kind)s is part of: %(school)s."
-#~ msgstr "该%(slug)s%(kind)s是%(school)s的一部分。"
-
-#~ msgid "Join P2PU Today! It's free."
-#~ msgstr "立刻加入P2PU！免费。"
-
-#~ msgid "Read our Blog"
-#~ msgstr "阅读我们的博客（英文）"
-
-#~ msgid "Find us on Facebook"
-#~ msgstr "关注我们的Facebook"
-
-#~ msgid "Follow us on Twitter"
-#~ msgstr "关注我们的推特微薄"
-
-#~ msgid "CC BY SA"
-#~ msgstr "知识共享创用CC BY SA"
-
-#~ msgid "About P2PU"
-#~ msgstr "关于P2PU"
-
-#~ msgid "css/style-en.css"
-#~ msgstr "css/style-zh-CN.css"
-
-#~ msgid "Contribute"
-#~ msgstr "创造"
+#~ msgstr " יצר משימה חדשה בשביל "
 
 #~ msgid "Post a message to your followers"
-#~ msgstr "给与你的追随者信息"
+#~ msgstr "פרסם הודעה לעוקבים אחריך"
 
-#, fuzzy
+#~ msgid "Post Update"
+#~ msgstr "פרסם עדכון"
+
 #~ msgid "Browse Groups & Courses"
-#~ msgstr "浏览小组 &amp;课程"
+#~ msgstr "דפדוף בקבוצות וקורסים"
 
 #~ msgid "Start Your Own"
-#~ msgstr "开始你的"
+#~ msgstr "התחל את שלך"
 
-#, fuzzy
 #~ msgid ""
 #~ "<em class=\"highlight3\">Learn</em> anything<br>with your <em class="
 #~ "\"highlight2\">peers</em>.<br><span class=\"sub\">It's <em class="
 #~ "\"highlight2\">online</em> and totally <em class=\"highlight3\">free</"
 #~ "em></span>."
 #~ msgstr ""
-#~ "&lt;em class=\"highlight3\"&gt;Learn&lt;/em&gt; anything&lt;br&gt;with "
-#~ "your &lt;em class=\"highlight2\"&gt;peers&lt;/em&gt;.&lt;br&gt;&lt;span "
-#~ "class=\"sub\"&gt;It's &lt;em class=\"highlight2\"&gt;online&lt;/em&gt; "
-#~ "and totally &lt;em class=\"highlight3\"&gt;free&lt;/em&gt;&lt;/span&gt;."
+#~ "<em class=\"highlight3\">למד</em> הכל<br>עם <em class="
+#~ "\"highlight2\">העמיתים</em> שלך.<br><span class=\"sub\">זה <em class="
+#~ "\"highlight2\">אונליין</em> <em class=\"highlight3\">וחינמי</em> לחלוטין</"
+#~ "span>."
 
-#, fuzzy
-#~ msgid "Preferences"
-#~ msgstr "语言"
+#~ msgid "has reported the following content as objectionable:"
+#~ msgstr "דיווח את התוכן הזה כבעייתי:"
 
-#, fuzzy
+#~ msgid "Abuse Report"
+#~ msgstr "דיווח על תוכן בעייתי"
+
+#~ msgid "You have received a new direct message from"
+#~ msgstr "קיבלת הודעה ישירה חדשה מ"
+
+#~ msgid "Reply:"
+#~ msgstr "השב:"
+
+#~ msgid "Sincerely,"
+#~ msgstr "מעומק הלב,"
+
+#~ msgid "Manage your subscriptions:"
+#~ msgstr "ניהול המנויים שלך:"
+
+#~ msgid "New Message from"
+#~ msgstr "הודעה חדשה מ"
+
+#~ msgid "Filters"
+#~ msgstr "מסננים"
+
+#~ msgid "All Languages"
+#~ msgstr "כל השפות"
+
 #~ msgid "Language:"
-#~ msgstr "语言"
+#~ msgstr "שפה:"
+
+#~ msgid "[P2PU] New "
+#~ msgstr "Nuevo [P2PU] "
+
+#~ msgid "You received this message through the Contact Organizer form at "
+#~ msgstr "Usted recibió este mensaje porque es un organizador en "
+
+#~ msgid "Looking forward to learning from you!"
+#~ msgstr "¡Esperamos poder aprender con y de usted!"
+
+#~ msgid "is now following "
+#~ msgstr "ahora está siguiendo "
+
+#~ msgid "you"
+#~ msgstr "su actividad"
+
+#~ msgid "on P2PU!"
+#~ msgstr "en P2PU!"
+
+#~ msgid "You can see their profile here:"
+#~ msgstr "Puede ver su perfil aquí:"
+
+#~ msgid "is following "
+#~ msgstr "ahora está siguiendo "
+
+#~ msgid " posted a new comment at "
+#~ msgstr " פירסם תגובה חדשה אצל "
+
+#~ msgid "See comment at:"
+#~ msgstr "ראה תגובה ב:"
+
+#~ msgid ""
+#~ "View, add and remove featured study groups, courses, ... to this school."
+#~ msgstr ""
+#~ "Ver, añadir y retirar grupos de estudio, cursos, ... asociados a esta "
+#~ "escuela."
+
+#~ msgid " submitted a new answer at the sign-up page of "
+#~ msgstr " envió una nueva respuesta a la página de inscripción de "
+
+#~ msgid "See answer at:"
+#~ msgstr "Ver respuesta en:"
+
+#~ msgid " submitted a new answer at the sign-up page."
+#~ msgstr " envió una nueva respuesta a la página de inscripción."
+
+#~ msgid " posted an important message to the wall:"
+#~ msgstr " publicó un mensaje importante para este grupo de estudio:"
+
+#~ msgid " posted a message to the wall:"
+#~ msgstr " publicó un mensaje para este grupo de estudio:"
+
+#~ msgid "See message at:"
+#~ msgstr "Ver mensaje en:"
+
+#~ msgid ""
+#~ "This message was marked as important by an organizer. Participants can "
+#~ "not turn off notifications for important updates."
+#~ msgstr ""
+#~ "Este mensaje fue marcado como importante por un organizador. Los "
+#~ "participantes no pueden desactivar notificaciones de actualizaciones "
+#~ "importantes."
+
+#~ msgid " posted a message to the wall."
+#~ msgstr " publicó un mensaje en el muro."
 
 #~ msgid ""
 #~ "You can login directly with your username and password from the old P2PU "
 #~ "website."
-#~ msgstr "你可以直接使用旧版P2PUde账号密码登陆"
+#~ msgstr ""
+#~ "Puede entrar directamente con su nombre de usuario y contraseña del "
+#~ "antiguo sitio web de P2PU."
 
-#, fuzzy
 #~ msgid "Browse <b>People</b>"
-#~ msgstr "浏览&lt;b&gt;People&lt;/b&gt;"
+#~ msgstr "מצא <b>אנשים</b>"
 
-#, fuzzy
-#~ msgid "Delete?"
-#~ msgstr "删除"
+#~ msgid "A request was received to reset the password for this account on "
+#~ msgstr ""
+#~ "Se ha recibido una solicitud para restablecer la contraseña de esta "
+#~ "cuenta en "
 
-#, fuzzy
-#~ msgid "Edit Tasks"
-#~ msgstr "编辑徽章"
+#~ msgid ""
+#~ "To change this password please click on the following link, or paste it "
+#~ "into your browser's location bar:"
+#~ msgstr ""
+#~ "Para cambiar esta contraseña, siga el siguiente enlace o copie la url en "
+#~ "la barra de direcciones de su navegador:"
 
-#, fuzzy
-#~ msgid "Save Progress"
-#~ msgstr "进步"
+#~ msgid ""
+#~ "If you did not request this email there is no need for further action."
+#~ msgstr "Si no solicitó este mensaje, no tiene que realizar acción alguna."
 
-#, fuzzy
-#~ msgid "All Languages"
-#~ msgstr "语言"
+#~ msgid "Please confirm your email address by clicking here:"
+#~ msgstr "בבקשה וודא את כתובת הדואר אלקטרוני שלך על ידי לחיצה כאן:"
 
-#, fuzzy
-#~ msgid "This badge can be earned at all challenges."
-#~ msgstr "你已经使用该挑战。"
-
-#, fuzzy
-#~ msgid "See comment at:"
-#~ msgstr "在 %s 进行评论"
-
-#, fuzzy
-#~ msgid "Thanks,"
-#~ msgstr "谢谢！"
-
-#, fuzzy
-#~ msgid " posted a message to the wall:"
-#~ msgstr "给与你的追随者信息"
-
-#, fuzzy
-#~ msgid "See message at:"
-#~ msgstr "信息：%s"
-
-#, fuzzy
-#~ msgid " posted a message to the wall."
-#~ msgstr "给与你的追随者信息"
-
-#, fuzzy
 #~ msgid "Thank you!"
-#~ msgstr "谢谢！"
+#~ msgstr "תודה!"
+
+#~ msgid "[P2PU] Complete Registration!"
+#~ msgstr "[P2PU] סיים את ההרשמה!"
+
+#~ msgid "[P2PU] Confirm Email Address!"
+#~ msgstr "[P2PU] וודא את כתובת הדואר אלקטרוני!"
 
 #~ msgid "Problem creating the study group, course, ..."
-#~ msgstr "在开设学习小组，课程，⋯遇到的问题"
+#~ msgstr "Problema creando el grupo de estudio, curso, ..."
 
-#, fuzzy
+#~ msgid "Create from Scratch"
+#~ msgstr "Crear desde Cero"
+
 #~ msgid "Create Challenge"
-#~ msgstr "创建文档"
-
-#, fuzzy
-#~ msgid "Sandbox"
-#~ msgstr "说明手册"
-
-#~ msgid "Email updated"
-#~ msgstr "邮件更新"
-
-#~ msgid ""
-#~ "A link to activate your user account was sent by email to your address "
-#~ "%s. You have to click it before you can log in."
-#~ msgstr "账号激活链接已通过邮件发送至您的邮箱%s。激活后才能够正常登陆。"
-
-#~ msgid ""
-#~ "A confirmation code has been sent to the email address associated with "
-#~ "your account."
-#~ msgstr "确认密码及账号已发送至您的邮箱。"
-
-#~ msgid "FAQ"
-#~ msgstr "常见问题"
-
-#~ msgid "Something has gone wrong. Hopefully it's temporary. "
-#~ msgstr "出问题了，希望它是暂时的。"
-
-#~ msgid "Please try again in a few minutes."
-#~ msgstr "请在几分钟后再试。"
-
-#, fuzzy
-#~ msgid "Under Review"
-#~ msgstr "审阅"
-
-#~ msgid "All courses tagged '"
-#~ msgstr "所有课程已标志"
-
-#, fuzzy
-#~ msgid ""
-#~ "File Types: JPG, GIF or PNG only<br/> Max size: 700k <br/> Dimensions: "
-#~ "57x57 pixels"
-#~ msgstr ""
-#~ "文件类型：JPG,GIF或者PNG&lt;br/&gt;。最大不超过700K &lt;br/&gt;,最小不小于"
-#~ "57x57 像素"
-
-#~ msgid "Self assessment -- able to get the badge without outside assessment"
-#~ msgstr "自我评估--不需外部评估而获得勋章。"
-
-#~ msgid "Peer assessment -- community or skill badges users grant each other"
-#~ msgstr "同伴评估--社区或技能勋章互用相互给予。"
-
-#~ msgid ""
-#~ "Stealth assessment -- badges granted by the system based on supplied "
-#~ "logic. Accumulative."
-#~ msgstr "隐性评估--基于应用逻辑系统的勋章。累计。"
-
-#~ msgid "Completion/aggregate badge -- awarded by self assessments"
-#~ msgstr "完成/总勋章--自我评估获得。"
-
-#~ msgid ""
-#~ "Skill badge -- badges that are skill based and assessed by peers with "
-#~ "related logic"
-#~ msgstr "技能勋章--基于技能和相关逻辑同步评估而得。"
-
-#~ msgid "Peer-to-peer/community badge -- badges granted by peers"
-#~ msgstr "朋辈/社区勋章--基于同伴评估而得。"
-
-#~ msgid "Stealth badge -- system awarded badges"
-#~ msgstr "隐性勋章--系统颁布。。"
-
-#~ msgid "Other badges -- badges like course organizer or those staff issued"
-#~ msgstr "其他勋章--授课者或其他人颁布。"
-
-#~ msgid ""
-#~ "If no logic is chosen, no logic required.  Example: self-assessment "
-#~ "badges."
-#~ msgstr "如果没有选择的逻辑是，没有逻辑。例如：自我评估勋章。"
-
-#~ msgid "Minimum number of votes by challenge adopters."
-#~ msgstr "挑战采用票的最低数量。"
-
-#~ msgid ""
-#~ "%(adopter_votes)s adopter votes of %(votes)s total votes with at least "
-#~ "%(avg)s weighted average rating"
-#~ msgstr ""
-#~ "%(adopter_votes)s 的使用票 %(votes)s 总票数至少为 %(avg)s 的加权平均值"
-
-#~ msgid "Current number of adopter votes"
-#~ msgstr "当前使用票数"
-
-#~ msgid "Current number of votes"
-#~ msgstr "当前票数"
-
-#~ msgid "Current total weighted rating"
-#~ msgstr "当前总的加权评级"
-
-#~ msgid "Last time this person received a qualified rating"
-#~ msgstr "这个人最后一次接收到一个合格的评级"
-
-#~ msgid "First time this person received a qualified rating"
-#~ msgstr "这个人第一次接收到合格的评级"
-
-#~ msgid "%(user)s progress for %(badge)s"
-#~ msgstr "%(user)s 的进步 %(badge)s"
-
-#~ msgid "You are lacking one or more of the requirements."
-#~ msgstr "你还有一个或多个要求未达标。"
-
-#~ msgid "BETA"
-#~ msgstr "试用版"
-
-#~ msgid "Ask a Question"
-#~ msgstr "提问"
-
-#~ msgid "My P2PU"
-#~ msgstr "我的P2PU"
-
-#~ msgid "Final rating"
-#~ msgstr "最后排行"
-
-#~ msgid "Rubrics"
-#~ msgstr "评估准则"
-
-#~ msgid "Rubric"
-#~ msgstr "题目"
-
-#~ msgid "Reason:"
-#~ msgstr "原因"
-
-#~ msgid "Rating"
-#~ msgstr "给分"
-
-#~ msgid ""
-#~ "Provide a rating of Never, Sometimes, Most or the Time, or Always for "
-#~ "each of the following rubric items."
-#~ msgstr "从不给于评分，有时候、大多数时候或者总是根据以下项目进行评估。"
-
-#~ msgid "Add feedback and other comments to your review."
-#~ msgstr "对你的审阅给予反馈以及其它评论"
-
-#~ msgid "View your Application"
-#~ msgstr "查看你的申请"
-
-#~ msgid "Awarded To"
-#~ msgstr "给  的授奖"
-
-#~ msgid "Depending on the type, more options will show."
-#~ msgstr "根据种类，有不同的选项"
-
-#~ msgid "Badge logic"
-#~ msgstr "徽章的逻辑性"
-
-#~ msgid ""
-#~ "Only valid for certain assessment types. Badge logic is pulled from pre-"
-#~ "made logic statements."
-#~ msgstr "只对一定的评估种类有效。徽章逻辑是由先前的逻辑声明辑决定"
-
-#~ msgid "Badge rubric"
-#~ msgstr "徽章标题"
-
-#~ msgid ""
-#~ "Only valid for certain assessment types. Badge rubric is pulled from pre-"
-#~ "made rubric statements."
-#~ msgstr "只对一定的评估有效。徽章标题由先前的标题声明决定"
-
-#~ msgid "Based on assessment type, the badge type is pre-selected."
-#~ msgstr "根据评估种类来设定徽章种类"
-
-#~ msgid "Give"
-#~ msgstr "给"
-
-#~ msgid "Justification Comment"
-#~ msgstr "评论理由"
-
-#~ msgid "'s Work for "
-#~ msgstr "   的作业"
-
-#~ msgid "Award to"
-#~ msgstr "向  授奖"
-
-#~ msgid "Assessment Results:"
-#~ msgstr "评估结果"
-
-#~ msgid "reviews needed from challenge adopters."
-#~ msgstr "来自挑战发出者的审阅"
-
-#~ msgid "Assessments"
-#~ msgstr "评估"
-
-#~ msgid "Submit your Work from"
-#~ msgstr "从    提交你的作业"
-
-#~ msgid "Submit your Work"
-#~ msgstr "提交作业"
-
-#~ msgid "Reflection"
-#~ msgstr "反思"
-
-#~ msgid "from"
-#~ msgstr "来自"
-
-#~ msgid "Reflection:"
-#~ msgstr "反思"
-
-#~ msgid "Assess for Badge"
-#~ msgstr "关于徽章的评定"
-
-#~ msgid "Past Involvement"
-#~ msgstr "过去参与过的活动"
+#~ msgstr "Crear un Reto"

@@ -553,6 +553,18 @@ def remove_user_from_cohort(cohort_uri, user_uri):
     return True, None
 
 
+def send_course_announcement(course_uri, announcement_text):
+    course = get_course(course_uri)
+    cohort = get_course_cohort(course_uri)
+    users = UserProfile.objects.filter(username__in=cohort['users'].keys())
+    notification_model.send_notifications_i18n(
+        users,
+        'courses/emails/course_announcement_subject.txt',
+        'courses/emails/course_announcement.txt',
+        { 'course': course, 'announcement_text': announcement_text }
+    )
+
+
 def add_comment_to_cohort(comment_uri, cohort_uri, reference_uri):
     #NOTE this is not being used = not tested ~ not working
     raise Exception

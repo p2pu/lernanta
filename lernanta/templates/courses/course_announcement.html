@@ -1,0 +1,21 @@
+{% extends "courses/course_base.html" %}
+{% load l10n_tags %}
+{% load i18n %}
+{% load learn_tags %}
+{% load embed %}
+
+{% block tab-pane-content %}
+
+  <span>
+    <p class="alert">{% blocktrans %}Users can opt-out of course announcements and not all users will receive this message. Consider adding the relevant information to the course as content or on the about page{% endblocktrans %}</p>
+  </span>
+  <p>
+    <form action="{% locale_url courses_announcement course_id=course.id %}" method="POST">
+      {% csrf_token %}
+      <p><strong>{% trans 'Subject: ' %}</strong>{% blocktrans with hashtag=course.hashtag %}P2PU Course Announcement #{{ hashtag }}{% endblocktrans %}</p>
+      <label for="id_announcement_text"><strong>{% trans 'Announcement text:' %}</strong></label>
+      <p class="row-fluid"><textarea class="span12" id="id_announcement_test" rows="10" name="announcement_text"/></textarea></p>
+      <button type="submit">{% trans "Send" %}</button>
+    </form>
+  </p>
+{% endblock %}

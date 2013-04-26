@@ -6,6 +6,7 @@ from test_utils import TestCase
 
 from courses import models as course_model
 from content2 import models as content_model
+from mock import patch
 
 
 class CourseTests(TestCase):
@@ -88,12 +89,12 @@ class CourseTests(TestCase):
         self.assertTrue('uri' in course)
         self.assertTrue('title' in course)
         self.assertTrue('hashtag' in course)
-        self.assertTrue('about_uri' in course)
         self.assertTrue('slug' in course)
         self.assertTrue('description' in course)
         self.assertTrue('language' in course)
-        self.assertTrue('draft' in course)
-        self.assertTrue('archived' in course)
+        self.assertTrue('date_created' in course)
+        self.assertTrue('author_uri' in course)
+        self.assertTrue('status' in course)
         self.assertTrue('about_uri' in course)
         self.assertTrue('content' in course)
 
@@ -112,3 +113,18 @@ class CourseTests(TestCase):
 
     def test_make_organizer(self):
         pass
+
+    def test_send_course_announcement(self):
+        course = course_model.create_course(
+            **{
+                "title": "A test course",
+                "hashtag": "ATC-1",
+                "description": "This course is all about ABC",
+                "language": "en",
+                "organizer_uri": '/uri/user/testuser/'
+            }
+        )
+        with patch('notifications.models.send_notifications_i18n') as send_notification:
+            course_model.send_course_announcement(course['uri'], 'Notification text')
+            self.assertTrue(send_notification.called)
+            #TODO test parameters sent to send_notification

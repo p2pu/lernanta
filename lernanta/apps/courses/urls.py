@@ -8,29 +8,33 @@ urlpatterns = patterns('',
         'courses.views.import_project',
         name='courses_import_project'),
 
-    url(r'^(?P<course_id>[\d]+)/$', 
+    url(r'^(?P<course_id>[\d]+)/$',
         'courses.views.course_slug_redirect',
         name='courses_slug_redirect'),
 
-    url(r'^(?P<course_id>[\d]+)/learn_api_data/$', 
+    url(r'^(?P<course_id>[\d]+)/learn_api_data/$',
         'courses.views.course_learn_api_data',
         name='courses_learn_api_data'),
 
-    url(r'^(?P<course_id>[\d]+)/admin_content/$', 
+    url(r'^(?P<course_id>[\d]+)/admin_content/$',
         'courses.views.course_admin_content',
         name='courses_admin_content'),
 
-    url(r'^(?P<course_id>[\d]+)/discussion/$', 
+    url(r'^(?P<course_id>[\d]+)/discussion/$',
         'courses.views.course_discussion',
         name='courses_discussion'),
 
-    url(r'^(?P<course_id>[\d]+)/people/$', 
+    url(r'^(?P<course_id>[\d]+)/people/$',
         'courses.views.course_people',
         name='courses_people'),
 
-    url(r'^(?P<course_id>[\d]+)/settings/$', 
+    url(r'^(?P<course_id>[\d]+)/settings/$',
         'courses.views.course_settings',
         name='courses_settings'),
+
+    url(r'^(?P<course_id>[\d]+)/announcement/$',
+        'courses.views.course_announcement',
+        name='courses_announcement'),
 
     url(r'^(?P<course_id>[\d]+)/signup/$',
         'courses.views.course_signup',

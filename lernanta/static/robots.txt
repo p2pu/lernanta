@@ -23,12 +23,16 @@ Disallow: /media/
 Disallow: /static/
 Disallow: /api/
 Disallow: /en/login/
-Disallow: /sv/login/
 Disallow: /es/login/
+Disallow: /he/login/
+Disallow: /ko/login/
 Disallow: /nl/login/
+Disallow: /sv/login/
 Disallow: /zh-CN/login/
 Disallow: /en/register/
 Disallow: /es/register/
+Disallow: /he/register/
+Disallow: /ko/register/
 Disallow: /nl/register/
 Disallow: /sv/register/
 Disallow: /zh-CN/register/

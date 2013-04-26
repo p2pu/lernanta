@@ -179,6 +179,7 @@ INSTALLED_APPS = (
     'lernanta.apps.media',
     'oauth2app',
     'oauthprovider',
+    'lrmi'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

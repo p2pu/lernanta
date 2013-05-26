@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: LERNANTA 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-26 15:25+0200\n"
-"PO-Revision-Date: 2013-05-13 11:53+0100\n"
+"PO-Revision-Date: 2013-05-26 18:43+0100\n"
 "Last-Translator: Jonas Bäckelin <edutoolkit@gmail.com>\n"
 "Language-Team: SWEDEN <edutoolkit@gmail.com>\n"
 "Language: Swedish\n"
@@ -2593,7 +2593,7 @@ msgstr "Lär dig vad som helst med dina vänner."
 #: templates/dashboard/_join_p2pu.html:15
 #: templates/learn/learn.html:65
 msgid "At P2PU, people work together to learn a particular topic by completing tasks, assessing individual and group work, and providing constructive feedback."
-msgstr "Med P2PU arbetar vi tillsammans för att lära oss ett visst ämne genom uppgifter, bedöma enskilda arbeten och grupparbeten, och ge konstruktiv återkoppling."
+msgstr "Med P2PU arbetar vi tillsammans för att lära oss ett ämne genom uppgifter, bedöma egna arbeten och grupparbeten, och ge konstruktiv återkoppling."
 
 #: templates/dashboard/dashboard.html:9
 msgid "Your Dashboard"
@@ -2750,11 +2750,11 @@ msgstr "Med"
 
 #: templates/dashboard/splash.html:25
 msgid ", people work together to learn a particular topic by completing"
-msgstr "arbetar vi tillsammans för att lära oss ett visst ämne genom"
+msgstr "arbetar vi tillsammans för att lära oss ett ämne genom"
 
 #: templates/dashboard/splash.html:26
 msgid "tasks, assessing individual and group work, and providing constructive"
-msgstr "uppgifter, bedöma enskilda arbeten och grupparbeten, och ge konstruktiv"
+msgstr "uppgifter, bedöma egna arbeten och grupparbeten, och ge konstruktiv"
 
 #: templates/dashboard/splash.html:27
 msgid "feedback."

@@ -227,13 +227,11 @@ def send_email_notification(instance):
     profiles = []
     for recipient in recipients:
         profile = recipient.user
-        if from_organizer:
-            unsubscribed = recipient.no_organizers_content_updates
-        else:
-            unsubscribed = recipient.no_participants_content_updates
-        if instance.author != profile and not unsubscribed:
+        if instance.author != profile:
             profiles.append(profile)
-    send_notifications_i18n(profiles, subject_template, body_template, context)
+    send_notifications_i18n(profiles, subject_template, body_template, context,
+        notification_category=u'content-updated.project-{0}'.format(project.slug)
+    )
 
 
 ###########

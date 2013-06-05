@@ -111,6 +111,7 @@ def get_user_courses(user_uri):
     for signup in signups:
         course = get_course(course_id2uri(signup.cohort.course.id)) 
         course_data = {
+            "id": course['id'],
             "title": course['title'],
             "user_role": signup.role,
             "url": reverse("courses_show", kwargs={"course_id": course["id"], "slug": course["slug"]}),
@@ -521,7 +522,10 @@ def add_user_to_cohort(cohort_uri, user_uri, role, notify_organizers=False):
         }
         subject_template = 'courses/emails/course_join_subject.txt'
         body_template = 'courses/emails/course_join.txt'
-        notification_model.send_notifications_i18n(organizers, subject_template, body_template, context)
+        notification_model.send_notifications_i18n(
+            organizers, subject_template, body_template, context,
+            notification_category='course-signup.course-{0}'.format(course['id'])
+        )
     
     signup = {
         "cohort_uri": cohort_uri,
@@ -561,7 +565,8 @@ def send_course_announcement(course_uri, announcement_text):
         users,
         'courses/emails/course_announcement_subject.txt',
         'courses/emails/course_announcement.txt',
-        { 'course': course, 'announcement_text': announcement_text }
+        { 'course': course, 'announcement_text': announcement_text },
+        notification_category='course-announcement.course-{0}'.format(course['id'])
     )
 
 

@@ -160,6 +160,7 @@ class UserProfile(ModelBase):
     def get_current_projects(self, only_public=False):
         def to_dict(course):
             course_dict = {
+                'id': course.slug,
                 'title': course.name,
                 'url': course.get_absolute_url(),
                 'image_url': course.get_image_url(),
@@ -245,7 +246,9 @@ class UserProfile(ModelBase):
         subject_template = 'users/emails/registration_confirm_subject.txt'
         body_template = 'users/emails/registration_confirm.txt'
         context = {'confirmation_url': url, 'new_user': new_user}
-        send_notifications_i18n([self], subject_template, body_template, context)
+        send_notifications_i18n([self], subject_template, body_template, 
+            context, notification_category='account'
+        )
 
     def image_or_default(self):
         """Return user profile image or a default."""

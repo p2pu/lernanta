@@ -52,7 +52,9 @@ def _populate_course_context( request, course_id, context ):
     course = _get_course_or_404(course_uri)
     course['author'] = course['author_uri'].strip('/').split('/')[-1]
     context['course'] = course
-    context['course_url'] = request.get_full_path()
+    context['course_url'] = reverse('courses_show',
+        kwargs={'course_id': course['id'], 'slug': course['slug']}
+    )
     if 'image_uri' in course:
         context['course']['image'] = media_model.get_image(course['image_uri'])
 

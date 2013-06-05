@@ -137,6 +137,7 @@ INSTALLED_APPS = (
     #'south',
     'robots',
     'wellknown',
+    'lernanta.apps.abuse',
     'lernanta.apps.pagination',
     'lernanta.apps.users',
     'lernanta.apps.search',

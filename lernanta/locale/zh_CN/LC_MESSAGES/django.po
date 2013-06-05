@@ -1480,7 +1480,7 @@ msgstr "jquery.ui.datepicker-zh-CN.js"
 
 #: templates/base.html:207
 msgid "js/script-en.js"
-msgstr "js/script-zn-CN.js"
+msgstr "js/script-zh-CN.js"
 
 #: templates/activity/_activity_resource.html:19
 #: templates/content/page.html:41 templates/drumbeat/abuse_reason.html:11

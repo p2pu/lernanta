@@ -208,3 +208,17 @@ figure {
 #sidebar-content-list li {
     margin-bottom: 0.5em;
 }
+#markdown-cheatsheet{
+    position: fixed;
+    margin: -250px 0 0 -280px;
+    left: 50%;
+}
+#markdown-cheatsheet h3 {
+    margin-bottom: 0;
+}
+#markdown-cheatsheet h3 + hr {
+    margin-top: 0;
+}
+#markdown-cheatsheet p {
+    font-size: 0.9em;
+}

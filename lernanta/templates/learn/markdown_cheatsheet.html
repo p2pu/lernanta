@@ -1,0 +1,136 @@
+<div id="markdown-cheatsheet" class="modal hide fade" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Markdown cheat sheet</h3>
+    </div>
+    <div class="modal-body">
+        <h3>HEADERS</h3>
+        <hr>
+        <pre>#Heading 1
+##Heading 2
+#####Heading 5</pre>
+        <p>Output::</p>
+        <div>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h5>Heading 5</h5>
+        </div>
+        <h3>BLOCKQUOTES, PARAGRAPHS</h3>
+        <hr>
+        <pre>> This is a blockquote.
+>
+> This is the second paragraph in the blockquote.
+>
+> ## This is an H2 in a blockquote
+        </pre>
+        <p>Output::</p>
+        <div>
+            <blockquote>
+                <p>This is a blockquote.</p>
+
+                <p>This is the second paragraph in the blockquote.</p>
+
+                <h2>This is an H2 in a blockquote</h2>
+            </blockquote>
+        </div>
+
+        <h3>PHRASE EMPHASIS</h3>
+        <hr>
+        <pre>Some of these words *are emphasized*.
+
+Use two asterisks for **strong emphasis**.
+        </pre>
+        <p>Output:</p>
+        <div>
+            <p>Some of these words <em>are emphasized</em>.</p>
+
+            <p>Use two asterisks for <strong>strong emphasis</strong>.</p>
+        </div>
+
+        <h3>LISTS</h3>
+        <hr>
+        <p>Unordered (bulleted) lists use asterisks.</p>
+        <pre>*   Candy.
+*   Gum.
+*   Booze.</pre>
+        <p>Output:</p>
+        <div>
+            <ul>
+                <li>Candy.</li>
+                <li>Gum.</li>
+                <li>Booze.</li>
+            </ul>
+        </div>
+        <p>Ordered (numbered) lists use regular numbers, followed by periods, as list markers:</p>
+        <pre>1.  Red
+2.  Green
+3.  Blue
+        </pre>
+        <p>Output:</p>
+        <div>
+            <ol>
+                <li>Red</li>
+                <li>Green</li>
+                <li>Blue</li>
+            </ol>
+        </div>
+        <h3>LINKS</h3>
+        <hr>
+        <p>Inline-style links use parentheses immediately after the link text. For example:</p>
+        <pre>This is an [example link](http://example.com/).</pre>
+        <p>Output:</p>
+        <div>
+            This is an <a href="http://example.com/">
+            example link</a>.
+        </div>
+        <p>Reference-style links allow you to refer to your links by names, which you define elsewhere in your document:</p>
+        <pre>I get 10 times more traffic from [Google][1] than from
+[Yahoo][2] or [MSN][3].
+
+[1]: http://google.com/        "Google"
+[2]: http://search.yahoo.com/  "Yahoo Search"
+[3]: http://search.msn.com/    "MSN Search"
+        </pre>
+        <p>Output:</p>
+        <div>
+            I get 10 times more traffic from <a href="http://google.com/"
+            title="Google">Google</a> than from <a href="http://search.yahoo.com/"
+            title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/"
+            title="MSN Search">MSN</a>.
+        </div>
+        <h3>IMAGES</h3>
+        <hr>
+        <p>Image syntax is very much like link syntax.
+        <br>Inline (titles are optional):</p>
+        <pre>![alt text](/path/to/img.jpg "Title")</pre>
+        <p>Reference-style:</p>
+        <pre>![alt text][id]
+
+[id]: /path/to/img.jpg "Title"</pre>
+        <p>Both of the above examples produce the same output:</p>
+        <div>
+            <img src="//placehold.it/40x40" alt="alt text" title="Title" />
+        </div>
+        <h3>CODE</h3>
+        <hr>
+        <p>In a regular paragraph, you can create code span by wrapping text in backtick quotes. </p>
+        <pre>I strongly recommend against using any `<blink>` tags.
+
+I wish SmartyPants used named entities like `&mdash;`
+instead of decimal-encoded entites like `&#8212;`.</pre>
+        <p>Output:</p>
+        <div>
+            <p>I strongly recommend against using any
+            <code>&lt;blink&gt;</code> tags.</p>
+
+            <p>I wish SmartyPants used named entities like
+            <code>&amp;mdash;</code> instead of decimal-encoded
+            entites like <code>&amp;#8212;</code>.</p>
+        </div>
+    </div>
+    <div>You can get more <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">here.</a></div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal">Close</button>
+    </div>
+</div>
+

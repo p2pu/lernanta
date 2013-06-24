@@ -16,7 +16,7 @@
   <p class="hint">{{ _('Upload an image file from your computer:') }}</p>  
   <div class="field{% if form.site_logo.errors %} error{% endif %}">
     <input type="file" name="site_logo" id="id_site_logo"/>
-    <small class="hint block">{{ _('File Types: JPG, GIF or PNG only')<br/> _('Max size:') _('700k') <br/> _('Dimensions:') _('141x44 pixels') }}</small>
+    <small class="hint block">{{ _('File Types: JPG, GIF or PNG only') }}<br/> {{ _('Max size:') }} {{ _('700k') }} <br/> {{ _('Dimensions:') }} {{ _('141x44 pixels') }}</small>
     {{ form.logo.errors }}
   </div>
   <p class="buttons">

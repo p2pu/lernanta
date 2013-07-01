@@ -327,3 +327,8 @@ BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',
     'KaloogaBot', 'YodaoBot', 'Baiduspider', 'googlebot',
     'Speedy Spider', 'DotBot', 'Sogou', 'YoudaoBot',
     'YandexBot', 'rogerbot']
+
+##################################################################
+# Badges integration settings
+#################################################################
+EMBED_API_ENDPOINT = "http://badges.p2pu.org/services/oembed"

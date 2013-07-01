@@ -36,6 +36,10 @@ urlpatterns = patterns('',
         'courses.views.course_announcement',
         name='courses_announcement'),
 
+    url(r'^(?P<course_id>[\d]+)/badges/$',
+        'courses.views.course_add_badge',
+        name='course_add_badge'),
+
     url(r'^(?P<course_id>[\d]+)/signup/$',
         'courses.views.course_signup',
         name='courses_signup'),

@@ -28,5 +28,5 @@ requests==0.13.5
 -e git://github.com/shaunsephton/django-ckeditor.git#egg=django_ckeditor
 -e git://github.com/jdunck/python-unicodecsv.git#egg=unicodecsv
 -e git://github.com/zuzelvp/django-obi.git#egg=django_obi
--e git://github.com/embedly/embedly-python.git#egg=embedly_python
+-e git://github.com/embedly/embedly-python.git@b8325fc49396e3b0d10f65847c6cc9fb23bd9482#egg=Embedly-dev
 -e git://github.com/hiidef/oauth2app.git@f8205e2146477224a666c03bf115ddf3ff7610ff#egg=oauth2app

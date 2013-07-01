@@ -1,7 +1,9 @@
 import simplejson as json
 import datetime
+import requests
 
 from django.utils.translation import ugettext as _
+from django.conf import settings
 
 from l10n.urlresolvers import reverse
 
@@ -28,6 +30,10 @@ class ResourceDeletedException(Exception):
 
 
 class DataIntegrityException(Exception):
+    pass
+
+
+class BadgeNotFoundException(Exception):
     pass
 
 
@@ -61,7 +67,7 @@ def get_course(course_uri):
         "description": course_db.description,
         "language": course_db.language,
         "date_created": course_db.creation_date,
-        "author_uri": course_db.creator_uri
+        "author_uri": course_db.creator_uri,
     }
 
     course["status"] = 'published'
@@ -601,3 +607,35 @@ def get_cohort_comments(cohort_uri, reference_uri):
         #yield comment
     return cohort_comments
 
+
+def request_oembedded_content(url):
+    """ Retrieves oembed json from API endpoint"""
+    endpoint_url = settings.EMBED_API_ENDPOINT
+    params = dict(url=url)
+
+    try:
+        r = requests.get(endpoint_url, params=params)
+    except (requests.exceptions.RequestException,
+            requests.exceptions.ConnectionError,
+            requests.exceptions.HTTPError) as e:
+        repr(e)
+        return e
+    return r
+
+
+def add_content_from_response(course_uri, url, user_uri):
+    content = None
+    response = request_oembedded_content(url)
+    if response.status_code == 200:
+        content = response.json
+        content_data = {
+            'title': content['title'],
+            'content': content['html'],
+            'author_uri': user_uri,
+        }
+        content = content_model.create_content(**content_data)
+        add_course_content(course_uri,
+                           content['uri'])
+    else:
+        raise BadgeNotFoundException
+    return content

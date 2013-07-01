@@ -73,6 +73,9 @@
               <li>
                 <a href="{% locale_url courses_admin_content course_id=course.id %}">{% trans "Organize and add content" %}</a>
               </li>
+              <li>
+                <a href="{% locale_url course_add_badge course_id=course.id %}">{% trans "Add a Badge to your course" %}</a>
+              </li>
             {% endif %}
           </ul>
         </li>
@@ -89,6 +92,9 @@
           </li>
           <li {% if announcement_active %}class="active"{% endif %}>
             <a href="{% locale_url courses_announcement course_id=course.id %}">{% trans 'Announcements' %}</a>
+          </li>
+          <li {% if badges_active %}class="active"{% endif %}>
+            <a href="{% locale_url course_add_badge course_id=course.id %}">{% trans 'Badges & Feedback' %}</a>
           </li>
         {% endif %}
       </ul>

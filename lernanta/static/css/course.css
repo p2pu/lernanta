@@ -222,3 +222,24 @@ figure {
 #markdown-cheatsheet p {
     font-size: 0.9em;
 }
+.badges-content-wrapper div{
+    margin-left: 10px;
+}
+.badges-content-wrapper div:first-child{
+    margin-left: 0;
+}
+.badges-content-wrapper div.align-center{
+    margin-left: 0;
+    text-align: center;
+}
+.badges-content-wrapper div.align-center img{
+    margin: 10px 0;
+    width: 100%;
+}
+.badges-content-wrapper div a{
+    font-family: "arvo", Helvetica, sans-serif;
+    margin: 10px 0;
+}
+.tab-content iframe{
+    border: none;
+}

@@ -21,6 +21,7 @@ from courses.forms import CourseImageForm
 from courses.forms import CourseStatusForm
 from courses.forms import CohortSignupForm
 from courses.forms import CourseTagsForm
+from courses.forms import CourseEmbeddedUrlForm
 from courses.decorators import require_organizer
 
 from content2 import models as content_model
@@ -171,7 +172,44 @@ def course_learn_api_data( request, course_id ):
         raise http.Http404
 
     return http.HttpResponse(json.dumps(course_data), mimetype="application/json")
- 
+
+
+@login_required
+@require_organizer
+def course_add_badge( request, course_id ):
+    context = { }
+    context = _populate_course_context(request, course_id, context)
+    context['badges_active'] = True
+    user = request.user
+
+    form = CourseEmbeddedUrlForm()
+
+    if request.method == "POST":
+        form = CourseEmbeddedUrlForm(request.POST)
+
+        if form.is_valid():
+            content = None
+            user_uri = u"/uri/user/{0}".format(user.username)
+            try:
+                content = course_model.add_content_from_response(
+                    context['course']['uri'],
+                    form.cleaned_data['url'], user_uri)
+            except course_model.BadgeNotFoundException:
+                form = CourseEmbeddedUrlForm()
+                messages.error(request, _('Error! We could not retrieve this Badge'))
+            if content:
+                redirect_url = reverse('courses_content_show',
+                                       kwargs={'course_id': course_id,
+                                               'content_id': content['id']})
+                return http.HttpResponseRedirect(redirect_url)
+
+    context['form'] = form
+    return render_to_response(
+        'courses/course_badges.html',
+        context,
+        context_instance=RequestContext(request)
+    )
+
 
 @login_required
 @require_organizer

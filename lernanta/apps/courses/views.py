@@ -1,4 +1,5 @@
 import logging
+import unicodecsv
 
 from django import http
 from django.shortcuts import render_to_response, get_object_or_404
@@ -11,6 +12,7 @@ from django.views.decorators.http import require_http_methods
 
 from l10n.urlresolvers import reverse
 from users.decorators import login_required
+from users.models import UserProfile
 from drumbeat import messages
 
 from courses import models as course_model
@@ -68,6 +70,7 @@ def _populate_course_context( request, course_id, context ):
     )
     context['organizer'] |= request.user.is_superuser
     context['can_edit'] = context['organizer'] and not course['status'] == 'archived'
+    context['trusted_user'] = request.user.has_perm('trusted_user')
     if course_model.user_in_cohort(user_uri, cohort['uri']):
         if not context['organizer']:
             context['show_leave_course'] = True
@@ -85,6 +88,8 @@ def _populate_course_context( request, course_id, context ):
     except:
         log.error("Could not get lists for course!")
 
+    if 'based_on_uri' in course:
+        course['based_on'] = course_model.get_course(course['based_on_uri'])
 
     context['meta_data'] = lrmi_model.get_tags(course_uri)
     if 'educational_alignment' in context['meta_data']:
@@ -92,6 +97,7 @@ def _populate_course_context( request, course_id, context ):
         del context['meta_data']['educational_alignment']
 
     return context
+
 
 @login_required
 def create_course( request ):
@@ -129,6 +135,14 @@ def import_project( request, project_slug ):
     cohort = course_model.get_course_cohort(course['uri'])
     user_uri = u"/uri/user/{0}".format(request.user.username)
     course_model.add_user_to_cohort(cohort['uri'], user_uri, "ORGANIZER")
+    return course_slug_redirect(request, course['id'])
+
+
+@require_organizer
+def clone_course( request, course_id ):
+    course_uri = course_model.course_id2uri(course_id)
+    user_uri = u"/uri/user/{0}".format(request.user.username)
+    course = course_model.clone_course(course_uri, user_uri)
     return course_slug_redirect(request, course['id'])
 
 
@@ -361,6 +375,7 @@ def course_add_user( request, course_id ):
 def course_leave( request, course_id, username ):
     cohort_uri = course_model.get_course_cohort_uri(course_id)
     user_uri = u"/uri/user/{0}".format(request.user.username)
+    # TODO site admin should also be able to remove users
     is_organizer = course_model.is_cohort_organizer(
         user_uri, cohort_uri
     )
@@ -540,6 +555,30 @@ def course_announcement( request, course_id ):
         context,
         context_instance=RequestContext(request)
     )
+
+
+@login_required
+@require_organizer
+def course_export_emails( request, course_id ):
+    if not request.user.has_perm('trusted_user'):
+        msg = _('You do not have permission to view this page')
+        return http.HttpResponseForbidden(msg)
+    
+    course_uri = course_model.course_id2uri(course_id)
+    cohort = course_model.get_course_cohort(course_uri)
+
+    response = http.HttpResponse(mimetype='text/csv')
+    response['Content-Disposition'] = 'attachment; '
+    response['Content-Disposition'] += 'filename=detailed_report.csv'
+    writer = unicodecsv.writer(response)
+    writer.writerow(["username", "email address", "signup date"])
+
+    for user in cohort['users'].values():
+        username = user['uri'].strip('/').split('/')[-1]
+        user['email'] = UserProfile.objects.get(username=username).email
+        writer.writerow([username, user['email'], user['signup_date']])
+
+    return response
 
 
 def show_content( request, course_id, content_id):

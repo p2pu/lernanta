@@ -128,3 +128,17 @@ class CourseTests(TestCase):
             course_model.send_course_announcement(course['uri'], 'Notification text')
             self.assertTrue(send_notification.called)
             #TODO test parameters sent to send_notification
+
+
+    def test_clone_course(self):
+        clone = course_model.clone_course(self.course['uri'], '/uri/user/bob/')
+        for key in ['title', 'hashtag', 'description', 'language']:
+            self.assertEqual(clone[key], self.course[key])
+        self.assertIn('based_on_uri', clone)
+
+        self.assertEqual(len(clone['content']), len(self.course['content']))
+        for i in range(len(clone['content'])):
+            self.assertEqual(clone['content'][i]['title'], self.course['content'][i]['title'])
+            self.assertEqual(clone['content'][i]['content'], self.course['content'][i]['content'])
+
+

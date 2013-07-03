@@ -99,13 +99,13 @@
     <hr/>
     <div>
       {% if cohort.signup == 'OPEN' %}
-        <p>{% trans 'Singup is open to anyone.' %}</p>
+        <p>{% trans 'Signup is open to anyone.' %}</p>
       {% endif %}
       {% if cohort.signup == 'MODERATED' %}
-        <p>{% trans 'Singup is moderated. To sign up for this course you should contact one of the course organizer.' %}</p>
+        <p>{% trans 'Signup is moderated. To sign up for this course you should contact one of the course organizer.' %}</p>
       {% endif %}
       {% if cohort.signup == 'CLOSED' %}
-        <p>{% trans 'Singup is closed. Only organizers can add more people.' %}</p>
+        <p>{% trans 'Signup is closed. Only organizers can add more people.' %}</p>
       {% endif %}
       
       <div id="signup-edit">

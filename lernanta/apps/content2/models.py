@@ -33,7 +33,7 @@ def get_content(content_uri, fields=[]):
         for version in wrapper_db.versions.sort_by("date"):
             content['history'] += {
                 "date": version.date,
-                "author": "/uri/user/bob/",
+                "author_uri": version.author_uri,
                 "title": version.title,
                 "comment": version.comment,
             }
@@ -80,3 +80,27 @@ def update_content( uri, title, content, author_uri ):
     wrapper_db.latest = content_db
     wrapper_db.save()
     return get_content("/uri/content/{0}".format(wrapper_db.id))
+
+
+def clone_content(uri):
+    content_id = content_uri2id(uri)
+    try:
+        original_db = db.Content.objects.get(id=content_id)
+    except Exception, e:
+        log.debug(e)
+        raise
+
+    container_db = db.Content(based_on=original_db)
+    container_db.save()
+
+    content_db = db.ContentVersion(
+        container=container_db,
+        title=original_db.latest.title,
+        content=original_db.latest.content,
+        author_uri=original_db.latest.author_uri,
+    )
+    content_db.save()
+    container_db.latest = content_db
+    container_db.save()
+
+    return get_content("/uri/content/{0}".format(container_db.id))

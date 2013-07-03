@@ -70,6 +70,9 @@ def get_course(course_uri):
         "author_uri": course_db.creator_uri,
     }
 
+    if course_db.based_on:
+        course['based_on_uri'] = "/uri/course/{0}".format(course_db.based_on.id)
+
     course["status"] = 'published'
     if course_db.archived:
         course["status"] = 'archived'
@@ -128,7 +131,7 @@ def get_user_courses(user_uri):
     return courses
 
 
-def create_course(title, hashtag, description, language, organizer_uri):
+def create_course(title, hashtag, description, language, organizer_uri, based_on_uri=None):
     course_db = db.Course(
         title=title,
         short_title=hashtag,
@@ -136,6 +139,10 @@ def create_course(title, hashtag, description, language, organizer_uri):
         language=language,
         creator_uri=organizer_uri
     )
+
+    if based_on_uri:
+        based_on = _get_course_db(based_on_uri)
+        course_db.based_on = based_on
 
     course_db.save()
 
@@ -152,6 +159,23 @@ def create_course(title, hashtag, description, language, organizer_uri):
 
     # TODO notify admins
     return course
+
+
+def clone_course(course_uri, organizer_uri):
+    original_course = get_course(course_uri)
+    new_course = create_course(
+        original_course['title'],
+        original_course['hashtag'],
+        original_course['description'],
+        original_course['language'],
+        organizer_uri,
+        course_uri
+    )
+    for content in original_course['content']:
+        new_content = content_model.clone_content(content['uri'])
+        add_course_content(new_course['uri'], new_content['uri'])
+
+    return new_course
 
 
 def update_course(course_uri, title=None, hashtag=None, description=None, language=None, image_uri=None):
@@ -458,7 +482,10 @@ def get_cohort(cohort_uri):
     for signup in cohort_db.signup_set.filter(leave_date__isnull=True):
         username = signup.user_uri.strip('/').split('/')[-1]
         cohort_data["users"][username] = {
-            "username": username, "uri": signup.user_uri, "role": signup.role
+            "username": username,
+            "uri": signup.user_uri,
+            "role": signup.role,
+            "signup_date": signup.signup_date
         }
         key = "{0}s".format(signup.role.lower())
         if not key in cohort_data:

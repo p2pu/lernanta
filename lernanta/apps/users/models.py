@@ -122,6 +122,9 @@ class UserProfile(ModelBase):
 
     objects = UserProfileManager()
 
+    class Meta:
+        permissions = ( ('trusted_user', 'This is a trusted user'),)
+
     def __unicode__(self):
         if self.deleted:
             return ugettext('Anonym')
@@ -316,6 +319,7 @@ def create_profile(user, username=None):
 
 
 def delete_spammer(spammer):
+    # TODO
     spammer.user.set_unusable_password()
     spammer.deleted = True
     spammer.user.save()

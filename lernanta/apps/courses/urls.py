@@ -8,6 +8,10 @@ urlpatterns = patterns('',
         'courses.views.import_project',
         name='courses_import_project'),
 
+    url(r'^(?P<course_id>[\d]+)/clone/$',
+        'courses.views.clone_course',
+        name='courses_clone'),
+
     url(r'^(?P<course_id>[\d]+)/$',
         'courses.views.course_slug_redirect',
         name='courses_slug_redirect'),
@@ -35,6 +39,10 @@ urlpatterns = patterns('',
     url(r'^(?P<course_id>[\d]+)/announcement/$',
         'courses.views.course_announcement',
         name='courses_announcement'),
+
+    url(r'^(?P<course_id>[\d]+)/export_emails/$',
+        'courses.views.course_export_emails',
+        name='courses_export_emails'),
 
     url(r'^(?P<course_id>[\d]+)/badges/$',
         'courses.views.course_add_badge',

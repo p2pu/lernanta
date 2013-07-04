@@ -71,7 +71,9 @@ class NotificationsTests(TestCase):
             'domain': 'example.org',
         }
         message_count = len(mail.outbox)
-        send_notifications_i18n([self.user], subject_template, body_template, context)
+        send_notifications_i18n([self.user], subject_template, body_template,
+            context, notification_category='account'
+        )
         self.assertEqual(ResponseToken.objects.count(), 0)
         self.assertEqual(len(mail.outbox), message_count + 1)
 
@@ -82,7 +84,7 @@ class NotificationsTests(TestCase):
         text = 'Notifications body.\n\nSome random text.'
         html = '<html></html>'
         message_count = len(mail.outbox)
-        send_notifications([self.user], subject, text, html)
+        send_notifications([self.user], subject, text, html, notification_category='account')
         self.assertEqual(ResponseToken.objects.count(), 0)
         self.assertEqual(len(mail.outbox), message_count + 1)
 
@@ -96,7 +98,7 @@ class NotificationsTests(TestCase):
             'domain': 'example.org',
         }
         message_count = len(mail.outbox)
-        send_notifications_i18n([self.user], subject_template, body_template, context, "/call/me/back")
+        send_notifications_i18n([self.user], subject_template, body_template, context, "/call/me/back", notification_category='reply.course-1')
         self.assertEqual(ResponseToken.objects.count(), 1)
         self.assertEqual(len(mail.outbox), message_count + 1)
 
@@ -152,7 +154,8 @@ class NotificationsTests(TestCase):
         }
         callback_url = "/{0}/comments/{1}/email_reply/".format(self.locale, self.comment.id)
         send_notifications_i18n(
-            self.user, subject_template, body_template, context, callback_url
+            [self.user], subject_template, body_template, context, callback_url,
+            notification_category='account'
         )
         self.assertEqual(ResponseToken.objects.count(), 1)
 

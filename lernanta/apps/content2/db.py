@@ -6,6 +6,7 @@ from drumbeat.models import ModelBase
 class Content(ModelBase):
 
     latest = models.ForeignKey('content2.ContentVersion', related_name='+', null=True, blank=True)
+    based_on = models.ForeignKey('content2.Content', related_name='derived_content', null=True, blank=True)
 
 
 class ContentVersion(ModelBase):

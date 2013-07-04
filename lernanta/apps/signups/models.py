@@ -192,7 +192,12 @@ def send_new_signup_answer_notification(answer):
         'domain': Site.objects.get_current().domain,
     }
     profiles = [recipient.user for recipient in recipients]
-    send_notifications_i18n(profiles, subject_template, body_template, context)
+    notification_category = u'course-signup.project-{0}'.format(
+        answer.sign_up.project.slug
+    )
+    send_notifications_i18n(profiles, subject_template, body_template, context,
+        notification_category=notification_category
+    )
 
 
 ###########

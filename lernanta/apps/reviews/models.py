@@ -51,4 +51,7 @@ class Review(ModelBase):
             'domain': Site.objects.get_current().domain, 
         }
         profiles = [recipient.user for recipient in self.project.organizers()]
-        send_notifications_i18n(profiles, subject_template, body_template, context)
+        send_notifications_i18n(profiles, subject_template, body_template,
+            context,
+            notification_category=u'course-review.project-{0}'.format(self.project.slug)
+        )

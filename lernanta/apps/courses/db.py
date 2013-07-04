@@ -14,6 +14,7 @@ class Course(ModelBase):
     archived = models.BooleanField(default=False)
     deleted = models.BooleanField(default=False)
     creator_uri = models.CharField(max_length=256)
+    based_on = models.ForeignKey('courses.Course', related_name='derived_courses', blank=True, null=True)
 
 
 class CourseContent(ModelBase):

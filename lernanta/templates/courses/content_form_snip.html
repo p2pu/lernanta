@@ -12,7 +12,7 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="edit-tab-pane">
-        <div id="content-editor" class="">
+        <div id="content-editor">
           <p>
             <label for="id_title">{% trans "Title" %}</label>
             {{ form.title.errors }}
@@ -23,7 +23,13 @@
             {{ form.content.errors }}
             <div id="id_content-wmd-button-bar"></div>
             <textarea id="id_content" name="content" class="span8" rows="20">{{form.content.value|default_if_none:""}}</textarea>
-            <p class="help-block">{% blocktrans %}You can use markdown for your content. For some help on using markdown, look <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">here</a>{% endblocktrans %}</p>
+            <p class="help-block">
+                {% blocktrans %}You can use markdown for your content.
+                    For some help on using markdown, look
+                    <a href="#markdown-cheatsheet" role="button" data-toggle="modal">here</a>
+                {% endblocktrans %}
+            {% include 'learn/markdown_cheatsheet.html' %}
+            </p>
           </p>
         </div>
       </div>
@@ -35,4 +41,5 @@
     </div>
   </div>
 </form>
+
 

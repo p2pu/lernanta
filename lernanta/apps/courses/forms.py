@@ -40,6 +40,11 @@ class CourseTermForm(forms.Form):
 class CourseTagsForm(forms.Form):
     tags = forms.CharField(max_length=256)
 
+
+class CourseEmbeddedUrlForm(forms.Form):
+    url = forms.URLField(max_length=300)
+
+
 class CourseStatusForm(forms.Form):
     STATUS_CHOICES = [
         ('draft', _('Draft'), ),

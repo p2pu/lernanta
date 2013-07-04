@@ -1,0 +1,58 @@
+{% extends "courses/course_base.html" %}
+{% load l10n_tags %}
+{% load i18n %}
+{% load learn_tags %}
+{% load embed %}
+{% load settings_tags %}
+
+{% block tab-pane-content %}
+    <h2>{% trans 'How to Add a Badge to Your P2PU Course' %}</h2>
+    <div class="badges-content-wrapper">
+        <div class="span3">
+            <h2>{% trans 'Create a Badge' %}</h2>
+            <p>{% blocktrans %}
+                Head on over to
+                <a href="http://badges.p2pu.org" target="_blank">
+                    badges.p2pu.org</a>
+                to create your snappy Badge.
+                {% endblocktrans %}
+            </p>
+            <a class="btn btn-olive" href="http://badges.p2pu.org/badge/create/" target="_blank">
+                {% trans 'Create a Badge' %}
+            </a>
+        </div>
+        <div class="span3">
+            <h2>{% trans 'Insert the URL' %}</h2>
+            <p>{% blocktrans %}
+                Grab the unique URL for your Badge from
+                <a href="http://badges.p2pu.org" target="_blank">
+                    badges.p2pu.org</a>
+                and insert it here.'
+                {% endblocktrans %}
+            </p>
+            <form action="" method="POST">
+                {% csrf_token %}
+            <p>
+                <label for="id_url">{% trans "Badge URL:"%} <a class="form-tip" href="#" rel="tooltip" data-original-title="{% trans "Paste URL from Badge."%}">?</a></label>
+                    {{form.url.errors}}
+                <input type="text" name="url" id="id_url" placeholder="{% trans "Paste URL of the Badge that can be won." %}" value="{{form.url.value|default_if_none:""}}"/>
+                <input type="submit" class="btn btn-olive" value="{% trans 'Add Badge' %}" />
+            </p>
+            </form>
+        </div>
+        <div class="span3">
+            <h2>{% trans 'Manage Your Badge' %}</h2>
+            <p> {% blocktrans %}
+                Navigate over to "Content" and select
+                "Organize and add content". You can move Badges'
+                up or down in the order you'd like
+                {% endblocktrans %}
+            </p>
+            <div class="align-center">
+                <img src="{{ STATIC_URL }}images/edit_badges.png" alt="{% trans 'How to manage your Badge' %}"/>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

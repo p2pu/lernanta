@@ -11,7 +11,6 @@ from django.contrib.contenttypes.models import ContentType
 from drumbeat.models import ModelBase
 from activity.models import Activity, register_filter
 from activity.schema import verbs
-from preferences.models import AccountPreferences
 from notifications.models import send_notifications_i18n
 
 
@@ -82,24 +81,12 @@ def follow_handler(sender, **kwargs):
                         target_object=rel)
     recipients = []
     if rel.target_user:
-        preferences = AccountPreferences.objects.filter(
-            user=rel.target_user, key='no_email_new_follower')
-        for pref in preferences:
-            if pref.value:
-                break
-        else:
-            recipients.append(rel.target_user)
+        recipients.append(rel.target_user)
     else:
         activity.scope_object = rel.target_project
         for organizer in rel.target_project.organizers():
             if organizer.user != rel.source:
-                preferences = AccountPreferences.objects.filter(
-                    user=organizer.user, key='no_email_new_project_follower')
-                for pref in preferences:
-                    if pref.value:
-                        break
-                else:
-                    recipients.append(organizer.user)
+                recipients.append(organizer.user)
     activity.save()
     subject_template = 'relationships/emails/new_follower_subject.txt'
     body_template = 'relationships/emails/new_follower.txt'
@@ -108,7 +95,9 @@ def follow_handler(sender, **kwargs):
         'project': rel.target_project,
         'domain': Site.objects.get_current().domain
     }
-    send_notifications_i18n(recipients, subject_template, body_template, context)
+    send_notifications_i18n(recipients, subject_template, body_template,
+        context, notification_category='new-follower'
+    )
 
 post_save.connect(follow_handler, sender=Relationship,
     dispatch_uid='relationships_follow_handler')

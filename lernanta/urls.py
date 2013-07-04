@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^admin/doc/',     include('django.contrib.admindocs.urls')),
     (r'^admin/',         include(admin.site.urls)),
-    (r'',                include('drumbeat.urls')),
+    (r'',                include('abuse.urls')),
     (r'',                include('dashboard.urls')),
     (r'^robots.txt$',    include('robots.urls')),
     (r'',                include('activity.urls')),

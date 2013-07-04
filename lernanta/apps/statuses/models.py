@@ -54,17 +54,7 @@ class Status(ModelBase):
         }
         from_organizer = self.project.organizers().filter(
             user=self.author).exists()
-        profiles = []
-        for recipient in recipients:
-            profile = recipient.user
-            if self.important:
-                unsubscribed = False
-            elif from_organizer:
-                unsubscribed = recipient.no_organizers_wall_updates
-            else:
-                unsubscribed = recipient.no_participants_wall_updates
-            if self.author != profile and not unsubscribed:
-                profiles.append(profile)
+        profiles = [recipient.user for recipient in recipients if self.author != recipient.user]
 
         kwargs = {
             'page_app_label':'activity',
@@ -79,8 +69,11 @@ class Status(ModelBase):
             })
         callback_url = reverse('page_comment_callback', kwargs=kwargs)
     
-        send_notifications_i18n( profiles, subject_template, body_template, context,
-            callback_url, self.author.username )
+        send_notifications_i18n(
+            profiles, subject_template, body_template, context,
+            callback_url, self.author.username,
+            notification_category=u'course-announcement.project-{0}'.format(self.project.slug)
+        )
 
     @staticmethod
     def filter_activities(activities):

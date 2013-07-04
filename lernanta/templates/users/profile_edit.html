@@ -27,7 +27,7 @@
       <ul class="nav nav-tabs">
         <li class="info {% if general_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit %}">{{ _('Basic Information') }}</a></li>
         <li class="links {% if link_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit_links %}">{{ _('Links') }}</a></li>
-        <li class="notifications {% if settings_tab %}active{% endif %}"><a href="{% locale_url preferences_settings %}">{{ _('Notifications') }}</a></li>
+        <li class="notifications {% if notifications_tab %}active{% endif %}"><a href="{% locale_url preferences_notifications %}">{{ _('Notifications') }}</a></li>
         <li class="email {% if email_tab %}active{% endif %}"><a href="{% locale_url preferences_email %}">{{ _('Update Email') }}</a></li>
         <li class="password {% if password_tab %}active{% endif %}"><a href="{% locale_url preferences_password %}">{{ _('Update Password') }}</a></li>
         <li class="links {% if openids_tab %}active{% endif %}"><a href="{% locale_url users_profile_edit_openids %}">{{ _('OpenIDs') }}</a></li>

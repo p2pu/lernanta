@@ -137,6 +137,7 @@ INSTALLED_APPS = (
     #'south',
     'robots',
     'wellknown',
+    'lernanta.apps.abuse',
     'lernanta.apps.pagination',
     'lernanta.apps.users',
     'lernanta.apps.search',
@@ -326,3 +327,8 @@ BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',
     'KaloogaBot', 'YodaoBot', 'Baiduspider', 'googlebot',
     'Speedy Spider', 'DotBot', 'Sogou', 'YoudaoBot',
     'YandexBot', 'rogerbot']
+
+##################################################################
+# Badges integration settings
+#################################################################
+BADGES_OEMBED_URL = "http://badges.p2pu.org/services/oembed"

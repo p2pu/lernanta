@@ -13,6 +13,7 @@ import simplejson as json
 import logging
 log = logging.getLogger(__name__)
 
+
 @csrf_exempt
 @require_POST
 def response(request):
@@ -65,6 +66,7 @@ def response(request):
 
     return http.HttpResponse(status=200)
 
+
 @csrf_exempt
 @require_POST
 def notifications_create(request):
@@ -78,7 +80,8 @@ def notifications_create(request):
             text: 'Notification text.\nProbably containing multiple paragraphs',
             html: '<html><head></head><body><p>Notification text.</p></body></html>',
             callback: 'https://mentors.p2pu.org/api/reply',
-            sender: 'Bob Bader'
+            sender: 'Bob Bader',
+            category: 'badge-awarded.web-maker-badge'
         }
 
         Translation is the callers responsibility!
@@ -96,6 +99,8 @@ def notifications_create(request):
     html = notification_json.get('html')
     callback_url = notification_json.get('callback')
     sender = notification_json.get('sender')
+    # TODO don't default to badge once other app use this API!
+    notification_category = notification_json.get('category', 'badges')
 
     # find user
     user = None
@@ -105,7 +110,9 @@ def notifications_create(request):
         log.error("username {0} does not exist")
 
     if user and subject and text:
-        send_notifications([user], subject, text, html, callback_url, sender)
+        send_notifications([user], subject, text, html, callback_url, sender,
+            notification_category=notification_category
+        )
         return http.HttpResponse(status=200)
 
     raise http.Http404

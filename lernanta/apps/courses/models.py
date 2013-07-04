@@ -31,6 +31,10 @@ class DataIntegrityException(Exception):
     pass
 
 
+class BadgeNotFoundException(Exception):
+    pass
+
+
 def course_uri2id(course_uri):
     return course_uri.strip('/').split('/')[-1]
 
@@ -61,8 +65,11 @@ def get_course(course_uri):
         "description": course_db.description,
         "language": course_db.language,
         "date_created": course_db.creation_date,
-        "author_uri": course_db.creator_uri
+        "author_uri": course_db.creator_uri,
     }
+
+    if course_db.based_on:
+        course['based_on_uri'] = "/uri/course/{0}".format(course_db.based_on.id)
 
     course["status"] = 'published'
     if course_db.archived:
@@ -111,6 +118,7 @@ def get_user_courses(user_uri):
     for signup in signups:
         course = get_course(course_id2uri(signup.cohort.course.id)) 
         course_data = {
+            "id": course['id'],
             "title": course['title'],
             "user_role": signup.role,
             "url": reverse("courses_show", kwargs={"course_id": course["id"], "slug": course["slug"]}),
@@ -121,7 +129,7 @@ def get_user_courses(user_uri):
     return courses
 
 
-def create_course(title, hashtag, description, language, organizer_uri):
+def create_course(title, hashtag, description, language, organizer_uri, based_on_uri=None):
     course_db = db.Course(
         title=title,
         short_title=hashtag,
@@ -129,6 +137,10 @@ def create_course(title, hashtag, description, language, organizer_uri):
         language=language,
         creator_uri=organizer_uri
     )
+
+    if based_on_uri:
+        based_on = _get_course_db(based_on_uri)
+        course_db.based_on = based_on
 
     course_db.save()
 
@@ -145,6 +157,23 @@ def create_course(title, hashtag, description, language, organizer_uri):
 
     # TODO notify admins
     return course
+
+
+def clone_course(course_uri, organizer_uri):
+    original_course = get_course(course_uri)
+    new_course = create_course(
+        original_course['title'],
+        original_course['hashtag'],
+        original_course['description'],
+        original_course['language'],
+        organizer_uri,
+        course_uri
+    )
+    for content in original_course['content']:
+        new_content = content_model.clone_content(content['uri'])
+        add_course_content(new_course['uri'], new_content['uri'])
+
+    return new_course
 
 
 def update_course(course_uri, title=None, hashtag=None, description=None, language=None, image_uri=None):
@@ -451,7 +480,10 @@ def get_cohort(cohort_uri):
     for signup in cohort_db.signup_set.filter(leave_date__isnull=True):
         username = signup.user_uri.strip('/').split('/')[-1]
         cohort_data["users"][username] = {
-            "username": username, "uri": signup.user_uri, "role": signup.role
+            "username": username,
+            "uri": signup.user_uri,
+            "role": signup.role,
+            "signup_date": signup.signup_date
         }
         key = "{0}s".format(signup.role.lower())
         if not key in cohort_data:
@@ -521,7 +553,10 @@ def add_user_to_cohort(cohort_uri, user_uri, role, notify_organizers=False):
         }
         subject_template = 'courses/emails/course_join_subject.txt'
         body_template = 'courses/emails/course_join.txt'
-        notification_model.send_notifications_i18n(organizers, subject_template, body_template, context)
+        notification_model.send_notifications_i18n(
+            organizers, subject_template, body_template, context,
+            notification_category='course-signup.course-{0}'.format(course['id'])
+        )
     
     signup = {
         "cohort_uri": cohort_uri,
@@ -561,7 +596,8 @@ def send_course_announcement(course_uri, announcement_text):
         users,
         'courses/emails/course_announcement_subject.txt',
         'courses/emails/course_announcement.txt',
-        { 'course': course, 'announcement_text': announcement_text }
+        { 'course': course, 'announcement_text': announcement_text },
+        notification_category='course-announcement.course-{0}'.format(course['id'])
     )
 
 
@@ -595,4 +631,3 @@ def get_cohort_comments(cohort_uri, reference_uri):
         cohort_comments += [comment]
         #yield comment
     return cohort_comments
-

@@ -315,7 +315,10 @@ class Submission(ModelBase):
             'domain': Site.objects.get_current().domain,
         }
         profiles = self.badge.get_adopters()
-        send_notifications_i18n(profiles, subject_template, body_template, context)
+        send_notifications_i18n(
+            profiles, subject_template, body_template, context,
+            notification_category=u'badge-submission.badge-{0}'.format(self.badge.slug)
+        )
 
 
 class Assessment(ModelBase):

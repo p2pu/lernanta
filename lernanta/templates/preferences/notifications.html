@@ -1,0 +1,33 @@
+{% extends "users/profile_edit.html" %}
+
+{% load i18n %}
+{% load l10n_tags %}
+
+{% block bodyclasses %}edit account notifications{% endblock %}
+{% block title %}{{ _('Notification Settings') }}{% endblock %}
+{% block form %}
+<fieldset id="edit_account_notifications" class="edit account notifications tabpane">
+  <h2>{{ _('Send me an email when...') }}</h2>
+  <form class="" action="{% locale_url preferences_notifications %}" method="post">
+    {% csrf_token %}
+
+    {% for section in subscriptions %}
+      <h3>{{section.0}}</h3>
+      {% for category in section.1 %}
+        <label class="checkbox" for="id_{{category.category}}">
+          <input type="checkbox" id="id_{{category.category}}" name="{{category.category}}" {% if category.category not in unsubscribes %}checked="checked"{% endif %} />{{ category.description }}.
+        </label>
+      {% endfor %}
+    {% endfor %}
+
+    <div class="control-group">
+      <div class="controls">
+        <p class="buttons">
+          <a class="btn" href="{% locale_url dashboard %}">{{ _('Cancel') }}</a>
+          <button class="btn btn-olive" type="submit" value="{{ _('Save') }}" >{{ _('Save') }}</button>
+        </p>
+      </div>
+    </div>
+  </form>
+</fieldset>
+{% endblock %}

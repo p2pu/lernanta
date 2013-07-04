@@ -11,7 +11,7 @@ from voting.models import Vote
 from drumbeatmail.models import Message
 
 
-admin.site.unregister([Group, Nonce, Association, UserOpenID,
+admin.site.unregister([Nonce, Association, UserOpenID,
     TaskState, PeriodicTask, CrontabSchedule, IntervalSchedule, WorkerState,
     Tag, Resource, Vote, Site])
 

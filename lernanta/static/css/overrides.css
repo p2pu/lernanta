@@ -11299,6 +11299,11 @@ a.show-on-hover a:hover {
   height: 306px;
 }
 
+#project-list .thumbnail .caption {
+    height: 135px;
+    overflow: hidden;
+}
+
 /* line 2446, ../sass/overrides.scss */
 #schools-challenges .thumbnail .caption {
   height: 99px;

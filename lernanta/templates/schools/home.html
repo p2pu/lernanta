@@ -11,7 +11,7 @@
       <a id="edit-school" class="btn btn-skinny btn-apricot" href="{% locale_url schools_edit slug=school.slug %}">{{ _('Edit School') }}</a>
     {% endif %}
     {% if user.is_authenticated %}
-       <a id="create-project" class="btn btn-skinny btn-olive" href="{% locale_url projects_create %}">{{ _('Create') }}</a>
+       <a id="create-project" class="btn btn-skinny btn-olive" href="{% locale_url courses_create %}">{{ _('Create') }}</a>
     {% endif %}
     <a class="btn btn-skinny btn-cyan" href="{% locale_url learn_schools school_slug=school.slug %}">{{ _('Browse') }}</a>
 {% endblock %}

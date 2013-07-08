@@ -40,6 +40,11 @@ from users.fields import UsernameField
 from users.decorators import anonymous_only, login_required, secure_required
 from users import drupal
 
+try:
+    import Image
+except:
+    from PIL import Image
+
 
 log = logging.getLogger(__name__)
 
@@ -545,11 +550,23 @@ def profile_edit_openids_delete(request, openid_pk):
 @xframe_sameorigin
 @require_http_methods(['POST'])
 def profile_edit_image_async(request):
+    '''
+    Upload user profile image, resizes the image to 240x240px if it is larger,
+    preserves the aspect ratio.
+    '''
     profile = get_object_or_404(UserProfile, user=request.user)
     form = forms.ProfileImageForm(request.POST, request.FILES,
                                   instance=profile)
     if form.is_valid():
         instance = form.save()
+
+        if instance.image.width > 240 or instance.image.height > 240:
+            # get image path and resize to 240x240px
+            filename = instance.image.path
+            image = Image.open(filename)
+            image.thumbnail((240, 240), Image.ANTIALIAS)
+            image.save(filename)
+
         return http.HttpResponse(simplejson.dumps({
             'filename': instance.image.name,
         }))

@@ -20,5 +20,5 @@
 {% if status.important %}
 {{ _('This message was marked as important by an organizer. Participants can not turn off notifications for important updates.') }}
 {% else %}
-{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/settings/
+{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/notifications/
 {% endif %}

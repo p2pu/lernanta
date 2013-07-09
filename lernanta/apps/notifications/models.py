@@ -51,7 +51,7 @@ def send_notifications_i18n(user_profiles, subject_template, body_template,
     args = (user_profiles, subject_template, body_template, template_context,
         from_email)
 
-    log.debug(u"notifications.send_notifications_i18n: {0}".format(args))
+    #log.debug(u"notifications.send_notifications_i18n: {0}".format(args))
     TranslateAndSendNotifications.apply_async(args)
 
 
@@ -76,7 +76,7 @@ def send_notifications(user_profiles, subject, text_body, html_body=None,
     from_email = _prepare_from_address(sender, token)      
     args = (user_profiles, subject, text_body, html_body, from_email)
 
-    log.debug(u"notifications.send_notifications: {0}".format(args))
+    #log.debug(u"notifications.send_notifications: {0}".format(args))
     SendNotifications.apply_async(args)
 
 

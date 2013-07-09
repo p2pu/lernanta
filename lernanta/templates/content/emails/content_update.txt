@@ -11,4 +11,4 @@
 {{ _('Booyah,') }}
 {{ _('The P2PU Team') }}
 
-{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/settings/
+{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/notifications/

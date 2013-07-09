@@ -7,3 +7,4 @@
 
 {% blocktrans %}Regards
 The P2PU team{% endblocktrans %}
+{% trans 'Manage how often you get these delightful messages at:' %} http://{{domain}}/profile/edit/notifications/

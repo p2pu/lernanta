@@ -11,4 +11,4 @@ http://{{ domain }}{{ user.get_absolute_url }}
 {{ _('Sincerely,') }}
 {{ _('The P2PU Team') }}
 
-{{ _('Manage your subscriptions:') }} http://{{domain}}/profile/edit/settings/
+{{ _('Manage your subscriptions:') }} http://{{domain}}/profile/edit/notifications/

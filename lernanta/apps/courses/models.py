@@ -31,10 +31,6 @@ class DataIntegrityException(Exception):
     pass
 
 
-class BadgeNotFoundException(Exception):
-    pass
-
-
 def course_uri2id(course_uri):
     return course_uri.strip('/').split('/')[-1]
 
@@ -169,11 +165,17 @@ def clone_course(course_uri, organizer_uri):
         organizer_uri,
         course_uri
     )
+
+    new_about = content_model.clone_content(original_course['about_uri'])
+    about_db = db.CourseContent.objects.get(content_uri=new_course['about_uri'])
+    about_db.content_uri = new_about['uri']
+    about_db.save()
+
     for content in original_course['content']:
         new_content = content_model.clone_content(content['uri'])
         add_course_content(new_course['uri'], new_content['uri'])
 
-    return new_course
+    return get_course(new_course['uri'])
 
 
 def update_course(course_uri, title=None, hashtag=None, description=None, language=None, image_uri=None):

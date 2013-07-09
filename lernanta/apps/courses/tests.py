@@ -53,6 +53,12 @@ class CourseTests(TestCase):
                 "organizer_uri": '/uri/users/testuser',
             }
         )
+        content_model.update_content(
+            self.course['about_uri'],
+            'About',
+            'This is the about content',
+            '/uri/users/testuser'
+        )
         
     def test_course_creation(self):
         course = course_model.create_course(
@@ -135,6 +141,10 @@ class CourseTests(TestCase):
         for key in ['title', 'hashtag', 'description', 'language']:
             self.assertEqual(clone[key], self.course[key])
         self.assertIn('based_on_uri', clone)
+
+        about = content_model.get_content(self.course['about_uri'])
+        clone_about = content_model.get_content(clone['about_uri'])
+        self.assertEquals(about['content'], clone_about['content'])
 
         self.assertEqual(len(clone['content']), len(self.course['content']))
         for i in range(len(clone['content'])):

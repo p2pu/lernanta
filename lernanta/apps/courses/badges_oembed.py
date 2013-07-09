@@ -5,6 +5,10 @@ from content2 import models as content_model
 from courses import models as course_model
 
 
+class BadgeNotFoundException(Exception):
+    pass
+
+
 def request_oembedded_content(url):
     """ Retrieves oembed json from API endpoint"""
     endpoint_url = settings.BADGES_OEMBED_URL

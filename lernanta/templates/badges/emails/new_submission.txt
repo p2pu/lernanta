@@ -7,4 +7,4 @@
 
 {{ _('The P2PU team') }}
 
-{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/settings/
+{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/notifications/

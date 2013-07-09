@@ -252,7 +252,7 @@ class ProfileImageForm(forms.ModelForm):
         fields = ('image',)
 
     def clean_image(self):
-        if self.cleaned_data['image'] is False:
+        if not self.cleaned_data['image']:
             return self.cleaned_data['image']
         if self.cleaned_data['image'].size > settings.MAX_IMAGE_SIZE:
             max_size = settings.MAX_IMAGE_SIZE / 1024

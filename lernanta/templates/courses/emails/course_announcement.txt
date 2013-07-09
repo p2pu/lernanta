@@ -1,3 +1,5 @@
 {% load i18n %}
 {% load l10n_tags %}
 {{ announcement_text|safe }}
+
+{{ _('Manage how often you get these delightful messages at:') }} http://{{domain}}/profile/edit/notifications/

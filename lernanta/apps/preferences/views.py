@@ -36,8 +36,8 @@ def notifications(request):
         if '/groups/' in course['url']:
             category = u'project-{0}'.format(course['id'])
         else:
-            category = 'course-{0}'.format(course['id'])
-        sources += [{'category': category, 'description': '{0}'.format(course['title'])} ]
+            category = u'course-{0}'.format(course['id'])
+        sources += [{'category': category, 'description': u'{0}'.format(course['title'])} ]
 
     subscriptions += [(_('Notifications from'), sources)]
 

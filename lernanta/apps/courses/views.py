@@ -71,7 +71,7 @@ def _populate_course_context( request, course_id, context ):
     )
     context['organizer'] |= request.user.is_superuser
     context['can_edit'] = context['organizer'] and not course['status'] == 'archived'
-    context['trusted_user'] = request.user.has_perm('trusted_user')
+    context['trusted_user'] = request.user.has_perm('users.trusted_user')
     if course_model.user_in_cohort(user_uri, cohort['uri']):
         if not context['organizer']:
             context['show_leave_course'] = True
@@ -561,7 +561,7 @@ def course_announcement( request, course_id ):
 @login_required
 @require_organizer
 def course_export_emails( request, course_id ):
-    if not request.user.has_perm('trusted_user'):
+    if not request.user.has_perm('users.trusted_user'):
         msg = _('You do not have permission to view this page')
         return http.HttpResponseForbidden(msg)
     

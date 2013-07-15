@@ -26,6 +26,7 @@ from courses.forms import CourseTagsForm
 from courses.forms import CourseEmbeddedUrlForm
 from courses.decorators import require_organizer
 from courses.badges_oembed import add_content_from_response
+from courses.badges_oembed import BadgeNotFoundException
 
 from content2 import models as content_model
 from content2.forms import ContentForm
@@ -209,7 +210,7 @@ def course_add_badge( request, course_id ):
                 content = add_content_from_response(
                     context['course']['uri'],
                     form.cleaned_data['url'], user_uri)
-            except course_model.BadgeNotFoundException:
+            except BadgeNotFoundException:
                 form = CourseEmbeddedUrlForm()
                 messages.error(request, _('Error! We could not retrieve this Badge'))
             if content:

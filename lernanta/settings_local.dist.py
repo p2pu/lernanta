@@ -111,6 +111,8 @@ P2PU_EMBEDS= (
 
 # Site shortname to use for disqus
 DISQUS_SHORTNAME = ''
+DISQUS_SECRET_KEY = ''
+DISQUS_PUBLIC_KEY = ''
 
 # Use dummy caching for development.
 CACHE_BACKEND = 'dummy://'

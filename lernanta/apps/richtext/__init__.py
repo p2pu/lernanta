@@ -50,7 +50,7 @@ CKEDITOR_CONFIGS = {
         'prettify': {'element': 'pre', 'attributes': {'class': 'prettyprint'}},
     },
 }
-
+CKEDITOR_CONFIGS['trusted'] = CKEDITOR_CONFIGS['rich']
 # Constants for cleaning ckeditor html.
 
 REDUCED_ALLOWED_TAGS = ('a', 'b', 'em', 'i', 'strong', 'p', 'u', 'strike',
@@ -103,6 +103,8 @@ BLEACH_CLEAN = {
 
 
 def clean_html(config_name, value):
+    if config_name == 'trusted':
+        return value
     if value:
         return bleach.clean(value, **BLEACH_CLEAN[config_name])
     else:

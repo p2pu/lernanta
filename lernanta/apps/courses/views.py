@@ -9,6 +9,7 @@ from django.utils.translation import ugettext as _
 from django.utils.translation import get_language
 from django.utils import simplejson as json
 from django.views.decorators.http import require_http_methods
+from django.conf import settings
 
 from l10n.urlresolvers import reverse
 from users.decorators import login_required
@@ -39,6 +40,8 @@ from replies import models as comment_model
 from lrmi import models as lrmi_model
 from lrmi.forms import LrmiForm
 from lrmi.forms import EducationalAlignmentForm
+
+from disqus.utils import get_disqus_sso
 
 log = logging.getLogger(__name__)
 
@@ -251,6 +254,9 @@ def course_discussion( request, course_id ):
     context = { }
     context = _populate_course_context(request, course_id, context)
     context['discussion_active'] = True
+    context['disqus_public_key'] = settings.DISQUS_PUBLIC_KEY
+    if request.user.is_authenticated():
+        context['disqus_sso'] = get_disqus_sso(request.user)
 
     return render_to_response(
         'courses/course_discussion.html',
@@ -594,7 +600,10 @@ def show_content( request, course_id, content_id):
     content = content_model.get_content(content_uri)
     context['content'] = content
     context['content_active'] = True
-    #context['comments'] = course_model.get_cohort_comments(cohort['uri'], content['uri'])
+    context['disqus_public_key'] = settings.DISQUS_PUBLIC_KEY
+    if request.user.is_authenticated():
+        context['disqus_sso'] = get_disqus_sso(request.user)
+
     context['form'] = ContentForm(content)
     return render_to_response(
         'courses/content.html', 

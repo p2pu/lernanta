@@ -25,6 +25,7 @@ def get_disqus_sso(user):
         'id': user.username,
         'username': user.username,
         'email': user.email,
+        'avatar': user.get_profile().image_or_default(),
         'url': user_url
     })
     # encode the data to base64

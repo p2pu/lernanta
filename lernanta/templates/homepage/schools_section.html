@@ -1,0 +1,102 @@
+{% load i18n %}
+<section>
+    <span id="schools" class="top-offset-span">&nbsp;</span>
+
+    <div class="container">
+        <div class="section-title-wrap">
+            <h1 class="section-title">{% trans 'Schools' %}</h1>
+            <a href="#top-page" class="pull-right back-to-top-link">{% trans 'To the top' %} <i class="icon-arrow-up"> </i></a>
+        </div>
+        <div class="billboard">
+            <div class="featured-items-wrap schools">
+                <ul class="featured-items-list pull-right">
+                    <li class="featured-items-item span8">
+                        <div class="featured-items-item-wrap">
+                            <img class="featured-items-img"
+                                 src="https://p2pu.org/media/images/schools/1/8450ec21dc912ed68b96d4839e3cd362_1.png">
+
+                            <div class="featured-items-item-caption">
+                                <h4>{% trans 'School of Open' %}</h4>
+
+                                <p>
+                                    {% blocktrans %}The School of Open offers courses on the meaning, application,
+                                    and impact of “openness” in the digital age and its benefit to
+                                    creative endeavors, education, research, and beyond.
+                                    It is coordinated by P2PU and Creative Commons.{% endblocktrans %}
+                                </p>
+                            </div>
+                            <div class="featured-items-item-controls">
+                                <a href="https://p2pu.org/en/schools/school-of-open/"
+                                   class="p2pu-btn-clemintine">
+                                    {% trans 'Go to school' %}</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="featured-items-item span4">
+                        <div class="featured-items-item-wrap">
+                            <img class="featured-items-img"
+                                 src="https://p2pu.org/media/images/schools/1/1158ea7f5709376a7cb4a6bae056f49b_1.png">
+
+                            <div class="featured-items-item-caption">
+                                <h4>{% trans 'School of Ed' %}</h4>
+
+                                <p>
+                                    {% blocktrans %}The P2PU School of Ed brings the model of open, community-based peer learning to professional
+                                    learning for K-12 teachers. It's about hands-on learning driven by each educator's
+                                    particular needs and classroom situations.{% endblocktrans %}
+                                </p>
+                            </div>
+                            <div class="featured-items-item-controls">
+                                <a href="https://p2pu.org/en/schools/school-of-ed-pilot/"
+                                   class="p2pu-btn-clemintine">{% trans 'Go to school' %}</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="featured-items-item span4">
+                        <div class="featured-items-item-wrap">
+                            <img class="featured-items-img"
+                                 src="https://p2pu.org/media/images/schools/1/d95659e3e004c1ae60baf02b00b5cd9c.png">
+
+                            <div class="featured-items-item-caption">
+                                <h4>{% trans 'School of Webcraft' %}</h4>
+
+                                <p>
+                                    {% blocktrans %}School of Webcraft is a collaboration between P2PU and Mozilla.
+                                    Take the Webmaking 101 challenge to learn basic HTML and build your
+                                    first webpage from scratch. You can earn badges, that highlight your
+                                    technical and community skills to your friends, colleagues and potential employers.{% endblocktrans %}
+                                </p>
+                            </div>
+                            <div class="featured-items-item-controls">
+                                <a href="https://p2pu.org/en/schools/school-of-webcraft/"
+                                   class="p2pu-btn-clemintine">Go to school</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="featured-items-item span8">
+                        <div class="featured-items-item-wrap">
+                            <img class="featured-items-img"
+                                 src="data:image/png;base64,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">
+
+                            <div class="featured-items-item-caption">
+                                <h4>{% trans 'School of Data' %}</h4>
+
+                                <p>
+                                    {% blocktrans %}School of Data works to empower civil society organizations,
+                                    journalists and citizens with the skills they need to use data
+                                    effectively in their efforts to create more equitable and
+                                    effective societies. It's a collaboration between P2PU and the
+                                    Open Knowledge Foundation.{% endblocktrans %}
+                                </p>
+                            </div>
+                            <div class="featured-items-item-controls">
+                                <a href="https://p2pu.org/en/schools/school-of-the-mathematical-future/"
+                                   class="p2pu-btn-clemintine">{% trans 'Go to school' %}</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

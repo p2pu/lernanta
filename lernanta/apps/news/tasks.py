@@ -25,6 +25,7 @@ def parse_entry(entry):
     if not title:
         log.debug("Feed entry has no title element.")
         return None
+    description = getattr(entry, 'description', None)
     content = getattr(entry, 'content', None)
     # some feed entries have a summary but no content
     if not content:
@@ -44,6 +45,7 @@ def parse_entry(entry):
         content = content[0]
     return {
         'title': title,
+        'description': description,
         'content': content,
         'link': link,
         'updated': updated,
@@ -79,8 +81,8 @@ def parse_feed(feed_url, page):
         if not body:
             log.warn("Parsing feed failed - no body found")
             continue
-        cleaned_body = smart_str(bleach.clean(body, tags=(), strip=True,
-            strip_comments=True))
+        cleaned_body = smart_str(bleach.clean(body, tags=('img',), attributes={'img': ['src', 'alt'], },
+                                              strip=True, strip_comments=True))
         try:
             checksum = hashlib.md5(cleaned_body).hexdigest()
             exists = FeedEntry.objects.filter(checksum=checksum)

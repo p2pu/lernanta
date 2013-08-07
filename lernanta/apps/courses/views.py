@@ -715,10 +715,11 @@ def remove_content( request, course_id, content_id ):
 @login_required
 @require_organizer
 def move_content_up( request, course_id, content_id ):
-    result = course_model.reorder_course_content(
-        "/uri/content/{0}".format(content_id), "UP"
-    )
-    if not result:
+    try:
+        course_model.reorder_course_content(
+            "/uri/content/{0}".format(content_id), "UP"
+        )
+    except:
         messages.error(request, _("Could not move content up!"))
     redirect_url = reverse('courses_admin_content', kwargs={'course_id': course_id})
     return http.HttpResponseRedirect(redirect_url)
@@ -727,10 +728,11 @@ def move_content_up( request, course_id, content_id ):
 @login_required
 @require_organizer
 def move_content_down( request, course_id, content_id ):
-    result = course_model.reorder_course_content(
-        "/uri/content/{0}".format(content_id), "DOWN"
-    )
-    if not result:
+    try:
+        course_model.reorder_course_content(
+            "/uri/content/{0}".format(content_id), "DOWN"
+        )
+    except:
         messages.error(request, _("Could not move content down!"))
     redirect_url = reverse('courses_admin_content', kwargs={'course_id': course_id})
     return http.HttpResponseRedirect(redirect_url)

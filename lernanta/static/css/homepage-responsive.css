@@ -1,0 +1,55 @@
+/* IPhone size */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 3, ../sass/homepage-responsive.scss */
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 7, ../sass/homepage-responsive.scss */
+  nav, section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* line 12, ../sass/homepage-responsive.scss */
+  .jumbotron .masthead {
+    bottom: 0;
+  }
+  /* line 15, ../sass/homepage-responsive.scss */
+  .jumbotron .main-feature {
+    font-size: 1.2em;
+    line-height: 35px;
+    margin-bottom: 60px;
+  }
+
+  /* line 22, ../sass/homepage-responsive.scss */
+  .actions li {
+    width: auto;
+  }
+  /* line 25, ../sass/homepage-responsive.scss */
+  .actions li a .actions-icons {
+    height: 56px;
+    width: 55px;
+    background-size: cover;
+  }
+
+  /* line 34, ../sass/homepage-responsive.scss */
+  .billboard .top {
+    margin-top: -50px;
+  }
+  /* line 37, ../sass/homepage-responsive.scss */
+  .billboard .blog-list {
+    margin-left: 0;
+  }
+  /* line 42, ../sass/homepage-responsive.scss */
+  .billboard .schools .featured-items-item-wrap img {
+    float: initial;
+    margin-left: 0;
+  }
+
+  /* line 50, ../sass/homepage-responsive.scss */
+  .top-offset-span {
+    margin-top: 0;
+  }
+}

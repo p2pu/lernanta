@@ -25,7 +25,7 @@ from learn.models import get_courses_by_list
 
 def splash(request):
     """Splash page we show to users who are not authenticated."""
-    courses = get_courses_by_list("showcase")
+    courses = get_courses_by_list("community")
     featured_count = min(4,len(courses))
     courses = random.sample(courses, featured_count)
     activities = Activity.objects.public()

@@ -1,0 +1,55 @@
+{% load i18n %}
+{% load l10n_tags %}
+{% load learn_tags %}
+<section>
+    <span id="courses" class="top-offset-span">&nbsp;</span>
+
+    <div class="container">
+        <div class="section-title-wrap">
+            <h1 class="section-title">{% trans 'Courses' %}</h1>
+            <a href="#top-page" class="pull-right back-to-top-link">{% trans 'To the top' %}<i class="icon-arrow-up"> </i></a>
+        </div>
+        <div class="billboard">
+
+            <div class="featured-items-wrap courses">
+                <div class="section-caption span3">
+                    <h4>{% trans 'Check out our great courses' %}</h4>
+
+                    <p>
+                        {% blocktrans %}P2PU courses are different. They bring together learners who work as peers.
+                        Who take ownership of their own learning. And who help others learn.
+                        Our community has run hundreds of courses. Find something you want to learn.
+                        Or create a new course{% endblocktrans %}
+                    </p>
+
+                    <div class="controls">
+                        <a class="p2pu-btn-apricot" href="{% learn_default %}">{% trans 'Find a course' %}<i
+                                class="icon-chevron-sign-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <ul class="featured-items-list pull-right">
+                    {% for course in courses %}
+                        <li class="featured-items-item span3">
+                            <div class="featured-items-item-wrap">
+                                <img class="featured-items-img"
+                                     src="{{ course.thumbnail_url }}">
+
+                                <div class="featured-items-item-caption">
+                                    <h4>{{ course.title }}</h4>
+
+                                    <p>{{ course.description }}</p>
+                                </div>
+                                <div class="featured-items-item-controls">
+                                    <a href="{{ course.url }}"
+                                       class="p2pu-btn-cyan p2pu-btn-mini">{% trans 'Learn' %}</a>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>

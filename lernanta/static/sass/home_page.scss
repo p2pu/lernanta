@@ -1,0 +1,637 @@
+// Bootstrap
+@import "p2pu-css-framework/lib/bootstrap";
+// Bootstrap Responsive
+@import "p2pu-css-framework/lib/responsive";
+// Mixins already created for P2PU
+@import "p2pu-css-framework/p2pu/p2pu-mixins";
+
+
+@mixin p2pu-btn($startColor, $endColor, $border) {
+  color: $slate;
+  @include gradient-vertical($startColor: $startColor, $endColor: $endColor);
+  border-color: $startColor $endColor $border;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  cursor: pointer !important;
+  font-size: 20px;
+  padding: 7px 20px;
+  margin-top: 1px;
+  @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.35));
+  @include border-radius(5px);
+  border-radius: 5px;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+    @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+  }
+}
+body{
+  font-family: $altFontFamily;
+  background-image: url('/static/images/bgtexture.png');
+}
+h1, h2,h3, h4, h5{
+  font-family: 'Arvo', serif;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+.top-offset-span{
+  margin-top: -67px;
+  display: block;
+}
+.p2pu-btn {
+  @include p2pu-btn($startColor: $snow, $endColor: $snow, $border: $silver);
+  &:hover {
+    color: $slate;
+  }
+}
+
+.p2pu-btn-mini{
+  padding: 5px 15px !important;
+  font-size: 1em !important;
+}
+
+.p2pu-btn-large{
+  padding: 10px 25px !important;
+  font-size: 25px !important;
+}
+.p2pu-btn-cyan {
+  @include p2pu-btn($startColor: $cyan, $endColor: $cyan, $border: $cyan);
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
+
+.p2pu-btn-apricot {
+  @include p2pu-btn($startColor: $apricot, $endColor: $apricot, $border: $apricot);
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
+.p2pu-btn-clemintine {
+  @include p2pu-btn($startColor: $clemintine, $endColor: $clemintine, $border: $clemintine);
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
+.p2pu-btn-olive {
+  @include p2pu-btn($startColor: $olive, $endColor: $olive, $border: $olive);
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
+.p2pu-btn-silver {
+  @include p2pu-btn($startColor: $silver, $endColor: $silver, $border: $silver);
+  color: $slate;
+  &:hover {
+    color: $slate;
+  }
+}
+.text-appricot {
+  color: $apricot;
+}
+
+.text-cyan {
+  color: $cyan;
+}
+
+/*******P2PU Panel*******/
+.p2pu-panel-wrap {
+  background-color: $white;
+  display: none;
+  .panel-contents {
+    @extend .container;
+    .us{
+      float: left;
+      margin-top: 20px;
+    }
+    .connect{
+      @include makeColumn($columns: 4);
+      float: right;
+      li{
+        line-height: 16px;
+      }
+      hr{
+        margin: 10px 0;
+      }
+      a{
+        font-size: 1.2em;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    .supporters{
+      margin-right: 20px;
+      @include makeColumn($columns: 6);
+      float: right;
+      h4{
+        text-align: center;
+      }
+      a{
+        display: block;
+        text-align: center;
+        &.view-all{
+          margin: 20px 0;
+        }
+      }
+
+    }
+  }
+}
+
+.p2pu-color-divider-wrap {
+  border-bottom: solid 6px $apricot;
+}
+
+.p2pu-color-divider-wrap::before, .p2pu-color-divider-wrap::after {
+  content: "";
+  height: 6px;
+  width: 25%;
+  position: absolute;
+  left: 25%;
+  background: $olive;
+}
+
+.p2pu-color-divider::before, .p2pu-color-divider::after {
+  content: "";
+  height: 6px;
+  width: 25%;
+  position: absolute;
+  left: 50%;
+  background: $cyan;
+}
+
+.p2pu-color-divider::after {
+  left: 75%;
+  background: $clemintine;
+}
+
+/********* Navigation bar ****************/
+.p2pu-navbar {
+  height: 58px;
+  background: $white;
+  background-color: $white;
+  border: none;
+  border-bottom: 2px solid $snow;
+  .brand {
+    display: block;
+    width: 80px;
+    height: 24px;
+    background: url('/static/images/homepage/logo-p2pu-menu.png') no-repeat;
+    padding: 0;
+    margin: 17px 0;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  .top-menu{
+    margin: 9px 10px 0 20px;
+    font-family: 'Arvo', sans-serif;
+    li{
+      a{
+        text-shadow: none !important;
+        font-size: 1.1em;
+
+        &:hover, &:focus{
+          color: #777;
+          background-color: transparent;
+        }
+
+        &.p2pu-tab{
+          font-size: 1.6em;
+          border-left: 1px solid $silver;
+        }
+      }
+    }
+  }
+}
+
+/**************Jumbotron**************/
+.jumbotron {
+  padding-top: 65px;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+  background-image: url('/static/images/homepage/jumbotron/photo-learn_one.jpg');
+  background-size: cover;
+  background-position: 50% 40%;
+  text-align: center;
+  height: 334px;
+  margin-bottom: -60px;
+  font-size: 21px;
+  line-height: 1.3em;
+  text-shadow: 0 0 12px rgba(0,0,0,0.5),0 0 32px rgba(0,0,0,0.25),0 1px rgba(0,0,0,0.75);
+  position: relative;
+  .masthead{
+    position: relative;
+    bottom: -80px;
+  }
+  .main-feature{
+    color: $white;
+  }
+  .lead {
+    color: $white;
+    font-size: 21px;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-left: 15px;
+    font-family: $baseFontFamily;
+    margin-bottom: 0;
+  }
+
+  .do-something{
+    height: 60px;
+    text-align: left;
+  }
+}
+.p2pu-tour {
+  padding: 17px 25px 17px 0;
+  font-weight: bold;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.call-to-action{
+  margin: 0 20px;
+  font-weight: bold;
+  color: $white;
+}
+/*******Main Menu *******/
+.actions {
+  @extend .clearfix;
+  margin: 0 0 10px 0;
+  background-color: $white;
+  position: relative;
+  @include border-radius(15px);
+  li {
+    @include makeColumn($columns: 4);
+    margin-left: 5%;
+    margin-top: 30px;
+    a {
+      display: block;
+      &:hover {
+        text-decoration: none;
+        .actions-icons{
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+          -moz-transform: scale(1.05);
+        }
+        h2 {
+          color: $apricot;
+        }
+      }
+      &[href="#courses"]{
+        .actions-icons{
+          background: url('/static/images/homepage/icons_sprite.png') 0px 5px no-repeat;
+          background-size: cover;
+        }
+      }
+      &[href="#badges"]{
+        .actions-icons{
+          background: url('/static/images/homepage/icons_sprite.png') -100px 5px no-repeat;
+          //background-size: cover
+        }
+      }
+      &[href="#schools"]{
+        .actions-icons{
+          background: url('/static/images/homepage/icons_sprite.png') -200px 5px no-repeat;
+          //background-size: cover
+        }
+      }
+      &[href="#moocs"]{
+        .actions-icons{
+          background: url('/static/images/homepage/icons_sprite.png') -300px 5px no-repeat;
+          //background-size: cover
+        }
+      }
+      &[href="#blog"]{
+        .actions-icons{
+          background: url('/static/images/homepage/icons_sprite.png') -400px 5px no-repeat;
+          //background-size: cover
+        }
+      }
+      &[href="#community"]{
+        .actions-icons{
+          background: url('/static/images/homepage/icons_sprite.png') -500px 5px no-repeat;
+          //background-size: cover
+        }
+      }
+      .actions-icons{
+        float: left;
+        margin-right: 20px;
+        height: 90px;
+        width: 90px;
+      }
+    }
+
+    p {
+      overflow: hidden;
+    }
+
+  }
+}
+section{
+  border-top: 1px solid #d8dbde;
+  box-shadow: inset 0 5px 5px -3px rgba(0,0,0,0.1);
+  background: $cloud;
+  background: url('/static/images/homepage/bgtexture.png'),-moz-linear-gradient(top, $cloud 0%, $white 100%);
+  background: url('/static/images/homepage/bgtexture.png'),-webkit-gradient(linear, left top, left bottom, color-stop(0%,$cloud), color-stop(100%,$white));
+  background: url('/static/images/homepage/bgtexture.png'),-webkit-linear-gradient(top, $cloud 0%,$white 100%);
+  background: url('/static/images/homepage/bgtexture.png'),-o-linear-gradient(top, $cloud 0%,$white 100%);
+  background: url('/static/images/homepage/bgtexture.png'),-ms-linear-gradient(top, $cloud 0%,$white 100%);
+  background: url('/static/images/homepage/bgtexture.png'),linear-gradient(to bottom, $cloud 0%,$white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$cloud', endColorstr='$white',GradientType=0 );
+}
+.section-title-wrap{
+  @extend .clearfix;
+  .section-title{
+    float: left;
+    margin-top: 30px;
+  }
+  a{
+    line-height: 44px;
+    margin-top: 5px;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.billboard {
+  padding: 20px 0;
+  margin-bottom: 40px;
+  zoom: 1;
+  @extend .clearfix;
+  &.top{
+    margin-top: 0;
+  }
+  .img-large {
+    @extend .img-polaroid;
+    float: left;
+    margin-right: 20px;
+    width: 165px;
+    margin-top: 20px;
+  }
+  .controls {
+    a {
+
+      @extend .pull-right;
+      margin: 20px 10px;
+      i {
+        margin-left: 20px;
+      }
+    }
+  }
+  .featured-items-wrap{
+    .featured-items-list{
+      @extend .thumbnails;
+    }
+    .featured-items-item{
+      position: relative;
+      margin-left: 30px;
+    }
+    .featured-items-item-wrap{
+      @extend .thumbnail;
+      background-color: $snow;
+      min-height: 290px;
+      padding: 10px 10px 40px 10px;
+    }
+    .featured-items-img{
+      width: 200px;
+      height: 150px;
+    }
+    .featured-items-item-controls{
+      position: absolute;
+      bottom: 15px;
+    }
+  }
+  .courses{
+    .section-caption{
+      margin-left: 0;
+      a{
+        float: left;
+        margin: 20px 10px 20px 0;
+      }
+    }
+  }
+  .badges{
+    .section-caption{
+      margin-left: 0;
+      a{
+        float: left;
+        margin: 20px 10px 20px 0;
+      }
+    }
+    .featured-items-img{
+      width: auto;
+      height: auto;
+    }
+  }
+  .schools{
+    .featured-items-item-wrap > img,
+    .featured-items-img{
+      width: auto;
+      height: auto;
+      float: left;
+      margin-right: 15px;
+      margin-top: 10px;
+    }
+    .featured-items-item-caption{
+      overflow: hidden;
+    }
+    .featured-items-item-controls{
+      right: 15px;
+    }
+    .featured-items-item-wrap{
+      min-height: 200px;
+    }
+  }
+  .community-members-list{
+    .community-member{
+      width: 80px;
+      height: 80px;
+      margin-right: -5px;
+    }
+  }
+  .community-member-tooltip{
+      display: none;
+    }
+  .we-are{
+    list-style-type: none;
+    margin-left: 0;
+    @extend .clearfix;
+    li{
+      margin: 10px;
+      position: relative;
+      text-align: center;
+      background: #fff;
+      padding: 10px;
+      width: 68px;
+      height: 80px;
+      border: 1px solid #aaa;
+      float: left;
+      cursor: pointer;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      &:first-child{
+        margin-left: 0;
+      }
+      img{
+        width: 68px;
+        height: 68px;
+      }
+      .caption{
+        text-align: left;
+      }
+    }
+  }
+  .blog-list{
+    margin-left: -30px;
+    li{
+      height: 200px;
+      .blog-feed-wrap{
+        height: 140px;
+      }
+      img{
+        @extend .img-polaroid;
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin-right: 20px;
+      }
+      h4{
+        color: $cyan;
+      }
+      a{
+        font-weight: bold;
+        width: 80%;
+        display: block;
+        position: relative;
+        &:hover{
+          text-decoration: none;
+          h3{
+            color: $apricot;
+          }
+
+        }
+      }
+      .icon-chevron-right{
+        position: absolute;
+        right: -19%;
+        top: 20%;
+      }
+      .caption{
+        height: 120px;
+      }
+    }
+  }
+  .moocs{
+    .section-caption{
+      margin-left: 0;
+      a{
+        float: left;
+        margin: 20px 10px 20px 0;
+      }
+    }
+  }
+  .description{
+    overflow: hidden;
+  }
+}
+.timeline{
+  .text-align-center{
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+}
+.timeline-events {
+  margin: 0 auto;
+  padding: 0;
+  width: 7px;
+  height: 760px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #848689 url(/static/images/timeline-bg.jpg) no-repeat bottom center;
+  position: relative;
+  margin-top: 50px;
+}
+
+.timeline-events li {
+  background: $white;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 5px solid #848689;
+  list-style: none;
+  margin-bottom: 107px;
+  margin-left: -12px;
+  position: relative;
+  .popover{
+    opacity: 1;
+    background: #e8ebef;
+    color: #848689;
+    padding: 15px 0 15px 0;
+    font-size: 18px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    display: block;
+    top: -20px;
+    .arrow{
+      top:20%;
+    }
+    &.top{
+      top: -150px;
+      left: -113px;
+      .arrow{
+        top:auto;
+      }
+    }
+    &.left{
+      left: -250px;
+    }
+    &.right{
+      left: 30px;
+    }
+  }
+}
+
+.power-users{
+  .thumbnail{
+    background-color: $white;
+    padding-left: 20px;
+  }
+  .power-user-img{
+    margin-right: 30px;
+    width: 120px;
+    height: 120px;
+    margin-top: 30px;
+  }
+  .caption{
+    overflow: hidden;
+  }
+  .user-courses{
+    li{
+      float: left;
+      margin-right: 30px;
+      img{
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

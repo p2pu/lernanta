@@ -1,0 +1,59 @@
+{% load i18n %}
+
+<section>
+    <span id="moocs" class="top-offset-span">&nbsp;</span>
+
+
+    <div class="container">
+        <div class="section-title-wrap">
+            <h1 class="section-title">MOOCs</h1>
+            <a href="#top-page" class="pull-right back-to-top-link">{% trans "To the top" %} <i class="icon-arrow-up"> </i></a>
+        </div>
+        <div class="billboard">
+            <div class="moocs">
+                <div class="section-caption span3">
+
+
+                    <p>
+                        {% blocktrans %}We have run MOOCs on Learning Python, Creative Learning (with the MIT Media Lab)
+                        and Data skills. Our MOOCs are big learning communities that run on the web. Lots of
+                        people sign up, and we facilitate collaboration and team work.{% endblocktrans %}
+                    </p>
+
+                    <div class="controls">
+                        <a class="p2pu-btn-silver" href="http://mechanicalmooc.org/">{% trans 'Find out more' %} <i
+                                class="icon-chevron-sign-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="featured-items-wrap schools">
+                    <ul class="featured-items-list pull-right">
+                    <li class="featured-items-item span8">
+                        <div class="featured-items-item-wrap">
+                            <div class="featured-items-item-caption">
+                                <h4>{% trans 'A Gentle Introduction to Python' %}</h4>
+                                <img
+                                 src="{{ STATIC_URL }}images/mechanicalmooc-banner.jpg">
+                                <h4>{% trans 'Free & Open.' %}</h4>
+                                <p>
+                                    {% blocktrans %}A Gentle Introduction to Python is 100% free, just like all OpenCourseWare.
+                                    Anyone can join, and you're welcome to share your work.{% endblocktrans %}
+                                </p>
+                                <h4>{% trans 'Learning Powerhouse.' %}</h4>
+                                    {% blocktrans %}Pick up Python from leading innovators in online learning. MIT's chops.
+                                    Codecademy's exercises. OpenStudy's study groups. P2PU's community.
+                                    Need we say more?{% endblocktrans %}
+                                </p>
+                                <p>
+                                <h4>{% trans 'Weekly Lessons.' %}</h4>
+                                    {% blocktrans %}Make friends with some smarties, and start programming from Week 1.{% endblocktrans %}
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -19,15 +19,15 @@ simplejson==2.6.0
 django-tastypie==0.9.11
 requests==0.13.5
 
--e git://github.com/jbalogh/django-cache-machine.git@fd9c7efbd14dfb78f278d7b270cfe7a9da1b79b7#egg=python_xrd-dev
--e git://github.com/jsocol/commonware.git@b5544185b2d24adc1eb512735990752400ce9cbd#egg=commonware
--e git://github.com/paulosman/python-xrd@9a62985ec31e90afcae89c2ce0450eec9f5fca07#egg=xrd
--e git://github.com/paulosman/django-wellknown.git@3cc3cfc1217aed065d17875dd832cd41110cd4ba#egg=wellknown
--e git://github.com/paulosman/django-push.git#egg=django_push
--e git://github.com/mozilla/django-recaptcha.git@b3ce0daadfff7735d2a0865b8419711748c9190a#egg=django-recaptcha
--e git://github.com/paulosman/django-openid-auth.git@ae650cca027e69488070073d9b911ec82ae86be2#egg=django_openid_auth
--e git://github.com/shaunsephton/django-ckeditor.git@39a4059483c057a00455baa895f2a263baac2161#egg=django_ckeditor
--e git://github.com/jdunck/python-unicodecsv.git@c5d8ae68758dd48d8a776214080caa88bc036644#egg=unicodecsv
--e git://github.com/zuzelvp/django-obi.git@2680327dca0eecd5790653a50eed12e4c9c8c7f9#egg=django_obi
--e git://github.com/embedly/embedly-python.git@b8325fc49396e3b0d10f65847c6cc9fb23bd9482#egg=Embedly-dev
--e git://github.com/hiidef/oauth2app.git@f8205e2146477224a666c03bf115ddf3ff7610ff#egg=oauth2app
+-e git+https://github.com/jbalogh/django-cache-machine.git@fd9c7efbd14dfb78f278d7b270cfe7a9da1b79b7#egg=python_xrd-dev
+-e git+https://github.com/jsocol/commonware.git@b5544185b2d24adc1eb512735990752400ce9cbd#egg=commonware
+-e git+https://github.com/paulosman/python-xrd@9a62985ec31e90afcae89c2ce0450eec9f5fca07#egg=xrd
+-e git+https://github.com/paulosman/django-wellknown.git@3cc3cfc1217aed065d17875dd832cd41110cd4ba#egg=wellknown
+-e git+https://github.com/paulosman/django-push.git#egg=django_push
+-e git+https://github.com/mozilla/django-recaptcha.git@b3ce0daadfff7735d2a0865b8419711748c9190a#egg=django-recaptcha
+-e git+https://github.com/paulosman/django-openid-auth.git@ae650cca027e69488070073d9b911ec82ae86be2#egg=django_openid_auth
+-e git+https://github.com/shaunsephton/django-ckeditor.git@39a4059483c057a00455baa895f2a263baac2161#egg=django_ckeditor
+-e git+https://github.com/jdunck/python-unicodecsv.git@c5d8ae68758dd48d8a776214080caa88bc036644#egg=unicodecsv
+-e git+https://github.com/zuzelvp/django-obi.git@2680327dca0eecd5790653a50eed12e4c9c8c7f9#egg=django_obi
+-e git+https://github.com/embedly/embedly-python.git@b8325fc49396e3b0d10f65847c6cc9fb23bd9482#egg=Embedly-dev
+-e git+https://github.com/hiidef/oauth2app.git@f8205e2146477224a666c03bf115ddf3ff7610ff#egg=oauth2app

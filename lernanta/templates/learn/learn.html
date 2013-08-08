@@ -11,11 +11,11 @@
 {% block breadcrumbs %}
   {% if learn_school %}
     <li><span class="divider">&rsaquo;</span><a href="{{ learn_school.get_absolute_url }}">{{ learn_school.name }}</a></li>
+    <li>
+	  <span class="divider">&rsaquo;</span>
+	  <a href="{% locale_url learn_schools school_slug=learn_school.slug %}">{{ _('Learn') }}</a>
+    </li>
   {% endif %}
-  <li>
-	<span class="divider">&rsaquo;</span>
-	<a href="{% if learn_school %}{% locale_url learn_schools school_slug=learn_school.slug %}{% else %}{% learn_default %}{% endif %}">{{ _('Learn') }}</a>
-  </li>
 {% endblock %}
 
 {% block body %}

@@ -11,6 +11,6 @@ django-extensions==1.0.1
 Werkzeug==0.8.3
 mock==1.0.1
 
--e git://github.com/jbalogh/django-nose#egg=django-nose
--e git://github.com/jbalogh/test-utils#egg=test-utils
--e git://github.com/django-debug-toolbar/django-debug-toolbar.git#egg=django-debug-toolbar
+-e git+https://github.com/jbalogh/django-nose#egg=django-nose
+-e git+https://github.com/jbalogh/test-utils#egg=test-utils
+-e git+https://github.com/django-debug-toolbar/django-debug-toolbar.git#egg=django-debug-toolbar

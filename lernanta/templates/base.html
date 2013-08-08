@@ -55,7 +55,7 @@
       </a>
 
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="{% if user.is_authenticated %}{{ user.get_profile.get_absolute_url }}{% else %}{% locale_url splash %}{% endif %}">
+      <a class="brand" href="{% locale_url home %}">
         <img src="/static/images/logo.png" />
       </a>
       <!-- Everything you want hidden at 940px or less, place within here -->
@@ -152,7 +152,7 @@
   <div class="row-fluid">
 	<div class="span12">
       <ul class="breadcrumb"> 
-        <li><a href="{% locale_url splash %}">{{ _('Home') }}</a></li>
+        <li><a href="{% learn_default %}">{{ _('Home') }}</a></li>
         {% block breadcrumbs %}{% endblock %}
         <span id="breadcrumbs-actions" class="pull-right">
           {% block breadcrumbs_actions %}{% endblock %}

@@ -2,6 +2,7 @@ import simplejson as json
 import datetime
 
 from django.utils.translation import ugettext as _
+from django.contrib.sites.models import Site
 
 from l10n.urlresolvers import reverse
 
@@ -551,7 +552,8 @@ def add_user_to_cohort(cohort_uri, user_uri, role, notify_organizers=False):
         organizers = UserProfile.objects.filter(username__in=cohort['organizers'])
         context = {
             'course': course,
-            'new_user': username
+            'new_user': username,
+            'domain': Site.objects.get_current().domain,
         }
         subject_template = 'courses/emails/course_join_subject.txt'
         body_template = 'courses/emails/course_join.txt'
@@ -598,7 +600,11 @@ def send_course_announcement(course_uri, announcement_text):
         users,
         'courses/emails/course_announcement_subject.txt',
         'courses/emails/course_announcement.txt',
-        { 'course': course, 'announcement_text': announcement_text },
+        { 
+            'course': course,
+            'announcement_text': announcement_text,
+            'domain': Site.objects.get_current().domain
+        },
         notification_category='course-announcement.course-{0}'.format(course['id'])
     )
 

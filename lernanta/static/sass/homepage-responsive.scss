@@ -1,0 +1,53 @@
+/* IPhone size */
+@media screen and (min-width:320px) and (max-width:480px){
+  body{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  nav, section{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .jumbotron{
+    .masthead{
+      bottom: 0;
+    }
+    .main-feature{
+      font-size: 1.2em;
+      line-height: 35px;
+      margin-bottom: 60px;
+    }
+  }
+  .actions{
+    li{
+      width: auto;
+      a{
+        .actions-icons{
+          height: 56px;
+          width: 55px;
+          background-size: cover;
+        }
+      }
+    }
+  }
+  .billboard{
+    .top{
+      margin-top: -50px;
+    }
+    .blog-list{
+      margin-left: 0;
+    }
+    .schools{
+      .featured-items-item-wrap{
+        img{
+          float: initial;
+          margin-left: 0;
+        }
+
+      }
+    }
+  }
+  .top-offset-span{
+    margin-top: 0;
+  }
+}

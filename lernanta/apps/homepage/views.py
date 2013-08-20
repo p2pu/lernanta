@@ -12,7 +12,7 @@ from processors import get_featured_badges
 
 def _pick_n(sequence, n):
     if sequence:
-        sequence = random.sample(sequence, min(n,len(sequence)))
+        sequence = random.sample(sequence, min(n, len(sequence)))
     return sequence
 
 

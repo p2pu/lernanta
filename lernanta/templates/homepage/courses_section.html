@@ -7,7 +7,7 @@
     <div class="container">
         <div class="section-title-wrap">
             <h1 class="section-title">{% trans 'Courses' %}</h1>
-            <a href="#top-page" class="pull-right back-to-top-link">{% trans 'To the top' %}<i class="icon-arrow-up"> </i></a>
+            <a href="#top-page" class="pull-right back-to-top-link"><i class="icon-angle-up"> </i></a>
         </div>
         <div class="billboard">
 
@@ -32,13 +32,16 @@
                     {% for course in courses %}
                         <li class="featured-items-item span3">
                             <div class="featured-items-item-wrap">
-                                <img class="featured-items-img"
-                                     src="{{ course.thumbnail_url }}">
-
+                                <div class="featured-items-img-wrap">
+                                    <img class="featured-items-img"
+                                         src="{{ course.thumbnail_url }}">
+                                </div>
                                 <div class="featured-items-item-caption">
-                                    <h4>{{ course.title }}</h4>
+                                    <h4 class="featured-items-item-caption-title">{{ course.title }}</h4>
 
-                                    <p>{{ course.description }}</p>
+                                    <p class="featured-items-item-caption-text">
+                                        {{ course.description|truncatewords:25 }}
+                                    </p>
                                 </div>
                                 <div class="featured-items-item-controls">
                                     <a href="{{ course.url }}"

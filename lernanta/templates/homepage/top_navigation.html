@@ -76,13 +76,29 @@
                     </ul>
                     <ul class="nav top-menu pull-right">
                         <li>
-                          {% if user.is_authenticated %}
-                            <a class="sign-in pull-right" href="{% locale_url users_logout %}" >{% trans 'Logout' %}</a>
-                          {% else %}
+                            {% if user.is_authenticated %}
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                      {% if user.get_profile %}
+                                                <img id="user-picture" src="{{user.get_profile.image_or_default }}" height="30px" width="30px" alt="" />
+                                      {% else %}
+                                        <img id="user-picture" src="{{ STATIC_URL }}images/john-icon.png" height="30px" width="30px" alt="" />
+
+                                      {% endif %}
+                                      <span class="add-standard-left-padding">{{ user.username }} <i class="icon-caret-down"></i></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- <li><a href="{% locale_url dashboard %}" class="sub-level">{{ _('Dashboard') }}</a></li> -->
+                                    <li><a href="{{ user.get_profile.get_absolute_url }}" class="sub-level">{{ _('My Profile') }}</a></li>
+                                    <li><a href="{% locale_url users_profile_edit %}" class="sub-level">{{ _('My Settings') }}</a></li>
+                                    <li><a href="{% locale_url chat %}" class="sub-level" target="_blank">{{ _('Chat') }}</a></li>
+                                    <li><a href="{% locale_url drumbeatmail_inbox %}" class="sub-level">{{ _('Inbox') }} {% if messages_inbox_count > 0 %}<span id="inbox-count" class="new-messages">{{ messages_inbox_count }}</span>{% endif %}</a></li>
+                                    <li><a href="{% locale_url users_logout %}" class="sub-level">{{ _('Logout') }}</a></li>
+                                </ul>
+                            {% else %}
                             <a class="sign-in pull-right"
                                href="{{ login_with_redirect_url }}">{% trans 'Login' %} </span>
                             </a>
-                          {% endif %}
+                            {% endif %}
                         </li>
 
                     </ul>

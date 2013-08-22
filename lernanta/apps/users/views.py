@@ -251,7 +251,7 @@ def logout(request):
     auth.logout(request)
     if mark_registered:
         request.session['mark_registered'] = True
-    return http.HttpResponseRedirect(reverse('splash'))
+    return http.HttpResponseRedirect(reverse('home'))
 
 
 @secure_required

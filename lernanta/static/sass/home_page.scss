@@ -27,10 +27,13 @@
 }
 body{
   font-family: $altFontFamily;
-  background-image: url('/static/images/bgtexture.png');
+  background-image: url('/static/images/homepage/bgtexture.png');
 }
 h1, h2,h3, h4, h5{
   font-family: 'Arvo', serif;
+}
+a:focus{
+  outline: none;
 }
 .overflow-hidden{
   overflow: hidden;
@@ -206,6 +209,15 @@ h1, h2,h3, h4, h5{
           border-left: 1px solid $silver;
         }
       }
+      .dropdown-menu{
+        li{
+          a{
+            &:hover{
+              color: $white;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -267,6 +279,7 @@ h1, h2,h3, h4, h5{
   margin: 0 0 10px 0;
   background-color: $white;
   position: relative;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.1);
   @include border-radius(15px);
   li {
     @include makeColumn($columns: 4);
@@ -277,55 +290,31 @@ h1, h2,h3, h4, h5{
       &:hover {
         text-decoration: none;
         .actions-icons{
-          -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-          -moz-transform: scale(1.05);
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+          -moz-transform: scale(1.2);
         }
         h2 {
           color: $apricot;
         }
       }
-      &[href="#courses"]{
-        .actions-icons{
-          background: url('/static/images/homepage/icons_sprite.png') 0px 5px no-repeat;
-          background-size: cover;
-        }
+      .actions-icons{
+        background: url('/static/images/homepage/icons_sprite.png') 0px 3px no-repeat;
+        background-size: cover;
       }
-      &[href="#badges"]{
-        .actions-icons{
-          background: url('/static/images/homepage/icons_sprite.png') -100px 5px no-repeat;
-          //background-size: cover
-        }
-      }
-      &[href="#schools"]{
-        .actions-icons{
-          background: url('/static/images/homepage/icons_sprite.png') -200px 5px no-repeat;
-          //background-size: cover
-        }
-      }
-      &[href="#moocs"]{
-        .actions-icons{
-          background: url('/static/images/homepage/icons_sprite.png') -300px 5px no-repeat;
-          //background-size: cover
-        }
-      }
-      &[href="#blog"]{
-        .actions-icons{
-          background: url('/static/images/homepage/icons_sprite.png') -400px 5px no-repeat;
-          //background-size: cover
-        }
-      }
-      &[href="#community"]{
-        .actions-icons{
-          background: url('/static/images/homepage/icons_sprite.png') -500px 5px no-repeat;
-          //background-size: cover
-        }
+      $i: 0%;
+      @each $icon in courses, badges, schools , moocs, blog, community{
+        &.icon-#{$icon}
+          .actions-icons{
+            background-position: $i 1px
+          }
+        $i: $i + 20%
       }
       .actions-icons{
         float: left;
         margin-right: 20px;
-        height: 90px;
-        width: 90px;
+        height: 60px;
+        width: 60px;
       }
     }
 
@@ -353,9 +342,17 @@ section{
     float: left;
     margin-top: 30px;
   }
-  a{
-    line-height: 44px;
-    margin-top: 5px;
+  .back-to-top-link{
+    background-color: $silver;
+    border-radius: 0 0 10px 10px;
+    width: 60px;
+    text-align: center;
+    line-height: 30px;
+    margin: 0;
+    i{
+      color: $slate;
+      font-size: 1.5em;
+    }
     &:hover{
       text-decoration: none;
     }
@@ -378,11 +375,16 @@ section{
   }
   .controls {
     a {
-
       @extend .pull-right;
       margin: 20px 10px;
+      position: relative;
+      padding-right: 40px;
       i {
-        margin-left: 20px;
+        position: absolute;
+        right: 10px;
+        top: 40%;
+        line-height: 36px;
+        margin-top: -13px;
       }
     }
   }
@@ -400,9 +402,13 @@ section{
       min-height: 290px;
       padding: 10px 10px 40px 10px;
     }
+    .featured-items-img-wrap{
+      text-align: center;
+      height: 155px;
+    }
     .featured-items-img{
-      width: 200px;
-      height: 150px;
+      max-width: 200px;
+      max-height: 150px;
     }
     .featured-items-item-controls{
       position: absolute;
@@ -498,7 +504,6 @@ section{
   .blog-list{
     margin-left: -30px;
     li{
-      height: 200px;
       .blog-feed-wrap{
         height: 140px;
       }
@@ -529,9 +534,6 @@ section{
         position: absolute;
         right: -19%;
         top: 20%;
-      }
-      .caption{
-        height: 120px;
       }
     }
   }

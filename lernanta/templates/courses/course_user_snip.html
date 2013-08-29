@@ -2,9 +2,11 @@
 {% load i18n %}
 
 <li class="user-tile">
+  <div><strong>{{user.username}}</strong></div>
   <a href="{% locale_url users_profile_view username=user.username %}">
     <img src="{{ user.profile_image_url }}" alt="{{user.username}}">
   </a>
+
   <div>
   {% if can_edit %}
     <form action="{% locale_url courses_leave course_id=course.id username=user.username %}" method="POST">

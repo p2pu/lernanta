@@ -1,4 +1,6 @@
 {% load i18n %}
+{% load l10n_tags %}
+
 <section>
     <span id="schools" class="top-offset-span">&nbsp;</span>
 
@@ -26,7 +28,7 @@
                                 </p>
                             </div>
                             <div class="featured-items-item-controls">
-                                <a href="https://p2pu.org/en/schools/school-of-open/"
+                                <a href="{% locale_url learn_schools school_slug='school-of-open' %}"
                                    class="p2pu-btn-clemintine">
                                     {% trans 'Go to school' %}</a>
                             </div>
@@ -47,7 +49,7 @@
                                 </p>
                             </div>
                             <div class="featured-items-item-controls">
-                                <a href="https://p2pu.org/en/schools/school-of-ed-pilot/"
+                                <a href="{% locale_url learn_schools school_slug='school-of-ed-pilot' %}"
                                    class="p2pu-btn-clemintine">{% trans 'Go to school' %}</a>
                             </div>
                         </div>
@@ -68,7 +70,7 @@
                                 </p>
                             </div>
                             <div class="featured-items-item-controls">
-                                <a href="https://p2pu.org/en/schools/school-of-webcraft/"
+                                <a href="{% locale_url learn_schools school_slug='school-of-webcraft' %}"
                                    class="p2pu-btn-clemintine">Go to school</a>
                             </div>
                         </div>
@@ -90,7 +92,7 @@
                                 </p>
                             </div>
                             <div class="featured-items-item-controls">
-                                <a href="https://p2pu.org/en/schools/school-of-the-mathematical-future/"
+                                <a href="{% locale_url learn_schools school_slug='school-of-data' %}"
                                    class="p2pu-btn-clemintine">{% trans 'Go to school' %}</a>
                             </div>
                         </div>

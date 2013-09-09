@@ -9,6 +9,7 @@
     <ul class="nav nav-tabs">
       <li class="active"><a href="#edit-tab-pane" data-toggle="tab">{% trans "Edit" %}</a></li>
       <li><a id="preview-tab" href="#preview-tab-pane" data-toggle="tab">{% trans "Preview" %}</a></li>
+      <li><a id="md-cheatsheet" href="#md-cheatsheet-pane" data-toggle="tab">{% trans "Markdown Help" %}</a></li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="edit-tab-pane">
@@ -26,9 +27,8 @@
             <p class="help-block">
                 {% blocktrans %}You can use markdown for your content.
                     For some help on using markdown, look
-                    <a href="#markdown-cheatsheet" role="button" data-toggle="modal">here</a>
+                    <a id="MDCStrigger" href="#markdown-cheatsheet" role="button">here</a>
                 {% endblocktrans %}
-            {% include 'learn/markdown_cheatsheet.html' %}
             </p>
           </p>
         </div>
@@ -37,7 +37,11 @@
         <div class="hidden" id="id_content-wmd-preview"></div>
         <div id="content-preview-placeholder"></div>
       </div>
+     <div class="tab-pane" id="md-cheatsheet-pane">
+         {% include 'learn/markdown_cheatsheet.html' %}
+      </div>
       {% include "courses/content_form_buttons_snip.html" %}
+
     </div>
   </div>
 </form>

@@ -1,0 +1,388 @@
+
+.action{
+    margin: 20px 0;
+}
+/* Edit */
+.help_block {
+    font-size: 12px;
+    font-style: italic;
+    color: #999 !important;
+    margin: 0 0 5px 0 !important;
+}
+.side-nav{
+
+}
+.side-nav .nav-item{
+    line-height: 28px;
+    border-bottom: 1px solid lightgray;
+    padding: 5px;
+}
+.side-nav .nav-item:hover{
+    background-color: #f5f5f5;
+}
+.thumbnail{
+    padding: 10px;
+}
+
+footer{
+    padding-top: 0;
+}
+footer hr{
+    margin-top: 0;
+}
+
+/* Shool of webcraft */
+/* line 1861, ../sass/overrides.scss */
+#school_home .thumbnail-large,
+.thumbnail-large {
+  width: 415px;
+  background: #fcfcfc;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  margin-top: 0.625em;
+  margin-bottom: 2.5em;
+}
+/* line 1862, ../sass/overrides.scss */
+#school_home .thumbnail-large h1,
+.thumbnail-large h1 {
+  font-size: 1.25em;
+  line-height: 2.2em;
+  line-height: 1em;
+  margin-top: 0px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 1px #2d5f74;
+}
+/* line 1869, ../sass/overrides.scss */
+#school_home .thumbnail-large h1 a,
+.thumbnail-large h1 a {
+  color: white;
+}
+/* line 18, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#school_home .thumbnail-large h1 a:visited,
+.thumbnail-large h1 a:visited {
+  color: white;
+}
+/* line 21, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#school_home .thumbnail-large h1 a:focus,
+.thumbnail-large h1 a:focus {
+  color: #ffbc1a;
+}
+/* line 24, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#school_home .thumbnail-large h1 a:hover,
+.thumbnail-large h1 a:hover {
+  color: white;
+}
+/* line 27, ../../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#school_home .thumbnail-large h1 a:active,
+.thumbnail-large h1 a:active {
+  color: #ffbc1a;
+}
+/* line 1871, ../sass/overrides.scss */
+#school_home .thumbnail-large h1 a:hover,
+.thumbnail-large h1 a:hover {
+  text-decoration: none;
+}
+/* line 1882, ../sass/overrides.scss */
+#school_home .thumbnail-large .caption,
+.thumbnail-large .caption {
+  padding: 0px 0.5em;
+}
+/* line 1884, ../sass/overrides.scss */
+#school_home .thumbnail-large .caption p,
+.thumbnail-large .caption p {
+  font-family: "sense", helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.375em;
+  line-height: 1.375em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 3em;
+}
+/* line 1893, ../sass/overrides.scss */
+#school_home .thumbnail-large img,
+.thumbnail-large img {
+  padding-top: 0.5em;
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 1900, ../sass/overrides.scss */
+#school_home .thumbnail-large .well,
+.thumbnail-large .well {
+  padding: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background: #aab0bf;
+  border: 0px;
+  border-top: 1px solid #8e95a8;
+  height: 2.125em;
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+/* line 1910, ../sass/overrides.scss */
+#school_home .thumbnail-large .well:before,
+.thumbnail-large .well:before {
+  content: "";
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 1916, ../sass/overrides.scss */
+#school_home .thumbnail-large .well:after,
+.thumbnail-large .well:after {
+  content: "";
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 1923, ../sass/overrides.scss */
+#school_home .thumbnail-large .well-large,
+.thumbnail-large .well-large {
+  height: 3.5625em;
+  text-align: center;
+}
+/* line 1926, ../sass/overrides.scss */
+#school_home .thumbnail-large .well-large dl,
+.thumbnail-large .well-large dl {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  line-height: 1em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* line 1934, ../sass/overrides.scss */
+#school_home .thumbnail-large .well-large dl dd,
+.thumbnail-large .well-large dl dd {
+  margin-bottom: -5px;
+}
+/* line 1936, ../sass/overrides.scss */
+#school_home .thumbnail-large .well-large dl dd .label,
+.thumbnail-large .well-large dl dd .label {
+  color: white;
+  font-size: 0.75em;
+  line-height: 1.83333em;
+  line-height: 1em;
+  font-weight: normal;
+  font-family: "sense", helvetica, sans-serif;
+  background: #aab0bf;
+  padding: 0px;
+}
+/* line 1946, ../sass/overrides.scss */
+#school_home .thumbnail-large .well-large dl dt,
+.thumbnail-large .well-large dl dt {
+  margin-left: 0px;
+  margin-bottom: -10px;
+}
+/* line 1949, ../sass/overrides.scss */
+#school_home .thumbnail-large .well-large dl dt .badge,
+.thumbnail-large .well-large dl dt .badge {
+  color: white;
+  font-size: 0.75em;
+  line-height: 1.83333em;
+  line-height: 1em;
+  font-weight: bold;
+  font-family: "arvo", helvetica, sans-serif;
+  background: #aab0bf;
+  padding: 0px;
+}
+#challenge-sets .card .ribbon-wrapper {
+  position: relative;
+  margin: -30px 0 20px 0px;
+}
+
+/* line 2063, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-front {
+  background-color: #8fbbca;
+  background: -moz-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4b8fba), color-stop(100%, #3e6493));
+  background: -webkit-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  background: -o-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  background: -ms-linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  background: linear-gradient(top, #4b8fba 0%, #3e6493 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b8fba', endColorstr='#3e6493',GradientType=0 );
+  height: 40px;
+  width: 456px;
+  position: relative;
+  left: -20px;
+  z-index: 2;
+  padding-top: 20px;
+}
+
+/* line 2082, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-front,
+#challenge-sets .card .ribbon-back-left,
+#challenge-sets .card .ribbon-back-right {
+  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -khtml-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -o-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+}
+
+/* line 2092, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-edge-topleft,
+#challenge-sets .card .ribbon-edge-topright,
+#challenge-sets .card .ribbon-edge-bottomleft,
+#challenge-sets .card .ribbon-edge-bottomright {
+  position: absolute;
+  z-index: 1;
+  border-style: solid;
+  height: 0px;
+  width: 0px;
+}
+
+/* line 2101, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-edge-bottomleft,
+#challenge-sets .card .ribbon-edge-bottomright {
+  top: 40px;
+}
+
+/* line 2106, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-edge-topleft,
+#challenge-sets .card .ribbon-edge-bottomleft {
+  left: -20px;
+  border-color: transparent #2d5f74 transparent transparent;
+}
+
+/* line 2111, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-edge-topleft {
+  top: -10px;
+  border-width: 10px 20px 0 0;
+}
+
+/* line 2116, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-edge-bottomleft {
+  border-width: 0 20px 0px 0;
+}
+
+/* line 2121, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-edge-topright,
+#challenge-sets .card .ribbon-edge-bottomright {
+  left: 416px;
+  border-color: transparent transparent transparent #2d5f74;
+}
+
+/* line 2126, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-edge-topright {
+  top: -10px;
+  border-width: 10px 0 0 20px;
+}
+
+/* line 2131, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-edge-bottomright {
+  border-width: 0 0 0px 20px;
+}
+
+/* line 2135, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-back-left {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 0px;
+  height: 40px;
+  z-index: 0;
+}
+
+/* line 2144, ../sass/overrides.scss */
+#challenge-sets .card .ribbon-back-right {
+  position: absolute;
+  top: -10px;
+  right: 0px;
+  width: 0px;
+  height: 40px;
+  z-index: 0;
+}
+.challenge-set-button {
+  text-align: center;
+  /* a */
+  /*   display: block */
+  /*   margin: auto */
+}
+.challenge-set-modal-data {
+  padding: 20px;
+  width: 715px;
+}
+
+/* line 2343, ../sass/overrides.scss */
+.challenge-set-modal-data h2 {
+  font-size: 24px;
+  font-weight: medium;
+  padding-bottom: 10px;
+  color: #222222;
+}
+
+/* line 2350, ../sass/overrides.scss */
+.challenge-set-modal-data p {
+  font-size: 15px;
+}
+
+/* line 2354, ../sass/overrides.scss */
+.challenge-set-modal-data {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 2360, ../sass/overrides.scss */
+.challenge-set-modal-data ul li {
+  display: inline-block;
+  padding: 17px;
+}
+
+/* line 2365, ../sass/overrides.scss */
+.challenge-set-modal-data a {
+  font-size: 15px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* line 2371, ../sass/overrides.scss */
+.challenge-set-modal-data ul {
+  margin: 0;
+  list-style: none;
+}
+
+/* line 2376, ../sass/overrides.scss */
+.challenge-set-modal-data li {
+  display: inline-block;
+  padding-bottom: 2em;
+  text-align: center;
+  vertical-align: top;
+  width: 150px;
+}
+
+/* line 2384, ../sass/overrides.scss */
+.challenge-set-modal-data li {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+/* line 2389, ../sass/overrides.scss */
+.challenge-set-modal-data .project-name {
+  display: block;
+  padding: 5px;
+}
+.challenge-set-preview {
+display: none;
+}

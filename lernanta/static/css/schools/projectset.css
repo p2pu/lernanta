@@ -1,0 +1,304 @@
+.side-img{
+    margin-top: 20px;
+}
+#main{
+    margin-top: 50px;
+}
+.thumbnails {
+  margin-left: -20px;
+  list-style: none;
+  *zoom: 1;
+}
+/* line 15, ../sass/p2pu-css-framework/lib/_mixins.scss */
+.thumbnails:before, .thumbnails:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/p2pu-css-framework/lib/_mixins.scss */
+.thumbnails:after {
+  clear: both;
+}
+
+/* line 15, ../sass/p2pu-css-framework/lib/_thumbnails.scss */
+.row-fluid .thumbnails {
+  margin-left: 0;
+}
+
+/* line 20, ../sass/p2pu-css-framework/lib/_thumbnails.scss */
+.thumbnails > li {
+  float: left;
+  margin-bottom: 22px;
+  margin-left: 20px;
+}
+
+/* line 27, ../sass/p2pu-css-framework/lib/_thumbnails.scss */
+.thumbnail {
+  display: block;
+  padding: 4px;
+  line-height: 22px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 37, ../sass/p2pu-css-framework/lib/_thumbnails.scss */
+a.thumbnail:hover {
+  border-color: #05c6b4;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+/* line 43, ../sass/p2pu-css-framework/lib/_thumbnails.scss */
+.thumbnail > img {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 49, ../sass/p2pu-css-framework/lib/_thumbnails.scss */
+.thumbnail .caption {
+  padding: 9px;
+  color: #656c7e;
+}
+/* line 1112, ../sass/overrides.scss */
+.thumbnail {
+  background: #fcfcfc;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  padding: 0px;
+}
+/* line 1113, ../sass/overrides.scss */
+.thumbnail h1 {
+  font-size: 1.5em;
+  line-height: 1.83333em;
+  line-height: 1em;
+  margin-top: 2.41667em;
+  color: #515665;
+}
+/* line 1118, ../sass/overrides.scss */
+.thumbnail h1 a {
+  color: #515665;
+}
+/* line 1120, ../sass/overrides.scss */
+.thumbnail h1 a:hover {
+  text-decoration: underline;
+}
+/* line 1128, ../sass/overrides.scss */
+.thumbnail .caption {
+  padding: 0px 0.5625em;
+}
+/* line 1130, ../sass/overrides.scss */
+.thumbnail .caption h3 {
+  font-size: 1.125em;
+  line-height: 1.22222em;
+  line-height: 1.22222em;
+  margin-top: 0px;
+  margin-top: 0.5em;
+  width: 100%;
+  font-weight: normal;
+  color: #515665;
+  font-family: "arvo", helvetica, sans-serif;
+  text-overflow-y: hidden;
+  overflow-y: hidden;
+}
+/* line 1141, ../sass/overrides.scss */
+.thumbnail .caption h3 a {
+  height: auto;
+}
+/* line 1143, ../sass/overrides.scss */
+.thumbnail .caption h3 a span {
+  height: auto;
+}
+/* line 1148, ../sass/overrides.scss */
+.thumbnail .caption p {
+  font-family: "sense", helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.375em;
+  line-height: 1.375em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 4.125em;
+  text-overflow-y: hidden;
+  overflow-y: hidden;
+}
+/* line 1159, ../sass/overrides.scss */
+.thumbnail img {
+  padding-top: 0.3125em;
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+}
+/* line 1167, ../sass/overrides.scss */
+.thumbnail .well {
+  padding: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background: #aab0bf;
+  border: 0px;
+  border-top: 1px #8e95a8;
+  height: 2.125em;
+  margin-bottom: 0px;
+}
+/* line 1175, ../sass/overrides.scss */
+.thumbnail .well:before {
+  content: "";
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 1181, ../sass/overrides.scss */
+.thumbnail .well:after {
+  content: "";
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 100%;
+  vertical-align: middle;
+}
+/* line 1187, ../sass/overrides.scss */
+.thumbnail .well p {
+  width: 13.125em;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  line-height: 1em;
+  text-align: center;
+}
+/* line 1192, ../sass/overrides.scss */
+.thumbnail .well p .label {
+  color: white;
+  font-size: 0.75em;
+  line-height: 1.83333em;
+  line-height: 1em;
+  font-weight: bold;
+  font-family: "arvo", helvetica, sans-serif;
+  padding-left: 7px;
+  padding-right: 5px;
+  background: #aab0bf;
+}
+/* line 1202, ../sass/overrides.scss */
+.thumbnail .well p .badge {
+  color: white;
+  font-size: 0.875em;
+  line-height: 1.57143em;
+  line-height: 1em;
+  font-weight: normal;
+  font-family: "sense", helvetica, sans-serif;
+  padding-left: 0px;
+  padding-right: 7px;
+  padding: auto;
+  background: #aab0bf;
+}
+/* line 1215, ../sass/overrides.scss */
+.thumbnail .well-large {
+  text-align: center;
+  height: 55px;
+}
+/* line 1219, ../sass/overrides.scss */
+.thumbnail .well-large dl {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  line-height: 1em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* line 1228, ../sass/overrides.scss */
+.thumbnail .well-large dl dt .label {
+  color: white;
+  font-size: 0.75em;
+  line-height: 1.83333em;
+  line-height: 1em;
+  font-weight: normal;
+  font-family: "sense", helvetica, sans-serif;
+  background: #aab0bf;
+  padding: 0px;
+}
+/* line 1238, ../sass/overrides.scss */
+.thumbnail .well-large dl dd {
+  margin-left: 0px;
+}
+/* line 1240, ../sass/overrides.scss */
+.thumbnail .well-large dl dd .badge {
+  color: white;
+  font-size: 0.75em;
+  line-height: 1.83333em;
+  line-height: 1em;
+  font-weight: bold;
+  font-family: "arvo", helvetica, sans-serif;
+  background: #aab0bf;
+  padding: 0px;
+}
+
+/* line 1255, ../sass/overrides.scss */
+#learn .thumbnail, #splash .thumbnail, #schools-featured .thumbnail, #schools-challenges .thumbnail {
+  width: 13.75em;
+}
+/* line 2394, ../sass/overrides.scss */
+.detailed-info {
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fcfcfc;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  float: left;
+  width: 100%;
+}
+/* line 2406, ../sass/overrides.scss */
+.detailed-info ul {
+  list-style: none;
+  float: left;
+  margin: 6px 0 0 10px;
+  font-size: 14px;
+}
+/* line 2412, ../sass/overrides.scss */
+.detailed-info ul li {
+  display: inline-block;
+  margin: 0 80px 0 0;
+  padding: 0;
+}
+/* line 2417, ../sass/overrides.scss */
+.detailed-info ul li:last-child {
+  margin: 0;
+}
+/* line 2420, ../sass/overrides.scss */
+.detailed-info a {
+  margin-left: 8px;
+  margin-right: 8px;
+}

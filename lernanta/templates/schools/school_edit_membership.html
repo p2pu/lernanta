@@ -3,57 +3,63 @@
 {% block bodyclasses %}school edit membership{% endblock %}
 
 {% block form %}
-<fieldset id="school_edit_membership" class="school edit member_groups tabpane">
-<h2>{{ _('Membership') }}</h2>
-<p class="alert alert-info">{{ _('View, add and remove courses to this school.') }}</p>
-<form action="{% locale_url schools_edit_membership slug=school.slug %}" method="post">
-  {% csrf_token %}
-  <input type="hidden" id="id_course_url" name="course_url"></input>
-  <p>
-    <label for="id_course_title">{{ _('Course title') }}</label>
-    <input id="id_course_title" type="text" name="course_title" class="span12">
-  </p>
-  <p class="buttons add-membership">
-    <button type="submit">{{ _('Add') }}</button>
-  </p>
-</form>
+	<div class="span8">
+		<fieldset id="school_edit_membership" class="school edit member_groups tabpane">
+			<h2>{{ _('Membership') }}</h2>
 
-{% if courses %}
-<table>
-<thead>
-  <tr>
-    <th>{{ _('Name') }}</th>
-    <th>{{ _('Actions') }}</th>
-  </tr>
-</thead>
-<tbody>
-  {% for course in courses %}
-    <tr>
-      <td class="name"><a href="{{ course.url }}">{{ course.title }}</a></td>
-      <td class="actions">
-        <form action="{% locale_url schools_edit_membership_delete slug=school.slug %}" method="post">
-          {% csrf_token %}
-          <input type="hidden" value="{{course.url}}" name="course_url"></input>
-          <button type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
-        </form>
-      </td>
-    </tr>
-  {% endfor %}
-</tbody>
-</table>
-{% endif %}
-</fieldset>
+			<p class="alert alert-info">{{ _('View, add and remove courses to this school.') }}</p>
+
+			<form action="{% locale_url schools_edit_membership slug=school.slug %}" method="post">
+				{% csrf_token %}
+				<input type="hidden" id="id_course_url" name="course_url"></input>
+
+				<p>
+					<label for="id_course_title">{{ _('Course title') }}</label>
+					<input id="id_course_title" type="text" name="course_title" class="span8">
+				</p>
+
+				<p class="buttons add-membership">
+					<button class="btn btn-primary" type="submit">{{ _('Add') }}</button>
+				</p>
+			</form>
+
+			{% if courses %}
+				<table class="table">
+					<thead>
+					<tr>
+						<th>{{ _('Name') }}</th>
+						<th>{{ _('Actions') }}</th>
+					</tr>
+					</thead>
+					<tbody>
+					{% for course in courses %}
+						<tr>
+							<td class="name"><a href="{{ course.url }}">{{ course.title }}</a></td>
+							<td class="course-actions">
+								<form action="{% locale_url schools_edit_membership_delete slug=school.slug %}" method="post">
+									{% csrf_token %}
+									<input type="hidden" value="{{ course.url }}" name="course_url"></input>
+									<button class="btn btn-danger btn-mini" type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
+								</form>
+							</td>
+						</tr>
+					{% endfor %}
+					</tbody>
+				</table>
+			{% endif %}
+		</fieldset>
+	</div>
 {% endblock %}
 
 
 {% block js %}
-  <script type="text/javascript">
-    $('#id_course_title').autocomplete({
-        source: "{% locale_url learn_auto_complete_lookup %}",
-        select: function( event, ui ) {
-            $('#id_course_url').val(ui.item.url);
-        }
-    });
-  </script>
+	<script type="text/javascript">
+		$('#id_course_title').autocomplete({
+			source: "{% locale_url learn_auto_complete_lookup %}",
+			select: function (event, ui) {
+				$('#id_course_url').val(ui.item.url);
+			}
+		});
+	</script>
 {% endblock %}
 

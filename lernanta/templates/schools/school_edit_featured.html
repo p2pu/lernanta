@@ -4,51 +4,53 @@
 {% block bodyclasses %}school edit featured{% endblock %}
 
 {% block form %}
-<fieldset id="school_edit_featured">
-<h2>{{ _('Featured') }}</h2>
-<p class="alert alert-info">{% trans "View, add and remove courses featured by this school." %}</p>
+	<div class="span8">
+		<fieldset id="school_edit_featured">
+		<h2>{{ _('Featured') }}</h2>
+		<p class="alert alert-info">{% trans "View, add and remove courses featured by this school." %}</p>
 
-<div>
-<form action="{% locale_url schools_edit_featured slug=school.slug %}" method="post">
-  {% csrf_token %}
-  <input type="hidden" id="id_course_url" name="course_url"></input>
-  <p>
-    <div>
-      <label for="id_course_title">{% trans "Course Title" %}</label>
-      <input type="text" id="id_course_title" name="course_title" class="span12"></input>
-    </div>
-  </p>
-  <p class="buttons add-featured">
-    <button type="submit">{% trans "Add" %}</button>
-  </p>
-</form>
-</div>
+		<div>
+		<form action="{% locale_url schools_edit_featured slug=school.slug %}" method="post">
+		  {% csrf_token %}
+		  <input type="hidden" id="id_course_url" name="course_url"></input>
+		  <p>
+		    <div>
+		      <label for="id_course_title">{% trans "Course Title" %}</label>
+		      <input type="text" id="id_course_title" name="course_title" class="span8"></input>
+		    </div>
+		  </p>
+		  <p class="buttons add-featured">
+		    <button class="btn btn-primary" type="submit">{% trans "Add" %}</button>
+		  </p>
+		</form>
+		</div>
 
-{% if featured %}
-<table>
-<thead>
-  <tr>
-    <th>{{ _('Name') }}</th>
-    <th>{{ _('Actions') }}</th>
-  </tr>
-</thead>
-<tbody>
-  {% for course in featured %}
-    <tr>
-      <td class="name"><a href="{{ project.url }}">{{ course.title }}</a></td>
-      <td class="actions">
-        <form action="{% locale_url schools_edit_featured_delete slug=school.slug %}" method="post">
-          {% csrf_token %}
-          <input type="hidden" value="{{course.url}}" name="course_url"></input>
-          <button type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
-        </form>
-      </td>
-    </tr>
-  {% endfor %}
-</tbody>
-</table>
-{% endif %}
-</fieldset>
+		{% if featured %}
+		<table>
+		<thead>
+		  <tr>
+		    <th>{{ _('Name') }}</th>
+		    <th>{{ _('Actions') }}</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  {% for course in featured %}
+		    <tr>
+		      <td class="name"><a href="{{ project.url }}">{{ course.title }}</a></td>
+		      <td class="actions">
+		        <form action="{% locale_url schools_edit_featured_delete slug=school.slug %}" method="post">
+		          {% csrf_token %}
+		          <input type="hidden" value="{{course.url}}" name="course_url"></input>
+		          <button type="submit" value="{{ _('Delete') }}">{{ _('Delete') }}</button>
+		        </form>
+		      </td>
+		    </tr>
+		  {% endfor %}
+		</tbody>
+		</table>
+		{% endif %}
+		</fieldset>
+	</div>
 {% endblock %}
 
 

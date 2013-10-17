@@ -1,167 +1,32 @@
+{% extends 'homepage/base.html' %}
 {% load i18n %}
 
-<!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>P2PU | {% trans 'A University for the Web. Built by an open community' %}</title>
-    <meta name="description" content="{% trans 'Learning for everyone, by everyone, about almost anything.' %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if debug %}
-        <link rel="stylesheet" href="{{ STATIC_URL }}sass/home_page.css">
-        <link rel="stylesheet" href="{{ STATIC_URL }}sass/homepage-responsive.css">
-    {% else %}
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/home_page.css">
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage-responsive.css">
-    {% endif %}
-    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico">
-    <link rel="apple-touch-icon" href="{{ STATIC_URL }}images/apple-touch-icon.png">
+{% block body %}
+	{% include 'homepage/jumbotron_section.html' %}
 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic" rel="stylesheet"
-          type="text/css">
+	<section>
+		<div class="container">
+			{% include 'homepage/action_menu.html' %}
 
-    <script src="{{ STATIC_URL }}js/libs/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-</head>
-<body>
-<!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-<![endif]-->
+			<span id="blog" class="top-offset-span">&nbsp;</span>
 
-{% include 'homepage/top_navigation.html' %}
+			<div class="billboard top">
+				{% include 'homepage/blog_feed.html' %}
 
-{% include 'homepage/jumbotron_section.html' %}
+				{% include 'homepage/community_section.html' %}
 
-<section>
-<div class="container">
-{% include 'homepage/action_menu.html' %}
-
-<span id="blog" class="top-offset-span">&nbsp;</span>
-
-<div class="billboard top">
-    {% include 'homepage/blog_feed.html' %}
-
-    {% include 'homepage/community_section.html' %}
-
-</div>
-</div>
-<!-- /container -->
-</section>
-<!-- Courses Section -->
-{% include 'homepage/courses_section.html' %}
-<!-- Badges Section -->
-{% include 'homepage/badges_section.html' %}
-<!-- Schools Section -->
-{% include 'homepage/schools_section.html' %}
-<!-- Moocs Section -->
-{% include 'homepage/mooc_section.html' %}
+			</div>
+		</div>
+		<!-- /container -->
+	</section>
+	<!-- Courses Section -->
+	{% include 'homepage/courses_section.html' %}
+	<!-- Badges Section -->
+	{% include 'homepage/badges_section.html' %}
+	<!-- Schools Section -->
+	{% include 'homepage/schools_section.html' %}
+	<!-- Moocs Section -->
+	{% include 'homepage/mooc_section.html' %}
+{% endblock %}
 
 
-<section class="footer">
-    <div class="container">
-        <hr>
-        <a href="https://p2pu.org/en/pages/terms-of-use/" target="_blank">
-            <img class="pull-right" src="{{ STATIC_URL }}images/cc-icons.png" alt="{% trans 'CC logo' %}"/>
-        </a>
-    </div>
-</section>
-</div>
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script src="{{ STATIC_URL }}js/homepage-script.js"></script>
-<script>
-    Lernanta.Homepage.init();
-</script>
-
-{% if not debug %}
-<!-- Google Analytics -->
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-
-        {% if google_analytics_tracking_codes %}
-      {% for tracking_code in google_analytics_tracking_codes %}
-        _gaq.push(['{{ tracking_code.key }}._setAccount', '{{ tracking_code.code }}']);
-        {% if tracking_code.logged_in_status %}
-          _gaq.push(['{{ tracking_code.key }}._setCustomVar',
-            1,
-            'logged_in_status',
-            {% if user.is_authenticated %}'logged_in'{% else %}'anonymous'{% endif %},
-            1
-          ]);
-        {% endif %}
-        {% if tracking_code.registration_event and send_registration_event %}
-          _gaq.push(['{{ tracking_code.key }}._trackEvent', 'user', 'create']);
-        {% endif %}
-        _gaq.push(['{{ tracking_code.key }}._trackPageview']);
-      {% endfor %}
-    {% endif %}
-
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
-
-    {% if google_analytics_tracking_codes %}
-        {% for tracking_code in google_analytics_tracking_codes %}
-      {% if send_registration_event and tracking_code.adwords_conversion_id and tracking_code.adwords_conversion_label %}
-        <!-- Google Code for sign_up Conversion Page -->
-        <script type="text/javascript">
-          /* <![CDATA[ */
-            var google_conversion_id = {{ tracking_code.adwords_conversion_id }};
-            var google_conversion_language = "{{ _('en') }}";
-            var google_conversion_format = "3";
-            var google_conversion_color = "ffffff";
-            var google_conversion_label = "{{ tracking_code.adwords_conversion_label }}";
-            var google_conversion_value = 0;
-          /* ]]> */
-        </script>
-        <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
-        <noscript>
-          <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/{{ tracking_code.adwords_conversion_id }}/?value=0&amp;label={{ tracking_code.adwords_conversion_label }}&amp;guid=ON&amp;script=0"/>
-          </div>
-        </noscript>
-      {% endif %}
-      {% if tracking_code.chartbeat_uid %}
-        <script type="text/javascript">
-          var _sf_async_config={};
-          /** CONFIGURATION START **/
-          _sf_async_config.uid = {{ tracking_code.chartbeat_uid }};
-          _sf_async_config.domain = "{{ site.domain }}";
-          /** CONFIGURATION END **/
-          (function(){
-            function loadChartbeat() {
-              window._sf_endpt=(new Date()).getTime();
-              var e = document.createElement("script");
-              e.setAttribute("language", "javascript");
-              e.setAttribute("type", "text/javascript");
-              e.setAttribute("src",
-              (("https:" == document.location.protocol) ?
-                "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" :
-                "http://static.chartbeat.com/") +
-                "js/chartbeat.js");
-              document.body.appendChild(e);
-            }
-            var oldonload = window.onload;
-            window.onload = (typeof window.onload != "function") ?
-            loadChartbeat : function() { oldonload(); loadChartbeat(); };
-          })();
-        </script>
-      {% endif %}
-    {% endfor %}
-    {% endif %}
-{% endif %}
-</body>
-</html>

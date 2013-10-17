@@ -3,37 +3,43 @@
 {% block bodyclasses %}school edit summary{% endblock %}
 
 {% block form %}
-<fieldset id="school_edit_summary" class="school edit summary tabpane">
-<form action="{% locale_url schools_edit slug=school.slug %}" method="post">
-  {% csrf_token %}
-  <div class="field{% if form.name.errors %} error{% endif %}">
-    <label for="id_name">{{ _('Name') }}</label>
-    <span class="hint block">{{ _('A good name is short and descriptive. People should know what your school is about without reading the description.') }}</span>
-    {{ form.name }}
-    {{ form.name.errors }}
-  </div>
-  <div class="field{% if form.short_name.errors %} error{% endif %}">
-    <label for="id_short_name">{{ _('Short Name') }}</label>
-    <span class="hint block">{{ _('Shorter name displayed close to the school small icon on sidebars and footers.') }}</span>
-    {{ form.short_name }}
-    {{ form.short_name.errors }}
-  </div>
-  <div class="field description{% if form.description.errors %} error{% endif %}">
-    <label for="id_description">{{ _('Description') }}</label>
-    <span class="hint block">{{ _('This description is shown on the school page.') }}</span>
-    {{ form.description }}
-    {{ form.description.errors }}
-  </div>
-  <div class="field more_info{% if form.more_info.errors %} error{% endif %}">
-    <label for="id_more_info">{{ _('More details') }}</label>
-    <span class="hint block">{{ _('Extra details are shown at the bottom of the school page.') }}</span>
-    {{ form.more_info }}
-    {{ form.more_info.errors }}
-  </div>
-  <p class="buttons">
-    <a class="button" href="{{ school.get_absolute_url }}">{{ _('Cancel') }}</a>
-    <button type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>
-  </p>
-</form>
-</fieldset>
+	<fieldset id="school_edit_summary" class="school edit summary tabpane">
+		<form action="{% locale_url schools_edit slug=school.slug %}" method="post">
+			{% csrf_token %}
+			<div class="control-group field{% if form.name.errors %} error{% endif %}">
+				<label class="control-label" for="id_name">{{ _('Name') }}</label>
+				<div class="help_block hint block">
+					{{ _('A good name is short and descriptive. People should know what your school is about without reading the description.') }}
+				</div>
+				{{ form.name }}
+				{{ form.name.errors }}
+			</div>
+			<div class="control-group field{% if form.short_name.errors %} error{% endif %}">
+				<label class="control-label" for="id_short_name">{{ _('Short Name') }}</label>
+				<div class="help_block hint block">
+					{{ _('Shorter name displayed close to the school small icon on sidebars and footers.') }}
+				</div>
+				{{ form.short_name }}
+				{{ form.short_name.errors }}
+			</div>
+			<div class="control-group field description{% if form.description.errors %} error{% endif %}">
+				<label for="id_description">{{ _('Description') }}</label>
+				<div class="help_block hint block">
+					{{ _('This description is shown on the school page.') }}
+				</div>
+				{{ form.description }}
+				{{ form.description.errors }}
+			</div>
+			<div class="control-group field more_info{% if form.more_info.errors %} error{% endif %}">
+				<label class="control-label" for="id_more_info">{{ _('More details') }}</label>
+				<span class="help_block hint block">{{ _('Extra details are shown at the bottom of the school page.') }}</span>
+				{{ form.more_info }}
+				{{ form.more_info.errors }}
+			</div>
+			<p class="buttons">
+				<button class="btn btn-primary" type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>
+				<a class="btn" href="{{ school.get_absolute_url }}">{{ _('Cancel') }}</a>
+			</p>
+		</form>
+	</fieldset>
 {% endblock %}

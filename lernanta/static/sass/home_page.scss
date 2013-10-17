@@ -1,30 +1,14 @@
 // Bootstrap
-@import "p2pu-css-framework/lib/bootstrap";
+//@import "p2pu-css-framework/lib/bootstrap";
 // Bootstrap Responsive
-@import "p2pu-css-framework/lib/responsive";
+//@import "p2pu-css-framework/lib/responsive";
 // Mixins already created for P2PU
+//@import "p2pu-css-framework/p2pu/p2pu-mixins";
+
+@import "p2pu-css-framework/p2pu/p2pu-override-variables";
+@import "p2pu-css-framework/lib/mixins";
 @import "p2pu-css-framework/p2pu/p2pu-mixins";
 
-
-@mixin p2pu-btn($startColor, $endColor, $border) {
-  color: $slate;
-  @include gradient-vertical($startColor: $startColor, $endColor: $endColor);
-  border-color: $startColor $endColor $border;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-  cursor: pointer !important;
-  font-size: 20px;
-  padding: 7px 20px;
-  margin-top: 1px;
-  @include box-shadow(0 2px 2px rgba(0, 0, 0, 0.35));
-  @include border-radius(5px);
-  border-radius: 5px;
-  font-weight: bold;
-  &:hover {
-    text-decoration: none;
-    @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
-  }
-}
 body{
   font-family: $altFontFamily;
   background-image: url('/static/images/homepage/bgtexture.png');
@@ -35,6 +19,23 @@ h1, h2,h3, h4, h5{
 a:focus{
   outline: none;
 }
+section{
+  border-top: 1px solid #d8dbde;
+  box-shadow: inset 0 5px 5px -3px rgba(0,0,0,0.1);
+  background: $cloud;
+  background: url('/static/images/homepage/bgtexture.png'),-moz-linear-gradient(top, $cloud 0%, $white 100%);
+  background: url('/static/images/homepage/bgtexture.png'),-webkit-gradient(linear, left top, left bottom, color-stop(0%,$cloud), color-stop(100%,$white));
+  background: url('/static/images/homepage/bgtexture.png'),-webkit-linear-gradient(top, $cloud 0%,$white 100%);
+  background: url('/static/images/homepage/bgtexture.png'),-o-linear-gradient(top, $cloud 0%,$white 100%);
+  background: url('/static/images/homepage/bgtexture.png'),-ms-linear-gradient(top, $cloud 0%,$white 100%);
+  background: url('/static/images/homepage/bgtexture.png'),linear-gradient(to bottom, $cloud 0%,$white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$cloud', endColorstr='$white',GradientType=0 );
+}
+footer{
+  margin: 0 !important;
+  padding: 1em 0 50px 0;
+  background-color: #e1e1e1;
+}
 .overflow-hidden{
   overflow: hidden;
 }
@@ -42,58 +43,7 @@ a:focus{
   margin-top: -67px;
   display: block;
 }
-.p2pu-btn {
-  @include p2pu-btn($startColor: $snow, $endColor: $snow, $border: $silver);
-  &:hover {
-    color: $slate;
-  }
-}
 
-.p2pu-btn-mini{
-  padding: 5px 15px !important;
-  font-size: 1em !important;
-}
-
-.p2pu-btn-large{
-  padding: 10px 25px !important;
-  font-size: 25px !important;
-}
-.p2pu-btn-cyan {
-  @include p2pu-btn($startColor: $cyan, $endColor: $cyan, $border: $cyan);
-  color: $white;
-  &:hover {
-    color: $white;
-  }
-}
-
-.p2pu-btn-apricot {
-  @include p2pu-btn($startColor: $apricot, $endColor: $apricot, $border: $apricot);
-  color: $white;
-  &:hover {
-    color: $white;
-  }
-}
-.p2pu-btn-clemintine {
-  @include p2pu-btn($startColor: $clemintine, $endColor: $clemintine, $border: $clemintine);
-  color: $white;
-  &:hover {
-    color: $white;
-  }
-}
-.p2pu-btn-olive {
-  @include p2pu-btn($startColor: $olive, $endColor: $olive, $border: $olive);
-  color: $white;
-  &:hover {
-    color: $white;
-  }
-}
-.p2pu-btn-silver {
-  @include p2pu-btn($startColor: $silver, $endColor: $silver, $border: $silver);
-  color: $slate;
-  &:hover {
-    color: $slate;
-  }
-}
 .text-appricot {
   color: $apricot;
 }
@@ -102,135 +52,21 @@ a:focus{
   color: $cyan;
 }
 
-/*******P2PU Panel*******/
-.p2pu-panel-wrap {
-  background-color: $white;
-  display: none;
-  .panel-contents {
-    @extend .container;
-    .us{
-      float: left;
-      margin-top: 20px;
-    }
-    .connect{
-      @include makeColumn($columns: 4);
-      float: right;
-      li{
-        line-height: 16px;
-      }
-      hr{
-        margin: 10px 0;
-      }
-      a{
-        font-size: 1.2em;
-        &:hover{
-          text-decoration: none;
-        }
-      }
-    }
-    .supporters{
-      margin-right: 20px;
-      @include makeColumn($columns: 6);
-      float: right;
-      h4{
-        text-align: center;
-      }
-      a{
-        display: block;
-        text-align: center;
-        &.view-all{
-          margin: 20px 0;
-        }
-      }
-
-    }
-  }
-}
-
-.p2pu-color-divider-wrap {
-  border-bottom: solid 6px $apricot;
-}
-
-.p2pu-color-divider-wrap::before, .p2pu-color-divider-wrap::after {
-  content: "";
-  height: 6px;
-  width: 25%;
-  position: absolute;
-  left: 25%;
-  background: $olive;
-}
-
-.p2pu-color-divider::before, .p2pu-color-divider::after {
-  content: "";
-  height: 6px;
-  width: 25%;
-  position: absolute;
-  left: 50%;
-  background: $cyan;
-}
-
-.p2pu-color-divider::after {
-  left: 75%;
-  background: $clemintine;
-}
-
 /********* Navigation bar ****************/
-.p2pu-navbar {
-  height: 58px;
-  background: $white;
-  background-color: $white;
-  border: none;
-  border-bottom: 2px solid $snow;
-  .brand {
-    display: block;
-    width: 80px;
-    height: 24px;
-    background: url('/static/images/homepage/logo-p2pu-menu.png') no-repeat;
-    padding: 0;
-    margin: 17px 0;
-    text-indent: -9999px;
-    overflow: hidden;
-  }
-  .top-menu{
-    margin: 9px 10px 0 20px;
-    font-family: 'Arvo', sans-serif;
-    li{
-      a{
-        text-shadow: none !important;
-        font-size: 1.1em;
-
-        &:hover, &:focus{
-          color: #777;
-          background-color: transparent;
-        }
-
-        &.p2pu-tab{
-          font-size: 1.6em;
-          border-left: 1px solid $silver;
-        }
-      }
-      .dropdown-menu{
-        li{
-          a{
-            &:hover{
-              color: $white;
-            }
-          }
-        }
-      }
-    }
-  }
+.navbar .brand{
+  background: url('/static/images/homepage/logo-p2pu-menu.png') !important;
 }
-
+.action{
+  margin: 0;
+}
 /**************Jumbotron**************/
 .jumbotron {
-  padding-top: 65px;
   margin-bottom: 50px;
   text-align: center;
   position: relative;
   background-image: url('/static/images/homepage/jumbotron/photo-learn_one.jpg');
   background-size: cover;
-  background-position: 50% 40%;
+  background-position: 50% 44%;
   text-align: center;
   height: 334px;
   margin-bottom: -60px;
@@ -275,16 +111,17 @@ a:focus{
 }
 /*******Main Menu *******/
 .actions {
-  @extend .clearfix;
+  padding: 0 20px 20px 0;
   margin: 0 0 10px 0;
   background-color: $white;
   position: relative;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.1);
   @include border-radius(15px);
   li {
-    @include makeColumn($columns: 4);
+    width: 28%;
     margin-left: 5%;
     margin-top: 30px;
+    float: left;
     a {
       display: block;
       &:hover {
@@ -324,40 +161,7 @@ a:focus{
 
   }
 }
-section{
-  border-top: 1px solid #d8dbde;
-  box-shadow: inset 0 5px 5px -3px rgba(0,0,0,0.1);
-  background: $cloud;
-  background: url('/static/images/homepage/bgtexture.png'),-moz-linear-gradient(top, $cloud 0%, $white 100%);
-  background: url('/static/images/homepage/bgtexture.png'),-webkit-gradient(linear, left top, left bottom, color-stop(0%,$cloud), color-stop(100%,$white));
-  background: url('/static/images/homepage/bgtexture.png'),-webkit-linear-gradient(top, $cloud 0%,$white 100%);
-  background: url('/static/images/homepage/bgtexture.png'),-o-linear-gradient(top, $cloud 0%,$white 100%);
-  background: url('/static/images/homepage/bgtexture.png'),-ms-linear-gradient(top, $cloud 0%,$white 100%);
-  background: url('/static/images/homepage/bgtexture.png'),linear-gradient(to bottom, $cloud 0%,$white 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$cloud', endColorstr='$white',GradientType=0 );
-}
-.section-title-wrap{
-  @extend .clearfix;
-  .section-title{
-    float: left;
-    margin-top: 30px;
-  }
-  .back-to-top-link{
-    background-color: $silver;
-    border-radius: 0 0 10px 10px;
-    width: 60px;
-    text-align: center;
-    line-height: 30px;
-    margin: 0;
-    i{
-      color: $slate;
-      font-size: 1.5em;
-    }
-    &:hover{
-      text-decoration: none;
-    }
-  }
-}
+
 .billboard {
   padding: 20px 0;
   margin-bottom: 40px;
@@ -389,15 +193,11 @@ section{
     }
   }
   .featured-items-wrap{
-    .featured-items-list{
-      @extend .thumbnails;
-    }
     .featured-items-item{
       position: relative;
       margin-left: 30px;
     }
     .featured-items-item-wrap{
-      @extend .thumbnail;
       background-color: $snow;
       min-height: 290px;
       padding: 10px 10px 40px 10px;
@@ -544,6 +344,12 @@ section{
         float: left;
         margin: 20px 10px 20px 0;
       }
+    }
+    .featured-items-item{
+      margin-bottom: 20px;
+    }
+    .featured-items-item-controls{
+      right: 15px;
     }
   }
   .description{

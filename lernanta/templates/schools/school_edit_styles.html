@@ -9,15 +9,15 @@
   <h2>{{ _('Sidebar') }}</h2>
   <div class="field{% if form.show_school_organizers.errors %} error{% endif %}">
     <label for="id_show_school_organizers">
+	    <div class="help_block hint block">{{ _('Hide the list of school organizers if you don\'t want it to appear on the school home page sidebar.') }}</div>
       {{ form.show_school_organizers }}
       {{ _('Show School Organizers.') }}
     </label>
-    <span class="hint block">{{ _('Hide the list of school organizers if you don\'t want it to appear on the school home page sidebar.') }}</span>
     {{ form.show_school_organizers.errors }}
   </div>
   <div class="field{% if form.sidebar_width.errors %} error{% endif %}">
     <label for="id_sidebar_width">{{ _('Width') }}</label>
-    <span class="hint block">{{ _('Update this value so the school logo fits nicelly on the school home page sidebar.') }}</span>
+    <div class="help_block hint block">{{ _('Update this value so the school logo fits nicelly on the school home page sidebar.') }}</div>
     {{ form.sidebar_width }}
     {{ form.sidebar_width.errors }}
   </div>
@@ -25,48 +25,48 @@
   <div class="field{% if form.headers_color.errors %} error{% endif %}">
     <div id="headers_colorpicker"></div>    
     <label for="id_headers_color">{{ _('Headers Color') }}</label>
-    <span class="hint block">{{ _('This color will be used for the headers of pages associated with this school.') }}</span>
+    <div class="help_block hint block">{{ _('This color will be used for the headers of pages associated with this school.') }}</div>
     {{ form.headers_color }}
     {{ form.headers_color.errors }}
   </div>
   <div class="field{% if form.headers_color_light.errors %} error{% endif %}">
     <div id="headers_light_colorpicker"></div>
     <label for="id_headers_color_light">{{ _('Lighter Headers Color') }}</label>
-    <span class="hint block">{{ _('Lighter variant of the headers color.') }}</span>
+    <div class="help_block hint block">{{ _('Lighter variant of the headers color.') }}</div>
     {{ form.headers_color_light }}
     {{ form.headers_color_light.errors }}
   </div>
   <div class="field{% if form.background_color.errors %} error{% endif %}">
     <div id="background_colorpicker"></div>
     <label for="id_background_color">{{ _('Background Color') }}</label>
-    <span class="hint block">{{ _('This color will be used as background for the non-striped sections of the pages associated with this school.') }}</span>
+    <div class="help_block hint block">{{ _('This color will be used as background for the non-striped sections of the pages associated with this school.') }}</div>
     {{ form.background_color }}
     {{ form.background_color.errors }}
   </div>
   <div class="field{% if form.menu_color.errors %} error{% endif %}">
     <div id="menu_colorpicker"></div>
     <label for="id_menu_color">{{ _('Menus Color') }}</label>
-    <span class="hint block">{{ _('This color will be used as background for the menus of the pages associated with this school.') }}</span>
+    <div class="help_block hint block">{{ _('This color will be used as background for the menus of the pages associated with this school.') }}</div>
     {{ form.menu_color }}
     {{ form.menu_color.errors }}
   </div>
   <div class="field{% if form.menu_color_light.errors %} error{% endif %}">
     <div id="menu_light_colorpicker"></div>
     <label for="id_menu_color_light">{{ _('Lighter Menus Color') }}</label>
-    <span class="hint block">{{ _('Lighter variant of the menus color.') }}</span>
+    <div class="help_block hint block">{{ _('Lighter variant of the menus color.') }}</div>
     {{ form.menu_color_light }}
     {{ form.menu_color_light.errors }}
   </div>
   <br>
   <div class="field extra_styles{% if form.extra_styles.errors %} error{% endif %}">
     <label for="id_extra_styles">{{ _('Custom Styles (Advanced)') }}</label>
-    <span class="hint block">{{ _('Customize CSS styles for the school home page and groups.') }}</span>
+    <div class="help_block hint block">{{ _('Customize CSS styles for the school home page and groups.') }}</div>
     {{ form.extra_styles }}
     {{ form.extra_styles.errors }}
   </div>
   <p class="buttons">
-    <a class="button" href="{{ school.get_absolute_url }}">{{ _('Cancel') }}</a>
-    <button type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>
+	  <button class="btn btn-primary" type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>
+    <a class="btn" href="{{ school.get_absolute_url }}">{{ _('Cancel') }}</a>
   </p>
 </form>
 </fieldset>

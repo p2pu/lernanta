@@ -13,22 +13,12 @@ var Lernanta = window.Lernanta || {};
     "use strict";
     var init = function () {
         $(function () {
-            $(".p2pu-tab").click(function () {
-                var $this = $(this),
-                    panel = $(".p2pu-panel-wrap"),
-                    icon_name = 'icon-chevron-sign-',
-                    icon = $this.find('i');
-
-                panel.slideToggle("fast", function () {
-                    var $this = $(this);
-                    if ($this.is(':visible')) {
-                        icon.attr('class', icon_name + 'up');
-                    } else {
-                        icon.attr('class', icon_name + 'down');
-                    }
-                });
+            $(".p2pu-tab").p2puSlider({
+                navbarContainer: '.navbar',
+                icon: '.p2pu-tab-icon',
+                iconUp: 'icon-chevron-sign-down',
+                iconDown: 'icon-chevron-sign-up'
             });
-
             $('.community-member').tooltip({
                 placement: 'bottom'
             });

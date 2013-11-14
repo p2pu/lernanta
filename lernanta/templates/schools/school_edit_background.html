@@ -16,17 +16,19 @@
   <p class="hint">{{ _('Upload an image file from your computer:') }}</p>  
   <div class="field{% if form.background.errors %} error{% endif %}">
     <input type="file" name="background" id="id_background"/>
-    <small class="hint block">{{ _('File Types: JPG, GIF or PNG only') }}<br/> {{ _('Max size:') }} {{ _('700k') }} <br/> {{ _('Dimensions:') }} {{ _('20x60 pixels') }}</small>
+    <div class="help_block">
+	    <small class="hint block">{{ _('File Types: JPG, GIF or PNG only') }}<br/> {{ _('Max size:') }} {{ _('700k') }} <br/> {{ _('Dimensions:') }} {{ _('20x60 pixels') }}</small>
+	  </div>
     {{ form.background.errors }}
   </div>
   <p class="buttons">
-    <a class="button" href="{{ school.get_absolute_url }}">{{ _('Cancel') }}</a>
-    <button type="submit" value="{{ _('Upload') }}">{{ _('Upload') }}</button>
+	  <button class="btn btn-primary" type="submit" value="{{ _('Upload') }}">{{ _('Upload') }}</button>
+    <a class="btn" href="{{ school.get_absolute_url }}">{{ _('Cancel') }}</a>
   </p>
 </form>
 <p class="picture-preview">
   {% if school.background %}
-  <img src="{{ MEDIA_URL }}{{ school.background }}" class="school picture"/>
+  <img src="{{ MEDIA_URL }}{{ school.background }}" class="school picture img-polaroid"/>
   {% else %}
   <img src="{{ STATIC_URL }}images/bg.grey.png" alt="school image" class="school picture"/>
 {% endif %}

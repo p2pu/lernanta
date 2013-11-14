@@ -9,7 +9,7 @@
             <div class="blog-feed-wrap">
                 <h4>
                     <a href="{{ entry.link }}" target="_blank">
-                        {{ entry.title }} <i class="icon-chevron-right"></i>
+                        {{ entry.title|truncatewords:17 }} <i class="icon-chevron-right"></i>
                     </a>
                 </h4>
 

@@ -1,0 +1,110 @@
+{% load i18n %}
+{% load l10n_tags %}
+{% load learn_tags %}
+<section>
+	<span id="reports" class="top-offset-span">&nbsp;</span>
+
+	<div class="container">
+		<a href="#top-page" class="pull-right back-to-top-link"><i class="icon-angle-up"> </i></a>
+
+		<h1 class="section-title">{% trans 'Lab Reports' %}</h1>
+
+		<div class="billboard clearfix">
+
+			<div class="featured-items-wrap courses">
+				<div class="section-caption span3">
+
+					<p>
+						{% blocktrans %}
+							P2PU Lab Reports are our way of reflecting on the experiments and
+							collaborations we've worked on. We're continually adding new reports
+							to this collection, and thinking of new ways to present our results to
+							the world.
+						{% endblocktrans %}
+					</p>
+
+					<div class="controls">
+						<a class="btn btn-option" href="http://reports.p2pu.org" target="_blank">{% trans 'See All Reports' %}<i
+								class="icon-chevron-sign-right"></i>
+						</a>
+					</div>
+				</div>
+				<ul class="featured-items-list unstyled pull-right">
+						<li class="featured-items-item span3">
+							<div class="thumbnail featured-items-item-wrap">
+								<div class="featured-items-img-wrap">
+									<img class="featured-items-img"
+									     src="{{ STATIC_URL }}images/homepage/reports/berlin.jpg">
+								</div>
+								<div class="featured-items-item-caption">
+									<h4 class="featured-items-item-caption-title">
+										{% trans 'Guide to Running a Pop-up Office' %}
+									</h4>
+
+									<p class="featured-items-item-caption-text">
+										What happens when you ask virtual workers and volunteers to move to Berlin for a month,
+										and work in a pop-up office experiment.
+									</p>
+								</div>
+								<div class="featured-items-item-controls">
+									<a href="http://reports.p2pu.org/berlin/berlin_index.html"
+									   class="btn btn-primary btn-mini"  target="_blank">{% trans 'Check out' %}</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="featured-items-item span3">
+							<div class="thumbnail featured-items-item-wrap">
+								<div class="featured-items-img-wrap">
+									<img class="featured-items-img"
+									     src="{{ STATIC_URL }}images/homepage/reports/schoolofed.jpg">
+								</div>
+								<div class="featured-items-item-caption">
+									<h4 class="featured-items-item-caption-title">
+										{% trans 'School of Ed' %}
+									</h4>
+
+									<p class="featured-items-item-caption-text">
+										How can the web be used to help teachers have
+										rich and rewarding professional development experiences?
+										<br><br>
+									</p>
+								</div>
+								<div class="featured-items-item-controls">
+									<a href="http://reports.p2pu.org/school_of_ed/soe_index.html"
+									   class="btn btn-primary btn-mini" target="_blank">{% trans 'Check out' %}</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="featured-items-item span3">
+							<div class="thumbnail featured-items-item-wrap">
+								<div class="featured-items-img-wrap">
+									<img class="featured-items-img"
+									     src="{{ STATIC_URL }}images/homepage/reports/mooc_maker.png">
+								</div>
+								<div class="featured-items-item-caption">
+									<h4 class="featured-items-item-caption-title">
+										{% trans 'MOOC Maker' %}
+									</h4>
+
+									<p class="featured-items-item-caption-text">
+										How we built a free, open, mechanised MOOC learning
+										experience for less than the cost of an average textbook.
+										<br><br><br>
+									</p>
+								</div>
+								<div class="featured-items-item-controls">
+									<a href="http://reports.p2pu.org/mooc_maker/mooc_maker_index.html"
+									   class="btn btn-primary btn-mini" target="_blank">{% trans 'Check out' %}</a>
+								</div>
+							</div>
+						</li>
+
+
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</section>

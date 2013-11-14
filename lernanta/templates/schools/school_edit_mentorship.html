@@ -10,19 +10,19 @@
   {% csrf_token %}
   <div class="field{% if form.mentor_form_url.errors %} error{% endif %}">
     <label for="id_mentor_form_url">{{ _('Mentor Form Url') }}</label>
-    <span class="hint block">{{ _('Provide url for users to signup as mentors.') }}</span>
+    <div class="help_block hint block">{{ _('Provide url for users to signup as mentors.') }}</div>
     {{ form.mentor_form_url }}
     {{ form.mentor_form_url.errors }}
   </div>
   <div class="field description{% if form.mentee_form_url.errors %} error{% endif %}">
     <label for="id_mentee_form_url">{{ _('Mentee Form Url') }}</label>
-    <span class="hint block">{{ _('Provide url for users to signup as mentees.') }}</span>
+    <div class="help_block hint block">{{ _('Provide url for users to signup as mentees.') }}</div>
     {{ form.mentee_form_url }}
     {{ form.mentee_form_url.errors }}
   </div>
   <p class="buttons">
-    <a class="button" href="{{ school.get_absolute_url }}">{{ _('Cancel') }}</a>
-    <button type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>
+	  <button class="btn btn-primary" type="submit" value="{{ _('Save') }}">{{ _('Save') }}</button>
+    <a class="btn" href="{{ school.get_absolute_url }}">{{ _('Cancel') }}</a>
   </p>
 </form>
 </fieldset>

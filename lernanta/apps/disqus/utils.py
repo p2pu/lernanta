@@ -3,6 +3,7 @@ import hashlib
 import hmac
 import simplejson
 import time
+import requests
 
 from django.conf import settings
 from django.contrib.sites.models import Site
@@ -43,3 +44,14 @@ def get_disqus_sso(user):
     )
 
     return disqus_login_s3
+
+
+def get_thread(ident):
+    url = 'https://disqus.com/api/3.0/threads/details.json'
+    params = {
+        'api_key': settings.DISQUS_PUBLIC_KEY,
+        'forum': settings.DISQUS_SHORTNAME,
+        'thread:ident': ident
+    }
+    res = requests.get(url, params=params)
+    return res.json

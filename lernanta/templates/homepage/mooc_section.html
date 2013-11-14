@@ -1,59 +1,102 @@
 {% load i18n %}
 
 <section>
-    <span id="moocs" class="top-offset-span">&nbsp;</span>
+	<span id="moocs" class="top-offset-span">&nbsp;</span>
 
 
-    <div class="container">
-        <div class="section-title-wrap">
-            <h1 class="section-title">MOOCs</h1>
-            <a href="#top-page" class="pull-right back-to-top-link"><i class="icon-angle-up"> </i></a>
-        </div>
-        <div class="billboard">
-            <div class="moocs">
-                <div class="section-caption span3">
+	<div class="container">
+		<a href="#top-page" class="pull-right back-to-top-link"><i class="icon-angle-up"> </i></a>
+
+		<h1 class="section-title">MOOCs</h1>
+
+		<div class="billboard clearfix">
+			<div class="featured-items-wrap courses">
+				<div class="section-caption span3">
 
 
-                    <p>
-                        {% blocktrans %}We have run MOOCs on Learning Python, Creative Learning (with the MIT Media Lab)
-                        and Data skills. Our MOOCs are big learning communities that run on the web. Lots of
-                        people sign up, and we facilitate collaboration and team work.{% endblocktrans %}
-                    </p>
+					<p>
+						{% blocktrans %}We have run MOOCs on Learning Python, Creative Learning (with the MIT Media Lab)
+						                and Data skills. Our MOOCs are big learning communities that run on the web. Lots of
+						                people sign up, and we facilitate collaboration and team work.{% endblocktrans %}
+					</p>
 
-                    <div class="controls">
-                        <a class="p2pu-btn-silver" href="http://mechanicalmooc.org/">{% trans 'Find out more' %} <i
-                                class="icon-chevron-sign-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="featured-items-wrap schools">
-                    <ul class="featured-items-list pull-right">
-                    <li class="featured-items-item span8">
-                        <div class="featured-items-item-wrap">
-                            <div class="featured-items-item-caption">
-                                <h4>{% trans 'A Gentle Introduction to Python' %}</h4>
-                                <img
-                                 src="{{ STATIC_URL }}images/mechanicalmooc-banner.jpg">
-                                <h4>{% trans 'Free & Open.' %}</h4>
-                                <p>
-                                    {% blocktrans %}A Gentle Introduction to Python is 100% free, just like all OpenCourseWare.
-                                    Anyone can join, and you're welcome to share your work.{% endblocktrans %}
-                                </p>
-                                <h4>{% trans 'Learning Powerhouse.' %}</h4>
-                                    {% blocktrans %}Pick up Python from leading innovators in online learning. MIT's chops.
-                                    Codecademy's exercises. OpenStudy's study groups. P2PU's community.
-                                    Need we say more?{% endblocktrans %}
-                                </p>
-                                <p>
-                                <h4>{% trans 'Weekly Lessons.' %}</h4>
-                                    {% blocktrans %}Make friends with some smarties, and start programming from Week 1.{% endblocktrans %}
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+					<div class="controls">
+
+					</div>
+				</div>
+				<ul class="unstyled featured-items-list">
+					<li class="featured-items-item span3">
+						<div class="thumbnail featured-items-item-wrap">
+							<div class="featured-items-img-wrap">
+								<img class="featured-items-img" src="{{ STATIC_URL }}images/playwithyourmusic_banner.jpg">
+							</div>
+							<div class="featured-items-item-caption">
+								<h4>{% trans 'Play With Your Music' %}</h4>
+
+								<p class="featured-items-item-caption-text">
+								{% blocktrans %}
+									Play With the Music You Love, Fiddle With lLoops, Time,Tempo and Vocals on Your Favorite Tracks.
+								  (Re)Mix in the Browser Using Soundation, SoundCloud and Google Hangout.
+									All you'll need to get started is a computer and an internet connection.
+								{% endblocktrans %}
+								</p>
+							</div>
+							<div class="featured-items-item-controls">
+								<a class="btn btn-discrete btn-mini" target="_blank"
+								   href="http://www.playwithyourmusic.org/">{% trans 'Join in' %}
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="featured-items-item span3">
+						<div class="thumbnail featured-items-item-wrap">
+							<div class="featured-items-img-wrap">
+								<img class="featured-items-img" src="{{ STATIC_URL }}images/dlmooc_banner.jpg">
+							</div>
+							<div class="featured-items-item-caption">
+								<h4>{% trans 'Deeper Learning MOOC' %}</h4>
+
+								<p class="featured-items-item-caption-text">
+									{% blocktrans %}
+										An overview course that introduces Deeper Learning theory and how it can be applied.
+										DLMOOC is aimed at teachers, school leaders, and other educators
+										who are interested in encouraging more deeper learning in their
+										schools and classrooms.
+									{% endblocktrans %}
+								</p>
+							</div>
+							<div class="featured-items-item-controls pull-right">
+								<a class="btn btn-discrete btn-mini" target="_blank"
+								   href="http://dlmooc.deeper-learning.org/">{% trans 'Join in' %}
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="featured-items-item span3">
+						<div class="thumbnail featured-items-item-wrap">
+							<div class="featured-items-img-wrap">
+								<img class="featured-items-img" src="{{ STATIC_URL }}images/mechanicalmooc-banner.jpg">
+							</div>
+							<div class="featured-items-item-caption">
+								<h4>{% trans 'A Gentle Introduction to Python' %}</h4>
+
+								<p class="featured-items-item-caption-text">
+									{% blocktrans %}
+										Pick up Python from leading innovators in online learning. MIT's chops.
+										Make friends with some smarties, and start programming from Week 1.
+										100% free, just like all OpenCourseWare. Anyone can join.
+									{% endblocktrans %}
+								</p>
+							</div>
+							<div class="featured-items-item-controls pull-right">
+								<a class="btn btn-discrete btn-mini" target="_blank"
+								   href="http://mechanicalmooc.org/">{% trans 'Join in' %}
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </section>

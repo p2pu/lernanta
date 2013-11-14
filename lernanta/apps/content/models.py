@@ -125,7 +125,11 @@ class Page(ModelBase):
             '-created_on')
 
     def can_comment(self, user, reply_to=None):
-        return self.project.is_participating(user)
+        conditions = [
+            self.project.is_participating(user),
+            not self.project.archived
+        ]
+        return all(conditions)
 
     def get_comment_url(self, comment, user):
         comment_index = 0

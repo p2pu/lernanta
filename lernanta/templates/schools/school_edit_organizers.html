@@ -5,7 +5,7 @@
 {% block form %}
 <fieldset id="school_edit_organizers" class="school edit organizers tabpane">
 <h2>{{ _('School Organizers') }}</h2>
-<p class="hint">{{ _('View, add and remove organizers of your school.') }}</p>
+<p class="help_block hint">{{ _('View, add and remove organizers of your school.') }}</p>
 <form action="{% locale_url schools_edit_organizers slug=school.slug %}" method="post">
   {% csrf_token %}
   <p>
@@ -16,12 +16,12 @@
     </div>
   </p>
   <p class="buttons add-organizer">
-    <button type="submit">{{ _('Add') }}</button>
+    <button class="btn btn-primary" type="submit">{{ _('Add') }}</button>
   </p>
 </form>
 
 {% if school.organizers.all %}
-<table>
+<table class="table">
 <thead>
   <tr>
     <th>{{ _('Name') }}</th>

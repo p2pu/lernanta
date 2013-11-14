@@ -1,69 +1,89 @@
 {% load i18n %}
 {% load learn_tags %}
 
-<ul class="actions unstyled">
-    <li>
-        <a href="#courses" class="icon-courses">
-            <div class="actions-icons"></div>
+<ul class="actions unstyled clearfix">
+	<li>
+		<a href="#blog" class="icon-blog">
+			<div class="actions-icons"></div>
+
+			<h2>{% trans 'Blog' %} <i class="icon-double-angle-right"></i></h2>
+		</a>
+
+		<p>
+			{% blocktrans %}Get the latest news and updates from P2PU. New projects. Big ideas.{% endblocktrans %}
+		</p>
+	</li>
+	<li>
+		<a href="#community" class="icon-community">
+			<div class="actions-icons"></div>
+
+			<h2>{% trans 'Community' %} <i class="icon-double-angle-right"></i></h2>
+		</a>
+
+		<p>
+			{% blocktrans %}The core of P2PU is an open community. We are building a new university together. Join
+			                us!{% endblocktrans %}
+		</p>
+	</li>
+	<li>
+		<a href="#moocs" class="icon-moocs">
+			<div class="actions-icons"></div>
+
+			<h2>{% trans 'MOOCs' %} <i class="icon-double-angle-right"></i></h2>
+		</a>
+
+		<p>
+			{% blocktrans %}Our MOOCs are big learning communities that run on the web.
+			                Lots of people sign up, and we facilitate collaboration and team work.{% endblocktrans %}
+		</p>
+	</li>
+	<li>
+		<a href="#reports" class="icon-reports">
+			<div class="actions-icons"></div>
+
+			<h2>{% trans 'Lab Reports' %} <i class="icon-double-angle-right"></i></h2>
+		</a>
+
+		<p>
+			{% blocktrans %}Our way of sharing the results of our experiments,
+			                collaborations and best practice with our community and the world.{% endblocktrans %}
+		</p>
+	</li>
+
+	<li>
+		<a href="#badges" class="icon-badges">
+			<div class="actions-icons"></div>
+			<h2>{% trans 'Badges' %} <i class="icon-double-angle-right"></i></h2>
+		</a>
+
+		<p>
+			{% blocktrans %}Get feedback and receive a badge for projects you care about.
+			                Or create a new badge and let people submit their work.{% endblocktrans %}
+		</p>
+	</li>
+	<li>
+		<a href="#schools" class="icon-schools">
+			<div class="actions-icons"></div>
+
+			<h2>{% trans 'Schools' %} <i class="icon-double-angle-right"></i></h2>
+		</a>
+
+		<p>
+			{% blocktrans %}Schools are communities that form around specific topic areas. They run courses,
+			                organize webinars, and create badges together.{% endblocktrans %}
+		</p>
+	</li>
+	<li>
+		<a href="#courses" class="icon-courses">
+			<div class="actions-icons"></div>
 
 
-            <h2>{% trans 'Courses' %} <i class="icon-double-angle-right"></i></h2>
-        </a>
-        <p>
-            {% blocktrans %}Take a course to learn something new. Or create a course to share what you know with others.{% endblocktrans %}
-        </p>
-    </li>
-    <li>
-        <a href="#badges" class="icon-badges">
-            <div class="actions-icons"></div>
-            <h2>{% trans 'Badges' %} <i class="icon-double-angle-right"></i></h2>
-        </a>
-        <p>
-            {% blocktrans %}Get feedback and receive a badge for projects you care about.
-            Or create a new badge and let people submit their work.{% endblocktrans %}
-        </p>
-    </li>
-    <li>
-        <a href="#schools" class="icon-schools">
-            <div class="actions-icons"></div>
+			<h2>{% trans 'Courses' %} <i class="icon-double-angle-right"></i></h2>
+		</a>
 
-            <h2>{% trans 'Schools' %} <i class="icon-double-angle-right"></i></h2>
-        </a>
-        <p>
-            {% blocktrans %}Schools are communities that form around specific topic areas. They run courses,
-            organize webinars, and create badges together.{% endblocktrans %}
-        </p>
-    </li>
-    <li>
-        <a href="#moocs" class="icon-moocs">
-            <div class="actions-icons"></div>
-
-            <h2>{% trans 'MOOCs' %} <i class="icon-double-angle-right"></i></h2>
-        </a>
-        <p>
-            {% blocktrans %}Our MOOCs are big learning communities that run on the web.
-            Lots of people sign up, and we facilitate collaboration and team work.{% endblocktrans %}
-        </p>
-    </li>
-    <li>
-        <a href="#blog" class="icon-blog">
-            <div class="actions-icons"></div>
-
-            <h2>{% trans 'Blog' %} <i class="icon-double-angle-right"></i></h2>
-        </a>
-        <p>
-            {% blocktrans %}Get the latest news and updates from P2PU. New projects. Big ideas.{% endblocktrans %}
-        </p>
-    </li>
-    <li>
-        <a href="#community" class="icon-community">
-            <div class="actions-icons"></div>
-
-            <h2>{% trans 'Community' %} <i class="icon-double-angle-right"></i></h2>
-        </a>
-
-        <p>
-            {% blocktrans %}The core of P2PU is an open community. We are building a new university together. Join us!{% endblocktrans %}
-        </p>
-    </li>
+		<p>
+			{% blocktrans %}Take a course to learn something new. Or create a course to share what you know with
+			                others.{% endblocktrans %}
+		</p>
+	</li>
 </ul>

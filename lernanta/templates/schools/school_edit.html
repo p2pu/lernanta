@@ -4,31 +4,60 @@
 {% block title %}{{ _('Edit School') }}{% endblock %}
 {% block bodyid %}school_edit{% endblock %}
 
-{% block body %}
-<section class="modal row-fluid">
-  <article>
-    <h1>
-      <span class="school_header">{{ _('Edit School') }}</span>
-      <a class="pester back_link" href="{{ school.get_absolute_url }}">({{ _('View School') }})</a>
-    </h1>
-    <nav id="school-edit-nav" class="tabs">
-      <ul>
-	    <li class="summary {% if summary_tab %}active{% endif %}"><a href="{% locale_url schools_edit slug=school.slug %}">{{ _('Summary') }}</a></li>
-        <li class="styles {% if styles_tab %}active{% endif %}"><a href="{% locale_url schools_edit_styles slug=school.slug %}">{{ _('Appearance') }}</a></li>
-        <li class="logo {% if logo_tab %}active{% endif %}"><a href="{% locale_url schools_edit_logo slug=school.slug %}">{{ _('Logo') }}</a></li>
-        <li class="groups_icon {% if groups_icon_tab %}active{% endif %}"><a href="{% locale_url schools_edit_groups_icon slug=school.slug %}">{{ _('Small Logo') }}</a></li>
-        <li class="background {% if background_tab %}active{% endif %}"><a href="{% locale_url schools_edit_background slug=school.slug %}">{{ _('Background') }}</a></li>
-        <li class="site_logo {% if site_logo_tab %}active{% endif %}"><a href="{% locale_url schools_edit_site_logo slug=school.slug %}">{{ _('Site Logo') }}</a></li>
-        <li class="organizers {% if organizers_tab %}active{% endif %}"><a href="{% locale_url schools_edit_organizers slug=school.slug %}">{{ _('School Organizers') }}</a></li>
-        <li class="featured {% if featured_tab %}active{% endif %}"><a href="{% locale_url schools_edit_featured slug=school.slug %}">{{ _('Featured') }}</a></li>
-        <li class="membership {% if membership_tab %}active{% endif %}"><a href="{% locale_url schools_edit_membership slug=school.slug %}">{{ _('Membership') }}</a></li>
-        <li class="mentorship {% if mentorship_tab %}active{% endif %}"><a href="{% locale_url schools_edit_mentorship slug=school.slug %}">{{ _('Mentorship') }}</a></li>
-        <li class="statistics {% if statistics_tab %}active{% endif %}"><a href="{% locale_url schools_edit_statistics slug=school.slug %}">{{ _('Statistics') }}</a></li>
-      </ul>
-    </nav>
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/schools/schools.css">
+{% endblock %}
+{% block head_js%}<script src="{{ STATIC_URL }}ckeditor/ckeditor/ckeditor.js"></script>{% endblock %}
 
-    {% block form %}{% endblock %}
-  </article>
-</section>
+{% block body %}
+	<div class="container">
+		<article>
+			<h1>
+				<span class="school_header">{{ _('Edit School') }}</span>
+				<a class="pester back_link" href="{{ school.get_absolute_url }}">({{ _('View School') }})</a>
+			</h1>
+
+			<div class="row">
+				<nav id="school-edit-nav" class="span3 nav nav-list">
+					<ul class="unstyled side-nav">
+						<li class="summary {% if summary_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit slug=school.slug %}">{{ _('Summary') }}</a></li>
+						<li class="styles {% if styles_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_styles slug=school.slug %}">{{ _('Appearance') }}</a></li>
+						<li class="logo {% if logo_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_logo slug=school.slug %}">{{ _('Logo') }}</a></li>
+						<li class="groups_icon {% if groups_icon_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_groups_icon slug=school.slug %}">{{ _('Small Logo') }}</a></li>
+						<li class="background {% if background_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_background slug=school.slug %}">{{ _('Background') }}</a></li>
+						<li class="site_logo {% if site_logo_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_site_logo slug=school.slug %}">{{ _('Site Logo') }}</a></li>
+						<li class="organizers {% if organizers_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_organizers slug=school.slug %}">{{ _('School Organizers') }}</a></li>
+						<li class="featured {% if featured_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_featured slug=school.slug %}">{{ _('Featured') }}</a></li>
+						<li class="membership {% if membership_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_membership slug=school.slug %}">{{ _('Membership') }}</a></li>
+						<li class="mentorship {% if mentorship_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_mentorship slug=school.slug %}">{{ _('Mentorship') }}</a></li>
+						<li class="statistics {% if statistics_tab %}active{% endif %} nav-item"><a
+								href="{% locale_url schools_edit_statistics slug=school.slug %}">{{ _('Statistics') }}</a></li>
+					</ul>
+				</nav>
+
+				{% block form %}{% endblock %}
+			</div>
+		</article>
+	</div>
 {% endblock %}
 
+{% block jquey %}
+<script src="{{ STATIC_URL }}js/libs/jquery-1.8.2.min.js"></script>
+{% endblock %}
+
+{% block js %}
+	<script src="{{ STATIC_URL }}js/libs/jquery-ui-1.9.1.custom.min.js"></script>
+	<script src="/static/js/trunk8.js"></script>
+	<script src="{{ STATIC_URL }}js/script.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/libs/farbtastic/src/farbtastic.js"></script>
+{% endblock %}

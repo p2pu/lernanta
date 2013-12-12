@@ -23,7 +23,8 @@
 					</p>
 
 					<div class="controls">
-						<a class="btn btn-option" href="{% learn_default %}">{% trans 'Find a course' %}<i
+						<a class="btn btn-option" href="{% learn_default %}" target="_blank">
+							{% trans 'Find a course' %}<i
 								class="icon-chevron-sign-right"></i>
 						</a>
 					</div>
@@ -44,7 +45,7 @@
 									</p>
 								</div>
 								<div class="featured-items-item-controls">
-									<a href="{{ course.url }}"
+									<a href="{{ course.url }}" target="_blank"
 									   class="btn btn-primary btn-mini">{% trans 'Learn' %}</a>
 								</div>
 							</div>

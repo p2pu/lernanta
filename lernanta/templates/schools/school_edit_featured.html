@@ -55,6 +55,11 @@
 
 
 {% block js %}
+	<script src="{{ STATIC_URL }}js/libs/jquery-ui-1.9.1.custom.min.js"></script>
+	<script src="/static/js/trunk8.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/libs/farbtastic/src/farbtastic.js"></script>
+
+
   <script type="text/javascript">
     $('#id_course_title').autocomplete({
         source: "{% locale_url learn_auto_complete_lookup %}",

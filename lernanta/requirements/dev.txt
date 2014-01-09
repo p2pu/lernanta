@@ -13,4 +13,4 @@ mock==1.0.1
 
 -e git+https://github.com/jbalogh/django-nose#egg=django-nose
 -e git+https://github.com/jbalogh/test-utils#egg=test-utils
--e git+https://github.com/django-debug-toolbar/django-debug-toolbar.git#egg=django-debug-toolbar
+-e git://github.com/robhudson/django-debug-toolbar.git@930f33bfe9526cc7b917853da473a358ec5fc071#egg=django_debug_toolbar-master#egg=django-debug-toolbar

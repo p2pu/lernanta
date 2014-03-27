@@ -44,10 +44,10 @@ def _get_course_db(course_uri):
     course_id = course_uri2id(course_uri)
     try:
         course_db = db.Course.objects.get(id=course_id)
-        if course_db.deleted:
-            raise ResourceDeletedException
     except:
         raise ResourceNotFoundException
+    if course_db.deleted:
+        raise ResourceDeletedException
     return course_db
 
 
@@ -113,7 +113,10 @@ def get_user_courses(user_uri):
     signups = db.CohortSignup.objects.filter(user_uri=user_uri, leave_date__isnull=True, cohort__course__archived=False)
     courses = []
     for signup in signups:
-        course = get_course(course_id2uri(signup.cohort.course.id)) 
+        try:
+            course = get_course(course_id2uri(signup.cohort.course.id))
+        except ResourceDeletedException:
+            continue
         course_data = {
             "id": course['id'],
             "title": course['title'],
@@ -320,9 +323,19 @@ def unpublish_course(course_uri):
     return course
 
 
-def mark_course_as_spam(course_uri):
+def delete_spam_course(course_uri):
     course_db = _get_course_db(course_uri)
     course_db.deleted = True
+    course_db.save()
+    # remove the course listing
+    course_url = reverse(
+        'courses_slug_redirect',
+        kwargs={'course_id': course_db.id}
+    )
+    lists = learn_model.get_lists_for_course(course_url)
+    for course_list in lists:
+        learn_model.remove_course_from_list(course_url, course_list['name'])
+    learn_model.remove_course_listing(course_url)
 
 
 def get_course_content(course_uri):

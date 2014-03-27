@@ -1,7 +1,4 @@
 {% load l10n_tags %}
-<!-- Article tag currently unused in new mock up; Code retained for possible reference to intended background change based on school -->
-<!--  <article class="project card {% if project.accepted_school %}background-{{ project.accepted_school.slug }}{% endif%}"> ... </article>  -->
-
 <div class="thumbnail">
   <a href="{{ project.url }}">
     {% if project.thumbnail_url %}
@@ -14,25 +11,4 @@
     <h3><a href="{{ project.url }}">{{ project.title }}<br /></a></h3>
     <p>{{ project.description }}</p>
   </div>
-  <!--div class="well well-large">
-    {% if project.duration_hours %}
-      <dl>
-        <dt><span class="label">{{ _('Time to Finish') }}</span></dt>
-          <dd><span class="badge"> {{ project.duration_hours }} {{ _('hrs') }}</span></dd>
-      </dl>
-    {% endif %}
-    <dl>
-      <dt><span class="label">{{ _('Peers') }}</span></dt>
-        <dd><span class="badge">{{ project.participants.count }}</span></dd>
-    </dl>
-    <dl>
-      {% if project.is_challenge %}  
-        <dt><span class="label">{{ _('Badges') }}</span></dt>
-          <dd><span class="badge">{{ project.get_badges.count }}</span></dd>
-      {% else %}
-        <dt><span class="label">{{ _('Followers') }}</span></dt>
-          <dd><span class="badge">{{ project.non_participant_followers.count }}</span></dd>
-      {% endif %}
-    </dl>
-  </div-->
 </div>

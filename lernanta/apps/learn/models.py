@@ -150,6 +150,9 @@ def remove_course_listing(course_url):
     course_listing_db = _get_listed_courses().get(url=course_url)
     course_listing_db.date_removed = datetime.datetime.utcnow()
     course_listing_db.save()
+    # TODO - what about lists that the course may be in?
+    # Delete course tags
+    course_listing_db.coursetags_set.all().delete()
 
 
 def create_list(name, title, url):

@@ -329,6 +329,8 @@ BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',
     'Speedy Spider', 'DotBot', 'Sogou', 'YoudaoBot',
     'YandexBot', 'rogerbot']
 
+HELP_URL = 'http://thepeople.p2pu.org/t/user-support-help-p2pu-org/18'
+
 ##################################################################
 # Badges integration settings
 #################################################################

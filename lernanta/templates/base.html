@@ -84,7 +84,7 @@
             <ul class="nav pull-right right-links">
               <li ><a class="right-link-1" href="http://info.p2pu.org/about" target="_blank">{{ _('About') }}</a></li>
               <li ><a class="right-link-2" href="http://info.p2pu.org" target="_blank">{{ _('Blog') }}</a></li>
-              <li><a class="right-link-2" href="http://help.p2pu.org" id="help-link" target="_blank">{{ _('Help') }}</a></li>              
+              <li><a class="right-link-2" href="{{ settings.HELP_URL }}" id="help-link" target="_blank">{{ _('Help') }}</a></li>              
               <li class="dropdown" id="user-dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   {% if user.get_profile %}
@@ -115,7 +115,7 @@
             <ul class="nav pull-right right-links">
               <li ><a class="right-link-1" href="http://info.p2pu.org/about" target="_blank">{{ _('About') }}</a></li>
               <li ><a class="right-link-2" href="http://info.p2pu.org" target="_blank">{{ _('Blog') }}</a></li>
-              <li><a class="right-link-2" href="http://help.p2pu.org" id="help-link" target="_blank">{{ _('Help') }}</a></li>
+              <li><a class="right-link-2" href="{{ settings.HELP_URL }}" id="help-link" target="_blank">{{ _('Help') }}</a></li>
               <li class="divider-vertical right-divider"></li>
               <li><a class="right-link-3" href="{{ login_with_redirect_url }}">{{ _('Login') }}</a></li>
             </ul>	

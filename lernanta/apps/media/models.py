@@ -18,6 +18,6 @@ def get_image(image_uri):
         return None
     image = {
         "uri": "/uri/media/image/{0}".format(image_db.id),
-        "url": image_db.image_file.url,
+        "url": image_db.image_file.url, #this needs to be https!
     }
     return image

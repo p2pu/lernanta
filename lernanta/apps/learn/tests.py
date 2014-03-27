@@ -14,6 +14,7 @@ from learn.models import get_courses_by_tags
 from learn.models import get_tags_for_courses
 from learn.models import get_active_languages
 from learn.models import get_courses_by_language
+from learn.db import CourseTags
 
 from test_utils import TestCase
 
@@ -81,11 +82,15 @@ class ProjectTests(TestCase):
     def test_remove_course(self):
         """ test that courses are removed from the course list """
 
+        self.assertEquals(CourseTags.objects.count(), 0)
         add_course_listing(**self.test_course)
+        self.assertEquals(CourseTags.objects.count(), 3)
         remove_course_listing(self.test_course['course_url'])
         listed_courses = get_listed_courses()
 
-        self.assertTrue(len(listed_courses) == 0)
+        self.assertEquals(len(listed_courses), 0)
+        self.assertEquals(CourseTags.objects.count(), 0)
+        # TODO test that course tags are also deleted
 
 
     def test_course_list(self):

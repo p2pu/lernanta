@@ -151,4 +151,16 @@ class CourseTests(TestCase):
             self.assertEqual(clone['content'][i]['title'], self.course['content'][i]['title'])
             self.assertEqual(clone['content'][i]['content'], self.course['content'][i]['content'])
 
-
+    def test_delete_spam_course(self):
+        course = course_model.create_course(
+            **{
+                "title": "A test course",
+                "hashtag": "ATC-1",
+                "description": "This course is all about ABC",
+                "language": "en",
+                "organizer_uri": '/uri/user/testuser'
+            }
+        )
+        course_model.delete_spam_course(course['uri'])
+        with self.assertRaises(course_model.ResourceDeletedException):
+            course_model.get_course(course['uri'])

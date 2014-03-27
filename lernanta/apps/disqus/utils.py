@@ -55,3 +55,14 @@ def get_thread(ident):
     }
     res = requests.get(url, params=params)
     return res.json
+
+
+def get_thread_posts(ident):
+    url = 'https://disqus.com/api/3.0/threads/listPosts.json'
+    params = {
+        'api_key': settings.DISQUS_PUBLIC_KEY,
+        'forum': settings.DISQUS_SHORTNAME,
+        'thread:ident': ident
+    }
+    res = requests.get(url, params=params)
+    return res.json

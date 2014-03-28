@@ -52,6 +52,10 @@ urlpatterns = patterns('',
         'courses.views.course_signup',
         name='courses_signup'),
 
+    url(r'^(?P<course_id>[\d]+)/delete_spam/$',
+        'courses.views.delete_spam',
+        name='courses_delete_spam'),
+
     url(r'^(?P<course_id>[\d]+)/upload_image/$',
         'courses.views.course_image',
         name='courses_image'),
@@ -123,13 +127,4 @@ urlpatterns = patterns('',
     url(r'^(?P<course_id>[\d]+)/content/(?P<content_id>[\d]+)/down/$',
         'courses.views.move_content_down',
         name='courses_content_down'),
-
-    url(r'^(?P<course_id>[\d]+)/content/(?P<content_id>[\d]+)/comment/$',
-        'courses.views.post_content_comment',
-        name='courses_post_content_comment'),
-
-    url(r'^(?P<course_id>[\d]+)/content/(?P<content_id>[\d]+)/comment/(?P<comment_id>[\d]+)/reply/$',
-        'courses.views.post_comment_reply',
-        name='courses_post_comment_reply'),
-
 )

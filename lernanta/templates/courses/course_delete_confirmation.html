@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load l10n_tags %}
+{% load i18n %}
+
+{% block title %}{{ _('Confirm course deletion') }}{% endblock %}
+{% block body %}
+<section class="modal">
+  <article>
+    <h1>{{ _('Delete Course') }}</h1>
+    <fieldset>
+      <form action="{% locale_url courses_delete_spam course_id=course.id %}" method="post">
+	      {% csrf_token %}
+        <p>
+	        <button type="submit">{{ _('Delete') }}</button>
+	        <a class="btn" href="{% locale_url courses_show course_id=course.id slug=course.slug %}">{{ _('Back') }}</a>
+        </p>
+      </form>
+    </fieldset>
+  </article>
+</section>
+{% endblock %}

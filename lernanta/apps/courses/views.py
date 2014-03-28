@@ -49,6 +49,8 @@ log = logging.getLogger(__name__)
 def _get_course_or_404( course_uri ):
     try:
         course = course_model.get_course(course_uri)
+    #except course_model.ResourceDeletedException:
+    #    raise http.
     except:
         # TODO: this masks all exceptions that may happen in get_course!
         raise http.Http404
@@ -74,6 +76,7 @@ def _populate_course_context( request, course_id, context ):
         user_uri, cohort['uri']
     )
     context['organizer'] |= request.user.is_superuser
+    context['admin'] = request.user.is_superuser
     context['can_edit'] = context['organizer'] and not course['status'] == 'archived'
     context['trusted_user'] = request.user.has_perm('users.trusted_user')
     if course_model.user_in_cohort(user_uri, cohort['uri']):
@@ -739,48 +742,16 @@ def move_content_down( request, course_id, content_id ):
 
 
 @login_required
-@require_http_methods(['POST'])
-def post_content_comment( request, course_id, content_id):
-    #TODO use form with field that sanitizes the input!
-    comment_content = request.POST.get('comment')
-    user = request.user.get_profile()
-    user_uri = u"/uri/user/{0}".format(user.username)
-    comment = comment_model.create_comment(comment_content, user_uri)
-
-    reference_uri = "/uri/content/{0}".format(content_id)
+@require_organizer
+def delete_spam(request, course_id):
     course_uri = course_model.course_id2uri(course_id)
-    cohort = course_model.get_course_cohort(course_uri)
-    course_model.add_comment_to_cohort(
-        comment['uri'], cohort['uri'], reference_uri
+    course = _get_course_or_404(course_uri)
+    if request.method == "POST":
+        course_model.delete_spam_course(course_uri)
+        return http.HttpResponseRedirect(reverse('home'))
+
+    context = { }
+    context = _populate_course_context(request, course_id, context)
+    return render_to_response('courses/course_delete_confirmation.html', 
+        context, context_instance=RequestContext(request)
     )
-
-    if request.POST.get('next_url'):
-        redirect_url = request.POST.get('next_url')
-    else:
-        redirect_url = reverse('courses_content_show',
-            kwargs={'course_id': course_id, 'content_id': content_id}
-        )
-    return http.HttpResponseRedirect(redirect_url)
-
-
-@login_required
-@require_http_methods(['POST'])
-def post_comment_reply( request, course_id, content_id, comment_id):
-    #TODO use form with field that sanitizes the input!
-    comment_content = request.POST.get('comment')
-    user = request.user.get_profile()
-    user_uri = u"/uri/user/{0}".format(user.username)
-    comment_uri = "/uri/comment/{0}".format(comment_id)
-    reply = comment_model.reply_to_comment(
-        comment_uri, comment_content, user_uri
-    )
-
-    #TODO: need to set reference so that lookup from comment works!
-
-    if request.POST.get('next_url'):
-        redirect_url = request.POST.get('next_url')
-    else:
-        redirect_url = reverse('courses_content_show',
-            kwargs={'course_id': course_id, 'content_id': content_id}
-        )
-    return http.HttpResponseRedirect(redirect_url)

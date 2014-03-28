@@ -89,19 +89,24 @@
     </div>
 
     {% if organizer %}
-      <div>
+      <p>
         <a href="{% locale_url courses_clone course_id=course.id %}" class="btn">{% trans 'Clone course' %}</a>
-      </div>
-      <hr/>
+      </p>
     {% endif %}
 
-    <div>
+    {% if admin %}
+      <p>
+        <a class="btn" href="{% locale_url courses_delete_spam course_id=course.id %}">{% trans 'Delete spam' %}</a>
+      </p>
+    {% endif %}
+
+    <p>
       <form action="{% locale_url report_abuse %}" method="post">
         {% csrf_token %}
         <input id="id_url" name="url" type="hidden" value="{{request.get_full_path}}"/>
         <button type="submit">Report abuse</button>
       </form>
-    </div>
+    </p>
 
     <!--div id="course-description">
       <h2>{% trans "Description" %}</h2>

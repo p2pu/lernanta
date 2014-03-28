@@ -114,6 +114,7 @@ MIDDLEWARE_CLASSES = (
     'commonware.middleware.FrameOptionsHeader',
     'django.middleware.locale.LocaleMiddleware',
     'users.middleware.ProfileExistMiddleware',
+    'tracker.middleware.PageViewTrackerMiddleware',
     'users.middleware.UserActivityMiddleware',
 )
 
@@ -318,10 +319,7 @@ LOGGING = {
 }
 
 TRACKING_PREFIXES = [
-    r'^/\w{2}/groups/[\w-]+/content/[\w-]+/$',
-    r'^/\w{2}/groups/[\w-]+/$',
-    r'^/\w{2}/schools/[\w-]+/sets/[\w-]+/$',
-    r'^/\w{2}/schools/[\w-]+/$',
+    r'^/\w{2}/courses/create/$',
 ]
 
 BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',

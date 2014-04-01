@@ -1,0 +1,92 @@
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+  })(window,document,'script','//www.google-analytics.com/analytics.js','hewlettOERTracker');
+
+  hewlettOERTracker('create', 'UA-5033010-1', 'auto'); 
+  hewlettOERTracker('send', 'pageview');
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+
+  {% if google_analytics_tracking_codes %}
+    {% for tracking_code in google_analytics_tracking_codes %}
+      _gaq.push(['{{ tracking_code.key }}._setAccount', '{{ tracking_code.code }}']);
+      {% if tracking_code.logged_in_status %}    
+        _gaq.push(['{{ tracking_code.key }}._setCustomVar',
+          1, 
+          'logged_in_status', 
+          {% if user.is_authenticated %}'logged_in'{% else %}'anonymous'{% endif %}, 
+          1
+        ]);
+      {% endif %}
+      {% if tracking_code.registration_event and send_registration_event %}
+        _gaq.push(['{{ tracking_code.key }}._trackEvent', 'user', 'create']);
+      {% endif %}
+      _gaq.push(['{{ tracking_code.key }}._trackPageview']);
+    {% endfor %}
+  {% endif %}
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+
+{% if google_analytics_tracking_codes %}
+  {% for tracking_code in google_analytics_tracking_codes %}
+    {% if send_registration_event and tracking_code.adwords_conversion_id and tracking_code.adwords_conversion_label %}
+      <!-- Google Code for sign_up Conversion Page -->
+      <script type="text/javascript">
+        /* <![CDATA[ */
+          var google_conversion_id = {{ tracking_code.adwords_conversion_id }};
+          var google_conversion_language = "{{ _('en') }}";
+          var google_conversion_format = "3";
+          var google_conversion_color = "ffffff";
+          var google_conversion_label = "{{ tracking_code.adwords_conversion_label }}";
+          var google_conversion_value = 0;
+        /* ]]> */
+      </script>
+      <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js"></script>
+      <noscript>
+        <div style="display:inline;">
+          <img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/{{ tracking_code.adwords_conversion_id }}/?value=0&amp;label={{ tracking_code.adwords_conversion_label }}&amp;guid=ON&amp;script=0"/>
+        </div>
+      </noscript>
+    {% endif %}
+    {% if tracking_code.chartbeat_uid %}
+      <script type="text/javascript">
+        var _sf_async_config={};
+        /** CONFIGURATION START **/
+        _sf_async_config.uid = {{ tracking_code.chartbeat_uid }};
+        _sf_async_config.domain = "{{ site.domain }}";
+        /** CONFIGURATION END **/
+        (function(){
+          function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement("script");
+            e.setAttribute("language", "javascript");
+            e.setAttribute("type", "text/javascript");
+            e.setAttribute("src",
+            (("https:" == document.location.protocol) ?
+              "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" :
+              "http://static.chartbeat.com/") +
+              "js/chartbeat.js");
+            document.body.appendChild(e);
+          }
+          var oldonload = window.onload;
+          window.onload = (typeof window.onload != "function") ?
+          loadChartbeat : function() { oldonload(); loadChartbeat(); };
+        })();
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+

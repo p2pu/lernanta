@@ -164,3 +164,37 @@ class CourseTests(TestCase):
         course_model.delete_spam_course(course['uri'])
         with self.assertRaises(course_model.ResourceDeletedException):
             course_model.get_course(course['uri'])
+
+    def test_get_courses(self):
+        user = User(username='testuser99', email='99@example.com')
+        user = create_profile(user)
+        user.save()
+
+        course = course_model.create_course(
+            **{
+                "title": "A test course",
+                "hashtag": "ATC-1",
+                "description": "This course is all about ABC",
+                "language": "en",
+                "organizer_uri": '/uri/user/testuser'
+            }
+        )
+        
+        course = course_model.create_course(
+            **{
+                "title": "A unique test course",
+                "hashtag": "AUTC-1",
+                "description": "This course is all about ABC",
+                "language": "en",
+                "organizer_uri": '/uri/user/testuser99'
+            }
+        )
+
+
+        # get course by title
+        courses = course_model.get_courses(title="A unique test course")
+        self.assertEquals(len(courses), 1)
+
+        # get course by user uri
+        courses = course_model.get_courses(organizer_uri="/uri/user/testuser99")
+        self.assertEquals(len(courses), 1)

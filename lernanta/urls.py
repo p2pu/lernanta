@@ -31,6 +31,7 @@ urlpatterns = patterns('',
     (r'notifications/',  include('notifications.urls')),
     (r'api/',            include('api.urls')),
     (r'^oauth/',         include('oauthprovider.urls')),
+    (r'^spam/',          include('spam.urls')),
     (r'',                include('users.urls')),
 )
 

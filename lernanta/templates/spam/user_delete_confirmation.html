@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load l10n_tags %}
+{% load i18n %}
+
+{% block title %}{{ _('Confirm user deletion') }}{% endblock %}
+{% block body %}
+<section class="modal">
+  <article>
+    <h1>{{ _('Delete User') }}</h1>
+    <fieldset>
+      <form action="{% locale_url spam_delete_spammer username=username %}" method="post">
+	      {% csrf_token %}
+        <p>
+	        <button type="submit">{{ _('Delete user') }}</button>
+	        <a class="btn" href="{% locale_url users_profile_view username=username %}">{{ _('Cancel') }}</a>
+        </p>
+      </form>
+    </fieldset>
+  </article>
+</section>
+{% endblock %}

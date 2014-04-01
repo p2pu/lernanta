@@ -48,6 +48,9 @@
 
           </form>
           {% endif %}
+          {% if user.is_authenticated and user.is_superuser %}
+              <p><a class="btn btn-danger" href="{% locale_url spam_delete_spammer username=profile.username %}">{% trans 'Delete spammer'%}</a></p>
+          {% endif %}
         </div>
       </div>        
       {% endif %}

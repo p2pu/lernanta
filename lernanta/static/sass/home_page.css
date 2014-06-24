@@ -32,16 +32,23 @@
 /* bottom only border on slate button */
 /* verticle divider in nav bar user logged-in dropdown menu */
 /* bottom border only on clemintine buttons and task list progress bar */
+/* line 12, ../sass/home_page.scss */
 body {
   font-family: "sense", Helvetica, sans-serif;
-  background-image: url("/static/images/homepage/bgtexture.png"); }
+  background-image: url("/static/images/homepage/bgtexture.png");
+}
 
+/* line 16, ../sass/home_page.scss */
 h1, h2, h3, h4, h5 {
-  font-family: 'Arvo', serif; }
+  font-family: 'Arvo', serif;
+}
 
+/* line 19, ../sass/home_page.scss */
 a:focus {
-  outline: none; }
+  outline: none;
+}
 
+/* line 22, ../sass/home_page.scss */
 section {
   border-top: 1px solid #d8dbde;
   box-shadow: inset 0 5px 5px -3px rgba(0, 0, 0, 0.1);
@@ -51,35 +58,50 @@ section {
   background: url("/static/images/homepage/bgtexture.png"), -webkit-linear-gradient(top, #f3f4f8 0%, white 100%);
   background: url("/static/images/homepage/bgtexture.png"), -o-linear-gradient(top, #f3f4f8 0%, white 100%);
   background: url("/static/images/homepage/bgtexture.png"), -ms-linear-gradient(top, #f3f4f8 0%, white 100%);
-  background: url("/static/images/homepage/bgtexture.png"), linear-gradient(to bottom, #f3f4f8 0%, white 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$cloud', endColorstr='$white',GradientType=0 ); }
+  background: url("/static/images/homepage/bgtexture.png"), linear-gradient(to bottom, #f3f4f8 0%, #ffffff 100%);
+}
 
+/* line 33, ../sass/home_page.scss */
 footer {
   margin: 0 !important;
   padding: 1em 0 50px 0;
-  background-color: #e1e1e1; }
+  background-color: #e1e1e1;
+}
 
+/* line 38, ../sass/home_page.scss */
 .overflow-hidden {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
+/* line 41, ../sass/home_page.scss */
 .top-offset-span {
   margin-top: -67px;
-  display: block; }
+  display: block;
+}
 
+/* line 46, ../sass/home_page.scss */
 .text-appricot {
-  color: #ff7300; }
+  color: #ff7300;
+}
 
+/* line 50, ../sass/home_page.scss */
 .text-cyan {
-  color: #05c6b4; }
+  color: #05c6b4;
+}
 
 /********* Navigation bar ****************/
+/* line 55, ../sass/home_page.scss */
 .navbar .brand {
-  background: url("/static/images/homepage/logo-p2pu-menu.png") !important; }
+  background: url("/static/images/homepage/logo-p2pu-menu.png") !important;
+}
 
+/* line 58, ../sass/home_page.scss */
 .action {
-  margin: 0; }
+  margin: 0;
+}
 
 /**************Jumbotron**************/
+/* line 62, ../sass/home_page.scss */
 .jumbotron {
   margin-bottom: 50px;
   text-align: center;
@@ -93,37 +115,53 @@ footer {
   font-size: 21px;
   line-height: 1.3em;
   text-shadow: 0 0 12px rgba(0, 0, 0, 0.5), 0 0 32px rgba(0, 0, 0, 0.25), 0 1px rgba(0, 0, 0, 0.75);
-  position: relative; }
-  .jumbotron .masthead {
-    position: relative;
-    bottom: -80px; }
-  .jumbotron .main-feature {
-    color: white; }
-  .jumbotron .lead {
-    color: white;
-    font-size: 21px;
-    font-weight: 200;
-    text-transform: uppercase;
-    line-height: 50px;
-    margin-left: 15px;
-    font-family: "arvo", Helvetica, sans-serif;
-    margin-bottom: 0; }
-  .jumbotron .do-something {
-    height: 60px;
-    text-align: left; }
+  position: relative;
+}
+/* line 76, ../sass/home_page.scss */
+.jumbotron .masthead {
+  position: relative;
+  bottom: -80px;
+}
+/* line 80, ../sass/home_page.scss */
+.jumbotron .main-feature {
+  color: white;
+}
+/* line 83, ../sass/home_page.scss */
+.jumbotron .lead {
+  color: white;
+  font-size: 21px;
+  font-weight: 200;
+  text-transform: uppercase;
+  line-height: 50px;
+  margin-left: 15px;
+  font-family: "arvo", Helvetica, sans-serif;
+  margin-bottom: 0;
+}
+/* line 94, ../sass/home_page.scss */
+.jumbotron .do-something {
+  height: 60px;
+  text-align: left;
+}
 
+/* line 99, ../sass/home_page.scss */
 .p2pu-tour {
   padding: 17px 25px 17px 0;
-  font-weight: bold; }
-  .p2pu-tour:hover {
-    text-decoration: none; }
+  font-weight: bold;
+}
+/* line 102, ../sass/home_page.scss */
+.p2pu-tour:hover {
+  text-decoration: none;
+}
 
+/* line 106, ../sass/home_page.scss */
 .call-to-action {
   margin: 0 20px;
   font-weight: bold;
-  color: white; }
+  color: white;
+}
 
 /*******Main Menu *******/
+/* line 112, ../sass/home_page.scss */
 .actions {
   padding: 0 20px 20px 0;
   margin: 0 0 10px 0;
@@ -132,207 +170,327 @@ footer {
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-  border-radius: 15px; }
-  .actions li {
-    width: 28%;
-    margin-left: 5%;
-    margin-top: 10px;
-    float: left; }
-    .actions li:nth-child(3n + 1):last-child {
-      float: none;
-      text-align: center;
-      clear: both;
-      margin: 0 auto 10px auto;
-      padding-top: 20px;
-      width: 45%; }
-      .actions li:nth-child(3n + 1):last-child a {
-        margin: 25px 0 0 28%; }
-        .actions li:nth-child(3n + 1):last-child a h2 {
-          float: left; }
-      .actions li:nth-child(3n + 1):last-child p {
-        float: left; }
-    .actions li a {
-      display: block; }
-      .actions li a:hover {
-        text-decoration: none; }
-        .actions li a:hover .actions-icons {
-          -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-          -moz-transform: scale(1.2); }
-        .actions li a:hover h2 {
-          color: #ff7300; }
-      .actions li a .actions-icons {
-        background: url("/static/images/homepage/icons_sprite.png") 0px 3px no-repeat;
-        background-size: cover; }
-      .actions li a.icon-courses
-      .actions-icons {
-        background-position: 0% 1px; }
-      .actions li a.icon-badges
-      .actions-icons {
-        background-position: 17.3% 1px; }
-      .actions li a.icon-schools
-      .actions-icons {
-        background-position: 34.6% 1px; }
-      .actions li a.icon-moocs
-      .actions-icons {
-        background-position: 51.9% 1px; }
-      .actions li a.icon-blog
-      .actions-icons {
-        background-position: 69.2% 1px; }
-      .actions li a.icon-community
-      .actions-icons {
-        background-position: 86.5% 1px; }
-      .actions li a.icon-reports
-      .actions-icons {
-        background-position: 103.8% 1px; }
-      .actions li a .actions-icons {
-        float: left;
-        margin-right: 20px;
-        height: 60px;
-        width: 60px; }
-    .actions li p {
-      overflow: hidden; }
+  border-radius: 15px;
+}
+/* line 119, ../sass/home_page.scss */
+.actions li {
+  width: 28%;
+  margin-left: 5%;
+  margin-top: 10px;
+  float: left;
+}
+/* line 124, ../sass/home_page.scss */
+.actions li:nth-child(3n + 1):last-child {
+  float: none;
+  text-align: center;
+  clear: both;
+  margin: 0 auto 10px auto;
+  padding-top: 20px;
+  width: 45%;
+}
+/* line 131, ../sass/home_page.scss */
+.actions li:nth-child(3n + 1):last-child a {
+  margin: 25px 0 0 28%;
+}
+/* line 133, ../sass/home_page.scss */
+.actions li:nth-child(3n + 1):last-child a h2 {
+  float: left;
+}
+/* line 137, ../sass/home_page.scss */
+.actions li:nth-child(3n + 1):last-child p {
+  float: left;
+}
+/* line 142, ../sass/home_page.scss */
+.actions li a {
+  display: block;
+}
+/* line 144, ../sass/home_page.scss */
+.actions li a:hover {
+  text-decoration: none;
+}
+/* line 146, ../sass/home_page.scss */
+.actions li a:hover .actions-icons {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+}
+/* line 151, ../sass/home_page.scss */
+.actions li a:hover h2 {
+  color: #ff7300;
+}
+/* line 155, ../sass/home_page.scss */
+.actions li a .actions-icons {
+  background: url("/static/images/homepage/icons_sprite.png") 0px 3px no-repeat;
+  background-size: cover;
+}
+/* line 162, ../sass/home_page.scss */
+.actions li a.icon-courses
+.actions-icons {
+  background-position: 0% 1px;
+}
+/* line 162, ../sass/home_page.scss */
+.actions li a.icon-badges
+.actions-icons {
+  background-position: 17.3% 1px;
+}
+/* line 162, ../sass/home_page.scss */
+.actions li a.icon-schools
+.actions-icons {
+  background-position: 34.6% 1px;
+}
+/* line 162, ../sass/home_page.scss */
+.actions li a.icon-moocs
+.actions-icons {
+  background-position: 51.9% 1px;
+}
+/* line 162, ../sass/home_page.scss */
+.actions li a.icon-blog
+.actions-icons {
+  background-position: 69.2% 1px;
+}
+/* line 162, ../sass/home_page.scss */
+.actions li a.icon-community
+.actions-icons {
+  background-position: 86.5% 1px;
+}
+/* line 162, ../sass/home_page.scss */
+.actions li a.icon-reports
+.actions-icons {
+  background-position: 103.8% 1px;
+}
+/* line 167, ../sass/home_page.scss */
+.actions li a .actions-icons {
+  float: left;
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+}
+/* line 175, ../sass/home_page.scss */
+.actions li p {
+  overflow: hidden;
+}
 
+/* line 182, ../sass/home_page.scss */
 .billboard {
   padding: 20px 0;
   margin-bottom: 40px;
-  zoom: 1; }
-  .billboard.top {
-    margin-top: 0; }
-  .billboard .img-large {
-    float: left;
-    margin-right: 20px;
-    width: 165px;
-    margin-top: 20px; }
-  .billboard .controls a {
-    margin: 20px 10px;
-    position: relative;
-    padding-right: 40px; }
-    .billboard .controls a i {
-      position: absolute;
-      right: 10px;
-      top: 40%;
-      line-height: 36px;
-      margin-top: -13px; }
-  .billboard .featured-items-wrap .featured-items-item {
-    position: relative;
-    margin-left: 30px; }
-  .billboard .featured-items-wrap .featured-items-item-wrap {
-    background-color: #fcfcfc;
-    min-height: 290px;
-    padding: 10px 10px 40px 10px; }
-  .billboard .featured-items-wrap .featured-items-img-wrap {
-    text-align: center;
-    height: 155px; }
-  .billboard .featured-items-wrap .featured-items-img {
-    max-width: 200px;
-    max-height: 150px; }
-  .billboard .featured-items-wrap .featured-items-item-controls {
-    position: absolute;
-    bottom: 15px; }
-  .billboard .courses .section-caption {
-    margin-left: 0; }
-    .billboard .courses .section-caption a {
-      float: left;
-      margin: 20px 10px 20px 0; }
-  .billboard .badges .section-caption {
-    margin-left: 0; }
-    .billboard .badges .section-caption a {
-      float: left;
-      margin: 20px 10px 20px 0; }
-  .billboard .badges .featured-items-img {
-    width: auto;
-    height: auto; }
-  .billboard .schools .featured-items-item-wrap > img,
-  .billboard .schools .featured-items-img {
-    width: auto;
-    height: auto;
-    float: left;
-    margin-right: 15px;
-    margin-top: 10px; }
-  .billboard .schools .featured-items-item-caption {
-    overflow: hidden; }
-  .billboard .schools .featured-items-item-controls {
-    right: 15px; }
-  .billboard .schools .featured-items-item-wrap {
-    min-height: 200px; }
-  .billboard .community-members-list .community-member {
-    width: 84px;
-    height: 84px;
-    margin-right: -5px; }
-  .billboard .community-member-tooltip {
-    display: none; }
-  .billboard .we-are {
-    list-style-type: none;
-    margin-left: 0; }
-    .billboard .we-are li {
-      margin: 10px;
-      position: relative;
-      text-align: center;
-      background: #fff;
-      padding: 10px;
-      width: 68px;
-      height: 80px;
-      border: 1px solid #aaa;
-      float: left;
-      cursor: pointer;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-      -o-border-radius: 4px;
-      border-radius: 4px;
-      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
-      .billboard .we-are li:first-child {
-        margin-left: 0; }
-      .billboard .we-are li img {
-        width: 68px;
-        height: 68px; }
-      .billboard .we-are li .caption {
-        text-align: left; }
-  .billboard .blog-list {
-    margin-left: -30px;
-    margin-bottom: 50px; }
-    .billboard .blog-list li .blog-feed-wrap {
-      height: 140px; }
-    .billboard .blog-list li img {
-      width: 100px;
-      height: 100px;
-      float: left;
-      margin-right: 20px; }
-    .billboard .blog-list li h4 {
-      color: #05c6b4; }
-    .billboard .blog-list li a {
-      font-weight: bold;
-      width: 80%;
-      display: block;
-      position: relative; }
-      .billboard .blog-list li a:hover {
-        text-decoration: none; }
-        .billboard .blog-list li a:hover h3 {
-          color: #ff7300; }
-    .billboard .blog-list li .icon-chevron-right {
-      position: absolute;
-      right: -19%;
-      top: 20%; }
-  .billboard .moocs .section-caption {
-    margin-left: 0; }
-    .billboard .moocs .section-caption a {
-      float: left;
-      margin: 20px 10px 20px 0; }
-  .billboard .moocs .featured-items-item {
-    margin-bottom: 20px; }
-  .billboard .moocs .featured-items-item-controls {
-    right: 15px; }
-  .billboard .description {
-    overflow: hidden; }
+  zoom: 1;
+}
+/* line 187, ../sass/home_page.scss */
+.billboard.top {
+  margin-top: 0;
+}
+/* line 190, ../sass/home_page.scss */
+.billboard .img-large {
+  float: left;
+  margin-right: 20px;
+  width: 165px;
+  margin-top: 20px;
+}
+/* line 198, ../sass/home_page.scss */
+.billboard .controls a {
+  margin: 20px 10px;
+  position: relative;
+  padding-right: 40px;
+}
+/* line 203, ../sass/home_page.scss */
+.billboard .controls a i {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  line-height: 36px;
+  margin-top: -13px;
+}
+/* line 213, ../sass/home_page.scss */
+.billboard .featured-items-wrap .featured-items-item {
+  position: relative;
+  margin-left: 30px;
+}
+/* line 217, ../sass/home_page.scss */
+.billboard .featured-items-wrap .featured-items-item-wrap {
+  background-color: #fcfcfc;
+  min-height: 290px;
+  padding: 10px 10px 40px 10px;
+}
+/* line 222, ../sass/home_page.scss */
+.billboard .featured-items-wrap .featured-items-img-wrap {
+  text-align: center;
+  height: 155px;
+}
+/* line 226, ../sass/home_page.scss */
+.billboard .featured-items-wrap .featured-items-img {
+  max-width: 200px;
+  max-height: 150px;
+}
+/* line 230, ../sass/home_page.scss */
+.billboard .featured-items-wrap .featured-items-item-controls {
+  position: absolute;
+  bottom: 15px;
+}
+/* line 236, ../sass/home_page.scss */
+.billboard .courses .section-caption {
+  margin-left: 0;
+}
+/* line 238, ../sass/home_page.scss */
+.billboard .courses .section-caption a {
+  float: left;
+  margin: 20px 10px 20px 0;
+}
+/* line 245, ../sass/home_page.scss */
+.billboard .badges .section-caption {
+  margin-left: 0;
+}
+/* line 247, ../sass/home_page.scss */
+.billboard .badges .section-caption a {
+  float: left;
+  margin: 20px 10px 20px 0;
+}
+/* line 252, ../sass/home_page.scss */
+.billboard .badges .featured-items-img {
+  width: auto;
+  height: auto;
+}
+/* line 259, ../sass/home_page.scss */
+.billboard .schools .featured-items-item-wrap > img,
+.billboard .schools .featured-items-img {
+  width: auto;
+  height: auto;
+  float: left;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+/* line 266, ../sass/home_page.scss */
+.billboard .schools .featured-items-item-caption {
+  overflow: hidden;
+}
+/* line 269, ../sass/home_page.scss */
+.billboard .schools .featured-items-item-controls {
+  right: 15px;
+}
+/* line 272, ../sass/home_page.scss */
+.billboard .schools .featured-items-item-wrap {
+  min-height: 200px;
+}
+/* line 277, ../sass/home_page.scss */
+.billboard .community-members-list .community-member {
+  width: 84px;
+  height: 84px;
+  margin-right: -5px;
+}
+/* line 283, ../sass/home_page.scss */
+.billboard .community-member-tooltip {
+  display: none;
+}
+/* line 286, ../sass/home_page.scss */
+.billboard .we-are {
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 290, ../sass/home_page.scss */
+.billboard .we-are li {
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  width: 68px;
+  height: 80px;
+  border: 1px solid #aaa;
+  float: left;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+/* line 309, ../sass/home_page.scss */
+.billboard .we-are li:first-child {
+  margin-left: 0;
+}
+/* line 312, ../sass/home_page.scss */
+.billboard .we-are li img {
+  width: 68px;
+  height: 68px;
+}
+/* line 316, ../sass/home_page.scss */
+.billboard .we-are li .caption {
+  text-align: left;
+}
+/* line 321, ../sass/home_page.scss */
+.billboard .blog-list {
+  margin-left: -30px;
+  margin-bottom: 50px;
+}
+/* line 325, ../sass/home_page.scss */
+.billboard .blog-list li .blog-feed-wrap {
+  height: 140px;
+}
+/* line 328, ../sass/home_page.scss */
+.billboard .blog-list li img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 20px;
+}
+/* line 335, ../sass/home_page.scss */
+.billboard .blog-list li h4 {
+  color: #05c6b4;
+}
+/* line 338, ../sass/home_page.scss */
+.billboard .blog-list li a {
+  font-weight: bold;
+  width: 80%;
+  display: block;
+  position: relative;
+}
+/* line 343, ../sass/home_page.scss */
+.billboard .blog-list li a:hover {
+  text-decoration: none;
+}
+/* line 345, ../sass/home_page.scss */
+.billboard .blog-list li a:hover h3 {
+  color: #ff7300;
+}
+/* line 351, ../sass/home_page.scss */
+.billboard .blog-list li .icon-chevron-right {
+  position: absolute;
+  right: -19%;
+  top: 20%;
+}
+/* line 359, ../sass/home_page.scss */
+.billboard .moocs .section-caption {
+  margin-left: 0;
+}
+/* line 361, ../sass/home_page.scss */
+.billboard .moocs .section-caption a {
+  float: left;
+  margin: 20px 10px 20px 0;
+}
+/* line 366, ../sass/home_page.scss */
+.billboard .moocs .featured-items-item {
+  margin-bottom: 20px;
+}
+/* line 369, ../sass/home_page.scss */
+.billboard .moocs .featured-items-item-controls {
+  right: 15px;
+}
+/* line 373, ../sass/home_page.scss */
+.billboard .description {
+  overflow: hidden;
+}
 
+/* line 378, ../sass/home_page.scss */
 .timeline .text-align-center {
   text-align: center;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+}
 
+/* line 384, ../sass/home_page.scss */
 .timeline-events {
   margin: 0 auto;
   padding: 0;
@@ -343,8 +501,10 @@ footer {
   border-radius: 5px;
   background: #848689 url(/static/images/timeline-bg.jpg) no-repeat bottom center;
   position: relative;
-  margin-top: 50px; }
+  margin-top: 50px;
+}
 
+/* line 397, ../sass/home_page.scss */
 .timeline-events li {
   background: white;
   width: 20px;
@@ -356,43 +516,66 @@ footer {
   list-style: none;
   margin-bottom: 107px;
   margin-left: -12px;
-  position: relative; }
-  .timeline-events li .popover {
-    opacity: 1;
-    background: #e8ebef;
-    color: #848689;
-    padding: 15px 0 15px 0;
-    font-size: 18px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    display: block;
-    top: -20px; }
-    .timeline-events li .popover .arrow {
-      top: 20%; }
-    .timeline-events li .popover.top {
-      top: -150px;
-      left: -113px; }
-      .timeline-events li .popover.top .arrow {
-        top: auto; }
-    .timeline-events li .popover.left {
-      left: -250px; }
-    .timeline-events li .popover.right {
-      left: 30px; }
+  position: relative;
+}
+/* line 409, ../sass/home_page.scss */
+.timeline-events li .popover {
+  opacity: 1;
+  background: #e8ebef;
+  color: #848689;
+  padding: 15px 0 15px 0;
+  font-size: 18px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  top: -20px;
+}
+/* line 420, ../sass/home_page.scss */
+.timeline-events li .popover .arrow {
+  top: 20%;
+}
+/* line 423, ../sass/home_page.scss */
+.timeline-events li .popover.top {
+  top: -150px;
+  left: -113px;
+}
+/* line 426, ../sass/home_page.scss */
+.timeline-events li .popover.top .arrow {
+  top: auto;
+}
+/* line 430, ../sass/home_page.scss */
+.timeline-events li .popover.left {
+  left: -250px;
+}
+/* line 433, ../sass/home_page.scss */
+.timeline-events li .popover.right {
+  left: 30px;
+}
 
+/* line 440, ../sass/home_page.scss */
 .power-users .thumbnail {
   background-color: white;
-  padding-left: 20px; }
+  padding-left: 20px;
+}
+/* line 444, ../sass/home_page.scss */
 .power-users .power-user-img {
   margin-right: 30px;
   width: 120px;
   height: 120px;
-  margin-top: 30px; }
+  margin-top: 30px;
+}
+/* line 450, ../sass/home_page.scss */
 .power-users .caption {
-  overflow: hidden; }
+  overflow: hidden;
+}
+/* line 454, ../sass/home_page.scss */
 .power-users .user-courses li {
   float: left;
-  margin-right: 30px; }
-  .power-users .user-courses li img {
-    width: 100px;
-    height: 100px; }
+  margin-right: 30px;
+}
+/* line 457, ../sass/home_page.scss */
+.power-users .user-courses li img {
+  width: 100px;
+  height: 100px;
+}

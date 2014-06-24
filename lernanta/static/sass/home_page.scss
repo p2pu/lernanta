@@ -29,7 +29,6 @@ section{
   background: url('/static/images/homepage/bgtexture.png'),-o-linear-gradient(top, $cloud 0%,$white 100%);
   background: url('/static/images/homepage/bgtexture.png'),-ms-linear-gradient(top, $cloud 0%,$white 100%);
   background: url('/static/images/homepage/bgtexture.png'),linear-gradient(to bottom, $cloud 0%,$white 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$cloud', endColorstr='$white',GradientType=0 );
 }
 footer{
   margin: 0 !important;

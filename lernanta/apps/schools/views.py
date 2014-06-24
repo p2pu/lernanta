@@ -28,9 +28,15 @@ from learn.models import get_courses_by_list
 from schools.decorators import school_organizer_required
 from schools.models import School, ProjectSet
 from schools import forms as school_forms
+from django.views.generic.simple import redirect_to
 
 
 def home(request, slug):
+    # this is manual redirect to the new school of open page.
+    # It is not ideal by any means, so if you have better way of doing it, please fix it.
+    if slug == 'school-of-open':
+        return redirect_to(request, 'http://schoolofopen.p2pu.org')
+
     school = get_object_or_404(School, slug=slug)
     user = request.user
     #featured = school.featured.filter(not_listed=False,

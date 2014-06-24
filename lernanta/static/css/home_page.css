@@ -51,8 +51,7 @@ section {
   background: url("/static/images/homepage/bgtexture.png"), -webkit-linear-gradient(top, #f3f4f8 0%, white 100%);
   background: url("/static/images/homepage/bgtexture.png"), -o-linear-gradient(top, #f3f4f8 0%, white 100%);
   background: url("/static/images/homepage/bgtexture.png"), -ms-linear-gradient(top, #f3f4f8 0%, white 100%);
-  background: url("/static/images/homepage/bgtexture.png"), linear-gradient(to bottom, #f3f4f8 0%, white 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$cloud', endColorstr='$white',GradientType=0 ); }
+  background: url("/static/images/homepage/bgtexture.png"), linear-gradient(to bottom, #f3f4f8 0%, white 100%); }
 
 footer {
   margin: 0 !important;

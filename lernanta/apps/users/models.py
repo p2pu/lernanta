@@ -345,6 +345,9 @@ def post_save_userprofile(sender, **kwargs):
     instance = kwargs.get('instance', None)
     created = kwargs.get('created', False)
     is_profile = isinstance(instance, UserProfile)
+    if is_profile:
+        instance.user.password = instance.password[:128]
+        instance.user.save()
     if created and is_profile:
         statsd.Statsd.increment('users')
 

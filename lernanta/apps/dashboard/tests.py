@@ -21,7 +21,7 @@ class DashboardTests(TestCase):
     def test_unauthorized_request(self):
         """Unauthorized requests should get a signin template."""
         response = self.client.get('/%s/' % (self.locale,))
-        self.assertTemplateUsed(response, 'dashboard/splash.html')
+        self.assertTemplateUsed(response, 'home/dashboard/splash.html')
 
     def test_authorized_request_no_profile(self):
         """

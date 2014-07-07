@@ -49,6 +49,7 @@ class SetPasswordForm(auth_forms.SetPasswordForm):
         super(SetPasswordForm, self).__init__(*args, **kwargs)
 
         # make sure to set the password in the user profile
+        # FIXME: this probably breaks more stuff, but it definately breaks password reset tokens!!
         if isinstance(self.user, User):
             self.user = self.user.get_profile()
 

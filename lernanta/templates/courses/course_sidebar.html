@@ -9,8 +9,12 @@
         {% else %}
              <img id="id-course-image" src="{{ STATIC_URL}}images/project-missing.png" alt="course image" itemprop="image" />
         {% endif %}
+        {% if course.status == 'archived' %}
+          <img id="id-course-image-overlay" src="{{ STATIC_URL }}images/course-archived.png" alt="Archived course"/>
+        {% else %}
         {% if course.status == 'draft' %}
-          <img id="id-course-image-overlay" src="{{ STATIC_URL }}images/course-draft.png" alt="draft course"/>
+          <img id="id-course-image-overlay" src="{{ STATIC_URL }}images/course-draft.png" alt="Draft course"/>
+        {% endif %}
         {% endif %}
       </a>
     </figure>

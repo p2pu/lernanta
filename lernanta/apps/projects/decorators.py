@@ -8,6 +8,20 @@ from projects.models import Project
 from learn.templatetags.learn_tags import learn_default
 
 
+def deprecated(func):
+    """
+    Show a deprecated warning for courses
+    """
+    def decorated(*args, **kwargs):
+        request = args[0]
+        project = kwargs['slug']
+        msg = _('This course will become read-only in the near future. Tell us at <a href="http://community.p2pu.org/category/tech">community.p2pu.org</a> if that is a problem.')
+        messages.warning(request, msg, safe=True)
+        return func(*args, **kwargs)
+    return decorated
+
+
+
 def organizer_required(func):
     """
     Return a 403 response if the user is not organizing the project

@@ -13,6 +13,7 @@ from l10n.urlresolvers import reverse
 from users.decorators import login_required
 from drumbeat import messages
 from projects.decorators import participation_required, hide_deleted_projects
+from projects.decorators import deprecated
 from projects.models import Project
 from pagination.views import get_pagination_context
 from projects.decorators import restrict_project_kind
@@ -27,6 +28,7 @@ import logging
 log = logging.getLogger(__name__)
 
 @hide_deleted_projects
+@deprecated
 def show_page(request, slug, page_slug):
     page = get_object_or_404(Page, project__slug=slug, slug=page_slug)
     is_challenge = (page.project.category == Project.CHALLENGE)
@@ -136,6 +138,7 @@ def edit_page(request, slug, page_slug):
 @hide_deleted_projects
 @login_required
 @participation_required
+@deprecated
 def create_page(request, slug):
     project = get_object_or_404(Project, slug=slug)
     if project.is_organizing(request.user):
@@ -221,6 +224,7 @@ def delete_page(request, slug, page_slug):
 
 
 @hide_deleted_projects
+@deprecated
 def history_page(request, slug, page_slug):
     page = get_object_or_404(Page, project__slug=slug, slug=page_slug)
     versions = PageVersion.objects.filter(page=page).order_by('-date')
@@ -232,6 +236,7 @@ def history_page(request, slug, page_slug):
 
 
 @hide_deleted_projects
+@deprecated
 def version_page(request, slug, page_slug, version_id):
     version = get_object_or_404(PageVersion, page__project__slug=slug,
         page__slug=page_slug, id=version_id, deleted=False)

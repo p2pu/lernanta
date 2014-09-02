@@ -17,6 +17,7 @@ from projects import forms as project_forms
 from projects.decorators import organizer_required, participation_required
 from projects.decorators import can_view_metric_overview, can_view_metric_detail
 from projects.decorators import restrict_project_kind, hide_deleted_projects
+from projects.decorators import deprecated
 from projects.models import Project, Participation, PerUserTaskCompletion
 from projects import drupal
 
@@ -167,6 +168,7 @@ def matching_kinds(request):
 
 
 @hide_deleted_projects
+@deprecated
 def show(request, slug, toggled_tasks=True):
     project = get_object_or_404(Project, slug=slug)
     is_organizing = project.is_organizing(request.user)
@@ -340,6 +342,7 @@ def matching_courses(request):
 @hide_deleted_projects
 @login_required
 @organizer_required
+@deprecated
 def edit(request, slug):
     project = get_object_or_404(Project, slug=slug)
     is_challenge = (project.category == project.CHALLENGE)
@@ -952,6 +955,7 @@ def contact_organizers(request, slug):
 
 
 @hide_deleted_projects
+@deprecated
 def task_list(request, slug):
     project = get_object_or_404(Project, slug=slug)
     if project.category == Project.CHALLENGE:
@@ -967,6 +971,7 @@ def task_list(request, slug):
 
 
 @hide_deleted_projects
+@deprecated
 def discussion_area(request, slug):
     project = get_object_or_404(Project, slug=slug)
     if project.category != Project.CHALLENGE:
@@ -976,6 +981,7 @@ def discussion_area(request, slug):
 
 
 @hide_deleted_projects
+@deprecated
 def user_list(request, slug):
     """Display full list of users for the project."""
     project = get_object_or_404(Project, slug=slug)

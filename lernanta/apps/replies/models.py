@@ -85,7 +85,8 @@ class PageComment(ModelBase):
         reply_comment.abs_reply_to = self.abs_reply_to or self
         reply_comment.sent_by_email = sent_by_email
         reply_comment.save()
-        reply_comment.send_comment_notification()
+        # NOTE: comments deprecated
+        # reply_comment.send_comment_notification()
         return reply_comment
 
     def send_comment_notification(self):

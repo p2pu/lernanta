@@ -104,9 +104,9 @@ def status_creation_handler(sender, **kwargs):
     if status.project:
         activity.scope_object = status.project
     activity.save()
-    # Send notifications.
-    if status.project:
-        status.send_wall_notification()
+    # NOTE: notifications for wall updates deprecated
+    #if status.project:
+    #    status.send_wall_notification()
 
 post_save.connect(status_creation_handler, sender=Status,
     dispatch_uid='statuses_status_creation_handler')

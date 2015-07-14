@@ -748,6 +748,7 @@ def delete_spam(request, course_id):
     course = _get_course_or_404(course_uri)
     if request.method == "POST":
         course_model.delete_spam_course(course_uri)
+        #TODO display splash message to indicate success
         return http.HttpResponseRedirect(reverse('home'))
 
     context = { }

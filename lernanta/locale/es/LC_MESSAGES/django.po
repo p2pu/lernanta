@@ -2931,7 +2931,7 @@ msgid ""
 "        <p>Give a few more details in the \"description\" field, hit the "
 "button and voilà! You've created a P2PU course!</p>\n"
 "        <p>Need further guidance on how to make a stellar experience? Check "
-"out the <a href=\"https://p2pu.org/en/groups/make-a-course/\">\"Create a "
+"out the <a href=\"https://courses.p2pu.org/en/groups/make-a-course/\">\"Create a "
 "Course\"</a> materials!</p>\n"
 "        <p>Be sure to have a look at our <a href=\"/groups/list/community/"
 "\">featured</a> courses for good examples.</p>\n"
@@ -4403,14 +4403,14 @@ msgstr ""
 
 #: templates/projects/project_create_review.html:55
 msgid ""
-"Join the <a href=\"https://p2pu.org/groups/make-a-course/\">P2PU Course "
+"Join the <a href=\"https://courses.p2pu.org/groups/make-a-course/\">P2PU Course "
 "Design Group</a> to get feedback on your course!"
 msgstr ""
 
 #: templates/projects/project_create_review.html:57
 msgid ""
 "You may also wish to add a badge to your challenge! For more information on "
-"badges and how to add them to your challenge, see <a href=\"https://p2pu.org/"
+"badges and how to add them to your challenge, see <a href=\"https://courses.p2pu.org/"
 "groups/how-do-i-make-a-badge/\">this</a> course!"
 msgstr ""
 

@@ -270,7 +270,7 @@ CKEDITOR_FILE_UPLOAD_EXTENSIONS = CKEDITOR_IMAGE_UPLOAD_EXTENSIONS + ['.pdf',
     '.avi', '.rm', '.mp3', '.mp4', '.wav', '.aiff', '.midi', '.m4p']
 
 # Where the default image for sending to Gravatar
-DEFAULT_PROFILE_IMAGE = 'https://p2pu.org/static/images/member-missing.png'
+DEFAULT_PROFILE_IMAGE = 'https://courses.p2pu.org/static/images/member-missing.png'
 
 # When set to True, if the request URL does not match any
 # of the patterns in the URLconf and it doesn't end in a slash,
@@ -328,7 +328,7 @@ BOT_NAMES =['Googlebot', 'Slurp', 'Twiceler', 'msnbot',
     'Speedy Spider', 'DotBot', 'Sogou', 'YoudaoBot',
     'YandexBot', 'rogerbot']
 
-HELP_URL = 'http://thepeople.p2pu.org/t/user-support-help-p2pu-org/18'
+HELP_URL = 'http://community.p2pu.org/t/user-support-help-p2pu-org/18'
 
 ##################################################################
 # Badges integration settings

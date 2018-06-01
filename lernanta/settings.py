@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-# Django settings for batucada project.
+# see https://stackoverflow.com/questions/34198538/cannot-import-name-uuid-generate-random-in-heroku-django?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+import uuid
+uuid._uuid_generate_random = None
 
 import os
 import logging
@@ -12,22 +14,38 @@ djcelery.setup_loader()
 # Make filepaths relative to settings.
 ROOT = os.path.dirname(os.path.abspath(__file__))
 path = lambda *a: os.path.join(ROOT, *a)
+env = lambda key: os.environ.get(key)
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    (env('ADMIN_USER'), env('ADMIN_EMAIL') ),
 )
 
 MANAGERS = ADMINS
+ADMIN_PROJECT_CREATE_EMAIL = tuple()
+
+
+SECRET_KEY = env('SECRET_KEY')
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': 'lernanta.db',
+#    }
+#}
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'lernanta.db',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
     }
 }
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -40,10 +58,17 @@ TIME_ZONE = 'America/Toronto'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
+#LANGUAGES = (
+#    ('en', 'English'),
+#)
 LANGUAGE_CODE = 'en'
 
 SUPPORTED_LANGUAGES = tuple([(i.lower(), l10n.locales.LOCALES[i].native)
-    for i in l10n.locales.LOCALES])
+    for i in l10n.locales.LOCALES]
+)
+#SUPPORTED_LANGUAGES = (
+#    ('en', 'English'),
+#)
 
 SITE_ID = 1
 
@@ -54,7 +79,7 @@ USE_I18N = True
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale
 USE_L10N = True
-
+#
 SUPPORTED_NONLOCALES = ('media', 'static', '.well-known', 'pubsub', 'broadcasts',
 'ajax', 'api', 'oauth',)
 
@@ -232,14 +257,15 @@ CACHE_COUNT_TIMEOUT = 60
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = path('mailbox') # change this to a proper location
 
-DEFAULT_FROM_EMAIL = 'admin@p2pu.org'
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
 REPLY_EMAIL_DOMAIN = 'reply.p2pu.org'
 
 # Quickest allowable response time in seconds
 MIN_EMAIL_RESPONSE_TIME = 30
 
-AUTO_REPLY_KEYWORDS = ['auto-reply', 'auto reply', 'auto-response',
-    'auto response']
+AUTO_REPLY_KEYWORDS = [
+    'auto-reply', 'auto reply', 'auto-response', 'auto response'
+]
 
 CELERY_RESULT_BACKEND = "amqp"
 
@@ -335,3 +361,111 @@ HELP_URL = 'http://community.p2pu.org/t/user-support-help-p2pu-org/18'
 #################################################################
 BADGES_OEMBED_URL = "http://badges.p2pu.org/services/oembed"
 FEATURED_BADGES_FEED_URL = "http://badges.p2pu.org/en/badge/featured_feed/"
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
+
+# ======================= settings from old .local file ========================
+
+#TODO define variables in docker-compose
+INTERNAL_API_KEY = env('INTERNAL_API_KEY')
+
+# Sign up for an API key at https://www.google.com/recaptcha/admin/create
+RECAPTCHA_PUBLIC_KEY = env('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = env('RECAPTCHA_PRIVATE_KEY')
+RECAPTCHA_USE_SSL = True
+RECAPTCHA_URL = (
+    'https://api-secure.recaptcha.net/challenge?k=%s' % RECAPTCHA_PUBLIC_KEY
+)
+
+# Embed.ly
+EMBEDLY_KEY = env('EMBEDLY_KEY')
+from datetime import timedelta
+EMBEDLY_CACHE_EXPIRES = timedelta(weeks=4)
+
+P2PU_EMBEDS= (
+    'http://pad.p2pu.org/',
+    'http://etherpad.p2pu.org/'
+)
+
+# Site shortname to use for disqus
+DISQUS_SHORTNAME = env('DISQUS_SHORTNAME')
+DISQUS_SECRET_KEY = env('DISQUS_SECRET_KEY')
+DISQUS_PUBLIC_KEY = env('DISQUS_PUBLIC_KEY')
+
+# Use dummy caching for development.
+CACHE_BACKEND = 'dummy://'
+CACHE_PREFIX = 'lernanta'
+CACHE_COUNT_TIMEOUT = 60
+
+# RabbitMQ Config
+BROKER_HOST = env('BROKER_HOST')
+BROKER_PORT = 5672
+BROKER_USER = env('BROKER_USER')
+BROKER_PASSWORD = env('BROKER_PASSWORD')
+BROKER_VHOST = env('BROKER_VHOST')
+
+# Execute celery tasks locally, so you don't have to be running an MQ
+#CELERY_ALWAYS_EAGER = True
+
+# Path to ffmpeg. This will have to be installed to create video thumbnails
+FFMPEG_PATH = '/usr/bin/ffmpeg'
+
+# Set to True at production before upgrading lernanta.
+# Remember to login as admin before activating maintenance mode.
+MAINTENANCE_MODE = False
+
+# Prefixes ignored by the ProfileExistMiddleware.
+NO_PROFILE_URLS = ('/media/', '/admin-media/',)
+
+# Drupal urls
+DRUPAL_URL = 'http://archive.p2pu.org/'
+DRUPAL_FILES_URL = DRUPAL_URL + 'sites/archive.p2pu.org/files/'
+FILE_PATH_PREFIX = 'sites/archive.p2pu.org/files/'
+
+# Badges pilot url
+BADGE_URL = 'http://badges.p2pu.org/badges/%(badge_id)s/%(badge_tag)s'
+BADGE_EVIDENCE_URL = BADGE_URL + '?user_filter=%(username)s#badge_data'
+BADGE_IMAGES_DIR = path('media/images/pilotbadges/')
+BADGE_IMAGES_URL = 'images/pilotbadges/'
+
+INVALID_USERNAMES = ('webcraft', 'about', 'user', 'sosi', 'get-involved',
+    'math-future', 'license', 'contact-us', 'values', 'privacy',
+    'terms-of-use', 'news', 'create-draft-course', 'create-draft-course-panel',
+    'supporters', 'about-p2pu', 'tag', 'tags','school-of-ed',)
+
+# Pagination
+PAGINATION_DEFAULT_ITEMS_PER_PAGE = 20
+
+# Used for open badges integration.
+MOZBADGES = {
+    # location of badge hub. Currently this is the only public one
+    'hub': 'https://beta.openbadges.org',
+
+    # method for getting badges for a user. Called with user object.
+    'badge_getter': 'badges.models.get_awarded_badges',
+}
+
+# Metrics
+STATISTICS_CSV_DOWNLOADERS = ()
+
+# Single Sign On (with multipass tender tokens)
+SSO_REDIRECT_FIELD_NAMES = ['to']
+SSO_EXTERNAL_REDIRECTS = {
+    'http://help.p2pu.org/': {
+        'site_key': 'p2pu',
+        'api_key': env('HELP_API_KEY') 
+    },
+}
+
+# Statsd
+STATSD_HOST = 'stats.p2pu.org'
+STATSD_PORT = 8125
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'no-reply@p2pu.org'
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+

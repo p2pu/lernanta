@@ -1,33 +1,49 @@
-django==1.3.1
-python-memcached==1.48
-celery==2.4.6
-django-celery==2.4.2
-django-taggit==0.9.3
-django-voting==0.1
-django-robots==0.8.1
-beautifulsoup==3.2.0
-feedparser==5.1
-south==0.7.3
-django-messages==0.4.4
-python-openid==2.2.5
-markdown==2.1.1
-html5lib==0.95
+BeautifulSoup==3.2.0
+Django==1.3.1
+-e git://github.com/embedly/embedly-python.git@b8325fc49396e3b0d10f65847c6cc9fb23bd9482#egg=Embedly-dev
+M2Crypto==0.25.1
+Markdown==2.1.1
+MySQL-python==1.2.3
+Pillow==1.7.8
+South==0.7.3
+amqp==1.0.6
+anyjson==0.3.3
+argparse==1.2.1
 bleach==1.1.5
+celery==2.4.6
+-e git://github.com/jsocol/commonware.git@b5544185b2d24adc1eb512735990752400ce9cbd#egg=commonware-dev
+-e git://github.com/jbalogh/django-cache-machine.git@fd9c7efbd14dfb78f278d7b270cfe7a9da1b79b7#egg=django_cache_machine-dev
+django-celery==2.4.2
+-e git://github.com/shaunsephton/django-ckeditor.git@39a4059483c057a00455baa895f2a263baac2161#egg=django_ckeditor-dev
 django-maintenancemode==0.9.3.1
-tender_multipass==0.2.1
-simplejson==2.6.0
+django-messages==0.4.4
+-e git://github.com/zuzelvp/django-obi.git@2680327dca0eecd5790653a50eed12e4c9c8c7f9#egg=django_obi-dev
+-e git://github.com/paulosman/django-openid-auth.git@ae650cca027e69488070073d9b911ec82ae86be2#egg=django_openid_auth-dev
+django-picklefield==0.3.0
+django-push==0.4
+-e git://github.com/mozilla/django-recaptcha.git@b3ce0daadfff7735d2a0865b8419711748c9190a#egg=django_recaptcha-dev
+django-robots==0.8.1
+django-taggit==0.9.3
 django-tastypie==0.9.11
+django-uni-form==0.9.0
+django-voting==0.1
+feedparser==5.1
+html5lib==0.95
+iso8601==0.1.4
+kombu==2.5.4
+lxml==2.3.2
+mimeparse==0.1.3
+oauth==1.0.1
+-e git://github.com/hiidef/oauth2app.git@f8205e2146477224a666c03bf115ddf3ff7610ff#egg=oauth2app-dev
+python-memcached==1.48
+python-openid==2.2.5
+-e git://github.com/paulosman/python-xrd@9a62985ec31e90afcae89c2ce0450eec9f5fca07#egg=python_xrd-dev
+recaptcha-client==1.0.6
 requests==0.13.5
-
--e git+https://github.com/jbalogh/django-cache-machine.git@fd9c7efbd14dfb78f278d7b270cfe7a9da1b79b7#egg=python_xrd-dev
--e git+https://github.com/jsocol/commonware.git@b5544185b2d24adc1eb512735990752400ce9cbd#egg=commonware
--e git+https://github.com/paulosman/python-xrd@9a62985ec31e90afcae89c2ce0450eec9f5fca07#egg=xrd
--e git+https://github.com/paulosman/django-wellknown.git@3cc3cfc1217aed065d17875dd832cd41110cd4ba#egg=wellknown
--e git+https://github.com/paulosman/django-push.git#egg=django_push
--e git+https://github.com/mozilla/django-recaptcha.git@b3ce0daadfff7735d2a0865b8419711748c9190a#egg=django-recaptcha
--e git+https://github.com/paulosman/django-openid-auth.git@ae650cca027e69488070073d9b911ec82ae86be2#egg=django_openid_auth
--e git+https://github.com/shaunsephton/django-ckeditor.git@39a4059483c057a00455baa895f2a263baac2161#egg=django_ckeditor
--e git+https://github.com/jdunck/python-unicodecsv.git@c5d8ae68758dd48d8a776214080caa88bc036644#egg=unicodecsv
--e git+https://github.com/zuzelvp/django-obi.git@2680327dca0eecd5790653a50eed12e4c9c8c7f9#egg=django_obi
--e git+https://github.com/embedly/embedly-python.git@b8325fc49396e3b0d10f65847c6cc9fb23bd9482#egg=Embedly-dev
--e git+https://github.com/hiidef/oauth2app.git@f8205e2146477224a666c03bf115ddf3ff7610ff#egg=oauth2app
+simplejson==2.6.0
+six==1.2.0
+tender-multipass==0.2.1
+-e git://github.com/jdunck/python-unicodecsv.git@c5d8ae68758dd48d8a776214080caa88bc036644#egg=unicodecsv-dev
+-e git://github.com/paulosman/django-wellknown.git@3cc3cfc1217aed065d17875dd832cd41110cd4ba#egg=wellknown-dev
+wsgiref==0.1.2
+gunicorn==19.7.1

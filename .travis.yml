@@ -2,8 +2,8 @@ sudo: required
 dist: trusty
 services:
 - docker
-before_install:
-- docker version
+#before_install:
+#- docker version
 script:
 - docker build -t p2pu/lernanta .
 after_success:

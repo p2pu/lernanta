@@ -1,0 +1,24 @@
+sudo: required
+dist: trusty
+services:
+- docker
+before_install:
+- docker version
+script:
+- docker build -t p2pu/lernanta .
+after_success:
+- echo "Push image to hub.docker.com"
+- docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "Images not pushed for pull
+  request"; exit 0; fi
+- docker tag p2pu/lernanta p2pu/lernanta:"$TRAVIS_BRANCH"
+- docker tag p2pu/lernanta p2pu/lernanta:$(git describe --always --tags)-"$TRAVIS_BRANCH"
+- docker images
+- docker push p2pu/lernanta
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+env:
+  global:
+    secure: HV9Ps7inihX4PPXI58F4kYsJ1ODrPzotVHatN7DDVUMQGrkSR3myNIE6YU+WaeFIhl7tH9gNgqbWlvqGXLJBIOpkSGEkynQDqe6HXgUbOEm42ANn3GqMkZZNepGt/AP268BQ2bWE3xEGSKGOrdfJQ2KBzNya/lzc6OPWVaTs+oE=

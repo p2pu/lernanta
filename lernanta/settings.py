@@ -147,6 +147,7 @@ ROOT_URLCONF = 'lernanta.urls'
 
 TEMPLATE_DIRS = (
     path('templates'),
+    "/opt/django-venv/django/contrib/admin/templates",
 )
 
 # Use the fully qualified name for our apps so django_nose does not
@@ -225,7 +226,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
 )
 
-TEST_RUNNER = 'test_utils.runner.RadicalTestSuiteRunner'
+#TEST_RUNNER = 'django.test.runner.RadicalTestSuiteRunner'
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
 WELLKNOWN_HOSTMETA_HOSTS = ('localhost:8000',)
 
@@ -405,6 +407,7 @@ BROKER_PORT = 5672
 BROKER_USER = env('BROKER_USER')
 BROKER_PASSWORD = env('BROKER_PASSWORD')
 BROKER_VHOST = env('BROKER_VHOST')
+BROKER_URL = env('BROKER_URL')
 
 # Execute celery tasks locally, so you don't have to be running an MQ
 #CELERY_ALWAYS_EAGER = True

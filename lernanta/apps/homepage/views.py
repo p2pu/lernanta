@@ -1,8 +1,10 @@
 import random
 
+from django import http
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from django.views.decorators.gzip import gzip_page
+
+from l10n.urlresolvers import reverse
 
 from learn.models import get_courses_by_list
 
@@ -16,14 +18,6 @@ def _pick_n(sequence, n):
     return sequence
 
 
-@gzip_page
 def home(request):
-    feed_entries = get_blog_feed()
-    courses = _pick_n(get_courses_by_list("community"), 3)
-    badges = _pick_n(get_featured_badges(), 3)
-
-    return render_to_response('homepage/home.html', {
-        'feed_entries':  feed_entries,
-        'courses': courses,
-        'badges': badges,
-    }, context_instance=RequestContext(request))
+    learn_url = reverse('learn_list', kwargs={'list_name':'community'})
+    return http.HttpResponseRedirect(learn_url)

@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     memcached \
     wget
 COPY lernanta/requirements/prod.txt /opt/app/requirements.txt
+COPY 3rdparty/ /opt/app/3rdparty/
 RUN virtualenv /opt/django-venv \
     && /opt/django-venv/bin/pip install -r /opt/app/requirements.txt
 COPY lernanta/ /opt/app/lernanta/

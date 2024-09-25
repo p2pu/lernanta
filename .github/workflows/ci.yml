@@ -1,0 +1,35 @@
+name: Builde docker image
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: ['**']
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
+
+    - run: echo "IMAGE_TAG=${GITHUB_REF_NAME//\//-}" >> $GITHUB_ENV
+
+    - name: Build docker image
+      run: docker build -t p2pu/lernanta:${IMAGE_TAG} .
+
+    - name: log into registry
+      uses: docker/login-action@v2
+      with:
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: push docker image
+      run: |
+        docker tag p2pu/lernanta:${IMAGE_TAG} ghcr.io/p2pu/lernanta:${IMAGE_TAG}
+        docker push ghcr.io/p2pu/lernanta:${IMAGE_TAG}

@@ -126,7 +126,7 @@ SESSION_COOKIE_PATH = '/; HttpOnly'
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 MIDDLEWARE_CLASSES = (
-    'drumbeat.middleware.NotFoundMiddleware',
+    #'drumbeat.middleware.NotFoundMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     'l10n.middleware.LocaleURLRewriter',
     'django.middleware.common.CommonMiddleware',
@@ -139,7 +139,7 @@ MIDDLEWARE_CLASSES = (
     'commonware.middleware.FrameOptionsHeader',
     'django.middleware.locale.LocaleMiddleware',
     'users.middleware.ProfileExistMiddleware',
-    'tracker.middleware.PageViewTrackerMiddleware',
+    #'tracker.middleware.PageViewTrackerMiddleware',
     'users.middleware.UserActivityMiddleware',
 )
 
@@ -237,6 +237,7 @@ LOGIN_REDIRECT_URL = '/dashboard/'
 
 ACCOUNT_ACTIVATION_DAYS = 7
 
+#??
 AUTHENTICATION_BACKENDS = (
     'users.backends.DrupalUserBackend',
     'users.backends.DrupalOpenIDBackend',
@@ -315,7 +316,11 @@ LOGGING = {
     'handlers': {
         'mail_admins': {
             'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler'
+            #'class': 'django.utils.log.AdminEmailHandler'
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': path('error.log'),
+            'maxBytes': 1024 * 1024 * 5,  # 5 MB
+            'backupCount': 5,
         },
         'file': {
             'class': 'logging.handlers.RotatingFileHandler',

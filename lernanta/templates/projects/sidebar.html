@@ -76,8 +76,6 @@
         {% endif %}
         {% if not toggled_tasks %}
           <a href="{{ project.get_absolute_url }}" class="discuss-link">{{ _('View Tasks')}}</a>
-        {% else %}
-          <a href="{% locale_url projects_discussion_area slug=project.slug %}" class="discuss-link">{{ _('View Discussions')}}</a>
         {% endif %}
       {% else %}
         {% if project.school.mentee_form_url %}

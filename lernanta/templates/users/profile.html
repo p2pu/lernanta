@@ -9,8 +9,6 @@
 {% block title %}{{ profile.username }}{% endblock %}
 
 {% block links %}
-<link rel="alternate" type="application/atom+xml" href="{% locale_url activity_profile_feed username=profile.username %}" title="{{_('Activity from user\'s profile')}}" />
-<link rel="alternate" type="application/atom+xml" href="{% locale_url activity_dashboard_feed username=profile.username %}" title="{{_('Activity from user\'s dashboard')}}"/>
 <link rel="profile" href="http://microformats.org/profile/hcard" />
 {% endblock %}
 
@@ -33,40 +31,13 @@
 <div class="row-fluid">
   <div class="span9">
     <div class="well">
-    {% profile_info %}
-    {% if pagination_current_page.object_list %}
-    <div class="row-fluid">
-      <div class="row-fluid">
-        <div class="btn-group pull-right">
-          {% activity_filters request profile.get_absolute_url %}
-        </div>
-      </div>
-
-      <div class="feature-box" id="posts">	
-          <div class="row-fluid">
-          {% for activity in pagination_current_page.object_list%}
-            {% include "activity/_activity_resource.html" %}
-          {% endfor %}
-          </div>
-      {% with prefix='' page_url=profile.get_absolute_url %}
-          <div class="row-fluid">
-            <div class="pull-right">
-              {% pagination_links %}
-            </div>
-          </div>
-      {% endwith %}
-      </div>
+      {% profile_info %}
     </div>
-    {% endif %}
-  </div>
   </div>
   <div class="span3">
     {% user_sidebar %}
   </div>
 </div>
-
-
-
 
 {% endblock %}
 

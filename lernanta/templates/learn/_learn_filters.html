@@ -28,7 +28,7 @@
   <li class="divider"></li>
   {% for tag in filter_tags %}
     <li class="active">
-      <a class="filter" href="./?filter_tags={% filter_remove_tag filter_tags tag %}">
+      <a class="filter" href="./">
 		{{tag}}<img src="{{STATIC_URL}}/images/delete-x.png">
 	  </a>
     </li>

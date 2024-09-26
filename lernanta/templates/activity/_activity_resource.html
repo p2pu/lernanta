@@ -41,7 +41,7 @@
   </div>
   <div>
     <span class="reference-link-area">
-      <a href="#" onclick="return false">{{ activity|time_since }}</a>
+      {{ activity|time_since }}
       {{ _('via') }}
       {% if activity.target_object.link %}
         <a href="{{ activity.target_object.link.url }}">{{ activity.target_object.link.name }}</a>

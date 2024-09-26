@@ -43,7 +43,7 @@
               {{ _(' said:') }}</h3>
             {% else %}
               &nbsp;
-              <a href="{{ comment.get_absolute_url }}">{{ comment.created_on }}</a>
+              {{ comment.created_on }}
             {% endif %}
           </div>
           <div class="post-body">
@@ -51,7 +51,7 @@
           </div>
           {% if is_challenge %}
             <div class="post-details">
-              {{ _('on ') }} <a href="{{ comment.get_absolute_url }}">{{ comment.created_on }}</a>
+              {{ _('on ') }} {{ comment.created_on }}
               <br />
               {% if user.is_authenticated %}
                 {% if user|can_reply_comment:comment %}
@@ -101,11 +101,11 @@
             {{ _(' said:') }}</h3>
           {% else %}
             &nbsp;
-            <a href="{{ reply.get_absolute_url }}">{{reply.created_on}}</a>
+            {{reply.created_on}}
             <br> {{ _('In Reply To:') }} &nbsp;
             <a href="{{ reply.reply_to.author.get_absolute_url }}">{{ reply.reply_to.author }}</a>
             &nbsp;
-            <a href="{{ reply.reply_to.get_absolute_url }}">{{ reply.reply_to.created_on }}</a>
+            {{ reply.reply_to.created_on }}
           {% endif %}
         </div>
         <div class="post-body">
@@ -113,7 +113,7 @@
         </div>
         {% if is_challenge %}
           <div class="post-details">
-            {{ _('on ') }} <a href="{{ reply.get_absolute_url }}">{{ reply.created_on }}</a>
+            {{ _('on ') }} {{ reply.created_on }}
             {{ _('in reply to ') }} <a href="{{ reply.reply_to.get_absolute_url }}">{{ reply.reply_to.author }}</a>
             <br />
             {% if user.is_authenticated %}

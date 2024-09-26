@@ -24,3 +24,8 @@ Or if you enjoy linux command line hacking, check out our `install docs`_ on our
 .. _environment setup script: https://github.com/p2pu/lernanta-dev-env
 
 .. _install docs: https://github.com/p2pu/lernanta/wiki/Lernanta%27s-Setup-Install
+
+
+Notes
+-----
+docker-compose run --rm lernanta /opt/django-venv/bin/python /opt/app/lernanta/manage.py syncdb

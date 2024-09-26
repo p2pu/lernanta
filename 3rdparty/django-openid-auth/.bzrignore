@@ -1,0 +1,5 @@
+./django
+./MANIFEST
+./build
+./dist
+./sqlite.db

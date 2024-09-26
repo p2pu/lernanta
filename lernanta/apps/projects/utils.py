@@ -1,7 +1,7 @@
 import os
 import tempfile
 import urllib2
-import Image
+from PIL import Image
 import logging
 import datetime
 import simplejson

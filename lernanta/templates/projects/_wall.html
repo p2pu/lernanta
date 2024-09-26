@@ -26,10 +26,6 @@
   </div> <!-- /.#create-post -->
 {% endif %}
 
-{% if not discussion_area %}
-  {% activity_filters request project.get_absolute_url %}
-{% endif %}
-
 {% if pagination_current_page.object_list %}
 <ul id="posts">
   {% for activity in pagination_current_page.object_list %}

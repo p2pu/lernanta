@@ -1,0 +1,47 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:5.5
+    environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_DATABASE=lernanta
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=password
+  rabbitmq:
+    image: rabbitmq:3
+    hostname: rabbithost
+  lernanta:
+    build: .
+    ports:
+    - "8000:80"
+    depends_on:
+    - rabbitmq
+    - mysql
+    volumes:
+    - ./lernanta/:/opt/app/lernanta/
+    environment:
+    - ADMIN_USER=dirk
+    - ADMIN_EMAIL=dirk@localhost
+    - DB_NAME=lernanta
+    - DB_USER=user
+    - DB_PASSWORD=password
+    - DB_HOST=mysql
+    - DATABASE_URL=mysql://user:password@mysql/lernanta
+    - SECRET_KEY=1234567890
+    - RECAPTCHA_PUBLIC_KEY=''
+    - RECAPTCHA_PRIVATE_KEY=''
+    - EMBEDLY_KEY=''
+    - DISQUA_SHORTNAME=''
+    - DISQUS_SECRET_KEY=''
+    - DISQUS_PUBLIC_KEY=''
+    - BROKER_HOST=rabbitmq
+    - BROKER_USER=guest
+    - BROKER_PASSWORD=password
+    - BROKER_VHOST=lernanta
+    - BROKER_URL=amqp://guest:guest@rabbitmq//
+    - SMTP_PASSWORD=''
+    - EMAIL_HOST=smtp.host.com
+    - EMAIL_HOST_USER=user
+    - EMAIL_HOST_PASSWORD=password
+    - DEFAULT_FROM_EMAIL=mail@mail.com
+    - HELP_API_KEY=''

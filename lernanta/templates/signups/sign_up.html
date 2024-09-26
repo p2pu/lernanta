@@ -58,7 +58,6 @@
     <li class="post-container">
       <a name="answer-{{ answer.id }}"></a>
       {% if user.is_authenticated %}
-        <a class="action reply-to" href="{% locale_url page_comment scope_model='project' scope_app_label='projects' scope_pk=project.id page_model='signupanswer' page_app_label='signups' page_pk=answer.id %}">{{ _('Reply') }}</a>
         {% if user|can_edit_signup_answer:answer %}
           <a class="action delete" href="{% locale_url delete_signup_answer slug=project.slug answer_id=answer.id %}">{{ _('Delete') }}</a>
           <a class="action edit" href="{% locale_url sign_up_edit_answer slug=project.slug answer_id=answer.id %}">{{ _('Edit') }}</a>
@@ -73,7 +72,7 @@
         <div class="post-details">
           <a href="{{ answer.author.get_absolute_url }}">{{ answer.author }}</a>
           &nbsp;
-          <a href="{{ answer.get_absolute_url }}">{{ answer.created_on }}</a>
+          {{ answer.created_on }}
         </div>
         <div class="post-body">
 	        <p><strong>{{ _('Bio:') }}</strong> {{ answer.author.bio|safe }}</p>

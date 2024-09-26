@@ -63,11 +63,13 @@ class Prefixer(object):
 
         lang = first.lower()
         if lang in l10n.locales.LANGUAGE_URL_MAP:
-            return l10n.locales.LANGUAGE_URL_MAP[lang], rest
+            #return l10n.locales.LANGUAGE_URL_MAP[lang], rest
+            return 'en', rest
         else:
             supported = find_supported(first)
             if len(supported):
-                return supported[0], rest
+                #return supported[0], rest
+                return 'en', rest
             else:
                 return '', path
 

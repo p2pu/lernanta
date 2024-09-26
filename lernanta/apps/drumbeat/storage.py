@@ -1,5 +1,5 @@
 import os
-import Image
+from PIL import Image
 import logging
 
 from django.core.files.storage import FileSystemStorage

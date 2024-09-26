@@ -40,10 +40,6 @@
     {% tasks_list_wall request project user toggled_tasks %}
   {% else %}
     {% task_list project user show_all_tasks %}
-    <div id="wall_section">
-      <h2 class="school_header"><span>{{ _('Activity Wall') }}</span></h2>
-    </div>
-    {% project_wall request project %}
   {% endif %}
 
 </div> <!-- /#main -->

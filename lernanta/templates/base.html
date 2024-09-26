@@ -25,7 +25,6 @@
   <link href='https://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
   <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="{{ STATIC_URL }}css/jcarousel/tango/skin.css">
-  <link rel="stylesheet" href="https://www.google.com/cse/style/look/default.css" type="text/css" />
 
   <link rel="stylesheet" href="{{ STATIC_URL }}css/overrides.css">
   <script src="{{ STATIC_URL }}js/libs/jquery-1.8.2.min.js"></script>
@@ -125,25 +124,6 @@
 
       </div> 
 
-
-         <!-- START old search box display and script -->
-
-            <!-- <div id="cse-search-form" style="width: 100%;">{{
-            _('Loading') }}</div> -->
-            <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-            <script type="text/javascript"> 
-            google.load('search', '1', {language : '{{ _('en') }}'});
-            google.setOnLoadCallback(function() {
-            var customSearchControl = new google.search.CustomSearchControl('013528701088014865040:0q9njevslw0');
-            customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-            var options = new google.search.DrawOptions();
-            var search_page_url = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'p2pu.org/search';
-            options.enableSearchboxOnly(search_page_url);
-            customSearchControl.draw('cse-search-form', options);
-            }, true);
-            </script>
-
-        <!-- END old search box display and script -->
     </div>
   </div>
 </div>
